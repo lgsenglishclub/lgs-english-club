@@ -1,3 +1,5 @@
+import { saveToFirebase } from "../../../js/saveResult.js";
+
 const questions = [
 
 {
@@ -706,167 +708,187 @@ if (selected !== -1 && selected !== q.answer) {
 
 
     // Açıklamayı göster
-    let exp=document.getElementById("explanation");
-
-    if(exp){
-        exp.style.display="block";
-    }
-
-
-    setTimeout(()=>{
-
-    current++;
-
-    selected = null;
-
-
-        if(current < questions.length){
-
-            loadQuestion();
-
-        }
-        else{
-
-           saveTestResult(); 
-
-           document.getElementById("quiz").innerHTML=`
-
-<div class="result-card">
-
-    <div class="result-icon">
-        🎉
-    </div>
-
-    <h2>Test Completed</h2>
-
-    <div class="score-circle">
-        <span>${score}</span>
-        <small>/${questions.length}</small>
-    </div>
-
-
-    <div class="result-message">
-        ${
-        score >= 33 
-        ? "🌟 Excellent! You are ready for LGS."
-        : score >= 25
-        ? "👍 Good job! Keep practicing."
-        : "📚 Review the topic and try again."
-        }
-    </div>
-
-    <div class="review">
-
-${
-
-
-wrongQuestions.map((item,index)=>`
-
-<div class="review-card">
-
-<h3>❌ Question ${index+1}</h3>
-
-<p>${item.question}</p>
-
-<b>Correct Answer:</b>
-
-<p>${item.correct}</p>
-
-<b>Explanation:</b>
-
-<p>${item.explanation}</p>
-
-</div>
-
-`).join("")
-
-}
-
-</div>
-
-
-    <div class="stats">
-
-        <div class="stat-box">
-            <b>${score}</b>
-            <span>Correct</span>
-        </div>
-
-
-        <div class="stat-box">
-            <b>${questions.length-score}</b>
-            <span>Wrong</span>
-        </div>
-
-
-        <div class="stat-box">
-            <b>${Math.round(score/questions.length*100)}%</b>
-            <span>Success</span>
-        </div>
-
-    </div>
-
-
-    <button onclick="location.reload()" class="restart-btn">
-        🔄 Try Again
-    </button>
-
-
-</div>
-
-`;
-
-            document.getElementById("nextBtn").disabled=false;
-
-        }
-
-
-    },1500);
-
-}
-
-function selectOption(index, element){
-
-    selected = index;
-
-    // Önce tüm şıkların seçimini kaldır
-    document.querySelectorAll(".answer")
-    .forEach(option=>{
-        option.classList.remove("selected");
-    });
-
-    // Sadece tıklanan şıkkı seç
-    element.classList.add("selected");
-
-}
-
-console.log("Question count:", questions.length);
-
-function saveTestResult(){
-
-    const history = JSON.parse(localStorage.getItem("recentTests")) || [];
-
-    const wrong = questions.length - score;
-
-    const result = {
-
-        name: "Unit 2 Lgs Test",
-        correct: score,
-        wrong: wrong,
-        net: (score - wrong/3).toFixed(2),
-        percent: Math.round(score/questions.length*100),
-        date: new Date().toLocaleDateString("en-GB")
-
-    };
-
-    history.unshift(result);
-
-    if(history.length > 10){
-        history.pop();
-    }
-
-    localStorage.setItem("recentTests", JSON.stringify(history));
-
-}
-
-loadQuestion();
+       let exp=document.getElementById("explanation");
+   
+       if(exp){
+           exp.style.display="block";
+       }
+   
+   
+       setTimeout(async ()=>{
+   
+       current++;
+   
+       selected = null;
+   
+   
+           if(current < questions.length){
+   
+               loadQuestion();
+   
+           }
+           else{
+   
+              await saveTestResult();
+   
+              document.getElementById("quiz").innerHTML=`
+   
+   <div class="result-card">
+   
+       <div class="result-icon">
+           🎉
+       </div>
+   
+       <h2>Test Completed</h2>
+   
+       <div class="score-circle">
+           <span>${score}</span>
+           <small>/${questions.length}</small>
+       </div>
+   
+   
+       <div class="result-message">
+           ${
+           score >= 33 
+           ? "🌟 Excellent! You are ready for LGS."
+           : score >= 25
+           ? "👍 Good job! Keep practicing."
+           : "📚 Review the topic and try again."
+           }
+       </div>
+   
+       <div class="review">
+   
+   ${
+   wrongQuestions.length==0
+   
+   ?
+   
+   "<h3>🎉 Perfect! No mistakes.</h3>"
+   
+   :
+   
+   wrongQuestions.map((item,index)=>`
+   
+   <div class="review-card">
+   
+   <h3>❌ Question ${index+1}</h3>
+   
+   <p>${item.question}</p>
+   
+   <b>Correct Answer:</b>
+   
+   <p>${item.correct}</p>
+   
+   <b>Explanation:</b>
+   
+   <p>${item.explanation}</p>
+   
+   </div>
+   
+   `).join("")
+   
+   }
+   
+   </div>
+   
+   
+       <div class="stats">
+   
+           <div class="stat-box">
+               <b>${score}</b>
+               <span>Correct</span>
+           </div>
+   
+   
+           <div class="stat-box">
+               <b>${questions.length-score}</b>
+               <span>Wrong</span>
+           </div>
+   
+   
+           <div class="stat-box">
+               <b>${Math.round(score/questions.length*100)}%</b>
+               <span>Success</span>
+           </div>
+   
+       </div>
+   
+   
+       <button onclick="location.reload()" class="restart-btn">
+           🔄 Try Again
+       </button>
+   
+   
+   </div>
+   
+   `;
+   
+               document.getElementById("nextBtn").disabled=false;
+   
+           }
+   
+   
+       },1500);
+   
+   }
+   
+   function selectOption(index, element){
+   
+       selected = index;
+   
+       // Önce tüm şıkların seçimini kaldır
+       document.querySelectorAll(".answer")
+       .forEach(option=>{
+           option.classList.remove("selected");
+       });
+   
+       // Sadece tıklanan şıkkı seç
+       element.classList.add("selected");
+   
+   }
+   
+   console.log("Question count:", questions.length);
+   
+   async function saveTestResult(){
+   
+       const history = JSON.parse(localStorage.getItem("recentTests")) || [];
+   
+       const wrong = questions.length - score;
+   
+       const result = {
+
+    userId: localStorage.getItem("userId"),
+
+    username: localStorage.getItem("username"),
+
+    email: localStorage.getItem("email"),
+
+
+    testName: "Unit 2 LGS Test",
+           correct: score,
+           wrong: wrong,
+           net: (score - wrong/3).toFixed(2),
+           percent: Math.round(score/questions.length*100),
+           date: new Date().toLocaleDateString("en-GB")
+   
+       };
+   
+       await saveToFirebase(result);
+       
+       history.unshift(result);
+   
+       if(history.length > 10){
+           history.pop();
+       }
+   
+       localStorage.setItem("recentTests", JSON.stringify(history));
+   
+   }
+   
+   window.loadQuestion = loadQuestion;
+   window.nextQuestion = nextQuestion;
+   window.selectOption = selectOption;
+   window.saveTestResult = saveTestResult;
+   
+   loadQuestion();

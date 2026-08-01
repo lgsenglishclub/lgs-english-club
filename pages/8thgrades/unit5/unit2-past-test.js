@@ -1,3 +1,5 @@
+import { saveToFirebase } from "../../../js/saveResult.js";
+
 const questions = [
 
 {
@@ -244,7 +246,7 @@ minutes + ":" +
 }
 
 
-function showResult(){
+async function showResult(){
 
     clearInterval(timer);
 
@@ -255,8 +257,7 @@ function showResult(){
 
     let success = Math.round((correct / total) * 100);
 
-
-    saveTestResult();
+    await saveTestResult();
 
     document.getElementById("questionBox").innerHTML = `
 
@@ -264,7 +265,7 @@ function showResult(){
 
 <h2>🎉 Tebrikler!</h2>
 
-<h3>Unit 1 - Friendship</h3>
+<h3>Unit 2 Prev Years Test</h3>
 
 <div class="result-score">
 ${score.toFixed(2)}
@@ -363,7 +364,7 @@ function startTest(){
 
 }
 
-function saveTestResult(){
+async function saveTestResult(){
 
     const history = JSON.parse(localStorage.getItem("recentTests")) || [];
 
@@ -371,7 +372,14 @@ function saveTestResult(){
 
     const result = {
 
-        name: "Unit 2 Prev Years Test",
+    userId: localStorage.getItem("userId"),
+
+    username: localStorage.getItem("username"),
+
+    email: localStorage.getItem("email"),
+
+
+    testName: "Unit 2 Prev Years Test",
         correct: score,
         wrong: wrong,
         net: (score - wrong/3).toFixed(2),
@@ -380,6 +388,8 @@ function saveTestResult(){
 
     };
 
+    await saveToFirebase(result);
+    
     history.unshift(result);
 
     if(history.length > 10){
@@ -390,3 +400,7 @@ function saveTestResult(){
 
 }
 
+window.startTest = startTest;
+window.checkAnswer = checkAnswer;
+window.nextQuestion = nextQuestion;
+window.saveTestResult = saveTestResult;

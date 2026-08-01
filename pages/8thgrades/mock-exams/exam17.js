@@ -1,52 +1,54 @@
+import { saveToFirebase } from "../../../js/saveResult.js";
+
 const questions = [
 
 {
-    image: "../images/mock-exams/exam17/q1.png",
+    image: "../images/mock-exams/exam2/q1.png",
     answer: "A"
 },
 
 {
-    image: "../images/mock-exams/exam17/q2.png",
+    image: "../images/mock-exams/exam2/q2.png",
     answer: "B"
 },
 
 {
-    image: "../images/mock-exams/exam17/q3.png",
+    image: "../images/mock-exams/exam2/q3.png",
     answer: "D"
 },
 
 {
-    image: "../images/mock-exams/exam17/q4.png",
+    image: "../images/mock-exams/exam2/q4.png",
     answer: "D"
 },
 
 {
-    image: "../images/mock-exams/exam17/q5.png",
+    image: "../images/mock-exams/exam2/q5.png",
     answer: "C"
 },
 
 {
-    image: "../images/mock-exams/exam17/q6.png",
+    image: "../images/mock-exams/exam2/q6.png",
     answer: "A"
 },
 
 {
-    image: "../images/mock-exams/exam17/q7.png",
+    image: "../images/mock-exams/exam2/q7.png",
     answer: "C"
 },
 
 {
-    image: "../images/mock-exams/exam17/q9.png",
+    image: "../images/mock-exams/exam2/q9.png",
     answer: "B"
 },
 
 {
-    image: "../images/mock-exams/exam17/q9.png",
+    image: "../images/mock-exams/exam2/q9.png",
     answer: "D"
 },
 
 {
-    image: "../images/mock-exams/exam17/q10.png",
+    image: "../images/mock-exams/exam2/q10.png",
     answer: "B"
 }
 
@@ -240,7 +242,7 @@ minutes + ":" +
 }
 
 
-function showResult(){
+async function showResult(){
 
     clearInterval(timer);
 
@@ -252,7 +254,7 @@ function showResult(){
     let success = Math.round((correct / total) * 100);
 
 
-    saveTestResult();
+    await saveTestResult();
 
     document.getElementById("questionBox").innerHTML = `
 
@@ -260,7 +262,7 @@ function showResult(){
 
 <h2>🎉 Tebrikler!</h2>
 
-<h3>Mock Exam 17</h3>
+<h3>Mock Exam 2</h3>
 
 <div class="result-score">
 ${(score - wrong/3).toFixed(2)}
@@ -360,7 +362,7 @@ function startTest(){
 
 }
 
-function saveTestResult(){
+async function saveTestResult(){
 
     const history = JSON.parse(localStorage.getItem("recentTests")) || [];
 
@@ -368,7 +370,14 @@ function saveTestResult(){
 
     const result = {
 
-        name: "Mock Exam 17",
+    userId: localStorage.getItem("userId"),
+
+    username: localStorage.getItem("username"),
+
+    email: localStorage.getItem("email"),
+
+
+    testName: "Mock Exam 2",
         correct: score,
         wrong: wrong,
         net: (score - wrong/3).toFixed(2),
@@ -377,6 +386,8 @@ function saveTestResult(){
 
     };
 
+    await saveToFirebase(result);
+    
     history.unshift(result);
 
     if(history.length > 10){
@@ -387,3 +398,6 @@ function saveTestResult(){
 
 }
 
+window.startTest = startTest;
+window.checkAnswer = checkAnswer;
+window.nextQuestion = nextQuestion;

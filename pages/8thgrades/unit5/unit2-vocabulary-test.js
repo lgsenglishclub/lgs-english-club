@@ -1,3 +1,5 @@
+import { saveToFirebase } from "../../../js/saveResult.js";
+
 const questions = [
 
 {
@@ -212,7 +214,7 @@ button.classList.add("correct");
 
 score++;
 
-document.getElementById("score").innerHTML=score;
+console.log("Score:", score);
 
 }
 
@@ -228,7 +230,7 @@ questions[currentQuestion].correct
 
 
 
-setTimeout(()=>{
+setTimeout(async ()=>{
 
 
 currentQuestion++;
@@ -242,7 +244,7 @@ loadQuestion();
 
 else{
 
-saveTestResult();
+ await saveTestResult();
 
 document.getElementById("quiz").innerHTML=
 
@@ -270,7 +272,7 @@ Your Score: ${score} / ${questions.length}
 
 }
 
-function saveTestResult(){
+async function saveTestResult(){
 
     const history = JSON.parse(localStorage.getItem("recentTests")) || [];
 
@@ -278,7 +280,14 @@ function saveTestResult(){
 
     const result = {
 
-        name: "Unit 2 Vocabulary Test",
+    userId: localStorage.getItem("userId"),
+
+    username: localStorage.getItem("username"),
+
+    email: localStorage.getItem("email"),
+
+
+    testName: "Unit 2 Vocabulary Test",
         correct: score,
         wrong: wrong,
         net: (score - wrong/3).toFixed(2),
@@ -287,6 +296,8 @@ function saveTestResult(){
 
     };
 
+    await saveToFirebase(result);
+    
     history.unshift(result);
 
     if(history.length > 10){
@@ -297,5 +308,8 @@ function saveTestResult(){
 
 }
 
+window.checkAnswer = checkAnswer;
+window.loadQuestion = loadQuestion;
+window.saveTestResult = saveTestResult;
 
 loadQuestion();

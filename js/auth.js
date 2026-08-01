@@ -256,55 +256,68 @@ if (logoutBtn) {
 
 document.addEventListener("DOMContentLoaded", function(){
 
-    let userArea =
-    document.getElementById("userArea");
-
+    let userArea = document.getElementById("userArea");
 
     if(userArea){
 
-        let logged =
-        localStorage.getItem("loggedIn");
-
-
-        let name =
-        localStorage.getItem("studentName");
+        let logged = localStorage.getItem("loggedIn");
+        let name = localStorage.getItem("studentName");
 
 
         if(logged){
 
             let profileLink = "profile.html";
 
-if(window.location.pathname.endsWith("index.html") || 
-   window.location.pathname === "/"){
+            if(window.location.pathname.endsWith("index.html") || 
+               window.location.pathname === "/"){
 
-    profileLink = "pages/profile.html";
+                profileLink = "pages/profile.html";
 
-}
-
-
-userArea.innerHTML = `
-
-<a href="${profileLink}" class="profile-btn">
-
-<span class="avatar">
-👨‍🎓
-</span>
-
-<span>
-${name}
-</span>
-
-</a>
+            }
 
 
-<button class="logout-btn" onclick="logout()">
-🚪 Logout
-</button>
+            userArea.innerHTML = `
 
-`;
+            <a href="${profileLink}" class="profile-btn">
+
+                <span class="avatar">
+                👨‍🎓
+                </span>
+
+                <span>
+                ${name}
+                </span>
+
+            </a>
+
+
+            <button class="logout-btn" onclick="logout()">
+            🚪 Logout
+            </button>
+
+            `;
+
+
+        } else {
+
+
+            userArea.innerHTML = `
+
+            <a href="pages/login.html">
+                Login
+            </a>
+
+            <a href="pages/register.html">
+                Register
+            </a>
+
+            `;
+
+
         }
 
     }
+
 
 
     const adminBtn = document.getElementById("adminBtn");

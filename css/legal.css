@@ -110,6 +110,71 @@ body{
 }
 
 
+/* ===============================
+   TABLET (768px ve altı)
+================================ */
+@media (max-width:768px){
+
+    .legal-navbar{
+        padding:15px 5%;
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .logo{
+        font-size:20px;
+        justify-content:center;
+    }
+
+    .logo img{
+        width:50px;
+        height:50px;
+    }
+
+    .legal-navbar nav{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+    }
+
+    .legal-navbar nav a{
+        font-size:15px;
+    }
+
+}
+
+
+/* ===============================
+   MOBILE (480px ve altı)
+================================ */
+@media (max-width:480px){
+
+    .legal-navbar{
+        padding:12px 20px;
+    }
+
+    .logo{
+        font-size:18px;
+        gap:10px;
+        text-align:center;
+    }
+
+    .logo img{
+        width:45px;
+        height:45px;
+    }
+
+    .legal-navbar nav{
+        width:100%;
+        gap:10px;
+    }
+
+    .legal-navbar nav a{
+        font-size:14px;
+    }
+
+}
+
 
 /* ===============================
  HERO
@@ -207,7 +272,68 @@ body{
 
 }
 
+/* ===============================
+   TABLET (768px ve altı)
+================================ */
+@media (max-width:768px){
 
+    .legal-hero{
+        padding:60px 25px;
+    }
+
+    .hero-icon{
+        font-size:48px;
+    }
+
+    .legal-hero h1{
+        font-size:34px;
+    }
+
+    .legal-hero p{
+        font-size:16px;
+        max-width:100%;
+    }
+
+    .back-home-btn{
+        padding:11px 24px;
+        font-size:15px;
+    }
+
+}
+
+
+/* ===============================
+   MOBILE (480px ve altı)
+================================ */
+@media (max-width:480px){
+
+    .legal-hero{
+        padding:50px 20px;
+    }
+
+    .hero-icon{
+        font-size:42px;
+        margin-bottom:12px;
+    }
+
+    .legal-hero h1{
+        font-size:28px;
+        line-height:1.3;
+    }
+
+    .legal-hero p{
+        font-size:15px;
+        line-height:1.7;
+    }
+
+    .back-home-btn{
+        width:100%;
+        max-width:260px;
+        padding:12px 20px;
+        font-size:15px;
+    }
+
+}
 
 /* ===============================
  CONTENT
@@ -301,6 +427,73 @@ body{
 
 }
 
+/* ===============================
+   TABLET (768px ve altı)
+================================ */
+@media (max-width:768px){
+
+    .legal-container{
+        padding:40px 20px;
+    }
+
+    .legal-card{
+        padding:25px;
+        margin-bottom:20px;
+        border-radius:18px;
+    }
+
+    .legal-card h2{
+        font-size:21px;
+    }
+
+    .legal-card p{
+        font-size:15px;
+        line-height:1.7;
+    }
+
+    .legal-card ul{
+        margin-left:20px;
+    }
+
+}
+
+
+/* ===============================
+   MOBILE (480px ve altı)
+================================ */
+@media (max-width:480px){
+
+    .legal-container{
+        padding:30px 15px;
+    }
+
+    .legal-card{
+        padding:20px;
+        border-radius:16px;
+        margin-bottom:18px;
+    }
+
+    .legal-card h2{
+        font-size:19px;
+        margin-bottom:12px;
+    }
+
+    .legal-card p{
+        font-size:14px;
+        line-height:1.6;
+    }
+
+    .legal-card ul{
+        margin-left:18px;
+    }
+
+    .legal-card li{
+        font-size:14px;
+        margin-bottom:8px;
+    }
+
+}
+
 
 
 /* INFO BOX */
@@ -320,6 +513,36 @@ body{
 
 }
 
+/* ===============================
+   TABLET (768px ve altı)
+================================ */
+@media (max-width:768px){
+
+    .info-box{
+        margin-top:18px;
+        padding:18px;
+        border-left-width:4px;
+        border-radius:12px;
+    }
+
+}
+
+
+/* ===============================
+   MOBILE (480px ve altı)
+================================ */
+@media (max-width:480px){
+
+    .info-box{
+        margin-top:15px;
+        padding:15px;
+        border-left-width:4px;
+        border-radius:10px;
+        font-size:14px;
+        line-height:1.6;
+    }
+
+}
 
 
 /* CONTACT */
@@ -379,6 +602,53 @@ body{
 
 }
 
+/* ===============================
+   TABLET (768px ve altı)
+================================ */
+@media (max-width:768px){
+
+    .contact-box{
+        margin-top:30px;
+        padding:30px 25px;
+        border-radius:20px;
+    }
+
+    .contact-box h2{
+        font-size:22px;
+        margin-bottom:12px;
+    }
+
+    .contact-btn{
+        padding:12px 25px;
+        font-size:15px;
+    }
+
+}
+
+
+/* ===============================
+   MOBILE (480px ve altı)
+================================ */
+@media (max-width:480px){
+
+    .contact-box{
+        margin-top:25px;
+        padding:25px 18px;
+        border-radius:18px;
+    }
+
+    .contact-box h2{
+        font-size:20px;
+    }
+
+    .contact-btn{
+        width:100%;
+        max-width:250px;
+        padding:12px 20px;
+        font-size:14px;
+    }
+
+}
 
 
 /* ===============================
@@ -546,102 +816,94 @@ body{
 
 }
 
+/* ===============================
+   TABLET (768px ve altı)
+================================ */
+@media (max-width:768px){
 
+    .legal-footer{
+        padding:45px 5% 20px;
+        margin-top:50px;
+    }
 
-/* Mobile */
+    .footer-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:30px;
+    }
 
-@media(max-width:768px){
+    .footer-grid h3{
+        font-size:20px;
+        margin-bottom:15px;
+    }
 
+    .footer-grid p{
+        font-size:14px;
+        max-width:100%;
+    }
 
-.footer-grid{
-
-    grid-template-columns:1fr;
-
-    text-align:center;
-
-}
-
-
-.footer-grid h3::after{
-
-    margin:10px auto;
-
-}
-
-
-.footer-grid p{
-
-    margin:auto;
-
-}
-
-
-.footer-grid a:hover{
-
-    transform:none;
-
-}
-
-}
-
-@media(max-width:768px){
-
-    .footer-social a img{
-
-        width:26px;
-
-        height:26px;
-
+    .footer-grid a{
+        font-size:14px;
+        margin-bottom:10px;
     }
 
 }
 
 
 /* ===============================
- MOBILE
+   MOBILE (480px ve altı)
 ================================ */
+@media (max-width:480px){
 
+    .legal-footer{
+        padding:35px 20px 20px;
+        margin-top:40px;
+        text-align:center;
+    }
 
-@media(max-width:768px){
+    .footer-grid{
+        grid-template-columns:1fr;
+        gap:25px;
+    }
 
+    .footer-grid h3{
+        font-size:19px;
+    }
 
-.legal-navbar{
+    .footer-grid h3::after{
+        margin:10px auto 0;
+        width:40px;
+    }
 
-    flex-direction:column;
+    .footer-grid p{
+        font-size:14px;
+        line-height:1.6;
+        margin:auto;
+    }
 
-    gap:20px;
+    .footer-grid a{
+        font-size:14px;
+        margin-bottom:9px;
+    }
+
+    .footer-grid a:hover{
+        transform:none;
+    }
+
+    .legal-footer hr{
+        margin:25px 0 15px;
+    }
+
+    .legal-footer > p{
+        font-size:12px;
+        line-height:1.5;
+    }
+
+    .footer-grid > div:hover{
+        transform:none;
+    }
 
 }
 
-
-
-.legal-navbar nav{
-
-    flex-wrap:wrap;
-
-    justify-content:center;
-
-}
-
-
-
-.legal-hero h1{
-
-    font-size:30px;
-
-}
-
-
-
-.legal-card{
-
-    padding:22px;
-
-}
-
-
-
-}
 
 /* ===============================
    MODERN NAVBAR BUTTONS
@@ -743,5 +1005,83 @@ body{
 .footer-social a:hover img{
 
     transform:translateY(-4px) scale(1.1);
+
+}
+
+/* ===============================
+   TABLET (768px ve altı)
+================================ */
+@media (max-width:768px){
+
+    .legal-navbar nav a{
+        padding:8px 14px;
+        font-size:14px;
+        border-radius:10px;
+    }
+
+    .legal-navbar nav a:hover{
+        transform:none;
+    }
+
+    .legal-navbar nav a::after{
+        bottom:3px;
+        height:2px;
+    }
+
+    .footer-social{
+        justify-content:center;
+        gap:12px;
+        margin-top:18px;
+    }
+
+    .footer-social a img{
+        width:30px;
+        height:30px;
+    }
+
+}
+
+
+/* ===============================
+   MOBILE (480px ve altı)
+================================ */
+@media (max-width:480px){
+
+    .legal-navbar nav{
+        flex-direction:column;
+        align-items:center;
+        width:100%;
+    }
+
+    .legal-navbar nav a{
+        width:100%;
+        max-width:220px;
+        text-align:center;
+        padding:9px 12px;
+        font-size:14px;
+    }
+
+    .legal-navbar nav a:hover{
+        transform:none;
+    }
+
+    .legal-navbar nav a::after{
+        display:none;
+    }
+
+
+    .footer-social{
+        gap:10px;
+        margin-top:15px;
+    }
+
+    .footer-social a img{
+        width:28px;
+        height:28px;
+    }
+
+    .footer-social a:hover img{
+        transform:none;
+    }
 
 }

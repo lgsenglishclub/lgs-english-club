@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Message Details</title>
+
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="admin.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+
+
+<body>
+
+<section class="user-profile-card">
+
+<div class="profile-header">
+
+<div class="profile-avatar">
+📬
+</div>
+
+<h1>Message Details</h1>
+
+<p>Contact Form Message</p>
+
+</div>
+
+<div id="messageInfo">
+
+Loading...
+
+</div>
+
+<div class="profile-actions">
+
+    <button
+    class="back-btn"
+    onclick="window.location.href='admin.html'">
+
+        <i class="fa-solid fa-arrow-left"></i>
+
+        Back
+
+    </button>
+
+    <div class="action-right">
+
+        <button
+        id="openReplyModal"
+        class="reply-btn">
+
+            <i class="fa-solid fa-paper-plane"></i>
+
+            Reply
+
+        </button>
+
+        <button
+        id="deleteMessageBtn"
+        class="delete-user-btn">
+
+            <i class="fa-solid fa-trash"></i>
+
+            Delete
+
+        </button>
+
+    </div>
+
+</div>
+
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script type="module" src="admin-message.js"></script>
+
+<div id="replyModal" class="modal">
+
+    <div class="modal-content">
+
+        <div class="modal-header">
+
+            <h2>✉️ Reply to Student</h2>
+
+            <span id="closeModal">&times;</span>
+
+        </div>
+
+        <textarea
+        id="replyText"
+        placeholder="Write your reply..."></textarea>
+
+        <div class="modal-buttons">
+
+            <button id="cancelReply" class="cancel-btn">
+                Cancel
+            </button>
+
+            <button id="sendReplyBtn" class="send-btn">
+                📤 Send
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Checkout</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="logo">
+💳 CHECKOUT
+</div>
+
+</header>
+
+
+
+<section class="payment-page">
+
+
+<div class="payment-card">
+
+
+<h1>
+Complete Your Purchase
+</h1>
+
+
+<h2 id="selectedPlan">
+</h2>
+
+
+<div class="checkout-info">
+
+
+<p>
+👤 User:
+<span id="userEmail"></span>
+</p>
+
+
+<p>
+📦 Plan:
+<span id="planName"></span>
+</p>
+
+
+</div>
+
+
+
+<button class="payment-btn" id="payButton">
+
+Pay Now
+
+</button>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+<script>
+
+const plan =
+localStorage.getItem("selectedPlan");
+
+
+const email =
+localStorage.getItem("email");
+
+
+
+document.getElementById("selectedPlan").innerHTML =
+plan || "No plan selected";
+
+
+document.getElementById("planName").innerHTML =
+plan || "-";
+
+
+document.getElementById("userEmail").innerHTML =
+email || "Guest";
+
+
+</script>
+
+<script type="module">
+
+import { auth, db } from "../firebase.js";
+
+import { doc, updateDoc } 
+from "https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js";
+
+
+document
+.getElementById("payButton")
+.addEventListener("click", async ()=>{
+
+
+    const user = auth.currentUser;
+
+
+    if(!user){
+
+        alert("Please login first");
+
+        window.location.href="login.html";
+
+        return;
+
+    }
+
+
+    const userRef = doc(db,"users",user.uid);
+
+
+    const today = new Date();
+
+const endDate = new Date();
+
+
+const selectedPlan = localStorage.getItem("selectedPlan");
+
+
+// Yıllık paket
+if(selectedPlan && selectedPlan.includes("Yearly")){
+
+    endDate.setFullYear(endDate.getFullYear() + 1);
+
+}
+
+
+// Aylık paket
+else{
+
+    endDate.setMonth(endDate.getMonth() + 1);
+
+}
+
+
+
+await updateDoc(userRef,{
+
+    membership:"premium",
+
+    premiumStart: today.toISOString(),
+
+    premiumEnd: endDate.toISOString()
+
+});
+
+
+    localStorage.setItem(
+        "membership",
+        "premium"
+    );
+
+
+    alert("🎉 Premium activated!");
+
+
+    window.location.href="../index.html";
+
+
+});
+
+
+</script>
+
+</body>
+
+</html>

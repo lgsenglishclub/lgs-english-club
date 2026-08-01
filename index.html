@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LGS English Club</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        🏠 HOME
+    </div>
+
+ <nav id="navbar">
+
+    <span id="userArea"></span>
+
+<a href="pages/contact/contact.html"
+   class="contact-link"
+   id="contactBtn">
+    <i class="fa-solid fa-envelope"></i>
+    Contact
+</a>
+
+<a href="pages/admin.html" id="adminBtn" style="display:none;">
+    🛡️ Admin Panel
+    </a>
+
+</nav>
+
+</header>
+
+<div class="hero-content">
+
+<div class="home-title">
+
+    <img src="pages/contact/images/lgsenglishclub.png" 
+         alt="LGS English Club Logo">
+
+    <h1>
+        👋 Welcome to LGS English Club!
+    </h1>
+
+</div>
+
+<p>
+Keep learning English and reach your LGS goal.
+</p>
+
+<div class="hero-stats">
+
+</div>
+
+<section class="membership-card">
+
+    <div class="membership-icon">
+        👑
+    </div>
+
+    <h2>Membership</h2>
+
+    <div class="plan-badge free">
+        🟢 FREE MEMBER
+    </div>
+
+    <p class="membership-text">
+        Upgrade and Unlock the all documents.
+    </p>
+
+    </section>
+
+    <button class="premium-btn"
+    onclick="location.href='pages/premium.html'">
+
+        Upgrade to Premium
+
+    </button>
+
+
+<section class="lgscountdown">
+
+<div class="lgs-box">
+<h2>LGS Countdown</h2>
+
+<p id="lgsDays">
+0 Days
+</p>
+
+<b>days left</b>
+
+        </div>
+
+
+        <p id="wordResult"></p>
+
+
+</div>
+
+<section class="features">
+
+
+    <div class="card">
+        
+    <h1>UNITS</h1>
+
+    <a href="pages/8thgrades/units.html">
+
+        <button class="start-btn">
+            Start
+        </button>
+
+    </a>
+
+</div>
+
+    </div>
+
+    <div class="card premium-card">
+        
+        <h1>MOCK EXAMS</h1>
+
+    <a href="pages/8thgrades/mock-exams.html">
+
+<button class="start-btn">
+    Start
+</button>
+
+</a>
+
+    </div>
+
+    <div class="card premium-card">
+        
+        <h1>LGS EXAMS</h1>
+        
+
+    <a href="pages/8thgrades/lgs-exams.html">
+
+<button class="start-btn">
+    Start
+</button>
+
+</a>
+
+    </div>
+
+   <div class="card premium-card">
+
+    <h1>TENSES</h1>
+
+    <a href="pages/8thgrades/tenses.html">
+
+        <button class="start-btn">
+            Start
+        </button>
+
+    </a>
+
+</div>
+
+</section> 
+
+<div class="dashboard-card">
+
+<div class="vocabulary-title">
+
+<h2>📚 Daily LGS Vocabulary</h2>
+<p>Every day 5 important LGS words</p>
+</div>
+
+<div id="dailyWords"></div>
+
+</div>
+
+</section>
+
+
+<script src="js/script.js"></script>
+
+<script type="module" src="/js/auth.js"></script>
+
+<script src="js/app.js"></script>
+
+<script src="js/dailyWords.js"></script>
+
+
+<footer class="footer">
+
+    <div class="footer-logo">
+        <img src="pages/contact/images/lgsenglishclub.png" alt="LGS English Club Logo">
+    </div>
+
+    <h2>LGS English Club</h2>
+
+    <p class="footer-slogan">
+        Learn English • Build Confidence • Succeed in LGS
+    </p>
+
+    <div class="footer-teacher">
+
+            <p>Founded by</p>
+            <h3>Umut KÖKSAL</h3>
+           
+
+            <span>
+                ...
+            </span>
+
+        </div>
+
+    <div class="footer-social">
+
+        <a href="mailto:englishlgsclub@gmail.com">
+            <img src="pages/contact/images/email.png" alt="Email">
+        </a>
+
+        <a href="https://www.lgsenglishclub.com.tr" target="_blank">
+            <img src="pages/contact/images/website.png" alt="Website">
+        </a>
+
+        <a href="https://instagram.com/lgsenglishclub" target="_blank">
+            <img src="pages/contact/images/instagram.png" alt="Instagram">
+        </a>
+
+    </div>
+
+     <nav class="footer-links">
+        <a href="pages/contact/contact.html" class="contact-link">
+    <i class="fa-solid fa-envelope"></i>
+    Contact
+    </a>
+
+    </nav>
+
+    <div class="footer-bottom">
+        © 2026 LGS English Club. All Rights Reserved.
+    </div>
+
+</footer>
+
+<script src="js/membership.js"></script>
+<script src="js/menuControl.js"></script>
+<script src="js/premium.js"></script>
+
+</body>
+
+</html>

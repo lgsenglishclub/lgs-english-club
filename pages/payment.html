@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Premium Payment</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="logo">
+👑 PREMIUM
+</div>
+
+<nav>
+
+<a href="../index.html">
+Home
+</a>
+
+</nav>
+
+</header>
+
+
+
+<section class="payment-page">
+
+
+<div class="payment-card">
+
+
+<h1>
+Upgrade to Premium
+</h1>
+
+
+<p>
+Choose your premium plan.
+</p>
+
+
+<div class="price">
+
+</div>
+
+<div class="plan-options">
+
+
+<div class="plan active">
+
+<h2>⭐Premium Monthly</h2>
+
+<h3>
+89₺ / Month
+</h3>
+
+<p>
+Unlimited access to premium content
+</p>
+
+</div>
+
+
+
+<div class="plan">
+
+<h2>👑Premium Yearly</h2>
+
+<h3>
+799₺ / Year
+</h3>
+
+<p>
+Save your money and Learn longer
+</p>
+
+</div>
+
+
+</div>
+
+
+<button class="payment-btn" id="continuePayment">
+    Continue to Payment
+</button>
+
+
+</div>
+
+
+</section>
+
+<script>
+
+const plans = document.querySelectorAll(".plan");
+
+plans.forEach(plan => {
+
+    plan.addEventListener("click",()=>{
+
+        plans.forEach(p=>{
+            p.classList.remove("selected");
+        });
+
+        plan.classList.add("selected");
+
+    });
+
+});
+
+
+</script>
+
+<script>
+
+const continueBtn = document.getElementById("continuePayment");
+
+continueBtn.addEventListener("click",()=>{
+
+
+    const selectedPlan = document.querySelector(".plan.selected");
+
+
+    if(!selectedPlan){
+
+        alert("Please select a Premium plan");
+
+        return;
+
+    }
+
+
+    const planName = selectedPlan.querySelector("h2").innerText;
+
+
+    localStorage.setItem(
+        "selectedPlan",
+        planName
+    );
+
+
+    window.location.href = "checkout.html";
+
+
+});
+
+
+</script>
+
+</body>
+
+</html>

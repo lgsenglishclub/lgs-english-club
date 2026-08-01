@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>User Profile</title>
+
+<link rel="stylesheet" href="admin.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+
+
+<body>
+
+<section class="user-profile-card">
+
+    <div class="profile-header">
+
+    <div class="profile-avatar">👤</div>
+
+        <h1>Student Profile</h1>
+
+        <p>User Information</p>
+
+    </div>
+
+    <div id="userInfo">
+        Loading...
+    </div>
+
+    <div class="profile-actions">
+
+        <button class="back-btn"
+onclick="window.location.href='admin.html'">
+
+<i class="fa-solid fa-arrow-left"></i>
+
+Back
+
+</button>
+
+<button id="deleteUserBtn"
+class="delete-user-btn">
+
+<i class="fa-solid fa-trash"></i>
+
+Delete
+
+</button>
+
+    </div>
+
+</section>
+
+<script type="module" src="admin-user.js"></script>
+
+</body>
+</html>

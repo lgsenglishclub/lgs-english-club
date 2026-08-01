@@ -480,231 +480,6 @@ button:hover {
 
     clear:both;
 
-    /* =====================================================
-   RESPONSIVE - HOME PAGE
-   (Tablet + Telefon)
-===================================================== */
-
-/* ---------- Tablet (1024px) ---------- */
-
-@media (max-width:1024px){
-
-    header{
-        padding:18px 25px;
-    }
-
-    .logo{
-        font-size:24px;
-    }
-
-    nav a{
-        margin-left:15px;
-        font-size:16px;
-    }
-
-    .hero{
-        padding:70px 20px;
-    }
-
-    .hero h1{
-        font-size:42px;
-    }
-
-    .hero p{
-        font-size:20px;
-    }
-
-    .features{
-        display:grid !important;
-        grid-template-columns:repeat(2,1fr);
-        gap:20px;
-        width:95%;
-    }
-
-    .card{
-        width:100%;
-        max-width:none;
-        height:auto;
-        min-height:180px;
-    }
-
-    .word-card{
-        width:85%;
-        max-width:420px;
-    }
-
-    .lesson-container{
-        display:grid !important;
-        grid-template-columns:repeat(2,1fr);
-        gap:25px;
-    }
-
-    .lesson-card{
-        width:100%;
-        box-sizing:border-box;
-    }
-
-}
-
-
-/* ---------- Telefon (768px) ---------- */
-
-@media (max-width:768px){
-
-    header{
-        flex-direction:column;
-        padding:18px;
-        gap:15px;
-    }
-
-    .logo{
-        font-size:24px;
-    }
-
-    nav{
-        display:flex;
-        flex-wrap:wrap;
-        justify-content:center;
-        gap:12px;
-    }
-
-    nav a{
-        margin:0;
-        font-size:15px;
-    }
-
-    .hero{
-        padding:50px 15px;
-    }
-
-    .hero h1{
-        font-size:34px;
-        line-height:1.3;
-    }
-
-    .hero p{
-        font-size:18px;
-    }
-
-    button{
-        width:100%;
-        max-width:280px;
-        font-size:17px;
-        padding:14px;
-    }
-
-    .features{
-        display:grid !important;
-        grid-template-columns:1fr;
-        width:95%;
-        gap:18px;
-    }
-
-    .card{
-        width:100%;
-        height:auto;
-        min-height:170px;
-    }
-
-    .card h2{
-        font-size:18px;
-    }
-
-    .card h3{
-        font-size:15px;
-    }
-
-    .daily-word{
-        padding:50px 15px;
-    }
-
-    .daily-word h2{
-        font-size:28px;
-    }
-
-    .word-card{
-        width:100%;
-        box-sizing:border-box;
-        padding:25px;
-    }
-
-    .word-icon{
-        font-size:55px;
-    }
-
-    .word-card h1{
-        font-size:34px;
-    }
-
-    .word-card p{
-        font-size:20px;
-    }
-
-    .lessons{
-        padding:50px 15px;
-    }
-
-    .lesson-container{
-        display:grid !important;
-        grid-template-columns:1fr;
-        gap:20px;
-    }
-
-    .lesson-card{
-        width:100%;
-        box-sizing:border-box;
-        padding:25px;
-    }
-
-}
-
-
-/* ---------- Küçük Telefon (480px) ---------- */
-
-@media (max-width:480px){
-
-    h1{
-        font-size:32px;
-    }
-
-    p{
-        font-size:18px;
-    }
-
-    .hero h1{
-        font-size:28px;
-    }
-
-    .hero p{
-        font-size:16px;
-    }
-
-    .card{
-        padding:18px;
-    }
-
-    .word-card{
-        padding:20px;
-    }
-
-    .word-card h1{
-        font-size:28px;
-    }
-
-    .word-card p{
-        font-size:18px;
-    }
-
-    .lesson-card{
-        padding:20px;
-    }
-
-    .lesson-card h2{
-        font-size:22px;
-    }
-
-}
-
 }/* LESSON PAGE */
 
 .vocabulary{
@@ -1067,160 +842,6 @@ button:hover {
 
 }
 
-/* =====================================================
-   RESPONSIVE - LESSON / PROFILE
-===================================================== */
-
-/* ---------- Tablet ---------- */
-
-@media (max-width:1024px){
-
-    .vocabulary{
-        gap:20px;
-    }
-
-    .word-box{
-        width:200px;
-        padding:25px;
-    }
-
-    .dialogue,
-    .practice{
-        width:90%;
-        max-width:700px;
-        box-sizing:border-box;
-    }
-
-    .profile-card{
-        width:95%;
-        padding:30px;
-        box-sizing:border-box;
-    }
-
-    .summary-cards{
-        grid-template-columns:repeat(2,1fr) !important;
-        width:95%;
-    }
-
-}
-
-
-/* ---------- Telefon ---------- */
-
-@media (max-width:768px){
-
-    .vocabulary{
-        flex-direction:column;
-        align-items:center;
-        gap:18px;
-    }
-
-    .word-box{
-        width:90%;
-        max-width:320px;
-        padding:22px;
-        box-sizing:border-box;
-    }
-
-    .word-box h3{
-        font-size:22px;
-    }
-
-    .dialogue,
-    .practice{
-        width:95%;
-        padding:20px;
-        box-sizing:border-box;
-    }
-
-    .practice button{
-        width:100%;
-        max-width:250px;
-    }
-
-    .score-box{
-        width:90%;
-        max-width:280px;
-        font-size:22px;
-    }
-
-    .profile{
-        padding:50px 15px;
-    }
-
-    .profile-card{
-        width:100%;
-        padding:25px 18px;
-        box-sizing:border-box;
-    }
-
-    .progress-bar{
-        width:100%;
-    }
-
-    .streak-box{
-        width:100%;
-        max-width:280px;
-        box-sizing:border-box;
-    }
-
-    .avatars{
-        flex-wrap:wrap;
-        gap:10px;
-    }
-
-    .avatars button{
-        font-size:24px;
-        padding:8px;
-    }
-
-    .summary-cards{
-        grid-template-columns:1fr !important;
-        width:100%;
-        gap:15px;
-    }
-
-}
-
-
-/* ---------- Küçük Telefon ---------- */
-
-@media (max-width:480px){
-
-    .word-box{
-        font-size:32px;
-    }
-
-    .word-box h3{
-        font-size:20px;
-    }
-
-    .score-box{
-        font-size:20px;
-    }
-
-    #level{
-        font-size:24px;
-    }
-
-    .badge{
-        padding:15px;
-    }
-
-    .badge h3{
-        font-size:20px;
-    }
-
-    .summary-card h3{
-        font-size:18px;
-    }
-
-    .summary-card p{
-        font-size:24px;
-    }
-
-}
-
 /* =========================
    PROFILE DASHBOARD
 ========================= */
@@ -1446,137 +1067,6 @@ button:hover {
     grid-template-columns:1fr;
 
 }
-
-}
-
-/* =====================================================
-   RESPONSIVE - PROFILE DASHBOARD
-===================================================== */
-
-/* ---------- Tablet ---------- */
-
-@media (max-width:1024px){
-
-    .dashboard{
-        width:95%;
-        padding:50px 15px;
-        box-sizing:border-box;
-    }
-
-    .welcome-card{
-        padding:30px 25px;
-    }
-
-    .welcome-card h1{
-        font-size:34px;
-    }
-
-    .welcome-card p{
-        font-size:18px;
-    }
-
-    .summary-cards{
-        grid-template-columns:repeat(2,1fr);
-        gap:18px;
-    }
-
-    .dashboard-card{
-        padding:28px;
-    }
-
-}
-
-
-/* ---------- Telefon ---------- */
-
-@media (max-width:768px){
-
-    .dashboard{
-        width:100%;
-        padding:40px 15px;
-        box-sizing:border-box;
-    }
-
-    .welcome-card{
-        padding:25px 18px;
-    }
-
-    .welcome-card h1{
-        font-size:28px;
-        line-height:1.3;
-    }
-
-    .welcome-card p{
-        font-size:16px;
-    }
-
-    .summary-cards{
-        grid-template-columns:1fr;
-        gap:15px;
-    }
-
-    .summary-card{
-        padding:20px;
-    }
-
-    .summary-card h3{
-        font-size:18px;
-    }
-
-    .summary-card p{
-        font-size:26px;
-    }
-
-    .dashboard-card{
-        padding:20px;
-    }
-
-    .dashboard-card h2{
-        font-size:22px;
-    }
-
-    .progress-bar{
-        height:20px;
-    }
-
-    #badgeArea{
-        padding:18px;
-    }
-
-}
-
-
-/* ---------- Küçük Telefon ---------- */
-
-@media (max-width:480px){
-
-    .welcome-card h1{
-        font-size:24px;
-    }
-
-    .welcome-card p{
-        font-size:15px;
-    }
-
-    .summary-card{
-        padding:18px;
-    }
-
-    .summary-card h3{
-        font-size:17px;
-    }
-
-    .summary-card p{
-        font-size:22px;
-    }
-
-    .dashboard-card{
-        padding:18px;
-    }
-
-    #badgeArea{
-        padding:15px;
-    }
 
 }
 
@@ -1862,95 +1352,6 @@ body.dark #badgeArea > div{
     border-radius:20px;
 
     font-size:14px;
-
-}
-
-/* =====================================================
-   RESPONSIVE - BADGES & DARK MODE
-===================================================== */
-
-/* ---------- Tablet ---------- */
-
-@media (max-width:1024px){
-
-    #badgeArea{
-        justify-content:center;
-        gap:18px;
-    }
-
-    #badgeArea > div{
-        width:220px;
-        box-sizing:border-box;
-    }
-
-    #themeButton{
-        margin-left:0;
-        margin-top:15px;
-    }
-
-}
-
-
-/* ---------- Telefon ---------- */
-
-@media (max-width:768px){
-
-    #badgeArea{
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-        gap:18px;
-    }
-
-    #badgeArea > div{
-        width:100%;
-        max-width:340px;
-        padding:22px;
-        box-sizing:border-box;
-    }
-
-    #badgeArea h3{
-        font-size:20px;
-    }
-
-    #badgeArea p{
-        font-size:15px;
-    }
-
-    #themeButton{
-        width:100%;
-        max-width:260px;
-        margin:20px auto 0;
-        display:block;
-    }
-
-}
-
-
-/* ---------- Küçük Telefon ---------- */
-
-@media (max-width:480px){
-
-    #badgeArea > div{
-        padding:18px;
-    }
-
-    #badgeArea > div:first-child{
-        font-size:28px;
-    }
-
-    #badgeArea h3{
-        font-size:18px;
-    }
-
-    #badgeArea p{
-        font-size:14px;
-    }
-
-    #themeButton{
-        font-size:13px;
-        padding:10px 16px;
-    }
 
 }
 
@@ -2240,195 +1641,6 @@ button{
     background:#1d4ed8;
 
     transform:scale(1.05);
-
-}
-
-/* ==================================================
-   TABLET (992px)
-================================================== */
-
-@media (max-width:992px){
-
-    .certificate-card{
-        max-width:90%;
-        padding:45px 30px;
-    }
-
-    .certificate-card h1{
-        font-size:36px;
-    }
-
-    .certificate-card h2{
-        font-size:28px;
-    }
-
-    .certificate-card p,
-    .signature{
-        font-size:17px;
-    }
-
-    .badge-item{
-        width:180px;
-        padding:20px;
-    }
-
-    .game-stats{
-        padding:60px 5%;
-    }
-
-    .game-stats h2{
-        font-size:34px;
-    }
-
-    .stats-container{
-        gap:20px;
-    }
-
-    .stat-box{
-        width:190px;
-        padding:25px;
-    }
-
-    .stat-box h3{
-        font-size:40px;
-    }
-
-    .stat-box p{
-        font-size:18px;
-    }
-
-}
-
-/* ==================================================
-   TELEFON (768px)
-================================================== */
-
-@media (max-width:768px){
-
-    .certificate-page{
-        padding:40px 15px;
-    }
-
-    .certificate-card{
-        width:100%;
-        max-width:100%;
-        padding:30px 20px;
-        border-width:5px;
-        border-radius:18px;
-    }
-
-    .certificate-card h1{
-        font-size:28px;
-    }
-
-    .certificate-card h2{
-        font-size:22px;
-    }
-
-    .certificate-card p{
-        font-size:15px;
-        line-height:1.7;
-    }
-
-    .signature{
-        margin-top:25px;
-        font-size:15px;
-    }
-
-    #certificateButton button{
-        width:100%;
-        max-width:280px;
-    }
-
-    #badgeArea{
-        gap:15px;
-    }
-
-    .badge-item{
-        width:100%;
-        max-width:280px;
-        padding:20px;
-    }
-
-    .badge-icon{
-        font-size:38px;
-    }
-
-    .game-stats{
-        padding:45px 20px;
-    }
-
-    .game-stats h2{
-        font-size:28px;
-        margin-bottom:30px;
-    }
-
-    .stats-container{
-        flex-direction:column;
-        align-items:center;
-        gap:18px;
-    }
-
-    .stat-box{
-        width:100%;
-        max-width:300px;
-        padding:25px;
-    }
-
-    .stat-box h3{
-        font-size:36px;
-    }
-
-    .stat-box p{
-        font-size:17px;
-    }
-
-    .start-btn{
-        width:100%;
-        max-width:250px;
-        font-size:16px;
-        padding:12px 20px;
-    }
-
-}
-
-/* ==================================================
-   KÜÇÜK TELEFON (480px)
-================================================== */
-
-@media (max-width:480px){
-
-    .certificate-card{
-        padding:22px 15px;
-    }
-
-    .certificate-card h1{
-        font-size:24px;
-    }
-
-    .certificate-card h2{
-        font-size:20px;
-    }
-
-    .certificate-card p{
-        font-size:14px;
-    }
-
-    .signature{
-        font-size:14px;
-    }
-
-    .game-stats h2{
-        font-size:24px;
-    }
-
-    .stat-box h3{
-        font-size:30px;
-    }
-
-    .stat-box p{
-        font-size:15px;
-    }
 
 }
 
@@ -2793,229 +2005,6 @@ button{
 
 }
 
-/* ==================================================
-   TABLET (992px)
-================================================== */
-
-@media (max-width:992px){
-
-    .teachers{
-        padding:60px 5%;
-    }
-
-    .teachers h2{
-        font-size:34px;
-        margin-bottom:40px;
-    }
-
-    .teacher-container{
-        gap:20px;
-    }
-
-    .teacher-card{
-        width:180px;
-        padding:18px;
-    }
-
-    .teacher-photo{
-        font-size:42px;
-    }
-
-    .teacher-card h3{
-        font-size:18px;
-    }
-
-    .teacher-card p{
-        font-size:14px;
-    }
-
-    .achievements{
-        padding:45px 5%;
-    }
-
-    .achievement-container{
-        gap:18px;
-    }
-
-    .achievement-card{
-        width:160px;
-    }
-
-    .leaderboard{
-        padding:50px 5%;
-    }
-
-    .leader-container{
-        gap:20px;
-    }
-
-    .leader-card{
-        width:180px;
-    }
-
-    .daily-challenge{
-        padding:50px 5%;
-    }
-
-    .challenge-container{
-        gap:20px;
-    }
-
-    .challenge-card{
-        width:200px;
-    }
-
-}
-
-/* ==================================================
-   TELEFON (768px)
-================================================== */
-
-@media (max-width:768px){
-
-    .teachers{
-        padding:45px 20px;
-    }
-
-    .teachers h2{
-        font-size:28px;
-        margin-bottom:30px;
-    }
-
-    .teacher-container{
-        flex-direction:column;
-        align-items:center;
-        gap:18px;
-    }
-
-    .teacher-card{
-        width:100%;
-        max-width:300px;
-    }
-
-    .teacher-photo{
-        font-size:40px;
-    }
-
-    .achievements{
-        padding:40px 20px;
-    }
-
-    .achievements h2{
-        font-size:26px;
-    }
-
-    .achievement-container{
-        flex-direction:column;
-        align-items:center;
-        gap:15px;
-    }
-
-    .achievement-card{
-        width:100%;
-        max-width:280px;
-    }
-
-    .leaderboard{
-        padding:40px 20px;
-    }
-
-    .leaderboard h2{
-        font-size:28px;
-    }
-
-    .leader-container{
-        flex-direction:column;
-        align-items:center;
-        gap:18px;
-    }
-
-    .leader-card{
-        width:100%;
-        max-width:280px;
-    }
-
-    .rank{
-        font-size:38px;
-    }
-
-    .leader-card h3{
-        font-size:20px;
-    }
-
-    .daily-challenge{
-        padding:40px 20px;
-    }
-
-    .daily-challenge h2{
-        font-size:28px;
-    }
-
-    .challenge-container{
-        flex-direction:column;
-        align-items:center;
-        gap:18px;
-    }
-
-    .challenge-card{
-        width:100%;
-        max-width:300px;
-    }
-
-    .challenge-icon{
-        font-size:40px;
-    }
-
-    .challenge-btn button{
-        width:100%;
-        max-width:260px;
-    }
-
-    #challengeResult{
-        font-size:18px;
-    }
-
-}
-
-/* ==================================================
-   KÜÇÜK TELEFON (480px)
-================================================== */
-
-@media (max-width:480px){
-
-    .teachers h2,
-    .achievements h2,
-    .leaderboard h2,
-    .daily-challenge h2{
-        font-size:24px;
-    }
-
-    .teacher-card,
-    .achievement-card,
-    .leader-card,
-    .challenge-card{
-        max-width:100%;
-    }
-
-    .teacher-card h3,
-    .leader-card h3,
-    .challenge-card h3{
-        font-size:18px;
-    }
-
-    .achievement-card h3{
-        font-size:24px;
-    }
-
-    .teacher-card p,
-    .achievement-card p,
-    .leader-card p,
-    .challenge-card p{
-        font-size:14px;
-    }
-
-}
-
 /* WORD OF THE DAY */
 
 
@@ -3301,169 +2290,6 @@ button{
     border-radius:10px;
 
     transition:0.3s;
-
-}
-
-/* ==================================================
-   TABLET (992px)
-================================================== */
-
-@media (max-width:992px){
-
-    .meaning{
-        font-size:18px;
-    }
-
-    .example{
-        font-size:16px;
-    }
-
-    .quiz-intro{
-        font-size:18px;
-        margin-bottom:30px;
-    }
-
-    .progress-box{
-        width:90%;
-    }
-
-    .game-xp{
-        font-size:15px;
-        padding:8px 18px;
-    }
-
-    #dailyWords{
-        grid-template-columns:repeat(3,1fr);
-        gap:15px;
-    }
-
-    .word-item h3{
-        font-size:17px;
-    }
-
-    .word-item p{
-        font-size:14px;
-    }
-
-}
-
-/* ==================================================
-   TELEFON (768px)
-================================================== */
-
-@media (max-width:768px){
-
-    .meaning{
-        font-size:17px;
-    }
-
-    .example{
-        font-size:15px;
-        line-height:1.6;
-    }
-
-    .mini-question{
-        margin-top:20px;
-    }
-
-    .mini-question button{
-        width:100%;
-        max-width:250px;
-        margin:8px auto;
-        display:block;
-    }
-
-    #wordResult{
-        font-size:16px;
-    }
-
-    .quiz-intro{
-        font-size:16px;
-        padding:0 10px;
-    }
-
-    .progress-box{
-        width:95%;
-        height:12px;
-    }
-
-    .game-xp{
-        display:block;
-        width:fit-content;
-        margin:15px auto;
-        font-size:14px;
-    }
-
-    #dailyWords{
-        grid-template-columns:repeat(2,1fr);
-        gap:12px;
-    }
-
-    .word-item{
-        padding:12px;
-    }
-
-    .word-item h3{
-        font-size:16px;
-    }
-
-    .word-item p{
-        font-size:13px;
-    }
-
-    .vocabulary-title{
-        margin-top:0;
-        padding:0 15px;
-    }
-
-    .vocabulary-title h2{
-        font-size:24px;
-    }
-
-    .vocabulary-title p{
-        font-size:15px;
-    }
-
-    #timer{
-        font-size:16px;
-    }
-
-}
-
-/* ==================================================
-   KÜÇÜK TELEFON (480px)
-================================================== */
-
-@media (max-width:480px){
-
-    #dailyWords{
-        grid-template-columns:1fr;
-    }
-
-    .word-item{
-        width:100%;
-    }
-
-    .meaning{
-        font-size:16px;
-    }
-
-    .example{
-        font-size:14px;
-    }
-
-    .vocabulary-title h2{
-        font-size:22px;
-    }
-
-    .vocabulary-title p{
-        font-size:14px;
-    }
-
-    .game-xp{
-        font-size:13px;
-        padding:8px 15px;
-    }
 
 }
 
@@ -3895,134 +2721,6 @@ nav a {
 
 }
 
-/* ==================================================
-   TABLET (992px)
-================================================== */
-
-@media (max-width:992px){
-
-    header{
-        padding:18px 25px;
-    }
-
-    nav{
-        gap:10px;
-        flex-wrap:wrap;
-    }
-
-    nav a,
-    .home-btn,
-    .profile-btn,
-    .logout-btn,
-    #userArea a,
-    #userArea button{
-        padding:0 14px;
-        font-size:14px;
-        height:40px;
-    }
-
-    .avatar{
-        width:26px;
-        height:26px;
-        font-size:16px;
-    }
-
-}
-
-/* ==================================================
-   TELEFON (768px)
-================================================== */
-
-@media (max-width:768px){
-
-    header{
-        flex-direction:column;
-        align-items:center;
-        gap:18px;
-        padding:20px 15px;
-    }
-
-    header nav{
-        width:100%;
-        justify-content:center;
-        flex-wrap:wrap;
-        gap:10px;
-    }
-
-    nav{
-        justify-content:center;
-        width:100%;
-    }
-
-    nav a,
-    .home-btn,
-    .profile-btn,
-    .logout-btn{
-        width:170px;
-        justify-content:center;
-    }
-
-    #userArea{
-        width:100%;
-        margin:0;
-        justify-content:center;
-        flex-wrap:wrap;
-        gap:10px;
-    }
-
-    #userArea a,
-    #userArea button{
-        width:170px;
-        justify-content:center;
-    }
-
-    .avatar{
-        width:24px;
-        height:24px;
-        font-size:15px;
-    }
-
-    .signature-line{
-        width:130px;
-    }
-
-}
-
-/* ==================================================
-   KÜÇÜK TELEFON (480px)
-================================================== */
-
-@media (max-width:480px){
-
-    nav a,
-    .home-btn,
-    .profile-btn,
-    .logout-btn,
-    #userArea a,
-    #userArea button{
-        width:100%;
-        max-width:260px;
-        font-size:14px;
-    }
-
-    .goal-item{
-        padding:12px;
-    }
-
-    .goal-item h3{
-        font-size:17px;
-    }
-
-    .goal-item p{
-        font-size:14px;
-    }
-
-    .report-sign{
-        font-size:14px;
-    }
-
-}
-
 /* HOME HERO LGS STYLE */
 
 
@@ -4115,106 +2813,6 @@ margin-bottom:10px;
 .info-box {
     margin-left: auto;
     margin-right: auto;
-}
-
-/* ==================================================
-   TABLET (992px)
-================================================== */
-
-@media (max-width:992px){
-
-    .hero{
-        padding:35px 20px;
-    }
-
-    .hero-content h1{
-        font-size:32px;
-    }
-
-    .hero-content p{
-        font-size:17px;
-    }
-
-    .hero-info{
-        gap:18px;
-    }
-
-    .info-box{
-        width:200px;
-        padding:18px;
-    }
-
-}
-
-/* ==================================================
-   TELEFON (768px)
-================================================== */
-
-@media (max-width:768px){
-
-    .hero{
-        padding:30px 15px;
-    }
-
-    .hero-content h1{
-        font-size:28px;
-        line-height:1.3;
-    }
-
-    .hero-content p{
-        font-size:16px;
-        line-height:1.6;
-    }
-
-    .hero-info{
-        flex-direction:column;
-        gap:15px;
-        margin-top:25px;
-    }
-
-    .info-box{
-        width:100%;
-        max-width:320px;
-        padding:18px;
-    }
-
-    .info-box h3{
-        font-size:20px;
-    }
-
-    .info-box p{
-        font-size:15px;
-    }
-
-}
-
-/* ==================================================
-   KÜÇK TELEFON (480px)
-================================================== */
-
-@media (max-width:480px){
-
-    .hero-content h1{
-        font-size:24px;
-    }
-
-    .hero-content p{
-        font-size:15px;
-    }
-
-    .info-box{
-        max-width:100%;
-        padding:16px;
-    }
-
-    .info-box h3{
-        font-size:18px;
-    }
-
-    .info-box p{
-        font-size:14px;
-    }
-
 }
 
 /* UNIT CARDS */
@@ -4605,155 +3203,6 @@ font-size:0;
     margin-top: 5px;
 }
 
-/* ===================================
-   RESPONSIVE - LESSON & UNIT PAGES
-=================================== */
-
-@media (max-width:1024px){
-
-    /* Unit Cards */
-    .features{
-        grid-template-columns:repeat(3,1fr);
-        gap:20px;
-    }
-
-    .features .card{
-        width:100%;
-        height:auto;
-        min-height:190px;
-    }
-
-    /* Lesson */
-    .lesson-page{
-        width:95%;
-        padding:15px;
-    }
-
-    .lesson-box{
-        padding:20px;
-    }
-
-    /* Vocabulary */
-    .vocabulary-container{
-        grid-template-columns:repeat(2,1fr);
-        gap:15px;
-    }
-
-    .word-card{
-        width:100%;
-        min-height:auto;
-    }
-
-    /* Status */
-    .status-card{
-        flex-direction:column;
-        gap:8px;
-        text-align:center;
-    }
-
-}
-
-@media (max-width:768px){
-
-    .features{
-        grid-template-columns:repeat(2,1fr);
-        gap:15px;
-        padding:15px;
-    }
-
-    .features .card{
-        height:auto;
-        padding:15px;
-    }
-
-    .features .card h2{
-        font-size:16px;
-    }
-
-    .features .card h3{
-        font-size:14px;
-    }
-
-    .features .start-btn{
-        width:90px;
-        height:32px;
-        font-size:12px;
-    }
-
-    .lesson-page{
-        width:100%;
-        padding:15px;
-    }
-
-    .lesson-box{
-        padding:18px;
-    }
-
-    .lesson-box h2{
-        font-size:22px;
-    }
-
-    .word-card{
-        display:block;
-        width:100%;
-        margin:10px 0;
-        min-height:auto;
-    }
-
-    .question{
-        padding:12px;
-    }
-
-    .profile-icon{
-        font-size:60px;
-    }
-
-}
-
-@media (max-width:480px){
-
-    .features{
-        grid-template-columns:1fr;
-    }
-
-    .lesson-page h1{
-        font-size:28px;
-    }
-
-    .lesson-page>p{
-        font-size:15px;
-    }
-
-    .lesson-box{
-        padding:15px;
-    }
-
-    .lesson-box h2{
-        font-size:20px;
-    }
-
-    .word-card{
-        padding:15px;
-    }
-
-    .word-card h3{
-        font-size:18px;
-    }
-
-    .question{
-        padding:10px;
-    }
-
-    .status-card{
-        padding:12px;
-    }
-
-    .progress-bar{
-        height:20px;
-    }
-
-}
-
 /* Units 5 column layout */
 
 .lesson-page .features {
@@ -5103,185 +3552,6 @@ font-size:0;
 
 }
 
-/* ===================================
-   RESPONSIVE - UNITS & DAILY WORDS
-=================================== */
-
-@media (max-width:1024px){
-
-    /* Lesson Features */
-    .lesson-page .features{
-        grid-template-columns:repeat(3,1fr) !important;
-        gap:18px;
-    }
-
-    /* Genel Features */
-    .features{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    /* Daily Words */
-    #dailyWords{
-        grid-template-columns:repeat(3,1fr);
-        gap:15px;
-    }
-
-    .daily-word-card{
-        min-height:auto;
-    }
-
-    /* Unit Cards */
-    .unit-cards{
-        grid-template-columns:repeat(3,1fr);
-        gap:18px;
-    }
-
-    .unit-header h1{
-        font-size:36px;
-    }
-
-    .unit-title{
-        font-size:34px;
-    }
-
-}
-
-@media (max-width:768px){
-
-    .lesson-page .features{
-        grid-template-columns:repeat(2,1fr) !important;
-    }
-
-    .features{
-        grid-template-columns:1fr;
-        gap:18px;
-    }
-
-    .card{
-        padding:22px;
-    }
-
-    .card-icon{
-        font-size:45px;
-    }
-
-    .card h2{
-        font-size:20px;
-    }
-
-    .card p{
-        font-size:15px;
-    }
-
-    .card-btn{
-        width:100%;
-        padding:12px;
-    }
-
-    #dailyWords{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .daily-word-card{
-        padding:15px;
-    }
-
-    .daily-word-card h3{
-        font-size:17px;
-    }
-
-    .daily-word-card p{
-        font-size:14px;
-    }
-
-    .daily-word-card button{
-        width:100%;
-    }
-
-    .unit-header{
-        padding:35px 15px;
-    }
-
-    .unit-header h1{
-        font-size:30px;
-    }
-
-    .unit-header p{
-        font-size:16px;
-    }
-
-    .unit-title{
-        font-size:30px;
-    }
-
-    .unit-description{
-        font-size:16px;
-    }
-
-    .unit-cards{
-        grid-template-columns:repeat(2,1fr);
-        gap:15px;
-    }
-
-    .unit-card{
-        padding:20px 15px;
-    }
-
-    .icon-box{
-        width:65px;
-        height:65px;
-        font-size:32px;
-    }
-
-    .unit-card a{
-        width:100%;
-        box-sizing:border-box;
-    }
-
-}
-
-@media (max-width:480px){
-
-    .lesson-page .features{
-        grid-template-columns:1fr !important;
-    }
-
-    #dailyWords{
-        grid-template-columns:1fr;
-    }
-
-    .unit-cards{
-        grid-template-columns:1fr;
-    }
-
-    .unit-header h1{
-        font-size:26px;
-    }
-
-    .unit-title{
-        font-size:26px;
-    }
-
-    .unit-description{
-        font-size:15px;
-    }
-
-    .card,
-    .unit-card,
-    .daily-word-card{
-        width:100%;
-    }
-
-    .start-btn,
-    .card-btn,
-    .unit-card a{
-        width:100%;
-        min-width:unset;
-        padding:12px;
-    }
-
-}
-
 /* =========================
    UNIT PAGE DESIGN
 ========================= */
@@ -5536,152 +3806,7 @@ font-size:0;
 
 }
 
-/* ===================================
-   RESPONSIVE - UNIT PAGE DESIGN
-=================================== */
 
-@media (max-width:1024px){
-
-    .lesson-page{
-        padding:35px 20px;
-    }
-
-    .lesson-page h1{
-        font-size:34px;
-    }
-
-    .lesson-page p{
-        font-size:17px;
-    }
-
-    .unit-container{
-        width:95%;
-    }
-
-    .unit-cards{
-        grid-template-columns:repeat(2,1fr);
-        gap:20px;
-    }
-
-    .unit-banner{
-        padding:40px 25px;
-    }
-
-    .banner-content h1{
-        font-size:38px;
-    }
-
-}
-
-@media (max-width:768px){
-
-    .lesson-page{
-        padding:30px 15px;
-    }
-
-    .lesson-page h1{
-        font-size:30px;
-    }
-
-    .lesson-page p{
-        font-size:16px;
-    }
-
-    .unit-description{
-        font-size:16px;
-        margin-bottom:30px;
-    }
-
-    .unit-cards{
-        grid-template-columns:1fr;
-        gap:18px;
-    }
-
-    .unit-card{
-        padding:22px 18px;
-    }
-
-    .icon-box{
-        width:75px;
-        height:75px;
-        font-size:38px;
-    }
-
-    .unit-card h2{
-        font-size:22px;
-    }
-
-    .unit-card p{
-        min-height:auto;
-        font-size:15px;
-    }
-
-    .unit-card a{
-        width:100%;
-        box-sizing:border-box;
-        padding:12px;
-    }
-
-    .unit-banner{
-        border-radius:22px;
-        padding:35px 20px;
-    }
-
-    .banner-content h1{
-        font-size:32px;
-    }
-
-    .banner-content p{
-        font-size:16px;
-    }
-
-}
-
-@media (max-width:480px){
-
-    .lesson-page h1{
-        font-size:26px;
-    }
-
-    .lesson-page p{
-        font-size:15px;
-    }
-
-    .unit-container{
-        width:100%;
-    }
-
-    .unit-card{
-        padding:18px 15px;
-    }
-
-    .icon-box{
-        width:65px;
-        height:65px;
-        font-size:32px;
-    }
-
-    .unit-card h2{
-        font-size:20px;
-    }
-
-    .unit-card p{
-        font-size:14px;
-    }
-
-    .unit-banner{
-        padding:28px 15px;
-    }
-
-    .banner-content h1{
-        font-size:26px;
-    }
-
-    .banner-content p{
-        font-size:15px;
-    }
-
-}
 
 /* PROGRESS */
 
@@ -5828,99 +3953,6 @@ font-size:0;
 .unit-card a{
 
     margin-top:auto;
-
-}
-
-/* ===================================
-   RESPONSIVE - UNIT PROGRESS CARDS
-=================================== */
-
-@media (max-width:1024px){
-
-    .progress-area{
-        width:95%;
-    }
-
-    .unit-cards{
-        display:grid;
-        grid-template-columns:repeat(2,1fr);
-        gap:20px;
-    }
-
-    .unit-card{
-        width:100%;
-        min-height:280px;
-        height:auto;
-    }
-
-}
-
-@media (max-width:768px){
-
-    .progress-title{
-        font-size:16px;
-    }
-
-    .progress-line{
-        height:16px;
-    }
-
-    .unit-cards{
-        grid-template-columns:1fr;
-        gap:18px;
-    }
-
-    .unit-card{
-        width:100%;
-        min-height:auto;
-        height:auto;
-        padding:20px;
-    }
-
-    .unit-card h2{
-        height:auto;
-        font-size:22px;
-        margin-bottom:10px;
-    }
-
-    .unit-card p{
-        height:auto;
-        font-size:15px;
-        margin-bottom:20px;
-    }
-
-    .unit-card a{
-        width:100%;
-        text-align:center;
-    }
-
-}
-
-@media (max-width:480px){
-
-    .progress-area{
-        width:100%;
-    }
-
-    .progress-title{
-        font-size:15px;
-    }
-
-    .progress-line{
-        height:14px;
-    }
-
-    .unit-card{
-        padding:18px 15px;
-    }
-
-    .unit-card h2{
-        font-size:20px;
-    }
-
-    .unit-card p{
-        font-size:14px;
-    }
 
 }
 
@@ -6118,90 +4150,6 @@ font-size:0;
     color:white;
 
     box-shadow:0 5px 15px rgba(37,99,235,.3);
-
-}
-
-/* ===================================
-   RESPONSIVE - PREMIUM UNIT MENU
-=================================== */
-
-@media (max-width:1024px){
-
-    .unit-nav{
-        max-width:95%;
-        gap:8px;
-        padding:10px;
-    }
-
-    .unit-nav a{
-        padding:12px 18px;
-        font-size:15px;
-    }
-
-    .unit-tabs{
-        max-width:95%;
-        flex-wrap:wrap;
-    }
-
-}
-
-@media (max-width:768px){
-
-    .unit-nav{
-        gap:10px;
-        padding:12px;
-    }
-
-    .unit-nav a{
-        width:calc(50% - 10px);
-        justify-content:center;
-        padding:12px;
-        font-size:14px;
-        box-sizing:border-box;
-    }
-
-    .unit-nav span{
-        font-size:18px;
-    }
-
-    .unit-tabs{
-        gap:8px;
-        padding:10px;
-        flex-wrap:wrap;
-    }
-
-    .unit-tabs a{
-        flex:1 1 calc(50% - 8px);
-        text-align:center;
-        padding:12px;
-        font-size:14px;
-        box-sizing:border-box;
-    }
-
-}
-
-@media (max-width:480px){
-
-    .unit-nav{
-        flex-direction:column;
-        align-items:stretch;
-    }
-
-    .unit-nav a{
-        width:100%;
-        justify-content:center;
-        font-size:14px;
-    }
-
-    .unit-tabs{
-        flex-direction:column;
-    }
-
-    .unit-tabs a{
-        width:100%;
-        flex:none;
-        padding:12px;
-    }
 
 }
 
@@ -6899,168 +4847,6 @@ font-size:0;
 
 }
 
-/* ===================================
-   RESPONSIVE - VOCABULARY PAGE
-=================================== */
-
-@media (max-width:1200px){
-
-    .page-header h1{
-        font-size:34px;
-    }
-
-    .vocab-header{
-        flex-direction:column;
-        align-items:center;
-        text-align:center;
-        padding:30px 20px;
-        gap:20px;
-    }
-
-    .vocab-header .unit-tabs{
-        justify-content:center;
-        flex-wrap:wrap;
-    }
-
-    .vocabulary-container{
-        grid-template-columns:repeat(4,1fr);
-        gap:16px;
-    }
-
-}
-
-@media (max-width:992px){
-
-    .vocabulary-container{
-        grid-template-columns:repeat(3,1fr);
-    }
-
-    .word-card{
-        min-height:150px;
-        padding:18px 12px;
-    }
-
-    .word-card h2{
-        font-size:16px;
-    }
-
-    .meaning{
-        font-size:14px;
-    }
-
-}
-
-@media (max-width:768px){
-
-    .page-header{
-        padding:30px 15px;
-    }
-
-    .page-header h1{
-        font-size:30px;
-    }
-
-    .page-header p{
-        font-size:15px;
-    }
-
-    .title-area h1{
-        font-size:30px;
-    }
-
-    .title-area p{
-        font-size:15px;
-    }
-
-    .vocab-header{
-        padding:20px 15px;
-    }
-
-    .vocabulary-container{
-        width:95%;
-        grid-template-columns:repeat(2,1fr);
-        gap:15px;
-    }
-
-    .word-card{
-        min-height:140px;
-        padding:16px 10px;
-    }
-
-    .word-icon{
-        width:65px;
-        height:65px;
-        font-size:32px;
-    }
-
-    .word-card h2{
-        font-size:15px;
-    }
-
-    .word-card .meaning{
-        font-size:13px;
-    }
-
-    .listen-btn,
-    .learn-btn{
-        width:100%;
-        font-size:12px;
-        padding:10px;
-    }
-
-}
-
-@media (max-width:480px){
-
-    .page-header h1{
-        font-size:26px;
-    }
-
-    .title-area h1{
-        font-size:26px;
-    }
-
-    .vocabulary-container{
-        grid-template-columns:1fr;
-    }
-
-    .word-card{
-        min-height:auto;
-        padding:18px 15px;
-    }
-
-    .word-icon{
-        width:55px;
-        height:55px;
-        font-size:28px;
-    }
-
-    .word-card h2{
-        font-size:18px;
-    }
-
-    .word-card .meaning{
-        font-size:15px;
-    }
-
-    .listen-btn,
-    .learn-btn{
-        width:100%;
-    }
-
-    .vocab-header .unit-tabs{
-        flex-direction:column;
-        width:100%;
-    }
-
-    .vocab-header .unit-tabs a{
-        width:100%;
-        text-align:center;
-        box-sizing:border-box;
-    }
-
-}
-
 /* VOCABULARY 10 CARD BIGGER SIZE */
 
 .vocabulary-container {
@@ -7187,104 +4973,6 @@ font-size:0;
     font-size:10px;
 
     padding:4px 6px;
-
-}
-
-/* ==========================================
-   RESPONSIVE - VOCABULARY PAGE
-========================================== */
-
-/* Tablet */
-@media (max-width: 1200px){
-
-    .vocabulary-container{
-        grid-template-columns:repeat(5, 1fr) !important;
-        gap:15px;
-        width:96%;
-    }
-
-    .word-card{
-        width:auto !important;
-        min-width:0 !important;
-        height:150px !important;
-        padding:12px;
-    }
-
-    .word-card h2{
-        font-size:14px !important;
-    }
-
-    .word-card .meaning{
-        font-size:12px !important;
-    }
-
-    .listen-btn{
-        width:100%;
-        font-size:11px !important;
-    }
-
-}
-
-
-/* Büyük Telefon */
-@media (max-width: 768px){
-
-    .vocabulary-container{
-        grid-template-columns:repeat(2,1fr) !important;
-        gap:15px;
-    }
-
-    .word-card{
-        width:auto !important;
-        height:150px !important;
-        padding:15px 10px;
-    }
-
-    .word-card h2{
-        font-size:15px !important;
-    }
-
-    .word-card .meaning{
-        font-size:13px !important;
-    }
-
-    .listen-btn{
-        width:100%;
-        font-size:12px !important;
-        padding:8px;
-    }
-
-}
-
-
-/* Küçük Telefon */
-@media (max-width:480px){
-
-    .vocabulary-container{
-        grid-template-columns:1fr !important;
-        gap:15px;
-        width:92%;
-    }
-
-    .word-card{
-        width:100% !important;
-        height:auto !important;
-        min-height:150px;
-    }
-
-    .word-card h2{
-        font-size:18px !important;
-    }
-
-    .word-card .meaning{
-        font-size:15px !important;
-    }
-
-    .listen-btn{
-        width:100%;
-        font-size:14px !important;
-        padding:10px;
-    }
 
 }
 
@@ -7839,179 +5527,6 @@ transform:translateY(0);
 
 }
 
-/* ==========================================
-   RESPONSIVE - UNIT / GRAMMAR / VIDEO
-========================================== */
-
-/* Tablet */
-@media (max-width:1024px){
-
-    .units-container,
-    .unit-container{
-        grid-template-columns:repeat(2,1fr);
-        gap:20px;
-        width:95%;
-    }
-
-    .unit-card{
-        min-height:220px;
-        padding:25px 18px;
-    }
-
-    .unit-card h2{
-        font-size:22px;
-    }
-
-    .grammar-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .offer-response-container{
-        grid-template-columns:1fr;
-        gap:25px;
-    }
-
-    .offer-response-container::before{
-        display:none;
-    }
-
-    .accept,
-    .refuse{
-        padding:0;
-    }
-
-    .real-video video{
-        width:95%;
-    }
-
-    .vocab-video img{
-        width:100%;
-        max-width:420px;
-        height:auto;
-    }
-
-}
-
-
-/* Telefon */
-@media (max-width:768px){
-
-    .units-container,
-    .unit-container{
-        grid-template-columns:1fr;
-        gap:18px;
-    }
-
-    .unit-card{
-        min-height:auto;
-        padding:20px 15px;
-    }
-
-    .unit-card h2{
-        font-size:20px;
-    }
-
-    .unit-card p{
-        font-size:15px;
-    }
-
-    .grammar-grid{
-        grid-template-columns:1fr;
-    }
-
-    .small-grid{
-        grid-template-columns:1fr;
-    }
-
-    .grammar-card,
-    .remember-box,
-    .tip-box,
-    .dialogue-box{
-        padding:16px;
-    }
-
-    .card{
-        padding:25px 18px;
-    }
-
-    .card h1{
-        font-size:24px;
-    }
-
-    .start-btn{
-        width:100%;
-        padding:12px;
-    }
-
-    .expression-list p{
-        font-size:15px;
-    }
-
-    .vocab-video h1{
-        font-size:34px;
-    }
-
-    .vocab-video h2{
-        font-size:24px;
-    }
-
-    .vocab-video h3{
-        font-size:20px;
-    }
-
-    .vocab-video p,
-    #video-sentence{
-        font-size:18px;
-    }
-
-    .vocab-video img{
-        width:100%;
-        height:auto;
-    }
-
-    #pauseButton{
-        width:100%;
-        font-size:16px;
-        padding:12px;
-    }
-
-    .real-video video{
-        width:100%;
-    }
-
-}
-
-
-/* Küçük Telefon */
-@media (max-width:480px){
-
-    .unit-card{
-        border-radius:18px;
-    }
-
-    .card{
-        border-radius:18px;
-    }
-
-    .small-card{
-        max-width:100%;
-        min-height:auto;
-    }
-
-    .vocab-video h1{
-        font-size:28px;
-    }
-
-    .vocab-video p{
-        font-size:16px;
-    }
-
-    #video-sentence{
-        font-size:16px;
-    }
-
-}
-
 /* NOTES DESIGN */
 
 .notes-section {
@@ -8321,125 +5836,6 @@ transform:translateY(0);
 
 }
 
-/* ==========================================
-   RESPONSIVE - NOTES & GAMES
-========================================== */
-
-/* Tablet */
-@media (max-width:1024px){
-
-    .notes-section{
-        width:95%;
-        padding:15px;
-    }
-
-    .notes-box,
-    .note-card{
-        padding:22px;
-    }
-
-    .notes-box h2,
-    .notes-section h2{
-        font-size:24px;
-    }
-
-    .notes-box p,
-    .note-card p,
-    .notes-box li{
-        font-size:16px;
-    }
-
-    .games-section{
-        width:95%;
-    }
-
-}
-
-
-/* Telefon */
-@media (max-width:768px){
-
-    .notes-section{
-        width:94%;
-        margin:30px auto;
-        padding:10px;
-    }
-
-    .notes-box,
-    .note-card{
-        padding:18px;
-        border-radius:16px;
-    }
-
-    .notes-box h2,
-    .notes-section h2{
-        font-size:22px;
-    }
-
-    .notes-box p,
-    .note-card p{
-        font-size:15px;
-        line-height:1.7;
-    }
-
-    .notes-box li{
-        font-size:15px;
-    }
-
-    .note-line{
-        grid-template-columns:1fr;
-        gap:10px;
-    }
-
-    .english{
-        font-size:16px;
-    }
-
-    .turkish{
-        font-size:15px;
-        padding-left:0;
-    }
-
-    .game-card{
-        padding:18px;
-        border-radius:18px;
-    }
-
-    .game-card iframe{
-        width:100%;
-        height:320px;
-    }
-
-}
-
-
-/* Küçük Telefon */
-@media (max-width:480px){
-
-    .notes-box,
-    .note-card{
-        padding:15px;
-    }
-
-    .notes-box h2,
-    .notes-section h2{
-        font-size:20px;
-    }
-
-    .notes-box p,
-    .note-card p,
-    .notes-box li,
-    .english,
-    .turkish{
-        font-size:14px;
-    }
-
-    .game-card iframe{
-        height:250px;
-    }
-
-}
-
 /* GAMES GRID */
 
 .games-container {
@@ -8637,99 +6033,6 @@ transform:translateY(0);
 .game-card iframe {
 
     background:white;
-
-}
-
-/* ==========================================
-   RESPONSIVE - GAMES PAGE
-========================================== */
-
-/* Büyük Tablet */
-@media (max-width:1200px){
-
-    .games-section{
-        width:96%;
-    }
-
-    .games-container{
-        grid-template-columns:repeat(3,1fr) !important;
-        gap:18px;
-    }
-
-    .game-card iframe{
-        height:340px;
-    }
-
-}
-
-
-/* Tablet */
-@media (max-width:992px){
-
-    .games-container{
-        grid-template-columns:repeat(2,1fr) !important;
-    }
-
-    .game-card{
-        padding:18px;
-    }
-
-    .game-card h3{
-        font-size:17px;
-    }
-
-    .game-card iframe{
-        height:320px;
-    }
-
-}
-
-
-/* Telefon */
-@media (max-width:768px){
-
-    .games-section{
-        width:94%;
-        margin:30px auto;
-    }
-
-    .games-container{
-        grid-template-columns:1fr !important;
-        gap:20px;
-    }
-
-    .game-card{
-        padding:16px;
-        border-radius:18px;
-    }
-
-    .game-card h3{
-        font-size:16px;
-        padding:10px;
-        margin-bottom:15px;
-    }
-
-    .game-card iframe{
-        height:420px;
-    }
-
-}
-
-
-/* Küçük Telefon */
-@media (max-width:480px){
-
-    .game-card{
-        padding:14px;
-    }
-
-    .game-card h3{
-        font-size:15px;
-    }
-
-    .game-card iframe{
-        height:300px;
-    }
 
 }
 
@@ -8980,122 +6283,6 @@ grid-template-columns:repeat(2,1fr);
 grid-template-columns:1fr;
 
 }
-
-}
-
-/* ==========================================
-   RESPONSIVE - QUESTIONS PAGE
-========================================== */
-
-/* Tablet */
-@media (max-width:1024px){
-
-    .questions-section{
-        width:95%;
-    }
-
-    .question-cards{
-        grid-template-columns:repeat(2,1fr) !important;
-        gap:20px;
-    }
-
-    .question-card{
-        width:100%;
-        min-height:180px;
-        padding:20px 15px;
-    }
-
-    .question-card h2{
-        font-size:18px;
-    }
-
-    .question-card p{
-        font-size:15px;
-    }
-
-    .question-card button,
-    .question-card a{
-        width:100%;
-        box-sizing:border-box;
-    }
-
-}
-
-
-/* Telefon */
-@media (max-width:768px){
-
-    .questions-section{
-        width:94%;
-        margin:30px auto;
-    }
-
-    .question-cards{
-        grid-template-columns:1fr !important;
-        gap:18px;
-    }
-
-    .question-card{
-        width:100%;
-        min-height:auto;
-        padding:18px 15px;
-    }
-
-    .question-card h2{
-        font-size:18px;
-    }
-
-    .question-card p{
-        font-size:15px;
-    }
-
-    .question-card button,
-    .question-card a{
-        width:100%;
-        padding:12px;
-        font-size:15px;
-    }
-
-    .question-icon{
-        font-size:34px;
-    }
-
-    .result-box{
-        padding:25px 18px;
-    }
-
-}
-
-
-/* Küçük Telefon */
-@media (max-width:480px){
-
-    .question-card{
-        padding:15px;
-        border-radius:16px;
-    }
-
-    .question-card h2{
-        font-size:17px;
-    }
-
-    .question-card p{
-        font-size:14px;
-    }
-
-    .question-card button,
-    .question-card a{
-        font-size:14px;
-        padding:10px;
-    }
-
-    .question-number{
-        font-size:16px;
-    }
-
-    .result-box{
-        padding:20px 15px;
-    }
 
 }
 
@@ -9420,192 +6607,368 @@ font-size:22px;
 
 }
 
-/* ==========================================
-   RESPONSIVE - QUIZ / LGS TEST
-========================================== */
-
-/* Tablet */
-@media (max-width:1024px){
-
-    #quiz{
-        width:95%;
-        margin:25px auto;
-    }
-
-    .question-card{
-        padding:28px 22px;
-    }
-
-    .question-title{
-        font-size:20px;
-    }
-
-    .question-text{
-        font-size:18px;
-        min-height:auto;
-    }
-
-    .answer,
-    .answer-btn,
-    .option{
-        font-size:16px;
-        padding:16px;
-    }
-
-    .answer span{
-        width:32px;
-        height:32px;
-        margin-right:8px;
-    }
-
-}
-
-
-/* Telefon */
-@media (max-width:768px){
-
-    #quiz{
-        width:94%;
-        margin:20px auto;
-    }
-
-    #quiz h3{
-        padding:18px;
-        font-size:18px;
-    }
-
-    .question-card{
-        padding:20px 16px;
-        border-radius:18px;
-    }
-
-    .question-title{
-        font-size:18px;
-    }
-
-    .question-type{
-        font-size:13px;
-        padding:6px 12px;
-    }
-
-    .question-number{
-        font-size:16px;
-    }
-
-    .question-text{
-        font-size:16px;
-        line-height:1.6;
-        min-height:auto;
-    }
-
-    .answer,
-    .answer-btn,
-    .option{
-        padding:14px;
-        font-size:15px;
-    }
-
-    .answer span{
-        width:28px;
-        height:28px;
-        font-size:13px;
-        margin-right:8px;
-    }
-
-    .card,
-    .result-box{
-        padding:20px 15px;
-    }
-
-    .result-box{
-        font-size:18px;
-    }
-
-}
-
-
-/* Küçük Telefon */
-@media (max-width:480px){
-
-    #quiz{
-        width:92%;
-    }
-
-    .question-card{
-        padding:15px;
-    }
-
-    .question-title{
-        font-size:17px;
-    }
-
-    .question-text{
-        font-size:15px;
-    }
-
-    .answer,
-    .answer-btn,
-    .option{
-        font-size:14px;
-        padding:12px;
-    }
-
-    .answer span{
-        width:24px;
-        height:24px;
-        font-size:12px;
-    }
-
-    .result-box{
-        padding:15px;
-        font-size:16px;
-    }
-
-}
-
 /* ===== MODERN LGS QUIZ DESIGN ===== */
 
 body{
     background:#f8fafc;
 }
 
+
 #quiz{
     max-width:850px;
     margin:20px auto;
 }
 
+
 .question-card{
+
+    background:white;
+
     width:100%;
+
     padding:24px;
-    background:#fff;
+
     border-radius:18px;
-    box-shadow:0 8px 25px rgba(15,23,42,.08);
+
+    box-shadow:
+    0 8px 25px rgba(15,23,42,.08);
+
 }
+
 
 .question-title{
-    margin-bottom:12px;
+
     font-size:18px;
+
     font-weight:700;
+
     color:#2563eb;
+
+    margin-bottom:12px;
+
 }
+
 
 .question-type{
+
     display:inline-block;
-    margin-bottom:15px;
-    padding:6px 12px;
-    border-radius:20px;
-    background:#f1f5f9;
-    color:#475569;
+
     font-size:13px;
+
     font-weight:600;
+
+    color:#475569;
+
+    background:#f1f5f9;
+
+    padding:6px 12px;
+
+    border-radius:20px;
+
+    margin-bottom:15px;
+
 }
 
+
 .question-text{
-    margin-bottom:20px;
-    color:#1e293b;
+
     font-size:16px;
+
     line-height:1.55;
+
+    color:#1e293b;
+
+    margin-bottom:20px;
+
 }
+
+
+.answers{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+
+.answer{
+
+    width:100%;
+
+    min-height:45px;
+
+    display:flex;
+
+    align-items:center;
+
+
+    background:#ffffff;
+
+    border:1.5px solid #e2e8f0;
+
+    border-radius:12px;
+
+
+    padding:10px 14px;
+
+
+    font-size:15px;
+
+    color:#334155;
+
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+
+.answer:hover{
+    transform:none;
+    background:#f1f5f9;
+}
+
+
+.answer span{
+
+    flex:none;
+
+    width:28px;
+
+    height:28px;
+
+    margin-right:12px;
+
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+
+    background:#2563eb;
+
+    color:white;
+
+
+    border-radius:50%;
+
+
+    font-size:14px;
+
+    font-weight:bold;
+
+}
+
+
+.answer.selected{
+
+    background:#dbeafe !important;
+
+    border-color:#2563eb !important;
+
+    color:#1e3a8a;
+
+}
+
+
+.answer.selected span{
+
+    background:#2563eb !important;
+
+    color:white;
+
+}
+
+
+.explanation{
+
+    margin-top:18px;
+
+    padding:12px 15px;
+
+    background:#ecfdf5;
+
+    border-left:4px solid #22c55e;
+
+    border-radius:10px;
+
+    font-size:14px;
+
+}
+
+
+@media(max-width:600px){
+
+.question-card{
+
+    padding:18px;
+
+}
+
+
+.question-text{
+
+    font-size:15px;
+
+}
+
+
+.answer{
+
+    width:100%;
+    box-sizing:border-box;
+    font-size:14px;
+    padding:9px 12px;
+
+}
+
+}
+
+/* Daha kompakt şık tasarımı */
+
+.answer{
+    min-height:36px !important;
+    height:auto;
+
+    padding:8px 12px !important;
+
+    border-radius:10px;
+
+    font-size:14px;
+
+    line-height:1.3;
+
+    gap:8px;
+}
+
+
+.answer span{
+
+    width:24px !important;
+    height:24px !important;
+
+    font-size:12px !important;
+
+    margin-right:8px !important;
+
+}
+
+
+.answers{
+
+    gap:7px !important;
+
+}
+
+/* Kompakt cevap kutuları */
+
+.answer{
+    min-height:30px !important;
+    padding:6px 10px !important;
+
+    border-radius:8px;
+
+    border-width:1px;
+
+    line-height:1.2;
+
+}
+
+
+.answer span{
+    width:22px !important;
+    height:22px !important;
+
+    margin-right:8px !important;
+
+    font-size:11px !important;
+}
+
+
+.answers{
+    gap:6px !important;
+}
+
+/* Şıklar arası mesafe azaltma */
+
+.answers{
+    gap:3px !important;
+}
+
+
+.answer{
+    margin:0 !important;
+}
+
+.answer{
+    justify-content:center;
+    text-align:center;
+}
+
+.answer span{
+    margin-right:10px !important;
+}
+
+/* Şık hizalama */
+
+.answer{
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    padding-left:16px !important;
+}
+
+
+.answer span{
+
+    flex:0 0 26px;
+
+    width:26px !important;
+    height:26px !important;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    margin-right:12px !important;
+
+}
+
+/* Ortalanmış ve hizalı şıklar */
+
+.answers{
+    width:85%;
+    margin:0 auto;
+}
+
+.answer{
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+
+    width:100%;
+
+    padding:6px 18px !important;
+
+    margin:0 auto !important;
+}
+
+
+.answer span{
+
+    flex:0 0 26px;
+
+    margin-right:12px !important;
+
+}
+
+/* Ortada duran ama içerikleri hizalı şıklar */
 
 .answers{
     width:70%;
@@ -9615,109 +6978,49 @@ body{
     gap:4px;
 }
 
+
 .answer{
-    width:100%;
-    min-height:36px;
+    width:100% !important;
 
-    display:flex;
+    display:flex !important;
     align-items:center;
-    justify-content:flex-start;
 
-    padding:6px 20px;
-    margin:0;
+    justify-content:flex-start !important;
 
-    background:#fff;
-    border:1px solid #e2e8f0;
-    border-radius:8px;
+    padding:6px 20px !important;
 
-    color:#334155;
-    font-size:14px;
-    line-height:1.2;
+    margin:0 auto !important;
 
-    cursor:pointer;
-    transition:.2s;
+    min-height:36px;
 }
 
-.answer:hover{
-    background:#f1f5f9;
-}
 
 .answer span{
+
     flex:0 0 28px;
 
-    width:28px;
-    height:28px;
+    width:28px !important;
+    height:28px !important;
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    margin-right:12px !important;
 
-    margin-right:12px;
-
-    border-radius:50%;
-
-    background:#2563eb;
-    color:#fff;
-
-    font-size:12px;
-    font-weight:bold;
-}
-
-.answer.selected{
-    background:#dbeafe;
-    border-color:#2563eb;
-    color:#1e3a8a;
-}
-
-.answer.selected span{
-    background:#2563eb;
 }
 
 .answer.correct{
-    background:#dcfce7;
-    border-color:#22c55e;
+
+    background:#dcfce7 !important;
+
+    border-color:#22c55e !important;
+
 }
+
 
 .answer.wrong{
-    background:#fee2e2;
-    border-color:#ef4444;
-}
 
-.explanation{
-    margin-top:18px;
-    padding:12px 15px;
-    background:#ecfdf5;
-    border-left:4px solid #22c55e;
-    border-radius:10px;
-    font-size:14px;
-}
+    background:#fee2e2 !important;
 
-@media (max-width:600px){
+    border-color:#ef4444 !important;
 
-    .question-card{
-        padding:18px;
-    }
-
-    .question-text{
-        font-size:15px;
-    }
-
-    .answers{
-        width:100%;
-        margin:15px auto;
-    }
-
-    .answer{
-        padding:8px 12px;
-        font-size:14px;
-    }
-
-    .answer span{
-        width:24px;
-        height:24px;
-        margin-right:10px;
-        font-size:11px;
-    }
 }
 
 /* RESULT SCREEN */
@@ -10173,104 +7476,6 @@ line-height:1.6;
 
 }
 
-/* ==========================
-   RESULT SCREEN - MOBILE
-========================== */
-
-@media (max-width:768px){
-
-    .result-card{
-        padding:20px 15px;
-    }
-
-    .result-card h2{
-        font-size:24px;
-    }
-
-    .result-icon{
-        font-size:38px;
-    }
-
-    .score-circle{
-        width:100px;
-        height:100px;
-    }
-
-    .score-circle span{
-        font-size:30px;
-    }
-
-    .score-circle small{
-        font-size:15px;
-    }
-
-    .result-message{
-        font-size:16px;
-        margin:15px 0;
-    }
-
-    .stats{
-        display:grid;
-        grid-template-columns:repeat(2,1fr);
-        gap:10px;
-    }
-
-    .stat-box{
-        min-width:auto;
-        padding:12px;
-    }
-
-    .stat-box b{
-        font-size:20px;
-    }
-
-    .restart-btn{
-        width:100%;
-        padding:12px;
-        font-size:15px;
-    }
-
-    .question-box,
-    .question-text,
-    .question-stem,
-    .question-title-text{
-        padding:12px;
-        font-size:15px;
-    }
-
-    .question-table{
-        font-size:12px;
-    }
-
-    .question-table th,
-    .question-table td{
-        padding:6px;
-        white-space:nowrap;
-    }
-
-    .grammar-note-box{
-        position:static;
-        width:100%;
-        margin-top:20px;
-        right:auto;
-        top:auto;
-        box-sizing:border-box;
-    }
-
-    .timer{
-        font-size:18px;
-    }
-
-    .timer-number{
-        font-size:32px;
-    }
-
-    .review-card{
-        padding:15px;
-    }
-
-}
-
 .grammar-text {
     display: flex;
     gap: 10px;
@@ -10430,83 +7635,6 @@ line-height:1.6;
 .planner-table th{
     background:#f5f5f5;
     font-weight:bold;
-}
-
-/* ==========================
-   UNIT 2 GRAMMAR - MOBILE
-========================== */
-
-@media (max-width:768px){
-
-    /* Sol - Not - Sağ yapısı alt alta gelsin */
-    .grammar-text{
-        flex-direction:column;
-        gap:20px;
-    }
-
-    .left-text,
-    .right-text{
-        width:100%;
-        padding-left:0;
-        font-size:15px;
-    }
-
-    .left-text h2,
-    .right-text h2{
-        font-size:20px;
-    }
-
-    .left-text p,
-    .right-text p{
-        font-size:15px;
-        line-height:1.6;
-    }
-
-    /* Not kutusu */
-    .grammar-note-box,
-    .unit2-note-box{
-        width:100%;
-        max-width:350px;
-        margin:0 auto;
-        border-left:2px solid #f4c542;
-        border-right:2px solid #f4c542;
-    }
-
-    /* Frequency kartları */
-    .frequency-container{
-        grid-template-columns:repeat(2,1fr);
-        gap:10px;
-    }
-
-    .frequency-card{
-        height:70px;
-    }
-
-    .frequency-card h3{
-        font-size:15px;
-    }
-
-    .frequency-card p{
-        font-size:12px;
-    }
-
-    /* Tablolar */
-    .survey-table,
-    .planner-table{
-        width:100%;
-        font-size:14px;
-        display:block;
-        overflow-x:auto;
-        white-space:nowrap;
-    }
-
-    .survey-table th,
-    .survey-table td,
-    .planner-table th,
-    .planner-table td{
-        padding:8px;
-    }
-
 }
 
 .profile-dashboard{
@@ -10740,110 +7868,6 @@ line-height:1.6;
 
 }
 
-/* ===========================
-   PROFILE PAGE - MOBILE
-=========================== */
-
-@media (max-width:768px){
-
-    .profile-dashboard{
-        grid-template-columns:1fr;
-        gap:18px;
-        margin-top:20px;
-    }
-
-    .profile-dashboard > div{
-        padding:18px;
-        border-radius:16px;
-    }
-
-    .profile-card{
-        padding:18px;
-    }
-
-    .profile-top{
-        text-align:center;
-    }
-
-    .profile-avatar{
-        width:70px;
-        height:70px;
-        font-size:28px;
-        margin-bottom:12px;
-    }
-
-    .profile-info h2{
-        font-size:22px;
-    }
-
-    .profile-info p{
-        font-size:14px;
-    }
-
-    .stats-card{
-        padding:18px;
-    }
-
-    .stats-card h2{
-        font-size:20px;
-        text-align:center;
-    }
-
-    .stats-grid{
-        grid-template-columns:1fr 1fr;
-        gap:12px;
-    }
-
-    .stat-item{
-        padding:14px;
-    }
-
-    .stat-number{
-        font-size:24px;
-    }
-
-    .stat-title{
-        font-size:13px;
-    }
-
-    .progress-card{
-        padding:18px;
-    }
-
-    .level-row{
-        font-size:13px;
-    }
-
-}
-
-/* Küçük Telefonlar */
-
-@media (max-width:480px){
-
-    .stats-grid{
-        grid-template-columns:1fr;
-    }
-
-    .profile-avatar{
-        width:60px;
-        height:60px;
-        font-size:24px;
-    }
-
-    .profile-info h2{
-        font-size:20px;
-    }
-
-    .stat-number{
-        font-size:22px;
-    }
-
-    .stat-title{
-        font-size:12px;
-    }
-
-}
-
 .unit{
 
     margin-bottom:22px;
@@ -11067,96 +8091,6 @@ line-height:1.6;
     justify-content:space-between;
     gap:8px;
     margin:12px 0;
-}
-
-/* ===========================
-   RECENT TESTS - MOBILE
-=========================== */
-
-@media (max-width:768px){
-
-    .recent-tests-grid{
-        grid-template-columns:repeat(2, 1fr);
-        gap:15px;
-    }
-
-    .test-card{
-        width:100%;
-        height:auto;
-        min-height:200px;
-        padding:15px;
-    }
-
-    .test-card h3{
-        font-size:14px;
-        min-height:auto;
-    }
-
-    .test-percent{
-        width:55px;
-        height:55px;
-        font-size:16px;
-    }
-
-    .test-date{
-        font-size:12px;
-    }
-
-    .test-info{
-        justify-content:space-around;
-        font-size:12px;
-    }
-
-    .test-item{
-        flex-direction:column;
-        align-items:flex-start;
-        gap:10px;
-    }
-
-    .test-right{
-        width:100%;
-        text-align:left;
-    }
-
-    .test-stats{
-        justify-content:flex-start;
-        flex-wrap:wrap;
-        gap:8px;
-    }
-
-    .unit-header{
-        font-size:14px;
-    }
-
-}
-
-/* Küçük telefonlar */
-
-@media (max-width:480px){
-
-    .recent-tests-grid{
-        grid-template-columns:1fr;
-    }
-
-    .test-card{
-        max-width:300px;
-        margin:0 auto;
-    }
-
-    .test-percent{
-        width:50px;
-        height:50px;
-        font-size:15px;
-    }
-
-    .test-card h3{
-        font-size:13px;
-    }
-
-    .test-date{
-        font-size:11px;
-    }
-
 }
 
 .stat-box{
@@ -11383,96 +8317,6 @@ line-height:1.6;
     box-shadow:0 2px 6px rgba(0,0,0,.2);
 }
 
-/* ===========================
-   STUDY PLAN - MOBILE
-=========================== */
-
-@media (max-width:768px){
-
-    #studyPlan{
-        grid-template-columns:repeat(2,1fr);
-        gap:15px;
-    }
-
-    .day-card{
-        padding:15px;
-    }
-
-    .day-card h3{
-        font-size:17px;
-        margin-bottom:12px;
-    }
-
-    .day-card label{
-        font-size:12px;
-        padding:7px 8px;
-    }
-
-    .plan-item{
-        gap:8px;
-        padding:7px 8px;
-    }
-
-    .plan-time{
-        width:70px;
-        font-size:10px;
-    }
-
-    .plan-task{
-        font-size:12px;
-    }
-
-    .today-badge{
-        font-size:8px;
-        padding:2px 6px;
-    }
-
-    .stat-box{
-        padding:6px;
-    }
-
-    .stat-box .number{
-        font-size:18px;
-    }
-
-    .stat-box .label{
-        font-size:10px;
-    }
-
-    .test-detail{
-        font-size:11px;
-    }
-
-    .test-detail strong{
-        font-size:14px;
-    }
-
-}
-
-/* Küçük telefonlar */
-
-@media (max-width:480px){
-
-    #studyPlan{
-        grid-template-columns:1fr;
-    }
-
-    .day-card{
-        max-width:340px;
-        margin:0 auto;
-    }
-
-    .plan-time{
-        width:60px;
-        font-size:9px;
-    }
-
-    .plan-task{
-        font-size:11px;
-    }
-
-}
-
 .official-exams{
 
     margin-top:60px;
@@ -11599,65 +8443,25 @@ line-height:1.6;
     background: #1565c0;
 }
 
-/* ===========================
-   OFFICIAL EXAMS - MOBILE
-=========================== */
 
-@media (max-width:768px){
-
-    .exam-grid{
-        grid-template-columns:repeat(2,1fr);
-        gap:20px;
+/* Tablet-Telefon */
+@media (max-width: 600px){
+    .exam-cards{
+        grid-template-columns: 1fr;
     }
-
-    .exam-card{
-        width:100%;
-        padding:15px;
-    }
-
-    .exam-card h3{
-        font-size:18px;
-    }
-
-    .exam-card p{
-        font-size:14px;
-        margin-bottom:15px;
-    }
-
-    .exam-card span{
-        font-size:12px;
-        padding:6px 12px;
-    }
-
-    .exam-buttons{
-        flex-direction:column;
-        gap:10px;
-    }
-
-    .pdf-btn,
-    .solve-btn{
-        width:100%;
-        padding:10px;
-        font-size:14px;
-    }
-
 }
 
-/* Küçük telefonlar */
+@media (max-width:900px){
+    .exam-grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
 
-@media (max-width:480px){
-
+@media (max-width:600px){
     .exam-grid{
         grid-template-columns:1fr;
     }
-
-    .exam-card{
-        max-width:340px;
-        margin:0 auto;
-    }
-
 }
-
 
 .mock-grid{
     display:grid;
@@ -11761,66 +8565,18 @@ line-height:1.6;
     background:#1565c0;
 }
 
-/* ===========================
-   MOCK EXAMS - MOBILE
-=========================== */
+@media print {
 
-@media (max-width:768px){
-
-    .mock-grid{
-        grid-template-columns:repeat(2,1fr);
-        gap:15px;
+    body *{
+        visibility: hidden;
     }
 
-    .mock-card{
-        width:100%;
-        padding:15px;
+    .profile-card,
+    .profile-card *,
+    #recentTests,
+    #recentTests *{
+        visibility: visible;
     }
-
-    .mock-card h3{
-        font-size:16px;
-    }
-
-    .mock-card p{
-        font-size:13px;
-    }
-
-    .mock-buttons{
-        flex-direction:column;
-        gap:10px;
-    }
-
-    .mock-buttons a,
-    .pdf-btn,
-    .solve-btn{
-        width:100%;
-        padding:10px;
-        font-size:14px;
-        box-sizing:border-box;
-    }
-
-    .print-btn{
-        width:100%;
-        justify-content:center;
-        font-size:14px;
-    }
-
-}
-
-/* Küçük Telefonlar */
-
-@media (max-width:480px){
-
-    .mock-grid{
-        grid-template-columns:1fr;
-    }
-
-    .mock-card{
-        max-width:320px;
-        margin:0 auto;
-    }
-
-}
 
 
 .profile-card,
@@ -11837,7 +8593,7 @@ line-height:1.6;
         display: none;
     }
 
-
+}
 
 .lesson-page{
     max-width: 1200px;
@@ -11917,65 +8673,16 @@ line-height:1.6;
     font-weight: 600;
 }
 
-/* ===========================
-   TENSES PAGE - MOBILE
-=========================== */
-
-@media (max-width:768px){
-
+@media (max-width: 1200px){
     .lesson-page{
-        grid-template-columns:repeat(2,1fr);
-        gap:18px;
-        padding:15px;
+        grid-template-columns: repeat(2, 1fr);
     }
-
-    .tense-card{
-        min-height:auto;
-        padding:20px 15px;
-    }
-
-    .tense-icon{
-        width:60px;
-        height:60px;
-        font-size:26px;
-    }
-
-    .tense-card h3{
-        font-size:20px;
-        min-height:auto;
-    }
-
-    .turkish-name{
-        font-size:15px;
-    }
-
-    .description{
-        font-size:14px;
-        line-height:1.5;
-    }
-
-    .start-btn{
-        width:100%;
-        justify-content:center;
-        padding:10px;
-        font-size:14px;
-    }
-
 }
 
-/* Küçük Telefonlar */
-
-@media (max-width:480px){
-
+@media (max-width: 768px){
     .lesson-page{
-        grid-template-columns:1fr;
+        grid-template-columns: 1fr;
     }
-
-    .tense-card{
-        max-width:340px;
-        margin:0 auto;
-    }
-
 }
 
 .units-container {
@@ -12157,86 +8864,6 @@ line-height:1.6;
 
 }
 
-/* ===========================
-   HOME PAGE - MOBILE
-=========================== */
-
-@media (max-width:768px){
-
-    .units-container{
-        grid-template-columns:repeat(2,1fr);
-        gap:20px;
-        padding:15px;
-    }
-
-    .unit-box{
-        width:100%;
-        height:170px;
-        padding:15px;
-        box-sizing:border-box;
-    }
-
-    .unit-icon{
-        font-size:28px;
-    }
-
-    .unit-box h2{
-        font-size:18px;
-    }
-
-    .unit-box h3{
-        font-size:14px;
-    }
-
-    .start-btn{
-        width:100%;
-        height:40px;
-        font-size:14px;
-    }
-
-    /* LGS Countdown */
-
-    .lgscountdown{
-        position:static;
-        display:flex;
-        justify-content:center;
-        margin:25px auto;
-    }
-
-    .lgs-box,
-    .info-box{
-        width:220px;
-        height:auto;
-        padding:20px;
-    }
-
-    #lgsDays{
-        font-size:36px;
-    }
-
-}
-
-/* Küçük Telefonlar */
-
-@media (max-width:480px){
-
-    .units-container{
-        grid-template-columns:1fr;
-    }
-
-    .unit-box{
-        max-width:300px;
-        margin:0 auto;
-    }
-
-    .lgs-box,
-    .info-box{
-        width:100%;
-        max-width:300px;
-    }
-
-}
-
 /* TENSES PAGE */
 
 .tenses-page{
@@ -12324,50 +8951,6 @@ line-height:1.6;
 
 }
 
-/* ===========================
-   TENSES PAGE - MOBILE
-=========================== */
-
-@media (max-width:768px){
-
-    .tenses-page{
-        grid-template-columns:repeat(2,1fr);
-        gap:18px;
-        padding:15px;
-    }
-
-    .tense-card{
-        padding:20px 15px;
-    }
-
-    .tense-icon{
-        width:65px;
-        height:65px;
-        font-size:32px;
-        margin-bottom:15px;
-    }
-
-    .tense-card h3{
-        font-size:18px;
-    }
-
-}
-
-/* Küçük Telefonlar */
-
-@media (max-width:480px){
-
-    .tenses-page{
-        grid-template-columns:1fr;
-    }
-
-    .tense-card{
-        max-width:340px;
-        margin:0 auto;
-    }
-
-}
-
 
 /* TURKISH */
 
@@ -12442,50 +9025,29 @@ line-height:1.6;
 
 }
 
-/* ===========================
-   TENSES PAGE - MOBILE
-=========================== */
 
-@media (max-width:768px){
+/* RESPONSIVE */
 
-    .turkish-name{
-        font-size:15px;
-        margin-bottom:10px;
-    }
+@media(max-width:1100px){
 
-    .description{
-        font-size:14px;
-        line-height:1.5;
-        min-height:auto;
-        margin-bottom:18px;
-    }
+.tenses-page{
 
-    .tense-card .start-btn{
-        width:100%;
-        height:42px;
-        font-size:14px;
-        border-radius:12px;
-    }
+grid-template-columns:repeat(2,1fr);
 
 }
 
-@media (max-width:480px){
+}
 
-    .turkish-name{
-        font-size:14px;
-    }
 
-    .description{
-        font-size:13px;
-    }
+@media(max-width:768px){
 
-    .tense-card .start-btn{
-        font-size:13px;
-        height:40px;
-    }
+.tenses-page{
+
+grid-template-columns:1fr;
 
 }
 
+}
 
 /* ================= FOOTER ================= */
 
@@ -12603,201 +9165,26 @@ line-height:1.6;
 
 }
 
-/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 768px){
 
-@media (max-width:768px){
+    .container{
+        width:95%;
+    }
 
-/* Genel */
-body{
-    overflow-x:hidden;
-}
+    .navbar{
+        flex-direction:column;
+        gap:15px;
+    }
 
-img,
-video,
-iframe{
-    max-width:100%;
-    height:auto;
-}
+    .footer-links{
+        flex-direction:column;
+        gap:15px;
+    }
 
-/* Vocabulary */
-.vocabulary-container{
-    grid-template-columns:repeat(2,1fr) !important;
-    gap:10px !important;
-    padding:0 10px;
-}
-
-.word-card{
-    width:100% !important;
-    height:auto !important;
-}
-
-/* Unit Cards */
-.units-container,
-.unit-container{
-    grid-template-columns:1fr !important;
-    gap:18px;
-}
-
-.unit-box{
-    width:100%;
-    height:auto;
-}
-
-/* Grammar */
-.grammar-text{
-    flex-direction:column;
-}
-
-.left-text,
-.right-text,
-.unit2-note-box,
-.grammar-note-box{
-    width:100%;
-}
-
-.frequency-container{
-    grid-template-columns:repeat(2,1fr);
-}
-
-/* Grammar Cards */
-.grammar-grid,
-.small-grid{
-    grid-template-columns:1fr;
-}
-
-/* Offer Response */
-.offer-response-container{
-    grid-template-columns:1fr;
-}
-
-.offer-response-container::before{
-    display:none;
-}
-
-.accept,
-.refuse{
-    padding:0;
-}
-
-/* Notes */
-.note-line{
-    grid-template-columns:1fr;
-}
-
-/* Games */
-.games-container{
-    grid-template-columns:1fr !important;
-}
-
-/* Question Menu */
-.question-cards{
-    grid-template-columns:1fr !important;
-}
-
-/* Quiz */
-.answers{
-    width:100% !important;
-}
-
-.answer{
-    font-size:14px;
-}
-
-.question-card{
-    padding:18px;
-}
-
-/* Result */
-.stats{
-    flex-wrap:wrap;
-}
-
-/* Profile */
-.profile-dashboard{
-    grid-template-columns:1fr;
-}
-
-.stats-grid{
-    grid-template-columns:1fr;
-}
-
-.recent-tests-grid{
-    grid-template-columns:1fr;
-}
-
-.test-card{
-    width:100%;
-}
-
-/* Study Plan */
-#studyPlan{
-    grid-template-columns:1fr;
-}
-
-/* Official Exams */
-.exam-grid{
-    grid-template-columns:1fr;
-}
-
-.exam-buttons{
-    flex-direction:column;
-}
-
-/* Mock Exams */
-.mock-grid{
-    grid-template-columns:repeat(2,1fr);
-}
-
-.mock-buttons{
-    flex-direction:column;
-}
-
-/* Lesson */
-.lesson-page{
-    grid-template-columns:1fr;
-}
-
-/* Tenses */
-.tenses-page{
-    grid-template-columns:1fr;
-}
-
-/* Footer */
-.footer{
-    padding:40px 15px 20px;
-}
-
-.footer-links{
-    flex-direction:column;
-    gap:12px;
-}
-
-.footer-social{
-    gap:15px;
-}
-
-/* Countdown */
-.lgscountdown{
-    position:static;
-    margin:20px auto;
-}
-
-.lgs-box,
-.info-box{
-    width:100%;
-}
-
-/* Tables */
-.table-box{
-    overflow-x:auto;
-}
-
-.question-table,
-.survey-table,
-.planner-table{
-    width:100%;
-    min-width:500px;
-}
+    .contact-item{
+        flex-direction:column;
+        text-align:center;
+    }
 
 }
 
@@ -13220,108 +9607,6 @@ iframe{
     margin-top: 5px;
 }
 
-/* ================= MEMBERSHIP & PREMIUM MOBILE ================= */
-
-@media (max-width:768px){
-
-/* Membership Card */
-
-.membership-card{
-    position:static;
-    width:90%;
-    max-width:320px;
-    margin:20px auto;
-    left:auto;
-    top:auto;
-    padding:18px;
-}
-
-.membership-icon{
-    font-size:30px;
-}
-
-.membership-card h2{
-    font-size:18px;
-}
-
-.membership-title{
-    font-size:15px;
-}
-
-.membership-text{
-    font-size:13px;
-}
-
-.membership-features{
-    font-size:13px;
-}
-
-.plan-badge{
-    font-size:13px;
-}
-
-/* Upgrade Button */
-
-.premium-btn{
-    width:100%;
-    padding:14px 20px;
-    font-size:18px;
-    border-radius:30px;
-}
-
-/* Premium Page */
-
-.premium-page{
-    padding:20px 15px;
-    margin:20px auto;
-    min-height:auto;
-}
-
-.premium-box{
-    width:100%;
-    max-width:400px;
-    padding:20px;
-}
-
-.crown{
-    font-size:60px;
-}
-
-.premium-icon h2{
-    font-size:28px;
-}
-
-.premium-box h1{
-    font-size:24px;
-}
-
-.premium-description{
-    font-size:15px;
-}
-
-/* Features */
-
-.premium-features{
-    grid-template-columns:1fr;
-    gap:10px;
-}
-
-.feature-item{
-    font-size:14px;
-}
-
-/* Buttons */
-
-.premium-buy-btn,
-.back-home-btn{
-    width:100%;
-    display:block;
-    padding:14px;
-    font-size:16px;
-}
-
-}
-
 .home-title {
 
     text-align:center;
@@ -13399,36 +9684,6 @@ iframe{
 
 }
 
-/* ================= TITLES MOBILE ================= */
-
-@media (max-width:768px){
-
-.home-title,
-.profile-title,
-.login-title{
-    text-align:center;
-    padding:10px 15px;
-}
-
-.home-title img,
-.profile-title img,
-.login-title img{
-    width:65px;
-    height:60px;
-    transform:none;
-    margin-bottom:10px;
-}
-
-.home-title h1,
-.profile-title h1,
-.login-title h1{
-    font-size:28px;
-    line-height:1.3;
-    margin:0;
-}
-
-}
-
 /*========================== 
 Premium Kart 
 ==========================*/
@@ -13497,37 +9752,6 @@ Premium Kart
 
 }
 
-/* ================= PREMIUM LOCK MOBILE ================= */
-
-@media (max-width:768px){
-
-.premium-card{
-    width:100%;
-}
-
-.premium-lock{
-    padding:15px;
-    text-align:center;
-}
-
-.lock-icon{
-    font-size:38px;
-    margin-bottom:8px;
-}
-
-.premium-lock h3{
-    font-size:18px;
-    margin:6px 0;
-}
-
-.premium-lock p{
-    font-size:13px;
-    line-height:1.5;
-    max-width:90%;
-}
-
-}
-
 /*========================== 
      Ödeme Planı
 ==========================*/
@@ -13586,41 +9810,6 @@ Premium Kart
     cursor:pointer;
 
     font-size:18px;
-
-}
-
-/* ================= PAYMENT PLAN MOBILE ================= */
-
-@media (max-width:768px){
-
-.plan-options{
-    flex-direction:column;
-    align-items:center;
-    gap:15px;
-    margin:20px 0;
-}
-
-.plan{
-    width:100%;
-    max-width:320px;
-    padding:18px;
-    box-sizing:border-box;
-}
-
-.plan h3{
-    font-size:20px;
-}
-
-.plan p{
-    font-size:14px;
-}
-
-.payment-btn{
-    width:100%;
-    max-width:320px;
-    padding:14px;
-    font-size:16px;
-}
 
 }
 
@@ -13744,40 +9933,6 @@ Premium Kart
 .membership-icon{
 
     filter:drop-shadow(0 0 6px #22c55e);
-
-}
-
-/* ================= FLOATING MEMBERSHIP MOBILE ================= */
-
-@media (max-width:768px){
-
-.floating-membership-card{
-    position:static;
-    width:90%;
-    max-width:280px;
-    margin:15px auto;
-    padding:12px 15px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:12px;
-
-    left:auto;
-    top:auto;
-}
-
-.floating-membership-card .membership-icon{
-    font-size:28px;
-}
-
-.membership-info h3{
-    font-size:16px;
-}
-
-.membership-info p{
-    font-size:13px;
-}
 
 }
 
@@ -13946,49 +10101,40 @@ Premium Kart
 
 }
 
-/* ================= LEGAL FOOTER MOBILE ================= */
 
-@media (max-width:768px){
 
-.legal-footer{
-    padding:40px 20px 20px;
-}
+/* Mobile */
+
+@media(max-width:768px){
+
 
 .footer-grid{
+
     grid-template-columns:1fr;
-    gap:30px;
+
     text-align:center;
+
 }
 
-.footer-grid h3{
-    font-size:20px;
-}
 
 .footer-grid h3::after{
-    margin:10px auto 0;
+
+    margin:10px auto;
+
 }
+
 
 .footer-grid p{
-    max-width:100%;
-    font-size:15px;
-    margin:0 auto;
+
+    margin:auto;
+
 }
 
-.footer-grid a{
-    font-size:15px;
-}
 
 .footer-grid a:hover{
+
     transform:none;
-}
 
-.legal-footer hr{
-    margin:30px 0 18px;
-}
-
-.legal-footer > p{
-    font-size:13px;
-    line-height:1.6;
 }
 
 }
@@ -14028,24 +10174,32 @@ Premium Kart
 
 }
 
-/* ================= FOOTER SOCIAL MOBILE ================= */
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width:1024px){
+
+    /* sadece tablet düzeltmeleri */
+
+}
+
+/* =========================================
+   MOBILE
+========================================= */
 
 @media (max-width:768px){
 
-.footer-social{
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:18px;
-    margin-top:20px;
+    /* sadece telefon düzeltmeleri */
+
 }
 
-.footer-social a img{
-    width:28px;
-    height:28px;
-}
+/* =========================================
+   SMALL MOBILE
+========================================= */
 
-.footer-social a:hover img{
-    transform:none;
-}
+@media (max-width:480px){
+
+    /* küçük telefonlar */
 
 }

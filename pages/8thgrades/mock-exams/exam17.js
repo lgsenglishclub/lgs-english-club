@@ -3,52 +3,52 @@ import { saveToFirebase } from "../../../js/saveResult.js";
 const questions = [
 
 {
-    image: "../images/mock-exams/exam2/q1.png",
+    image: "../images/mock-exams/exam17/q1.png",
     answer: "A"
 },
 
 {
-    image: "../images/mock-exams/exam2/q2.png",
+    image: "../images/mock-exams/exam17/q2.png",
     answer: "B"
 },
 
 {
-    image: "../images/mock-exams/exam2/q3.png",
+    image: "../images/mock-exams/exam17/q3.png",
     answer: "D"
 },
 
 {
-    image: "../images/mock-exams/exam2/q4.png",
+    image: "../images/mock-exams/exam17/q4.png",
     answer: "D"
 },
 
 {
-    image: "../images/mock-exams/exam2/q5.png",
+    image: "../images/mock-exams/exam17/q5.png",
     answer: "C"
 },
 
 {
-    image: "../images/mock-exams/exam2/q6.png",
+    image: "../images/mock-exams/exam17/q6.png",
     answer: "A"
 },
 
 {
-    image: "../images/mock-exams/exam2/q7.png",
+    image: "../images/mock-exams/exam17/q7.png",
     answer: "C"
 },
 
 {
-    image: "../images/mock-exams/exam2/q9.png",
+    image: "../images/mock-exams/exam17/q9.png",
     answer: "B"
 },
 
 {
-    image: "../images/mock-exams/exam2/q9.png",
+    image: "../images/mock-exams/exam17/q9.png",
     answer: "D"
 },
 
 {
-    image: "../images/mock-exams/exam2/q10.png",
+    image: "../images/mock-exams/exam17/q10.png",
     answer: "B"
 }
 
@@ -377,7 +377,7 @@ async function saveTestResult(){
     email: localStorage.getItem("email"),
 
 
-    testName: "Mock Exam 2",
+    testName: "Mock Exam 17",
         correct: score,
         wrong: wrong,
         net: (score - wrong/3).toFixed(2),

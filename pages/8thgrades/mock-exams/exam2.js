@@ -3,55 +3,125 @@ import { saveToFirebase } from "../../../js/saveResult.js";
 const questions = [
 
 {
-    image: "../images/mock-exams/exam2/q1.png",
-    answer: "A"
-},
-
-{
-    image: "../images/mock-exams/exam2/q2.png",
+    question: "Read the opinions about four friends.<br><br><b>Emma:</b> Jack always tells the truth.<br><b>Linda:</b> Lucy never supports me when I have a problem.<br><b>Kevin:</b> Tom always remembers my birthday.<br><b>Susan:</b> Kate and I enjoy doing the same activities.<br><br>Who says something negative about his/her friend?",
+    image: "",
+    options: [
+        "A) Emma",
+        "B) Linda",
+        "C) Kevin",
+        "D) Susan"
+    ],
     answer: "B"
 },
 
 {
-    image: "../images/mock-exams/exam2/q3.png",
+    question: "Mike wants to buy a book for his sister. She is interested in wild animals.<br><br>Which book should Mike buy?",
+    image: "",
+    options: [
+        "A) Healthy Recipes",
+        "B) Amazing Wildlife",
+        "C) Modern Buildings",
+        "D) Space Technology"
+    ],
+    answer: "B"
+},
+
+{
+    question: "Read the school rules below.<br><br>• Be quiet during the lessons.<br>• Keep your classroom clean.<br>• Return library books on time.<br>• Water the flowers in your garden.<br><br>Which one is NOT a school rule?",
+    image: "",
+    options: [
+        "A) Be quiet during the lessons.",
+        "B) Keep your classroom clean.",
+        "C) Return library books on time.",
+        "D) Water the flowers in your garden."
+    ],
     answer: "D"
 },
 
 {
-    image: "../images/mock-exams/exam2/q4.png",
-    answer: "D"
-},
-
-{
-    image: "../images/mock-exams/exam2/q5.png",
+    question: "The teacher asks her students to put the words into two groups.<br><br><b>Cooking Methods:</b> bake, fry, boil<br><b>Kitchen Tools:</b> spoon, oven, pan<br><br>Which word is in the wrong group?",
+    image: "",
+    options: [
+        "A) Bake",
+        "B) Fry",
+        "C) Oven",
+        "D) Boil"
+    ],
     answer: "C"
 },
 
 {
-    image: "../images/mock-exams/exam2/q6.png",
-    answer: "A"
-},
-
-{
-    image: "../images/mock-exams/exam2/q7.png",
+    question: "Read the phone conversation.<br><br><b>Secretary:</b> Good morning. Blue Company.<br><b>John:</b> May I speak to Mr. Brown, please?<br><b>Secretary:</b> I'm sorry. He is having a meeting now. Can I take a message?<br><br>According to the conversation, Mr. Brown is ______.",
+    image: "",
+    options: [
+        "A) available",
+        "B) on holiday",
+        "C) busy",
+        "D) calling back"
+    ],
     answer: "C"
 },
 
-{
-    image: "../images/mock-exams/exam2/q9.png",
-    answer: "B"
-},
 
 {
-    image: "../images/mock-exams/exam2/q9.png",
+    question: "Read the information about Dr. Helen Moore.<br><br>She was born in London in 1980. She studied medicine at Oxford University. She has written many books about healthy living and received several international awards.<br><br>Which heading does NOT match the text?",
+    image: "",
+    options: [
+        "A) Personal Life",
+        "B) Education",
+        "C) Achievements",
+        "D) Favourite TV Programmes"
+    ],
     answer: "D"
 },
 
 {
-    image: "../images/mock-exams/exam2/q10.png",
+    question: "Susan received four messages from her friends.<br><br><b>Anna:</b> We are having a barbecue on Sunday. Would you like to join us?<br><b>Tom:</b> I bought a new bicycle yesterday.<br><b>Mike:</b> Let's watch the football match together tonight!<br><b>Lucy:</b> We are planning a picnic on Saturday. Come with us!<br><br>Who did NOT invite Susan to an event?",
+    image: "",
+    options: [
+        "A) Anna",
+        "B) Tom",
+        "C) Mike",
+        "D) Lucy"
+    ],
     answer: "B"
+},
+
+{
+    question: "Read the comments about a new book on extreme sports.<br><br><b>Paul:</b> It has lots of useful information.<br><b>Jane:</b> I learned many interesting facts from it.<br><b>Kevin:</b> It isn't detailed enough. I expected much more.<br><b>Sally:</b> Everyone interested in extreme sports should read it.<br><br>Who has a negative opinion about the book?",
+    image: "",
+    options: [
+        "A) Paul",
+        "B) Jane",
+        "C) Kevin",
+        "D) Sally"
+    ],
+    answer: "C"
+},
+
+{
+    question: "Read the information below.<br><br>• Cappadocia is famous for its fairy chimneys.<br>• You can visit Ephesus to see ancient ruins.<br>• Pamukkale is popular for its white travertines.<br>• Mount Uludağ is a great place for skiing.<br><br>Which question can be answered by ALL of the texts?",
+    image: "",
+    options: [
+        "A) Who built it?",
+        "B) Where is it?",
+        "C) What is it famous for?",
+        "D) How much does it cost?"
+    ],
+    answer: "C"
+},
+
+{
+    question: "Look at the map below.<br><br><b>Nature Walk Camp</b><br><br>Day 1: 12 km<br>Day 2: 15 km<br>Day 3: 18 km<br>Day 4: 10 km<br><br>Which of the following is TRUE?",
+    image: "",
+    options: [
+        "A) Participants walk exactly 50 km in total.",
+        "B) The second day is the shortest route.",
+        "C) The third day has the longest distance.",
+        "D) Day 4 is longer than Day 2."
+    ],
+    answer: "C"
 }
-
 
 ];
 
@@ -83,37 +153,56 @@ function showQuestion(){
 
     questionStatus[currentQuestion] = "current";
 
-updateStatus();
+    updateStatus();
 
     document.getElementById("questionNumber").innerHTML =
-"Soru " + (currentQuestion + 1) + " / " + questions.length;
+    "Question " + (currentQuestion + 1) + " / " + questions.length;
 
-let progress =
-((currentQuestion + 1) / questions.length) * 100;
+    let progress =
+    ((currentQuestion + 1) / questions.length) * 100;
 
-
-document.getElementById("progressBar").style.width =
-progress + "%";
-
-    document.getElementById("questionImage").src = q.image;
+    document.getElementById("progressBar").style.width =
+    progress + "%";
 
 
+    // SORU METNİ
+    document.getElementById("quiz").innerHTML = `
+        <div class="question-text">
+            ${q.question}
+        </div>
+    `;
+
+
+    // RESİM VARSA GÖSTER
+    if(q.image && q.image !== ""){
+
+        document.getElementById("questionImage").style.display = "block";
+        document.getElementById("questionImage").src = q.image;
+
+    }else{
+
+        document.getElementById("questionImage").style.display = "none";
+
+    }
+
+
+    // ŞIKLAR
     document.getElementById("options").innerHTML = `
 
 <button onclick="checkAnswer('A', this)">
-(A)
+${q.options[0]}
 </button>
 
 <button onclick="checkAnswer('B', this)">
-(B)
+${q.options[1]}
 </button>
 
 <button onclick="checkAnswer('C', this)">
-(C)
+${q.options[2]}
 </button>
 
 <button onclick="checkAnswer('D', this)">
-(D)
+${q.options[3]}
 </button>
 
 `;
@@ -149,60 +238,50 @@ window.onload = function(){
 
 function checkAnswer(selected, button){
 
-    if(answered){
-        return;
-    }
+    if(answered) return;
 
     answered = true;
 
     let q = questions[currentQuestion];
 
-
     let buttons = document.querySelectorAll("#options button");
-
 
     buttons.forEach(btn => {
 
-    btn.disabled = true;
+        btn.disabled = true;
 
-    if(btn.innerText.startsWith(q.answer)){
+        if(btn.innerText.startsWith(q.answer)){
+            btn.classList.add("correct");
+        }
 
-        btn.classList.add("correct");
+    });
+
+    if(selected === q.answer){
+
+        button.classList.add("correct");
+
+        score++;
+        correct++;
+
+        document.getElementById("result").innerHTML =
+        "✅ Correct Answer!";
+
+        questionStatus[currentQuestion] = "correct";
+
+    }else{
+
+        wrong++;
+
+        button.classList.add("wrong");
+
+        document.getElementById("result").innerHTML =
+        "❌ Wrong Answer!";
+
+        questionStatus[currentQuestion] = "wrong";
 
     }
 
-});
-
-
-    // Seçilen cevap kontrolü
-
-    if(selected == q.answer){
-
-    button.classList.add("correct");
-
-    score++;
-
-    correct++;
-
-    document.getElementById("result").innerHTML =
-    "✅ Doğru cevap!";
-
-    questionStatus[currentQuestion] = "correct";
-
-}
-
-    else{
-
-    wrong++;
-
-    button.classList.add("wrong");
-
-
-    document.getElementById("result").innerHTML =
-    "❌ Yanlış cevap!";
-
-    questionStatus[currentQuestion] = "wrong";
-}
+    updateStatus();
 
     document.getElementById("nextButton").disabled = false;
 
@@ -262,7 +341,7 @@ async function showResult(){
 
 <h2>🎉 Tebrikler!</h2>
 
-<h3>Mock Exam 2</h3>
+<h3>Mock Exam 1</h3>
 
 <div class="result-score">
 ${(score - wrong/3).toFixed(2)}
@@ -377,7 +456,7 @@ async function saveTestResult(){
     email: localStorage.getItem("email"),
 
 
-    testName: "Mock Exam 2",
+    testName: "Mock Exam 1",
         correct: score,
         wrong: wrong,
         net: (score - wrong/3).toFixed(2),

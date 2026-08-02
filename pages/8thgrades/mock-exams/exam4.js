@@ -3,55 +3,124 @@ import { saveToFirebase } from "../../../js/saveResult.js";
 const questions = [
 
 {
-    image: "../images/mock-exams/exam4/q1.png",
-    answer: "A"
-},
-
-{
-    image: "../images/mock-exams/exam4/q2.png",
-    answer: "B"
-},
-
-{
-    image: "../images/mock-exams/exam4/q3.png",
-    answer: "D"
-},
-
-{
-    image: "../images/mock-exams/exam4/q4.png",
-    answer: "D"
-},
-
-{
-    image: "../images/mock-exams/exam4/q5.png",
+    question: "Read the comments about Olivia.<br><br><b>Emma:</b> She always helps me with my homework.<br><b>Jack:</b> She never tells lies.<br><b>Linda:</b> She often forgets our appointments.<br><b>Tom:</b> We enjoy spending time together.<br><br>Who says something negative about Olivia?",
+    image: "",
+    options: [
+        "A) Emma",
+        "B) Jack",
+        "C) Linda",
+        "D) Tom"
+    ],
     answer: "C"
 },
 
 {
-    image: "../images/mock-exams/exam4/q6.png",
-    answer: "A"
-},
-
-{
-    image: "../images/mock-exams/exam4/q7.png",
-    answer: "C"
-},
-
-{
-    image: "../images/mock-exams/exam4/q9.png",
-    answer: "B"
-},
-
-{
-    image: "../images/mock-exams/exam4/q9.png",
+    question: "Read the invitation below.<br><br><b>Spring Picnic</b><br>📅 Saturday, May 20<br>🕛 12.00 p.m.<br>📍 Green Park<br>Please bring your own food and drinks.<br><br>Which question CANNOT be answered according to the invitation?",
+    image: "",
+    options: [
+        "A) Where is the picnic?",
+        "B) What should people bring?",
+        "C) What time does it start?",
+        "D) How much is the entrance fee?"
+    ],
     answer: "D"
 },
 
 {
-    image: "../images/mock-exams/exam4/q10.png",
+    question: "Read the dialogue.<br><br><b>Kate:</b> Shall we go to the cinema tonight?<br><b>Mary:</b> I'd love to, but I have to finish my project.<br><br>Mary ______.",
+    image: "",
+    options: [
+        "A) accepts the invitation",
+        "B) refuses the invitation",
+        "C) changes the place",
+        "D) doesn't understand Kate"
+    ],
+    answer: "B"
+},
+
+{
+    question: "Read the recipe.<br><br>1. Crack two eggs into a bowl.<br>2. Add some milk.<br>3. Mix well.<br>4. Cook in a pan.<br><br>What should you do AFTER adding milk?",
+    image: "",
+    options: [
+        "A) Crack the eggs.",
+        "B) Cook in a pan.",
+        "C) Mix well.",
+        "D) Serve the meal."
+    ],
+    answer: "C"
+},
+
+{
+    question: "Look at the chart below.<br><br><b>Favourite Weekend Activities</b><br><br>Playing Football: 45%<br>Watching Movies: 25%<br>Reading Books: 20%<br>Cooking: 10%<br><br>Which of the following is TRUE?",
+    image: "",
+    options: [
+        "A) Cooking is more popular than reading.",
+        "B) Watching movies is the least popular activity.",
+        "C) Playing football is the most popular activity.",
+        "D) Reading books is more popular than watching movies."
+    ],
+    answer: "C"
+},
+
+{
+    question: "Read the phone conversation.<br><br><b>Secretary:</b> Good afternoon, Green Travel Agency.<br><b>Mr. Smith:</b> Hello. I'd like to book a tour for this weekend.<br><b>Secretary:</b> Certainly. Which destination would you prefer?<br><br>Why does Mr. Smith call the agency?",
+    image: "",
+    options: [
+        "A) To cancel his reservation",
+        "B) To make a reservation",
+        "C) To complain about a hotel",
+        "D) To ask for directions"
+    ],
+    answer: "B"
+},
+
+{
+    question: "Read the information below.<br><br>Sarah Brown is a successful scientist. She graduated from London University and invented an eco-friendly recycling machine. Today, she gives seminars to students all around the world.<br><br>Which question CANNOT be answered according to the text?",
+    image: "",
+    options: [
+        "A) Where did she study?",
+        "B) What did she invent?",
+        "C) What does she do today?",
+        "D) How old is she?"
+    ],
+    answer: "D"
+},
+
+{
+    question: "Read the announcement.<br><br><b>SCIENCE EXHIBITION</b><br>📅 12 June<br>🕙 10:00 a.m.<br>📍 City Science Museum<br>✔ Free entrance<br><br>Which of the following is CORRECT?",
+    image: "",
+    options: [
+        "A) Visitors must buy a ticket.",
+        "B) The exhibition starts in the afternoon.",
+        "C) The event takes place at a science museum.",
+        "D) Only teachers can attend the exhibition."
+    ],
+    answer: "C"
+},
+
+{
+    question: "Look at the map below.<br><br>Library → North<br>Hospital → East<br>Museum → West<br>Park → South<br><br>You are at the library and want to go to the park. Which direction should you follow?",
+    image: "",
+    options: [
+        "A) North",
+        "B) East",
+        "C) West",
+        "D) South"
+    ],
+    answer: "D"
+},
+
+{
+    question: "Read the text.<br><br>Emily enjoys travelling with her family. They usually visit historical places during their holidays because they like learning about different cultures. Last summer, they visited three ancient cities and took hundreds of photographs.<br><br>Which of the following is TRUE according to the text?",
+    image: "",
+    options: [
+        "A) Emily dislikes historical places.",
+        "B) Emily's family enjoys learning about cultures.",
+        "C) They usually stay at home during holidays.",
+        "D) They visited only one city last summer."
+    ],
     answer: "B"
 }
-
 
 ];
 
@@ -83,37 +152,56 @@ function showQuestion(){
 
     questionStatus[currentQuestion] = "current";
 
-updateStatus();
+    updateStatus();
 
     document.getElementById("questionNumber").innerHTML =
-"Soru " + (currentQuestion + 1) + " / " + questions.length;
+    "Question " + (currentQuestion + 1) + " / " + questions.length;
 
-let progress =
-((currentQuestion + 1) / questions.length) * 100;
+    let progress =
+    ((currentQuestion + 1) / questions.length) * 100;
 
-
-document.getElementById("progressBar").style.width =
-progress + "%";
-
-    document.getElementById("questionImage").src = q.image;
+    document.getElementById("progressBar").style.width =
+    progress + "%";
 
 
+    // SORU METNİ
+    document.getElementById("quiz").innerHTML = `
+        <div class="question-text">
+            ${q.question}
+        </div>
+    `;
+
+
+    // RESİM VARSA GÖSTER
+    if(q.image && q.image !== ""){
+
+        document.getElementById("questionImage").style.display = "block";
+        document.getElementById("questionImage").src = q.image;
+
+    }else{
+
+        document.getElementById("questionImage").style.display = "none";
+
+    }
+
+
+    // ŞIKLAR
     document.getElementById("options").innerHTML = `
 
 <button onclick="checkAnswer('A', this)">
-(A)
+${q.options[0]}
 </button>
 
 <button onclick="checkAnswer('B', this)">
-(B)
+${q.options[1]}
 </button>
 
 <button onclick="checkAnswer('C', this)">
-(C)
+${q.options[2]}
 </button>
 
 <button onclick="checkAnswer('D', this)">
-(D)
+${q.options[3]}
 </button>
 
 `;
@@ -149,60 +237,50 @@ window.onload = function(){
 
 function checkAnswer(selected, button){
 
-    if(answered){
-        return;
-    }
+    if(answered) return;
 
     answered = true;
 
     let q = questions[currentQuestion];
 
-
     let buttons = document.querySelectorAll("#options button");
-
 
     buttons.forEach(btn => {
 
-    btn.disabled = true;
+        btn.disabled = true;
 
-    if(btn.innerText.startsWith(q.answer)){
+        if(btn.innerText.startsWith(q.answer)){
+            btn.classList.add("correct");
+        }
 
-        btn.classList.add("correct");
+    });
+
+    if(selected === q.answer){
+
+        button.classList.add("correct");
+
+        score++;
+        correct++;
+
+        document.getElementById("result").innerHTML =
+        "✅ Correct Answer!";
+
+        questionStatus[currentQuestion] = "correct";
+
+    }else{
+
+        wrong++;
+
+        button.classList.add("wrong");
+
+        document.getElementById("result").innerHTML =
+        "❌ Wrong Answer!";
+
+        questionStatus[currentQuestion] = "wrong";
 
     }
 
-});
-
-
-    // Seçilen cevap kontrolü
-
-    if(selected == q.answer){
-
-    button.classList.add("correct");
-
-    score++;
-
-    correct++;
-
-    document.getElementById("result").innerHTML =
-    "✅ Doğru cevap!";
-
-    questionStatus[currentQuestion] = "correct";
-
-}
-
-    else{
-
-    wrong++;
-
-    button.classList.add("wrong");
-
-
-    document.getElementById("result").innerHTML =
-    "❌ Yanlış cevap!";
-
-    questionStatus[currentQuestion] = "wrong";
-}
+    updateStatus();
 
     document.getElementById("nextButton").disabled = false;
 
@@ -262,7 +340,7 @@ async function showResult(){
 
 <h2>🎉 Tebrikler!</h2>
 
-<h3>Mock Exam 2</h3>
+<h3>Mock Exam 1</h3>
 
 <div class="result-score">
 ${(score - wrong/3).toFixed(2)}
@@ -377,7 +455,7 @@ async function saveTestResult(){
     email: localStorage.getItem("email"),
 
 
-    testName: "Mock Exam 4",
+    testName: "Mock Exam 1",
         correct: score,
         wrong: wrong,
         net: (score - wrong/3).toFixed(2),

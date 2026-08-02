@@ -3,57 +3,127 @@ import { saveToFirebase } from "../../../js/saveResult.js";
 const questions = [
 
 {
-    image: "../images/mock-exams/exam1/q1.png",
+    question: "Read the comments about Emma.<br><br><b>Lisa:</b> She always keeps my secrets.<br><b>Kevin:</b> I can't rely on her because she often changes her mind.<br><b>Helen:</b> She is always there when I need help.<br><b>Jack:</b> We have lots of things in common.<br><br>Who says something negative about Emma?",
+    image: "",
+    options: [
+        "A) Lisa",
+        "B) Kevin",
+        "C) Helen",
+        "D) Jack"
+    ],
+    answer: "B"
+},
+
+{
+    question: "You work at a customer service center. A customer calls because his washing machine doesn't work.<br><br>Which of the following should you say FIRST?",
+    image: "",
+    options: [
+        "A) Please tell me what the problem is.",
+        "B) Buy a new washing machine.",
+        "C) I can't help you today.",
+        "D) Call another company."
+    ],
     answer: "A"
 },
 
 {
-    image: "../images/mock-exams/exam1/q2.png",
+    question: "Read the school rules below.<br><br>• Don't eat in the classroom.<br>• Raise your hand before speaking.<br>• Arrive at school on time.<br>• Help your mother prepare dinner.<br><br>Which one is NOT a school rule?",
+    image: "",
+    options: [
+        "A) Don't eat in the classroom.",
+        "B) Raise your hand before speaking.",
+        "C) Arrive at school on time.",
+        "D) Help your mother prepare dinner."
+    ],
+    answer: "D"
+},
+
+{
+    question: "Tom: This soup needs some salt.<br>Linda: These lemons are really ______.<br>Jane: I love cakes because they are ______.<br><br>Which word CANNOT complete any sentence?",
+    image: "",
+    options: [
+        "A) sour",
+        "B) sweet",
+        "C) salty",
+        "D) crowded"
+    ],
+    answer: "D"
+},
+
+{
+    question: "Read the recipe below.<br><br>1. Wash the vegetables.<br>2. Chop the tomatoes and cucumbers.<br>3. Add olive oil and salt.<br>4. Mix everything well.<br>5. Serve the salad.<br><br>Which step should come BEFORE adding olive oil?",
+    image: "",
+    options: [
+        "A) Serve the salad.",
+        "B) Wash the vegetables.",
+        "C) Mix everything well.",
+        "D) Chop the tomatoes and cucumbers."
+    ],
+    answer: "D"
+},
+
+{
+    question: "Read the phone conversation below.<br><br><b>Secretary:</b> Good afternoon. Bright Tech Company. How can I help you?<br><b>Mr. Green:</b> Hello. My printer isn't working properly.<br><b>Secretary:</b> I'm sorry to hear that. Can I have your address, please?<br><b>Mr. Green:</b> 18 Lake Street.<br><b>Secretary:</b> Our technician will visit you this afternoon.<br><br>Why does Mr. Green call the company?",
+    image: "",
+    options: [
+        "A) To buy a new printer",
+        "B) To report a problem",
+        "C) To change his address",
+        "D) To order printer paper"
+    ],
     answer: "B"
 },
 
 {
-    image: "../images/mock-exams/exam1/q3.png",
-    answer: "D"
+    question: "Lucy is organizing a picnic on Saturday. She invites her friends.<br><br>• Amy will visit her grandparents.<br>• Ben loves picnics and he is free.<br>• Kate has a piano lesson.<br>• Mike will study for his Maths exam.<br><br>Who will join Lucy?",
+    image: "",
+    options: [
+        "A) Amy",
+        "B) Ben",
+        "C) Kate",
+        "D) Mike"
+    ],
+    answer: "B"
 },
 
 {
-    image: "../images/mock-exams/exam1/q4.png",
-    answer: "D"
-},
-
-{
-    image: "../images/mock-exams/exam1/q5.png",
+    question: "Tomorrow is Kevin's birthday. Sarah wants to buy him a book.<br><br><b>Tom:</b> Kevin has already finished 'Amazing Space'.<br><b>Linda:</b> His uncle bought him 'World History' yesterday.<br><b>Jack:</b> He wants to read 'Wild Animals'.<br><br>Which book should Sarah buy?",
+    image: "",
+    options: [
+        "A) Amazing Space",
+        "B) World History",
+        "C) Wild Animals",
+        "D) Ancient Cities"
+    ],
     answer: "C"
 },
 
 {
-    image: "../images/mock-exams/exam1/q6.png",
+    question: "Read the announcement below.<br><br><b>SCIENCE FAIR</b><br>📅 June 15<br>🕙 10 a.m. - 4 p.m.<br>📍 Green Hall<br>• Bring your science project.<br>• All students can join.<br><br>Emma calls the school office.<br><br><b>Emma:</b> What should I bring to the event?<br><b>Secretary:</b> ________<br><br>Which of the following completes the conversation?",
+    image: "",
+    options: [
+        "A) Bring your science project.",
+        "B) The event starts next month.",
+        "C) Only teachers can join.",
+        "D) Don't come before 6 p.m."
+    ],
     answer: "A"
 },
 
 {
-    image: "../images/mock-exams/exam1/q7.png",
+    question: "Look at the survey results below.<br><br><b>Students' Favourite Free Time Activities</b><br><br>Playing Sports: 40%<br>Watching Videos: 30%<br>Reading Books: 20%<br>Playing Chess: 10%<br><br>Which of the following is CORRECT?",
+    image: "",
+    options: [
+        "A) Most students enjoy playing chess.",
+        "B) Reading books is more popular than watching videos.",
+        "C) Playing sports is the most popular activity.",
+        "D) Watching videos is the least popular activity."
+    ],
     answer: "C"
-},
-
-{
-    image: "../images/mock-exams/exam1/q9.png",
-    answer: "B"
-},
-
-{
-    image: "../images/mock-exams/exam1/q9.png",
-    answer: "D"
-},
-
-{
-    image: "../images/mock-exams/exam1/q10.png",
-    answer: "B"
 }
 
-
 ];
+
 
 let questionStatus = [];
 
@@ -83,37 +153,56 @@ function showQuestion(){
 
     questionStatus[currentQuestion] = "current";
 
-updateStatus();
+    updateStatus();
 
     document.getElementById("questionNumber").innerHTML =
-"Soru " + (currentQuestion + 1) + " / " + questions.length;
+    "Question " + (currentQuestion + 1) + " / " + questions.length;
 
-let progress =
-((currentQuestion + 1) / questions.length) * 100;
+    let progress =
+    ((currentQuestion + 1) / questions.length) * 100;
 
-
-document.getElementById("progressBar").style.width =
-progress + "%";
-
-    document.getElementById("questionImage").src = q.image;
+    document.getElementById("progressBar").style.width =
+    progress + "%";
 
 
+    // SORU METNİ
+    document.getElementById("quiz").innerHTML = `
+        <div class="question-text">
+            ${q.question}
+        </div>
+    `;
+
+
+    // RESİM VARSA GÖSTER
+    if(q.image && q.image !== ""){
+
+        document.getElementById("questionImage").style.display = "block";
+        document.getElementById("questionImage").src = q.image;
+
+    }else{
+
+        document.getElementById("questionImage").style.display = "none";
+
+    }
+
+
+    // ŞIKLAR
     document.getElementById("options").innerHTML = `
 
 <button onclick="checkAnswer('A', this)">
-(A)
+${q.options[0]}
 </button>
 
 <button onclick="checkAnswer('B', this)">
-(B)
+${q.options[1]}
 </button>
 
 <button onclick="checkAnswer('C', this)">
-(C)
+${q.options[2]}
 </button>
 
 <button onclick="checkAnswer('D', this)">
-(D)
+${q.options[3]}
 </button>
 
 `;
@@ -149,60 +238,50 @@ window.onload = function(){
 
 function checkAnswer(selected, button){
 
-    if(answered){
-        return;
-    }
+    if(answered) return;
 
     answered = true;
 
     let q = questions[currentQuestion];
 
-
     let buttons = document.querySelectorAll("#options button");
-
 
     buttons.forEach(btn => {
 
-    btn.disabled = true;
+        btn.disabled = true;
 
-    if(btn.innerText.startsWith(q.answer)){
+        if(btn.innerText.startsWith(q.answer)){
+            btn.classList.add("correct");
+        }
 
-        btn.classList.add("correct");
+    });
+
+    if(selected === q.answer){
+
+        button.classList.add("correct");
+
+        score++;
+        correct++;
+
+        document.getElementById("result").innerHTML =
+        "✅ Correct Answer!";
+
+        questionStatus[currentQuestion] = "correct";
+
+    }else{
+
+        wrong++;
+
+        button.classList.add("wrong");
+
+        document.getElementById("result").innerHTML =
+        "❌ Wrong Answer!";
+
+        questionStatus[currentQuestion] = "wrong";
 
     }
 
-});
-
-
-    // Seçilen cevap kontrolü
-
-    if(selected == q.answer){
-
-    button.classList.add("correct");
-
-    score++;
-
-    correct++;
-
-    document.getElementById("result").innerHTML =
-    "✅ Doğru cevap!";
-
-    questionStatus[currentQuestion] = "correct";
-
-}
-
-    else{
-
-    wrong++;
-
-    button.classList.add("wrong");
-
-
-    document.getElementById("result").innerHTML =
-    "❌ Yanlış cevap!";
-
-    questionStatus[currentQuestion] = "wrong";
-}
+    updateStatus();
 
     document.getElementById("nextButton").disabled = false;
 

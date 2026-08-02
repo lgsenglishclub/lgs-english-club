@@ -1,60 +1,5 @@
 import { saveToFirebase } from "../../../js/saveResult.js";
 
-const questions = [
-
-{
-    image: "../images/mock-exams/exam10/q1.png",
-    answer: "A"
-},
-
-{
-    image: "../images/mock-exams/exam10/q2.png",
-    answer: "B"
-},
-
-{
-    image: "../images/mock-exams/exam10/q3.png",
-    answer: "D"
-},
-
-{
-    image: "../images/mock-exams/exam10/q4.png",
-    answer: "D"
-},
-
-{
-    image: "../images/mock-exams/exam10/q5.png",
-    answer: "C"
-},
-
-{
-    image: "../images/mock-exams/exam10/q6.png",
-    answer: "A"
-},
-
-{
-    image: "../images/mock-exams/exam10/q7.png",
-    answer: "C"
-},
-
-{
-    image: "../images/mock-exams/exam10/q9.png",
-    answer: "B"
-},
-
-{
-    image: "../images/mock-exams/exam10/q9.png",
-    answer: "D"
-},
-
-{
-    image: "../images/mock-exams/exam10/q10.png",
-    answer: "B"
-}
-
-
-];
-
 let questionStatus = [];
 
 let currentQuestion = 0;
@@ -83,37 +28,56 @@ function showQuestion(){
 
     questionStatus[currentQuestion] = "current";
 
-updateStatus();
+    updateStatus();
 
     document.getElementById("questionNumber").innerHTML =
-"Soru " + (currentQuestion + 1) + " / " + questions.length;
+    "Question " + (currentQuestion + 1) + " / " + questions.length;
 
-let progress =
-((currentQuestion + 1) / questions.length) * 100;
+    let progress =
+    ((currentQuestion + 1) / questions.length) * 100;
 
-
-document.getElementById("progressBar").style.width =
-progress + "%";
-
-    document.getElementById("questionImage").src = q.image;
+    document.getElementById("progressBar").style.width =
+    progress + "%";
 
 
+    // SORU METNİ
+    document.getElementById("quiz").innerHTML = `
+        <div class="question-text">
+            ${q.question}
+        </div>
+    `;
+
+
+    // RESİM VARSA GÖSTER
+    if(q.image && q.image !== ""){
+
+        document.getElementById("questionImage").style.display = "block";
+        document.getElementById("questionImage").src = q.image;
+
+    }else{
+
+        document.getElementById("questionImage").style.display = "none";
+
+    }
+
+
+    // ŞIKLAR
     document.getElementById("options").innerHTML = `
 
 <button onclick="checkAnswer('A', this)">
-(A)
+${q.options[0]}
 </button>
 
 <button onclick="checkAnswer('B', this)">
-(B)
+${q.options[1]}
 </button>
 
 <button onclick="checkAnswer('C', this)">
-(C)
+${q.options[2]}
 </button>
 
 <button onclick="checkAnswer('D', this)">
-(D)
+${q.options[3]}
 </button>
 
 `;
@@ -149,60 +113,50 @@ window.onload = function(){
 
 function checkAnswer(selected, button){
 
-    if(answered){
-        return;
-    }
+    if(answered) return;
 
     answered = true;
 
     let q = questions[currentQuestion];
 
-
     let buttons = document.querySelectorAll("#options button");
-
 
     buttons.forEach(btn => {
 
-    btn.disabled = true;
+        btn.disabled = true;
 
-    if(btn.innerText.startsWith(q.answer)){
+        if(btn.innerText.startsWith(q.answer)){
+            btn.classList.add("correct");
+        }
 
-        btn.classList.add("correct");
+    });
+
+    if(selected === q.answer){
+
+        button.classList.add("correct");
+
+        score++;
+        correct++;
+
+        document.getElementById("result").innerHTML =
+        "✅ Correct Answer!";
+
+        questionStatus[currentQuestion] = "correct";
+
+    }else{
+
+        wrong++;
+
+        button.classList.add("wrong");
+
+        document.getElementById("result").innerHTML =
+        "❌ Wrong Answer!";
+
+        questionStatus[currentQuestion] = "wrong";
 
     }
 
-});
-
-
-    // Seçilen cevap kontrolü
-
-    if(selected == q.answer){
-
-    button.classList.add("correct");
-
-    score++;
-
-    correct++;
-
-    document.getElementById("result").innerHTML =
-    "✅ Doğru cevap!";
-
-    questionStatus[currentQuestion] = "correct";
-
-}
-
-    else{
-
-    wrong++;
-
-    button.classList.add("wrong");
-
-
-    document.getElementById("result").innerHTML =
-    "❌ Yanlış cevap!";
-
-    questionStatus[currentQuestion] = "wrong";
-}
+    updateStatus();
 
     document.getElementById("nextButton").disabled = false;
 
@@ -262,7 +216,7 @@ async function showResult(){
 
 <h2>🎉 Tebrikler!</h2>
 
-<h3>Mock Exam 2</h3>
+<h3>Mock Exam 1</h3>
 
 <div class="result-score">
 ${(score - wrong/3).toFixed(2)}
@@ -377,7 +331,7 @@ async function saveTestResult(){
     email: localStorage.getItem("email"),
 
 
-    testName: "Mock Exam 10",
+    testName: "Mock Exam 1",
         correct: score,
         wrong: wrong,
         net: (score - wrong/3).toFixed(2),

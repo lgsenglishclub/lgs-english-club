@@ -3,123 +3,133 @@ import { saveToFirebase } from "../../../js/saveResult.js";
 const questions = [
 
 {
-    question: "Read the comments about Emma.<br><br><b>Lisa:</b> She always keeps my secrets.<br><b>Kevin:</b> I can't rely on her because she often changes her mind.<br><b>Helen:</b> She is always there when I need help.<br><b>Jack:</b> We have lots of things in common.<br><br>Who says something negative about Emma?",
-    image: "",
-    options: [
-        "A) Lisa",
-        "B) Kevin",
-        "C) Helen",
-        "D) Jack"
-    ],
-    answer: "B"
+image:"images/exam1/1.png",
+
+options:[
+"Watching TV is the most preferred activity.",
+"Reading books is more popular than doing sports.",
+"Playing computer games is the most preferred activity.",
+"Doing sports is less popular than reading books."
+],
+
+answer:2
 },
 
 {
-    question: "You work at a customer service center. A customer calls because his washing machine doesn't work.<br><br>Which of the following should you say FIRST?",
-    image: "",
-    options: [
-        "A) Please tell me what the problem is.",
-        "B) Buy a new washing machine.",
-        "C) I can't help you today.",
-        "D) Call another company."
-    ],
-    answer: "A"
+image:"images/exam1/2.png",
+
+options:[
+"Watching TV is the least preferred activity.",
+"Playing computer games is the most preferred activity.",
+"Reading books is more popular than playing computer games.",
+"Doing sports is more popular than reading books."
+],
+
+answer:1
 },
 
 {
-    question: "Read the school rules below.<br><br>• Don't eat in the classroom.<br>• Raise your hand before speaking.<br>• Arrive at school on time.<br>• Help your mother prepare dinner.<br><br>Which one is NOT a school rule?",
-    image: "",
-    options: [
-        "A) Don't eat in the classroom.",
-        "B) Raise your hand before speaking.",
-        "C) Arrive at school on time.",
-        "D) Help your mother prepare dinner."
-    ],
-    answer: "D"
+image:"images/exam1/3.png",
+
+options:[
+"Going camping is the most popular activity.",
+"Riding a bike is less popular than playing tennis.",
+"Doing sport is more popular than going camping.",
+"Playing tennis is the most preferred activity."
+],
+
+answer:0
 },
 
 {
-    question: "Tom: This soup needs some salt.<br>Linda: These lemons are really ______.<br>Jane: I love cakes because they are ______.<br><br>Which word CANNOT complete any sentence?",
-    image: "",
-    options: [
-        "A) sour",
-        "B) sweet",
-        "C) salty",
-        "D) crowded"
-    ],
-    answer: "D"
+image:"images/exam1/4.png",
+
+options:[
+"Skiing is the most preferred sport.",
+"Ice-skating is more popular than diving.",
+"Diving is the most preferred activity.",
+"Bungee jumping is less popular than skiing."
+],
+
+answer:2
 },
 
 {
-    question: "Read the recipe below.<br><br>1. Wash the vegetables.<br>2. Chop the tomatoes and cucumbers.<br>3. Add olive oil and salt.<br>4. Mix everything well.<br>5. Serve the salad.<br><br>Which step should come BEFORE adding olive oil?",
-    image: "",
-    options: [
-        "A) Serve the salad.",
-        "B) Wash the vegetables.",
-        "C) Mix everything well.",
-        "D) Chop the tomatoes and cucumbers."
-    ],
-    answer: "D"
+image:"images/exam1/5.png",
+
+options:[
+"Girls prefer camping more than boys.",
+"Boys enjoy playing tennis more than girls.",
+"Boys' favourite activity is going camping.",
+"Girls like riding a bike the most."
+],
+
+answer:2
 },
 
 {
-    question: "Read the phone conversation below.<br><br><b>Secretary:</b> Good afternoon. Bright Tech Company. How can I help you?<br><b>Mr. Green:</b> Hello. My printer isn't working properly.<br><b>Secretary:</b> I'm sorry to hear that. Can I have your address, please?<br><b>Mr. Green:</b> 18 Lake Street.<br><b>Secretary:</b> Our technician will visit you this afternoon.<br><br>Why does Mr. Green call the company?",
-    image: "",
-    options: [
-        "A) To buy a new printer",
-        "B) To report a problem",
-        "C) To change his address",
-        "D) To order printer paper"
-    ],
-    answer: "B"
+image:"images/exam1/6.png",
+
+options:[
+"Adults go camping more than teenagers.",
+"Teenagers watch TV more than adults.",
+"Teenagers and adults read books at the same rate.",
+"Adults go to the cinema less than teenagers."
+],
+
+answer:2
 },
 
 {
-    question: "Lucy is organizing a picnic on Saturday. She invites her friends.<br><br>• Amy will visit her grandparents.<br>• Ben loves picnics and he is free.<br>• Kate has a piano lesson.<br>• Mike will study for his Maths exam.<br><br>Who will join Lucy?",
-    image: "",
-    options: [
-        "A) Amy",
-        "B) Ben",
-        "C) Kate",
-        "D) Mike"
-    ],
-    answer: "B"
+image:"images/exam1/7.png",
+
+options:[
+"Internet usage was highest in 2024.",
+"Internet usage decreased every year.",
+"The lowest internet usage was in 2023.",
+"Internet usage in 2026 was higher than in 2024."
+],
+
+answer:0
 },
 
 {
-    question: "Tomorrow is Kevin's birthday. Sarah wants to buy him a book.<br><br><b>Tom:</b> Kevin has already finished 'Amazing Space'.<br><b>Linda:</b> His uncle bought him 'World History' yesterday.<br><b>Jack:</b> He wants to read 'Wild Animals'.<br><br>Which book should Sarah buy?",
-    image: "",
-    options: [
-        "A) Amazing Space",
-        "B) World History",
-        "C) Wild Animals",
-        "D) Ancient Cities"
-    ],
-    answer: "C"
+image:"images/exam1/8.png",
+
+options:[
+"Adults go camping more than teenagers.",
+"Teenagers watch TV more than adults.",
+"Teenagers and adults read books at the same rate.",
+"Adults go to the cinema less than teenagers."
+],
+
+answer:2
 },
 
 {
-    question: "Read the announcement below.<br><br><b>SCIENCE FAIR</b><br>📅 June 15<br>🕙 10 a.m. - 4 p.m.<br>📍 Green Hall<br>• Bring your science project.<br>• All students can join.<br><br>Emma calls the school office.<br><br><b>Emma:</b> What should I bring to the event?<br><b>Secretary:</b> ________<br><br>Which of the following completes the conversation?",
-    image: "",
-    options: [
-        "A) Bring your science project.",
-        "B) The event starts next month.",
-        "C) Only teachers can join.",
-        "D) Don't come before 6 p.m."
-    ],
-    answer: "A"
+image:"images/exam1/9.png",
+
+options:[
+"Adults go camping more than teenagers.",
+"Teenagers watch TV more than adults.",
+"Teenagers and adults read books at the same rate.",
+"Adults go to the cinema less than teenagers."
+],
+
+answer:2
 },
 
 {
-    question: "Look at the survey results below.<br><br><b>Students' Favourite Free Time Activities</b><br><br>Playing Sports: 40%<br>Watching Videos: 30%<br>Reading Books: 20%<br>Playing Chess: 10%<br><br>Which of the following is CORRECT?",
-    image: "",
-    options: [
-        "A) Most students enjoy playing chess.",
-        "B) Reading books is more popular than watching videos.",
-        "C) Playing sports is the most popular activity.",
-        "D) Watching videos is the least popular activity."
-    ],
-    answer: "C"
+image:"images/exam1/10.png",
+
+options:[
+"Adults go camping more than teenagers.",
+"Teenagers watch TV more than adults.",
+"Teenagers and adults read books at the same rate.",
+"Adults go to the cinema less than teenagers."
+],
+
+answer:2
 }
 
 ];
@@ -166,12 +176,7 @@ function showQuestion(){
 
 
     // SORU METNİ
-    document.getElementById("quiz").innerHTML = `
-        <div class="question-text">
-            ${q.question}
-        </div>
-    `;
-
+  
 
     // RESİM VARSA GÖSTER
     if(q.image && q.image !== ""){
@@ -189,20 +194,20 @@ function showQuestion(){
     // ŞIKLAR
     document.getElementById("options").innerHTML = `
 
-<button onclick="checkAnswer('A', this)">
-${q.options[0]}
+<button onclick="checkAnswer(0, this)">
+A) ${q.options[0]}
 </button>
 
-<button onclick="checkAnswer('B', this)">
-${q.options[1]}
+<button onclick="checkAnswer(1, this)">
+B) ${q.options[1]}
 </button>
 
-<button onclick="checkAnswer('C', this)">
-${q.options[2]}
+<button onclick="checkAnswer(2, this)">
+C) ${q.options[2]}
 </button>
 
-<button onclick="checkAnswer('D', this)">
-${q.options[3]}
+<button onclick="checkAnswer(3, this)">
+D) ${q.options[3]}
 </button>
 
 `;
@@ -246,15 +251,7 @@ function checkAnswer(selected, button){
 
     let buttons = document.querySelectorAll("#options button");
 
-    buttons.forEach(btn => {
-
-        btn.disabled = true;
-
-        if(btn.innerText.startsWith(q.answer)){
-            btn.classList.add("correct");
-        }
-
-    });
+    buttons.forEach(btn=>btn.disabled=true);
 
     if(selected === q.answer){
 
@@ -263,27 +260,23 @@ function checkAnswer(selected, button){
         score++;
         correct++;
 
-        document.getElementById("result").innerHTML =
-        "✅ Correct Answer!";
-
-        questionStatus[currentQuestion] = "correct";
+        questionStatus[currentQuestion]="correct";
 
     }else{
 
-        wrong++;
-
         button.classList.add("wrong");
 
-        document.getElementById("result").innerHTML =
-        "❌ Wrong Answer!";
+        buttons[q.answer].classList.add("correct");
 
-        questionStatus[currentQuestion] = "wrong";
+        wrong++;
+
+        questionStatus[currentQuestion]="wrong";
 
     }
 
     updateStatus();
 
-    document.getElementById("nextButton").disabled = false;
+    document.getElementById("nextButton").disabled=false;
 
 }
 

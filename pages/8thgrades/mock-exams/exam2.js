@@ -3,127 +3,137 @@ import { saveToFirebase } from "../../../js/saveResult.js";
 const questions = [
 
 {
-    question: "Read the opinions about four friends.<br><br><b>Emma:</b> Jack always tells the truth.<br><b>Linda:</b> Lucy never supports me when I have a problem.<br><b>Kevin:</b> Tom always remembers my birthday.<br><b>Susan:</b> Kate and I enjoy doing the same activities.<br><br>Who says something negative about his/her friend?",
-    image: "",
-    options: [
-        "A) Emma",
-        "B) Linda",
-        "C) Kevin",
-        "D) Susan"
-    ],
-    answer: "B"
+image:"images/exam1/1.png",
+
+options:[
+"Watching TV is the most preferred activity.",
+"Reading books is more popular than doing sports.",
+"Playing computer games is the most preferred activity.",
+"Doing sports is less popular than reading books."
+],
+
+answer:2
 },
 
 {
-    question: "Mike wants to buy a book for his sister. She is interested in wild animals.<br><br>Which book should Mike buy?",
-    image: "",
-    options: [
-        "A) Healthy Recipes",
-        "B) Amazing Wildlife",
-        "C) Modern Buildings",
-        "D) Space Technology"
-    ],
-    answer: "B"
+image:"images/exam1/2.png",
+
+options:[
+"Watching TV is the least preferred activity.",
+"Playing computer games is the most preferred activity.",
+"Reading books is more popular than playing computer games.",
+"Doing sports is more popular than reading books."
+],
+
+answer:1
 },
 
 {
-    question: "Read the school rules below.<br><br>• Be quiet during the lessons.<br>• Keep your classroom clean.<br>• Return library books on time.<br>• Water the flowers in your garden.<br><br>Which one is NOT a school rule?",
-    image: "",
-    options: [
-        "A) Be quiet during the lessons.",
-        "B) Keep your classroom clean.",
-        "C) Return library books on time.",
-        "D) Water the flowers in your garden."
-    ],
-    answer: "D"
+image:"images/exam1/3.png",
+
+options:[
+"Going camping is the most popular activity.",
+"Riding a bike is less popular than playing tennis.",
+"Doing sport is more popular than going camping.",
+"Playing tennis is the most preferred activity."
+],
+
+answer:0
 },
 
 {
-    question: "The teacher asks her students to put the words into two groups.<br><br><b>Cooking Methods:</b> bake, fry, boil<br><b>Kitchen Tools:</b> spoon, oven, pan<br><br>Which word is in the wrong group?",
-    image: "",
-    options: [
-        "A) Bake",
-        "B) Fry",
-        "C) Oven",
-        "D) Boil"
-    ],
-    answer: "C"
+image:"images/exam1/4.png",
+
+options:[
+"Skiing is the most preferred sport.",
+"Ice-skating is more popular than diving.",
+"Diving is the most preferred activity.",
+"Bungee jumping is less popular than skiing."
+],
+
+answer:2
 },
 
 {
-    question: "Read the phone conversation.<br><br><b>Secretary:</b> Good morning. Blue Company.<br><b>John:</b> May I speak to Mr. Brown, please?<br><b>Secretary:</b> I'm sorry. He is having a meeting now. Can I take a message?<br><br>According to the conversation, Mr. Brown is ______.",
-    image: "",
-    options: [
-        "A) available",
-        "B) on holiday",
-        "C) busy",
-        "D) calling back"
-    ],
-    answer: "C"
-},
+image:"images/exam1/5.png",
 
+options:[
+"Girls prefer camping more than boys.",
+"Boys enjoy playing tennis more than girls.",
+"Boys' favourite activity is going camping.",
+"Girls like riding a bike the most."
+],
 
-{
-    question: "Read the information about Dr. Helen Moore.<br><br>She was born in London in 1980. She studied medicine at Oxford University. She has written many books about healthy living and received several international awards.<br><br>Which heading does NOT match the text?",
-    image: "",
-    options: [
-        "A) Personal Life",
-        "B) Education",
-        "C) Achievements",
-        "D) Favourite TV Programmes"
-    ],
-    answer: "D"
+answer:2
 },
 
 {
-    question: "Susan received four messages from her friends.<br><br><b>Anna:</b> We are having a barbecue on Sunday. Would you like to join us?<br><b>Tom:</b> I bought a new bicycle yesterday.<br><b>Mike:</b> Let's watch the football match together tonight!<br><b>Lucy:</b> We are planning a picnic on Saturday. Come with us!<br><br>Who did NOT invite Susan to an event?",
-    image: "",
-    options: [
-        "A) Anna",
-        "B) Tom",
-        "C) Mike",
-        "D) Lucy"
-    ],
-    answer: "B"
+image:"images/exam1/6.png",
+
+options:[
+"Adults go camping more than teenagers.",
+"Teenagers watch TV more than adults.",
+"Teenagers and adults read books at the same rate.",
+"Adults go to the cinema less than teenagers."
+],
+
+answer:2
 },
 
 {
-    question: "Read the comments about a new book on extreme sports.<br><br><b>Paul:</b> It has lots of useful information.<br><b>Jane:</b> I learned many interesting facts from it.<br><b>Kevin:</b> It isn't detailed enough. I expected much more.<br><b>Sally:</b> Everyone interested in extreme sports should read it.<br><br>Who has a negative opinion about the book?",
-    image: "",
-    options: [
-        "A) Paul",
-        "B) Jane",
-        "C) Kevin",
-        "D) Sally"
-    ],
-    answer: "C"
+image:"images/exam1/7.png",
+
+options:[
+"Internet usage was highest in 2024.",
+"Internet usage decreased every year.",
+"The lowest internet usage was in 2023.",
+"Internet usage in 2026 was higher than in 2024."
+],
+
+answer:0
 },
 
 {
-    question: "Read the information below.<br><br>• Cappadocia is famous for its fairy chimneys.<br>• You can visit Ephesus to see ancient ruins.<br>• Pamukkale is popular for its white travertines.<br>• Mount Uludağ is a great place for skiing.<br><br>Which question can be answered by ALL of the texts?",
-    image: "",
-    options: [
-        "A) Who built it?",
-        "B) Where is it?",
-        "C) What is it famous for?",
-        "D) How much does it cost?"
-    ],
-    answer: "C"
+image:"images/exam1/8.png",
+
+options:[
+"Adults go camping more than teenagers.",
+"Teenagers watch TV more than adults.",
+"Teenagers and adults read books at the same rate.",
+"Adults go to the cinema less than teenagers."
+],
+
+answer:2
 },
 
 {
-    question: "Look at the map below.<br><br><b>Nature Walk Camp</b><br><br>Day 1: 12 km<br>Day 2: 15 km<br>Day 3: 18 km<br>Day 4: 10 km<br><br>Which of the following is TRUE?",
-    image: "",
-    options: [
-        "A) Participants walk exactly 50 km in total.",
-        "B) The second day is the shortest route.",
-        "C) The third day has the longest distance.",
-        "D) Day 4 is longer than Day 2."
-    ],
-    answer: "C"
+image:"images/exam1/9.png",
+
+options:[
+"Adults go camping more than teenagers.",
+"Teenagers watch TV more than adults.",
+"Teenagers and adults read books at the same rate.",
+"Adults go to the cinema less than teenagers."
+],
+
+answer:2
+},
+
+{
+image:"images/exam1/10.png",
+
+options:[
+"Adults go camping more than teenagers.",
+"Teenagers watch TV more than adults.",
+"Teenagers and adults read books at the same rate.",
+"Adults go to the cinema less than teenagers."
+],
+
+answer:2
 }
 
 ];
+
 
 let questionStatus = [];
 
@@ -166,12 +176,7 @@ function showQuestion(){
 
 
     // SORU METNİ
-    document.getElementById("quiz").innerHTML = `
-        <div class="question-text">
-            ${q.question}
-        </div>
-    `;
-
+  
 
     // RESİM VARSA GÖSTER
     if(q.image && q.image !== ""){
@@ -189,20 +194,20 @@ function showQuestion(){
     // ŞIKLAR
     document.getElementById("options").innerHTML = `
 
-<button onclick="checkAnswer('A', this)">
-${q.options[0]}
+<button onclick="checkAnswer(0, this)">
+A) ${q.options[0]}
 </button>
 
-<button onclick="checkAnswer('B', this)">
-${q.options[1]}
+<button onclick="checkAnswer(1, this)">
+B) ${q.options[1]}
 </button>
 
-<button onclick="checkAnswer('C', this)">
-${q.options[2]}
+<button onclick="checkAnswer(2, this)">
+C) ${q.options[2]}
 </button>
 
-<button onclick="checkAnswer('D', this)">
-${q.options[3]}
+<button onclick="checkAnswer(3, this)">
+D) ${q.options[3]}
 </button>
 
 `;
@@ -246,15 +251,7 @@ function checkAnswer(selected, button){
 
     let buttons = document.querySelectorAll("#options button");
 
-    buttons.forEach(btn => {
-
-        btn.disabled = true;
-
-        if(btn.innerText.startsWith(q.answer)){
-            btn.classList.add("correct");
-        }
-
-    });
+    buttons.forEach(btn=>btn.disabled=true);
 
     if(selected === q.answer){
 
@@ -263,27 +260,23 @@ function checkAnswer(selected, button){
         score++;
         correct++;
 
-        document.getElementById("result").innerHTML =
-        "✅ Correct Answer!";
-
-        questionStatus[currentQuestion] = "correct";
+        questionStatus[currentQuestion]="correct";
 
     }else{
 
-        wrong++;
-
         button.classList.add("wrong");
 
-        document.getElementById("result").innerHTML =
-        "❌ Wrong Answer!";
+        buttons[q.answer].classList.add("correct");
 
-        questionStatus[currentQuestion] = "wrong";
+        wrong++;
+
+        questionStatus[currentQuestion]="wrong";
 
     }
 
     updateStatus();
 
-    document.getElementById("nextButton").disabled = false;
+    document.getElementById("nextButton").disabled=false;
 
 }
 
@@ -341,7 +334,7 @@ async function showResult(){
 
 <h2>🎉 Tebrikler!</h2>
 
-<h3>Mock Exam 1</h3>
+<h3>Mock Exam 2</h3>
 
 <div class="result-score">
 ${(score - wrong/3).toFixed(2)}
@@ -456,7 +449,7 @@ async function saveTestResult(){
     email: localStorage.getItem("email"),
 
 
-    testName: "Mock Exam 1",
+    testName: "Mock Exam 2",
         correct: score,
         wrong: wrong,
         net: (score - wrong/3).toFixed(2),

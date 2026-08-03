@@ -3,126 +3,137 @@ import { saveToFirebase } from "../../../js/saveResult.js";
 const questions = [
 
 {
-    question: "Read the comments below.<br><br><b>Emily:</b> Alex always keeps my secrets.<br><b>Jack:</b> He never tells lies.<br><b>Linda:</b> He usually changes his mind at the last minute.<br><b>Tom:</b> We have similar interests.<br><br>Who has a negative opinion about Alex?",
-    image: "",
-    options: [
-        "A) Emily",
-        "B) Jack",
-        "C) Linda",
-        "D) Tom"
-    ],
-    answer: "C"
+image:"images/exam1/1.png",
+
+options:[
+"Watching TV is the most preferred activity.",
+"Reading books is more popular than doing sports.",
+"Playing computer games is the most preferred activity.",
+"Doing sports is less popular than reading books."
+],
+
+answer:2
 },
 
 {
-    question: "Look at the information below.<br><br><b>SUMMER COURSES</b><br><br>🎨 Art Course: Painting & Drawing<br>💻 Coding Course: Programming Basics<br>🎸 Music Course: Guitar & Piano<br>⚽ Sports Course: Football & Basketball<br><br>Emma enjoys designing pictures and being creative. Which course should she choose?",
-    image: "",
-    options: [
-        "A) Coding Course",
-        "B) Art Course",
-        "C) Sports Course",
-        "D) Music Course"
-    ],
-    answer: "B"
+image:"images/exam1/2.png",
+
+options:[
+"Watching TV is the least preferred activity.",
+"Playing computer games is the most preferred activity.",
+"Reading books is more popular than playing computer games.",
+"Doing sports is more popular than reading books."
+],
+
+answer:1
 },
 
 {
-    question: "Read the dialogue.<br><br><b>Lisa:</b> Would you like to join us for a picnic this Sunday?<br><b>Helen:</b> That sounds great, but I'll visit my grandparents.<br><br>Helen ______.",
-    image: "",
-    options: [
-        "A) accepts the invitation",
-        "B) refuses the invitation politely",
-        "C) changes the date",
-        "D) invites Lisa"
-    ],
-    answer: "B"
+image:"images/exam1/3.png",
+
+options:[
+"Going camping is the most popular activity.",
+"Riding a bike is less popular than playing tennis.",
+"Doing sport is more popular than going camping.",
+"Playing tennis is the most preferred activity."
+],
+
+answer:0
 },
 
 {
-    question: "Look at the chart below.<br><br><b>Favourite Free-time Activities</b><br><br>Watching Films: 40%<br>Playing Sports: 30%<br>Reading Books: 20%<br>Cooking: 10%<br><br>Which sentence is CORRECT?",
-    image: "",
-    options: [
-        "A) Reading books is more popular than sports.",
-        "B) Cooking is the most popular activity.",
-        "C) Watching films has the highest percentage.",
-        "D) Sports is less popular than cooking."
-    ],
-    answer: "C"
+image:"images/exam1/4.png",
+
+options:[
+"Skiing is the most preferred sport.",
+"Ice-skating is more popular than diving.",
+"Diving is the most preferred activity.",
+"Bungee jumping is less popular than skiing."
+],
+
+answer:2
 },
 
 {
-    question: "Read the recipe below.<br><br>1. Wash the apples.<br>2. Peel them.<br>3. Slice them.<br>4. Bake for 25 minutes.<br><br>Which step comes BEFORE baking?",
-    image: "",
-    options: [
-        "A) Wash the apples.",
-        "B) Peel them.",
-        "C) Slice them.",
-        "D) Add sugar."
-    ],
-    answer: "C"
+image:"images/exam1/5.png",
+
+options:[
+"Girls prefer camping more than boys.",
+"Boys enjoy playing tennis more than girls.",
+"Boys' favourite activity is going camping.",
+"Girls like riding a bike the most."
+],
+
+answer:2
 },
 
 {
-    question: "Read the phone conversation.<br><br><b>Secretary:</b> Good afternoon. City Hospital. How may I help you?<br><b>Mrs. Green:</b> I'd like to make an appointment with Dr. Wilson for Friday.<br><b>Secretary:</b> Certainly. He is available at 2 p.m.<br><br>Why is Mrs. Green calling?",
-    image: "",
-    options: [
-        "A) To cancel an appointment",
-        "B) To make an appointment",
-        "C) To visit a patient",
-        "D) To ask for directions"
-    ],
-    answer: "B"
+image:"images/exam1/6.png",
+
+options:[
+"Adults go camping more than teenagers.",
+"Teenagers watch TV more than adults.",
+"Teenagers and adults read books at the same rate.",
+"Adults go to the cinema less than teenagers."
+],
+
+answer:2
 },
 
 {
-    question: "Read the information below.<br><br>James Carter is a famous inventor. After graduating from MIT, he designed a robot that helps firefighters during rescue operations. Today, he works on different technology projects.<br><br>Which question CANNOT be answered according to the text?",
-    image: "",
-    options: [
-        "A) Where did he graduate from?",
-        "B) What did he invent?",
-        "C) What does he do now?",
-        "D) What is his favourite sport?"
-    ],
-    answer: "D"
+image:"images/exam1/7.png",
+
+options:[
+"Internet usage was highest in 2024.",
+"Internet usage decreased every year.",
+"The lowest internet usage was in 2023.",
+"Internet usage in 2026 was higher than in 2024."
+],
+
+answer:0
 },
 
 {
-    question: "Look at the map below.<br><br>📍 You are at the Bus Station.<br>• The Library is north of the Bus Station.<br>• The Museum is west of the Library.<br>• The Café is south of the Museum.<br><br>Where is the Museum?",
-    image: "",
-    options: [
-        "A) East of the Library",
-        "B) West of the Library",
-        "C) North of the Bus Station",
-        "D) South of the Café"
-    ],
-    answer: "B"
+image:"images/exam1/8.png",
+
+options:[
+"Adults go camping more than teenagers.",
+"Teenagers watch TV more than adults.",
+"Teenagers and adults read books at the same rate.",
+"Adults go to the cinema less than teenagers."
+],
+
+answer:2
 },
 
 {
-    question: "Look at the survey below.<br><br><b>Students' Favourite Digital Activities</b><br><br>Watching Videos: 38%<br>Playing Games: 32%<br>Reading Articles: 18%<br>Listening to Podcasts: 12%<br><br>Which of the following is TRUE?",
-    image: "",
-    options: [
-        "A) Reading articles is more popular than playing games.",
-        "B) Watching videos is the most popular activity.",
-        "C) Podcasts are more popular than articles.",
-        "D) Playing games is the least popular activity."
-    ],
-    answer: "B"
+image:"images/exam1/9.png",
+
+options:[
+"Adults go camping more than teenagers.",
+"Teenagers watch TV more than adults.",
+"Teenagers and adults read books at the same rate.",
+"Adults go to the cinema less than teenagers."
+],
+
+answer:2
 },
 
 {
-    question: "Read the text.<br><br>Jessica loves discovering new places. Whenever she travels, she visits museums, historical buildings and local markets. She believes travelling helps her understand different cultures and meet new people.<br><br>Which of the following is TRUE according to the text?",
-    image: "",
-    options: [
-        "A) Jessica only likes relaxing at the beach.",
-        "B) Jessica avoids meeting new people.",
-        "C) Jessica enjoys learning about different cultures.",
-        "D) Jessica never visits museums."
-    ],
-    answer: "C"
+image:"images/exam1/10.png",
+
+options:[
+"Adults go camping more than teenagers.",
+"Teenagers watch TV more than adults.",
+"Teenagers and adults read books at the same rate.",
+"Adults go to the cinema less than teenagers."
+],
+
+answer:2
 }
 
 ];
+
 
 let questionStatus = [];
 
@@ -165,12 +176,7 @@ function showQuestion(){
 
 
     // SORU METNİ
-    document.getElementById("quiz").innerHTML = `
-        <div class="question-text">
-            ${q.question}
-        </div>
-    `;
-
+  
 
     // RESİM VARSA GÖSTER
     if(q.image && q.image !== ""){
@@ -188,20 +194,20 @@ function showQuestion(){
     // ŞIKLAR
     document.getElementById("options").innerHTML = `
 
-<button onclick="checkAnswer('A', this)">
-${q.options[0]}
+<button onclick="checkAnswer(0, this)">
+A) ${q.options[0]}
 </button>
 
-<button onclick="checkAnswer('B', this)">
-${q.options[1]}
+<button onclick="checkAnswer(1, this)">
+B) ${q.options[1]}
 </button>
 
-<button onclick="checkAnswer('C', this)">
-${q.options[2]}
+<button onclick="checkAnswer(2, this)">
+C) ${q.options[2]}
 </button>
 
-<button onclick="checkAnswer('D', this)">
-${q.options[3]}
+<button onclick="checkAnswer(3, this)">
+D) ${q.options[3]}
 </button>
 
 `;
@@ -245,15 +251,7 @@ function checkAnswer(selected, button){
 
     let buttons = document.querySelectorAll("#options button");
 
-    buttons.forEach(btn => {
-
-        btn.disabled = true;
-
-        if(btn.innerText.startsWith(q.answer)){
-            btn.classList.add("correct");
-        }
-
-    });
+    buttons.forEach(btn=>btn.disabled=true);
 
     if(selected === q.answer){
 
@@ -262,27 +260,23 @@ function checkAnswer(selected, button){
         score++;
         correct++;
 
-        document.getElementById("result").innerHTML =
-        "✅ Correct Answer!";
-
-        questionStatus[currentQuestion] = "correct";
+        questionStatus[currentQuestion]="correct";
 
     }else{
 
-        wrong++;
-
         button.classList.add("wrong");
 
-        document.getElementById("result").innerHTML =
-        "❌ Wrong Answer!";
+        buttons[q.answer].classList.add("correct");
 
-        questionStatus[currentQuestion] = "wrong";
+        wrong++;
+
+        questionStatus[currentQuestion]="wrong";
 
     }
 
     updateStatus();
 
-    document.getElementById("nextButton").disabled = false;
+    document.getElementById("nextButton").disabled=false;
 
 }
 
@@ -340,7 +334,7 @@ async function showResult(){
 
 <h2>🎉 Tebrikler!</h2>
 
-<h3>Mock Exam 1</h3>
+<h3>Mock Exam 6</h3>
 
 <div class="result-score">
 ${(score - wrong/3).toFixed(2)}
@@ -455,7 +449,7 @@ async function saveTestResult(){
     email: localStorage.getItem("email"),
 
 
-    testName: "Mock Exam 1",
+    testName: "Mock Exam 6",
         correct: score,
         wrong: wrong,
         net: (score - wrong/3).toFixed(2),

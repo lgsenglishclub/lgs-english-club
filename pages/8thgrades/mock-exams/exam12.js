@@ -1,5 +1,140 @@
 import { saveToFirebase } from "../../../js/saveResult.js";
 
+const questions = [
+
+{
+image:"images/exam1/1.png",
+
+options:[
+"Watching TV is the most preferred activity.",
+"Reading books is more popular than doing sports.",
+"Playing computer games is the most preferred activity.",
+"Doing sports is less popular than reading books."
+],
+
+answer:2
+},
+
+{
+image:"images/exam1/2.png",
+
+options:[
+"Watching TV is the least preferred activity.",
+"Playing computer games is the most preferred activity.",
+"Reading books is more popular than playing computer games.",
+"Doing sports is more popular than reading books."
+],
+
+answer:1
+},
+
+{
+image:"images/exam1/3.png",
+
+options:[
+"Going camping is the most popular activity.",
+"Riding a bike is less popular than playing tennis.",
+"Doing sport is more popular than going camping.",
+"Playing tennis is the most preferred activity."
+],
+
+answer:0
+},
+
+{
+image:"images/exam1/4.png",
+
+options:[
+"Skiing is the most preferred sport.",
+"Ice-skating is more popular than diving.",
+"Diving is the most preferred activity.",
+"Bungee jumping is less popular than skiing."
+],
+
+answer:2
+},
+
+{
+image:"images/exam1/5.png",
+
+options:[
+"Girls prefer camping more than boys.",
+"Boys enjoy playing tennis more than girls.",
+"Boys' favourite activity is going camping.",
+"Girls like riding a bike the most."
+],
+
+answer:2
+},
+
+{
+image:"images/exam1/6.png",
+
+options:[
+"Adults go camping more than teenagers.",
+"Teenagers watch TV more than adults.",
+"Teenagers and adults read books at the same rate.",
+"Adults go to the cinema less than teenagers."
+],
+
+answer:2
+},
+
+{
+image:"images/exam1/7.png",
+
+options:[
+"Internet usage was highest in 2024.",
+"Internet usage decreased every year.",
+"The lowest internet usage was in 2023.",
+"Internet usage in 2026 was higher than in 2024."
+],
+
+answer:0
+},
+
+{
+image:"images/exam1/8.png",
+
+options:[
+"Adults go camping more than teenagers.",
+"Teenagers watch TV more than adults.",
+"Teenagers and adults read books at the same rate.",
+"Adults go to the cinema less than teenagers."
+],
+
+answer:2
+},
+
+{
+image:"images/exam1/9.png",
+
+options:[
+"Adults go camping more than teenagers.",
+"Teenagers watch TV more than adults.",
+"Teenagers and adults read books at the same rate.",
+"Adults go to the cinema less than teenagers."
+],
+
+answer:2
+},
+
+{
+image:"images/exam1/10.png",
+
+options:[
+"Adults go camping more than teenagers.",
+"Teenagers watch TV more than adults.",
+"Teenagers and adults read books at the same rate.",
+"Adults go to the cinema less than teenagers."
+],
+
+answer:2
+}
+
+];
+
+
 let questionStatus = [];
 
 let currentQuestion = 0;
@@ -41,12 +176,7 @@ function showQuestion(){
 
 
     // SORU METNİ
-    document.getElementById("quiz").innerHTML = `
-        <div class="question-text">
-            ${q.question}
-        </div>
-    `;
-
+  
 
     // RESİM VARSA GÖSTER
     if(q.image && q.image !== ""){
@@ -64,20 +194,20 @@ function showQuestion(){
     // ŞIKLAR
     document.getElementById("options").innerHTML = `
 
-<button onclick="checkAnswer('A', this)">
-${q.options[0]}
+<button onclick="checkAnswer(0, this)">
+A) ${q.options[0]}
 </button>
 
-<button onclick="checkAnswer('B', this)">
-${q.options[1]}
+<button onclick="checkAnswer(1, this)">
+B) ${q.options[1]}
 </button>
 
-<button onclick="checkAnswer('C', this)">
-${q.options[2]}
+<button onclick="checkAnswer(2, this)">
+C) ${q.options[2]}
 </button>
 
-<button onclick="checkAnswer('D', this)">
-${q.options[3]}
+<button onclick="checkAnswer(3, this)">
+D) ${q.options[3]}
 </button>
 
 `;
@@ -121,15 +251,7 @@ function checkAnswer(selected, button){
 
     let buttons = document.querySelectorAll("#options button");
 
-    buttons.forEach(btn => {
-
-        btn.disabled = true;
-
-        if(btn.innerText.startsWith(q.answer)){
-            btn.classList.add("correct");
-        }
-
-    });
+    buttons.forEach(btn=>btn.disabled=true);
 
     if(selected === q.answer){
 
@@ -138,27 +260,23 @@ function checkAnswer(selected, button){
         score++;
         correct++;
 
-        document.getElementById("result").innerHTML =
-        "✅ Correct Answer!";
-
-        questionStatus[currentQuestion] = "correct";
+        questionStatus[currentQuestion]="correct";
 
     }else{
 
-        wrong++;
-
         button.classList.add("wrong");
 
-        document.getElementById("result").innerHTML =
-        "❌ Wrong Answer!";
+        buttons[q.answer].classList.add("correct");
 
-        questionStatus[currentQuestion] = "wrong";
+        wrong++;
+
+        questionStatus[currentQuestion]="wrong";
 
     }
 
     updateStatus();
 
-    document.getElementById("nextButton").disabled = false;
+    document.getElementById("nextButton").disabled=false;
 
 }
 
@@ -216,7 +334,7 @@ async function showResult(){
 
 <h2>🎉 Tebrikler!</h2>
 
-<h3>Mock Exam 1</h3>
+<h3>Mock Exam 12</h3>
 
 <div class="result-score">
 ${(score - wrong/3).toFixed(2)}
@@ -331,7 +449,7 @@ async function saveTestResult(){
     email: localStorage.getItem("email"),
 
 
-    testName: "Mock Exam 1",
+    testName: "Mock Exam 12",
         correct: score,
         wrong: wrong,
         net: (score - wrong/3).toFixed(2),

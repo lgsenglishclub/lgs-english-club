@@ -925,119 +925,6 @@ margin-bottom:20px;
     color:#666;
 }
 
-/* ================= FOOTER ================= */
-
-.footer{
-    background:#0F172A;
-    color:white;
-    text-align:center;
-    padding:60px 20px 25px;
-    margin-top:80px;
-}
-
-.footer-logo img{
-    width:90px;
-    height:90px;
-    border-radius:50%;
-    object-fit:cover;
-    transition:.3s;
-}
-
-.footer-logo img:hover{
-    transform:scale(1.08);
-}
-
-.footer h2{
-    margin:18px 0 8px;
-    font-size:30px;
-}
-
-.footer-slogan{
-    color:#CBD5E1;
-    font-size:17px;
-    margin-bottom:35px;
-}
-
-.footer-links{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:28px;
-    margin-bottom:35px;
-}
-
-.footer-links a{
-    color:white;
-    text-decoration:none;
-    font-weight:600;
-    transition:.3s;
-}
-
-.footer-links a:hover{
-    color:#3B82F6;
-}
-
-.footer-social{
-    display:flex;
-    justify-content:center;
-    gap:25px;
-    margin-bottom:35px;
-}
-
-.footer-social img{
-    width:30px;
-    height:30px;
-    border-radius:50%;
-    background:white;
-    padding:8px;
-    transition:.3s;
-}
-
-.footer-social img:hover{
-    transform:translateY(-5px);
-}
-
-.footer-bottom{
-    border-top:1px solid rgba(255,255,255,.15);
-    padding-top:20px;
-    color:#94A3B8;
-    font-size:15px;
-}
-
-.footer{
-
-    border-top:4px solid #3B82F6;
-
-}
-
-.footer-teacher{
-
-    margin:10px auto;
-    text-align:center;
-
-}
-
-
-.footer-teacher h3{
-
-    font-size:18px;
-
-}
-
-
-.footer-teacher p{
-
-    font-size:14px;
-
-}
-
-
-.footer-teacher span{
-
-    font-size:3px;
-    color:#64748b;
-
-}
 
 @media (max-width: 768px){
 
@@ -1063,7 +950,7 @@ margin-bottom:20px;
 }
 
 /* ===============================
-   MODERN LEGAL FOOTER
+MODERN LEGAL FOOTER
 ================================ */
 
 .legal-footer{
@@ -1227,14 +1114,106 @@ margin-bottom:20px;
 
 }
 
-@media(max-width:768px){
+/* ================= LEGAL FOOTER MOBILE ================= */
 
-    .footer-social a img{
+@media (max-width:768px){
 
-        width:26px;
+.legal-footer{
+    padding:40px 20px 20px;
+}
 
-        height:26px;
+.footer-grid{
+    grid-template-columns:1fr;
+    gap:30px;
+    text-align:center;
+}
 
-    }
+.footer-grid h3{
+    font-size:20px;
+}
+
+.footer-grid h3::after{
+    margin:10px auto 0;
+}
+
+.footer-grid p{
+    max-width:100%;
+    font-size:15px;
+    margin:0 auto;
+}
+
+.footer-grid a{
+    font-size:15px;
+}
+
+.footer-grid a:hover{
+    transform:none;
+}
+
+.legal-footer hr{
+    margin:30px 0 18px;
+}
+
+.legal-footer > p{
+    font-size:13px;
+    line-height:1.6;
+}
+
+}
+
+
+/* Footer Social Icons */
+
+.footer-social{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-top:20px;
+
+}
+
+
+.footer-social a img{
+
+    width:32px;
+
+    height:32px;
+
+    object-fit:contain;
+
+    transition:.3s ease;
+
+}
+
+
+.footer-social a:hover img{
+
+    transform:translateY(-4px) scale(1.1);
+
+}
+
+/* ================= FOOTER SOCIAL MOBILE ================= */
+
+@media (max-width:768px){
+
+.footer-social{
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:18px;
+    margin-top:20px;
+}
+
+.footer-social a img{
+    width:28px;
+    height:28px;
+}
+
+.footer-social a:hover img{
+    transform:none;
+}
 
 }

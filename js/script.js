@@ -127,8 +127,13 @@ let success =
 Number(localStorage.getItem("successRate")) || 0;
 
 
-document.getElementById("certificateSuccess").innerHTML =
-success + "%";
+const certificateSuccess = document.getElementById("certificateSuccess");
+
+if(certificateSuccess){
+
+    certificateSuccess.innerHTML = success + "%";
+
+}
 
 // DAILY QUESTION SYSTEM
 
@@ -139,12 +144,22 @@ Number(localStorage.getItem("todayQuestions")) || 0;
 let dailyGoal = 20;
 
 
-document.getElementById("todayQuestions").innerHTML =
-todayQuestions;
+const todayQuestionsElement = document.getElementById("todayQuestions");
+
+if(todayQuestionsElement){
+
+    todayQuestionsElement.innerHTML = todayQuestions;
+
+}
 
 
-document.getElementById("dailyGoal").innerHTML =
-dailyGoal;
+const dailyGoalElement = document.getElementById("dailyGoal");
+
+if(dailyGoalElement){
+
+    dailyGoalElement.innerHTML = dailyGoal;
+
+}
 
 document.addEventListener("DOMContentLoaded", () => {
 

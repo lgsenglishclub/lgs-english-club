@@ -1,3 +1,16 @@
+import { auth, db } from "../firebase.js";
+
+import { 
+updateDoc,
+doc
+} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+
+import {
+updatePassword
+} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+
+
 const recentTests =
 JSON.parse(localStorage.getItem("recentTests")) || [
 
@@ -376,9 +389,210 @@ if(membership === "premium"){
     "👑 PREMIUM MEMBER";
 
 }
+
 else{
 
-    membershipStatus.innerHTML =
-    "🟢 FREE MEMBER";
+    if(membershipStatus){
+
+        membershipStatus.innerHTML =
+        "🟢 FREE MEMBER";
+
+    }
 
 }
+
+// ACCOUNT SETTINGS
+
+const saveSettings = document.getElementById("saveSettings");
+
+
+if(saveSettings){
+
+    saveSettings.addEventListener("click", async()=>{
+
+
+        const user = auth.currentUser;
+
+
+        if(!user) return;
+
+
+
+        const newName =
+        document.getElementById("newUsername").value;
+
+
+        const newPassword =
+        document.getElementById("newPassword").value;
+
+
+
+        try{
+
+
+            // Kullanıcı adı güncelleme
+
+            if(newName){
+
+                await updateDoc(
+                    doc(db,"users",user.uid),
+                    {
+                        name:newName
+                    }
+                );
+
+            }
+
+
+
+            // Şifre güncelleme
+
+            if(newPassword){
+
+                if(newPassword.length < 6){
+
+                    alert("Password must be at least 6 characters");
+                    return;
+
+                }
+
+
+                await updatePassword(
+                    user,
+                    newPassword
+                );
+
+            }
+
+
+
+            document.getElementById("settingsMessage").innerHTML =
+            "✅ Settings updated";
+
+
+        }
+        catch(error){
+
+            document.getElementById("settingsMessage").innerHTML =
+            error.message;
+
+        }
+
+
+    });
+
+}
+
+const modal = document.getElementById("settingsModal");
+
+const openBtn = document.getElementById("openSettings");
+
+const closeBtn = document.getElementById("closeSettings");
+
+
+
+openBtn.onclick = ()=>{
+
+    modal.style.display="flex";
+
+};
+
+
+
+closeBtn.onclick = ()=>{
+
+    modal.style.display="none";
+
+};
+
+
+
+document.getElementById("saveSettings")
+.addEventListener("click", async()=>{
+
+
+const user = auth.currentUser;
+
+
+const newName =
+document.getElementById("newUsername").value;
+
+
+const newPassword =
+document.getElementById("newPassword").value;
+
+
+
+try{
+
+
+if(newName){
+
+await updateDoc(
+doc(db,"users",user.uid),
+{
+name:newName
+}
+);
+
+}
+
+
+
+if(newPassword){
+
+await updatePassword(
+user,
+newPassword
+);
+
+}
+
+
+
+document.getElementById("settingsMessage").innerHTML =
+"✅ Settings updated";
+
+
+}
+catch(error){
+
+document.getElementById("settingsMessage").innerHTML =
+error.message;
+
+}
+
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const openBtn = document.getElementById("openSettings");
+    const modal = document.getElementById("settingsModal");
+    const closeBtn = document.getElementById("closeSettings");
+
+
+    console.log("Settings kontrol edildi:", openBtn, modal);
+
+
+    if(openBtn){
+
+        openBtn.addEventListener("click", () => {
+
+            modal.style.display = "flex";
+
+        });
+
+    }
+
+
+    if(closeBtn){
+
+        closeBtn.addEventListener("click", () => {
+
+            modal.style.display = "none";
+
+        });
+
+    }
+
+});

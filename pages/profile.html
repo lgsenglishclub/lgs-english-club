@@ -55,6 +55,8 @@
 
 </div>
 
+
+
 <div class="profile-title">
 
     <img src="contact/images/lgsenglishclub.png" 
@@ -75,9 +77,70 @@
             <p>Believe in yourself. You can do it!</p>
         </div>
 
+        <button id="openSettings" class="settings-btn">
+    ⚙️ Account Settings
+</button>
+
+
+<div class="settings-modal" id="settingsModal">
+
+    <div class="settings-content">
+
+        <span id="closeSettings" class="close-btn">
+            ×
+        </span>
+
+
+        <h2>
+            ⚙️ Account Settings
+        </h2>
+
+
+        <div class="setting-box">
+
+            <label>
+                Change Username
+            </label>
+
+            <input 
+            id="newUsername"
+            type="text"
+            placeholder="New username">
+
+        </div>
+
+
+
+        <div class="setting-box">
+
+            <label>
+                Change Password
+            </label>
+
+            <input 
+            id="newPassword"
+            type="password"
+            placeholder="New password">
+
+        </div>
+
+
+        <button id="saveSettings">
+            Save Changes
+        </button>
+
+
+        <p id="settingsMessage"></p>
+
+
+    </div>
+
+</div>
+
     </div>
 
     </div>
+
 
 <div class="recent-tests-card">
 
@@ -108,18 +171,16 @@ let learnedWords =
 JSON.parse(localStorage.getItem("learnedWords")) || [];
 
 
-document.getElementById("learnedCount").innerHTML =
-learnedWords.length;
+const learnedCount = document.getElementById("learnedCount");
+
+if(learnedCount){
+
+    learnedCount.innerHTML = learnedWords.length;
+
+}
 
 
 </script>
-
-<script type="module" src="../js/auth.js"></script>
-
-<script src="profile.js"></script>
-
-<script src="../js/script.js"></script>
-
 
 <footer class="legal-footer">
 
@@ -185,7 +246,10 @@ learnedWords.length;
 
 <script type="module" src="../../js/premium.js"></script>
 <script src="../../js/authGuard.js"></script>
-<script src="../../js/premiumGuard.js"></script>
+<script type="module" src="../js/auth.js"></script>
+<script src="../js/script.js"></script>
+<script type="module" src="profile.js"></script>
+
 
 </body>
 

@@ -1,8 +1,8 @@
 import { auth, db } from "../firebase.js";
 
 import { 
-updateDoc,
-doc
+  doc,
+  updateDoc
 } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
 
@@ -526,28 +526,35 @@ document.getElementById("newPassword").value;
 try{
 
 
-if(newName){
+if(newName.trim() !== ""){
 
-await updateDoc(
-doc(db,"users",user.uid),
-{
-name:newName
-}
-);
-
-}
-
-
-
-if(newPassword){
-
-await updatePassword(
-user,
-newPassword
-);
+    await updateDoc(
+        doc(db,"users",user.uid),
+        {
+            name:newName
+        }
+    );
 
 }
 
+
+
+if(newPassword.trim() !== ""){
+
+    if(newPassword.length < 6){
+
+        alert("Password must be at least 6 characters");
+        return;
+
+    }
+
+
+    await updatePassword(
+        user,
+        newPassword
+    );
+
+}
 
 
 document.getElementById("settingsMessage").innerHTML =

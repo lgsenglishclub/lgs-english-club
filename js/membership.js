@@ -1,5 +1,37 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+    const memberCard = document.getElementById("memberCard");
+
+    const loggedIn = localStorage.getItem("loggedIn");
+
+    // Giriş yapılmamışsa member kartı gizle
+    if(loggedIn !== "true"){
+
+        if(memberCard){
+            memberCard.style.display = "none";
+        }
+
+        return;
+    }
+
+    // Giriş yapılmışsa göster
+    if(memberCard){
+        memberCard.style.display = "block";
+    }
+
+
+    const membership = localStorage.getItem("membership") || "free";
+    const role = localStorage.getItem("role") || "user";
+
+    const status = document.getElementById("premiumStatus");
+
+
+    // SENİN MEVCUT PREMIUM KODLARIN BURADAN DEVAM ETSİN
+
+});
+
+    document.addEventListener("DOMContentLoaded", () => {
+
     const membership = localStorage.getItem("membership");
 
     const badge = document.querySelector(".plan-badge");
@@ -32,3 +64,4 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
+

@@ -561,6 +561,7 @@ document.getElementById("settingsMessage").innerHTML =
 
 }
 catch(error){
+    
 
 document.getElementById("settingsMessage").innerHTML =
 error.message;

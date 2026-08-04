@@ -64,23 +64,45 @@
 
 </div>
 
-<div class="profile-card">
+<div class="profile-card" id="profileCard">
 
     <div class="profile-top">
 
-        <div class="profile-avatar" id="profileAvatar">
-            U
-        </div>
+        <div class="profile-avatar" id="avatarBox">
+
+    <img id="profilePhoto" alt="Profile">
+
+    <span id="profileInitial">U</span>
+
+    <div class="avatar-camera">
+        <i class="fa-solid fa-camera"></i>
+    </div>
+
+</div>
+
+<input
+type="file"
+id="photoInput"
+accept="image/*"
+style="display:none;">
+
+<button id="savePhoto" style="display:none;">
+    Change Photo
+</button>
 
         <div class="profile-info">
             <h2 id="profileName">Umut</h2>
             <p>Believe in yourself. You can do it!</p>
+
+            <div class="membership-status" id="membershipStatus"></div>
+
         </div>
 
         <button id="openSettings" class="settings-btn">
-    ⚙️ Account Settings
+    ⚙️Settings
 </button>
 
+ </div>
 
 <div class="settings-modal" id="settingsModal">
 
@@ -135,8 +157,6 @@
 
     </div>
 
-</div>
-
     </div>
 
     </div>
@@ -154,15 +174,18 @@
 
 </div>
 
-<section class="lesson-box profile-box">
+<div class="study-plan-card">
 
-<section class="study-plan">
+    <h2>
+        <i class="fa-solid fa-calendar-days"></i>
+        Weekly Study Program
+    </h2>
 
-    <h2><i class="fa-solid fa-chart-line"></i> LGS Studying Plan</h2>
+    <img src="images/study-program.png"
+         alt="Weekly Study Program"
+         class="study-program-img">
 
-    <div id="studyPlan"></div>
-
-</section>
+</div>
 
 
 <script>

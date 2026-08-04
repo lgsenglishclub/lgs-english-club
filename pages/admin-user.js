@@ -3,7 +3,10 @@ import { db } from "../firebase.js";
 import {
     doc,
     getDoc,
-    deleteDoc
+    deleteDoc,
+    updateDoc,
+    deleteField,
+    serverTimestamp
 
 } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js";
 
@@ -11,6 +14,8 @@ async function loadUser() {
 
     const params = new URLSearchParams(window.location.search);
     const uid = params.get("id");
+    
+    window.currentUid = uid;
 
     const userInfo = document.getElementById("userInfo");
 
@@ -102,6 +107,48 @@ user.premiumEnd
 </strong>
 </div>
 
+<div class="membership-actions">
+
+
+${
+user.role !== "admin"
+
+?
+
+user.membership === "premium"
+
+?
+
+`
+<button
+class="danger-btn"
+onclick="removePremium()">
+
+❌ Remove Premium
+
+</button>
+`
+
+:
+
+`
+<button
+class="success-btn"
+onclick="makePremium()">
+
+👑 Upgrade to Premium
+
+</button>
+`
+
+:
+
+""
+
+}
+
+</div>
+
 `;
     } catch (error) {
 
@@ -116,8 +163,58 @@ user.premiumEnd
 
 loadUser();
 
-document
-.getElementById("deleteUserBtn")
+window.makePremium = async function(){
+
+    await updateDoc(
+
+        doc(db,"users",window.currentUid),
+
+        {
+
+            membership:"premium",
+
+            premiumSince:serverTimestamp()
+
+        }
+
+    );
+
+    alert("✅ User upgraded.");
+
+    location.reload();
+
+}
+
+
+window.removePremium = async function(){
+
+    await updateDoc(
+
+        doc(db,"users",window.currentUid),
+
+        {
+
+            membership:"free",
+
+            premiumStart:deleteField(),
+
+            premiumEnd:deleteField(),
+
+            premiumSince:deleteField()
+
+        }
+
+    );
+
+    alert("✅ Premium removed.");
+
+    location.reload();
+
+}
+
+loadUser();
+
+document.getElementById("deleteUserBtn")
 .addEventListener("click", async () => {
 
     const confirmDelete = confirm(
@@ -128,7 +225,11 @@ document
 
     try {
 
-        await deleteDoc(doc(db, "users", uid));
+        await deleteDoc(
+
+    doc(db,"users",window.currentUid)
+
+);
 
         alert("✅ User deleted.");
 

@@ -802,15 +802,15 @@ button:hover {
 
     background:white;
 
-    max-width:900px;
+    max-width:400px;
 
     width:90%;
 
-    margin:auto;
+    margin:0 auto;
 
-    padding:40px;
+    padding:20px;
 
-    border-radius:25px;
+    border-radius:20px;
 
     box-shadow:0 10px 25px rgba(0,0,0,.1);
 
@@ -823,6 +823,120 @@ button:hover {
 
 }
 
+/* FREE MEMBER - Modern Green */
+
+#profileCard.free{
+
+    background: linear-gradient(
+        135deg,
+        #34d399,
+        #059669
+    ) !important;
+
+    color:white;
+
+}
+
+
+/* PREMIUM MEMBER - Elegant Gold */
+
+#profileCard.premium{
+
+    background: linear-gradient(
+        135deg,
+        #fde68a,
+        #f59e0b
+    ) !important;
+
+    color:white;
+
+}
+
+#profileCard{
+
+    transition: .3s ease;
+
+}
+
+
+#profileCard:hover{
+
+    transform: translateY(-5px);
+
+}
+
+/* PROFILE CARD MOBILE */
+
+@media(max-width:600px){
+
+
+    #profileCard{
+
+        width:90%;
+        border-radius:16px;
+
+        padding:15px;
+
+        transition:.3s ease;
+
+    }
+
+
+    #profileCard:hover{
+
+        transform:none;
+
+    }
+
+
+    #profileCard.premium{
+
+        background:linear-gradient(
+            135deg,
+            #fde68a,
+            #f59e0b
+        ) !important;
+
+    }
+
+
+    .profile-top{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        gap:15px;
+
+    }
+
+
+    .profile-info h2{
+
+        font-size:22px;
+
+    }
+
+
+    .profile-info p{
+
+        font-size:14px;
+
+    }
+
+
+}
+
+@media(min-width:601px) and (max-width:900px){
+
+    #profileCard{
+
+        padding:22px;
+
+    }
+
+
+}
 
 #level{
 
@@ -10558,25 +10672,17 @@ line-height:1.6;
 
 .profile-avatar{
 
-    width:55px;
-
-    height:55px;
+    width:120px;
+    height:120px;
 
     border-radius:50%;
-
-    background:#3b82f6;
-
-    color:#fff;
+    overflow:hidden;
 
     display:flex;
-
+    justify-content:center;
     align-items:center;
 
-    justify-content:center;
-
-    font-size:22px;
-
-    font-weight:700;
+    background:#2563eb;
 
     flex-shrink:0;
 
@@ -10588,7 +10694,18 @@ line-height:1.6;
 
 }
 
+.profile-avatar img{
 
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    display:none;
+
+}
 
 .profile-info h2{
 
@@ -12065,95 +12182,193 @@ line-height:1.6;
 
 .lgscountdown {
     position: absolute;
-    left: 1625px;
+    left: 1650px;
     top: 100px;
 }
 
-.lgs-box {
+.lgs-box{
 
-    width:175px;
+    width:200px;
 
-    height: 145px;
+    background:linear-gradient(
+        135deg,
+        #1e3a8a,
+        #2563eb
+    );
 
-    padding:25px;
+    color:white;
 
     border-radius:20px;
 
-    background:white;
+    padding:11px 12px;
 
-    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+    text-align:center;
 
-}
+    position:relative;
 
-.lgs-box h2 {
+    overflow:hidden;
 
-    margin: 0 10 10px;
+    box-shadow:
+    0 15px 35px rgba(37,99,235,.25);
 
-    font-size: 22px;
-
-    color:#4f46e5;
-
-}
-
-.lgs-box p:last-child {
-
-    margin:0;
-
-    color:#666;
-
-    font-size:14px;
-
-}
-
-.info-box {
-
-    width: 140px;
-    padding: 15px;
-
-    background: white;
-
-    border-radius: 18px;
-
-    text-align: center;
-
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-
-    border: 2px solid #4f46e5;
+    transition:.3s ease;
 
 }
 
 
-.info-box h2 {
+/* Hover */
 
-    margin: 0 0 10px;
+.lgs-box:hover{
 
-    font-size: 22px;
-
-    color:#4f46e5;
+    transform:translateY(-6px);
 
 }
 
 
-#lgsDays {
+/* Takvim ışık efekti */
 
-    font-size: 32px;
+.lgs-box::before{
 
-    font-weight: bold;
+    content:"";
 
-    color:#111827;
+    position:absolute;
 
-    margin: 5px 0;
+    width:180px;
+
+    height:180px;
+
+    background:rgba(255,255,255,.12);
+
+    border-radius:50%;
+
+    top:-100px;
+
+    right:-80px;
 
 }
 
 
-.info-box p:last-child {
 
-    margin:0;
+/* Başlık */
 
-    color:#666;
+.lgs-box h2{
 
-    font-size:14px;
+    position:relative;
+
+    z-index:2;
+
+    font-size:15px;
+
+    margin-bottom:10px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+
+
+/* Gün sayısı */
+
+#lgsDays{
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:35px;
+
+    font-weight:900;
+
+    margin:10px 0;
+
+    line-height:1;
+
+
+    color:#facc15;
+
+
+    text-shadow:
+    0 4px 12px rgba(0,0,0,.25);
+
+    animation:pulseDays 2s infinite;
+
+}
+
+
+@keyframes pulseDays{
+
+    0%,100%{
+
+        transform:scale(1);
+
+    }
+
+
+    50%{
+
+        transform:scale(1.05);
+
+    }
+
+}
+
+
+/* Days left */
+
+.lgs-box b{
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:13px;
+
+    letter-spacing:2px;
+
+    opacity:.9;
+
+    text-transform:uppercase;
+
+}
+
+
+/* Mobile */
+
+@media(max-width:600px){
+
+
+    .lgs-box{
+
+        width:90%;
+
+        max-width:300px;
+
+        padding:20px;
+
+        border-radius:20px;
+
+    }
+
+
+    #lgsDays{
+
+        font-size:42px;
+
+    }
+
+
+    .lgs-box h2{
+
+        font-size:18px;
+
+    }
+
 
 }
 
@@ -12213,6 +12428,40 @@ line-height:1.6;
     #lgsDays{
         font-size:36px;
     }
+
+}
+
+/* Mobile */
+
+@media(max-width:600px){
+
+
+    .lgs-box{
+
+        width:90%;
+
+        max-width:300px;
+
+        padding:20px;
+
+        border-radius:20px;
+
+    }
+
+
+    #lgsDays{
+
+        font-size:42px;
+
+    }
+
+
+    .lgs-box h2{
+
+        font-size:18px;
+
+    }
+
 
 }
 
@@ -12821,7 +13070,7 @@ iframe{
 
     top:100px;
 
-    left:50px;
+    left:30px;
 
 }
 
@@ -12851,6 +13100,14 @@ iframe{
     margin-top:10px;
 
     color:#666;
+
+}
+
+.membership-status{
+
+    margin-top:10px;
+    font-weight:700;
+    font-size:14px;
 
 }
 
@@ -13632,9 +13889,9 @@ Premium Kart
 
     position:absolute;
 
-    top:177px;
+    top:182px;
 
-    left:479px;
+    left:728px;
 
     width:90px;
 
@@ -13664,7 +13921,6 @@ Premium Kart
     z-index:20;
 
 }
-
 
 
 .floating-membership-card .membership-icon{
@@ -13713,7 +13969,6 @@ Premium Kart
 }
 
 
-
 .floating-membership-card.premium-active 
 .membership-icon{
 
@@ -13737,7 +13992,6 @@ Premium Kart
     0 8px 25px rgba(34,197,94,.35);
 
 }
-
 
 
 .floating-membership-card.free-active 
@@ -13821,7 +14075,6 @@ Premium Kart
 }
 
 
-
 /* Footer Titles */
 
 .footer-grid h3{
@@ -13856,7 +14109,6 @@ Premium Kart
 }
 
 
-
 /* Footer Text */
 
 .footer-grid p{
@@ -13868,7 +14120,6 @@ Premium Kart
     max-width:280px;
 
 }
-
 
 
 /* Footer Links */
@@ -13899,7 +14150,6 @@ Premium Kart
 }
 
 
-
 /* Divider */
 
 .legal-footer hr{
@@ -13916,7 +14166,6 @@ Premium Kart
 }
 
 
-
 /* Copyright */
 
 .legal-footer > p{
@@ -13928,7 +14177,6 @@ Premium Kart
     font-size:14px;
 
 }
-
 
 
 /* Hover Card Effect */
@@ -14007,7 +14255,6 @@ Premium Kart
     margin-top:20px;
 
 }
-
 
 .footer-social a img{
 
@@ -14116,7 +14363,6 @@ Premium Kart
     }
 
 }
-
 
 
 /* ===============================
@@ -14250,42 +14496,47 @@ Premium Kart
 
 .settings-btn{
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:8px;
+    position:absolute;
 
-    margin-top:15px;
+    top:-53px;
 
-    padding:9px 18px;
+    right:-23px;
 
-    border:none;
-    border-radius:12px;
 
-    background:#f1f5f9;
-    color:#334155;
+     background:rgba(255,255,255,.18);
 
-    font-size:14px;
-    font-weight:600;
+    color:white;
+
+    border:1px solid rgba(255,255,255,.35);
+
+    padding:8px 12px;
+
+    border-radius:10px;
 
     cursor:pointer;
 
-    transition:.3s ease;
+    font-size:12px;
 
-    box-shadow:0 4px 12px rgba(0,0,0,.08);
+    font-weight:600;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    backdrop-filter:blur(8px);
+
+    transition:.3s ease;
 
 }
 
 
 .settings-btn:hover{
 
-    background:#2563eb;
+    background:rgba(255,255,255,.35);
 
-    color:white;
-
-    transform:translateY(-3px);
-
-    box-shadow:0 8px 20px rgba(37,99,235,.25);
+    transform:translateY(-2px);
 
 }
 
@@ -14307,25 +14558,23 @@ Premium Kart
 
     z-index:9999;
 
+    padding-left:160px;
+
 }
 
 
 
 .settings-content{
 
-    width:340px;
+    width:230px;
 
     max-width:90%;
 
-    background:#ffffff;
+    background:#fff;
 
-    border-radius:20px;
+    border-radius:18px;
 
-    padding:22px;
-
-    position:relative;
-
-    box-shadow:0 20px 50px rgba(0,0,0,.15);
+    padding:16px 20px;
 
 }
 
@@ -14360,13 +14609,13 @@ Premium Kart
 
     position:absolute;
 
-    top:12px;
+    top:25px;
 
-    right:15px;
+    right:22px;
 
-    width:30px;
+    width:20px;
 
-    height:30px;
+    height:20px;
 
     display:flex;
 
@@ -14399,16 +14648,13 @@ Premium Kart
 
 .settings-content h2{
 
-    text-align:center;
+    font-size:18px !important;
 
-    font-size:19px;
+    font-weight:700;
 
-    margin:5px 0 20px;
-
-    color:#1e293b;
+    margin:0 0 12px;
 
 }
-
 
 
 /* Input Areas */
@@ -14417,7 +14663,7 @@ Premium Kart
 
     width:100%;
 
-    margin-bottom:15px;
+    margin-bottom:10px;
 
 }
 
@@ -14425,7 +14671,7 @@ Premium Kart
 
 .setting-box label{
 
-    font-size:13px;
+    font-size:12px;
 
     font-weight:600;
 
@@ -14445,7 +14691,7 @@ Premium Kart
 
     box-sizing:border-box;
 
-    padding:11px 12px;
+    padding:8px 12px;
 
     border-radius:12px;
 
@@ -14453,7 +14699,7 @@ Premium Kart
 
     background:#f8fafc;
 
-    font-size:14px;
+    font-size:13px;
 
 }
 
@@ -14477,9 +14723,11 @@ Premium Kart
 
 #saveSettings{
 
-    width:100%;
+    width:50%;
 
-    padding:11px;
+    padding:9px;
+
+    margin-top:20px;
 
     border:none;
 
@@ -14516,6 +14764,655 @@ Premium Kart
 
     text-align:center;
 
-    margin-top:12px;
+    margin-top:8px;
+
+}
+
+
+#profileInitial{
+
+    width:100%;
+    height:100%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:42px;
+    font-weight:700;
+
+    color:white;
+
+}
+
+.profile-avatar{
+
+    position:relative;
+
+    width:120px;
+    height:120px;
+
+    border-radius:50%;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+}
+
+.avatar-camera{
+
+    position:absolute;
+
+    right:0;
+    bottom:0;
+
+    width:30px;
+    height:30px;
+
+    border-radius:50%;
+
+    background:#2563eb;
+
+    color:#fff;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:16px;
+
+    border:3px solid #fff;
+
+    transition:.3s;
+
+}
+
+.profile-avatar:hover .avatar-camera{
+
+    transform:scale(1.12);
+
+}
+
+/* =====================================
+   ACCOUNT SETTINGS MOBILE RESPONSIVE
+===================================== */
+
+@media(max-width:600px){
+
+
+    /* Settings Button */
+
+    .settings-btn{
+
+        position:static;
+
+        width:100%;
+
+        margin-top:15px;
+
+        padding:10px 12px;
+
+        font-size:13px;
+
+        border-radius:12px;
+
+    }
+
+
+
+    /* Modal */
+
+    .settings-modal{
+
+        padding:15px;
+
+    }
+
+
+
+    .settings-content{
+
+        width:100%;
+
+        max-width:330px;
+
+        padding:18px;
+
+        border-radius:18px;
+
+    }
+
+
+
+    /* Title */
+
+    .settings-content h2{
+
+        font-size:17px;
+
+        margin-bottom:18px;
+
+    }
+
+
+
+    /* Close Button */
+
+    .close-btn{
+
+        width:28px;
+
+        height:28px;
+
+        top:10px;
+
+        right:12px;
+
+        font-size:18px;
+
+    }
+
+
+
+    /* Inputs */
+
+    .setting-box{
+
+        margin-bottom:12px;
+
+    }
+
+
+    .setting-box label{
+
+        font-size:12px;
+
+    }
+
+
+    .setting-box input{
+
+        padding:10px;
+
+        font-size:13px;
+
+    }
+
+
+
+    /* Save Button */
+
+    #saveSettings{
+
+        padding:10px;
+
+        font-size:13px;
+
+    }
+
+
+
+    /* Profile Avatar */
+
+    .profile-avatar{
+
+        width:90px;
+
+        height:90px;
+
+    }
+
+
+
+    #profileInitial{
+
+        font-size:34px;
+
+    }
+
+
+
+    .avatar-camera{
+
+        width:30px;
+
+        height:30px;
+
+        font-size:13px;
+
+        border-width:2px;
+
+    }
+
+
+}
+
+
+/* Small Phones */
+
+@media(max-width:400px){
+
+
+    .settings-content{
+
+        max-width:300px;
+
+        padding:15px;
+
+    }
+
+
+    .settings-content h2{
+
+        font-size:16px;
+
+    }
+
+
+    .settings-btn{
+
+        font-size:12px;
+
+    }
+
+
+}
+
+
+/* ==========================================
+   STUDY PLAN NEW CARD
+========================================== */
+
+.study-plan-card{
+
+    background:#fff;
+    border-radius:18px;
+    padding:25px;
+    margin-top:30px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.study-plan-card h2{
+
+    margin-bottom:20px;
+
+    color:#1e3a8a;
+
+}
+
+.study-program-img{
+
+    width:70%;
+
+    display:block;
+
+    margin:0 auto;
+
+    border-radius:15px;
+
+}
+
+/* ==========================================
+   STUDY PLAN CARD RESPONSIVE
+========================================== */
+
+@media (max-width:768px){
+
+    .study-plan-card{
+
+        padding:20px;
+        margin-top:25px;
+        border-radius:16px;
+
+    }
+
+    .study-plan-card h2{
+
+        font-size:20px;
+        text-align:center;
+
+    }
+
+    .study-program-img{
+
+        width:100%;
+        max-width:100%;
+        border-radius:12px;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    .study-plan-card{
+
+        padding:15px;
+        margin-top:20px;
+
+    }
+
+    .study-plan-card h2{
+
+        font-size:18px;
+
+    }
+
+    .study-program-img{
+
+        width:100%;
+        border-radius:10px;
+
+    }
+
+}
+
+/* PROFILE CARD MODERN DESIGN */
+
+#profileCard{
+
+    border-radius:24px;
+
+    padding:30px;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.12);
+
+    transition:.3s ease;
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+
+/* FREE MEMBER */
+
+#profileCard.free{
+
+    background:linear-gradient(
+        135deg,
+        #34d399,
+        #059669
+    ) !important;
+
+}
+
+
+/* PREMIUM MEMBER */
+
+#profileCard.premium{
+
+    background:linear-gradient(
+        135deg,
+        #fde68a,
+        #f59e0b
+    ) !important;
+
+}
+
+
+/* LIGHT EFFECT */
+
+#profileCard::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:200px;
+    height:200px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.18);
+
+    top:-80px;
+    right:-80px;
+
+}
+
+
+/* TOP AREA */
+
+.profile-top{
+
+    position:relative;
+
+    z-index:2;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:25px;
+
+}
+
+
+/* AVATAR */
+
+.profile-avatar{
+
+    width:110px;
+    height:110px;
+
+    border-radius:50%;
+
+    border:4px solid rgba(255,255,255,.8);
+
+    box-shadow:
+    0 8px 20px rgba(0,0,0,.2);
+
+    overflow:hidden;
+
+}
+
+
+/* NAME */
+
+.profile-info h2{
+
+    font-size:28px;
+
+    font-weight:800;
+
+    color:white;
+
+}
+
+
+.profile-info p{
+
+    color:rgba(255,255,255,.9);
+
+}
+
+/* ===============================
+   HOME MEMBERSHIP CARD
+================================ */
+
+#memberCard{
+
+    transition:.3s ease;
+
+    color:white;
+
+}
+
+
+/* FREE */
+
+#memberCard.free{
+
+    background:linear-gradient(
+        135deg,
+        #34d399,
+        #059669
+    ) !important;
+
+}
+
+
+/* PREMIUM */
+
+#memberCard.premium{
+
+    background:linear-gradient(
+        135deg,
+        #fde68a,
+        #f59e0b
+    ) !important;
+
+}
+
+
+#memberCard:hover{
+
+    transform:translateY(-5px);
+
+}
+
+/* =====================================
+   PROFILE & MEMBERSHIP MOBILE
+===================================== */
+
+@media (max-width:768px){
+
+    /* Profile Card */
+
+    #profileCard{
+
+        padding:20px;
+
+        border-radius:20px;
+
+    }
+
+
+    #profileCard::before{
+
+        width:150px;
+        height:150px;
+
+        top:-60px;
+        right:-60px;
+
+    }
+
+
+    /* Profile Top */
+
+    .profile-top{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        gap:15px;
+
+    }
+
+
+    /* Avatar */
+
+    .profile-avatar{
+
+        width:90px;
+        height:90px;
+
+        border-width:3px;
+
+    }
+
+
+    /* Name */
+
+    .profile-info h2{
+
+        font-size:22px;
+
+    }
+
+
+    .profile-info p{
+
+        font-size:14px;
+
+    }
+
+
+    /* Membership Card */
+
+    #memberCard{
+
+        width:100%;
+
+        padding:20px;
+
+        border-radius:20px;
+
+    }
+
+}
+
+
+/* Small Phones */
+
+@media (max-width:480px){
+
+    #profileCard{
+
+        padding:18px;
+
+        border-radius:18px;
+
+    }
+
+
+    #profileCard::before{
+
+        width:120px;
+        height:120px;
+
+        top:-50px;
+        right:-50px;
+
+    }
+
+
+    .profile-avatar{
+
+        width:75px;
+        height:75px;
+
+    }
+
+
+    .profile-info h2{
+
+        font-size:20px;
+
+    }
+
+
+    .profile-info p{
+
+        font-size:13px;
+
+    }
+
+
+    #memberCard{
+
+        padding:18px;
+
+        border-radius:18px;
+
+    }
 
 }

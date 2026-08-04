@@ -82,9 +82,10 @@ async function loadUsers(){
     await getDocs(usersQuery);
 
 
-    document.getElementById("totalUsers").innerHTML =
-    usersSnapshot.size;
-
+    animateCounter(
+    document.getElementById("totalUsers"),
+    usersSnapshot.size
+);
 
     const table =
     document.getElementById("usersTable");
@@ -116,50 +117,51 @@ async function loadUsers(){
     <td>${user.email || "-"}</td>
 
 
-    <td>${user.role || "user"}</td>
+   <td>
+
+${
+user.role === "admin"
+
+?
+
+`<span class="badge badge-admin">
+👑 Admin
+</span>`
+
+:
+
+`<span class="badge badge-user">
+🟢 User
+</span>`
+
+}
+
+</td>
 
 
     <td>
 
 <div class="membership-area">
 
-<span>
+<span class="${
+user.membership === "premium"
+?
+"badge badge-premium"
+:
+"badge badge-free"
+}">
+
 ${
 user.membership === "premium"
-? "👑 Premium"
-: "🟢 Free"
+?
+"👑 Premium"
+:
+"🟢 Free"
 }
+
 </span>
 
-${
-user.role !== "admin"
 
-?
-
-user.membership === "premium"
-
-?
-
-`
-<button class="user-action-btn remove-btn"
-onclick="removePremium('${doc.id}')">
-❌Remove
-</button>
-`
-
-:
-
-`
-<button class="user-action-btn premium-btn"
-onclick="makePremium('${doc.id}')">
-👑Upgrade
-</button>
-`
-:
-
-""
-
-}
 
 </div>
 
@@ -238,8 +240,10 @@ async function loadTodayLogins(){
 
 
 
-    document.getElementById("todayLogins").innerHTML =
-    count;
+    animateCounter(
+    document.getElementById("todayLogins"),
+    count
+);
 
 
 }
@@ -320,8 +324,10 @@ async function loadPremiumUsers(){
     });
 
 
-    document.getElementById("premiumUsers").innerHTML =
-    count;
+    animateCounter(
+    document.getElementById("premiumUsers"),
+    count
+);
 
 
 }
@@ -352,8 +358,10 @@ async function loadFreeUsers(){
     });
 
 
-    document.getElementById("freeUsers").innerHTML =
-    count;
+    animateCounter(
+    document.getElementById("freeUsers"),
+    count
+);
 
 
 }
@@ -484,8 +492,10 @@ async function loadMessages(){
     container.innerHTML="";
 
 
-    document.getElementById("totalMessages").innerHTML =
-    snapshot.size;
+    animateCounter(
+    document.getElementById("totalMessages"),
+    snapshot.size
+);
 
 
     if(snapshot.empty){
@@ -598,5 +608,40 @@ window.deleteMessage = async function(id){
     await deleteDoc(doc(db,"messages",id));
 
     loadMessages();
+
+}
+
+// =======================================
+// COUNTER ANIMATION
+// =======================================
+
+function animateCounter(element, target) {
+
+    let start = 0;
+    const duration = 1200;
+    const startTime = performance.now();
+
+    function update(currentTime) {
+
+        const progress = Math.min(
+            (currentTime - startTime) / duration,
+            1
+        );
+
+        element.textContent = Math.floor(progress * target);
+
+        if (progress < 1) {
+
+            requestAnimationFrame(update);
+
+        } else {
+
+            element.textContent = target;
+
+        }
+
+    }
+
+    requestAnimationFrame(update);
 
 }

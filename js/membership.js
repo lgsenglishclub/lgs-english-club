@@ -25,6 +25,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const status = document.getElementById("premiumStatus");
 
+    // Membership card renk değiştirme
+
+if(memberCard){
+
+    if(membership === "premium" || role === "admin"){
+
+        memberCard.classList.remove("free");
+
+        memberCard.classList.add("premium");
+
+    }
+    else{
+
+        memberCard.classList.remove("premium");
+
+        memberCard.classList.add("free");
+
+    }
+
+}
+
 
     // SENİN MEVCUT PREMIUM KODLARIN BURADAN DEVAM ETSİN
 
@@ -40,7 +61,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
     console.log("Membership:", membership);
 
+    const memberCard = document.getElementById("memberCard");
+
     if (!badge) return;
+
+    if(memberCard){
+
+    if(membership === "premium"){
+
+        memberCard.classList.remove("free");
+        memberCard.classList.add("premium");
+
+    }
+    else{
+
+        memberCard.classList.remove("premium");
+        memberCard.classList.add("free");
+
+    }
+
+}
 
     if (membership === "premium") {
 
@@ -49,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if(text){
             text.innerHTML =
-            "Thank you for supporting LGS English Club ❤️";
+            "Thank you for supporting❤️";
         }
 
         if(button){

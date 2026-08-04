@@ -2,11 +2,13 @@ import { auth, db } from "../firebase.js";
 
 import {
     doc,
+    getDoc,
     updateDoc
 } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js";
 
 import {
-    updatePassword
+    updatePassword,
+    onAuthStateChanged
 } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-auth.js";
 
 const recentTests =
@@ -602,3 +604,164 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
+
+
+const savePhoto = document.getElementById("savePhoto");
+
+if (savePhoto) {
+
+    savePhoto.addEventListener("click", () => {
+
+        const file = document.getElementById("photoInput").files[0];
+
+        if (!file) {
+            alert("Please select a photo.");
+            return;
+        }
+
+        const reader = new FileReader();
+
+        reader.onload = function (event) {
+
+            const img = new Image();
+
+            img.onload = async function () {
+
+                const canvas = document.createElement("canvas");
+                const ctx = canvas.getContext("2d");
+
+                const size = 200;
+
+                canvas.width = size;
+                canvas.height = size;
+
+                ctx.drawImage(img, 0, 0, size, size);
+
+                const base64 = canvas.toDataURL("image/jpeg", 0.8);
+
+                try {
+
+                    const user = auth.currentUser;
+
+                    await updateDoc(
+                        doc(db, "users", user.uid),
+                        {
+                            photoData: base64
+                        }
+                    );
+
+                    profilePhoto.src = base64;
+                    profilePhoto.style.display = "block";
+                    profileInitial.style.display = "none";
+
+                    alert("✅ Profile photo updated!");
+
+                } catch (error) {
+
+                    console.error(error);
+                    alert(error.message);
+
+                }
+
+            };
+
+            img.src = event.target.result;
+
+        };
+
+        reader.readAsDataURL(file);
+
+    });
+
+}
+
+const avatarBox = document.getElementById("avatarBox");
+const photoInput = document.getElementById("photoInput");
+
+if (avatarBox && photoInput) {
+
+    avatarBox.addEventListener("click", () => {
+        photoInput.click();
+    });
+
+    photoInput.addEventListener("change", () => {
+        savePhoto.click();
+    });
+
+}
+
+// ===============================
+// PROFILE PHOTO & USER INFO
+// ===============================
+
+const profilePhoto = document.getElementById("profilePhoto");
+const profileInitial = document.getElementById("profileInitial");
+const profileName = document.getElementById("profileName");
+
+onAuthStateChanged(auth, async (user) => {
+
+    if (!user) return;
+
+    console.log("PROFILE USER:", user.email);
+
+    try {
+
+        const userRef = doc(db, "users", user.uid);
+        const snap = await getDoc(userRef);
+
+        if (!snap.exists()) return;
+
+        const userData = snap.data();
+
+console.log("FIREBASE USER:", userData);
+
+        const profileCard = document.getElementById("profileCard");
+
+
+if(userData.membership === "premium"){
+
+    profileCard.classList.add("premium");
+
+}
+else if(userData.role === "admin"){
+
+    profileCard.classList.add("admin");
+
+}
+else{
+
+    profileCard.classList.add("free");
+
+}
+
+        // Kullanıcı adı
+        if (profileName) {
+            profileName.textContent = userData.name || "Student";
+        }
+
+        // Profil fotoğrafı
+        if (userData.photoData) {
+
+            profilePhoto.src = userData.photoData;
+            profilePhoto.style.display = "block";
+            profileInitial.style.display = "none";
+
+        } else {
+
+            profilePhoto.style.display = "none";
+            profileInitial.style.display = "flex";
+            profileInitial.textContent =
+                (userData.name || user.email).charAt(0).toUpperCase();
+
+        }
+
+    } catch (error) {
+
+        console.error("Profile loading error:", error);
+
+    }
+
+});
+
+
+

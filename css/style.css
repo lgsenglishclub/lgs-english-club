@@ -1642,11 +1642,11 @@ button:hover {
     }
 
     .dashboard-card{
-        padding:20px;
+        padding:15px;
     }
 
     .dashboard-card h2{
-        font-size:22px;
+        font-size:24px;
     }
 
     .progress-bar{
@@ -5309,7 +5309,7 @@ font-size:0;
     }
 
     .daily-word-card button{
-        width:100%;
+        width:80%;
     }
 
     .unit-header{
@@ -7117,7 +7117,7 @@ font-size:0;
 
     .listen-btn,
     .learn-btn{
-        width:100%;
+        width:50%;
         font-size:12px;
         padding:10px;
     }

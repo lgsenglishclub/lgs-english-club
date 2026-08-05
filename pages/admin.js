@@ -474,142 +474,142 @@ window.viewMessage = function(id){
 
 }
 
-async function loadMessages(){
 
-    const snapshot =
-    await getDocs(
+async function loadMessages() {
+
+    const snapshot = await getDocs(
         query(
-            collection(db,"messages"),
-            orderBy("createdAt","desc")
+            collection(db, "messages"),
+            orderBy("createdAt", "desc")
         )
     );
 
+    const container = document.getElementById("messageList");
+    const preview = document.getElementById("messagePreview");
 
-    const container =
-    document.getElementById("messages");
+    container.innerHTML = "";
 
+    animateCounter(document.getElementById("totalMessages"), snapshot.size);
 
-    container.innerHTML="";
+    document.getElementById("messageCount").textContent =
+        `${snapshot.size} Messages`;
 
+    if (snapshot.empty) {
 
-    animateCounter(
-    document.getElementById("totalMessages"),
-    snapshot.size
-);
-
-
-    if(snapshot.empty){
-
-        container.innerHTML="No messages yet.";
+        container.innerHTML = "<p>No messages yet.</p>";
 
         return;
 
     }
 
 
-    snapshot.forEach((doc)=>{
+    
+    snapshot.forEach((docSnap) => {
 
-        const message = doc.data();
+        const message = docSnap.data();
 
+        const card = document.createElement("div");
+        card.className = "message-card";
 
-        container.innerHTML += `
+        card.innerHTML = `
 
-        <div class="message-card">
+    <div class="message-header">
 
+        <div class="message-user">
 
-            <div class="message-header">
-
-                <h3>
-                👤 ${message.name || "-"}
-                </h3>
-
-
-                <span class="message-status">
-
-                ${
-                message.status === "replied"
-                ?
-                "✅ Replied"
-                :
-                "🟢 New"
-                }
-
-                </span>
-
+            <div class="message-avatar">
+                ${(message.name || "?").charAt(0).toUpperCase()}
             </div>
 
+            <div>
 
+                <h3>${message.name || "-"}</h3>
 
-            <p>
-            📧 ${message.email || "-"}
-            </p>
-
-
-
-            <p>
-            📝 ${message.subject || "No Subject"}
-            </p>
-
-
-
-            <small>
-
-            ${
-            message.createdAt
-            ?
-            message.createdAt.toDate().toLocaleString()
-            :
-            "-"
-            }
-
-            </small>
-
-
-
-            <div class="message-buttons">
-
-
-                <button
-                class="view-message-btn"
-                onclick="viewMessage('${doc.id}')">
-
-                👁 View
-
-                </button>
-
-
-
-                <button
-                class="delete-message-btn"
-                onclick="deleteMessage('${doc.id}')">
-
-                🗑 Delete
-
-                </button>
-
+                <small>${message.email || "-"}</small>
 
             </div>
-
 
         </div>
 
-        `;
+
+        <span class="message-status">
+            ${
+                message.status === "replied"
+                ? "✅ Replied"
+                : "🟢 New"
+            }
+        </span>
+
+
+    </div>
+
+
+    <div class="message-details">
+
+        <p class="message-subject">
+            ${message.subject || "No Subject"}
+        </p>
+
+
+        <small class="message-date">
+
+            ${
+                message.createdAt
+                ? message.createdAt.toDate().toLocaleString()
+                : "-"
+            }
+
+        </small>
+
+    </div>
+
+`;
+
+    card.addEventListener("click", () => {
+
+    window.location.href = `admin-message.html?id=${docSnap.id}`;
+
+});
+
+   
+   container.appendChild(card);
+
+   });
+
+   }
+
+document
+.getElementById("searchMessages")
+.addEventListener("input", function(){
+
+    const searchValue = this.value.toLowerCase();
+
+
+    document
+    .querySelectorAll(".message-card")
+    .forEach(card => {
+
+
+        const cardText = card.innerText.toLowerCase();
+
+
+        if(cardText.includes(searchValue)){
+
+            card.style.display = "block";
+
+        }
+        else{
+
+            card.style.display = "none";
+
+        }
 
 
     });
 
-}
 
-window.deleteMessage = async function(id){
+});
 
-    if(!confirm("Delete this message?"))
-    return;
-
-    await deleteDoc(doc(db,"messages",id));
-
-    loadMessages();
-
-}
 
 // =======================================
 // COUNTER ANIMATION

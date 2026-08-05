@@ -166,15 +166,43 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 </section>
 
 
-<section class="admin-section">
+<section class="messages-panel">
 
-<h2>📬 Contact Messages</h2>
+    <div class="messages-list">
 
-<div id="messages">
-
-No messages yet.
+        <div class="search-area">
 
 </div>
+
+        <div class="messages-toolbar">
+
+            <h2>
+                <i class="fa-solid fa-envelope"></i>
+                Contact Messages
+            </h2>
+
+ <div class="search-box">
+
+    <input 
+id="searchMessages"
+type="text" 
+placeholder="🔍 Search users...">
+
+</div>
+
+            <span class="message-count" id="messageCount">
+                0 Messages
+            </span>
+
+        </div>
+
+       
+
+        <div id="messageList"></div>
+        
+
+    </div>
+
 
 </section>
 

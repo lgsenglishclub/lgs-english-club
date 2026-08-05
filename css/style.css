@@ -12420,7 +12420,7 @@ line-height:1.6;
 
     .lgs-box,
     .info-box{
-        width:220px;
+        width:240px;
         height:auto;
         padding:20px;
     }
@@ -13485,7 +13485,7 @@ iframe{
 
 .membership-card{
     position:static;
-    width:90%;
+    width:70%;
     max-width:320px;
     margin:20px auto;
     left:auto;

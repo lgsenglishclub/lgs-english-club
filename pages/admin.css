@@ -183,31 +183,23 @@
 }
 
 
-  @media (max-width:768px){
+ @media (max-width:768px){
 
     .admin-section{
         width:100%;
-        max-width:calc(100% - 30px);
+        max-width:100%;
         margin:20px auto;
         padding:18px;
-        border-radius:15px;
         box-sizing:border-box;
     }
 
-    .admin-section h2{
-        font-size:20px;
-        margin-bottom:15px;
-    }
-
     .admin-table{
-
+        width:100%;
         display:block;
-
         overflow-x:auto;
-
-        white-space:nowrap;
-
+        -webkit-overflow-scrolling:touch;
     }
+
 
 
     .admin-table th,
@@ -219,7 +211,7 @@
 
     }
 
-
+    
     #latestTests,
     #messages{
 

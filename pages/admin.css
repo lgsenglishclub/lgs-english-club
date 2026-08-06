@@ -586,7 +586,7 @@ button[onclick="removePremium"] {
 
     .users-table-wrapper{
 
-        max-height:150px;   /* Yaklaşık 3 kullanıcı */
+        max-height:250px;   /* Yaklaşık 3 kullanıcı */
         overflow-y:auto;
         overflow-x:auto;
 
@@ -3214,7 +3214,10 @@ button[onclick="removePremium"] {
     #messageList{
 
         display:grid;
+
         grid-template-columns:1fr;
+
+        grid-auto-rows:max-content;
 
         gap:12px;
 
@@ -3225,10 +3228,15 @@ button[onclick="removePremium"] {
 
         padding:0 10px;
 
-        min-height:0;
-
     }
 
+
+    .message-card{
+
+        min-height:150px;
+
+    }
+    
 
     #messageList::-webkit-scrollbar{
         width:6px;

@@ -1,4 +1,4 @@
-import { db } from "../firebase.js";
+import { auth, db } from "../firebase-config.js";
 
 let message = null;
 

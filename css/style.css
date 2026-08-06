@@ -15558,11 +15558,3 @@ body{
     max-width:100%;
     overflow-x:hidden;
 }
-
-@media (max-width:768px){
-
-    .profile-title img{
-        display: none;
-    }
-
-}

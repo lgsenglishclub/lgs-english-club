@@ -3285,7 +3285,10 @@ button[onclick="removePremium"] {
 
 .message-card{
 
-    margin:15px 15px 15px;
+    margin:0;
+
+    width:100%;
+    box-sizing:border-box;
 
     padding:20px;
 
@@ -3468,171 +3471,6 @@ button[onclick="removePremium"] {
 
 }
 
-/* =====================================
-   MESSAGE CARDS RESPONSIVE
-===================================== */
-
- @media(max-width:600px){
-
-    .message-card{
-
-        display:flex;
-        flex-direction:column;
-        align-items:flex-start;
-
-    }
-
-    .message-header{
-
-        width:100%;
-
-    }
-
-    .message-details{
-
-        width:100%;
-        margin-top:10px;
-        align-items:flex-start;
-
-    }
-
-    .message-subject{
-
-        white-space:normal;
-        overflow:visible;
-        text-overflow:unset;
-        word-break:break-word;
-        text-align:left;
-
-    }
-
-    .message-date{
-
-        margin-top:4px;
-        text-align:left;
-
-    }
-
-
-    .message-user{
-
-        gap:12px;
-
-        min-width:0;
-
-    }
-
-
-
-    .message-avatar{
-
-        width:48px;
-
-        height:48px;
-
-        font-size:18px;
-
-    }
-
-
-
-    .message-user h3{
-
-        font-size:15px;
-
-        max-width:160px;
-
-        overflow:hidden;
-
-        text-overflow:ellipsis;
-
-        white-space:nowrap;
-
-    }
-
-
-    .message-user small{
-
-        display:block;
-
-        max-width:160px;
-
-        overflow:hidden;
-
-        text-overflow:ellipsis;
-
-        white-space:nowrap;
-
-        font-size:12px;
-
-    }
-
-
-    .message-status{
-
-        padding:3px 8px;
-
-        height:22px;
-
-        font-size:10px;
-
-    }
-
-
-}
-
-
-@media(max-width:400px){
-
-
-    .message-card{
-
-        padding:15px;
-
-    }
-
-
-
-    .message-avatar{
-
-        width:42px;
-
-        height:42px;
-
-        font-size:16px;
-
-    }
-
-
-
-    .message-user h3{
-
-        max-width:120px;
-
-        font-size:14px;
-
-    }
-
-
-
-    .message-user small{
-
-        max-width:120px;
-
-    }
-
-
-
-    .message-status{
-
-        padding:3px 7px;
-
-        font-size:9px;
-
-    }
-
-    }
-
 #messageList{
 
     display:grid;
@@ -3645,28 +3483,108 @@ button[onclick="removePremium"] {
 
 }
 
-@media (max-width: 1200px){
+/* =====================================
+   MESSAGE CARDS RESPONSIVE
+===================================== */
 
-    #messageList {
-        grid-template-columns: repeat(3, 1fr);
+@media (max-width:1200px){
+
+    #messageList{
+        grid-template-columns:repeat(3,1fr);
+        gap:15px;
+        padding:0 15px;
+        justify-content:stretch;
     }
 
 }
 
+@media (max-width:900px){
 
-@media (max-width: 800px){
-
-    #messageList {
-        grid-template-columns: repeat(2, 1fr);
+    #messageList{
+        grid-template-columns:repeat(2,1fr);
     }
 
 }
 
+@media (max-width:600px){
 
-@media (max-width: 500px){
+    #messageList{
 
-    #messageList {
-        grid-template-columns: 1fr;
+        grid-template-columns:1fr;
+        padding:0 10px;
+        gap:12px;
+
+    }
+
+    .message-card{
+
+        width:100%;
+        margin:0;
+        padding:18px;
+        border-radius:16px;
+        gap:12px;
+
+    }
+
+    .message-header{
+
+        gap:8px;
+        align-items:flex-start;
+
+    }
+
+    .message-user{
+
+        gap:12px;
+        min-width:0;
+
+    }
+
+    .message-avatar{
+
+        width:50px;
+        height:50px;
+        font-size:18px;
+
+    }
+
+    .message-user h3{
+
+        font-size:15px;
+        white-space:nowrap;
+        overflow:hidden;
+        text-overflow:ellipsis;
+
+    }
+
+    .message-user small{
+
+        display:block;
+        max-width:180px;
+        white-space:nowrap;
+        overflow:hidden;
+        text-overflow:ellipsis;
+
+    }
+
+    .message-status{
+
+        font-size:10px;
+        padding:3px 8px;
+        height:22px;
+
+    }
+
+    .message-subject{
+
+        font-size:14px;
+
+    }
+
+    .message-date{
+
+        font-size:10px;
+
     }
 
 }

@@ -586,7 +586,7 @@ button[onclick="removePremium"] {
 
     .users-table-wrapper{
 
-        max-height:220px;   /* Yaklaşık 3 kullanıcı */
+        max-height:150px;   /* Yaklaşık 3 kullanıcı */
         overflow-y:auto;
         overflow-x:auto;
 
@@ -2657,6 +2657,12 @@ button[onclick="removePremium"] {
 
 }
 
+#messageList{
+
+    min-height:0;
+
+}
+
 /* =====================================
    CONTACT PANEL RESPONSIVE
 ===================================== */
@@ -3209,34 +3215,33 @@ button[onclick="removePremium"] {
 
         display:flex;
         flex-direction:column;
+
         gap:12px;
 
-        max-height:500px;   /* Yaklaşık 3 mesaj */
+        height:430px;
         overflow-y:auto;
         overflow-x:hidden;
 
         padding:0 10px;
 
         -webkit-overflow-scrolling:touch;
+
     }
 
 
+    #messageList::-webkit-scrollbar{
+        width:6px;
+    }
 
-#messageList::-webkit-scrollbar{
-    width:6px;
-}
+    #messageList::-webkit-scrollbar-thumb{
+        background:#cbd5e1;
+        border-radius:20px;
+    }
 
-#messageList::-webkit-scrollbar-thumb{
-    background:#cbd5e1;
-    border-radius:20px;
-}
+    #messageList::-webkit-scrollbar-track{
+        background:transparent;
+    }
 
-#messageList::-webkit-scrollbar-thumb:hover{
-    background:#94a3b8;
-}
-
-#messageList::-webkit-scrollbar-track{
-    background:transparent;
 }
 
     .message-card{
@@ -3310,4 +3315,3 @@ button[onclick="removePremium"] {
 
     }
 
-}

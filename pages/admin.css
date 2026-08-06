@@ -449,6 +449,47 @@ button[onclick="removePremium"] {
 
 }
 
+.users-table-wrapper{
+
+    max-height:260px;
+    overflow-y:auto;
+    overflow-x:auto;
+
+    border-radius:16px;
+
+}
+
+.admin-table thead th{
+
+    position:sticky;
+    top:0;
+
+    background:#fff;
+
+    z-index:10;
+
+}
+
+.users-table-wrapper::-webkit-scrollbar{
+
+    width:7px;
+    height:7px;
+
+}
+
+.users-table-wrapper::-webkit-scrollbar-thumb{
+
+    background:#cbd5e1;
+    border-radius:20px;
+
+}
+
+.users-table-wrapper::-webkit-scrollbar-thumb:hover{
+
+    background:#94a3b8;
+
+}
+
 @media(max-width:600px){
 
     .user-action-btn,
@@ -540,6 +581,27 @@ button[onclick="removePremium"] {
         width:auto;
 
     }
+
+    @media (max-width:768px){
+
+    .users-table-wrapper{
+
+        max-height:220px;   /* Yaklaşık 3 kullanıcı */
+        overflow-y:auto;
+        overflow-x:auto;
+
+        -webkit-overflow-scrolling:touch;
+
+    }
+
+}
+
+.admin-table thead th{
+    position:sticky;
+    top:0;
+    background:#fff;
+    z-index:10;
+}
 
 
 }
@@ -3110,13 +3172,31 @@ button[onclick="removePremium"] {
 #messageList{
 
     display:grid;
-
     grid-template-columns:repeat(4, 380px);
 
     gap:15px;
 
     justify-content:center;
 
+    max-height:320px;   /* Yaklaşık 3 satır */
+    overflow-y:auto;
+    overflow-x:hidden;
+
+    padding-right:8px;
+
+}
+
+#messageList::-webkit-scrollbar{
+    width:8px;
+}
+
+#messageList::-webkit-scrollbar-thumb{
+    background:#cbd5e1;
+    border-radius:20px;
+}
+
+#messageList::-webkit-scrollbar-thumb:hover{
+    background:#94a3b8;
 }
 
 /* =====================================
@@ -3127,17 +3207,20 @@ button[onclick="removePremium"] {
 
     #messageList{
 
-    display:flex;
-    flex-direction:column;
-    gap:12px;
+        display:flex;
+        flex-direction:column;
+        gap:12px;
 
-    max-height:380px;
-    overflow-y:auto;
-    overflow-x:hidden;
+        max-height:500px;   /* Yaklaşık 3 mesaj */
+        overflow-y:auto;
+        overflow-x:hidden;
 
-    -webkit-overflow-scrolling:touch;
+        padding:0 10px;
 
-}
+        -webkit-overflow-scrolling:touch;
+    }
+
+
 
 #messageList::-webkit-scrollbar{
     width:6px;

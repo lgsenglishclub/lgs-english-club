@@ -763,5 +763,26 @@ else{
 
 });
 
+function openStudyProgram() {
+
+    if(window.innerWidth <= 768){
+
+        document
+        .getElementById("studyModal")
+        .classList.add("show");
+
+    }
+
+}
+
+
+function closeStudyProgram() {
+
+    document
+    .getElementById("studyModal")
+    .classList.remove("show");
+
+}
+
 
 

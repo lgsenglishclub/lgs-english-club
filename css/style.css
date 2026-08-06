@@ -13982,7 +13982,7 @@ Premium Kart
 
     position:absolute;
 
-    top:182px;
+    top:95px;
 
     left:766px;
 
@@ -15527,4 +15527,83 @@ body{
     width:100%;
     max-width:100%;
     overflow-x:hidden;
+}
+
+
+/* WEEKLY STUDY PROGRAM */
+
+.study-program-img{
+    width:100%;
+    max-width:1500px;
+    height:auto;
+    border-radius:16px;
+    cursor:default;
+    display:block;
+    margin:auto;
+}
+
+
+/* Sadece mobilde aktif olacak */
+@media(max-width:768px){
+
+    .study-program-img{
+        cursor:pointer;
+    }
+
+}
+
+
+.study-modal{
+
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.9);
+
+    z-index:9999;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:15px;
+
+}
+
+
+.study-modal.show{
+
+    display:flex;
+
+}
+
+
+.study-modal-img{
+
+    max-width:95%;
+
+    max-height:95%;
+
+    object-fit:contain;
+
+}
+
+
+.study-close{
+
+    position:absolute;
+
+    top:15px;
+
+    right:25px;
+
+    color:white;
+
+    font-size:40px;
+
+    cursor:pointer;
+
 }

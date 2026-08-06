@@ -13814,6 +13814,14 @@ iframe{
     margin:0;
 }
 
+@media (max-width:768px){
+
+    .profile-title img{
+        display: none;
+    }
+
+}
+
 }
 
 /*========================== 

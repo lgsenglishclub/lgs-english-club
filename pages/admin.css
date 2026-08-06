@@ -143,17 +143,22 @@
 }
 
 
-.admin-section {
+.admin-section{
 
-    background:white;
+    background:#fff;
 
-    margin:30px 40px;
+    max-width:1800px;
+    width:100%;
+
+    margin:30px auto;
 
     padding:25px;
 
     border-radius:20px;
 
-    box-shadow:0 8px 20px rgba(0,0,0,0.10);
+    box-shadow:0 8px 20px rgba(0,0,0,.10);
+
+    box-sizing:border-box;
 
 }
 
@@ -2580,25 +2585,15 @@ button[onclick="removePremium"] {
 
 }
 
-
-
 .messages-panel{
-
-    margin-top:40px;
-
-    width:1800px;
-
-    margin-left:auto;
-    margin-right:auto;
+    margin:40px auto 0;
+    width:100%;
+    max-width:1800px;
 
     display:grid;
-
     gap:25px;
-
     align-items:start;
-
 }
-
 
 .messages-list,
 .message-preview{

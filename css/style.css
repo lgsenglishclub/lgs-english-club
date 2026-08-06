@@ -1572,7 +1572,7 @@ button:hover {
 @media (max-width:1024px){
 
     .dashboard{
-        width:95%;
+        width:90%;
         padding:50px 15px;
         box-sizing:border-box;
     }
@@ -13615,7 +13615,7 @@ iframe{
 
 .membership-card{
     position:static;
-    width:70%;
+    width:90%;
     max-width:240px;
     margin:20px auto;
     left:auto;

@@ -1595,7 +1595,7 @@ button:hover {
     }
 
     .dashboard-card{
-        padding:28px;
+        padding:25px;
     }
 
 }
@@ -1857,7 +1857,7 @@ nav a{
 
 .dashboard-card{
 
-    padding:25px 15px;
+    padding:22px 15px;
 
 }
 
@@ -3576,7 +3576,7 @@ button{
 @media (max-width:768px){
 
     .dashboard-card{
-        width:100%;
+        width:90%;
         max-width:100%;
         margin:20px auto;
         padding:15px ;
@@ -12866,122 +12866,6 @@ line-height:1.6;
 }
 
 
-/* ================= FOOTER ================= */
-
-.footer{
-    background:#0F172A;
-    color:white;
-    text-align:center;
-    padding:60px 20px 25px;
-    margin-top:80px;
-}
-
-.footer-logo img{
-    width:90px;
-    height:90px;
-    border-radius:50%;
-    object-fit:cover;
-    transition:.3s;
-}
-
-.footer-logo img:hover{
-    transform:scale(1.08);
-}
-
-.footer h2{
-    margin:18px 0 8px;
-    font-size:30px;
-}
-
-.footer-slogan{
-    color:#CBD5E1;
-    font-size:17px;
-    margin-bottom:35px;
-}
-
-.footer-links{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:28px;
-    margin-bottom:35px;
-}
-
-.footer-links a{
-    color:white;
-    text-decoration:none;
-    font-weight:600;
-    transition:.3s;
-    margin-left: 0px;
-}
-
-
-.footer-links a:hover{
-    color:#3B82F6;
-}
-
-.footer-social{
-    display:flex;
-    justify-content:center;
-    gap:25px;
-    margin-bottom:35px;
-}
-
-.footer-social img{
-    width:30px;
-    height:30px;
-    border-radius:50%;
-    background:white;
-    padding:8px;
-    transition:.3s;
-}
-
-.footer-social img:hover{
-    transform:translateY(-5px);
-}
-
-.footer-bottom{
-    border-top:1px solid rgba(255,255,255,.15);
-    padding-top:20px;
-    color:#94A3B8;
-    font-size:15px;
-}
-
-.footer{
-
-    border-top:4px solid #3B82F6;
-
-}
-
-.footer-teacher{
-
-    margin:10px auto;
-    text-align:center;
-
-}
-
-
-.footer-teacher h3{
-
-    font-size:18px;
-
-}
-
-
-.footer-teacher p{
-
-    font-size:14px;
-
-}
-
-
-.footer-teacher span{
-
-    font-size:3px;
-    color:#64748b;
-
-}
-
 /* ================= MOBILE RESPONSIVE ================= */
 
 @media (max-width:768px){
@@ -13139,20 +13023,6 @@ iframe{
 /* Tenses */
 .tenses-page{
     grid-template-columns:1fr;
-}
-
-/* Footer */
-.footer{
-    padding:40px 15px 20px;
-}
-
-.footer-links{
-    flex-direction:column;
-    gap:12px;
-}
-
-.footer-social{
-    gap:15px;
 }
 
 /* Countdown */
@@ -14385,6 +14255,7 @@ Premium Kart
     margin-top:20px;
 
 }
+
 
 .footer-social a img{
 

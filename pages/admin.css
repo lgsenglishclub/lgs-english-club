@@ -3213,18 +3213,19 @@ button[onclick="removePremium"] {
 
     #messageList{
 
-        display:flex;
-        flex-direction:column;
+        display:grid;
+        grid-template-columns:1fr;
 
         gap:12px;
 
-        height:430px;
+        height:320px;
+
         overflow-y:auto;
         overflow-x:hidden;
 
         padding:0 10px;
 
-        -webkit-overflow-scrolling:touch;
+        min-height:0;
 
     }
 

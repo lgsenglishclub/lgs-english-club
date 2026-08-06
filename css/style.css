@@ -3579,12 +3579,15 @@ button{
         width:100%;
         max-width:100%;
         margin:20px auto;
-        padding:20px 15px;
+        padding:15px ;
         box-sizing:border-box;
         overflow:hidden;
     }
 
      .vocabulary-title{
+        width:100%;
+        max-width:100%;
+        box-sizing:border-box;
         margin-top:0;
         padding:0 15px;
     }

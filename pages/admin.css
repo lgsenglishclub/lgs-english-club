@@ -3472,30 +3472,46 @@ button[onclick="removePremium"] {
    MESSAGE CARDS RESPONSIVE
 ===================================== */
 
-
-@media(max-width:600px){
-
+ @media(max-width:600px){
 
     .message-card{
 
-        margin:0 10px 12px;
-
-        padding:18px;
-
-        border-radius:16px;
-
-        gap:12px;
+        display:flex;
+        flex-direction:column;
+        align-items:flex-start;
 
     }
-
-
 
     .message-header{
 
-        gap:8px;
+        width:100%;
 
     }
 
+    .message-details{
+
+        width:100%;
+        margin-top:10px;
+        align-items:flex-start;
+
+    }
+
+    .message-subject{
+
+        white-space:normal;
+        overflow:visible;
+        text-overflow:unset;
+        word-break:break-word;
+        text-align:left;
+
+    }
+
+    .message-date{
+
+        margin-top:4px;
+        text-align:left;
+
+    }
 
 
     .message-user{
@@ -3535,7 +3551,6 @@ button[onclick="removePremium"] {
     }
 
 
-
     .message-user small{
 
         display:block;
@@ -3553,7 +3568,6 @@ button[onclick="removePremium"] {
     }
 
 
-
     .message-status{
 
         padding:3px 8px;
@@ -3565,39 +3579,7 @@ button[onclick="removePremium"] {
     }
 
 
-
-    .message-details{
-
-        gap:5px;
-
-    }
-
-
-
-    .message-subject{
-
-        font-size:14px;
-
-        overflow:hidden;
-
-        text-overflow:ellipsis;
-
-        white-space:nowrap;
-
-    }
-
-
-
-    .message-date{
-
-        font-size:11px;
-
-    }
-
-
 }
-
-
 
 
 @media(max-width:400px){

@@ -184,24 +184,22 @@
 
 @media(max-width:600px){
 
+   @media (max-width:768px){
+
     .admin-section{
-
-        margin:20px 15px;
-
+        width:calc(100% - 30px);
+        margin:20px auto;
         padding:18px;
-
         border-radius:15px;
-
+        box-sizing:border-box;
     }
-
 
     .admin-section h2{
-
         font-size:20px;
-
         margin-bottom:15px;
-
     }
+
+}
 
 
     .admin-table{
@@ -2695,9 +2693,11 @@ button[onclick="removePremium"] {
 
     .search-box input{
 
-        font-size:14px;
+        max-width:100%;
 
-        padding:13px 0;
+        padding:11px 14px;
+
+        font-size:13px;
 
     }
 
@@ -2854,25 +2854,11 @@ button[onclick="removePremium"] {
 
 .search-box{
 
-    width:200px;
-
-    height:30px;
-
-    margin:20px auto;
-
     display:flex;
 
-    align-items:center;
+    justify-content:center;
 
-    position:relative;
-
-    border:1px solid #ddd;
-
-    border-radius:12px;
-
-    background:white;
-
-    overflow:hidden;
+    margin-bottom:20px;
 
 }
 
@@ -2892,29 +2878,22 @@ button[onclick="removePremium"] {
 
 .search-box input{
 
-    width:100%;
+    width:200px;
 
-    height:42px;
+    padding:10px 15px;
 
-    padding:0 18px;
+    border:none;
 
-    border:1px solid #ddd;
+    border-radius:14px;
 
-    border-radius:12px;
+    background:#f8fafc;
 
-    background:#fff;
+    font-size:15px;
 
-    font-size:14px;
+    box-shadow:0 6px 18px rgba(0,0,0,.08);
 
-    color:#333;
+    transition:.3s;
 
-    outline:none;
-
-    transition:all 0.3s ease;
-
-    box-shadow:0 3px 10px rgba(0,0,0,0.05);
-
-    
 }
 
 /* Üzerine gelince */
@@ -2937,31 +2916,12 @@ button[onclick="removePremium"] {
 
 .search-box input:focus{
 
-    border-color:#6c63ff;
+    outline:none;
 
-    background:#ffffff;
+    background:#fff;
 
-    transform:translateY(-2px);
+    box-shadow:0 0 0 4px rgba(37,99,235,.15);
 
-    box-shadow:
-    0 0 0 4px rgba(108,99,255,0.12),
-    0 8px 20px rgba(108,99,255,0.18);
-
-}
-
-.search-box{
-    flex:1;
-    width:100%;
-    min-width:0;
-}
-
-.search-box input{
-    width:100%;
-    height:48px;
-    padding:0 16px;
-    border:1px solid #dbe4f0;
-    border-radius:12px;
-    box-sizing:border-box;
 }
 
 

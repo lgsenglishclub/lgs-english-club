@@ -11342,56 +11342,81 @@ line-height:1.6;
     }
 
     .recent-tests-grid{
-        grid-template-columns:repeat(2, 1fr);
-        gap:10px;
+
+        display:grid;
+        grid-template-columns:repeat(2, minmax(0,1fr));
+        gap:12px;
+
     }
 
     .test-card{
-        width:90%;
+
+        width:100%;
+        min-width:0;
         height:auto;
         min-height:200px;
-        padding:15px;
+        padding:14px;
+        box-sizing:border-box;
+
     }
 
     .test-card h3{
+
         font-size:14px;
         min-height:auto;
+
     }
 
     .test-percent{
-        width:50px;
-        height:50px;
+
+        width:48px;
+        height:48px;
         font-size:15px;
+
     }
 
     .test-date{
+
         font-size:12px;
+
     }
 
     .test-info{
-        justify-content:space-around;
+
+        justify-content:space-between;
         font-size:12px;
+        flex-wrap:wrap;
+        gap:6px;
+
     }
 
     .test-item{
+
         flex-direction:column;
         align-items:flex-start;
         gap:10px;
+
     }
 
     .test-right{
+
         width:100%;
         text-align:left;
+
     }
 
     .test-stats{
+
         justify-content:flex-start;
         flex-wrap:wrap;
-        gap:8px;
+        gap:6px;
+
     }
 
     .unit-header{
+
         font-size:14px;
+
     }
 
 }
@@ -11402,8 +11427,11 @@ line-height:1.6;
 
     .recent-tests-card{
 
+        width:100%;
+        max-width:100%;
         padding:15px;
         border-radius:14px;
+        box-sizing:border-box;
 
     }
 
@@ -11411,31 +11439,64 @@ line-height:1.6;
 
         font-size:18px;
         margin-bottom:14px;
+        text-align:center;
 
     }
 
     .recent-tests-grid{
+
+        display:grid;
         grid-template-columns:1fr;
+        gap:12px;
+
     }
 
     .test-card{
-        max-width:300px;
-        margin:0 auto;
-    }
 
-    .test-percent{
-        width:50px;
-        height:50px;
-        font-size:15px;
+        width:100%;
+        max-width:100%;
+        margin:0;
+        padding:14px;
+        min-height:auto;
+        box-sizing:border-box;
+
     }
 
     .test-card h3{
+
         font-size:13px;
+
+    }
+
+    .test-percent{
+
+        width:46px;
+        height:46px;
+        font-size:14px;
+
     }
 
     .test-date{
+
         font-size:11px;
+
     }
+
+    .test-info{
+
+        flex-wrap:wrap;
+        gap:6px;
+
+    }
+
+    .test-stats{
+
+        flex-wrap:wrap;
+        gap:6px;
+
+    }
+
+}
 
 }
 

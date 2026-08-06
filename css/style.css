@@ -11322,13 +11322,32 @@ line-height:1.6;
 
 @media (max-width:768px){
 
+    .recent-tests-card{
+
+        width:100%;
+        max-width:100%;
+        padding:18px;
+        border-radius:16px;
+        box-sizing:border-box;
+        overflow:hidden;
+
+    }
+
+    .recent-tests-card h2{
+
+        font-size:20px;
+        margin-bottom:16px;
+        text-align:center;
+
+    }
+
     .recent-tests-grid{
         grid-template-columns:repeat(2, 1fr);
-        gap:15px;
+        gap:10px;
     }
 
     .test-card{
-        width:100%;
+        width:90%;
         height:auto;
         min-height:200px;
         padding:15px;
@@ -11340,9 +11359,9 @@ line-height:1.6;
     }
 
     .test-percent{
-        width:55px;
-        height:55px;
-        font-size:16px;
+        width:50px;
+        height:50px;
+        font-size:15px;
     }
 
     .test-date{
@@ -11380,6 +11399,20 @@ line-height:1.6;
 /* Küçük telefonlar */
 
 @media (max-width:480px){
+
+    .recent-tests-card{
+
+        padding:15px;
+        border-radius:14px;
+
+    }
+
+    .recent-tests-card h2{
+
+        font-size:18px;
+        margin-bottom:14px;
+
+    }
 
     .recent-tests-grid{
         grid-template-columns:1fr;
@@ -15064,9 +15097,12 @@ Premium Kart
 
     .study-plan-card{
 
-        padding:20px;
-        margin-top:25px;
+        width:100%;
+        max-width:100%;
+        padding:18px;
+        margin-top:20px;
         border-radius:16px;
+        box-sizing:border-box;
 
     }
 
@@ -15079,9 +15115,12 @@ Premium Kart
 
     .study-program-img{
 
+        display:block;
         width:100%;
         max-width:100%;
-        border-radius:12px;
+        height:auto;
+        object-fit:contain;
+        margin:auto;
 
     }
 

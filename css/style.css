@@ -798,22 +798,16 @@ button:hover {
 }
 
 
-.profile-card{
+.profile-card {
+    background: white;
+    max-width: 400px;
+    width: 90%;
 
-    background:white;
+    margin: 30px auto 0; /* Üstten 40px boşluk */
 
-    max-width:400px;
-
-    width:90%;
-
-    margin:0 auto;
-
-    padding:20px;
-
-    border-radius:20px;
-
-    box-shadow:0 10px 25px rgba(0,0,0,.1);
-
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.1);
 }
 
 
@@ -13982,7 +13976,7 @@ Premium Kart
 
     position:absolute;
 
-    top:95px;
+    top:125px;
 
     left:766px;
 

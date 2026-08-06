@@ -182,12 +182,12 @@
 
 }
 
-@media(max-width:600px){
 
-   @media (max-width:768px){
+  @media (max-width:768px){
 
     .admin-section{
-        width:calc(100% - 30px);
+        width:100%;
+        max-width:calc(100% - 30px);
         margin:20px auto;
         padding:18px;
         border-radius:15px;
@@ -198,9 +198,6 @@
         font-size:20px;
         margin-bottom:15px;
     }
-
-}
-
 
     .admin-table{
 
@@ -232,8 +229,8 @@
 
     }
 
-}
 
+}
 
 /* Premium yönetim butonları */
 
@@ -1983,23 +1980,23 @@ button[onclick="removePremium"] {
 
     }
 
+    @media (max-width:768px){
+
     .user-search{
-
-        margin-bottom:18px;
-
+        width:100%;
+        display:flex;
+        justify-content:center;
     }
 
     .user-search input{
-
         width:100%;
-
-        max-width:320px;
-
-        font-size:14px;
-
+        max-width:none;
         padding:12px 16px;
-
+        font-size:14px;
+        box-sizing:border-box;
     }
+
+}
 
     .admin-table{
 
@@ -2624,29 +2621,7 @@ button[onclick="removePremium"] {
 
     }
 
-
-    .preview-top{
-
-        flex-direction:column;
-
-        align-items:flex-start;
-
-        gap:15px;
-
-    }
-
-
-    .refresh-btn{
-
-        width:100%;
-
-        justify-content:center;
-
-    }
-
-
 }
-
 
 
 @media(max-width:600px){
@@ -2681,7 +2656,7 @@ button[onclick="removePremium"] {
 
 
 
-    .search-box{
+    .user-search{
 
         width:100%;
 
@@ -2691,7 +2666,7 @@ button[onclick="removePremium"] {
 
 
 
-    .search-box input{
+    .user-search input{
 
         max-width:100%;
 
@@ -2700,77 +2675,6 @@ button[onclick="removePremium"] {
         font-size:13px;
 
     }
-
-
-
-    .filter-btn{
-
-        width:45px;
-
-        height:40px;
-
-        flex-shrink:0;
-
-    }
-
-
-
-    .preview-top{
-
-        padding:20px;
-
-    }
-
-
-
-    .back-message{
-
-        font-size:15px;
-
-    }
-
-
-
-    .refresh-btn{
-
-        padding:11px 15px;
-
-        font-size:14px;
-
-    }
-
-
-}
-
-
-
-@media(max-width:400px){
-
-
-    .search-box{
-
-        border-radius:12px;
-
-    }
-
-
-    .filter-btn{
-
-        width:40px;
-
-        font-size:16px;
-
-    }
-
-
-    .back-message{
-
-        gap:7px;
-
-        font-size:14px;
-
-    }
-
 
 }
 
@@ -2849,169 +2753,9 @@ button[onclick="removePremium"] {
 }
 
 
-
-/* SEARCH */
-
-.search-box{
-
-    display:flex;
-
-    justify-content:center;
-
-    margin-bottom:20px;
-
-}
-
-
-.search-box > i{
-
-    position:absolute;
-
-    left:15px;
-
-    color:#888;
-
-    font-size:14px;
-
-}
-
-
-.search-box input{
-
-    width:200px;
-
-    padding:10px 15px;
-
-    border:none;
-
-    border-radius:14px;
-
-    background:#f8fafc;
-
-    font-size:15px;
-
-    box-shadow:0 6px 18px rgba(0,0,0,.08);
-
-    transition:.3s;
-
-}
-
-/* Üzerine gelince */
-
-.search-box input:hover{
-
-    border-color:#6c63ff;
-
-    background:#fafaff;
-
-    transform:translateY(-3px);
-
-    box-shadow:
-    0 10px 25px rgba(108,99,255,0.30);
-
-}
-
-
-/* Tıklayınca */
-
-.search-box input:focus{
-
-    outline:none;
-
-    background:#fff;
-
-    box-shadow:0 0 0 4px rgba(37,99,235,.15);
-
-}
-
-
-/* PREVIEW TOP */
-
-.preview-top{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    padding:15px 20px;
-
-    border-bottom:1px solid #eef2f7;
-
-}
-
-
-.back-message,
-.refresh-btn{
-
-    border:none;
-
-    padding:10px 16px;
-
-    border-radius:12px;
-
-    display:flex;
-
-    align-items:center;
-
-    gap:8px;
-
-    cursor:pointer;
-
-    font-weight:600;
-
-}
-
-
-.back-message{
-
-    background:#f1f5f9;
-
-    color:#475569;
-
-}
-
-
-.refresh-btn{
-
-    background:#2563eb;
-
-    color:white;
-
-}
-
 /* =====================================
    CONTACT HEADER MOBILE RESPONSIVE
 ===================================== */
-
-
-@media(max-width:900px){
-
-
-    .preview-top{
-
-        flex-direction:column;
-
-        align-items:stretch;
-
-        gap:15px;
-
-    }
-
-
-    .back-message,
-    .refresh-btn{
-
-        justify-content:center;
-
-        width:100%;
-
-    }
-
-
-}
-
 
 
 @media(max-width:600px){
@@ -3039,73 +2783,7 @@ button[onclick="removePremium"] {
     }
 
 
-
-    .search-box{
-
-        width:100%;
-
-        margin:15px;
-
-        height:45px;
-
-        padding-left:12px;
-
-        gap:8px;
-
-    }
-
-
-
-    .search-box input{
-
-        width:100%;
-        
-        font-size:13px;
-
-    }
-
-
-
-    .filter-btn{
-
-        width:42px;
-
-        height:34px;
-
-        border-radius:9px;
-
-    }
-
-
-
-    .filter-btn i{
-
-        font-size:13px;
-
-    }
-
-
-
-    .preview-top{
-
-        padding:15px;
-
-    }
-
-
-
-    .back-message,
-    .refresh-btn{
-
-        padding:11px 14px;
-
-        font-size:14px;
-
-    }
-
-
 }
-
 
 
 @media(max-width:400px){
@@ -3117,20 +2795,12 @@ button[onclick="removePremium"] {
 
     }
 
-
-    .search-box{
+    .user-search{
 
         margin:12px;
+        margin-bottom:18px;
 
     }
-
-
-    .filter-btn{
-
-        width:38px;
-
-    }
-
 
 }
 

@@ -3309,20 +3309,62 @@ button{
 
 }
 
-@media(max-width:768px){
+@media (max-width:768px){
 
-    #dailyWords{
-
-        grid-template-columns: repeat(2, 1fr);
-
+    /* Vocabulary Container */
+    .daily-vocabulary{
+        width:100%;
+        max-width:100%;
+        padding:20px 15px;
+        margin:20px auto;
     }
 
-}
 
-@media(max-width:400px){
+    /* Vocabulary Kartları */
+    .vocabulary-card,
+    .word-card{
+        width:100%;
+        max-width:100%;
+        margin:15px auto;
+        padding:18px;
 
-    #dailyWords{
-        grid-template-columns:1fr;
+        box-sizing:border-box;
+        overflow:hidden;
+
+        border-radius:20px;
+    }
+
+
+    /* Başlık */
+    .daily-vocabulary h2{
+        font-size:22px;
+        text-align:center;
+    }
+
+
+    /* Kelime */
+    .word-card h3,
+    .vocabulary-card h3{
+        font-size:18px;
+        word-break:break-word;
+    }
+
+
+    /* Açıklama */
+    .word-card p,
+    .vocabulary-card p{
+        font-size:14px;
+        line-height:1.5;
+        word-break:break-word;
+    }
+
+
+    /* Butonlar varsa */
+    .vocabulary-card button,
+    .word-card button{
+        width:100%;
+        max-width:100%;
+        margin-top:10px;
     }
 
 }
@@ -3525,21 +3567,55 @@ button{
         font-size:13px;
     }
 
-    .vocabulary-title{
+    #timer{
+        font-size:16px;
+    }
+
+}
+
+@media (max-width:768px){
+
+    .dashboard-card{
+        width:100%;
+        max-width:100%;
+        margin:20px auto;
+        padding:20px 15px;
+        box-sizing:border-box;
+        overflow:hidden;
+    }
+
+     .vocabulary-title{
         margin-top:0;
         padding:0 15px;
     }
 
     .vocabulary-title h2{
-        font-size:24px;
+        font-size:22px;
+        text-align:center;
+        word-break:break-word;
     }
+
 
     .vocabulary-title p{
-        font-size:15px;
+        font-size:14px;
+        text-align:center;
     }
 
-    #timer{
-        font-size:16px;
+
+    #dailyWords{
+        width:100%;
+        max-width:100%;
+        display:flex;
+        flex-direction:column;
+        gap:15px;
+    }
+
+
+    #dailyWords > div{
+        width:100%;
+        max-width:100%;
+        box-sizing:border-box;
+        overflow:hidden;
     }
 
 }
@@ -4976,6 +5052,57 @@ font-size:0;
     padding: 6px 12px;
     font-size: 13px;
     border-radius: 8px;
+
+}
+
+/* Daily LGS Vocabulary - Mobile Fix */
+
+@media (max-width:768px){
+
+    .daily-word-card{
+        width:100%;
+        max-width:100%;
+        box-sizing:border-box;
+
+        padding:18px;
+        margin:12px 0;
+
+        overflow:hidden;
+        word-wrap:break-word;
+        overflow-wrap:break-word;
+
+        border-radius:20px;
+    }
+
+
+    .daily-word-card h3{
+        font-size:20px;
+        word-break:break-word;
+    }
+
+
+    .daily-word-card p{
+        font-size:14px;
+        line-height:1.5;
+        word-break:break-word;
+    }
+
+
+    .daily-word-card button{
+        width:100%;
+        max-width:100%;
+        box-sizing:border-box;
+
+        padding:12px;
+        margin-top:10px;
+    }
+
+
+    .daily-unit{
+        max-width:100%;
+        overflow:hidden;
+        text-overflow:ellipsis;
+    }
 
 }
 
@@ -13486,7 +13613,7 @@ iframe{
 .membership-card{
     position:static;
     width:70%;
-    max-width:320px;
+    max-width:240px;
     margin:20px auto;
     left:auto;
     top:auto;
@@ -15415,4 +15542,16 @@ Premium Kart
 
     }
 
+}
+
+/* MOBİL GENEL TAŞMA KONTROLÜ */
+*{
+    box-sizing:border-box;
+}
+
+html,
+body{
+    width:100%;
+    max-width:100%;
+    overflow-x:hidden;
 }

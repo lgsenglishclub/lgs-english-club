@@ -211,7 +211,7 @@
 
     }
 
-    
+
     #latestTests,
     #messages{
 
@@ -3123,34 +3123,38 @@ button[onclick="removePremium"] {
    MESSAGE CARDS RESPONSIVE
 ===================================== */
 
-@media (max-width:1200px){
+@media (max-width:768px){
 
     #messageList{
-        grid-template-columns:repeat(3,1fr);
-        gap:15px;
-        padding:0 15px;
-        justify-content:stretch;
-    }
+
+    grid-template-columns:1fr;
+    padding:0 10px;
+    gap:12px;
+
+    max-height:520px;
+    overflow-y:auto;
+    overflow-x:hidden;
+
+    -webkit-overflow-scrolling:touch;
 
 }
 
-@media (max-width:900px){
-
-    #messageList{
-        grid-template-columns:repeat(2,1fr);
-    }
-
+#messageList::-webkit-scrollbar{
+    width:6px;
 }
 
-@media (max-width:600px){
+#messageList::-webkit-scrollbar-thumb{
+    background:#cbd5e1;
+    border-radius:20px;
+}
 
-    #messageList{
+#messageList::-webkit-scrollbar-thumb:hover{
+    background:#94a3b8;
+}
 
-        grid-template-columns:1fr;
-        padding:0 10px;
-        gap:12px;
-
-    }
+#messageList::-webkit-scrollbar-track{
+    background:transparent;
+}
 
     .message-card{
 

@@ -15,6 +15,15 @@ JSON.parse(localStorage.getItem("recentTests")) || [
 
 ];
 
+const days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday"
+];
 
 const today = days[new Date().getDay()];
 

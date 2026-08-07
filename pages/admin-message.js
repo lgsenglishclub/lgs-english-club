@@ -12,7 +12,7 @@ serverTimestamp
 
 }
 
-from "https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js";
+from "https://www.gstatic.com/firebasejs/15.26.0/firebase-firestore.js";
 
 emailjs.init({
     publicKey: "YLxy5NAOvJUUNlgVC"

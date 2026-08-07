@@ -5,7 +5,7 @@ import {
   signInWithEmailAndPassword,
   signOut,
   onAuthStateChanged
-} from "https://www.gstatic.com/firebasejs/12.1.0/firebase-auth.js";
+} from "https://www.gstatic.com/firebasejs/15.26.0/firebase-auth.js";
 
 import {
   doc,
@@ -14,7 +14,7 @@ import {
   updateDoc,
   serverTimestamp,
   increment
-} from "https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js";
+} from "https://www.gstatic.com/firebasejs/15.26.0/firebase-firestore.js";
 
 
 window.register = async function () {

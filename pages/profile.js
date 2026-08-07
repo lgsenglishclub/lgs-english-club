@@ -4,7 +4,7 @@ import {
     doc,
     getDoc,
     updateDoc
-} from "https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js";
+} from "https://www.gstatic.com/firebasejs/15.26.0/firebase-firestore.js";
 
 import {
     updatePassword,

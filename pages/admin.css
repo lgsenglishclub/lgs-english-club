@@ -586,7 +586,7 @@ button[onclick="removePremium"] {
 
     .users-table-wrapper{
 
-        max-height:260px;   /* Yaklaşık 3 kullanıcı */
+        max-height:270px;   /* Yaklaşık 3 kullanıcı */
         overflow-y:auto;
         overflow-x:auto;
 

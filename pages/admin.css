@@ -586,7 +586,7 @@ button[onclick="removePremium"] {
 
     .users-table-wrapper{
 
-        max-height:255px;   /* Yaklaşık 3 kullanıcı */
+        max-height:260px;   /* Yaklaşık 3 kullanıcı */
         overflow-y:auto;
         overflow-x:auto;
 
@@ -596,7 +596,20 @@ button[onclick="removePremium"] {
 
 }
 
-.admin-table thead th{
+.users-table-wrapper::-webkit-scrollbar{
+        width:6px;
+    }
+
+.users-table-wrapper::-webkit-scrollbar-thumb{
+        background:#cbd5e1;
+        border-radius:20px;
+    }
+
+.users-table-wrapper::-webkit-scrollbar-track{
+        background:transparent;
+    }
+
+    .admin-table thead th{
     position:sticky;
     top:0;
     background:#fff;

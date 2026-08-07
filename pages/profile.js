@@ -25,6 +25,7 @@ const days = [
     "Saturday"
 ];
 
+
 const today = days[new Date().getDay()];
 
 const recentContainer = document.getElementById("recentTests");
@@ -515,10 +516,10 @@ const weeklyPlans = {
         color: "#3b82f6",
         title: "Monday",
         tasks: [
-            "📖 Vocabulary (20 Words)",
-            "📚 Reading (1 Text)",
-            "🎧 Listening (15 Minutes)",
-            "📝 Mini Test"
+            "📚 TURKISH",
+            "📚 ENGLISH",
+            "📝 TEST (50+30)",
+            "📖 Reading Book"
         ]
     },
 
@@ -526,10 +527,10 @@ const weeklyPlans = {
         color: "#22c55e",
         title: "Tuesday",
         tasks: [
-            "📖 Vocabulary (20 Words)",
-            "✏️ Grammar",
-            "🎧 Listening",
-            "📝 Quiz"
+            "📚 MATH",
+            "📚 SOCIAL",
+            "📝 TEST (50+30)",
+            "📖 Reading Book"
         ]
     },
 
@@ -537,10 +538,10 @@ const weeklyPlans = {
         color: "#a855f7",
         title: "Wednesday",
         tasks: [
-            "📖 Vocabulary",
-            "📚 Reading",
-            "🗣 Speaking",
-            "📝 Practice"
+            "📚 SCIENCE",
+            "📚 RELIGIOUS & MORAL",
+            "📝 TEST (50+30)",
+            "📖 Reading Book"
         ]
     },
 
@@ -548,10 +549,10 @@ const weeklyPlans = {
         color: "#f97316",
         title: "Thursday",
         tasks: [
-            "📖 Vocabulary",
-            "✏️ Grammar",
-            "🎧 Listening",
-            "📝 Test"
+            "📚 TURKISH",
+            "📚 ENGLISH",
+            "📝 TEST (50+30)",
+            "📖 Reading Book"
         ]
     },
 
@@ -559,10 +560,10 @@ const weeklyPlans = {
         color: "#ef4444",
         title: "Friday",
         tasks: [
-            "📖 Vocabulary",
-            "📚 Reading",
-            "🎧 Listening",
-            "📝 Quiz"
+            "📚 MATH",
+            "📚 SOCIAL",
+            "📝 TEST (50+30)",
+            "📖 Reading Book"
         ]
     },
 
@@ -570,10 +571,10 @@ const weeklyPlans = {
         color: "#eab308",
         title: "Saturday",
         tasks: [
-            "📖 Weekly Revision",
-            "📚 Reading",
-            "🎧 Listening",
-            "📝 Full Practice Test"
+            "📚 SCIENCE",
+            "📚 RELIGIOUS & MORAL",
+            "📝 TEST (50+30)",
+            "📖 Reading Book"
         ]
     },
 
@@ -581,75 +582,122 @@ const weeklyPlans = {
         color: "#6b7280",
         title: "Sunday",
         tasks: [
-            "😎 Rest Day",
-            "🎬 Watch an English Video",
-            "🎵 Listen to English Songs"
+            "📝 SÖZEL",
+            "📝 SAYISAL",
+            "🎯 Correct Mistakes",
+            "📖 Reading Book"
         ]
     }
 
 };
 
+function createDesktopCard(plan){
+
+    return `
+        <div class="desktop-card-header"
+             style="--card-color:${plan.color};">
+
+            <h3>${plan.title}</h3>
+
+        </div>
+
+        <div class="desktop-task-list">
+
+            ${plan.tasks.map(task => `
+                <div class="desktop-task">
+                    ${task}
+                </div>
+            `).join("")}
+
+        </div>
+
+    `;
+
+}
+
 document.addEventListener("DOMContentLoaded", () => {
 
     const cards = document.querySelectorAll(".day-card");
-
-    // Kartları oluştur
-    cards.forEach(card => {
-
-        const day = card.dataset.day;
-        const plan = weeklyPlans[day];
-
-        card.innerHTML = `
-            <div class="card-header">
-                <h3>${plan.title}</h3>
-            </div>
-
-            <div class="card-info">
-                <div class="task-count">
-                    📚 ${plan.tasks.length} Tasks
-                </div>
-
-                <div class="tap-open">
-                    ⭐ Click to Open
-                </div>
-            </div>
-        `;
-    });
-
     const modal = document.getElementById("cardModal");
     const modalBody = document.getElementById("modalBody");
     const closeModal = document.getElementById("closeCardModal");
 
     // Modal açma
+   function renderCards() {
+
     cards.forEach(card => {
 
-        card.addEventListener("click", () => {
+        const day = card.dataset.day;
+        const plan = weeklyPlans[day];
 
-            if (window.innerWidth <= 768) {
+        if (window.matchMedia("(max-width:768px)").matches) {
 
-                const day = card.dataset.day;
-                const plan = weeklyPlans[day];
+            card.innerHTML = `
+                <div class="card-header">
+                    <h3>${plan.title}</h3>
+                </div>
 
-                modalBody.innerHTML = `
-                    <div class="modal-day-header" style="border-top:8px solid ${plan.color};">
+                <div class="card-info">
 
-                        <h2>${plan.title}</h2>
-
-                        <div class="modal-task-list">
-                            ${plan.tasks.map(task => `
-                                <div class="modal-task">${task}</div>
-                            `).join("")}
-                        </div>
-
+                    <div class="task-count">
+                        📚 ${plan.tasks.length} Tasks
                     </div>
-                `;
 
-                modal.classList.add("show");
-            }
+                    <div class="tap-open">
+                        👆 Tap to Open
+                    </div>
 
-        });
+                </div>
+            `;
+
+      } else {
+
+    card.innerHTML = createDesktopCard(plan);
+
+}
 
     });
+
+}
+
+     renderCards();
+
+    let isMobile = window.matchMedia("(max-width:768px)").matches;
+
+window.addEventListener("resize", () => {
+
+    const mobileNow = window.matchMedia("(max-width:768px)").matches;
+
+    if (mobileNow !== isMobile) {
+
+        isMobile = mobileNow;
+
+        renderCards();
+
+        modal.classList.remove("show");
+
+    }
+
+});
+
+    cards.forEach(card => {
+
+    card.addEventListener("click", () => {
+
+        if (window.matchMedia("(max-width:768px)").matches) {
+
+            const day = card.dataset.day;
+            const plan = weeklyPlans[day];
+
+            modalBody.innerHTML = createDesktopCard(plan);
+
+            modal.classList.add("show");
+
+        }
+
+    });
+
+});
 
     closeModal.addEventListener("click", () => {
         modal.classList.remove("show");

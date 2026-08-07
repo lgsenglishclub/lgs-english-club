@@ -267,13 +267,13 @@ if(container){
 
 const dayNumber = Math.floor(today.getTime() / 86400000);
 
-const startIndex = (dayNumber * 5) % dailyWords.length;
+const WORDS_PER_DAY = 6;
 
+const startIndex = (dayNumber * WORDS_PER_DAY) % dailyWords.length;
 
 container.innerHTML = "";
 
-
-for(let i = 0; i < 5; i++){
+for(let i = 0; i < WORDS_PER_DAY; i++){
 
     let index = (startIndex + i) % dailyWords.length;
 

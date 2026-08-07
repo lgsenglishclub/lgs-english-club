@@ -3295,7 +3295,7 @@ button{
 
     display: grid;
 
-    grid-template-columns: repeat(5, 180px);
+    grid-template-columns: repeat(6, 180px);
 
     gap: 12px;
 
@@ -8127,6 +8127,30 @@ transform:translateY(0);
         grid-template-columns:repeat(2,1fr);
     }
 
+    }
+
+/* Offer Expressions */
+@media (max-width:768px){
+
+    .offer-box .grammar-card{
+        padding:16px 12px;
+        border-radius:14px;
+    }
+
+    .offer-box .grammar-card h3{
+        font-size:16px;
+        margin-bottom:6px;
+    }
+
+    .offer-box .grammar-card p{
+        font-size:13px;
+        line-height:1.4;
+    }
+
+    .offer-box .small-grid{
+        gap:12px;
+    }
+
     .offer-response-container{
         grid-template-columns:1fr;
         gap:25px;
@@ -8152,7 +8176,6 @@ transform:translateY(0);
     }
 
 }
-
 
 /* Telefon */
 @media (max-width:768px){
@@ -8667,8 +8690,8 @@ transform:translateY(0);
     }
 
     .game-card iframe{
-        width:100%;
-        height:320px;
+        width:90%;
+        height:250px;
     }
 
 }
@@ -8950,18 +8973,18 @@ transform:translateY(0);
 @media (max-width:768px){
 
     .games-section{
-        width:94%;
+        width:85%;
         margin:30px auto;
     }
 
     .games-container{
         grid-template-columns:1fr !important;
-        gap:20px;
+        gap:10px;
     }
 
     .game-card{
         padding:16px;
-        border-radius:18px;
+        border-radius:15px;
     }
 
     .game-card h3{
@@ -8971,7 +8994,7 @@ transform:translateY(0);
     }
 
     .game-card iframe{
-        height:420px;
+        height:300px;
     }
 
 }
@@ -8989,7 +9012,7 @@ transform:translateY(0);
     }
 
     .game-card iframe{
-        height:300px;
+        height:250px;
     }
 
 }
@@ -10624,7 +10647,7 @@ line-height:1.6;
 
 
 .grammar-note-box {
-    width: 150px;
+    width: 180px;
     flex-shrink: 0;
     text-align: center;
 
@@ -13999,9 +14022,9 @@ Premium Kart
 
     position:absolute;
 
-    top:125px;
+    top:115px;
 
-    left:766px;
+    left:765px;
 
     width:90px;
 
@@ -14182,6 +14205,12 @@ Premium Kart
 
     gap:45px;
 
+}
+
+.footer-grid > div{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 }
 
 
@@ -14424,7 +14453,7 @@ Premium Kart
 
 .video-card{
 
-    width:400px;
+    width:600px;
 
 }
 
@@ -14432,7 +14461,7 @@ Premium Kart
 .video-card video{
 
     width:100%;
-    height:200px;
+    height:300px;
     object-fit:cover;
     border-radius:12px;
 
@@ -14462,14 +14491,14 @@ Premium Kart
 
     .video-card{
 
-        width:320px;
+        width:400px;
 
     }
 
 
     .video-card video{
 
-        height:180px;
+        height:200px;
 
     }
 
@@ -14494,14 +14523,14 @@ Premium Kart
     .video-card{
 
         width:100%;
-        max-width:300px;
+        max-width:400px;
 
     }
 
 
     .video-card video{
 
-        height:170px;
+        height:200px;
 
     }
 
@@ -15566,35 +15595,25 @@ body{
 
     display:grid;
 
-    grid-template-columns:repeat(7,1fr);
+    grid-template-columns:repeat(7,250px);
 
-    gap:16px;
+    justify-content:center;
 
-    align-items:stretch;
+    gap:12px;
 
 }
 
 .day-card{
 
     background:#fff;
+
     border-radius:18px;
-    padding:18px;
 
-    width:100%;
+    padding:16px;
 
-    height:100%;
+    box-shadow:0 8px 24px rgba(15,23,42,.08);
 
-    min-height:250px;
-
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-
-    box-shadow:0 8px 20px rgba(0,0,0,.08);
-
-    transition:.3s;
-
-    cursor:pointer;
+    transition:.25s ease;
 
 }
 
@@ -15602,7 +15621,7 @@ body{
 
     transform:translateY(-8px);
 
-    box-shadow:0 15px 30px rgba(0,0,0,.18);
+    box-shadow:0 18px 38px rgba(15,23,42,.14);
 
 }
 
@@ -15813,3 +15832,139 @@ body{
     gap:10px;
 
 }
+
+/* ===========================
+   DESKTOP WEEKLY PLAN CARDS
+=========================== */
+
+.desktop-card-header{
+
+    border-top:6px solid var(--card-color);
+
+    margin:-16px -16px 16px;
+
+    padding:18px;
+
+    background:#fff;
+
+    border-radius:18px 18px 0 0;
+
+}
+
+.desktop-card-header h3{
+
+    margin:0;
+
+    color:#111827;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    text-align:center;
+
+}
+
+.desktop-task-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+.desktop-task{
+
+    background:#f8fafc;
+
+    border-radius:12px;
+
+    padding:14px 16px;
+
+    text-align:left;
+
+    font-size:15px;
+
+    font-weight:500;
+
+    color:#334155;
+
+    transition:.2s;
+
+}
+
+.desktop-task:hover{
+
+    background:#eef5ff;
+
+    transform:translateX(5px);
+
+}
+
+.desktop-footer{
+
+    color:#64748b;
+
+    font-size:14px;
+
+}
+
+ /* Mobil modal içinde masaüstü kartı */
+
+@media (max-width:768px){
+
+    .card-modal-content{
+
+        width:85%;
+        max-width:340px;
+
+    }
+
+    .card-modal-content .desktop-card-header{
+
+        margin:0 0 18px;
+
+        border-radius:14px 14px 0 0;
+
+    }
+
+    .card-modal.show .card-modal-content{
+
+    transform:scale(1);
+
+}
+
+    .card-modal-content .desktop-task-list{
+
+        gap:12px;
+
+    }
+
+    .card-modal-content .desktop-task{
+
+        font-size:15px;
+
+        padding:14px;
+
+    }
+
+#closeCardModal{
+
+    position:absolute;
+
+    top:12px;
+
+    right:16px;
+
+    font-size:30px;
+
+    cursor:pointer;
+
+    color:#64748b;
+
+}
+
+}
+

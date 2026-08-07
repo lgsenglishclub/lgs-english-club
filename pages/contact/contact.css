@@ -2,6 +2,16 @@
    CONTACT PAGE
 ========================== */
 
+html,
+body{
+
+    margin:0;
+    padding:0;
+    width:100%;
+    overflow-x:hidden;
+
+}
+
 /* ========================== 
    HEADER
 ========================== */
@@ -986,6 +996,12 @@ MODERN LEGAL FOOTER
 
     gap:45px;
 
+}
+
+.footer-grid > div{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 }
 
 

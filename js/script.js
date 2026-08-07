@@ -167,19 +167,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (membership === "premium") {
 
-        document.querySelector(".plan-badge").innerHTML =
-        "👑 PREMIUM MEMBER";
+    const planBadge = document.querySelector(".plan-badge");
+    const membershipText = document.querySelector(".membership-text");
+    const premiumBtn = document.querySelector(".premium-btn");
 
-        document.querySelector(".plan-badge").classList.remove("free");
-
-        document.querySelector(".plan-badge").style.background = "#FFD54F";
-
-        document.querySelector(".plan-badge").style.color = "#7a4f00";
-
-        document.querySelector(".membership-text").innerHTML =
-        "Thank you for supporting LGS English Club ❤️";
-
-        document.querySelector(".premium-btn").style.display = "none";
+    if (planBadge) {
+        planBadge.innerHTML = "👑 PREMIUM MEMBER";
+        planBadge.classList.remove("free");
+        planBadge.style.background = "#FFD54F";
+        planBadge.style.color = "#7a4f00";
     }
+
+    if (membershipText) {
+        membershipText.innerHTML =
+        "Thank you for supporting LGS English Club ❤️";
+    }
+
+    if (premiumBtn) {
+        premiumBtn.style.display = "none";
+    }
+
+}
 
 });

@@ -323,7 +323,7 @@ document.addEventListener("DOMContentLoaded", function(){
     const adminBtn = document.getElementById("adminBtn");
 
 if (adminBtn && localStorage.getItem("role") === "admin") {
-    adminBtn.style.display = "inline-block";
+     adminBtn.style.display = "inline-flex";
 }
 
 const contactBtn = document.getElementById("contactBtn");

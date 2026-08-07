@@ -18,7 +18,7 @@ function speak(word){
 
 // PUAN SİSTEMİ
 
-let score = localStorage.getItem("score") || 0;
+let score = sessionStorage.getItem("score") || 0;
 
 
 
@@ -45,10 +45,10 @@ function updateScoreDisplay(){
 
 // XP
 
-let xp = Number(localStorage.getItem("score")) || 0;
+let xp = Number(sessionStorage.getItem("score")) || 0;
 
 let games =
-Number(localStorage.getItem("gamesPlayed")) || 0;
+Number(sessionStorage.getItem("gamesPlayed")) || 0;
 
 
 let gameStats = document.getElementById("gameStats");
@@ -74,7 +74,7 @@ function checkAnswer(correct){
         score = Number(score) + 10;
 
 
-        localStorage.setItem("score", score);
+        sessionStorage.setItem("score", score);
 
 
 
@@ -122,13 +122,13 @@ if(correct){
 result.innerHTML="🎉 Correct! +5 XP";
 
 
-let score = Number(localStorage.getItem("score")) || 0;
+let score = Number(sessionStorage.getItem("score")) || 0;
 
 
 score = score + 5;
 
 
-localStorage.setItem("score", score);
+sessionStorage.setItem("score", score);
 
 
 }

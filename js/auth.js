@@ -4,7 +4,9 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   signOut,
-  onAuthStateChanged
+  onAuthStateChanged,
+  setPersistence,
+  browserSessionPersistence
 } from "https://www.gstatic.com/firebasejs/12.17.1/firebase-auth.js";
 
 import {
@@ -40,9 +42,9 @@ window.register = async function () {
 const user = userCredential.user;
 
 
-localStorage.setItem("userId", user.uid);
-localStorage.setItem("username", name);
-localStorage.setItem("email", email);
+sessionStorage.setItem("userId", user.uid);
+sessionStorage.setItem("username", name);
+sessionStorage.setItem("email", email);
 
         await setDoc(doc(db, "users", user.uid), {
             name: name,
@@ -99,6 +101,8 @@ window.login = async function () {
 
     try {
 
+await setPersistence(auth, browserSessionPersistence);
+
         const userCredential =
         await signInWithEmailAndPassword(
             auth,
@@ -153,13 +157,13 @@ if(data.membership === "premium" && data.premiumEnd){
 
 }
 
-localStorage.setItem("role", data.role || "user");
-localStorage.setItem("membership", data.membership);
-localStorage.setItem("studentName", data.name);
-localStorage.setItem("loggedIn", "true");
-localStorage.setItem("userId", user.uid);
-localStorage.setItem("email", user.email);
-localStorage.setItem("username", data.username || data.name);
+sessionStorage.setItem("role", data.role || "user");
+sessionStorage.setItem("membership", data.membership);
+sessionStorage.setItem("studentName", data.name);
+sessionStorage.setItem("loggedIn", "true");
+sessionStorage.setItem("userId", user.uid);
+sessionStorage.setItem("email", user.email);
+sessionStorage.setItem("username", data.username || data.name);
 
 
 await updateDoc(userRef, {
@@ -202,13 +206,13 @@ window.logout = async function () {
 
         await signOut(auth);
 
-        localStorage.removeItem("loggedIn");
-        localStorage.removeItem("studentName");
-        localStorage.removeItem("userId");
-        localStorage.removeItem("email");
-        localStorage.removeItem("username");
-        localStorage.removeItem("role");
-        localStorage.removeItem("membership");
+        sessionStorage.removeItem("loggedIn");
+        sessionStorage.removeItem("studentName");
+        sessionStorage.removeItem("userId");
+        sessionStorage.removeItem("email");
+        sessionStorage.removeItem("username");
+        sessionStorage.removeItem("role");
+        sessionStorage.removeItem("membership");
 
         window.location.href = "/pages/login.html";
 
@@ -226,8 +230,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (userArea) {
 
-        let loggedIn = localStorage.getItem("loggedIn");
-        let name = localStorage.getItem("studentName");
+        let loggedIn = sessionStorage.getItem("loggedIn");
+        let name = sessionStorage.getItem("studentName");
 
         if (loggedIn) {
 
@@ -260,8 +264,8 @@ document.addEventListener("DOMContentLoaded", function(){
 
     if(userArea){
 
-        let logged = localStorage.getItem("loggedIn");
-        let name = localStorage.getItem("studentName");
+        let logged = sessionStorage.getItem("loggedIn");
+        let name = sessionStorage.getItem("studentName");
 
 
         if(logged){
@@ -322,13 +326,13 @@ document.addEventListener("DOMContentLoaded", function(){
 
     const adminBtn = document.getElementById("adminBtn");
 
-if (adminBtn && localStorage.getItem("role") === "admin") {
+if (adminBtn && sessionStorage.getItem("role") === "admin") {
      adminBtn.style.display = "inline-flex";
 }
 
 const contactBtn = document.getElementById("contactBtn");
 
-if (contactBtn && localStorage.getItem("role") === "admin") {
+if (contactBtn && sessionStorage.getItem("role") === "admin") {
     contactBtn.style.display = "none";
 }
 
@@ -408,7 +412,7 @@ if(premiumDate){
 }
 
     // Eski sistem bozulmasın diye şimdilik bırakıyoruz
-    localStorage.setItem("studentName", data.name);
+    sessionStorage.setItem("studentName", data.name);
 
     const profileName = document.getElementById("profileName");
 

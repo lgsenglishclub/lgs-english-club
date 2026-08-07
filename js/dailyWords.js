@@ -613,14 +613,14 @@ for(let i = 0; i < WORDS_PER_DAY; i++){
 function learnWord(word){
 
     let learnedWords =
-    JSON.parse(localStorage.getItem("learnedWords")) || [];
+    JSON.parse(sessionStorage.getItem("learnedWords")) || [];
 
 
     if(!learnedWords.includes(word)){
 
         learnedWords.push(word);
 
-        localStorage.setItem(
+        sessionStorage.setItem(
             "learnedWords",
             JSON.stringify(learnedWords)
         );

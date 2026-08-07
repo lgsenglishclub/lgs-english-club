@@ -11,7 +11,7 @@ import {
 } from "https://www.gstatic.com/firebasejs/12.17.1/firebase-auth.js";
 
 const recentTests =
-JSON.parse(localStorage.getItem("recentTests")) || [
+JSON.parse(sessionStorage.getItem("recentTests")) || [
 
 ];
 
@@ -123,7 +123,7 @@ if (printBtn) {
 }
 
 const membership =
-localStorage.getItem("membership");
+sessionStorage.getItem("membership");
 
 
 const membershipStatus =

@@ -9,7 +9,7 @@ buttons.forEach(button => {
     let word = card.dataset.word;
 
 
-    if(localStorage.getItem(word) === "learned"){
+    if(sessionStorage.getItem(word) === "learned"){
 
         card.classList.add("learned");
 
@@ -28,7 +28,7 @@ buttons.forEach(button => {
         if(card.classList.contains("learned")){
 
 
-            localStorage.setItem(word,"learned");
+            sessionStorage.setItem(word,"learned");
 
             button.innerHTML="✓ Learned";
 
@@ -38,7 +38,7 @@ buttons.forEach(button => {
         else{
 
 
-            localStorage.removeItem(word);
+            sessionStorage.removeItem(word);
 
             button.innerHTML="Mark Learned";
 

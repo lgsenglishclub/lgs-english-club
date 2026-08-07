@@ -852,17 +852,17 @@ if (selected !== -1 && selected !== q.answer) {
    
    async function saveTestResult(){
    
-       const history = JSON.parse(localStorage.getItem("recentTests")) || [];
+       const history = JSON.parse(sessionStorage.getItem("recentTests")) || [];
    
        const wrong = questions.length - score;
    
        const result = {
 
-    userId: localStorage.getItem("userId"),
+    userId: sessionStorage.getItem("userId"),
 
-    username: localStorage.getItem("username"),
+    username: sessionStorage.getItem("username"),
 
-    email: localStorage.getItem("email"),
+    email: sessionStorage.getItem("email"),
 
 
     testName: "Unit 3 LGS Test",
@@ -882,7 +882,7 @@ if (selected !== -1 && selected !== q.answer) {
            history.pop();
        }
    
-       localStorage.setItem("recentTests", JSON.stringify(history));
+       sessionStorage.setItem("recentTests", JSON.stringify(history));
    
    }
    

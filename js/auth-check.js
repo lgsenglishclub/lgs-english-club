@@ -1,6 +1,6 @@
 function checkLogin(){
 
-    if(!localStorage.getItem("loggedIn")){
+    if(!sessionStorage.getItem("loggedIn")){
 
         alert("🔒 Please login first");
 

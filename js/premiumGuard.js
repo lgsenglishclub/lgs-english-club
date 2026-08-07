@@ -1,5 +1,5 @@
-const membership = localStorage.getItem("membership");
-const role = localStorage.getItem("role");
+const membership = sessionStorage.getItem("membership");
+const role = sessionStorage.getItem("role");
 
 
 if (role !== "admin" && membership !== "premium") {

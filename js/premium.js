@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    const membership = localStorage.getItem("membership") || "free";
-    const role = localStorage.getItem("role") || "user";
+    const membership = sessionStorage.getItem("membership") || "free";
+    const role = sessionStorage.getItem("role") || "user";
     const status = document.getElementById("premiumStatus");
 
 

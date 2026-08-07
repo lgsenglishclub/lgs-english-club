@@ -50,7 +50,7 @@ function completeChallenge(){
 
     let today = new Date().toDateString();
 
-    let completed = localStorage.getItem("challengeCompleted");
+    let completed = sessionStorage.getItem("challengeCompleted");
 
 
     if(completed === today){
@@ -65,11 +65,11 @@ function completeChallenge(){
 
 
     let currentUser =
-localStorage.getItem("currentUser");
+sessionStorage.getItem("currentUser");
 
 
 let users =
-JSON.parse(localStorage.getItem("users")) || {};
+JSON.parse(sessionStorage.getItem("users")) || {};
 
 
 if(users[currentUser]){
@@ -78,7 +78,7 @@ if(users[currentUser]){
     Number(users[currentUser].score || 0) + 10;
 
 
-    localStorage.setItem(
+    sessionStorage.setItem(
         "users",
         JSON.stringify(users)
     );
@@ -86,7 +86,7 @@ if(users[currentUser]){
 }
 
 
-    localStorage.setItem("challengeCompleted", today);
+    sessionStorage.setItem("challengeCompleted", today);
 
 
     challengeResult.innerHTML = "🎉 Challenge Completed! +10 XP";
@@ -127,7 +127,7 @@ function wordAnswer(correct){
 }
 
 let success =
-Number(localStorage.getItem("successRate")) || 0;
+Number(sessionStorage.getItem("successRate")) || 0;
 
 
 const certificateSuccess = document.getElementById("certificateSuccess");
@@ -141,7 +141,7 @@ if(certificateSuccess){
 // DAILY QUESTION SYSTEM
 
 let todayQuestions =
-Number(localStorage.getItem("todayQuestions")) || 0;
+Number(sessionStorage.getItem("todayQuestions")) || 0;
 
 
 let dailyGoal = 20;
@@ -166,7 +166,7 @@ if(dailyGoalElement){
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    const membership = localStorage.getItem("membership");
+    const membership = sessionStorage.getItem("membership");
 
     if (membership === "premium") {
 

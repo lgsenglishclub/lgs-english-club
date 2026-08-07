@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    const membership = localStorage.getItem("membership");
-    const role = localStorage.getItem("role");
+    const membership = sessionStorage.getItem("membership");
+    const role = sessionStorage.getItem("role");
 
     const premiumLinks = document.querySelectorAll(".premium-link");
 

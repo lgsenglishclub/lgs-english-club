@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const memberCard = document.getElementById("memberCard");
 
-    const loggedIn = localStorage.getItem("loggedIn");
+    const loggedIn = sessionStorage.getItem("loggedIn");
 
     // Giriş yapılmamışsa member kartı gizle
     if(loggedIn !== "true"){
@@ -20,8 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    const membership = localStorage.getItem("membership") || "free";
-    const role = localStorage.getItem("role") || "user";
+    const membership = sessionStorage.getItem("membership") || "free";
+    const role = sessionStorage.getItem("role") || "user";
 
     const status = document.getElementById("premiumStatus");
 
@@ -53,7 +53,7 @@ if(memberCard){
 
     document.addEventListener("DOMContentLoaded", () => {
 
-    const membership = localStorage.getItem("membership");
+    const membership = sessionStorage.getItem("membership");
 
     const badge = document.querySelector(".plan-badge");
     const text = document.querySelector(".membership-text");

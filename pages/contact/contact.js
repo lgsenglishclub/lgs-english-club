@@ -69,7 +69,7 @@ form.addEventListener("submit", function (e) {
 
 });
 
-const isLoggedIn = localStorage.getItem("loggedIn");
+const isLoggedIn = sessionStorage.getItem("loggedIn");
 
 const backBtn = document.getElementById("backBtn");
 const homeBtn = document.getElementById("homeBtn");

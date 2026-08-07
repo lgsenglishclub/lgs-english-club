@@ -510,15 +510,11 @@ else{
 });
 
 function openStudyProgram() {
+    alert("Çalıştı");
 
-    if(window.innerWidth <= 768){
-
-        document
-        .getElementById("studyModal")
-        .classList.add("show");
-
+    if (window.innerWidth <= 768) {
+        document.getElementById("studyModal").classList.add("show");
     }
-
 }
 
 

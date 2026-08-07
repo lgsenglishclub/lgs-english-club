@@ -1,3 +1,6 @@
+import { auth } from "../firebase-config.js";
+import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.17.1/firebase-auth.js";
+
 const button = document.getElementById("startButton");
 
 if(button){
@@ -180,7 +183,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (membershipText) {
         membershipText.innerHTML =
-        "Thank you for supporting LGS English Club ❤️";
+        "Thank you for supporting❤️";
     }
 
     if (premiumBtn) {
@@ -190,3 +193,17 @@ document.addEventListener("DOMContentLoaded", () => {
 }
 
 });
+
+const premiumBtn = document.getElementById("premiumBtn");
+
+if (premiumBtn) {
+    premiumBtn.addEventListener("click", () => {
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                window.location.href = "pages/premium.html";
+            } else {
+                alert("Please Log in first to upgrade to Premium.");
+            }
+        }, { once: true });
+    });
+}

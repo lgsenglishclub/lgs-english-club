@@ -509,25 +509,155 @@ else{
 
 });
 
+const weeklyPlans = {
+
+    monday: {
+        color: "#3b82f6",
+        title: "Monday",
+        tasks: [
+            "📖 Vocabulary (20 Words)",
+            "📚 Reading (1 Text)",
+            "🎧 Listening (15 Minutes)",
+            "📝 Mini Test"
+        ]
+    },
+
+    tuesday: {
+        color: "#22c55e",
+        title: "Tuesday",
+        tasks: [
+            "📖 Vocabulary (20 Words)",
+            "✏️ Grammar",
+            "🎧 Listening",
+            "📝 Quiz"
+        ]
+    },
+
+    wednesday: {
+        color: "#a855f7",
+        title: "Wednesday",
+        tasks: [
+            "📖 Vocabulary",
+            "📚 Reading",
+            "🗣 Speaking",
+            "📝 Practice"
+        ]
+    },
+
+    thursday: {
+        color: "#f97316",
+        title: "Thursday",
+        tasks: [
+            "📖 Vocabulary",
+            "✏️ Grammar",
+            "🎧 Listening",
+            "📝 Test"
+        ]
+    },
+
+    friday: {
+        color: "#ef4444",
+        title: "Friday",
+        tasks: [
+            "📖 Vocabulary",
+            "📚 Reading",
+            "🎧 Listening",
+            "📝 Quiz"
+        ]
+    },
+
+    saturday: {
+        color: "#eab308",
+        title: "Saturday",
+        tasks: [
+            "📖 Weekly Revision",
+            "📚 Reading",
+            "🎧 Listening",
+            "📝 Full Practice Test"
+        ]
+    },
+
+    sunday: {
+        color: "#6b7280",
+        title: "Sunday",
+        tasks: [
+            "😎 Rest Day",
+            "🎬 Watch an English Video",
+            "🎵 Listen to English Songs"
+        ]
+    }
+
+};
+
 document.addEventListener("DOMContentLoaded", () => {
 
-    const studyImg = document.getElementById("studyProgramImg");
-    const studyModal = document.getElementById("studyModal");
-    const studyClose = document.getElementById("studyClose");
+    const cards = document.querySelectorAll(".day-card");
 
-    studyImg.addEventListener("click", () => {
-        if (window.innerWidth <= 768) {
-            studyModal.classList.add("show");
-        }
+    // Kartları oluştur
+    cards.forEach(card => {
+
+        const day = card.dataset.day;
+        const plan = weeklyPlans[day];
+
+        card.innerHTML = `
+            <div class="card-header">
+                <h3>${plan.title}</h3>
+            </div>
+
+            <div class="card-info">
+                <div class="task-count">
+                    📚 ${plan.tasks.length} Tasks
+                </div>
+
+                <div class="tap-open">
+                    ⭐ Click to Open
+                </div>
+            </div>
+        `;
     });
 
-    studyClose.addEventListener("click", () => {
-        studyModal.classList.remove("show");
+    const modal = document.getElementById("cardModal");
+    const modalBody = document.getElementById("modalBody");
+    const closeModal = document.getElementById("closeCardModal");
+
+    // Modal açma
+    cards.forEach(card => {
+
+        card.addEventListener("click", () => {
+
+            if (window.innerWidth <= 768) {
+
+                const day = card.dataset.day;
+                const plan = weeklyPlans[day];
+
+                modalBody.innerHTML = `
+                    <div class="modal-day-header" style="border-top:8px solid ${plan.color};">
+
+                        <h2>${plan.title}</h2>
+
+                        <div class="modal-task-list">
+                            ${plan.tasks.map(task => `
+                                <div class="modal-task">${task}</div>
+                            `).join("")}
+                        </div>
+
+                    </div>
+                `;
+
+                modal.classList.add("show");
+            }
+
+        });
+
     });
 
-    studyModal.addEventListener("click", (e) => {
-        if (e.target === studyModal) {
-            studyModal.classList.remove("show");
+    closeModal.addEventListener("click", () => {
+        modal.classList.remove("show");
+    });
+
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            modal.classList.remove("show");
         }
     });
 

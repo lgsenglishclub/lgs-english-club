@@ -3,12 +3,12 @@ import {
     doc,
     getDoc,
     updateDoc
-} from "https://www.gstatic.com/firebasejs/15.26.0/firebase-firestore.js";
+} from "https://www.gstatic.com/firebasejs/12.17.1/firebase-firestore.js";
 
 import {
     updatePassword,
     onAuthStateChanged
-} from "https://www.gstatic.com/firebasejs/12.1.0/firebase-auth.js";
+} from "https://www.gstatic.com/firebasejs/12.17.1/firebase-auth.js";
 
 const recentTests =
 JSON.parse(localStorage.getItem("recentTests")) || [

@@ -618,95 +618,36 @@ function createDesktopCard(plan){
 document.addEventListener("DOMContentLoaded", () => {
 
     const cards = document.querySelectorAll(".day-card");
-    const modal = document.getElementById("cardModal");
-    const modalBody = document.getElementById("modalBody");
-    const closeModal = document.getElementById("closeCardModal");
 
-    // Modal açma
-   function renderCards() {
+    function renderCards() {
 
-    cards.forEach(card => {
-
-        const day = card.dataset.day;
-        const plan = weeklyPlans[day];
-
-        if (window.matchMedia("(max-width:768px)").matches) {
-
-            card.innerHTML = `
-                <div class="card-header">
-                    <h3>${plan.title}</h3>
-                </div>
-
-                <div class="card-info">
-
-                    <div class="task-count">
-                        📚 ${plan.tasks.length} Tasks
-                    </div>
-
-                    <div class="tap-open">
-                        👆 Tap to Open
-                    </div>
-
-                </div>
-            `;
-
-      } else {
-
-    card.innerHTML = createDesktopCard(plan);
-
-}
-
-    });
-
-}
-
-     renderCards();
-
-    let isMobile = window.matchMedia("(max-width:768px)").matches;
-
-window.addEventListener("resize", () => {
-
-    const mobileNow = window.matchMedia("(max-width:768px)").matches;
-
-    if (mobileNow !== isMobile) {
-
-        isMobile = mobileNow;
-
-        renderCards();
-
-        modal.classList.remove("show");
-
-    }
-
-});
-
-    cards.forEach(card => {
-
-    card.addEventListener("click", () => {
-
-        if (window.matchMedia("(max-width:768px)").matches) {
+        cards.forEach(card => {
 
             const day = card.dataset.day;
             const plan = weeklyPlans[day];
 
-            modalBody.innerHTML = createDesktopCard(plan);
+            // Masaüstü ve mobil aynı kart
+            card.innerHTML = createDesktopCard(plan);
 
-            modal.classList.add("show");
+        });
+
+    }
+
+    renderCards();
+
+    let isMobile = window.matchMedia("(max-width:768px)").matches;
+
+    window.addEventListener("resize", () => {
+
+        const mobileNow = window.matchMedia("(max-width:768px)").matches;
+
+        if (mobileNow !== isMobile) {
+
+            isMobile = mobileNow;
+            renderCards();
 
         }
 
-    });
-
-});
-
-    closeModal.addEventListener("click", () => {
-        modal.classList.remove("show");
-    });
-
-    modal.addEventListener("click", (e) => {
-        if (e.target === modal) {
-            modal.classList.remove("show");
-        }
     });
 
 });

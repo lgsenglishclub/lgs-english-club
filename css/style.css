@@ -15651,11 +15651,11 @@ body{
 
     display:grid;
 
-    grid-template-columns:repeat(7,250px);
+    grid-template-columns:repeat(7,230px);
 
     justify-content:center;
 
-    gap:12px;
+    gap:10px;
 
 }
 
@@ -15726,23 +15726,26 @@ body{
 @media (max-width:768px){
 
     .week-grid{
-        grid-template-columns:repeat(2,1fr);
-        gap:12px;
+        display:flex;
+        overflow-x:auto;
+        gap:14px;
+        padding:10px 16px 15px;
+        justify-content:flex-start;
+
+        scroll-snap-type:x mandatory;
+        -webkit-overflow-scrolling:touch;
+
+        scrollbar-width:none;
+    }
+
+    .week-grid::-webkit-scrollbar{
+        display:none;
     }
 
     .day-card{
-
-        min-height:100px;   /* Eskisi 170-230px ise bunu düşür */
-        padding:12px;
-        border-radius:14px;
-
-    }
-
-    .day-card h3{
-
-        font-size:1rem;
-        margin-bottom:12px;
-
+        flex:0 0 calc(100% - 25px); /* Her kaydırmada 1 kart */
+        max-width:320px;
+        scroll-snap-align:center;
     }
 
     .task-count{

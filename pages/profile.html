@@ -174,18 +174,7 @@ style="display:none;">
     <img src="images/study-program.png"
      alt="Weekly Study Program"
      class="study-program-img"
-     onclick="openStudyProgram()">
-
-</div>
-
-<!-- Tam ekran modal -->
-<div id="studyModal" class="study-modal" onclick="closeStudyProgram()">
-
-    <span class="study-close">&times;</span>
-
-    <img src="images/study-program.png"
-         class="study-modal-img"
-         alt="Weekly Study Program">
+     id="studyProgramImg">
 
 </div>
 
@@ -269,9 +258,10 @@ if(learnedCount){
 
 </footer>
 
-<div id="studyModal" class="study-modal" onclick="closeStudyProgram()">
+<!-- Tam ekran modal -->
+<div id="studyModal" class="study-modal">
 
-    <span class="study-close">&times;</span>
+    <span id="studyClose" class="study-close">&times;</span>
 
     <img src="images/study-program.png"
          class="study-modal-img"

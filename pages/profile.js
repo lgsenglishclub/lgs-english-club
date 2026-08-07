@@ -509,22 +509,26 @@ else{
 
 });
 
-function openStudyProgram() {
-    alert("Çalıştı");
+document.addEventListener("DOMContentLoaded", () => {
 
-    if (window.innerWidth <= 768) {
-        document.getElementById("studyModal").classList.add("show");
-    }
-}
+    const studyImg = document.getElementById("studyProgramImg");
+    const studyModal = document.getElementById("studyModal");
+    const studyClose = document.getElementById("studyClose");
 
+    studyImg.addEventListener("click", () => {
+        if (window.innerWidth <= 768) {
+            studyModal.classList.add("show");
+        }
+    });
 
-function closeStudyProgram() {
+    studyClose.addEventListener("click", () => {
+        studyModal.classList.remove("show");
+    });
 
-    document
-    .getElementById("studyModal")
-    .classList.remove("show");
+    studyModal.addEventListener("click", (e) => {
+        if (e.target === studyModal) {
+            studyModal.classList.remove("show");
+        }
+    });
 
-}
-
-
-
+});

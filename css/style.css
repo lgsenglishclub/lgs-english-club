@@ -3567,10 +3567,40 @@ button{
         font-size:14px;
     }
 
+ }
+
+    /* Mobil */
+@media (max-width:768px){
+
     #dailyWords{
-        grid-template-columns:repeat(2,1fr);
-        gap:12px;
+        display:flex;
+        justify-content:flex-start;   /* center yerine start */
+        gap:16px;
+
+        overflow-x:auto;
+        overflow-y:hidden;
+
+        scroll-snap-type:x mandatory;
+        -webkit-overflow-scrolling:touch;
+
+        padding:0;
+        margin-top:10px;
+
+        scrollbar-width:none;
     }
+
+    #dailyWords::-webkit-scrollbar{
+        display:none;
+    }
+
+    #dailyWords > *{
+        flex:0 0 100%;
+        scroll-snap-align:start;
+        scroll-snap-stop:always;
+        margin:0;
+    }
+
+
 
     .word-item{
         padding:12px;
@@ -3589,6 +3619,8 @@ button{
     }
 
 }
+
+
 
 @media (max-width:768px){
 
@@ -3622,13 +3654,31 @@ button{
     }
 
 
+    /* Mobil */
+@media (max-width:768px){
+
     #dailyWords{
-        width:100%;
-        max-width:100%;
         display:flex;
-        flex-direction:column;
-        gap:15px;
+        overflow-x:auto;
+        gap:18px;
+
+        scroll-snap-type:x mandatory;
+        -webkit-overflow-scrolling:touch;
+
+        scrollbar-width:none;
+        padding-bottom:10px;
     }
+
+    #dailyWords::-webkit-scrollbar{
+        display:none;
+    }
+
+    #dailyWords > *{
+        flex:0 0 92%;
+        scroll-snap-align:center;
+    }
+
+}
 
 
     #dailyWords > div{
@@ -5439,25 +5489,31 @@ font-size:0;
         padding:12px;
     }
 
+    /* Mobil */
+@media (max-width:768px){
+
     #dailyWords{
-        grid-template-columns:repeat(2,1fr);
+        display:flex;
+        overflow-x:auto;
+        gap:18px;
+
+        scroll-snap-type:x mandatory;
+        -webkit-overflow-scrolling:touch;
+
+        scrollbar-width:none;
+        padding-bottom:10px;
     }
 
-    .daily-word-card{
-        padding:15px;
+    #dailyWords::-webkit-scrollbar{
+        display:none;
     }
 
-    .daily-word-card h3{
-        font-size:17px;
+    #dailyWords > *{
+        flex:0 0 92%;
+        scroll-snap-align:center;
     }
 
-    .daily-word-card p{
-        font-size:14px;
-    }
-
-    .daily-word-card button{
-        width:80%;
-    }
+}
 
     .unit-header{
         padding:35px 15px;

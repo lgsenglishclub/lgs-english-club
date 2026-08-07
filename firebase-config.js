@@ -7,6 +7,7 @@ import { getFirestore } from "https://www.gstatic.com/firebasejs/15.26.0/firebas
 
 import { getStorage } from "https://www.gstatic.com/firebasejs/15.26.0/firebase-storage.js";
 
+
 const firebaseConfig = {
   apiKey: "AIzaSyCpjnKZ1bhhOet-wJDba4vhdMkdekBlDec",
   authDomain: "lgs-english-club.firebaseapp.com",

@@ -15743,8 +15743,8 @@ body{
     }
 
     .day-card{
-        flex:0 0 calc(100% - 25px); /* Her kaydırmada 1 kart */
-        max-width:320px;
+        flex:0 0 calc(100%); /* Her kaydırmada 1 kart */
+        max-width:250px;
         scroll-snap-align:center;
     }
 

@@ -14084,15 +14084,15 @@ Premium Kart
 
     position:absolute;
 
-    top:120px;
+    top:117px;
 
-    left:760px;
+    left:757px;
 
     width:90px;
 
     padding:8px 12px;
 
-    border-radius:14px;
+    border-radius:20px;
 
 
     background:linear-gradient(
@@ -14202,15 +14202,15 @@ Premium Kart
 
 .floating-membership-card{
     position:static;
-    width:90%;
-    max-width:280px;
+    width:100%;
+    max-width:150px;
     margin:15px auto;
     padding:12px 15px;
 
     display:flex;
     align-items:center;
     justify-content:center;
-    gap:12px;
+    gap:5px;
 
     left:auto;
     top:auto;
@@ -14700,9 +14700,9 @@ Premium Kart
 
     position:absolute;
 
-    top:-53px;
+    top:-55px;
 
-    right:-23px;
+    right:-25px;
 
 
      background:rgba(255,255,255,.18);
@@ -14713,7 +14713,7 @@ Premium Kart
 
     padding:8px 12px;
 
-    border-radius:10px;
+    border-radius:20px;
 
     cursor:pointer;
 
@@ -15036,48 +15036,42 @@ Premium Kart
 
 }
 
-/* =====================================
-   ACCOUNT SETTINGS MOBILE RESPONSIVE
-===================================== */
+/* ===============================
+   MOBILE SETTINGS BUTTON
+================================ */
 
-@media(max-width:600px){
-
-
-    /* Settings Button */
+@media (max-width: 600px){
 
     .settings-btn{
+        top:-45px;
+        right:-15px;
 
-        position:static;
+        padding:8px 11px;
 
-        width:100%;
+        font-size:12px;
 
-        margin-top:15px;
+        border-radius:15px;
 
-        padding:10px 12px;
+        gap:5px;
 
-        font-size:13px;
-
-        border-radius:12px;
-
+        z-index:10;
     }
 
-
-
-    /* Modal */
 
     .settings-modal{
 
-        padding:15px;
+        padding-left:0;
+        padding-right:0;
+
+        padding:20px;
 
     }
-
 
 
     .settings-content{
 
         width:100%;
-
-        max-width:330px;
+        max-width:320px;
 
         padding:18px;
 

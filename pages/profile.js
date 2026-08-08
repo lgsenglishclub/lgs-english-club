@@ -43,40 +43,43 @@ if (studyContainer) {
             badge = `<span class="today-badge">📍TODAY</span>`;
         }
 
-        let cardClass = "day-card weekday";
         let title = `📆 ${dayNames[day]}`;
 
         if (day === "Saturday") {
-            cardClass = "day-card review-day";
             title = "📆 Saturday";
         }
 
         if (day === "Sunday") {
-            cardClass = "day-card exam-day";
             title = "📝 Sunday";
         }
 
         let html = `
-<div class="${cardClass}">
-    <div class="day-header">
-        <h3>${title}</h3>
-        ${badge}
-    </div>
-`;
+            <div class="day-header">
+                <h3>${title}</h3>
+                ${badge}
+            </div>
+        `;
 
         weeklyPlan[day].forEach(item => {
+
             html += `
-<label class="plan-item">
-    <span class="plan-time">${item.time}</span>
-    <span class="plan-task">${item.task}</span>
-</label>
-`;
+                <label class="plan-item">
+                    <span class="plan-time">${item.time}</span>
+                    <span class="plan-task">${item.task}</span>
+                </label>
+            `;
+
         });
 
-        html += "</div>";
+        const dayCard = document.querySelector(
+            `.day-card[data-day="${day.toLowerCase()}"]`
+        );
 
-        studyContainer.innerHTML += html;
+        if (dayCard) {
+            dayCard.innerHTML = html;
+        }
     }
+
 }
 
 const printBtn = document.getElementById("printResultsBtn");
@@ -416,6 +419,17 @@ onAuthStateChanged(auth, async (user) => {
 
     console.log("PROFILE USER:", user.email);
 
+    loadPersonalStatistics(user);
+
+    loadPersonalBest(user);
+
+    loadStudyStreak(user);
+
+    loadAchievements(user);
+
+    loadDailyChallenge();
+
+
     try {
 
         const userRef = doc(db, "users", user.uid);
@@ -624,7 +638,7 @@ const weeklyPlans = {
         title: "Wednesday",
         tasks: [
             "📚 SCIENCE",
-            "📚 RELIGIOUS & MORAL",
+            "📚 REL.& MORAL",
             "📝 TEST (50+30)",
             "📖 Reading Book"
         ]
@@ -657,7 +671,7 @@ const weeklyPlans = {
         title: "Saturday",
         tasks: [
             "📚 SCIENCE",
-            "📚 RELIGIOUS & MORAL",
+            "📚 REL.& MORAL",
             "📝 TEST (50+30)",
             "📖 Reading Book"
         ]
@@ -736,3 +750,796 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+async function loadPersonalStatistics(user) {
+
+    try {
+
+        const testsQuery = query(
+            collection(db, "tests"),
+            where("userId", "==", user.uid)
+        );
+
+        const snapshot = await getDocs(testsQuery);
+
+        let totalTests = 0;
+        let totalCorrect = 0;
+        let totalNet = 0;
+        let totalScore = 0;
+
+        snapshot.forEach(testDoc => {
+
+            const test = testDoc.data();
+
+            totalTests++;
+
+            totalCorrect += Number(test.correct) || 0;
+            totalNet += Number(test.net) || 0;
+            totalScore += Number(test.percent) || 0;
+
+        });
+
+        const averageNet =
+            totalTests > 0
+                ? (totalNet / totalTests).toFixed(2)
+                : "0";
+
+        const averageScore =
+            totalTests > 0
+                ? Math.round(totalScore / totalTests)
+                : 0;
+
+        const totalTestsElement =
+            document.getElementById("totalTests");
+
+        const totalCorrectElement =
+            document.getElementById("totalCorrect");
+
+        const averageNetElement =
+            document.getElementById("averageNet");
+
+        const averageScoreElement =
+            document.getElementById("averageScore");
+
+
+        if (totalTestsElement)
+            totalTestsElement.textContent = totalTests;
+
+        if (totalCorrectElement)
+            totalCorrectElement.textContent = totalCorrect;
+
+        if (averageNetElement)
+            averageNetElement.textContent = averageNet;
+
+        if (averageScoreElement)
+            averageScoreElement.textContent =
+                `${averageScore}%`;
+
+    } catch (error) {
+
+        console.error(
+            "Personal statistics loading error:",
+            error
+        );
+
+    }
+
+}
+
+async function loadPersonalBest(user) {
+
+    try {
+
+        const testsQuery = query(
+            collection(db, "tests"),
+            where("userId", "==", user.uid)
+        );
+
+        const snapshot = await getDocs(testsQuery);
+
+        let bestScore = 0;
+        let bestNet = 0;
+        let lastTest = null;
+        let lastDate = 0;
+
+        snapshot.forEach(testDoc => {
+
+            const test = testDoc.data();
+
+            const score = Number(test.percent) || 0;
+            const net = Number(test.net) || 0;
+
+            if (score > bestScore) {
+                bestScore = score;
+            }
+
+            if (net > bestNet) {
+                bestNet = net;
+            }
+
+            if (test.date) {
+
+                const date =
+                    test.date.toDate
+                        ? test.date.toDate()
+                        : new Date(test.date);
+
+                if (date.getTime() > lastDate) {
+
+                    lastDate = date.getTime();
+                    lastTest = test;
+
+                }
+
+            }
+
+        });
+
+        const bestScoreElement =
+            document.getElementById("bestScore");
+
+        const bestNetElement =
+            document.getElementById("bestNet");
+
+        const lastTestElement =
+            document.getElementById("lastTest");
+
+
+        if (bestScoreElement) {
+            bestScoreElement.textContent =
+                `${bestScore}%`;
+        }
+
+        if (bestNetElement) {
+            bestNetElement.textContent =
+                bestNet;
+        }
+
+        if (lastTestElement) {
+
+            lastTestElement.textContent =
+                lastTest
+                    ? lastTest.testName
+                    : "-";
+
+        }
+
+    } catch (error) {
+
+        console.error(
+            "Personal best loading error:",
+            error
+        );
+
+    }
+
+}
+
+async function loadStudyStreak(user) {
+
+    try {
+
+        const testsQuery = query(
+            collection(db, "tests"),
+            where("userId", "==", user.uid)
+        );
+
+        const snapshot = await getDocs(testsQuery);
+
+        const dates = [];
+
+        snapshot.forEach(testDoc => {
+
+            const test = testDoc.data();
+
+            if (!test.date) return;
+
+            const date = test.date.toDate
+                ? test.date.toDate()
+                : new Date(test.date);
+
+            // Sadece gün bilgisini al
+            const day = new Date(
+                date.getFullYear(),
+                date.getMonth(),
+                date.getDate()
+            );
+
+            dates.push(day.getTime());
+
+        });
+
+        // Aynı gün yapılan birden fazla testi tek gün say
+        const uniqueDates = [...new Set(dates)]
+            .sort((a, b) => a - b);
+
+        const currentStreakElement =
+            document.getElementById("currentStreak");
+
+        const weeklyTestsElement =
+            document.getElementById("weeklyTests");
+
+        const longestStreakElement =
+            document.getElementById("longestStreak");
+
+        if (!currentStreakElement ||
+            !weeklyTestsElement ||
+            !longestStreakElement) {
+            return;
+        }
+
+        /*
+         * Hiç test yoksa
+         */
+
+        if (uniqueDates.length === 0) {
+
+            currentStreakElement.textContent = "0";
+            weeklyTestsElement.textContent = "0";
+            longestStreakElement.textContent = "0";
+
+            return;
+        }
+
+        /*
+         * CURRENT STREAK
+         */
+
+        const today = new Date();
+
+        today.setHours(0, 0, 0, 0);
+
+        const todayTime = today.getTime();
+
+        const yesterday = new Date(today);
+
+        yesterday.setDate(
+            yesterday.getDate() - 1
+        );
+
+        const yesterdayTime =
+            yesterday.getTime();
+
+        let currentStreak = 0;
+
+        /*
+         * Streak bugün veya dün başladıysa
+         */
+
+        if (
+            uniqueDates.includes(todayTime) ||
+            uniqueDates.includes(yesterdayTime)
+        ) {
+
+            let checkDate =
+                uniqueDates.includes(todayTime)
+                    ? todayTime
+                    : yesterdayTime;
+
+            currentStreak = 1;
+
+            for (let i = uniqueDates.length - 1; i >= 0; i--) {
+
+                const date = uniqueDates[i];
+
+                if (date >= checkDate) continue;
+
+                const previousDate =
+                    new Date(checkDate);
+
+                previousDate.setDate(
+                    previousDate.getDate() - 1
+                );
+
+                const previousTime =
+                    previousDate.getTime();
+
+                if (date === previousTime) {
+
+                    currentStreak++;
+
+                    checkDate = previousTime;
+
+                } else if (date < previousTime) {
+
+                    break;
+
+                }
+
+            }
+
+        }
+
+        /*
+         * LONGEST STREAK
+         */
+
+        let longestStreak = 1;
+        let streak = 1;
+
+        for (let i = 1; i < uniqueDates.length; i++) {
+
+            const previous =
+                new Date(uniqueDates[i - 1]);
+
+            const current =
+                new Date(uniqueDates[i]);
+
+            const difference =
+                (current - previous) /
+                (1000 * 60 * 60 * 24);
+
+            if (difference === 1) {
+
+                streak++;
+
+                if (streak > longestStreak) {
+                    longestStreak = streak;
+                }
+
+            } else {
+
+                streak = 1;
+
+            }
+
+        }
+
+        /*
+         * TESTS THIS WEEK
+         */
+
+        const weekStart = new Date(today);
+
+        const dayOfWeek =
+            weekStart.getDay();
+
+        const mondayOffset =
+            dayOfWeek === 0
+                ? 6
+                : dayOfWeek - 1;
+
+        weekStart.setDate(
+            weekStart.getDate() - mondayOffset
+        );
+
+        weekStart.setHours(0, 0, 0, 0);
+
+        const weekStartTime =
+            weekStart.getTime();
+
+        const tomorrow = new Date(today);
+
+        tomorrow.setDate(
+            tomorrow.getDate() + 1
+        );
+
+        const tomorrowTime =
+            tomorrow.getTime();
+
+        const weeklyTests =
+            dates.filter(date =>
+                date >= weekStartTime &&
+                date < tomorrowTime
+            ).length;
+
+
+        /*
+         * EKRANA YAZ
+         */
+
+        currentStreakElement.textContent =
+            currentStreak;
+
+        weeklyTestsElement.textContent =
+            weeklyTests;
+
+        longestStreakElement.textContent =
+            longestStreak;
+
+    } catch (error) {
+
+        console.error(
+            "Study streak loading error:",
+            error
+        );
+
+    }
+
+}
+
+async function loadAchievements(user) {
+
+    try {
+
+        const testsQuery = query(
+            collection(db, "tests"),
+            where("userId", "==", user.uid)
+        );
+
+        const snapshot = await getDocs(testsQuery);
+
+        const tests = [];
+
+        snapshot.forEach(testDoc => {
+
+            const test = testDoc.data();
+
+            tests.push({
+                percent: Number(test.percent) || 0,
+                net: Number(test.net) || 0,
+                date: test.date
+            });
+
+        });
+
+        const uniqueDates = new Set();
+
+        tests.forEach(test => {
+
+            if (!test.date) return;
+
+            const date = test.date.toDate
+                ? test.date.toDate()
+                : new Date(test.date);
+
+            const day = `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`;
+
+            uniqueDates.add(day);
+
+        });
+
+        const testCount = tests.length;
+
+        const hasPerfectScore =
+            tests.some(test => test.percent >= 100);
+
+        const hasHighScore =
+            tests.some(test => test.percent >= 90);
+
+        /*
+         * En uzun streak
+         */
+
+        const dates = [];
+
+        tests.forEach(test => {
+
+            if (!test.date) return;
+
+            const date = test.date.toDate
+                ? test.date.toDate()
+                : new Date(test.date);
+
+            const day = new Date(
+                date.getFullYear(),
+                date.getMonth(),
+                date.getDate()
+            );
+
+            dates.push(day.getTime());
+
+        });
+
+        const sortedDates = [...new Set(dates)]
+            .sort((a, b) => a - b);
+
+        let longestStreak = 0;
+        let currentStreak = 0;
+
+        if (sortedDates.length > 0) {
+
+            currentStreak = 1;
+            longestStreak = 1;
+
+            for (let i = 1; i < sortedDates.length; i++) {
+
+                const difference =
+                    (sortedDates[i] - sortedDates[i - 1]) /
+                    (1000 * 60 * 60 * 24);
+
+                if (difference === 1) {
+
+                    currentStreak++;
+
+                    if (currentStreak > longestStreak) {
+                        longestStreak = currentStreak;
+                    }
+
+                } else {
+
+                    currentStreak = 1;
+
+                }
+
+            }
+
+        }
+
+        const achievements = [
+
+            {
+                icon: "🥉",
+                title: "First Step",
+                text: "Complete your first test.",
+                unlocked: testCount >= 1
+            },
+
+             {
+                icon: "🚀",
+                title: "Getting Better",
+                text: "Complete 5 tests.",
+                unlocked: testCount >= 5
+            },
+
+            {
+                icon: "📝",
+                title: "Test Master",
+                text: "Complete 10 tests.",
+                unlocked: testCount >= 10
+            },
+
+            {
+                icon: "🔥",
+                title: "7 Day Streak",
+                text: "Study for 7 days.",
+                unlocked: longestStreak >= 7
+            },
+
+            {
+                icon: "🏆",
+                title: "High Achiever",
+                text: "Score 90% or higher.",
+                unlocked: hasHighScore
+            },
+
+            {
+                icon: "🎯",
+                title: "Perfect Score",
+                text: "Get a 100% score.",
+                unlocked: hasPerfectScore
+            }
+
+           
+        ];
+
+        const container =
+            document.getElementById("achievementsGrid");
+
+        if (!container) return;
+
+        container.innerHTML =
+            achievements.map(achievement => `
+
+                <div class="
+                    achievement
+                    ${achievement.unlocked
+                        ? "unlocked"
+                        : "locked"}
+                ">
+
+                    <div class="achievement-icon">
+                        ${achievement.icon}
+                    </div>
+
+                    <div class="achievement-info">
+
+                        <h3>
+                            ${achievement.title}
+                        </h3>
+
+                        <p>
+                            ${achievement.text}
+                        </p>
+
+                    </div>
+
+                </div>
+
+            `).join("");
+
+    } catch (error) {
+
+        console.error(
+            "Achievements loading error:",
+            error
+        );
+
+    }
+
+}
+
+function loadDailyChallenge() {
+
+    console.log("🔥 loadDailyChallenge çalıştı");
+
+    const title =
+        document.getElementById("challengeTitle");
+
+    const description =
+        document.getElementById("challengeDescription");
+
+    const progressText =
+        document.getElementById("challengeProgressText");
+
+    const progressFill =
+        document.getElementById("challengeProgressFill");
+
+    const reward =
+        document.getElementById("challengeReward");
+
+    const button =
+        document.getElementById("startChallengeBtn");
+
+console.log("🎯 Challenge button:", button);
+
+console.log("TITLE:", title);
+console.log("DESCRIPTION:", description);
+console.log("PROGRESS TEXT:", progressText);
+console.log("PROGRESS FILL:", progressFill);
+console.log("REWARD:", reward);
+console.log("BUTTON:", button);
+
+    if (
+        !title ||
+        !description ||
+        !progressText ||
+        !progressFill ||
+        !reward ||
+        !button
+    ) {
+
+        console.log(
+            "❌ Challenge elementlerinden biri eksik"
+        );
+
+        return;
+    }
+
+
+    // ============================
+    // DAILY CHALLENGE
+    // ============================
+
+    const challenge = {
+
+        title: "🎯 Daily Test Challenge",
+
+        description:
+            "Complete today's 10-question test.",
+
+        target: 10,
+
+        reward: 50
+
+    };
+
+
+    title.textContent =
+        challenge.title;
+
+    description.textContent =
+        challenge.description;
+
+    reward.textContent =
+        `🏆 +${challenge.reward} XP`;
+
+
+    // ============================
+    // COMPLETED KONTROLÜ
+    // ============================
+
+    const todayKey =
+        new Date().toISOString().split("T")[0];
+
+    const completedDate =
+        sessionStorage.getItem(
+            "challengeCompletedDate"
+        );
+
+    const completed =
+        sessionStorage.getItem(
+            "challengeCompleted"
+        ) === "true"
+        &&
+        completedDate
+        &&
+        completedDate.startsWith(todayKey);
+
+
+    const progress =
+        completed
+            ? challenge.target
+            : 0;
+
+
+    progressText.textContent =
+        `${progress} / ${challenge.target}`;
+
+
+    progressFill.style.width =
+        `${(progress / challenge.target) * 100}%`;
+
+
+    // ============================
+    // TAMAMLANDI
+    // ============================
+
+    if (completed) {
+
+        button.textContent =
+            "🎉 COMPLETED";
+
+        button.classList.add(
+            "completed"
+        );
+
+        button.disabled = true;
+
+        description.textContent =
+            "Amazing! You completed today's challenge!";
+
+        reward.textContent =
+            `🏆 +${challenge.reward} XP EARNED`;
+
+        return;
+    }
+
+
+    // ============================
+    // START CHALLENGE
+    // ============================
+
+    console.log(
+        "✅ Click listener bağlanıyor..."
+    );
+
+
+    button.addEventListener(
+        "click",
+        function () {
+
+            console.log(
+                "🔥 BUTONA BASILDI!"
+            );
+
+
+            sessionStorage.setItem(
+                "activeChallenge",
+                "daily"
+            );
+
+
+            sessionStorage.setItem(
+                "challengeTarget",
+                String(
+                    challenge.target
+                )
+            );
+
+
+            sessionStorage.setItem(
+                "challengeReward",
+                String(
+                    challenge.reward
+                )
+            );
+
+
+            console.log(
+                "Challenge bilgileri kaydedildi"
+            );
+
+
+            /*
+             * Test sayfasına git
+             */
+
+            window.location.href =
+                "8thgrades/mock-exams.html";
+
+        }
+    );
+
+}
+

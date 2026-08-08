@@ -151,10 +151,174 @@ style="display:none;">
 
     </div>
 
+    <div class="personal-stats-card">
+
+    <h2>
+        <i class="fa-solid fa-chart-simple"></i>
+        Personal Statistics
+    </h2>
+
+    <div class="stats-grid">
+
+        <div class="stat-box">
+            <div class="stat-icon">📝</div>
+            <span class="stat-label">Tests Taken</span>
+            <strong id="totalTests">0</strong>
+        </div>
+
+        <div class="stat-box">
+            <div class="stat-icon">✅</div>
+            <span class="stat-label">Total Correct</span>
+            <strong id="totalCorrect">0</strong>
+        </div>
+
+        <div class="stat-box">
+            <div class="stat-icon">🎯</div>
+            <span class="stat-label">Average Net</span>
+            <strong id="averageNet">0</strong>
+        </div>
+
+        <div class="stat-box">
+            <div class="stat-icon">📈</div>
+            <span class="stat-label">Average Score</span>
+            <strong id="averageScore">0%</strong>
+        </div>
+
+    </div>
+
+</div>
+
+    <div class="study-streak-card">
+
+    <h2>
+        <i class="fa-solid fa-fire"></i>
+        Study Streak
+    </h2>
+
+    <div class="streak-grid">
+
+        <div class="streak-box">
+            <div class="streak-icon">🔥</div>
+            <strong id="currentStreak">0</strong>
+            <span>Day Streak</span>
+        </div>
+
+        <div class="streak-box">
+            <div class="streak-icon">📅</div>
+            <strong id="weeklyTests">0</strong>
+            <span>Tests This Week</span>
+        </div>
+
+        <div class="streak-box">
+            <div class="streak-icon">🏆</div>
+            <strong id="longestStreak">0</strong>
+            <span>Longest Streak</span>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="achievements-card">
+
+    <h2>
+        <i class="fa-solid fa-medal"></i>
+        Achievements
+    </h2>
+
+    <div class="achievements-grid" id="achievementsGrid"></div>
+
+</div>
+
+<div class="daily-challenge-card">
+
+    <div class="challenge-header">
+
+        <div>
+
+            <h2>
+                <i class="fa-solid fa-fire"></i>
+                Daily Challenge
+            </h2>
+
+            <p>
+                Complete today's challenge and earn XP!
+            </p>
+
+        </div>
+
+        <div class="challenge-badge">
+            🔥
+        </div>
+
+    </div>
+
+
+    <div class="challenge-content">
+
+        <h3 id="challengeTitle">
+            🎯 Daily Test Challenge
+        </h3>
+
+        <p id="challengeDescription">
+            Complete today's 10-question test.
+        </p>
+
+
+        <div class="challenge-progress">
+
+            <div class="challenge-progress-top">
+
+                <span>
+                    Progress
+                </span>
+
+                <strong id="challengeProgressText">
+                    0 / 10
+                </strong>
+
+            </div>
+
+
+            <div class="challenge-progress-bar">
+
+                <div
+                    id="challengeProgressFill"
+                    style="width:0%">
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="challenge-footer">
+
+            <span id="challengeReward">
+                🏆 +50 XP
+            </span>
+
+
+            <button
+                id="startChallengeBtn"
+                class="challenge-btn"
+                type="button">
+
+                START CHALLENGE
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
 
 <div class="recent-tests-card">
 
-    <h2><i class="fa-solid fa-chart-column"></i> Last 10 Test Results</h2>
+    <h2><i class="fa-solid fa-chart-line"></i> 
+        Last 10 Test Results
+    </h2>
 
     <div id="recentTests" class="recent-tests-grid"></div>
 

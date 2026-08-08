@@ -375,24 +375,73 @@ async function saveTestResult(){
     email: sessionStorage.getItem("email"),
 
 
-    testName: "2025 LGS Exam",
+        testName: "2025 LGS Exam",
         correct: score,
         wrong: wrong,
         net: (score - wrong/3).toFixed(2),
         percent: Math.round(score/questions.length*100),
-        date: new Date().toLocaleDateString("en-GB")
-
+        date: new Date().toLocaleDateString("en-GB"),
+        challenge: sessionStorage.getItem("activeChallenge") || null
     };
 
     await saveToFirebase(result);
 
-    history.unshift(result);
+    // ============================
+// DAILY CHALLENGE COMPLETION
+// ============================
 
-    if(history.length > 10){
-        history.pop();
+const activeChallenge =
+    sessionStorage.getItem("activeChallenge");
+
+if (activeChallenge === "daily") {
+
+    const target =
+        Number(
+            sessionStorage.getItem("challengeTarget")
+        ) || 10;
+
+    const reward =
+        Number(
+            sessionStorage.getItem("challengeReward")
+        ) || 50;
+
+    if (questions.length >= target) {
+
+        sessionStorage.setItem(
+            "challengeCompleted",
+            "true"
+        );
+
+        sessionStorage.setItem(
+            "challengeCompletedDate",
+            new Date().toISOString()
+        );
+
+        sessionStorage.setItem(
+            "challengeXP",
+            String(reward)
+        );
+
+        console.log("🎉 DAILY CHALLENGE COMPLETED!");
+
+        console.log(
+            `🏆 +${reward} XP`
+        );
+
     }
+}
 
-    sessionStorage.setItem("recentTests", JSON.stringify(history));
+history.unshift(result);
+
+if(history.length > 10){
+    history.pop();
+}
+
+sessionStorage.setItem(
+    "recentTests",
+    JSON.stringify(history)
+);
+
 
 }
 

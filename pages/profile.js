@@ -681,8 +681,8 @@ const weeklyPlans = {
         color: "#6b7280",
         title: "Sunday",
         tasks: [
-            "📝 SÖZEL",
-            "📝 SAYISAL",
+            "📝 VERBAL EXAM",
+            "🧮 NUM. EXAM",
             "🎯 Correct Mistakes",
             "📖 Reading Book"
         ]
@@ -956,16 +956,12 @@ async function loadStudyStreak(user) {
         const currentStreakElement =
             document.getElementById("currentStreak");
 
-        const weeklyTestsElement =
-            document.getElementById("weeklyTests");
-
         const longestStreakElement =
             document.getElementById("longestStreak");
 
         if (!currentStreakElement ||
-            !weeklyTestsElement ||
-            !longestStreakElement) {
-            return;
+           !longestStreakElement) {
+           return;
         }
 
         /*
@@ -975,7 +971,6 @@ async function loadStudyStreak(user) {
         if (uniqueDates.length === 0) {
 
             currentStreakElement.textContent = "0";
-            weeklyTestsElement.textContent = "0";
             longestStreakElement.textContent = "0";
 
             return;
@@ -1131,9 +1126,6 @@ async function loadStudyStreak(user) {
         currentStreakElement.textContent =
             currentStreak;
 
-        weeklyTestsElement.textContent =
-            weeklyTests;
-
         longestStreakElement.textContent =
             longestStreak;
 
@@ -1268,22 +1260,29 @@ async function loadAchievements(user) {
              {
                 icon: "🚀",
                 title: "Getting Better",
-                text: "Complete 5 tests.",
-                unlocked: testCount >= 5
-            },
-
-            {
-                icon: "📝",
-                title: "Test Master",
                 text: "Complete 10 tests.",
                 unlocked: testCount >= 10
             },
 
             {
-                icon: "🔥",
-                title: "7 Day Streak",
-                text: "Study for 7 days.",
-                unlocked: longestStreak >= 7
+                icon: "📝",
+                title: "Finisher",
+                text: "Complete 25 tests.",
+                unlocked: testCount >= 25
+            },
+
+            {
+                icon: "📝",
+                title: "Test Professor",
+                text: "Complete 50 tests.",
+                unlocked: testCount >= 50
+            },
+
+            {
+                icon: "📝",
+                title: "Test Master",
+                text: "Complete 100 tests.",
+                unlocked: testCount >= 100
             },
 
             {
@@ -1298,6 +1297,13 @@ async function loadAchievements(user) {
                 title: "Perfect Score",
                 text: "Get a 100% score.",
                 unlocked: hasPerfectScore
+            },
+
+            {
+                icon: "🔥",
+                title: "10 Days Streak",
+                text: "Study for 10 days.",
+                unlocked: longestStreak >= 10
             }
 
            
@@ -1371,14 +1377,14 @@ function loadDailyChallenge() {
     const button =
         document.getElementById("startChallengeBtn");
 
-console.log("🎯 Challenge button:", button);
-
-console.log("TITLE:", title);
-console.log("DESCRIPTION:", description);
-console.log("PROGRESS TEXT:", progressText);
-console.log("PROGRESS FILL:", progressFill);
-console.log("REWARD:", reward);
-console.log("BUTTON:", button);
+console.log("Challenge elements:", {
+    title,
+    description,
+    progressText,
+    progressFill,
+    reward,
+    button
+});
 
     if (
         !title ||
@@ -1543,3 +1549,81 @@ console.log("BUTTON:", button);
 
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+
+    const tabs =
+        document.querySelectorAll(".week-tab");
+
+    const cards =
+        document.querySelectorAll(".day-card");
+
+
+    if (!tabs.length || !cards.length) {
+        return;
+    }
+
+
+    function showDay(day) {
+
+        /* Kartları değiştir */
+
+        cards.forEach(card => {
+
+            card.classList.toggle(
+                "active-day",
+                card.dataset.day === day
+            );
+
+        });
+
+
+        /* Sekmeleri değiştir */
+
+        tabs.forEach(tab => {
+
+            tab.classList.toggle(
+                "active",
+                tab.dataset.target === day
+            );
+
+        });
+
+    }
+
+
+    tabs.forEach(tab => {
+
+        tab.addEventListener("click", () => {
+
+            const day =
+                tab.dataset.target;
+
+            showDay(day);
+
+        });
+
+    });
+
+
+    /* =========================
+       BUGÜNÜ OTOMATİK SEÇ
+    ========================= */
+
+    const days = [
+        "sunday",
+        "monday",
+        "tuesday",
+        "wednesday",
+        "thursday",
+        "friday",
+        "saturday"
+    ];
+
+
+    const today =
+        days[new Date().getDay()];
+
+
+    showDay(today);
+
+});

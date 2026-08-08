@@ -2,7 +2,9 @@ import { auth, db } from "../firebase-config.js";
 
 import {
     collection,
-    addDoc
+    addDoc,
+    doc,
+    setDoc
 } from "https://www.gstatic.com/firebasejs/12.17.1/firebase-firestore.js";
 
 
@@ -13,6 +15,17 @@ export async function saveToFirebase(result) {
     if (!user) return;
 
     try {
+
+        // Test tarihi
+        const now = new Date();
+
+        const dateKey =
+            `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
+
+
+        // ============================
+        // TESTİ KAYDET
+        // ============================
 
         await addDoc(collection(db, "tests"), {
 
@@ -38,15 +51,38 @@ export async function saveToFirebase(result) {
             percent:
                 Number(result.percent) || 0,
 
-            date: new Date(),
+            date: now,
 
-            // Challenge bilgisi
             challenge:
                 result.challenge || false
 
         });
 
-        console.log("Test saved to Firebase successfully.");
+
+        // ============================
+        // STUDY DAY KAYDET
+        // ============================
+
+        await setDoc(
+            doc(
+                db,
+                "studyDays",
+                `${user.uid}_${dateKey}`
+            ),
+            {
+                userId: user.uid,
+                date: dateKey
+            },
+            {
+                merge: true
+            }
+        );
+
+
+        console.log(
+            "Test and study day saved successfully."
+        );
+
 
     } catch (error) {
 

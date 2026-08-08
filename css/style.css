@@ -14084,9 +14084,9 @@ Premium Kart
 
     position:absolute;
 
-    top:115px;
+    top:120px;
 
-    left:765px;
+    left:760px;
 
     width:90px;
 
@@ -15784,18 +15784,7 @@ body{
         font-size:20px;
     }
 
-     .week-grid{
-        padding-left:50px;
-        padding-right:50px;
-    }
-
-    .week-grid .day-card:first-child{
-        margin-left:50px;
-    }
-
-    .week-grid .day-card:last-child{
-        margin-right:50px;
-    }
+    
 }
 
 
@@ -16159,7 +16148,7 @@ body{
 
 .streak-grid{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns:repeat(2,1fr);
     gap:15px;
 }
 
@@ -16216,7 +16205,7 @@ body{
     }
 
     .streak-box{
-        flex:0 0 150px;
+        flex:0 0 145px;
         padding:15px;
         box-sizing:border-box;
         scroll-snap-align:start;
@@ -16243,7 +16232,7 @@ body{
 
 .achievements-grid{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns:repeat(4,250px);
     gap:15px;
 }
 
@@ -16334,7 +16323,7 @@ body{
     }
 
     .achievement{
-        flex:0 0 315px;
+        flex:0 0 300px;
         box-sizing:border-box;
         scroll-snap-align:start;
     }
@@ -16344,14 +16333,14 @@ body{
 .daily-challenge-card{
     width:90%;
     max-width:1100px;
-    margin:25px auto;
-    padding:25px;
+    margin:20px auto;
+    padding:20px;
 
     background:#fff;
 
     border-radius:18px;
 
-    box-shadow:0 8px 24px rgba(15,23,42,.08);
+    box-shadow:0 8px 20px rgba(15,23,42,.08);
 
     box-sizing:border-box;
 }
@@ -16553,3 +16542,264 @@ body{
 .daily-challenge-card .challenge-header h2{
     text-align:center;
 }
+
+/* =========================================
+   WEEKLY STUDY PROGRAM - MOBILE
+========================================= */
+
+.mobile-week-tabs {
+    display: none;
+}
+
+
+@media (max-width: 600px) {
+
+    /* ==============================
+       ANA BÖLÜM
+    ============================== */
+
+    .weekly-plan {
+        width: 100%;
+        margin: 18px 0 25px;
+        padding: 0 14px;
+        box-sizing: border-box;
+    }
+
+
+    /* ==============================
+       BAŞLIK
+    ============================== */
+
+    .weekly-plan-header {
+        text-align: center;
+        padding: 0;
+        margin-bottom: 0px;
+    }
+
+    .weekly-plan-header h2 {
+        justify-content: center;
+        text-align: center;
+        margin: 0;
+    }
+
+    .weekly-plan-header p {
+        text-align: center;
+        margin: 5px 0 0;
+    }
+
+
+    /* ==============================
+       GÜN SEKMELEME
+    ============================== */
+
+    .mobile-week-tabs {
+        display: flex;
+        width: 100%;
+
+        gap: 6px;
+
+        overflow-x: auto;
+
+        padding: 0 0 8px;
+
+        margin: 0;
+
+        scrollbar-width: none;
+
+        box-sizing: border-box;
+    }
+
+    .mobile-week-tabs::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    .week-tab {
+        flex: 0 0 auto;
+
+        border: none;
+
+        background: #f1f4f8;
+
+        color: #687386;
+
+        border-radius: 10px;
+
+        padding: 10px 10px;
+
+        font-size: 11px;
+
+        font-weight: 700;
+
+        cursor: pointer;
+
+        transition: 0.2s ease;
+    }
+
+    .week-tab.active {
+        background: #3478f6;
+        color: white;
+
+        box-shadow:
+            0 4px 10px rgba(52, 120, 246, 0.22);
+    }
+
+
+    /* ==============================
+       SADECE SEÇİLİ GÜN
+    ============================== */
+
+    .week-grid {
+    display: block;
+    width: 100%;
+    margin: 20px 0 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+    .week-grid .day-card {
+        display: none;
+    }
+
+    .week-grid .day-card.active-day {
+        display: block;
+
+        width: 100%;
+
+        margin: 0 auto;
+
+        padding: 0;
+
+        background: transparent;
+
+        border: none;
+
+        border-radius: 0;
+
+        box-shadow: none;
+
+        box-sizing: border-box;
+
+        text-align: center;
+    }
+
+
+    /* ==============================
+       GÜN BAŞLIĞI
+    ============================== */
+
+    .desktop-card-header {
+        width: 100%;
+
+        padding: 4px 0 10px;
+
+        margin: 0 0 4px;
+
+        box-sizing: border-box;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: center;
+
+        border-bottom: 2px solid var(--card-color);
+    }
+
+    .desktop-card-header h3 {
+        width: 100%;
+
+        margin: 0 0 8px;
+
+        padding: 0;
+
+        text-align: center;
+
+        font-size: 21px;
+
+        line-height: 1.2;
+
+        font-weight: 700;
+
+        color: #202938;
+    }
+
+    .desktop-card-header::after {
+        content: none;
+    }
+
+
+    /* ==============================
+       DERS LİSTESİ
+    ============================== */
+
+    .desktop-task-list {
+        width: 100%;
+
+        margin: 0;
+        padding: 0;
+
+        box-sizing: border-box;
+
+        text-align: center;
+    }
+
+
+    /* ==============================
+       DERSLER
+    ============================== */
+
+    .desktop-task {
+    width: 100%;
+
+    min-height: 40px;
+
+    padding: 5px 0;
+
+    margin: 0;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background: transparent;
+
+    border: none;
+
+    border-bottom: 1px solid #e9edf3;
+
+    border-radius: 0;
+
+    box-shadow: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #374151;
+}
+
+    .desktop-task:last-child {
+        border-bottom: none;
+    }
+
+
+    /* ==============================
+       EMOJİLER
+    ============================== */
+
+    .desktop-task::first-letter {
+        font-size: 16px;
+    }
+
+}
+
+

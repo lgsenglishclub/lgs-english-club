@@ -151,7 +151,32 @@ style="display:none;">
 
     </div>
 
-    <div class="personal-stats-card">
+    <div class="study-streak-card">
+
+    <h2>
+        <i class="fa-solid fa-fire"></i>
+        Study Streak
+    </h2>
+
+    <div class="streak-grid">
+
+        <div class="streak-box">
+            <div class="streak-icon">🔥</div>
+            <strong id="currentStreak">0</strong>
+            <span>Day Streak</span>
+        </div>
+
+        <div class="streak-box">
+            <div class="streak-icon">🏆</div>
+            <strong id="longestStreak">0</strong>
+            <span>Longest Streak</span>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="personal-stats-card">
 
     <h2>
         <i class="fa-solid fa-chart-simple"></i>
@@ -188,37 +213,6 @@ style="display:none;">
 
 </div>
 
-    <div class="study-streak-card">
-
-    <h2>
-        <i class="fa-solid fa-fire"></i>
-        Study Streak
-    </h2>
-
-    <div class="streak-grid">
-
-        <div class="streak-box">
-            <div class="streak-icon">🔥</div>
-            <strong id="currentStreak">0</strong>
-            <span>Day Streak</span>
-        </div>
-
-        <div class="streak-box">
-            <div class="streak-icon">📅</div>
-            <strong id="weeklyTests">0</strong>
-            <span>Tests This Week</span>
-        </div>
-
-        <div class="streak-box">
-            <div class="streak-icon">🏆</div>
-            <strong id="longestStreak">0</strong>
-            <span>Longest Streak</span>
-        </div>
-
-    </div>
-
-</div>
-
 <div class="achievements-card">
 
     <h2>
@@ -242,13 +236,9 @@ style="display:none;">
             </h2>
 
             <p>
-                Complete today's challenge and earn XP!
+                Challenge and earn XP!
             </p>
 
-        </div>
-
-        <div class="challenge-badge">
-            🔥
         </div>
 
     </div>
@@ -256,10 +246,7 @@ style="display:none;">
 
     <div class="challenge-content">
 
-        <h3 id="challengeTitle">
-            🎯 Daily Test Challenge
-        </h3>
-
+          <h3 id="challengeTitle">Daily Challenge</h3>
         <p id="challengeDescription">
             Complete today's 10-question test.
         </p>
@@ -330,30 +317,71 @@ style="display:none;">
 
 <section class="weekly-plan">
 
-<h2>
-<i class="fa-solid fa-calendar-days"></i>
-Weekly Study Program
-</h2>
+    <div class="weekly-plan-header">
+        <div>
+            <h2>
+                <i class="fa-solid fa-calendar-days"></i>
+                Weekly Study Program
+            </h2>
 
-<div class="week-grid">
+        </div>
+    </div>
 
-<div class="day-card" data-day="monday"></div>
 
-<div class="day-card" data-day="tuesday"></div>
+    <!-- MOBİL GÜN SEÇİMİ -->
+    <div class="mobile-week-tabs">
 
-<div class="day-card" data-day="wednesday"></div>
+        <button class="week-tab active" data-target="monday">
+            MON
+        </button>
 
-<div class="day-card" data-day="thursday"></div>
+        <button class="week-tab" data-target="tuesday">
+            TUE
+        </button>
 
-<div class="day-card" data-day="friday"></div>
+        <button class="week-tab" data-target="wednesday">
+            WED
+        </button>
 
-<div class="day-card" data-day="saturday"></div>
+        <button class="week-tab" data-target="thursday">
+            THU
+        </button>
 
-<div class="day-card" data-day="sunday"></div>
+        <button class="week-tab" data-target="friday">
+            FRI
+        </button>
 
-</div>
+        <button class="week-tab" data-target="saturday">
+            SAT
+        </button>
+
+        <button class="week-tab" data-target="sunday">
+            SUN
+        </button>
+
+    </div>
+
+
+    <div class="week-grid">
+
+        <div class="day-card active-day" data-day="monday"></div>
+
+        <div class="day-card" data-day="tuesday"></div>
+
+        <div class="day-card" data-day="wednesday"></div>
+
+        <div class="day-card" data-day="thursday"></div>
+
+        <div class="day-card" data-day="friday"></div>
+
+        <div class="day-card" data-day="saturday"></div>
+
+        <div class="day-card" data-day="sunday"></div>
+
+    </div>
 
 </section>
+
 
 <div class="card-modal" id="cardModal">
 

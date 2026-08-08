@@ -1,8 +1,13 @@
-import { auth, db } from "../firebase-config.js";
 import {
     doc,
     getDoc,
-    updateDoc
+    updateDoc,
+    collection,
+    query,
+    where,
+    orderBy,
+    limit,
+    getDocs
 } from "https://www.gstatic.com/firebasejs/12.17.1/firebase-firestore.js";
 
 import {
@@ -10,10 +15,6 @@ import {
     onAuthStateChanged
 } from "https://www.gstatic.com/firebasejs/12.17.1/firebase-auth.js";
 
-const recentTests =
-JSON.parse(sessionStorage.getItem("recentTests")) || [
-
-];
 
 const days = [
     "Sunday",
@@ -27,44 +28,6 @@ const days = [
 
 
 const today = days[new Date().getDay()];
-
-const recentContainer = document.getElementById("recentTests");
-
-if (recentContainer) {
-    recentContainer.innerHTML = recentTests.map(test => `
-        <div class="test-card">
-
-            <h3>
-                <i class="fa-solid fa-file-lines"></i>
-                ${test.testName}
-            </h3>
-
-            <div class="test-percent">
-                ${test.percent}%
-            </div>
-
-            <div class="test-detail correct-detail">
-                <span>✅ Correct</span>
-                <strong>${test.correct}</strong>
-            </div>
-
-            <div class="test-detail wrong-detail">
-                <span>❌ Wrong</span>
-                <strong>${test.wrong}</strong>
-            </div>
-
-            <div class="test-detail net-detail">
-                <span>🎯 Net</span>
-                <strong>${test.net}</strong>
-            </div>
-
-            <div class="test-date">
-                ${test.date}
-            </div>
-
-        </div>
-    `).join("");
-}
 
 const studyContainer = document.getElementById("studyPlan");
 
@@ -460,7 +423,127 @@ onAuthStateChanged(auth, async (user) => {
 
         const userData = snap.data();
 
+        // Recent Test Results
+const recentContainer = document.getElementById("recentTests");
+
+if (recentContainer) {
+
+    const testsQuery = query(
+        collection(db, "tests"),
+        where("userId", "==", user.uid),
+        orderBy("date", "desc"),
+        limit(10)
+    );
+
+    const testsSnapshot = await getDocs(testsQuery);
+
+    const tests = [];
+
+    testsSnapshot.forEach((testDoc) => {
+        tests.push(testDoc.data());
+    });
+
+    recentContainer.innerHTML = tests.map(test => `
+
+        <div class="test-card">
+
+            <h3>
+                <i class="fa-solid fa-file-lines"></i>
+                ${test.testName}
+            </h3>
+
+            <div class="test-percent">
+                ${test.percent}%
+            </div>
+
+            <div class="test-detail correct-detail">
+                <span>✅ Correct</span>
+                <strong>${test.correct}</strong>
+            </div>
+
+            <div class="test-detail wrong-detail">
+                <span>❌ Wrong</span>
+                <strong>${test.wrong}</strong>
+            </div>
+
+            <div class="test-detail net-detail">
+                <span>🎯 Net</span>
+                <strong>${test.net}</strong>
+            </div>
+
+            <div class="test-date">
+                ${
+                    test.date?.toDate
+                        ? test.date.toDate().toLocaleDateString("tr-TR")
+                        : ""
+                }
+            </div>
+
+        </div>
+
+    `).join("");
+}
+
 console.log("FIREBASE USER:", userData);
+
+// Recent Test Results
+const recentTestsContainer = document.getElementById("recentTests");
+
+if (recentTestsContainer) {
+
+    const testsQuery = query(
+        collection(db, "tests"),
+        where("userId", "==", user.uid),
+        orderBy("date", "desc"),
+        limit(10)
+    );
+
+    const testsSnapshot = await getDocs(testsQuery);
+
+    const tests = [];
+
+    testsSnapshot.forEach((doc) => {
+        tests.push(doc.data());
+    });
+
+    recentTestsContainer.innerHTML = tests.map(test => `
+
+        <div class="test-card">
+
+            <h3>
+                <i class="fa-solid fa-file-lines"></i>
+                ${test.testName}
+            </h3>
+
+            <div class="test-percent">
+                ${test.percent}%
+            </div>
+
+            <div class="test-detail correct-detail">
+                <span>✅ Correct</span>
+                <strong>${test.correct}</strong>
+            </div>
+
+            <div class="test-detail wrong-detail">
+                <span>❌ Wrong</span>
+                <strong>${test.wrong}</strong>
+            </div>
+
+            <div class="test-detail net-detail">
+                <span>🎯 Net</span>
+                <strong>${test.net}</strong>
+            </div>
+
+            <div class="test-date">
+                ${test.date?.toDate
+                    ? test.date.toDate().toLocaleDateString("tr-TR")
+                    : ""}
+            </div>
+
+        </div>
+
+    `).join("");
+}
 
         const profileCard = document.getElementById("profileCard");
 

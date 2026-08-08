@@ -6,10 +6,6 @@
     </url>
 
     <url>
-        <loc>https://lgsenglishclub.com.tr/pages/profile.html</loc>
-    </url>
-
-    <url>
         <loc>https://lgsenglishclub.com.tr/pages/8thgrades/units.html</loc>
     </url>
 
@@ -18,7 +14,11 @@
     </url>
 
     <url>
-        <loc>https://lgsenglishclub.com.tr/pages/8thgrades/unit2/unit2.html</loc>
+        <loc>https://lgsenglishclub.com.tr/pages/8thgrades/mock-exams.html</loc>
+    </url>
+
+    <url>
+        <loc>https://lgsenglishclub.com.tr/pages/8thgrades/mock-exams/exam1.html</loc>
     </url>
 
     <url>
@@ -26,11 +26,15 @@
     </url>
 
     <url>
-        <loc>https://lgsenglishclub.com.tr/pages/contact.html</loc>
+        <loc>https://lgsenglishclub.com.tr/pages/8thgrades/lgs/lgs-2018.html</loc>
     </url>
 
     <url>
-        <loc>https://lgsenglishclub.com.tr/pages/premium.html</loc>
+        <loc>https://lgsenglishclub.com.tr/pages/8thgrades/tenses.html</loc>
+    </url>
+
+    <url>
+        <loc>https://lgsenglishclub.com.tr/pages/contact/contact.html</loc>
     </url>
 
 </urlset>

@@ -11,6 +11,7 @@ import {
     serverTimestamp
 } from "https://www.gstatic.com/firebasejs/12.17.1/firebase-firestore.js";
 
+
 // ============================
 // 🎮 TEST XP SYSTEM
 // ============================
@@ -597,105 +598,105 @@ async function saveTestResult(){
         await addTestXP(result.percent);
 
    // ============================
-   // 🎯 DAILY CHALLENGE COMPLETION
-   // ============================
-   
-   const activeChallenge =
-       sessionStorage.getItem("activeChallenge");
-   
-   if (activeChallenge === "daily") {
-   
-       const target =
-           Number(
-               sessionStorage.getItem("challengeTarget")
-           ) || 10;
-   
-       const reward =
-           Number(
-               sessionStorage.getItem("challengeReward")
-           ) || 50;
-   
-       if (questions.length >= target) {
-   
-           const today =
-               new Date().toISOString().split("T")[0];
-   
-           const userId =
-               sessionStorage.getItem("userId");
-   
-           if (userId) {
-   
-               const userRef =
-                   doc(db, "users", userId);
-   
-               const userSnap =
-                   await getDoc(userRef);
-   
-               const userData =
-                   userSnap.exists()
-                       ? userSnap.data()
-                       : {};
-   
-               const alreadyCompleted =
-                   userData.dailyChallengeCompletedDate === today;
-   
-               // Bugün daha önce tamamlanmadıysa
-               if (!alreadyCompleted) {
-   
-                   // XP + tamamlanma tarihi
-                   await updateDoc(userRef, {
-   
-                       xp: increment(reward),
-   
-                       dailyChallengeCompletedDate:
-                           today
-   
-                   });
-   
-                   // XP History
-                   await addDoc(
-                       collection(
-                           db,
-                           "users",
-                           userId,
-                           "xpHistory"
-                       ),
-                       {
-   
-                           amount: reward,
-   
-                           reason:
-                               "Daily Challenge",
-   
-                           icon: "🎯",
-   
-                           date:
-                               serverTimestamp()
-   
-                       }
-                   );
-   
-                   console.log(
-                       "🎯 DAILY CHALLENGE COMPLETED!"
-                   );
-   
-                   console.log(
-                       `🏆 +${reward} XP`
-                   );
-   
-               } else {
-   
-                   console.log(
-                       "ℹ️ Daily Challenge bugün zaten tamamlandı."
-                   );
-   
-               }
-   
-           }
-   
-       }
-   
-   }
+// 🎯 DAILY CHALLENGE COMPLETION
+// ============================
+
+const activeChallenge =
+    sessionStorage.getItem("activeChallenge");
+
+if (activeChallenge === "daily") {
+
+    const target =
+        Number(
+            sessionStorage.getItem("challengeTarget")
+        ) || 10;
+
+    const reward =
+        Number(
+            sessionStorage.getItem("challengeReward")
+        ) || 50;
+
+    if (questions.length >= target) {
+
+        const today =
+            new Date().toISOString().split("T")[0];
+
+        const userId =
+            sessionStorage.getItem("userId");
+
+        if (userId) {
+
+            const userRef =
+                doc(db, "users", userId);
+
+            const userSnap =
+                await getDoc(userRef);
+
+            const userData =
+                userSnap.exists()
+                    ? userSnap.data()
+                    : {};
+
+            const alreadyCompleted =
+                userData.dailyChallengeCompletedDate === today;
+
+            // Bugün daha önce tamamlanmadıysa
+            if (!alreadyCompleted) {
+
+                // XP + tamamlanma tarihi
+                await updateDoc(userRef, {
+
+                    xp: increment(reward),
+
+                    dailyChallengeCompletedDate:
+                        today
+
+                });
+
+                // XP History
+                await addDoc(
+                    collection(
+                        db,
+                        "users",
+                        userId,
+                        "xpHistory"
+                    ),
+                    {
+
+                        amount: reward,
+
+                        reason:
+                            "Daily Challenge",
+
+                        icon: "🎯",
+
+                        date:
+                            serverTimestamp()
+
+                    }
+                );
+
+                console.log(
+                    "🎯 DAILY CHALLENGE COMPLETED!"
+                );
+
+                console.log(
+                    `🏆 +${reward} XP`
+                );
+
+            } else {
+
+                console.log(
+                    "ℹ️ Daily Challenge bugün zaten tamamlandı."
+                );
+
+            }
+
+        }
+
+    }
+
+}
 
 history.unshift(result);
 

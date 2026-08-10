@@ -579,7 +579,7 @@ if(floatingMembership && floatingDate){
         "🟢FREE";
 
         floatingDate.innerHTML =
-        "Limited Profile";
+        "Limited";
 
     }
 

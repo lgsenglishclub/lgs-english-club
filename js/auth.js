@@ -15,7 +15,9 @@ import {
   getDoc,
   updateDoc,
   serverTimestamp,
-  increment
+  increment,
+  addDoc,
+  collection
 } from "https://www.gstatic.com/firebasejs/12.17.1/firebase-firestore.js";
 
 
@@ -54,6 +56,7 @@ sessionStorage.setItem("email", email);
             membership: "free",
             
             score: 0,
+            xp: 0,
             totalQuestions: 0,
             correctAnswers: 0,
             gamesPlayed: 0,
@@ -128,6 +131,180 @@ if (!userSnap.exists()) {
 }
 
 const data = userSnap.data();
+
+// ============================
+// 🔥 STUDY DAY - LOGIN
+// ============================
+
+const studyToday =
+    new Date().toISOString().split("T")[0];
+
+const studyDayRef =
+    doc(
+        db,
+        "studyDays",
+        `${user.uid}_${studyToday}`
+    );
+
+const studyDaySnap =
+    await getDoc(studyDayRef);
+
+if (!studyDaySnap.exists()) {
+
+    await setDoc(studyDayRef, {
+
+        userId: user.uid,
+
+        date: studyToday,
+
+        createdAt: serverTimestamp()
+
+    });
+
+    console.log(
+        "🔥 Study Day tamamlandı:",
+        studyToday
+    );
+
+}
+
+// ============================
+// 🎁 DAILY LOGIN STREAK REWARD
+// ============================
+
+const today =
+    new Date().toISOString().split("T")[0];
+
+const lastRewardDate =
+    data.dailyLoginRewardDate || null;
+
+let loginStreak =
+    Number(data.dailyLoginStreak) || 0;
+
+let rewardXP = 0;
+
+if (lastRewardDate !== today) {
+
+    // ============================
+    // 📅 YARDIMCI TARİH FONKSİYONU
+    // ============================
+
+    const todayDate =
+        new Date(today + "T00:00:00");
+
+    const yesterdayDate =
+        new Date(todayDate);
+
+    yesterdayDate.setDate(
+        yesterdayDate.getDate() - 1
+    );
+
+    const yesterday =
+        yesterdayDate
+            .toISOString()
+            .split("T")[0];
+
+
+    // ============================
+    // 🔥 STREAK KONTROLÜ
+    // ============================
+
+    if (lastRewardDate === yesterday) {
+
+        loginStreak++;
+
+    } else {
+
+        loginStreak = 1;
+
+    }
+
+
+    // ============================
+    // 🎁 ÖDÜL TABLOSU
+    // ============================
+
+    const rewards = {
+
+        1: 10,
+        2: 15,
+        3: 20,
+        4: 25,
+        5: 30,
+        6: 40,
+        7: 75
+
+    };
+
+
+    rewardXP =
+        rewards[loginStreak] || 10;
+
+
+    // ============================
+    // ☁️ FIREBASE
+    // ============================
+
+    await updateDoc(userRef, {
+
+    xp: increment(rewardXP),
+
+    dailyLoginRewardDate: today,
+
+    dailyLoginStreak: loginStreak
+
+});
+
+
+// ============================
+// ⭐ XP HISTORY
+// ============================
+
+await addDoc(
+    collection(db, "users", user.uid, "xpHistory"),
+    {
+
+        amount: rewardXP,
+
+        reason: "Daily Login",
+
+        icon: "🎁",
+
+        date: serverTimestamp()
+
+    }
+);
+
+console.log(
+    `⭐ XP History: +${rewardXP} Daily Login`
+);
+
+
+    console.log(
+        `🔥 Login Streak: ${loginStreak} gün`
+    );
+
+    console.log(
+        `🎁 Daily Reward: +${rewardXP} XP`
+    );
+
+
+    if (loginStreak === 7) {
+
+        console.log(
+            "🏆 7 DAY LOGIN STREAK!"
+        );
+
+    }
+
+}
+else {
+
+    console.log(
+        "ℹ️ Daily Login Reward bugün zaten alındı."
+    );
+
+}
 
 // Premium süre kontrolü
 
@@ -213,6 +390,14 @@ window.logout = async function () {
         sessionStorage.removeItem("username");
         sessionStorage.removeItem("role");
         sessionStorage.removeItem("membership");
+
+        // 🎯 Daily Challenge temizliği
+        sessionStorage.removeItem("activeChallenge");
+        sessionStorage.removeItem("challengeTarget");
+        sessionStorage.removeItem("challengeReward");
+        sessionStorage.removeItem("challengeCompleted");
+        sessionStorage.removeItem("challengeCompletedDate");
+        sessionStorage.removeItem("challengeXP");
 
         window.location.href = "/pages/login.html";
 
@@ -349,6 +534,17 @@ onAuthStateChanged(auth, async (user) => {
     if (!userSnap.exists()) return;
 
     const data = userSnap.data();
+
+    // 🎮 XP sistemi
+if (typeof data.xp !== "number") {
+
+    await updateDoc(userRef, {
+        xp: 0
+    });
+
+    data.xp = 0;
+
+}
 
     const floatingMembership =
 document.getElementById("floatingMembership");

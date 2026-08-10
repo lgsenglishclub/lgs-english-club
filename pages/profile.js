@@ -4,12 +4,15 @@ import {
     doc,
     getDoc,
     updateDoc,
+    increment,
+    addDoc,
     collection,
     query,
     where,
     orderBy,
     limit,
-    getDocs
+    getDocs,
+    serverTimestamp
 } from "https://www.gstatic.com/firebasejs/12.17.1/firebase-firestore.js";
 
 import {
@@ -427,7 +430,7 @@ onAuthStateChanged(auth, async (user) => {
 
     loadAchievements(user);
 
-    loadDailyChallenge();
+    loadDailyChallenge(user);
 
 
     try {
@@ -438,6 +441,9 @@ onAuthStateChanged(auth, async (user) => {
         if (!snap.exists()) return;
 
         const userData = snap.data();
+
+        // 🎮 XP & LEVEL
+        renderXPSystem(userData);
 
         // Recent Test Results
 const recentContainer = document.getElementById("recentTests");
@@ -751,6 +757,268 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+// ===============================
+// 🎮 XP & LEVEL SYSTEM
+// ===============================
+
+const XP_LEVELS = [
+    0,      // Level 1
+    100,    // Level 2
+    250,    // Level 3
+    450,    // Level 4
+    700,    // Level 5
+    1000,   // Level 6
+    1350,   // Level 7
+    1750,   // Level 8
+    2200,   // Level 9
+    2700,   // Level 10
+    3300,   // Level 11
+    4000,   // Level 12
+    4800,   // Level 13
+    5700,   // Level 14
+    6700,   // Level 15
+    7800,   // Level 16
+    9000,   // Level 17
+    10300,  // Level 18
+    11700,  // Level 19
+    13200   // Level 20
+];
+
+
+// XP'den level hesapla
+function calculateLevel(xp) {
+
+    let level = 1;
+
+    for (let i = 0; i < XP_LEVELS.length; i++) {
+
+        if (xp >= XP_LEVELS[i]) {
+            level = i + 1;
+        } else {
+            break;
+        }
+
+    }
+
+    return level;
+}
+
+
+// Bir sonraki level için gereken XP
+function getNextLevelXP(level) {
+
+    if (level >= XP_LEVELS.length) {
+        return XP_LEVELS[XP_LEVELS.length - 1];
+    }
+
+    return XP_LEVELS[level];
+
+}
+
+
+// XP kazan
+async function addXP(user, amount) {
+
+    if (!user || !amount || amount <= 0) return;
+
+    try {
+
+        const userRef = doc(db, "users", user.uid);
+
+        const today =
+    new Date().toISOString().split("T")[0];
+
+        await updateDoc(userRef, {
+
+    xp: increment(reward),
+
+    dailyChallengeCompletedDate: today
+
+});
+
+        console.log(`🎮 +${amount} XP`);
+
+    } catch (error) {
+
+        console.error("XP ekleme hatası:", error);
+
+    }
+
+}
+
+
+// Profile XP bilgilerini göster
+function renderXPSystem(userData) {
+
+    const xp = Number(userData.xp) || 0;
+
+    const level = calculateLevel(xp);
+
+    checkLevelUp(level);
+
+    const currentLevelXP =
+        XP_LEVELS[level - 1] || 0;
+
+    const nextLevelXP =
+        level >= XP_LEVELS.length
+            ? currentLevelXP
+            : XP_LEVELS[level];
+
+    const levelElement =
+        document.getElementById("profileLevel");
+
+    const xpElement =
+        document.getElementById("profileXP");
+
+    const xpProgress =
+        document.getElementById("xpProgress");
+
+    const xpRemaining =
+        document.getElementById("xpRemaining");
+
+
+    // LEVEL
+    if (levelElement) {
+
+        levelElement.textContent =
+            `LEVEL ${level}`;
+
+    }
+
+
+    // XP
+    if (xpElement) {
+
+        xpElement.textContent =
+            `${xp} XP`;
+
+    }
+
+
+    // MAX LEVEL
+    if (level >= XP_LEVELS.length) {
+
+        if (xpProgress) {
+
+            xpProgress.style.width =
+                "100%";
+
+        }
+
+        if (xpRemaining) {
+
+            xpRemaining.textContent =
+                "🏆 MAX LEVEL";
+
+        }
+
+        return;
+
+    }
+
+
+    // XP progress
+    const xpInLevel =
+        xp - currentLevelXP;
+
+    const xpNeeded =
+        nextLevelXP - currentLevelXP;
+
+    const percentage =
+        (xpInLevel / xpNeeded) * 100;
+
+
+    if (xpProgress) {
+
+        xpProgress.style.width =
+            `${Math.max(0, Math.min(100, percentage))}%`;
+
+    }
+
+
+    // Kalan XP
+    if (xpRemaining) {
+
+        const remaining =
+            nextLevelXP - xp;
+
+        xpRemaining.textContent =
+            `${remaining} XP until Level ${level + 1}`;
+
+    }
+
+}
+
+function showLevelUp(level) {
+
+    const popup =
+        document.createElement("div");
+
+    popup.className =
+        "level-up-popup";
+
+    popup.innerHTML = `
+
+        <div class="level-up-icon">
+            🎉
+        </div>
+
+        <div class="level-up-title">
+            LEVEL UP!
+        </div>
+
+        <div class="level-up-level">
+            You reached Level ${level}!
+        </div>
+
+    `;
+
+    document.body.appendChild(popup);
+
+
+    setTimeout(() => {
+
+        popup.classList.add("show");
+
+    }, 50);
+
+
+    setTimeout(() => {
+
+        popup.classList.remove("show");
+
+        setTimeout(() => {
+
+            popup.remove();
+
+        }, 400);
+
+    }, 3000);
+
+}
+
+function checkLevelUp(level) {
+
+    const previousLevel =
+        Number(
+            sessionStorage.getItem("lastKnownLevel")
+        ) || 1;
+
+
+    if (level > previousLevel) {
+
+        showLevelUp(level);
+
+    }
+
+
+    sessionStorage.setItem(
+        "lastKnownLevel",
+        level
+    );
+
+}
+
 async function loadPersonalStatistics(user) {
 
     try {
@@ -919,74 +1187,91 @@ async function loadStudyStreak(user) {
 
     try {
 
-        const testsQuery = query(
-            collection(db, "tests"),
+        // ============================
+        // 🔥 LOGIN DAYS
+        // ============================
+
+        const studyDaysQuery = query(
+            collection(db, "studyDays"),
             where("userId", "==", user.uid)
         );
 
-        const snapshot = await getDocs(testsQuery);
+        const snapshot =
+            await getDocs(studyDaysQuery);
 
-        const dates = [];
+        const uniqueDates = [];
 
-        snapshot.forEach(testDoc => {
+        snapshot.forEach(studyDoc => {
 
-            const test = testDoc.data();
+            const data =
+                studyDoc.data();
 
-            if (!test.date) return;
+            if (!data.date) return;
 
-            const date = test.date.toDate
-                ? test.date.toDate()
-                : new Date(test.date);
+            const date =
+                new Date(data.date);
 
-            // Sadece gün bilgisini al
-            const day = new Date(
-                date.getFullYear(),
-                date.getMonth(),
-                date.getDate()
+            date.setHours(0, 0, 0, 0);
+
+            uniqueDates.push(
+                date.getTime()
             );
-
-            dates.push(day.getTime());
 
         });
 
-        // Aynı gün yapılan birden fazla testi tek gün say
-        const uniqueDates = [...new Set(dates)]
-            .sort((a, b) => a - b);
+
+        // Aynı günü tek kayıt say
+        const dates =
+            [...new Set(uniqueDates)]
+                .sort((a, b) => a - b);
+
 
         const currentStreakElement =
-            document.getElementById("currentStreak");
+            document.getElementById(
+                "currentStreak"
+            );
 
         const longestStreakElement =
-            document.getElementById("longestStreak");
+            document.getElementById(
+                "longestStreak"
+            );
 
-        if (!currentStreakElement ||
-           !longestStreakElement) {
-           return;
-        }
 
-        /*
-         * Hiç test yoksa
-         */
-
-        if (uniqueDates.length === 0) {
-
-            currentStreakElement.textContent = "0";
-            longestStreakElement.textContent = "0";
-
+        if (
+            !currentStreakElement ||
+            !longestStreakElement
+        ) {
             return;
         }
 
-        /*
-         * CURRENT STREAK
-         */
 
-        const today = new Date();
+        // ============================
+        // 📅 BUGÜN
+        // ============================
 
-        today.setHours(0, 0, 0, 0);
+        const today =
+            new Date();
 
-        const todayTime = today.getTime();
+        today.setHours(
+            0,
+            0,
+            0,
+            0
+        );
 
-        const yesterday = new Date(today);
+        const todayTime =
+            today.getTime();
+
+
+        // ============================
+        // 🔥 CURRENT STREAK
+        // ============================
+
+        let currentStreak = 0;
+
+
+        const yesterday =
+            new Date(today);
 
         yesterday.setDate(
             yesterday.getDate() - 1
@@ -995,47 +1280,64 @@ async function loadStudyStreak(user) {
         const yesterdayTime =
             yesterday.getTime();
 
-        let currentStreak = 0;
-
-        /*
-         * Streak bugün veya dün başladıysa
-         */
 
         if (
-            uniqueDates.includes(todayTime) ||
-            uniqueDates.includes(yesterdayTime)
+            dates.includes(todayTime) ||
+            dates.includes(yesterdayTime)
         ) {
 
             let checkDate =
-                uniqueDates.includes(todayTime)
+                dates.includes(todayTime)
                     ? todayTime
                     : yesterdayTime;
 
+
             currentStreak = 1;
 
-            for (let i = uniqueDates.length - 1; i >= 0; i--) {
 
-                const date = uniqueDates[i];
+            for (
+                let i = dates.length - 1;
+                i >= 0;
+                i--
+            ) {
 
-                if (date >= checkDate) continue;
+                const date =
+                    dates[i];
+
+
+                if (
+                    date >= checkDate
+                ) {
+                    continue;
+                }
+
 
                 const previousDate =
                     new Date(checkDate);
+
 
                 previousDate.setDate(
                     previousDate.getDate() - 1
                 );
 
+
                 const previousTime =
                     previousDate.getTime();
 
-                if (date === previousTime) {
+
+                if (
+                    date === previousTime
+                ) {
 
                     currentStreak++;
 
-                    checkDate = previousTime;
+                    checkDate =
+                        previousTime;
 
-                } else if (date < previousTime) {
+                }
+                else if (
+                    date < previousTime
+                ) {
 
                     break;
 
@@ -1045,34 +1347,63 @@ async function loadStudyStreak(user) {
 
         }
 
-        /*
-         * LONGEST STREAK
-         */
 
-        let longestStreak = 1;
-        let streak = 1;
+        // ============================
+        // 🏆 LONGEST STREAK
+        // ============================
 
-        for (let i = 1; i < uniqueDates.length; i++) {
+        let longestStreak =
+            dates.length > 0
+                ? 1
+                : 0;
+
+        let streak =
+            dates.length > 0
+                ? 1
+                : 0;
+
+
+        for (
+            let i = 1;
+            i < dates.length;
+            i++
+        ) {
 
             const previous =
-                new Date(uniqueDates[i - 1]);
+                new Date(
+                    dates[i - 1]
+                );
 
             const current =
-                new Date(uniqueDates[i]);
+                new Date(
+                    dates[i]
+                );
+
 
             const difference =
-                (current - previous) /
+                (
+                    current - previous
+                ) /
                 (1000 * 60 * 60 * 24);
 
-            if (difference === 1) {
+
+            if (
+                difference === 1
+            ) {
 
                 streak++;
 
-                if (streak > longestStreak) {
-                    longestStreak = streak;
+                if (
+                    streak > longestStreak
+                ) {
+
+                    longestStreak =
+                        streak;
+
                 }
 
-            } else {
+            }
+            else {
 
                 streak = 1;
 
@@ -1080,54 +1411,17 @@ async function loadStudyStreak(user) {
 
         }
 
-        /*
-         * TESTS THIS WEEK
-         */
 
-        const weekStart = new Date(today);
-
-        const dayOfWeek =
-            weekStart.getDay();
-
-        const mondayOffset =
-            dayOfWeek === 0
-                ? 6
-                : dayOfWeek - 1;
-
-        weekStart.setDate(
-            weekStart.getDate() - mondayOffset
-        );
-
-        weekStart.setHours(0, 0, 0, 0);
-
-        const weekStartTime =
-            weekStart.getTime();
-
-        const tomorrow = new Date(today);
-
-        tomorrow.setDate(
-            tomorrow.getDate() + 1
-        );
-
-        const tomorrowTime =
-            tomorrow.getTime();
-
-        const weeklyTests =
-            dates.filter(date =>
-                date >= weekStartTime &&
-                date < tomorrowTime
-            ).length;
-
-
-        /*
-         * EKRANA YAZ
-         */
+        // ============================
+        // 📊 EKRANA YAZ
+        // ============================
 
         currentStreakElement.textContent =
             currentStreak;
 
         longestStreakElement.textContent =
             longestStreak;
+
 
     } catch (error) {
 
@@ -1165,21 +1459,6 @@ async function loadAchievements(user) {
 
         });
 
-        const uniqueDates = new Set();
-
-        tests.forEach(test => {
-
-            if (!test.date) return;
-
-            const date = test.date.toDate
-                ? test.date.toDate()
-                : new Date(test.date);
-
-            const day = `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`;
-
-            uniqueDates.add(day);
-
-        });
 
         const testCount = tests.length;
 
@@ -1189,53 +1468,79 @@ async function loadAchievements(user) {
         const hasHighScore =
             tests.some(test => test.percent >= 90);
 
-        /*
-         * En uzun streak
-         */
 
-        const dates = [];
+        // ============================
+        // 🔥 LOGIN STREAK
+        // ============================
 
-        tests.forEach(test => {
+const studyDaysQuery = query(
+    collection(db, "studyDays"),
+    where("userId", "==", user.uid)
+);
 
-            if (!test.date) return;
+const studyDaysSnapshot =
+    await getDocs(studyDaysQuery);
 
-            const date = test.date.toDate
-                ? test.date.toDate()
-                : new Date(test.date);
+const dates = [];
 
-            const day = new Date(
-                date.getFullYear(),
-                date.getMonth(),
-                date.getDate()
-            );
+studyDaysSnapshot.forEach(studyDoc => {
 
-            dates.push(day.getTime());
+    const studyDay =
+        studyDoc.data();
 
-        });
+    if (!studyDay.date) return;
 
-        const sortedDates = [...new Set(dates)]
-            .sort((a, b) => a - b);
+    const date =
+        new Date(studyDay.date);
+
+    date.setHours(0, 0, 0, 0);
+
+    dates.push(
+        date.getTime()
+    );
+
+});
+
+const sortedDates =
+    [...new Set(dates)]
+        .sort((a, b) => a - b);
+
 
         let longestStreak = 0;
         let currentStreak = 0;
+
 
         if (sortedDates.length > 0) {
 
             currentStreak = 1;
             longestStreak = 1;
 
-            for (let i = 1; i < sortedDates.length; i++) {
+            for (
+                let i = 1;
+                i < sortedDates.length;
+                i++
+            ) {
 
                 const difference =
-                    (sortedDates[i] - sortedDates[i - 1]) /
+                    (
+                        sortedDates[i] -
+                        sortedDates[i - 1]
+                    ) /
                     (1000 * 60 * 60 * 24);
+
 
                 if (difference === 1) {
 
                     currentStreak++;
 
-                    if (currentStreak > longestStreak) {
-                        longestStreak = currentStreak;
+                    if (
+                        currentStreak >
+                        longestStreak
+                    ) {
+
+                        longestStreak =
+                            currentStreak;
+
                     }
 
                 } else {
@@ -1248,80 +1553,189 @@ async function loadAchievements(user) {
 
         }
 
+
+        // ============================
+        // 🏆 ACHIEVEMENTS
+        // ============================
+
         const achievements = [
 
             {
+                id: "firstStep",
                 icon: "🥉",
                 title: "First Step",
                 text: "Complete your first test.",
+                xp: 20,
                 unlocked: testCount >= 1
             },
 
-             {
+            {
+                id: "gettingBetter",
                 icon: "🚀",
                 title: "Getting Better",
                 text: "Complete 10 tests.",
+                xp: 40,
                 unlocked: testCount >= 10
             },
 
             {
+                id: "finisher",
                 icon: "📝",
                 title: "Finisher",
                 text: "Complete 25 tests.",
+                xp: 60,
                 unlocked: testCount >= 25
             },
 
             {
+                id: "testProfessor",
                 icon: "📝",
                 title: "Test Professor",
                 text: "Complete 50 tests.",
+                xp: 100,
                 unlocked: testCount >= 50
             },
 
             {
+                id: "testMaster",
                 icon: "📝",
                 title: "Test Master",
                 text: "Complete 100 tests.",
+                xp: 200,
                 unlocked: testCount >= 100
             },
 
             {
+                id: "highAchiever",
                 icon: "🏆",
                 title: "High Achiever",
                 text: "Score 90% or higher.",
+                xp: 75,
                 unlocked: hasHighScore
             },
 
             {
+                id: "perfectScore",
                 icon: "🎯",
                 title: "Perfect Score",
                 text: "Get a 100% score.",
+                xp: 150,
                 unlocked: hasPerfectScore
             },
 
             {
+                id: "tenDaysStreak",
                 icon: "🔥",
                 title: "10 Days Streak",
                 text: "Study for 10 days.",
+                xp: 100,
                 unlocked: longestStreak >= 10
             }
 
-           
         ];
 
+
+        // ============================
+        // ⭐ ACHIEVEMENT XP
+        // ============================
+
+        const userRef =
+            doc(db, "users", user.uid);
+
+        const userSnap =
+            await getDoc(userRef);
+
+        if (userSnap.exists()) {
+
+            const userData =
+                userSnap.data();
+
+            const unlockedAchievements =
+                userData.achievements || {};
+
+
+            for (
+                const achievement
+                of achievements
+            ) {
+
+                if (
+                    achievement.unlocked &&
+                    !unlockedAchievements[
+                        achievement.id
+                    ]
+                ) {
+
+                    // XP ver
+                    await updateDoc(
+                        userRef,
+                        {
+
+                            xp: increment(
+                                achievement.xp
+                            ),
+
+                            [`achievements.${achievement.id}`]:
+                                true
+
+                        }
+                    );
+
+                    await addDoc(
+    collection(
+        db,
+        "users",
+        user.uid,
+        "xpHistory"
+    ),
+    {
+        amount: achievement.xp,
+
+        reason:
+            `Achievement: ${achievement.title}`,
+
+        icon:
+            achievement.icon,
+
+        date:
+            serverTimestamp()
+    }
+);
+
+                    console.log(
+                        `🏆 ${achievement.title} → +${achievement.xp} XP`
+                    );
+
+                }
+
+            }
+
+        }
+
+
+        // ============================
+        // 🎨 ACHIEVEMENTS UI
+        // ============================
+
         const container =
-            document.getElementById("achievementsGrid");
+            document.getElementById(
+                "achievementsGrid"
+            );
 
         if (!container) return;
 
+
         container.innerHTML =
-            achievements.map(achievement => `
+            achievements.map(
+                achievement => `
 
                 <div class="
                     achievement
-                    ${achievement.unlocked
-                        ? "unlocked"
-                        : "locked"}
+                    ${
+                        achievement.unlocked
+                            ? "unlocked"
+                            : "locked"
+                    }
                 ">
 
                     <div class="achievement-icon">
@@ -1338,11 +1752,17 @@ async function loadAchievements(user) {
                             ${achievement.text}
                         </p>
 
+                        <span class="achievement-xp">
+                            ⭐ +${achievement.xp} XP
+                        </span>
+
                     </div>
 
                 </div>
 
-            `).join("");
+                `
+            ).join("");
+
 
     } catch (error) {
 
@@ -1355,7 +1775,7 @@ async function loadAchievements(user) {
 
 }
 
-function loadDailyChallenge() {
+async function loadDailyChallenge(user) {
 
     console.log("🔥 loadDailyChallenge çalıştı");
 
@@ -1432,26 +1852,69 @@ console.log("Challenge elements:", {
 
 
     // ============================
-    // COMPLETED KONTROLÜ
-    // ============================
+// USER-SPECIFIC COMPLETION
+// ============================
 
-    const todayKey =
-        new Date().toISOString().split("T")[0];
+const todayKey =
+    new Date().toISOString().split("T")[0];
 
-    const completedDate =
-        sessionStorage.getItem(
-            "challengeCompletedDate"
-        );
+let completed = false;
 
-    const completed =
-        sessionStorage.getItem(
-            "challengeCompleted"
-        ) === "true"
-        &&
-        completedDate
-        &&
-        completedDate.startsWith(todayKey);
+try {
 
+    const userRef =
+        doc(db, "users", user.uid);
+
+    const userSnap =
+        await getDoc(userRef);
+
+    if (userSnap.exists()) {
+
+        const userData =
+            userSnap.data();
+
+        const completedDate =
+    userData.dailyChallengeCompletedDate;
+
+if (completedDate) {
+
+    let completedDateKey;
+
+    if (
+        typeof completedDate === "string"
+    ) {
+
+        completedDateKey =
+            completedDate.split("T")[0];
+
+    }
+    else if (
+        completedDate.toDate
+    ) {
+
+        completedDateKey =
+            completedDate
+                .toDate()
+                .toISOString()
+                .split("T")[0];
+
+    }
+
+    completed =
+        completedDateKey === todayKey;
+
+}
+
+    }
+
+} catch (error) {
+
+    console.error(
+        "❌ Daily Challenge kontrol hatası:",
+        error
+    );
+
+}
 
     const progress =
         completed
@@ -1490,7 +1953,6 @@ console.log("Challenge elements:", {
 
         return;
     }
-
 
     // ============================
     // START CHALLENGE
@@ -1627,3 +2089,230 @@ document.addEventListener("DOMContentLoaded", () => {
     showDay(today);
 
 });
+
+// ============================
+// ⭐ XP HISTORY TOGGLE
+// ============================
+
+const xpHistoryBtn =
+    document.getElementById("xpHistoryBtn");
+
+const xpHistory =
+    document.getElementById("xpHistory");
+
+const closeXPHistory =
+    document.getElementById("closeXPHistory");
+
+
+if (xpHistoryBtn && xpHistory) {
+
+    xpHistoryBtn.addEventListener(
+        "click",
+        async () => {
+
+            const isOpen =
+                xpHistory.style.display === "block";
+
+
+            if (isOpen) {
+
+                xpHistory.style.display = "none";
+
+                xpHistoryBtn.textContent =
+                    "⭐ XP HISTORY";
+
+            } else {
+
+                xpHistory.style.display = "block";
+
+                xpHistoryBtn.textContent =
+                    "⭐ HIDE XP HISTORY";
+
+
+                // ⭐ Firebase'den geçmişi getir
+                const user = auth.currentUser;
+
+                if (user) {
+
+                    await loadXPHistory(user);
+
+                }
+
+            }
+
+        }
+    );
+
+}
+
+
+if (closeXPHistory && xpHistory) {
+
+    closeXPHistory.addEventListener(
+        "click",
+        () => {
+
+            xpHistory.style.display = "none";
+
+            if (xpHistoryBtn) {
+
+                xpHistoryBtn.textContent =
+                    "⭐ XP HISTORY";
+
+            }
+
+        }
+    );
+
+
+
+}// ============================
+// ⭐ LOAD XP HISTORY
+// ============================
+
+async function loadXPHistory(user) {
+
+    const historyList =
+        document.getElementById("xpHistoryList");
+
+    const totalElement =
+        document.getElementById("xpHistoryTotal");
+
+    if (!historyList) return;
+
+    try {
+
+        // ============================
+        // ⭐ GERÇEK KULLANICI XP
+        // ============================
+
+        const userRef =
+            doc(db, "users", user.uid);
+
+        const userSnap =
+            await getDoc(userRef);
+
+        if (userSnap.exists()) {
+
+            const userData =
+                userSnap.data();
+
+            const totalXP =
+                Number(userData.xp) || 0;
+
+            if (totalElement) {
+
+                totalElement.textContent =
+                    `Total Earned: ${totalXP} XP`;
+
+            }
+
+        }
+
+
+        // ============================
+        // 📜 SON 20 XP KAYDI
+        // ============================
+
+        const historyQuery = query(
+            collection(
+                db,
+                "users",
+                user.uid,
+                "xpHistory"
+            ),
+            orderBy("date", "desc"),
+            limit(20)
+        );
+
+        const snapshot =
+            await getDocs(historyQuery);
+
+
+        if (snapshot.empty) {
+
+            historyList.innerHTML = `
+                <p class="xp-history-empty">
+                    No XP history yet.
+                </p>
+            `;
+
+            return;
+
+        }
+
+
+        historyList.innerHTML = "";
+
+
+        snapshot.forEach(historyDoc => {
+
+            const data =
+                historyDoc.data();
+
+            const amount =
+                Number(data.amount) || 0;
+
+            let dateText = "";
+
+
+            if (data.date) {
+
+                const date =
+                    data.date.toDate
+                        ? data.date.toDate()
+                        : new Date(data.date);
+
+                dateText =
+                    date.toLocaleDateString("en-GB");
+
+            }
+
+
+            historyList.innerHTML += `
+
+                <div class="xp-history-item">
+
+                    <div class="xp-history-icon">
+                        ${data.icon || "⭐"}
+                    </div>
+
+                    <div class="xp-history-info">
+
+                        <div class="xp-history-reason">
+                            ${data.reason || "XP Earned"}
+                        </div>
+
+                        <div class="xp-history-date">
+                            ${dateText}
+                        </div>
+
+                    </div>
+
+                    <div class="xp-history-amount">
+                        +${amount} XP
+                    </div>
+
+                </div>
+
+            `;
+
+        });
+
+
+    } catch (error) {
+
+        console.error(
+            "❌ XP History loading error:",
+            error
+        );
+
+        historyList.innerHTML = `
+            <p class="xp-history-empty">
+                Unable to load XP history.
+            </p>
+        `;
+
+    }
+
+}

@@ -1,4 +1,100 @@
 import { saveToFirebase } from "../../../js/saveResult.js";
+import { db } from "../../../firebase-config.js";
+
+import {
+    doc,
+    updateDoc,
+    increment
+} from "https://www.gstatic.com/firebasejs/12.17.1/firebase-firestore.js";
+
+// ============================
+// 🎮 TEST XP SYSTEM
+// ============================
+
+async function addTestXP(percent) {
+
+    const userId =
+        sessionStorage.getItem("userId");
+
+    if (!userId) {
+
+        console.warn(
+            "⚠️ User ID bulunamadı. XP verilmedi."
+        );
+
+        return;
+
+    }
+
+    let baseXP = 20;
+    let bonusXP = 0;
+
+    // ============================
+    // 🏆 SUCCESS BONUS
+    // ============================
+
+    if (percent >= 100) {
+
+        bonusXP = 25;
+
+    }
+    else if (percent >= 90) {
+
+        bonusXP = 15;
+
+    }
+    else if (percent >= 80) {
+
+        bonusXP = 10;
+
+    }
+
+
+    const totalXP =
+        baseXP + bonusXP;
+
+
+    try {
+
+        const userRef =
+            doc(db, "users", userId);
+
+        await updateDoc(userRef, {
+
+            xp: increment(totalXP)
+
+        });
+
+
+        console.log(
+            `🎮 +${baseXP} XP test`
+        );
+
+
+        if (bonusXP > 0) {
+
+            console.log(
+                `🏆 +${bonusXP} XP başarı bonusu`
+            );
+
+        }
+
+
+        console.log(
+            `⭐ Toplam +${totalXP} XP`
+        );
+
+
+    } catch (error) {
+
+        console.error(
+            "❌ XP eklenirken hata:",
+            error
+        );
+
+    }
+
+}
 
 const questions = [
 
@@ -297,6 +393,8 @@ async function saveTestResult(){
     };
 
     await saveToFirebase(result);
+    
+        await addTestXP(result.percent);
 
     // ============================
 // DAILY CHALLENGE COMPLETION

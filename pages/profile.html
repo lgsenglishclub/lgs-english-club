@@ -153,6 +153,114 @@ style="display:none;">
 
     </div>
 
+   
+ <div class="xp-card">
+
+<div class="xp-header">
+
+    <div class="xp-level-info">
+
+        <span class="xp-label">
+            🎮 YOUR LEVEL
+        </span>
+
+        <h2 id="profileLevel">
+            LEVEL 1
+        </h2>
+
+    </div>
+
+    <div
+        class="xp-number"
+        id="profileXP">
+
+        0 XP
+
+    </div>
+
+</div>
+
+
+<div class="xp-bar">
+
+    <div
+        class="xp-progress"
+        id="xpProgress">
+
+    </div>
+
+</div>
+
+
+<div
+    class="xp-remaining"
+    id="xpRemaining">
+
+    100 XP until Level 2
+
+</div>
+
+
+<!-- ========================= -->
+<!-- ⭐ XP HISTORY BUTTON -->
+<!-- ========================= -->
+
+<button
+    id="xpHistoryBtn"
+    class="xp-history-btn"
+    type="button">
+
+    ⭐ XP HISTORY
+
+</button>
+
+
+<!-- ========================= -->
+<!-- 📜 XP HISTORY -->
+<!-- ========================= -->
+
+<div
+    id="xpHistory"
+    class="xp-history"
+    style="display:none;">
+
+    <div class="xp-history-header">
+
+        <div>
+
+            <h3>
+                XP HISTORY
+            </h3>
+        </div>
+
+        <button
+            id="closeXPHistory"
+            class="xp-history-close">
+            ✕
+        </button>
+
+    </div>
+
+    <div
+        id="xpHistoryTotal"
+        class="xp-history-total">
+        Total Earned: 0 XP
+    </div>
+
+    <div
+        id="xpHistoryList"
+        class="xp-history-list">
+
+        <p class="xp-history-empty">
+            No XP history yet.
+        </p>
+
+    </div>
+
+</div>
+
+</div>
+
     <div class="study-streak-card">
 
     <h2>
@@ -175,54 +283,6 @@ style="display:none;">
         </div>
 
     </div>
-
-</div>
-
-<div class="personal-stats-card">
-
-    <h2>
-        <i class="fa-solid fa-chart-simple"></i>
-        Personal Statistics
-    </h2>
-
-    <div class="stats-grid">
-
-        <div class="stat-box">
-            <div class="stat-icon">📝</div>
-            <span class="stat-label">Tests Taken</span>
-            <strong id="totalTests">0</strong>
-        </div>
-
-        <div class="stat-box">
-            <div class="stat-icon">✅</div>
-            <span class="stat-label">Total Correct</span>
-            <strong id="totalCorrect">0</strong>
-        </div>
-
-        <div class="stat-box">
-            <div class="stat-icon">🎯</div>
-            <span class="stat-label">Average Net</span>
-            <strong id="averageNet">0</strong>
-        </div>
-
-        <div class="stat-box">
-            <div class="stat-icon">📈</div>
-            <span class="stat-label">Average Score</span>
-            <strong id="averageScore">0%</strong>
-        </div>
-
-    </div>
-
-</div>
-
-<div class="achievements-card">
-
-    <h2>
-        <i class="fa-solid fa-medal"></i>
-        Achievements
-    </h2>
-
-    <div class="achievements-grid" id="achievementsGrid"></div>
 
 </div>
 
@@ -300,6 +360,54 @@ style="display:none;">
         </div>
 
     </div>
+
+</div>
+
+<div class="personal-stats-card">
+
+    <h2>
+        <i class="fa-solid fa-chart-simple"></i>
+        Personal Statistics
+    </h2>
+
+    <div class="stats-grid">
+
+        <div class="stat-box">
+            <div class="stat-icon">📝</div>
+            <span class="stat-label">Tests Taken</span>
+            <strong id="totalTests">0</strong>
+        </div>
+
+        <div class="stat-box">
+            <div class="stat-icon">✅</div>
+            <span class="stat-label">Total Correct</span>
+            <strong id="totalCorrect">0</strong>
+        </div>
+
+        <div class="stat-box">
+            <div class="stat-icon">🎯</div>
+            <span class="stat-label">Average Net</span>
+            <strong id="averageNet">0</strong>
+        </div>
+
+        <div class="stat-box">
+            <div class="stat-icon">📈</div>
+            <span class="stat-label">Average Score</span>
+            <strong id="averageScore">0%</strong>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="achievements-card">
+
+    <h2>
+        <i class="fa-solid fa-medal"></i>
+        Achievements
+    </h2>
+
+    <div class="achievements-grid" id="achievementsGrid"></div>
 
 </div>
 

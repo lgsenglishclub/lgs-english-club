@@ -1,4 +1,139 @@
 import { saveToFirebase } from "../../../js/saveResult.js";
+import { db } from "../../../firebase-config.js";
+
+import {
+    doc,
+    getDoc,
+    updateDoc,
+    increment,
+    addDoc,
+    collection,
+    serverTimestamp
+} from "https://www.gstatic.com/firebasejs/12.17.1/firebase-firestore.js";
+
+
+// ============================
+// 🎮 TEST XP SYSTEM
+// ============================
+
+async function addTestXP(percent) {
+
+    console.log("🎮 addTestXP BAŞLADI:", percent);
+
+    const userId =
+        sessionStorage.getItem("userId");
+
+    if (!userId) {
+
+        console.warn(
+            "⚠️ User ID bulunamadı. XP verilmedi."
+        );
+
+        return;
+
+    }
+
+    let baseXP = 20;
+    let bonusXP = 0;
+
+    // ============================
+    // 🏆 SUCCESS BONUS
+    // ============================
+
+    if (percent >= 100) {
+
+        bonusXP = 25;
+
+    }
+    else if (percent >= 90) {
+
+        bonusXP = 15;
+
+    }
+    else if (percent >= 80) {
+
+        bonusXP = 10;
+
+    }
+
+    const totalXP =
+        baseXP + bonusXP;
+
+    try {
+
+        const userRef =
+            doc(db, "users", userId);
+
+
+        // ============================
+        // ⭐ XP EKLE
+        // ============================
+
+        await updateDoc(userRef, {
+
+            xp: increment(totalXP)
+
+        });
+
+
+        // ============================
+        // 📈 XP HISTORY
+        // ============================
+
+        await addDoc(
+            collection(
+                db,
+                "users",
+                userId,
+                "xpHistory"
+            ),
+            {
+
+                amount: totalXP,
+
+                reason: "Test Completed",
+
+                icon: "📝",
+
+                date: serverTimestamp()
+
+            }
+        );
+
+
+        console.log(
+            `🎮 +${baseXP} XP test`
+        );
+
+
+        if (bonusXP > 0) {
+
+            console.log(
+                `🏆 +${bonusXP} XP başarı bonusu`
+            );
+
+        }
+
+
+        console.log(
+            `⭐ Toplam +${totalXP} XP`
+        );
+
+        console.log(
+            `📈 XP History: +${totalXP} Test Completed`
+        );
+
+
+    } catch (error) {
+
+        console.error(
+            "❌ XP eklenirken hata:",
+            error
+        );
+
+    }
+
+}
 
 const questions = [
 
@@ -460,8 +595,10 @@ async function saveTestResult(){
 
     await saveToFirebase(result);
 
-    // ============================
-// DAILY CHALLENGE COMPLETION
+    await addTestXP(result.percent);
+
+  // ============================
+// 🎯 DAILY CHALLENGE COMPLETION
 // ============================
 
 const activeChallenge =
@@ -481,28 +618,84 @@ if (activeChallenge === "daily") {
 
     if (questions.length >= target) {
 
-        sessionStorage.setItem(
-            "challengeCompleted",
-            "true"
-        );
+        const today =
+            new Date().toISOString().split("T")[0];
 
-        sessionStorage.setItem(
-            "challengeCompletedDate",
-            new Date().toISOString()
-        );
+        const userId =
+            sessionStorage.getItem("userId");
 
-        sessionStorage.setItem(
-            "challengeXP",
-            String(reward)
-        );
+        if (userId) {
 
-        console.log("🎉 DAILY CHALLENGE COMPLETED!");
+            const userRef =
+                doc(db, "users", userId);
 
-        console.log(
-            `🏆 +${reward} XP`
-        );
+            const userSnap =
+                await getDoc(userRef);
+
+            const userData =
+                userSnap.exists()
+                    ? userSnap.data()
+                    : {};
+
+            const alreadyCompleted =
+                userData.dailyChallengeCompletedDate === today;
+
+            // Bugün daha önce tamamlanmadıysa
+            if (!alreadyCompleted) {
+
+                // XP + tamamlanma tarihi
+                await updateDoc(userRef, {
+
+                    xp: increment(reward),
+
+                    dailyChallengeCompletedDate:
+                        today
+
+                });
+
+                // XP History
+                await addDoc(
+                    collection(
+                        db,
+                        "users",
+                        userId,
+                        "xpHistory"
+                    ),
+                    {
+
+                        amount: reward,
+
+                        reason:
+                            "Daily Challenge",
+
+                        icon: "🎯",
+
+                        date:
+                            serverTimestamp()
+
+                    }
+                );
+
+                console.log(
+                    "🎯 DAILY CHALLENGE COMPLETED!"
+                );
+
+                console.log(
+                    `🏆 +${reward} XP`
+                );
+
+            } else {
+
+                console.log(
+                    "ℹ️ Daily Challenge bugün zaten tamamlandı."
+                );
+
+            }
+
+        }
 
     }
+
 }
 
 history.unshift(result);

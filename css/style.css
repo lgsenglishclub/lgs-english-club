@@ -823,7 +823,7 @@ button:hover {
 
 .profile-card {
     background: white;
-    max-width: 550px;
+    max-width: 500px;
     width: 100%;
 
     margin: 30px auto 0; /* Üstten 40px boşluk */
@@ -923,7 +923,7 @@ button:hover {
 
         text-align:center;
 
-        gap:15px;
+        gap:10px;
 
     }
 
@@ -941,6 +941,10 @@ button:hover {
 
     }
 
+     .profile-avatar {
+        margin-bottom: 10px;
+    }
+
 
 }
 
@@ -949,7 +953,7 @@ button:hover {
     #profileCard{
 
         padding:22px;
-
+        padding-bottom: 20px;
     }
 
 
@@ -14058,9 +14062,9 @@ Premium Kart
 
     position:absolute;
 
-    top:115px;
+    top:-25px;
 
-    left:682px;
+    left:-25px;
 
     width:90px;
 
@@ -14175,20 +14179,22 @@ Premium Kart
 @media (max-width: 768px) {
 
     .floating-membership-card {
-        position: relative;
+        position: absolute;
 
         width: 100%;
         max-width: 80px;
 
-        margin: 15px auto;
+        margin: 10px 10px;
         padding: 0px 15px;
+
+        left: 5;
+        top: 5;
 
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 5px;
 
-        transform: translate(-810px, -37px);
     }
 
 

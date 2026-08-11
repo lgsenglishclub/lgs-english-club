@@ -989,69 +989,153 @@ async function showWord() {
     }
 
 
-    vocabularyList.innerHTML = `
+vocabularyList.innerHTML = `
 
-        <div class="word-card">
+    <div class="word-card">
 
-            <h3>
-                ${item.word}
-            </h3>
+        <h3>
+            ${item.word}
+        </h3>
 
-            <span class="word-type">
-                ${item.type}
-            </span>
+        <span class="word-type">
+            ${item.type}
+        </span>
+
+
+        <!-- TÜRKÇE ANLAM + TÜRKÇE ÖRNEK GİZLİ -->
+        <div
+            id="meaningSection"
+            style="display: none;"
+        >
 
             <p class="meaning">
                 ${item.meaning}
             </p>
 
-            <button
-                class="audio-btn"
-                id="audioButton"
-                title="Listen">
+        </div>
 
-                🔊
 
-            </button>
+        <!-- AUDIO -->
+        <button
+            class="audio-btn"
+            id="audioButton"
+            title="Listen">
 
-           <div class="example-box">
+            🔊
 
-    <div class="example-label">
-        Example Sentence
-    </div>
+        </button>
 
-    <p class="example">
-        ${item.example}
-    </p>
 
-    <p class="example-tr">
-        ${item.exampleTr}
-    </p>
+        <!-- ÖRNEK CÜMLE HER ZAMAN GÖRÜNÜR -->
+        <div class="example-box">
 
-</div>
-            <div class="word-actions">
-
-                <button
-                    class="know-word"
-                    id="knowWord">
-
-                    ⭐ I Know This Word
-
-                </button>
-
-                <button
-                    class="review-word"
-                    id="reviewWord">
-
-                    🔄 Review Again
-
-                </button>
-
+            <div class="example-label">
+                Example Sentence
             </div>
+
+            <p class="example">
+                ${item.example}
+            </p>
+
+            <!-- TÜRKÇE ÖRNEK GİZLİ -->
+            <p
+                class="example-tr"
+                id="exampleTr"
+                style="display: none;"
+            >
+                ${item.exampleTr}
+            </p>
 
         </div>
 
-    `;
+
+        <!-- SHOW MEANING -->
+        <button
+            class="show-meaning-btn"
+            id="showMeaningBtn">
+
+            👁 Show Meaning
+
+        </button>
+
+
+        <!-- KNOW / REVIEW -->
+        <div
+            class="word-actions"
+            id="wordActions"
+            style="display: none;"
+        >
+
+            <button
+                class="know-word"
+                id="knowWord">
+
+                ⭐ I Know This Word
+
+            </button>
+
+            <button
+                class="review-word"
+                id="reviewWord">
+
+                🔄 Review Again
+
+            </button>
+
+        </div>
+
+    </div>
+
+`;
+
+// =========================================
+// 👁 SHOW MEANING
+// =========================================
+
+const showMeaningBtn =
+    document.getElementById("showMeaningBtn");
+
+const meaningSection =
+    document.getElementById("meaningSection");
+
+const exampleTr =
+    document.getElementById("exampleTr");
+
+const wordActions =
+    document.getElementById("wordActions");
+
+
+if (
+    showMeaningBtn &&
+    meaningSection &&
+    exampleTr &&
+    wordActions
+) {
+
+    showMeaningBtn.addEventListener(
+        "click",
+        () => {
+
+            // 🇹🇷 Kelime anlamını göster
+            meaningSection.style.display =
+                "block";
+
+            // 🇹🇷 Türkçe örnek cümleyi göster
+            exampleTr.style.display =
+                "block";
+
+            // Show Meaning butonunu gizle
+            showMeaningBtn.style.display =
+                "none";
+
+            // Know / Review butonlarını göster
+            wordActions.style.display =
+                "flex";
+
+        }
+    );
+
+}
 
 
     // =========================================

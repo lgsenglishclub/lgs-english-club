@@ -904,7 +904,74 @@ body {
         font-size: 11px;
     }
 
+    }
+
+    @media (max-width: 600px) {
+
+    .vocab-header {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 14px 12px 18px;
+    }
+
+    .vocab-header .title-area {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .vocab-header .title-area h1 {
+        font-size: 25px;
+        margin: 0;
+    }
+
+    .vocab-header .unit-tabs {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: stretch;
+        align-items: center;
+
+        gap: 5px;
+
+        margin: 0;
+        padding: 0;
+
+        box-sizing: border-box;
+    }
+
+    .vocab-header .unit-tabs a {
+        flex: 1 1 0;
+
+        width: 0;
+        min-width: 0;
+        max-width: none;
+
+        height: 40px;
+        min-height: 40px;
+
+        padding: 0 4px ;
+        margin: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        box-sizing: border-box;
+
+        font-size: 12px;
+        white-space: nowrap;
+
+        border-radius: 11px;
+    }
+
 }
+
+
+
+
+
+
 
 /* =========================================
    CURRENT WORD
@@ -993,4 +1060,136 @@ body {
 
     color: white !important;
     border: none !important;
+}
+
+/* =========================================
+   👁 SHOW MEANING BUTTON
+   ========================================= */
+
+.show-meaning-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    max-width: 240px;
+    min-height: 44px;
+
+    margin: 20px auto;
+
+    padding: 0 20px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #38bdf8
+    );
+
+    color: white;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 4px 10px rgba(37, 99, 235, 0.20);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* Hover */
+
+.show-meaning-btn:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 7px 16px rgba(37, 99, 235, 0.28);
+}
+
+
+/* Click */
+
+.show-meaning-btn:active {
+
+    transform: translateY(0);
+
+    box-shadow:
+        0 3px 7px rgba(37, 99, 235, 0.20);
+}
+
+/* =========================================
+   MEANING SECTION
+   ========================================= */
+
+#meaningSection {
+    text-align: center;
+    animation: meaningReveal 0.25s ease;
+}
+
+#meaningSection .meaning {
+    margin: 16px 0;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   EXAMPLE BOX
+   ========================================= */
+
+#meaningSection .example-box {
+    margin-top: 18px;
+}
+
+
+/* Türkçe örnek */
+
+#meaningSection .example-tr {
+    margin-top: 10px;
+    padding-top: 10px;
+
+    border-top: 1px solid #dbeafe;
+
+    font-size: 14px;
+    color: #64748b;
+    font-style: italic;
+}
+
+
+/* Açılma animasyonu */
+
+@keyframes meaningReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .show-meaning-btn {
+        max-width: 220px;
+        min-height: 42px;
+        font-size: 13px;
+    }
+
+    #meaningSection .meaning {
+        font-size: 20px;
+    }
+
 }

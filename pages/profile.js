@@ -816,35 +816,70 @@ function getNextLevelXP(level) {
 }
 
 
-// XP kazan
-async function addXP(user, amount) {
+// ============================
+// ⭐ ADD XP
+// ============================
 
-    if (!user || !amount || amount <= 0) return;
+async function addXP(
+    user,
+    amount,
+    reason = "XP Earned",
+    icon = "⭐"
+) {
+
+    if (
+        !user ||
+        !amount ||
+        amount <= 0
+    ) {
+        return;
+    }
 
     try {
 
-        const userRef = doc(db, "users", user.uid);
+        const userRef =
+            doc(db, "users", user.uid);
 
-        const today =
-    new Date().toISOString().split("T")[0];
+        // Kullanıcının toplam XP'sini artır
+        await updateDoc(
+            userRef,
+            {
+                xp: increment(amount)
+            }
+        );
 
-        await updateDoc(userRef, {
+        // XP geçmişine kaydet
+        await addDoc(
+            collection(
+                db,
+                "users",
+                user.uid,
+                "xpHistory"
+            ),
+            {
+                amount: amount,
+                reason: reason,
+                icon: icon,
+                date: serverTimestamp()
+            }
+        );
 
-    xp: increment(reward),
-
-    dailyChallengeCompletedDate: today
-
-});
-
-        console.log(`🎮 +${amount} XP`);
+        console.log(
+            `⭐ +${amount} XP — ${reason}`
+        );
 
     } catch (error) {
 
-        console.error("XP ekleme hatası:", error);
+        console.error(
+            "❌ XP ekleme hatası:",
+            error
+        );
 
     }
 
 }
+
+export { addXP };
 
 
 // Profile XP bilgilerini göster

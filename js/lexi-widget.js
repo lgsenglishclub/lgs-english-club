@@ -4,6 +4,14 @@
 
 (function () {
 
+    // Giriş yapılmamışsa Lexi'yi gösterme
+    const userId = sessionStorage.getItem("userId");
+
+    if (!userId) {
+        return;
+    }
+
+    // Zaten varsa tekrar oluşturma
     if (document.querySelector(".lexi-assistant")) {
         return;
     }
@@ -21,28 +29,28 @@
 
     lexi.innerHTML = `
 
-    <div class="lexi-message">
+        <div class="lexi-message">
 
-        <strong>Hi! I'm LEXi.</strong>
+            <strong>Hi! I'm LEXi.</strong>
 
-        <span>
-            Your personal AI Teacher
-        </span>
+            <span>
+                Your personal AI Teacher
+            </span>
 
-    </div>
+        </div>
 
-    <div class="lexi-avatar">
+        <div class="lexi-avatar">
 
-        <img
-            src="/pages/ai-teacher/images/lexi3.png"
-            alt="Lexi AI English Teacher"
-        >
+            <img
+                src="/pages/ai-teacher/images/lexi3.png"
+                alt="Lexi AI English Teacher"
+            >
 
-        <span class="lexi-status"></span>
+            <span class="lexi-status"></span>
 
-    </div>
+        </div>
 
-`;
+    `;
 
     document.body.appendChild(lexi);
 

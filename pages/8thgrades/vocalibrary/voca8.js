@@ -26,12 +26,428 @@ import {
 
 const vocabulary = [
 
-    {
-    word: "Teen",
+{
+    word: "Chores",
     type: "noun",
-    meaning: "Genç",
-    example: "The teen is studying for an exam.",
-    exampleTr: "Genç bir sınava çalışıyor."
+    meaning: "Ev işleri",
+    example: "Everyone should help with the household chores.",
+    exampleTr: "Herkes ev işlerine yardım etmelidir."
+},
+
+{
+    word: "Housework",
+    type: "noun",
+    meaning: "Ev işi",
+    example: "We share the housework at home.",
+    exampleTr: "Evde ev işlerini paylaşırız."
+},
+
+{
+    word: "Do errands",
+    type: "phrase",
+    meaning: "Ayak işlerini yapmak",
+    example: "I have to do some errands today.",
+    exampleTr: "Bugün bazı ayak işlerini yapmam gerekiyor."
+},
+
+{
+    word: "Do the ironing",
+    type: "phrase",
+    meaning: "Ütü yapmak",
+    example: "I usually do the ironing at the weekend.",
+    exampleTr: "Genellikle hafta sonu ütü yaparım."
+},
+
+{
+    word: "Dust the furniture",
+    type: "phrase",
+    meaning: "Mobilyaların tozunu almak",
+    example: "I dust the furniture every Saturday.",
+    exampleTr: "Her cumartesi mobilyaların tozunu alırım."
+},
+
+{
+    word: "Empty the dishwasher",
+    type: "phrase",
+    meaning: "Bulaşık makinesini boşaltmak",
+    example: "Can you empty the dishwasher, please?",
+    exampleTr: "Bulaşık makinesini boşaltabilir misin?"
+},
+
+{
+    word: "Feed the pet",
+    type: "phrase",
+    meaning: "Evcil hayvanı beslemek",
+    example: "I feed the pet every morning.",
+    exampleTr: "Her sabah evcil hayvanı beslerim."
+},
+
+{
+    word: "Have strong ties",
+    type: "phrase",
+    meaning: "Güçlü bağlara sahip olmak",
+    example: "We have strong ties with our family.",
+    exampleTr: "Ailemizle güçlü bağlarımız var."
+},
+
+{
+    word: "In charge of",
+    type: "phrase",
+    meaning: "Sorumlu olmak",
+    example: "I am in charge of cleaning my room.",
+    exampleTr: "Odamı temizlemekten ben sorumluyum."
+},
+
+{
+    word: "Load the dishwasher",
+    type: "phrase",
+    meaning: "Bulaşık makinesini doldurmak",
+    example: "Please load the dishwasher after dinner.",
+    exampleTr: "Lütfen akşam yemeğinden sonra bulaşık makinesini doldur."
+},
+
+{
+    word: "Make the bed",
+    type: "phrase",
+    meaning: "Yatağı toplamak",
+    example: "I make my bed every morning.",
+    exampleTr: "Her sabah yatağımı toplarım."
+},
+
+{
+    word: "Mess",
+    type: "noun",
+    meaning: "Dağınıklık",
+    example: "Your room is a mess.",
+    exampleTr: "Odan çok dağınık."
+},
+
+{
+    word: "Mop the floor",
+    type: "phrase",
+    meaning: "Yeri paspaslamak",
+    example: "I mop the floor once a week.",
+    exampleTr: "Haftada bir kez yeri paspaslarım."
+},
+
+{
+    word: "Rule",
+    type: "noun",
+    meaning: "Kural",
+    example: "Students must obey the classroom rules.",
+    exampleTr: "Öğrenciler sınıf kurallarına uymalıdır."
+},
+
+{
+    word: "Responsibility",
+    type: "noun",
+    meaning: "Sorumluluk",
+    example: "Family members should share responsibilities.",
+    exampleTr: "Aile üyeleri sorumlulukları paylaşmalıdır."
+},
+
+{
+    word: "Take out the garbage",
+    type: "phrase",
+    meaning: "Çöpü dışarı çıkarmak",
+    example: "I take out the garbage every evening.",
+    exampleTr: "Her akşam çöpü dışarı çıkarırım."
+},
+
+{
+    word: "Tidy up the room",
+    type: "phrase",
+    meaning: "Odayı toparlamak",
+    example: "I need to tidy up my room.",
+    exampleTr: "Odamı toparlamam gerekiyor."
+},
+
+{
+    word: "To-do list",
+    type: "noun",
+    meaning: "Yapılacaklar listesi",
+    example: "I wrote everything on my to-do list.",
+    exampleTr: "Her şeyi yapılacaklar listeme yazdım."
+},
+
+{
+    word: "Vacuum the carpet",
+    type: "phrase",
+    meaning: "Halıyı süpürmek",
+    example: "I vacuum the carpet every weekend.",
+    exampleTr: "Her hafta sonu halıyı süpürürüm."
+},
+
+{
+    word: "Walk the dog",
+    type: "phrase",
+    meaning: "Köpeği gezdirmek",
+    example: "I walk the dog after school.",
+    exampleTr: "Okuldan sonra köpeği gezdiririm."
+},
+
+{
+    word: "Separate the laundry",
+    type: "phrase",
+    meaning: "Çamaşırları ayırmak",
+    example: "I separate the laundry before washing it.",
+    exampleTr: "Çamaşırları yıkamadan önce ayırırım."
+},
+
+{
+    word: "Fold the clothes",
+    type: "phrase",
+    meaning: "Kıyafetleri katlamak",
+    example: "I fold the clothes after doing the laundry.",
+    exampleTr: "Çamaşırları yıkadıktan sonra kıyafetleri katlarım."
+},
+
+{
+    word: "Do the grocery shopping",
+    type: "phrase",
+    meaning: "Market alışverişi yapmak",
+    example: "My mother does the grocery shopping every weekend.",
+    exampleTr: "Annem her hafta sonu market alışverişi yapar."
+},
+
+{
+    word: "Vacuum the house",
+    type: "phrase",
+    meaning: "Evi elektrikli süpürgeyle süpürmek",
+    example: "I vacuum the house on Saturdays.",
+    exampleTr: "Cumartesileri evi elektrikli süpürgeyle süpürürüm."
+},
+
+{
+    word: "Clean the windows",
+    type: "phrase",
+    meaning: "Pencereleri temizlemek",
+    example: "We clean the windows once a month.",
+    exampleTr: "Ayda bir kez pencereleri temizleriz."
+},
+
+{
+    word: "Take care of the baby",
+    type: "phrase",
+    meaning: "Bebekle ilgilenmek",
+    example: "She takes care of the baby while her mother is away.",
+    exampleTr: "Annesi yokken bebeğe o bakıyor."
+},
+
+{
+    word: "Mow the lawn",
+    type: "phrase",
+    meaning: "Çimleri biçmek",
+    example: "My father mows the lawn every Sunday.",
+    exampleTr: "Babam her pazar çimleri biçer."
+},
+
+{
+    word: "Wash the car",
+    type: "phrase",
+    meaning: "Araba yıkamak",
+    example: "I wash the car at the weekend.",
+    exampleTr: "Hafta sonu arabayı yıkarım."
+},
+
+{
+    word: "Clean up the garage",
+    type: "phrase",
+    meaning: "Garajı temizlemek",
+    example: "We need to clean up the garage.",
+    exampleTr: "Garajı temizlememiz gerekiyor."
+},
+
+{
+    word: "Keep a diary",
+    type: "phrase",
+    meaning: "Günlük tutmak",
+    example: "I like to keep a diary.",
+    exampleTr: "Günlük tutmayı seviyorum."
+},
+
+{
+    word: "Obey",
+    type: "verb",
+    meaning: "İtaat etmek, uymak",
+    example: "Students must obey the rules.",
+    exampleTr: "Öğrenciler kurallara uymalıdır."
+},
+
+{
+    word: "Make mistakes",
+    type: "phrase",
+    meaning: "Hata yapmak",
+    example: "Everyone can make mistakes.",
+    exampleTr: "Herkes hata yapabilir."
+},
+
+{
+    word: "Annoyed",
+    type: "adjective",
+    meaning: "Kızgın, rahatsız olmuş",
+    example: "She feels annoyed when her brother makes a mess.",
+    exampleTr: "Kardeşi dağınıklık yaptığında rahatsız hisseder."
+},
+
+{
+    word: "Nervous",
+    type: "adjective",
+    meaning: "Gergin",
+    example: "I feel nervous before an exam.",
+    exampleTr: "Sınavdan önce gergin hissederim."
+},
+
+{
+    word: "Fair",
+    type: "adjective",
+    meaning: "Adil",
+    example: "Sharing responsibilities is fair.",
+    exampleTr: "Sorumlulukları paylaşmak adildir."
+},
+
+{
+    word: "Encouraging",
+    type: "adjective",
+    meaning: "Cesaretlendirici",
+    example: "My parents are always encouraging.",
+    exampleTr: "Ailem her zaman cesaretlendiricidir."
+},
+
+{
+    word: "Tidy",
+    type: "adjective",
+    meaning: "Düzenli",
+    example: "I always keep my room tidy.",
+    exampleTr: "Odamı her zaman düzenli tutarım."
+},
+
+{
+    word: "Untidy",
+    type: "adjective",
+    meaning: "Dağınık",
+    example: "His room is always untidy.",
+    exampleTr: "Onun odası her zaman dağınıktır."
+},
+
+{
+    word: "Permission",
+    type: "noun",
+    meaning: "İzin",
+    example: "Children need permission to go out.",
+    exampleTr: "Çocukların dışarı çıkmak için izne ihtiyacı vardır."
+},
+
+{
+    word: "Allow",
+    type: "verb",
+    meaning: "İzin vermek",
+    example: "My parents allow me to play after I finish my chores.",
+    exampleTr: "Ailem ev işlerimi bitirdikten sonra oynamama izin verir."
+},
+
+{
+    word: "Require",
+    type: "verb",
+    meaning: "Gerektirmek",
+    example: "Some chores require more time.",
+    exampleTr: "Bazı ev işleri daha fazla zaman gerektirir."
+},
+
+{
+    word: "Cooperate",
+    type: "verb",
+    meaning: "İş birliği yapmak",
+    example: "Family members should cooperate with each other.",
+    exampleTr: "Aile üyeleri birbirleriyle iş birliği yapmalıdır."
+},
+
+{
+    word: "Share",
+    type: "verb",
+    meaning: "Paylaşmak",
+    example: "We share the household chores.",
+    exampleTr: "Ev işlerini paylaşırız."
+},
+
+{
+    word: "Argue",
+    type: "verb",
+    meaning: "Tartışmak",
+    example: "My brother and I sometimes argue about chores.",
+    exampleTr: "Kardeşimle bazen ev işleri hakkında tartışırız."
+},
+
+{
+    word: "Apologize",
+    type: "verb",
+    meaning: "Özür dilemek",
+    example: "You should apologize when you make a mistake.",
+    exampleTr: "Hata yaptığında özür dilemelisin."
+},
+
+{
+    word: "Punishment",
+    type: "noun",
+    meaning: "Ceza",
+    example: "Breaking the rules may result in punishment.",
+    exampleTr: "Kuralları çiğnemek cezaya yol açabilir."
+},
+
+{
+    word: "Reward",
+    type: "noun / verb",
+    meaning: "Ödül, ödüllendirmek",
+    example: "Parents sometimes give rewards for good behavior.",
+    exampleTr: "Ebeveynler bazen iyi davranışlar için ödül verir."
+},
+
+{
+    word: "Fix",
+    type: "verb",
+    meaning: "Tamir etmek",
+    example: "My father fixes things at home.",
+    exampleTr: "Babam evdeki şeyleri tamir eder."
+},
+
+{
+    word: "Hang out the washing",
+    type: "phrase",
+    meaning: "Yıkanan çamaşırları asmak",
+    example: "I hang out the washing after doing the laundry.",
+    exampleTr: "Çamaşırları yıkadıktan sonra onları asarım."
+},
+
+{
+    word: "Place the dishes",
+    type: "phrase",
+    meaning: "Tabakları yerleştirmek",
+    example: "Please place the dishes in the cupboard.",
+    exampleTr: "Lütfen tabakları dolaba yerleştir."
+},
+
+{
+    word: "Sweep the leaves",
+    type: "phrase",
+    meaning: "Yaprakları süpürmek",
+    example: "I sweep the leaves in the garden.",
+    exampleTr: "Bahçedeki yaprakları süpürürüm."
+},
+
+{
+    word: "Water the plants",
+    type: "phrase",
+    meaning: "Bitkileri sulamak",
+    example: "I water the plants every morning.",
+    exampleTr: "Her sabah bitkileri sularım."
+},
+
+{
+    word: "Share the housework",
+    type: "phrase",
+    meaning: "Ev işlerini paylaşmak",
+    example: "We share the housework at home.",
+    exampleTr: "Evde ev işlerini paylaşırız."
 }
 
 ];
@@ -96,7 +512,7 @@ function getProgressRef(user) {
         "users",
         user.uid,
         "vocabulary",
-        "unit1"
+        "unit8"
     );
 
 }

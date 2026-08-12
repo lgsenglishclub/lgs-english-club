@@ -26,7 +26,7 @@ import {
 
 const vocabulary = [
 
-    {
+{
     word: "Teen",
     type: "noun",
     meaning: "Genç",
@@ -714,6 +714,454 @@ const vocabulary = [
     exampleTr: "Arkadaşım ağır metalin büyük bir hayranıdır."
 },
 
+{
+    word: "Like",
+    type: "verb",
+    meaning: "Beğenmek, hoşlanmak",
+    example: "I like spending time with my friends.",
+    exampleTr: "Arkadaşlarımla vakit geçirmekten hoşlanırım."
+},
+
+{
+    word: "Love",
+    type: "verb",
+    meaning: "Sevmek",
+    example: "I love listening to music.",
+    exampleTr: "Müzik dinlemeyi çok severim."
+},
+
+{
+    word: "Prefer",
+    type: "verb",
+    meaning: "Tercih etmek",
+    example: "I prefer reading books to watching TV.",
+    exampleTr: "Televizyon izlemektense kitap okumayı tercih ederim."
+},
+
+{
+    word: "Would rather",
+    type: "phrase",
+    meaning: "Tercih etmek",
+    example: "I would rather stay at home tonight.",
+    exampleTr: "Bu akşam evde kalmayı tercih ederim."
+},
+
+{
+    word: "Fond of",
+    type: "adjective",
+    meaning: "Düşkün olmak",
+    example: "She is fond of playing computer games.",
+    exampleTr: "O, bilgisayar oyunları oynamaya düşkündür."
+},
+
+{
+    word: "Keen on",
+    type: "adjective",
+    meaning: "Meraklı olmak, çok ilgili olmak",
+    example: "He is keen on playing basketball.",
+    exampleTr: "O, basketbol oynamaya çok meraklıdır."
+},
+
+{
+    word: "Be into",
+    type: "phrase",
+    meaning: "İlgilenmek, meraklı olmak",
+    example: "I am really into photography.",
+    exampleTr: "Fotoğrafçılıkla gerçekten ilgileniyorum."
+},
+
+{
+    word: "Interested in",
+    type: "adjective",
+    meaning: "İlgili olmak",
+    example: "She is interested in learning English.",
+    exampleTr: "O, İngilizce öğrenmekle ilgileniyor."
+},
+
+{
+    word: "Crazy about",
+    type: "adjective",
+    meaning: "Çok sevmek, ... için çıldırmak",
+    example: "My sister is crazy about pop music.",
+    exampleTr: "Kız kardeşim pop müzik için çıldırıyor."
+},
+
+{
+    word: "Enjoy",
+    type: "verb",
+    meaning: "Keyif almak, hoşlanmak",
+    example: "I enjoy watching movies with my friends.",
+    exampleTr: "Arkadaşlarımla film izlemekten keyif alırım."
+},
+
+{
+    word: "Good at",
+    type: "adjective",
+    meaning: "... konusunda iyi olmak",
+    example: "She is good at playing the piano.",
+    exampleTr: "O, piyano çalmada iyidir."
+},
+
+{
+    word: "Dislike",
+    type: "verb",
+    meaning: "Beğenmemek, hoşlanmamak",
+    example: "I dislike getting up early.",
+    exampleTr: "Erken kalkmaktan hoşlanmam."
+},
+
+{
+    word: "Hate",
+    type: "verb",
+    meaning: "Nefret etmek",
+    example: "I hate waiting for the bus.",
+    exampleTr: "Otobüs beklemekten nefret ederim."
+},
+
+{
+    word: "Would rather not",
+    type: "phrase",
+    meaning: "Tercih etmemek",
+    example: "I would rather not go out tonight.",
+    exampleTr: "Bu akşam dışarı çıkmamayı tercih ederim."
+},
+
+{
+    word: "Not into",
+    type: "phrase",
+    meaning: "İlgilenmemek, meraklı olmamak",
+    example: "I am not into playing computer games.",
+    exampleTr: "Bilgisayar oyunları oynamakla ilgilenmiyorum."
+},
+
+{
+    word: "Can't stand",
+    type: "phrase",
+    meaning: "Katlanamamak",
+    example: "I can't stand listening to loud music.",
+    exampleTr: "Yüksek sesli müzik dinlemeye katlanamıyorum."
+},
+
+{
+    word: "Not interested in",
+    type: "adjective",
+    meaning: "İlgilenmemek, ilgi duymamak",
+    example: "She is not interested in playing tennis.",
+    exampleTr: "O, tenis oynamakla ilgilenmiyor."
+},
+
+{
+    word: "Bad at",
+    type: "adjective",
+    meaning: "... konusunda kötü olmak",
+    example: "I am bad at playing the guitar.",
+    exampleTr: "Gitar çalmada kötüyüm."
+},
+
+{
+    word: "Amazing",
+    type: "adjective",
+    meaning: "Harika, şaşırtıcı",
+    example: "The concert was amazing.",
+    exampleTr: "Konser harikaydı."
+},
+
+{
+    word: "Fascinating",
+    type: "adjective",
+    meaning: "Büyüleyici",
+    example: "I think space is fascinating.",
+    exampleTr: "Bence uzay büyüleyici."
+},
+
+{
+    word: "Amusing",
+    type: "adjective",
+    meaning: "Eğlenceli, güldürücü",
+    example: "The story was very amusing.",
+    exampleTr: "Hikâye çok eğlenceliydi."
+},
+
+{
+    word: "Entertaining",
+    type: "adjective",
+    meaning: "Eğlenceli, keyifli",
+    example: "The movie was really entertaining.",
+    exampleTr: "Film gerçekten eğlenceliydi."
+},
+
+{
+    word: "Exciting",
+    type: "adjective",
+    meaning: "Heyecan verici",
+    example: "The football match was exciting.",
+    exampleTr: "Futbol maçı heyecan vericiydi."
+},
+
+{
+    word: "Interesting",
+    type: "adjective",
+    meaning: "İlginç",
+    example: "I find science very interesting.",
+    exampleTr: "Bilimi çok ilginç buluyorum."
+},
+
+{
+    word: "Unbearable",
+    type: "adjective",
+    meaning: "Katlanılmaz",
+    example: "The noise was unbearable.",
+    exampleTr: "Gürültü katlanılmazdı."
+},
+
+{
+    word: "Ridiculous",
+    type: "adjective",
+    meaning: "Saçma, gülünç",
+    example: "That idea sounds ridiculous.",
+    exampleTr: "O fikir kulağa saçma geliyor."
+},
+
+{
+    word: "Boring",
+    type: "adjective",
+    meaning: "Sıkıcı",
+    example: "The movie was boring.",
+    exampleTr: "Film sıkıcıydı."
+},
+
+{
+    word: "Nonsense",
+    type: "noun",
+    meaning: "Saçmalık, mantıksız şey",
+    example: "What he said was complete nonsense.",
+    exampleTr: "Onun söylediği tamamen saçmalıktı."
+},
+
+{
+    word: "Disappointed",
+    type: "adjective",
+    meaning: "Hayal kırıklığına uğramış",
+    example: "I was disappointed with the result.",
+    exampleTr: "Sonuçtan hayal kırıklığına uğradım."
+},
+
+{
+    word: "Frightening",
+    type: "adjective",
+    meaning: "Korkutucu",
+    example: "The horror movie was frightening.",
+    exampleTr: "Korku filmi korkutucuydu."
+},
+
+{
+    word: "All",
+    type: "determiner",
+    meaning: "Hepsi, tümü",
+    example: "All of my friends like music.",
+    exampleTr: "Arkadaşlarımın hepsi müziği sever."
+},
+
+{
+    word: "Half",
+    type: "noun",
+    meaning: "Yarısı",
+    example: "Half of the students like playing sports.",
+    exampleTr: "Öğrencilerin yarısı spor yapmayı sever."
+},
+
+{
+    word: "None",
+    type: "pronoun",
+    meaning: "Hiçbiri",
+    example: "None of my friends like horror movies.",
+    exampleTr: "Arkadaşlarımın hiçbiri korku filmlerini sevmez."
+},
+
+{
+    word: "Almost",
+    type: "adverb",
+    meaning: "Neredeyse, yaklaşık olarak",
+    example: "Almost all students enjoy the activity.",
+    exampleTr: "Öğrencilerin neredeyse hepsi etkinlikten keyif alır."
+},
+
+{
+    word: "Nearly",
+    type: "adverb",
+    meaning: "Neredeyse, yaklaşık olarak",
+    example: "Nearly half of the class likes basketball.",
+    exampleTr: "Sınıfın neredeyse yarısı basketbolu sever."
+},
+
+{
+    word: "More",
+    type: "determiner",
+    meaning: "Daha fazla, çoğu",
+    example: "More students prefer playing football.",
+    exampleTr: "Daha fazla öğrenci futbol oynamayı tercih ediyor."
+},
+
+{
+    word: "The most",
+    type: "phrase",
+    meaning: "En çok",
+    example: "I like English the most.",
+    exampleTr: "En çok İngilizceyi severim."
+},
+
+{
+    word: "Less",
+    type: "determiner",
+    meaning: "Daha az",
+    example: "I spend less time watching TV.",
+    exampleTr: "Televizyon izlemeye daha az zaman harcarım."
+},
+
+{
+    word: "The least",
+    type: "phrase",
+    meaning: "En az",
+    example: "I like horror movies the least.",
+    exampleTr: "Korku filmlerini en az severim."
+},
+
+{
+    word: "Same",
+    type: "adjective",
+    meaning: "Aynı",
+    example: "We have the same interests.",
+    exampleTr: "Aynı ilgi alanlarına sahibiz."
+},
+
+{
+    word: "Similar",
+    type: "adjective",
+    meaning: "Benzer",
+    example: "Our hobbies are similar.",
+    exampleTr: "Hobilerimiz benzer."
+},
+
+{
+    word: "Equal",
+    type: "adjective",
+    meaning: "Eşit",
+    example: "The two teams have an equal number of players.",
+    exampleTr: "İki takımın eşit sayıda oyuncusu var."
+},
+
+{
+    word: "Always",
+    type: "adverb",
+    meaning: "Her zaman",
+    example: "I always do my homework after school.",
+    exampleTr: "Okuldan sonra her zaman ödevimi yaparım."
+},
+
+{
+    word: "Generally",
+    type: "adverb",
+    meaning: "Genellikle",
+    example: "I generally study in the evening.",
+    exampleTr: "Genellikle akşamları ders çalışırım."
+},
+
+{
+    word: "Usually",
+    type: "adverb",
+    meaning: "Genellikle",
+    example: "I usually get up early on weekdays.",
+    exampleTr: "Hafta içi genellikle erken kalkarım."
+},
+
+{
+    word: "Often",
+    type: "adverb",
+    meaning: "Sık sık",
+    example: "I often hang out with my friends.",
+    exampleTr: "Arkadaşlarımla sık sık takılırım."
+},
+
+{
+    word: "Once",
+    type: "adverb",
+    meaning: "Bir kez",
+    example: "I go swimming once a week.",
+    exampleTr: "Haftada bir kez yüzmeye giderim."
+},
+
+{
+    word: "Twice",
+    type: "adverb",
+    meaning: "İki kez",
+    example: "I play basketball twice a week.",
+    exampleTr: "Haftada iki kez basketbol oynarım."
+},
+
+{
+    word: "... times",
+    type: "phrase",
+    meaning: "... kez",
+    example: "I exercise three times a week.",
+    exampleTr: "Haftada üç kez egzersiz yaparım."
+},
+
+{
+    word: "Sometimes",
+    type: "adverb",
+    meaning: "Bazen",
+    example: "I sometimes watch movies with my family.",
+    exampleTr: "Bazen ailemle film izlerim."
+},
+
+{
+    word: "Rarely",
+    type: "adverb",
+    meaning: "Nadiren",
+    example: "I rarely eat fast food.",
+    exampleTr: "Nadiren fast food yerim."
+},
+
+{
+    word: "Seldom",
+    type: "adverb",
+    meaning: "Nadiren",
+    example: "I seldom watch television.",
+    exampleTr: "Nadiren televizyon izlerim."
+},
+
+{
+    word: "Never",
+    type: "adverb",
+    meaning: "Hiç, asla",
+    example: "I never go to bed late on school days.",
+    exampleTr: "Okul günlerinde asla geç yatmam."
+},
+
+{
+    word: "Every day",
+    type: "phrase",
+    meaning: "Her gün",
+    example: "I study English every day.",
+    exampleTr: "Her gün İngilizce çalışırım."
+},
+
+{
+    word: "Every",
+    type: "determiner",
+    meaning: "Her",
+    example: "I read a book every night.",
+    exampleTr: "Her gece bir kitap okurum."
+},
+
+{
+    word: "3 times",
+    type: "phrase",
+    meaning: "Üç kez",
+    example: "I go jogging three times a week.",
+    exampleTr: "Haftada üç kez koşuya çıkarım."
+}
+
 ];
 
 
@@ -776,7 +1224,7 @@ function getProgressRef(user) {
         "users",
         user.uid,
         "vocabulary",
-        "unit1"
+        "unit2"
     );
 
 }

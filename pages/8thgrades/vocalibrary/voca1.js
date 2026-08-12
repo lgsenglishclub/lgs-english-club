@@ -537,7 +537,279 @@ const vocabulary = [
         meaning: "Göndermek",
         example: "I sent an invitation to my friend.",
         exampleTr: "Arkadaşıma bir davet gönderdim."
-    }
+    },
+
+    {
+    word: "Would you like to...?",
+    type: "phrase",
+    meaning: "İster misin?",
+    example: "Would you like to watch a movie?",
+    exampleTr: "Film izlemek ister misin?"
+},
+
+{
+    word: "Do you want to...?",
+    type: "phrase",
+    meaning: "İster misin?",
+    example: "Do you want to play football?",
+    exampleTr: "Futbol oynamak ister misin?"
+},
+
+{
+    word: "Shall we...?",
+    type: "phrase",
+    meaning: "Yapalım mı?",
+    example: "Shall we go shopping?",
+    exampleTr: "Alışverişe gidelim mi?"
+},
+
+{
+    word: "Why don't we...?",
+    type: "phrase",
+    meaning: "Neden yapmıyoruz?",
+    example: "Why don't we study together?",
+    exampleTr: "Neden birlikte ders çalışmıyoruz?"
+},
+
+{
+    word: "Let's...",
+    type: "phrase",
+    meaning: "Hadi yapalım!",
+    example: "Let's play basketball.",
+    exampleTr: "Hadi basketbol oynayalım."
+},
+
+{
+    word: "How about...?",
+    type: "phrase",
+    meaning: "Yapmaya ne dersin?",
+    example: "How about going camping?",
+    exampleTr: "Kampa gitmeye ne dersin?"
+},
+
+{
+    word: "Fancy...?",
+    type: "phrase",
+    meaning: "İster misin?",
+    example: "Fancy playing tennis?",
+    exampleTr: "Tenis oynamak ister misin?"
+},
+
+{
+    word: "Sure!",
+    type: "phrase",
+    meaning: "Tabii.",
+    example: "It is an accepting phrase.",
+    exampleTr: "O bir kabul etme ifadesi."
+},
+
+{
+    word: "I'd love to.",
+    type: "phrase",
+    meaning: "Çok isterim.",
+    example: "It is an accepting phrase.",
+    exampleTr: "O bir kabul etme ifadesi."
+},
+
+{
+    word: "That sounds great.",
+    type: "phrase",
+    meaning: "Kulağa harika geliyor.",
+    example: "It is an accepting phrase.",
+    exampleTr: "O bir kabul etme ifadesi."
+},
+
+{
+    word: "That would be great.",
+    type: "phrase",
+    meaning: "Bu harika olur.",
+    example: "It is an accepting phrase.",
+    exampleTr: "O bir kabul etme ifadesi."
+},
+
+{
+    word: "Why not?",
+    type: "phrase",
+    meaning: "Neden olmasın?",
+    example: "It is an accepting phrase.",
+    exampleTr: "O bir kabul etme ifadesi."
+},
+
+{
+    word: "With pleasure.",
+    type: "phrase",
+    meaning: "Zevkle, memnuniyetle.",
+    example: "It is an accepting phrase.",
+    exampleTr: "O bir kabul etme ifadesi."
+},
+
+{
+    word: "It is a good idea.",
+    type: "phrase",
+    meaning: "Bu iyi bir fikir.",
+    example: "It is an accepting phrase.",
+    exampleTr: "O bir kabul etme ifadesi."
+},
+
+{
+    word: "It is a great idea.",
+    type: "phrase",
+    meaning: "Bu harika bir fikir.",
+    example: "It is an accepting phrase.",
+    exampleTr: "O bir kabul etme ifadesi."
+},
+
+{
+    word: "I can't refuse it.",
+    type: "phrase",
+    meaning: "Bunu reddedemem.",
+    example: "It is an accepting phrase.",
+    exampleTr: "O bir kabul etme ifadesi."
+},
+
+{
+    word: "I can't miss it.",
+    type: "phrase",
+    meaning: "Bunu kaçıramam.",
+    example: "It is an accepting phrase.",
+    exampleTr: "O bir kabul etme ifadesi."
+},
+
+{
+    word: "Of course.",
+    type: "phrase",
+    meaning: "Elbette, tabii ki.",
+    example: "It is an accepting phrase.",
+    exampleTr: "O bir kabul etme ifadesi."
+},
+
+{
+    word: "Yes, please.",
+    type: "phrase",
+    meaning: "Evet, lütfen.",
+    example: "It is an accepting phrase.",
+    exampleTr: "O bir kabul etme ifadesi."
+},
+
+{
+    word: "Count me in.",
+    type: "phrase",
+    meaning: "Beni de say, ben de varım.",
+    example: "It is an accepting phrase.",
+    exampleTr: "O bir kabul etme ifadesi."
+},
+
+{
+    word: "I have nothing to do better.",
+    type: "phrase",
+    meaning: "Daha iyi bir işim yok.",
+    example: "It is an accepting phrase.",
+    exampleTr: "O bir kabul etme ifadesi."
+},
+
+{
+    word: "I'm sorry but I can't.",
+    type: "phrase",
+    meaning: "Üzgünüm ama yapamam.",
+    example: "It is a refusing phrase.",
+    exampleTr: "O bir reddetme ifadesi."
+},
+
+{
+    word: "I'd love to, but...",
+    type: "phrase",
+    meaning: "Çok isterim ama...",
+    example: "It is a refusing phrase.",
+    exampleTr: "O bir reddetme ifadesi."
+},
+
+{
+    word: "Maybe another time.",
+    type: "phrase",
+    meaning: "Belki başka zaman.",
+    example: "It is a refusing phrase.",
+    exampleTr: "O bir reddetme ifadesi."
+},
+
+{
+    word: "I'm afraid I can't.",
+    type: "phrase",
+    meaning: "Korkarım yapamam.",
+    example: "It is a refusing phrase.",
+    exampleTr: "O bir reddetme ifadesi."
+},
+
+{
+    word: "No, thanks.",
+    type: "phrase",
+    meaning: "Hayır, teşekkürler.",
+    example: "It is a refusing phrase.",
+    exampleTr: "O bir reddetme ifadesi."
+},
+
+{
+    word: "It is a bad idea.",
+    type: "phrase",
+    meaning: "Bu kötü bir fikir.",
+    example: "It is a refusing phrase.",
+    exampleTr: "O bir reddetme ifadesi."
+},
+
+{
+    word: "Sorry, I have another plan.",
+    type: "phrase",
+    meaning: "Üzgünüm, başka planım var.",
+    example: "It is a refusing phrase.",
+    exampleTr: "O bir reddetme ifadesi."
+},
+
+{
+    word: "Thanks for asking but...",
+    type: "phrase",
+    meaning: "Sorduğun için teşekkürler ama...",
+    example: "It is a refusing phrase.",
+    exampleTr: "O bir reddetme ifadesi."
+},
+
+{
+    word: "I can't accept it.",
+    type: "phrase",
+    meaning: "Kabul edemem.",
+    example: "It is a refusing phrase.",
+    exampleTr: "O bir reddetme ifadesi."
+},
+
+{
+    word: "I can't make it.",
+    type: "phrase",
+    meaning: "Gelemiyorum, yapamıyorum.",
+    example: "It is a refusing phrase.",
+    exampleTr: "O bir reddetme ifadesi."
+},
+
+{
+    word: "I'm busy.",
+    type: "phrase",
+    meaning: "Meşgulüm.",
+    example: "It is a refusing phrase.",
+    exampleTr: "O bir reddetme ifadesi."
+},
+
+{
+    word: "I don't think so.",
+    type: "phrase",
+    meaning: "Sanmıyorum.",
+    example: "It is a refusing phrase.",
+    exampleTr: "O bir reddetme ifadesi."
+},
+
+{
+    word: "I would rather not.",
+    type: "phrase",
+    meaning: "Tercih etmem.",
+    example: "It is a refusing phrase.",
+    exampleTr: "O bir reddetme ifadesi."
+}
 
 ];
 

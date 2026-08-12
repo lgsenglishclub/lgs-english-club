@@ -26,12 +26,556 @@ import {
 
 const vocabulary = [
 
-    {
-    word: "Teen",
+{
+    word: "researcher",
     type: "noun",
-    meaning: "Genç",
-    example: "The teen is studying for an exam.",
-    exampleTr: "Genç bir sınava çalışıyor."
+    meaning: "Araştırmacı",
+    example: "The researcher conducted an important experiment.",
+    exampleTr: "Araştırmacı önemli bir deney yaptı."
+},
+
+{
+    word: "laboratory",
+    type: "noun",
+    meaning: "Laboratuvar",
+    example: "Scientists work in a laboratory.",
+    exampleTr: "Bilim insanları bir laboratuvarda çalışır."
+},
+
+{
+    word: "technology",
+    type: "noun",
+    meaning: "Teknoloji",
+    example: "Technology changes our lives.",
+    exampleTr: "Teknoloji hayatımızı değiştirir."
+},
+
+{
+    word: "scientist",
+    type: "noun",
+    meaning: "Bilim insanı",
+    example: "The scientist made an important discovery.",
+    exampleTr: "Bilim insanı önemli bir keşif yaptı."
+},
+
+{
+    word: "invent",
+    type: "verb",
+    meaning: "İcat etmek",
+    example: "Alexander Graham Bell invented the telephone.",
+    exampleTr: "Alexander Graham Bell telefonu icat etti."
+},
+
+{
+    word: "inventor",
+    type: "noun",
+    meaning: "Mucit",
+    example: "The inventor designed a new machine.",
+    exampleTr: "Mucit yeni bir makine tasarladı."
+},
+
+{
+    word: "invention",
+    type: "noun",
+    meaning: "İcat",
+    example: "The invention changed people's lives.",
+    exampleTr: "İcat insanların hayatlarını değiştirdi."
+},
+
+{
+    word: "discovery",
+    type: "noun",
+    meaning: "Keşif",
+    example: "The discovery was very important for science.",
+    exampleTr: "Keşif bilim için çok önemliydi."
+},
+
+{
+    word: "research",
+    type: "noun",
+    meaning: "Araştırma",
+    example: "Scientists do research to find new solutions.",
+    exampleTr: "Bilim insanları yeni çözümler bulmak için araştırma yapar."
+},
+
+{
+    word: "solution",
+    type: "noun",
+    meaning: "Çözüm",
+    example: "Scientists are looking for a solution to the problem.",
+    exampleTr: "Bilim insanları soruna bir çözüm arıyor."
+},
+
+{
+    word: "device",
+    type: "noun",
+    meaning: "Cihaz",
+    example: "This device helps people communicate.",
+    exampleTr: "Bu cihaz insanların iletişim kurmasına yardımcı olur."
+},
+
+{
+    word: "machine",
+    type: "noun",
+    meaning: "Makine",
+    example: "The scientist designed a new machine.",
+    exampleTr: "Bilim insanı yeni bir makine tasarladı."
+},
+
+{
+    word: "laboratory equipment",
+    type: "phrase",
+    meaning: "Laboratuvar ekipmanı",
+    example: "Scientists need special laboratory equipment.",
+    exampleTr: "Bilim insanlarının özel laboratuvar ekipmanlarına ihtiyacı vardır."
+},
+
+{
+    word: "scientific discovery",
+    type: "phrase",
+    meaning: "Bilimsel keşif",
+    example: "It was an important scientific discovery.",
+    exampleTr: "Bu önemli bir bilimsel keşifti."
+},
+
+{
+    word: "make progress",
+    type: "phrase",
+    meaning: "İlerleme kaydetmek",
+    example: "Scientists are making progress in medicine.",
+    exampleTr: "Bilim insanları tıp alanında ilerleme kaydediyor."
+},
+
+{
+    word: "solve a problem",
+    type: "phrase",
+    meaning: "Bir problemi çözmek",
+    example: "Scientists try to solve difficult problems.",
+    exampleTr: "Bilim insanları zor problemleri çözmeye çalışır."
+},
+
+{
+    word: "Chemist",
+    type: "noun",
+    meaning: "Kimyager",
+    example: "The chemist conducted an experiment in the laboratory.",
+    exampleTr: "Kimyager laboratuvarda bir deney yaptı."
+},
+
+{
+    word: "Physicist",
+    type: "noun",
+    meaning: "Fizikçi",
+    example: "The physicist studied the effects of gravity.",
+    exampleTr: "Fizikçi yerçekiminin etkilerini inceledi."
+},
+
+{
+    word: "Scientific developments",
+    type: "phrase",
+    meaning: "Bilimsel gelişmeler",
+    example: "Scientific developments can change our lives.",
+    exampleTr: "Bilimsel gelişmeler hayatımızı değiştirebilir."
+},
+
+{
+    word: "Nobel Prize",
+    type: "proper noun",
+    meaning: "Nobel Ödülü",
+    example: "He won the Nobel Prize for his scientific work.",
+    exampleTr: "Bilimsel çalışmaları sayesinde Nobel Ödülü kazandı."
+},
+
+{
+    word: "Astronomy",
+    type: "noun",
+    meaning: "Astronomi",
+    example: "She is interested in astronomy and space.",
+    exampleTr: "Astronomi ve uzayla ilgileniyor."
+},
+
+{
+    word: "Medicine",
+    type: "noun",
+    meaning: "Tıp",
+    example: "Scientists make new discoveries in medicine.",
+    exampleTr: "Bilim insanları tıp alanında yeni keşifler yapıyor."
+},
+
+{
+    word: "Gravity",
+    type: "noun",
+    meaning: "Yerçekimi",
+    example: "Gravity keeps us on the Earth.",
+    exampleTr: "Yerçekimi bizi Dünya üzerinde tutar."
+},
+
+{
+    word: "Black hole",
+    type: "noun",
+    meaning: "Kara delik",
+    example: "Scientists study black holes in space.",
+    exampleTr: "Bilim insanları uzaydaki kara delikleri inceler."
+},
+
+{
+    word: "Stem cells",
+    type: "noun",
+    meaning: "Kök hücreler",
+    example: "Scientists are researching stem cells.",
+    exampleTr: "Bilim insanları kök hücreler üzerinde araştırma yapıyor."
+},
+
+{
+    word: "Equation",
+    type: "noun",
+    meaning: "Denklem",
+    example: "The physicist solved a difficult equation.",
+    exampleTr: "Fizikçi zor bir denklemi çözdü."
+},
+
+{
+    word: "Artificial",
+    type: "adjective",
+    meaning: "Yapay",
+    example: "Scientists developed an artificial heart.",
+    exampleTr: "Bilim insanları yapay bir kalp geliştirdi."
+},
+
+{
+    word: "Virtual",
+    type: "adjective",
+    meaning: "Sanal",
+    example: "Virtual technology is becoming more common.",
+    exampleTr: "Sanal teknoloji giderek daha yaygın hale geliyor."
+},
+
+{
+    word: "Endeavor",
+    type: "noun",
+    meaning: "Çaba, gayret",
+    example: "His scientific endeavor changed the world.",
+    exampleTr: "Onun bilimsel çabası dünyayı değiştirdi."
+},
+
+{
+    word: "Accomplishment",
+    type: "noun",
+    meaning: "Başarı",
+    example: "Winning the prize was a great accomplishment.",
+    exampleTr: "Ödülü kazanmak büyük bir başarıydı."
+},
+
+{
+    word: "Contribution",
+    type: "noun",
+    meaning: "Katkı",
+    example: "Her contribution to science was important.",
+    exampleTr: "Onun bilime katkısı önemliydi."
+},
+
+{
+    word: "Durable",
+    type: "adjective",
+    meaning: "Dayanıklı, uzun ömürlü",
+    example: "The new material is strong and durable.",
+    exampleTr: "Yeni malzeme güçlü ve dayanıklıdır."
+},
+
+{
+    word: "Academician",
+    type: "noun",
+    meaning: "Akademisyen",
+    example: "The academician conducted important scientific research.",
+    exampleTr: "Akademisyen önemli bir bilimsel araştırma yaptı."
+},
+
+{
+    word: "Aim",
+    type: "noun",
+    meaning: "Amaç, hedef",
+    example: "The aim of the experiment is to find a solution.",
+    exampleTr: "Deneyin amacı bir çözüm bulmaktır."
+},
+
+{
+    word: "Achievement",
+    type: "noun",
+    meaning: "Başarı",
+    example: "His achievement changed the world of science.",
+    exampleTr: "Onun başarısı bilim dünyasını değiştirdi."
+},
+
+{
+    word: "Award",
+    type: "noun",
+    meaning: "Ödül",
+    example: "She received an award for her invention.",
+    exampleTr: "İcadı için bir ödül aldı."
+},
+
+{
+    word: "Battery",
+    type: "noun",
+    meaning: "Pil, batarya",
+    example: "This device has a rechargeable battery.",
+    exampleTr: "Bu cihazın şarj edilebilir bir bataryası var."
+},
+
+{
+    word: "Cell",
+    type: "noun",
+    meaning: "Hücre",
+    example: "Scientists study human cells.",
+    exampleTr: "Bilim insanları insan hücrelerini inceler."
+},
+
+{
+    word: "Chemical",
+    type: "noun",
+    meaning: "Kimyasal madde",
+    example: "The scientist used a chemical in the experiment.",
+    exampleTr: "Bilim insanı deneyde bir kimyasal kullandı."
+},
+
+{
+    word: "Competition",
+    type: "noun",
+    meaning: "Yarışma, rekabet",
+    example: "He won a science competition.",
+    exampleTr: "Bir bilim yarışmasını kazandı."
+},
+
+{
+    word: "Competitor",
+    type: "noun",
+    meaning: "Yarışmacı, rakip",
+    example: "Each competitor presented an invention.",
+    exampleTr: "Her yarışmacı bir icat sundu."
+},
+
+{
+    word: "Ethical",
+    type: "adjective",
+    meaning: "Etik, ahlaki",
+    example: "Scientists should consider ethical problems.",
+    exampleTr: "Bilim insanları etik sorunları göz önünde bulundurmalıdır."
+},
+
+{
+    word: "Ground-breaking",
+    type: "adjective",
+    meaning: "Çığır açan",
+    example: "It was a ground-breaking scientific discovery.",
+    exampleTr: "Bu çığır açan bir bilimsel keşifti."
+},
+
+{
+    word: "Patent",
+    type: "noun",
+    meaning: "Patent, buluş hakkı",
+    example: "The inventor applied for a patent.",
+    exampleTr: "Mucit patent başvurusunda bulundu."
+},
+
+{
+    word: "Prevent",
+    type: "verb",
+    meaning: "Önlemek, engellemek",
+    example: "Vaccines can prevent some diseases.",
+    exampleTr: "Aşılar bazı hastalıkları önleyebilir."
+},
+
+{
+    word: "Recognize",
+    type: "verb",
+    meaning: "Fark etmek, tanımak",
+    example: "The scientist was recognized for his work.",
+    exampleTr: "Bilim insanı çalışmaları nedeniyle takdir edildi."
+},
+
+{
+    word: "Succeed",
+    type: "verb",
+    meaning: "Başarmak",
+    example: "Scientists work hard to succeed.",
+    exampleTr: "Bilim insanları başarılı olmak için çok çalışır."
+},
+
+{
+    word: "Successful",
+    type: "adjective",
+    meaning: "Başarılı",
+    example: "The experiment was successful.",
+    exampleTr: "Deney başarılı oldu."
+},
+
+{
+    word: "Technology",
+    type: "noun",
+    meaning: "Teknoloji",
+    example: "Modern technology makes our lives easier.",
+    exampleTr: "Modern teknoloji hayatımızı kolaylaştırır."
+},
+
+{
+    word: "Therefore",
+    type: "adverb",
+    meaning: "Bu nedenle, dolayısıyla",
+    example: "The experiment failed; therefore, they tried again.",
+    exampleTr: "Deney başarısız oldu; bu nedenle tekrar denediler."
+},
+
+{
+    word: "Theory",
+    type: "noun",
+    meaning: "Teori, kuram",
+    example: "Scientists developed a new theory.",
+    exampleTr: "Bilim insanları yeni bir teori geliştirdi."
+},
+
+{
+    word: "Transmit",
+    type: "verb",
+    meaning: "İletmek, aktarmak",
+    example: "Radio waves transmit information.",
+    exampleTr: "Radyo dalgaları bilgi iletir."
+},
+
+{
+    word: "Valuable",
+    type: "adjective",
+    meaning: "Değerli",
+    example: "Her research provided valuable information.",
+    exampleTr: "Onun araştırması değerli bilgiler sağladı."
+},
+
+{
+    word: "Researcher",
+    type: "noun",
+    meaning: "Araştırmacı",
+    example: "The researcher conducted an experiment.",
+    exampleTr: "Araştırmacı bir deney yaptı."
+},
+
+{
+    word: "Technological",
+    type: "adjective",
+    meaning: "Teknolojik",
+    example: "Technological developments change our lives.",
+    exampleTr: "Teknolojik gelişmeler hayatımızı değiştirir."
+},
+
+{
+    word: "Innovation",
+    type: "noun",
+    meaning: "Yenilik, inovasyon",
+    example: "Innovation can improve people's lives.",
+    exampleTr: "Yenilik insanların hayatlarını geliştirebilir."
+},
+
+{
+    word: "Innovative",
+    type: "adjective",
+    meaning: "Yenilikçi",
+    example: "She has an innovative idea.",
+    exampleTr: "Onun yenilikçi bir fikri var."
+},
+
+{
+    word: "Breakthrough",
+    type: "noun",
+    meaning: "Çığır açan gelişme",
+    example: "The scientist made an important breakthrough.",
+    exampleTr: "Bilim insanı önemli bir çığır açan gelişme gerçekleştirdi."
+},
+
+{
+    word: "Research method",
+    type: "noun",
+    meaning: "Araştırma yöntemi",
+    example: "Scientists use different research methods.",
+    exampleTr: "Bilim insanları farklı araştırma yöntemleri kullanır."
+},
+
+{
+    word: "Analyze",
+    type: "verb",
+    meaning: "Analiz etmek",
+    example: "Scientists analyze the results carefully.",
+    exampleTr: "Bilim insanları sonuçları dikkatlice analiz eder."
+},
+
+{
+    word: "Analysis",
+    type: "noun",
+    meaning: "Analiz",
+    example: "The analysis showed an interesting result.",
+    exampleTr: "Analiz ilginç bir sonuç gösterdi."
+},
+
+{
+    word: "Data",
+    type: "noun",
+    meaning: "Veri",
+    example: "Researchers collect data during experiments.",
+    exampleTr: "Araştırmacılar deneyler sırasında veri toplar."
+},
+
+{
+    word: "Evidence",
+    type: "noun",
+    meaning: "Kanıt",
+    example: "The scientist found evidence to support the theory.",
+    exampleTr: "Bilim insanı teoriyi destekleyen kanıt buldu."
+},
+
+{
+    word: "Prove",
+    type: "verb",
+    meaning: "Kanıtlamak",
+    example: "The experiment can prove the theory.",
+    exampleTr: "Deney teoriyi kanıtlayabilir."
+},
+
+{
+    word: "Pioneer",
+    type: "noun",
+    meaning: "Öncü",
+    example: "He was a pioneer in modern science.",
+    exampleTr: "O, modern bilimde bir öncüydü."
+},
+
+{
+    word: "Influence",
+    type: "verb",
+    meaning: "Etkilemek, etki",
+    example: "Technology influences our daily lives.",
+    exampleTr: "Teknoloji günlük hayatımızı etkiler."
+},
+
+{
+    word: "Influential",
+    type: "adjective",
+    meaning: "Etkili",
+    example: "He was an influential scientist.",
+    exampleTr: "O, etkili bir bilim insanıydı."
+},
+
+{
+    word: "Inspire",
+    type: "verb",
+    meaning: "İlham vermek",
+    example: "Great scientists inspire young people.",
+    exampleTr: "Büyük bilim insanları gençlere ilham verir."
+},
+
+{
+    word: "Inspiration",
+    type: "noun",
+    meaning: "İlham",
+    example: "Her teacher was an inspiration to her.",
+    exampleTr: "Öğretmeni onun için bir ilham kaynağıydı."
 }
 
 ];
@@ -96,7 +640,7 @@ function getProgressRef(user) {
         "users",
         user.uid,
         "vocabulary",
-        "unit1"
+        "unit9"
     );
 
 }

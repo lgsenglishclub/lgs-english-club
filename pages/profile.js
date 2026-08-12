@@ -2039,7 +2039,7 @@ if (completedDate) {
              */
 
             window.location.href =
-                "8thgrades/mock-exams.html";
+                "8thgrades/mock-exams/mock-exams.html";
 
         }
     );

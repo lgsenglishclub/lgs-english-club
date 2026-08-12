@@ -26,12 +26,616 @@ import {
 
 const vocabulary = [
 
-    {
-    word: "Teen",
+{
+    word: "Absence",
     type: "noun",
-    meaning: "Genç",
-    example: "The teen is studying for an exam.",
-    exampleTr: "Genç bir sınava çalışıyor."
+    meaning: "Yokluk",
+    example: "His absence was noticed by everyone.",
+    exampleTr: "Onun yokluğu herkes tarafından fark edildi."
+},
+{
+    word: "Acre",
+    type: "noun",
+    meaning: "Dönüm",
+    example: "They own an acre of land.",
+    exampleTr: "Bir dönüm arazileri var."
+},
+{
+    word: "Aftershock",
+    type: "noun",
+    meaning: "Artçı sarsıntı",
+    example: "Several aftershocks followed the earthquake.",
+    exampleTr: "Depremden sonra birkaç artçı sarsıntı meydana geldi."
+},
+{
+    word: "Agriculture",
+    type: "noun",
+    meaning: "Tarım",
+    example: "Agriculture is important for the country's economy.",
+    exampleTr: "Tarım ülkenin ekonomisi için önemlidir."
+},
+{
+    word: "Air pollution",
+    type: "noun",
+    meaning: "Hava kirliliği",
+    example: "Air pollution is a serious environmental problem.",
+    exampleTr: "Hava kirliliği ciddi bir çevre sorunudur."
+},
+{
+    word: "Animal species",
+    type: "noun",
+    meaning: "Hayvan türleri",
+    example: "Many animal species are in danger.",
+    exampleTr: "Birçok hayvan türü tehlike altındadır."
+},
+{
+    word: "Ash",
+    type: "noun",
+    meaning: "Kül",
+    example: "Ash covered the streets after the volcanic eruption.",
+    exampleTr: "Volkanik patlamadan sonra sokakları kül kapladı."
+},
+{
+    word: "Authorities",
+    type: "noun",
+    meaning: "Yetkililer",
+    example: "The authorities warned people about the storm.",
+    exampleTr: "Yetkililer insanları fırtına hakkında uyardı."
+},
+{
+    word: "Avalanche",
+    type: "noun",
+    meaning: "Çığ",
+    example: "The avalanche blocked the mountain road.",
+    exampleTr: "Çığ dağ yolunu kapattı."
+},
+{
+    word: "Blow",
+    type: "verb",
+    meaning: "Esmek",
+    example: "The wind is blowing strongly today.",
+    exampleTr: "Bugün rüzgar güçlü esiyor."
+},
+{
+    word: "Blow off",
+    type: "phrasal verb",
+    meaning: "Uçurmak",
+    example: "The strong wind blew off the roof.",
+    exampleTr: "Güçlü rüzgar çatıyı uçurdu."
+},
+{
+    word: "Cause",
+    type: "verb",
+    meaning: "Sebep olmak",
+    example: "Heavy rain can cause floods.",
+    exampleTr: "Şiddetli yağmur sellere sebep olabilir."
+},
+{
+    word: "Climate",
+    type: "noun",
+    meaning: "İklim",
+    example: "The climate is changing around the world.",
+    exampleTr: "Dünyanın her yerinde iklim değişiyor."
+},
+{
+    word: "Climate change",
+    type: "noun",
+    meaning: "İklim değişikliği",
+    example: "Climate change affects all living things.",
+    exampleTr: "İklim değişikliği tüm canlıları etkiler."
+},
+{
+    word: "Collapse",
+    type: "verb",
+    meaning: "Çökmek, yıkılmak",
+    example: "The building collapsed after the earthquake.",
+    exampleTr: "Bina depremden sonra çöktü."
+},
+{
+    word: "Crops",
+    type: "noun",
+    meaning: "Mahsuller, ekinler",
+    example: "The drought destroyed the crops.",
+    exampleTr: "Kuraklık mahsulleri yok etti."
+},
+{
+    word: "Damage",
+    type: "verb",
+    meaning: "Zarar vermek",
+    example: "The storm damaged many houses.",
+    exampleTr: "Fırtına birçok eve zarar verdi."
+},
+{
+    word: "Damaged",
+    type: "adjective",
+    meaning: "Hasar görmüş",
+    example: "The damaged buildings were unsafe.",
+    exampleTr: "Hasar görmüş binalar güvenli değildi."
+},
+{
+    word: "Drought",
+    type: "noun",
+    meaning: "Kuraklık",
+    example: "The drought caused a water shortage.",
+    exampleTr: "Kuraklık su kıtlığına neden oldu."
+},
+{
+    word: "Deforestation",
+    type: "noun",
+    meaning: "Ormansızlaşma",
+    example: "Deforestation harms the environment.",
+    exampleTr: "Ormansızlaşma çevreye zarar verir."
+},
+{
+    word: "Destroy",
+    type: "verb",
+    meaning: "Yok etmek",
+    example: "The earthquake destroyed many buildings.",
+    exampleTr: "Deprem birçok binayı yok etti."
+},
+{
+    word: "Environment",
+    type: "noun",
+    meaning: "Çevre",
+    example: "We must protect the environment.",
+    exampleTr: "Çevreyi korumalıyız."
+},
+{
+    word: "Flood",
+    type: "noun",
+    meaning: "Sel",
+    example: "The flood damaged many houses.",
+    exampleTr: "Sel birçok eve zarar verdi."
+},
+{
+    word: "Global warming",
+    type: "noun",
+    meaning: "Küresel ısınma",
+    example: "Global warming is a major environmental problem.",
+    exampleTr: "Küresel ısınma önemli bir çevre sorunudur."
+},
+{
+    word: "Greenhouse gases",
+    type: "noun",
+    meaning: "Sera gazları",
+    example: "Greenhouse gases contribute to global warming.",
+    exampleTr: "Sera gazları küresel ısınmaya katkıda bulunur."
+},
+{
+    word: "Hurricane",
+    type: "noun",
+    meaning: "Kasırga",
+    example: "The hurricane hit the city last night.",
+    exampleTr: "Kasırga dün gece şehri vurdu."
+},
+{
+    word: "Landslide",
+    type: "noun",
+    meaning: "Toprak kayması",
+    example: "The heavy rain caused a landslide.",
+    exampleTr: "Şiddetli yağmur bir toprak kaymasına neden oldu."
+},
+{
+    word: "Lightning",
+    type: "noun",
+    meaning: "Yıldırım",
+    example: "The lightning frightened the children.",
+    exampleTr: "Yıldırım çocukları korkuttu."
+},
+{
+    word: "Natural disasters",
+    type: "noun",
+    meaning: "Doğal afetler",
+    example: "Earthquakes and floods are natural disasters.",
+    exampleTr: "Depremler ve seller doğal afetlerdir."
+},
+{
+    word: "Volcanic eruption",
+    type: "noun",
+    meaning: "Volkanik patlama",
+    example: "The volcanic eruption covered the area with ash.",
+    exampleTr: "Volkanik patlama bölgeyi külle kapladı."
+},
+
+{
+    word: "Natural phenomena",
+    type: "noun",
+    meaning: "Doğal olaylar",
+    example: "Earthquakes and storms are natural phenomena.",
+    exampleTr: "Depremler ve fırtınalar doğal olaylardır."
+},
+{
+    word: "Disaster",
+    type: "noun",
+    meaning: "Afet, felaket",
+    example: "Natural disasters can cause serious damage.",
+    exampleTr: "Doğal afetler ciddi hasara neden olabilir."
+},
+{
+    word: "Main quake",
+    type: "noun",
+    meaning: "Ana deprem",
+    example: "The main quake caused the most damage.",
+    exampleTr: "Ana deprem en fazla hasara neden oldu."
+},
+{
+    word: "Tsunami",
+    type: "noun",
+    meaning: "Tsunami",
+    example: "The earthquake caused a tsunami.",
+    exampleTr: "Deprem bir tsunamiyi tetikledi."
+},
+{
+    word: "Fault lines",
+    type: "noun",
+    meaning: "Fay hatları",
+    example: "Many earthquakes happen along fault lines.",
+    exampleTr: "Birçok deprem fay hatları boyunca meydana gelir."
+},
+{
+    word: "Rainfall",
+    type: "noun",
+    meaning: "Yağış, yağış miktarı",
+    example: "Heavy rainfall caused flooding.",
+    exampleTr: "Şiddetli yağış sel baskınına neden oldu."
+},
+{
+    word: "Water sources",
+    type: "noun",
+    meaning: "Su kaynakları",
+    example: "We must protect our water sources.",
+    exampleTr: "Su kaynaklarımızı korumalıyız."
+},
+{
+    word: "Energy shortage",
+    type: "noun",
+    meaning: "Enerji sıkıntısı, enerji kıtlığı",
+    example: "The country is facing an energy shortage.",
+    exampleTr: "Ülke enerji sıkıntısıyla karşı karşıya."
+},
+{
+    word: "Soil contamination",
+    type: "noun",
+    meaning: "Toprak kirliliği",
+    example: "Soil contamination can harm plants.",
+    exampleTr: "Toprak kirliliği bitkilere zarar verebilir."
+},
+{
+    word: "Water pollution",
+    type: "noun",
+    meaning: "Su kirliliği",
+    example: "Water pollution harms sea animals.",
+    exampleTr: "Su kirliliği deniz hayvanlarına zarar verir."
+},
+{
+    word: "Land pollution",
+    type: "noun",
+    meaning: "Kara çevre kirliliği",
+    example: "Land pollution is a serious environmental problem.",
+    exampleTr: "Kara kirliliği ciddi bir çevre sorunudur."
+},
+{
+    word: "Overpopulation",
+    type: "noun",
+    meaning: "Aşırı nüfuslanma",
+    example: "Overpopulation can cause environmental problems.",
+    exampleTr: "Aşırı nüfuslanma çevresel sorunlara neden olabilir."
+},
+{
+    word: "Ecosystem destruction",
+    type: "noun",
+    meaning: "Ekosistem yıkımı",
+    example: "Ecosystem destruction threatens many species.",
+    exampleTr: "Ekosistem yıkımı birçok türü tehdit eder."
+},
+{
+    word: "Wildlife conservation",
+    type: "noun",
+    meaning: "Vahşi yaşamı koruma",
+    example: "Wildlife conservation is important for future generations.",
+    exampleTr: "Vahşi yaşamı korumak gelecek nesiller için önemlidir."
+},
+{
+    word: "Fossil fuel depletion",
+    type: "noun",
+    meaning: "Fosil yakıtların tükenmesi",
+    example: "Fossil fuel depletion is a global concern.",
+    exampleTr: "Fosil yakıtların tükenmesi küresel bir endişedir."
+},
+{
+    word: "Toxic waste",
+    type: "noun",
+    meaning: "Zehirli atık",
+    example: "Toxic waste can pollute rivers.",
+    exampleTr: "Zehirli atıklar nehirleri kirletebilir."
+},
+{
+    word: "Environmental issues",
+    type: "noun",
+    meaning: "Çevresel sorunlar",
+    example: "We should talk about environmental issues.",
+    exampleTr: "Çevresel sorunlar hakkında konuşmalıyız."
+},
+{
+    word: "Magnitude",
+    type: "noun",
+    meaning: "Büyüklük",
+    example: "The earthquake had a magnitude of six.",
+    exampleTr: "Depremin büyüklüğü altıydı."
+},
+{
+    word: "Pressure",
+    type: "noun",
+    meaning: "Basınç",
+    example: "Air pressure changes before a storm.",
+    exampleTr: "Fırtınadan önce hava basıncı değişir."
+},
+{
+    word: "Depth",
+    type: "noun",
+    meaning: "Derinlik",
+    example: "The depth of the lake is unknown.",
+    exampleTr: "Gölün derinliği bilinmiyor."
+},
+{
+    word: "Altitude",
+    type: "noun",
+    meaning: "Rakım, yükseklik",
+    example: "The village is at a high altitude.",
+    exampleTr: "Köy yüksek bir rakımdadır."
+},
+{
+    word: "Severity",
+    type: "noun",
+    meaning: "Şiddet",
+    example: "The severity of the storm surprised everyone.",
+    exampleTr: "Fırtınanın şiddeti herkesi şaşırttı."
+},
+{
+    word: "Prediction",
+    type: "noun",
+    meaning: "Tahmin",
+    example: "The weather prediction says it will rain.",
+    exampleTr: "Hava tahmini yağmur yağacağını söylüyor."
+},
+{
+    word: "Precaution",
+    type: "noun",
+    meaning: "Önlem, tedbir",
+    example: "We should take precautions against earthquakes.",
+    exampleTr: "Depremlere karşı önlem almalıyız."
+},
+{
+    word: "Protect",
+    type: "verb",
+    meaning: "Korumak",
+    example: "We must protect the environment.",
+    exampleTr: "Çevreyi korumalıyız."
+},
+{
+    word: "Preserve",
+    type: "verb",
+    meaning: "Korumak",
+    example: "We should preserve natural resources.",
+    exampleTr: "Doğal kaynakları korumalıyız."
+},
+{
+    word: "Take the necessary measures",
+    type: "verb phrase",
+    meaning: "Gerekli önlemleri almak",
+    example: "We must take the necessary measures before a disaster.",
+    exampleTr: "Bir afetten önce gerekli önlemleri almalıyız."
+},
+{
+    word: "Consist of",
+    type: "phrasal verb",
+    meaning: "Oluşmak, meydana gelmek",
+    example: "The Earth consists of several layers.",
+    exampleTr: "Dünya birkaç katmandan oluşur."
+},
+{
+    word: "Pollute",
+    type: "verb",
+    meaning: "Kirletmek",
+    example: "Factories can pollute the air.",
+    exampleTr: "Fabrikalar havayı kirletebilir."
+},
+{
+    word: "Use the water efficiently",
+    type: "verb phrase",
+    meaning: "Suyu etkili kullanmak",
+    example: "We should use the water efficiently.",
+    exampleTr: "Suyu etkili kullanmalıyız."
+},
+{
+    word: "Injure",
+    type: "verb",
+    meaning: "Yaralamak",
+    example: "The accident injured several people.",
+    exampleTr: "Kaza birkaç kişiyi yaraladı."
+},
+{
+    word: "Lose",
+    type: "verb",
+    meaning: "Kaybetmek",
+    example: "Many farmers lose their crops during droughts.",
+    exampleTr: "Birçok çiftçi kuraklık sırasında mahsullerini kaybeder."
+},
+{
+    word: "Reflect",
+    type: "verb",
+    meaning: "Yansıtmak",
+    example: "Snow reflects sunlight.",
+    exampleTr: "Kar güneş ışığını yansıtır."
+},
+{
+    word: "Build up",
+    type: "phrasal verb",
+    meaning: "Büyümek, güçlenmek",
+    example: "Pressure can build up under the Earth's surface.",
+    exampleTr: "Dünya yüzeyinin altında basınç birikebilir."
+},
+{
+    word: "Strike",
+    type: "verb",
+    meaning: "Vurmak, çarpmak",
+    example: "Lightning can strike buildings.",
+    exampleTr: "Yıldırım binalara çarpabilir."
+},
+{
+    word: "Stay calm",
+    type: "verb phrase",
+    meaning: "Sakin kalmak",
+    example: "Stay calm during an earthquake.",
+    exampleTr: "Deprem sırasında sakin kal."
+},
+{
+    word: "Take place",
+    type: "verb phrase",
+    meaning: "Meydana gelmek, gerçekleşmek",
+    example: "Earthquakes can take place at any time.",
+    exampleTr: "Depremler herhangi bir zamanda meydana gelebilir."
+},
+{
+    word: "Reach up",
+    type: "phrasal verb",
+    meaning: "Ulaşmak, erişmek",
+    example: "The flames reached up to the roof.",
+    exampleTr: "Alevler çatıya kadar ulaştı."
+},
+{
+    word: "Extend",
+    type: "verb",
+    meaning: "Genişletmek, yaymak",
+    example: "The fire extended across the forest.",
+    exampleTr: "Yangın orman boyunca yayıldı."
+},
+{
+    word: "Eject",
+    type: "verb",
+    meaning: "Çıkarmak, dışarı atmak",
+    example: "Volcanoes can eject ash and gases.",
+    exampleTr: "Volkanlar kül ve gaz çıkarabilir."
+},
+{
+    word: "Stick",
+    type: "verb",
+    meaning: "Yapışmak",
+    example: "Mud can stick to your shoes.",
+    exampleTr: "Çamur ayakkabılarına yapışabilir."
+},
+{
+    word: "Worth",
+    type: "adjective",
+    meaning: "Değer, değmek",
+    example: "This natural wonder is worth seeing.",
+    exampleTr: "Bu doğa harikası görülmeye değer."
+},
+
+{
+    word: "Evacuate",
+    type: "verb",
+    meaning: "Tahliye etmek",
+    example: "People had to evacuate the building after the earthquake.",
+    exampleTr: "Depremden sonra insanların binayı tahliye etmesi gerekti."
+},
+{
+    word: "Evacuation",
+    type: "noun",
+    meaning: "Tahliye",
+    example: "The authorities ordered the evacuation of the area.",
+    exampleTr: "Yetkililer bölgenin tahliye edilmesini emretti."
+},
+{
+    word: "Shelter",
+    type: "noun",
+    meaning: "Sığınak, barınak",
+    example: "The victims stayed in an emergency shelter.",
+    exampleTr: "Mağdurlar acil durum barınağında kaldı."
+},
+{
+    word: "Victim",
+    type: "noun",
+    meaning: "Mağdur, kurban",
+    example: "Rescue teams helped the earthquake victims.",
+    exampleTr: "Kurtarma ekipleri deprem mağdurlarına yardım etti."
+},
+{
+    word: "Rescue",
+    type: "verb",
+    meaning: "Kurtarmak",
+    example: "Rescue teams saved people trapped under the debris.",
+    exampleTr: "Kurtarma ekipleri enkaz altında mahsur kalan insanları kurtardı."
+},
+{
+    word: "Debris",
+    type: "noun",
+    meaning: "Enkaz, döküntü",
+    example: "Several people were trapped under the debris.",
+    exampleTr: "Birkaç kişi enkazın altında mahsur kaldı."
+},
+{
+    word: "Survive",
+    type: "verb",
+    meaning: "Hayatta kalmak",
+    example: "Some people survived the disaster.",
+    exampleTr: "Bazı insanlar felaketten sağ kurtuldu."
+},
+{
+    word: "Warning",
+    type: "noun",
+    meaning: "Uyarı",
+    example: "The authorities gave a warning about the storm.",
+    exampleTr: "Yetkililer fırtına hakkında uyarıda bulundu."
+},
+{
+    word: "Emergency",
+    type: "noun",
+    meaning: "Acil durum",
+    example: "Call for help in an emergency.",
+    exampleTr: "Acil durumda yardım çağır."
+},
+{
+    word: "Resources",
+    type: "noun",
+    meaning: "Kaynaklar",
+    example: "We should protect our natural resources.",
+    exampleTr: "Doğal kaynaklarımızı korumalıyız."
+},
+{
+    word: "Renewable energy",
+    type: "noun",
+    meaning: "Yenilenebilir enerji",
+    example: "Renewable energy can help protect the environment.",
+    exampleTr: "Yenilenebilir enerji çevrenin korunmasına yardımcı olabilir."
+},
+{
+    word: "Recycling",
+    type: "noun",
+    meaning: "Geri dönüşüm",
+    example: "Recycling helps reduce waste.",
+    exampleTr: "Geri dönüşüm atıkları azaltmaya yardımcı olur."
+},
+{
+    word: "Reduce waste",
+    type: "verb phrase",
+    meaning: "Atıkları azaltmak",
+    example: "We should reduce waste to protect nature.",
+    exampleTr: "Doğayı korumak için atıkları azaltmalıyız."
+},
+{
+    word: "Endangered species",
+    type: "noun",
+    meaning: "Nesli tükenmekte olan türler",
+    example: "We must protect endangered species.",
+    exampleTr: "Nesli tükenmekte olan türleri korumalıyız."
+},
+{
+    word: "Carbon footprint",
+    type: "noun",
+    meaning: "Karbon ayak izi",
+    example: "Using public transport can reduce our carbon footprint.",
+    exampleTr: "Toplu taşıma kullanmak karbon ayak izimizi azaltabilir."
 }
 
 ];
@@ -96,7 +700,7 @@ function getProgressRef(user) {
         "users",
         user.uid,
         "vocabulary",
-        "unit1"
+        "unit10"
     );
 
 }

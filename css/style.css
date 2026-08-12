@@ -17652,17 +17652,17 @@ a {
 .lexi-status {
     position: absolute !important;
 
-    width: 12px !important;
-    height: 12px !important;
+    width: 18px !important;
+    height: 18px !important;
 
     background: #22c55e !important;
 
-    border: 0px solid #ffffff !important;
+    border: 2px solid #ffffff !important;
 
     border-radius: 50% !important;
 
     top: -63px !important;
-    right: 22px !important;
+    right: 23px !important;
 
     z-index: 10 !important;
 }
@@ -17836,12 +17836,12 @@ a {
 
     .lexi-status {
 
-        width: 6px !important;
-        height: 6px !important;
+        width: 8px !important;
+        height: 8px !important;
 
-        border-width: 0px !important;
+        border-width: 1px !important;
         top: 8px !important;
-        right: 25px !important;
+        right: 26px !important;
     }
 
 }

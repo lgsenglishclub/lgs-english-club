@@ -34,7 +34,7 @@
     <div class="lexi-avatar">
 
         <img
-            src="/pages/ai-teacher/images/lexi.png"
+            src="/pages/ai-teacher/images/lexi3.png"
             alt="Lexi AI English Teacher"
         >
 

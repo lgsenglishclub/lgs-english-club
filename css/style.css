@@ -17575,3 +17575,294 @@ MOBILE
 a {
     text-decoration: none;
 }
+
+/* =========================================
+   LEXI AI ASSISTANT
+========================================= */
+
+.lexi-assistant {
+
+    position: fixed !important;
+
+    right: 28px !important;
+    bottom: 26px !important;
+
+    z-index: 99999 !important;
+
+    display: flex !important;
+    align-items: flex-end !important;
+
+    gap: 12px !important;
+
+    text-decoration: none !important;
+
+    cursor: pointer !important;
+
+    font-family: Arial, sans-serif !important;
+
+}
+
+
+/* =========================================
+   LEXI - REAL CHARACTER
+========================================= */
+
+.lexi-avatar {
+
+    position: relative !important;
+
+    width: 105px !important;
+    height: 125px !important;
+
+    flex-shrink: 0 !important;
+
+    display: flex !important;
+    align-items: flex-end !important;
+    justify-content: center !important;
+
+    background: transparent !important;
+
+    border: none !important;
+
+    border-radius: 0 !important;
+
+    box-shadow: none !important;
+
+    overflow: visible !important;
+
+    animation: lexiFloat 3.5s ease-in-out infinite !important;
+
+}
+
+
+.lexi-avatar img {
+
+    width: 100% !important;
+    height: 100% !important;
+
+    object-fit: contain !important;
+
+    display: block !important;
+
+}
+
+
+/* ONLINE DOT */
+
+.lexi-status {
+    position: absolute !important;
+
+    width: 8px !important;
+    height: 7px !important;
+
+    background: #22c55e !important;
+
+    border: 0px solid #ffffff !important;
+
+    border-radius: 50% !important;
+
+    top: 21px !important;
+    right: 35px !important;
+
+    z-index: 10 !important;
+}
+
+
+/* =========================================
+   SPEECH LABEL
+========================================= */
+
+.lexi-message {
+
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    align-items: flex-start !important;
+
+    justify-content: center !important;
+
+    padding: 11px 15px !important;
+
+    background: #ffffff !important;
+
+    border: 1px solid #dbeafe !important;
+
+    border-radius: 16px !important;
+
+    box-shadow:
+        0 8px 24px rgba(15, 23, 42, .10) !important;
+
+    position: relative !important;
+
+    transform: translate(20px, -80px) !important;
+
+    opacity: 0 !important;
+pointer-events: none !important;
+
+transition:
+    opacity .25s ease,
+    transform .25s ease !important;
+
+}
+
+.lexi-assistant:hover .lexi-message {
+
+    opacity: 1 !important;
+
+    transform: translate(15px, -85px) !important;
+
+}
+
+
+/* LITTLE SPEECH ARROW */
+
+.lexi-message::after {
+
+    content: "" !important;
+
+    position: absolute !important;
+
+    right: -7px !important;
+
+    bottom: 18px !important;
+
+    width: 13px !important;
+    height: 13px !important;
+
+    background: #ffffff !important;
+
+    border-top: 1px solid #dbeafe !important;
+    border-right: 1px solid #dbeafe !important;
+
+    transform: rotate(45deg) !important;
+
+}
+
+
+/* TITLE */
+
+.lexi-message strong {
+
+    position: relative !important;
+
+    z-index: 2 !important;
+
+    color: #1e3a8a !important;
+
+    font-size: 14px !important;
+
+    line-height: 1.3 !important;
+
+}
+
+
+/* SUBTITLE */
+
+.lexi-message span {
+
+    position: relative !important;
+
+    z-index: 2 !important;
+
+    margin-top: 3px !important;
+
+    color: #64748b !important;
+
+    font-size: 11px !important;
+
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.lexi-assistant:hover .lexi-avatar {
+
+    transform:
+        translateY(-6px)
+        scale(1.04) !important;
+
+}
+
+
+/* =========================================
+   FLOATING ANIMATION
+========================================= */
+
+.lexi-avatar {
+
+    animation: lexiFloat 3.5s ease-in-out infinite !important;
+
+}
+
+
+@keyframes lexiFloat {
+
+    0%,
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-5px);
+
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .lexi-assistant {
+
+        right: 12px !important;
+        bottom: 12px !important;
+
+    }
+
+    .lexi-avatar {
+
+        width: 76px !important;
+        height: 92px !important;
+
+    }
+
+    .lexi-message {
+
+        display: none !important;
+
+    }
+
+    .lexi-status {
+
+        width: 6px !important;
+        height: 6px !important;
+
+        border-width: 0px !important;
+        top: 8px !important;
+        right: 25px !important;
+    }
+
+}
+
+/* =========================================
+   LEXI — DESKTOP SIZE
+========================================= */
+
+@media (min-width: 769px) {
+
+    .lexi-avatar img {
+        width: 190px !important;
+        height: auto !important;
+    }
+
+}

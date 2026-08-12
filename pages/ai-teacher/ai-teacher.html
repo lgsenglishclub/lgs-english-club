@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AI Teacher | LGS English Club</title>
+
+   <link rel="stylesheet"
+      href="ai-teacher.css?v=3">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+          
+</head>
+
+<body>
+
+<header class="ai-header">
+
+    <div class="ai-header-left">
+
+        <a href="../../index.html" class="ai-back-btn">
+            <i class="fa-solid fa-arrow-left"></i>
+        </a>
+
+        <div class="ai-header-avatar">
+    <img
+        src="images/lexi.png"
+        alt="Lexi"
+    >
+</div>
+
+        <div class="ai-header-info">
+
+            <strong>Lexi</strong>
+
+            <span>
+                Your AI English Teacher
+            </span>
+
+        </div>
+
+    </div>
+
+    <div class="ai-status">
+
+        <span class="status-dot"></span>
+
+        Online
+
+    </div>
+
+</header>
+
+
+<main class="ai-chat-page">
+
+
+    <!-- CHAT AREA -->
+
+    <section class="chat-container" id="chatContainer">
+
+
+        <!-- LEXİ MESSAGE -->
+
+        <div class="message-row teacher-message">
+
+            <div class="message-avatar">
+    <img
+        src="images/lexi2.png"
+        alt="Lexi"
+    >
+</div>
+
+            <div>
+
+                <div class="message-name">
+                    Lexi
+                </div>
+
+                <div class="chat-bubble teacher-bubble">
+
+    <p class="lexi-welcome-title">
+        Hi! 👋 I'm Lexi!
+    </p>
+
+    <p>
+        I'm your personal AI English Teacher.
+        Let's improve your English together! 🚀
+    </p>
+
+    <p>
+        What would you like to practice today?
+    </p>
+
+</div>
+
+            </div>
+
+        </div>
+
+
+        <!-- QUICK ACTIONS -->
+
+        <div class="quick-actions">
+
+            <button class="quick-action"
+                    data-message="I want to practice vocabulary.">
+
+                📚 Vocabulary
+
+            </button>
+
+            <button class="quick-action"
+                    data-message="Give me an LGS question.">
+
+                🎯 LGS Question
+
+            </button>
+
+            <button class="quick-action"
+                    data-message="I want to practice English conversation.">
+
+                💬 Conversation
+
+            </button>
+
+            <button class="quick-action"
+                    data-message="Correct my English sentence.">
+
+                ✍️ Correct my sentence
+
+            </button>
+
+        </div>
+
+
+    </section>
+
+
+    <!-- MESSAGE INPUT -->
+
+    <div class="chat-input-area">
+
+        <button class="voice-btn"
+                id="voiceBtn"
+                title="Voice">
+
+            <i class="fa-solid fa-microphone"></i>
+
+        </button>
+
+
+        <input
+            type="text"
+            id="chatInput"
+            placeholder="Type your message..."
+            autocomplete="off"
+        >
+
+
+        <button class="send-btn"
+                id="sendBtn"
+                title="Send">
+
+            <i class="fa-solid fa-paper-plane"></i>
+
+        </button>
+
+    </div>
+
+
+</main>
+
+
+
+<script type="module" src="ai-teacher.js"></script>
+
+</body>
+
+</html>

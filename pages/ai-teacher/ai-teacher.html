@@ -31,30 +31,47 @@
 
         <div class="ai-header-avatar">
     <img
-        src="images/lexi.png"
+        src="images/lexi4.png"
         alt="Lexi"
     >
 </div>
 
         <div class="ai-header-info">
 
-            <strong>Lexi</strong>
+    <div class="ai-name-row">
 
-            <span>
-                Your AI English Teacher
-            </span>
+        <strong>Lexi</strong>
 
-        </div>
+        <span class="ai-online">
+
+            <span class="status-dot"></span>
+
+            Online
+
+        </span>
+
+    </div>
+
+    <span>
+        Your AI English Teacher
+    </span>
+
+</div>
 
     </div>
 
-    <div class="ai-status">
+    <div class="ai-header-actions">
 
-        <span class="status-dot"></span>
+    <button
+        class="clear-chat-btn"
+        id="clearChatBtn"
+        title="Clear conversation"
+    >
+        <i class="fa-solid fa-trash"></i>
+        <span>Clear Chat</span>
+    </button>
 
-        Online
-
-    </div>
+</div>
 
 </header>
 
@@ -69,11 +86,11 @@
 
         <!-- LEXİ MESSAGE -->
 
-        <div class="message-row teacher-message">
+        <div class="message-row teacher-message" id="lexiWelcomeMessage">
 
             <div class="message-avatar">
     <img
-        src="images/lexi2.png"
+        src="images/lexi1.png"
         alt="Lexi"
     >
 </div>
@@ -87,12 +104,11 @@
                 <div class="chat-bubble teacher-bubble">
 
     <p class="lexi-welcome-title">
-        Hi! 👋 I'm Lexi!
+        Hi! I'm Lexi 👋
     </p>
 
     <p>
-        I'm your personal AI English Teacher.
-        Let's improve your English together! 🚀
+        I'm your personal AI Teacher.
     </p>
 
     <p>

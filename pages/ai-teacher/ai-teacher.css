@@ -837,24 +837,57 @@ body .ai-header-avatar img {
 }
 
 
-    body .message-row {
-    width: 100% !important;
+    @media (max-width: 600px) {
 
-    max-width: 850px !important;
+    body .user-message {
+        width: 100% !important;
 
-    margin: 0 0 24px 0 !important;
+        display: flex !important;
 
-    padding: 0 !important;
+        justify-content: flex-end !important;
 
-    display: flex !important;
+        align-items: flex-start !important;
 
-    align-items: flex-start !important;
+        padding: 0 !important;
 
-    justify-content: flex-start !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
 
-    gap: 12px !important;
 
-    text-align: left !important;
+    body .user-message > div:first-child {
+        order: 1 !important;
+
+        max-width: calc(100% - 50px) !important;
+
+        text-align: right !important;
+    }
+
+
+    body .user-message .message-avatar {
+        order: 2 !important;
+
+        margin-left: 10px !important;
+        margin-right: 0 !important;
+    }
+
+
+    body .user-message .message-name {
+        text-align: right !important;
+
+        margin-right: 5px !important;
+        margin-left: 0 !important;
+    }
+
+
+    body .user-bubble {
+        text-align: left !important;
+
+        width: auto !important;
+
+        display: inline-block !important;
+    }
+
 }
 
 
@@ -1053,5 +1086,439 @@ body .user-avatar-initial {
     font-size: 16px !important;
 
     font-weight: 700 !important;
+}
+
+/* =========================================
+   COMPACT CHAT WIDTH
+========================================= */
+
+body .ai-chat-page {
+    max-width: 850px !important;
+}
+
+body .chat-container {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+
+body .message-row {
+    width: auto !important;
+    max-width: 100% !important;
+}
+
+
+/* USER MESSAGES */
+
+body .user-message {
+    padding-right: 20px !important;
+}
+
+
+/* TEACHER MESSAGES */
+
+body .teacher-message {
+    padding-left: 20px !important;
+}
+
+
+/* QUICK ACTIONS */
+
+body .quick-actions {
+    margin-left: 50px !important;
+}
+
+@media (max-width: 600px) {
+
+    body .ai-chat-page {
+        max-width: 100% !important;
+    }
+
+    body .chat-container {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+
+    body .teacher-message {
+        padding-left: 0 !important;
+    }
+
+    body .user-message {
+        padding-right: 0 !important;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    /* =========================================
+       COMPACT CHAT BUBBLES
+    ========================================= */
+
+    body .chat-bubble {
+        padding: 11px 14px !important;
+
+        font-size: 14px !important;
+
+        line-height: 1.45 !important;
+
+        border-radius: 15px !important;
+    }
+
+
+    body .teacher-message > div:last-child {
+        max-width: 78% !important;
+    }
+
+
+    body .user-message > div:first-child {
+        max-width: 78% !important;
+    }
+
+
+    body .chat-bubble p {
+        margin-bottom: 5px !important;
+    }
+
+
+    body .chat-bubble p:last-child {
+        margin-bottom: 0 !important;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    body .chat-bubble {
+        padding: 7px 12px !important;
+
+        font-size: 14px !important;
+
+        line-height: 1.35 !important;
+
+        border-radius: 14px !important;
+    }
+
+    body .chat-bubble p {
+        margin: 0 0 3px 0 !important;
+    }
+
+    body .chat-bubble p:last-child {
+        margin-bottom: 0 !important;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    /* USER MESSAGE - COMPACT */
+
+    body .user-bubble {
+        padding: 5px 12px !important;
+
+        line-height: 1.25 !important;
+
+        font-size: 14px !important;
+
+        min-height: 0 !important;
+
+        height: auto !important;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    /* =========================================
+       QUICK ACTIONS - CENTER
+    ========================================= */
+
+    body .quick-actions {
+        width: 100% !important;
+
+        margin: 10px auto 30px auto !important;
+
+        padding: 0 !important;
+
+        display: grid !important;
+
+        grid-template-columns: repeat(2, 145px) !important;
+
+        justify-content: center !important;
+
+        align-items: center !important;
+
+        gap: 10px !important;
+    }
+
+
+    body .quick-action {
+        width: 145px !important;
+
+        min-height: 48px !important;
+
+        margin: 0 !important;
+
+        padding: 8px 10px !important;
+
+        display: flex !important;
+
+        align-items: center !important;
+
+        justify-content: center !important;
+
+        text-align: center !important;
+    }
+
+    body .ai-chat-page {
+    height: calc(100vh - 62px) !important;
+    min-height: 0 !important;
+}
+
+body .chat-container {
+    min-height: 0 !important;
+    overflow-y: auto !important;
+
+    padding-bottom: 150px !important;
+
+    scroll-behavior: smooth !important;
+}
+
+}
+
+/* =========================================
+   ALL LEXI CHAT AVATARS MUST LOOK THE SAME
+========================================= */
+
+body .teacher-message .message-avatar {
+    width: 42px !important;
+    height: 42px !important;
+    min-width: 42px !important;
+
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    overflow: visible !important;
+}
+
+body .teacher-message .message-avatar img {
+    width: 42px !important;
+    height: 42px !important;
+
+    object-fit: contain !important;
+
+    display: block !important;
+}
+
+/* =========================================
+   CHAT SCROLL FIX
+========================================= */
+
+body .ai-chat-page {
+    min-height: 0 !important;
+    height: calc(100vh - 68px) !important;
+}
+
+body .chat-container {
+    min-height: 0 !important;
+    overflow-y: auto !important;
+
+    scroll-behavior: smooth !important;
+
+    padding-bottom: 160px !important;
+}
+
+/* =========================================
+   DESKTOP CHAT - COMPACT MESSAGE SPACING
+========================================= */
+
+@media (min-width: 601px) {
+
+    body .chat-container {
+        padding-top: 25px !important;
+        padding-bottom: 110px !important;
+    }
+
+    /* Mesajlar birbirine daha yakın */
+    body .message-row {
+        margin-bottom: 12px !important;
+    }
+
+    /* Lexi mesajı */
+    body .teacher-message {
+        margin-bottom: 12px !important;
+    }
+
+    /* Kullanıcı mesajı */
+    body .user-message {
+        margin-bottom: 12px !important;
+    }
+
+    /* Mesaj kutularının iç yüksekliği */
+    body .chat-bubble {
+        padding: 11px 15px !important;
+        line-height: 1.45 !important;
+    }
+
+    /* Lexi ismi ile kutu arası */
+    body .message-name {
+        margin-bottom: 3px !important;
+    }
+
+    /* Quick action butonları */
+    body .quick-actions {
+        margin-top: -2px !important;
+        margin-bottom: 16px !important;
+        gap: 7px !important;
+    }
+
+    body .quick-action {
+        padding: 8px 13px !important;
+    }
+}
+
+@media (max-width: 600px) {
+
+    body .user-bubble {
+        background: #2563eb !important;
+        color: #ffffff !important;
+
+        border: none !important;
+
+        border-radius: 15px !important;
+        border-top-right-radius: 5px !important;
+    }
+
+}
+
+/* =========================================
+   CLEAR CHAT
+========================================= */
+
+.ai-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.clear-chat-btn {
+    border: none;
+    background: #fef2f2;
+    color: #dc2626;
+
+    padding: 8px 12px;
+
+    border-radius: 10px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    transition: .2s ease;
+}
+
+.clear-chat-btn:hover {
+    background: #fee2e2;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 600px) {
+
+    .ai-header-actions {
+        gap: 8px;
+    }
+
+    .clear-chat-btn {
+        width: 34px;
+        height: 34px;
+
+        padding: 0;
+
+        justify-content: center;
+
+        border-radius: 50%;
+    }
+
+    .clear-chat-btn span {
+        display: none;
+    }
+
+}
+
+/* =========================================
+   LEXI NAME + ONLINE
+========================================= */
+
+.ai-name-row {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+}
+
+.ai-online {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 4px !important;
+
+    color: #22c55e !important;
+
+    font-size: 11px !important;
+    font-weight: 600 !important;
+}
+
+.ai-online .status-dot {
+    width: 7px !important;
+    height: 7px !important;
+
+    background: #22c55e !important;
+
+    border-radius: 50% !important;
+
+    display: inline-block !important;
+}
+
+@media (max-width: 600px) {
+
+    .ai-name-row {
+        gap: 6px !important;
+    }
+
+    .ai-online {
+        font-size: 9px !important;
+    }
+
+    .ai-online .status-dot {
+        width: 6px !important;
+        height: 6px !important;
+    }
+
+}
+
+/* =========================================
+   LEXI GLOBAL SIZE
+========================================= */
+
+.lexi-avatar {
+    width: 95px !important;
+    height: 95px !important;
+
+    min-width: 95px !important;
+    min-height: 95px !important;
+}
+
+.lexi-avatar img {
+    width: 100% !important;
+    height: 100% !important;
+
+    object-fit: contain !important;
 }
 

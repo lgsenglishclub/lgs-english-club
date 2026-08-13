@@ -67,6 +67,12 @@ let conversations =
 
 let currentConversationId = null;
 
+const CURRENT_CHAT_KEY =
+    "lexiCurrentConversationId";
+
+const CHAT_PAGE_SESSION_KEY =
+    "lexiChatPageSession";
+
 
 // ===============================
 // SEND LOCK
@@ -135,11 +141,24 @@ function createNewConversation() {
 
 
     conversations =
-        conversations.slice(0, MAX_CHATS);
+        conversations.slice(
+            0,
+            MAX_CHATS
+        );
 
 
     currentConversationId =
         conversation.id;
+
+
+    // ===============================
+    // SAVE ACTIVE CHAT
+    // ===============================
+
+    sessionStorage.setItem(
+        CURRENT_CHAT_KEY,
+        conversation.id
+    );
 
 
     saveConversations();
@@ -911,6 +930,11 @@ function loadConversation(
     currentConversationId =
         conversation.id;
 
+        sessionStorage.setItem(
+    CURRENT_CHAT_KEY,
+    conversation.id
+);
+
 
     clearChatScreen();
 
@@ -983,12 +1007,13 @@ function startNewChat() {
 
     currentConversationId = null;
 
+    sessionStorage.removeItem(
+        CURRENT_CHAT_KEY
+    );
 
     clearChatScreen();
 
-
     renderChatHistory();
-
 
     if (chatInput) {
 
@@ -2451,6 +2476,107 @@ if (clearChatBtn) {
 
 
 // ===============================
+// PAGE SESSION
+// ===============================
+
+const navigationEntry =
+    performance.getEntriesByType("navigation")[0];
+
+
+// F5 / Ctrl+R mi?
+
+const isReload =
+    navigationEntry &&
+    navigationEntry.type === "reload";
+
+
+// Daha önce Lexi sayfası açık mıydı?
+
+const hasActiveChatPageSession =
+    sessionStorage.getItem(
+        CHAT_PAGE_SESSION_KEY
+    );
+
+
+// ===============================
+// DETERMINE PAGE ENTRY
+// ===============================
+//
+// F5 durumunda browser aynı sayfayı
+// tekrar yükler.
+//
+// Ana sayfadan Lexi'ye tekrar gelindiğinde
+// referrer index.html olur.
+//
+// Böylece ikisini ayırıyoruz.
+
+const cameFromSamePage =
+    document.referrer ===
+    window.location.href;
+
+
+// ===============================
+// NEW VISIT TO LEXI
+// ===============================
+//
+// F5 değilse ve:
+// - daha önce aktif session yoksa
+// VEYA
+// - başka bir sayfadan geldiyse
+//
+// yeni sohbet açılır.
+
+if (
+    !isReload &&
+    (
+        !hasActiveChatPageSession ||
+        !cameFromSamePage
+    )
+) {
+
+    sessionStorage.removeItem(
+        CURRENT_CHAT_KEY
+    );
+
+}
+
+
+// Lexi sayfasının aktif olduğunu kaydet
+
+sessionStorage.setItem(
+    CHAT_PAGE_SESSION_KEY,
+    "active"
+);
+
+// ===============================
+// LEAVE LEXI PAGE
+// ===============================
+
+const backButton =
+    document.querySelector(".ai-back-btn");
+
+
+if (backButton) {
+
+    backButton.addEventListener(
+        "click",
+        () => {
+
+            sessionStorage.removeItem(
+                CHAT_PAGE_SESSION_KEY
+            );
+
+            sessionStorage.removeItem(
+                CURRENT_CHAT_KEY
+            );
+
+        }
+    );
+
+}
+
+
+// ===============================
 // AUTH
 // ===============================
 
@@ -2464,9 +2590,7 @@ onAuthStateChanged(
                 "Lexi: User not logged in."
             );
 
-
             renderChatHistory();
-
 
             return;
 
@@ -2487,17 +2611,75 @@ onAuthStateChanged(
         renderChatHistory();
 
 
-        // Sayfa açıldığında son sohbeti
-        // otomatik olarak aç
+        // ===============================
+        // RESTORE CURRENT CHAT
+        // ===============================
 
-        if (
-            conversations.length &&
-            !currentConversationId
-        ) {
-
-            loadConversation(
-                conversations[0].id
+        const savedConversationId =
+            sessionStorage.getItem(
+                CURRENT_CHAT_KEY
             );
+
+
+        // ===============================
+        // SAVED CHAT EXISTS
+        // ===============================
+
+        if (savedConversationId) {
+
+            const savedConversation =
+                conversations.find(
+                    conversation =>
+                        conversation.id ===
+                        savedConversationId
+                );
+
+
+            // Sohbet gerçekten varsa aç
+
+            if (savedConversation) {
+
+                loadConversation(
+                    savedConversationId
+                );
+
+            }
+
+            // ID var ama sohbet bulunamıyorsa
+
+            else {
+
+                sessionStorage.removeItem(
+                    CURRENT_CHAT_KEY
+                );
+
+
+                currentConversationId =
+                    null;
+
+
+                clearChatScreen();
+
+                renderChatHistory();
+
+            }
+
+        }
+
+
+        // ===============================
+        // NO SAVED CHAT
+        // ===============================
+
+        else {
+
+            currentConversationId =
+                null;
+
+
+            clearChatScreen();
+
+            renderChatHistory();
 
         }
 

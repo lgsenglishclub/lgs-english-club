@@ -1175,20 +1175,17 @@ function scrollToBottom() {
 
 
 // ===============================
-// SEND MESSAGE
+// SEND MESSAGE TO LEXI AI
 // ===============================
 
-function sendMessage(text) {
+async function sendMessage(text) {
 
     if (!text || !text.trim()) return;
 
-
-    const cleanText =
-        text.trim();
+    const cleanText = text.trim();
 
 
     // İlk mesajsa yeni sohbet oluştur
-
     if (!currentConversationId) {
 
         createNewConversation();
@@ -1196,23 +1193,174 @@ function sendMessage(text) {
     }
 
 
-    addUserMessage(
-        cleanText
-    );
-
+    // Kullanıcının mesajını göster
+    addUserMessage(cleanText);
 
     chatInput.value = "";
 
 
-    setTimeout(() => {
+    // Lexi düşünüyor mesajı
+    const thinkingRow =
+        document.createElement("div");
 
-        addTeacherMessage(
+    thinkingRow.className =
+        "message-row teacher-message lexi-thinking";
 
-            "Nice! 😊 Tell me more about that."
+    thinkingRow.innerHTML = `
 
+        <div class="message-avatar">
+
+            <img
+                src="images/lexi1.png"
+                alt="Lexi"
+            >
+
+        </div>
+
+        <div>
+
+            <div class="message-name">
+                Lexi
+            </div>
+
+            <div class="chat-bubble teacher-bubble">
+
+                <span class="lexi-thinking-dots">
+                    Lexi is thinking<span>.</span><span>.</span><span>.</span>
+                </span>
+
+            </div>
+
+        </div>
+
+    `;
+
+    chatContainer.appendChild(
+        thinkingRow
+    );
+
+    scrollToBottom();
+
+
+    try {
+
+        // ========================================
+        // CURRENT CONVERSATION
+        // ========================================
+
+        const conversation =
+            getCurrentConversation();
+
+
+        const previousMessages =
+            conversation
+                ? conversation.messages.slice(-12)
+                : [];
+
+
+        // ========================================
+        // FIREBASE FUNCTION
+        // ========================================
+
+        const response =
+            await fetch(
+                "https://us-central1-lgs-english-club.cloudfunctions.net/lexiChat",
+                {
+
+                    method: "POST",
+
+                    headers: {
+                        "Content-Type":
+                            "application/json"
+                    },
+
+                    body: JSON.stringify({
+
+                        message:
+                            cleanText,
+
+                        conversation:
+                            previousMessages
+
+                    })
+
+                }
+            );
+
+
+        const data =
+            await response.json();
+
+
+        // ========================================
+        // REMOVE THINKING
+        // ========================================
+
+        thinkingRow.remove();
+
+
+        // ========================================
+        // ERROR
+        // ========================================
+
+        if (!response.ok) {
+
+            console.error(
+                "Lexi Function Error:",
+                data
+            );
+
+            addTeacherMessage(
+                "Sorry! 😔 I couldn't connect right now. Please try again."
+            );
+
+            return;
+
+        }
+
+
+        // ========================================
+        // LEXI RESPONSE
+        // ========================================
+
+        if (
+            data &&
+            data.reply
+        ) {
+
+            addTeacherMessage(
+                data.reply
+            );
+
+        }
+
+        else {
+
+            addTeacherMessage(
+                "Sorry! 😔 Lexi couldn't generate a response."
+            );
+
+        }
+
+    }
+
+    catch (error) {
+
+        console.error(
+            "Lexi connection error:",
+            error
         );
 
-    }, 700);
+
+        // Thinking mesajını kaldır
+        thinkingRow.remove();
+
+
+        addTeacherMessage(
+            "Sorry! 😔 I couldn't connect to Lexi right now."
+        );
+
+    }
 
 }
 

@@ -479,7 +479,7 @@ body .chat-bubble {
 
     color: #334155 !important;
 
-    font-size: 15px !important;
+    font-size: 14px !important;
 
     line-height: 1.6 !important;
 
@@ -1155,7 +1155,7 @@ body .quick-actions {
     body .chat-bubble {
         padding: 11px 14px !important;
 
-        font-size: 14px !important;
+        font-size: 12px !important;
 
         line-height: 1.45 !important;
 
@@ -1189,7 +1189,7 @@ body .quick-actions {
     body .chat-bubble {
         padding: 7px 12px !important;
 
-        font-size: 14px !important;
+        font-size: 12px !important;
 
         line-height: 1.35 !important;
 
@@ -1215,7 +1215,7 @@ body .quick-actions {
 
         line-height: 1.25 !important;
 
-        font-size: 14px !important;
+        font-size: 12px !important;
 
         min-height: 0 !important;
 
@@ -2859,11 +2859,11 @@ body .chat-container {
 }
 
 .teacher-bubble h3 {
-    font-size: 17px;
+    font-size: 15px;
 }
 
 .teacher-bubble h4 {
-    font-size: 15px;
+    font-size: 13px;
 }
 
 .teacher-bubble .lexi-list {
@@ -2882,4 +2882,60 @@ body .chat-container {
 
 .teacher-bubble ol.lexi-list {
     list-style-type: decimal;
+}
+
+/* =========================================
+   LEXI VOICE CHAT
+========================================= */
+
+.voice-btn {
+    transition:
+        transform .2s ease,
+        background .2s ease,
+        color .2s ease;
+}
+
+
+.voice-btn.voice-listening {
+
+    background: #ef4444 !important;
+
+    color: #ffffff !important;
+
+    transform: scale(1.08);
+
+    animation:
+        lexiVoicePulse 1.2s infinite;
+
+}
+
+
+@keyframes lexiVoicePulse {
+
+    0% {
+        box-shadow:
+            0 0 0 0 rgba(239, 68, 68, .35);
+    }
+
+    70% {
+        box-shadow:
+            0 0 0 12px rgba(239, 68, 68, 0);
+    }
+
+    100% {
+        box-shadow:
+            0 0 0 0 rgba(239, 68, 68, 0);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .voice-btn.voice-listening {
+
+        transform: scale(1.05);
+
+    }
+
 }

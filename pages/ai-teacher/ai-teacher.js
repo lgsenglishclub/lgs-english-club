@@ -1694,16 +1694,22 @@ async function sendMessage(text) {
         // SUCCESS
         // ===============================
 
-        if (
-            data &&
-            data.reply
-        ) {
+        if (data && data.reply) {
 
-            addTeacherMessage(
-                String(data.reply)
-            );
+    addTeacherMessage(
+        data.reply
+    );
 
-        }
+
+    // ===============================
+    // LEXI VOICE RESPONSE
+    // ===============================
+
+    speakLexi(
+        data.reply
+    );
+
+}
 
         else {
 
@@ -1870,14 +1876,474 @@ quickActions.forEach(
 
 
 // ===============================
-// VOICE
+// LEXI VOICE CHAT
 // ===============================
 
 const voiceBtn =
-    document.getElementById(
-        "voiceBtn"
+    document.getElementById("voiceBtn");
+
+
+let voiceRecognition = null;
+
+let isListening = false;
+
+let isLexiSpeaking = false;
+
+
+// ===============================
+// SPEECH RECOGNITION
+// ===============================
+
+const SpeechRecognition =
+    window.SpeechRecognition ||
+    window.webkitSpeechRecognition;
+
+
+// ===============================
+// VOICE STATUS
+// ===============================
+
+function setVoiceStatus(status) {
+
+    if (!voiceBtn) return;
+
+
+    if (status === "listening") {
+
+        voiceBtn.classList.add(
+            "voice-listening"
+        );
+
+        voiceBtn.innerHTML =
+            '<i class="fa-solid fa-stop"></i>';
+
+        voiceBtn.title =
+            "Stop listening";
+
+        return;
+
+    }
+
+
+    voiceBtn.classList.remove(
+        "voice-listening"
     );
 
+
+    voiceBtn.innerHTML =
+        '<i class="fa-solid fa-microphone"></i>';
+
+    voiceBtn.title =
+        "Talk to Lexi";
+
+}
+
+
+// ===============================
+// START LISTENING
+// ===============================
+
+function startListening() {
+
+    if (!SpeechRecognition) {
+
+        addTeacherMessage(
+            "Sorry! 😔 Voice input is not supported in this browser. Please use Google Chrome or Microsoft Edge."
+        );
+
+        return;
+
+    }
+
+
+    if (isLexiSpeaking) {
+
+        window.speechSynthesis.cancel();
+
+        isLexiSpeaking = false;
+
+    }
+
+
+    if (isListening) {
+
+        stopListening();
+
+        return;
+
+    }
+
+
+    voiceRecognition =
+        new SpeechRecognition();
+
+
+    voiceRecognition.lang =
+        "en-US";
+
+
+    voiceRecognition.continuous =
+        false;
+
+
+    voiceRecognition.interimResults =
+        true;
+
+
+    voiceRecognition.maxAlternatives =
+        1;
+
+
+    isListening = true;
+
+
+    setVoiceStatus(
+        "listening"
+    );
+
+
+    // ===============================
+    // START
+    // ===============================
+
+    try {
+
+        voiceRecognition.start();
+
+    }
+
+    catch (error) {
+
+        console.error(
+            "Voice start error:",
+            error
+        );
+
+        isListening = false;
+
+        setVoiceStatus(
+            "idle"
+        );
+
+    }
+
+
+    // ===============================
+    // RESULT
+    // ===============================
+
+    voiceRecognition.onresult =
+        event => {
+
+            let transcript = "";
+
+
+            for (
+                let i = event.resultIndex;
+                i < event.results.length;
+                i++
+            ) {
+
+                transcript +=
+                    event.results[i][0]
+                        .transcript;
+
+            }
+
+
+            transcript =
+                transcript.trim();
+
+
+            // Kullanıcının konuşmasını
+            // input'a göster
+
+            if (chatInput) {
+
+                chatInput.value =
+                    transcript;
+
+            }
+
+
+            // Sadece final sonuç geldiğinde gönder
+
+            const lastResult =
+                event.results[
+                    event.results.length - 1
+                ];
+
+
+            if (
+                lastResult &&
+                lastResult.isFinal
+            ) {
+
+                stopListening();
+
+
+                if (transcript) {
+
+                    sendMessage(
+                        transcript
+                    );
+
+                }
+
+            }
+
+        };
+
+
+    // ===============================
+    // END
+    // ===============================
+
+    voiceRecognition.onend =
+        () => {
+
+            isListening = false;
+
+            setVoiceStatus(
+                "idle"
+            );
+
+        };
+
+
+    // ===============================
+    // ERROR
+    // ===============================
+
+    voiceRecognition.onerror =
+        event => {
+
+            console.error(
+                "Speech recognition error:",
+                event.error
+            );
+
+
+            isListening = false;
+
+
+            setVoiceStatus(
+                "idle"
+            );
+
+
+            if (
+                event.error ===
+                "not-allowed"
+            ) {
+
+                addTeacherMessage(
+                    "🎤 Please allow microphone access so you can talk to me."
+                );
+
+            }
+
+            else if (
+                event.error ===
+                "no-speech"
+            ) {
+
+                console.log(
+                    "No speech detected."
+                );
+
+            }
+
+        };
+
+}
+
+
+// ===============================
+// STOP LISTENING
+// ===============================
+
+function stopListening() {
+
+    if (
+        voiceRecognition
+    ) {
+
+        try {
+
+            voiceRecognition.stop();
+
+        }
+
+        catch (error) {
+
+            console.log(
+                "Recognition already stopped."
+            );
+
+        }
+
+    }
+
+
+    isListening = false;
+
+
+    setVoiceStatus(
+        "idle"
+    );
+
+}
+
+
+// ===============================
+// LEXI SPEAK
+// ===============================
+
+function speakLexi(
+    text
+) {
+
+    if (
+        !text ||
+        !window.speechSynthesis
+    ) {
+
+        return;
+
+    }
+
+
+    // Önceki konuşmayı durdur
+
+    window.speechSynthesis.cancel();
+
+
+    const cleanText =
+    String(text)
+
+        // HTML etiketleri
+        .replace(/<[^>]*>/g, " ")
+
+        // Markdown bold / italic
+        .replace(/\*\*(.*?)\*\*/g, "$1")
+        .replace(/\*(.*?)\*/g, "$1")
+        .replace(/__(.*?)__/g, "$1")
+        .replace(/_(.*?)_/g, "$1")
+
+        // Başlık işaretleri
+        .replace(/^#{1,6}\s*/gm, "")
+
+        // Bullet işaretleri
+        .replace(/^\s*[-*•]\s+/gm, "")
+
+        // Numaralı liste işaretleri
+        .replace(/^\s*\d+\.\s+/gm, "")
+
+        // Emoji
+        .replace(
+            /[\u{1F300}-\u{1FAFF}]|[\u{2600}-\u{27BF}]/gu,
+            ""
+        )
+
+        // Gereksiz semboller
+        .replace(/[🎯💡❌✅⚠️⭐✨🔥👍👎❤️😊😄😔]/gu, "")
+
+        // Birden fazla boşluğu düzelt
+        .replace(/\s+/g, " ")
+
+        .trim();
+
+
+    const utterance =
+        new SpeechSynthesisUtterance(
+            cleanText
+        );
+
+
+    utterance.lang =
+        "en-US";
+
+
+    utterance.rate =
+        0.82;
+
+
+    utterance.pitch =
+        0.90;
+
+
+    utterance.volume =
+        1;
+
+
+    // ===============================
+    // FIND ENGLISH VOICE
+    // ===============================
+
+    const voices =
+        window.speechSynthesis
+            .getVoices();
+
+
+    const englishVoice =
+        voices.find(
+            voice =>
+                voice.lang &&
+                voice.lang
+                    .toLowerCase()
+                    .startsWith("en")
+        );
+
+
+    if (englishVoice) {
+
+        utterance.voice =
+            englishVoice;
+
+    }
+
+
+    isLexiSpeaking =
+        true;
+
+
+    // Mikrofonu Lexi konuşurken
+    // kullanmayalım
+
+    setVoiceStatus(
+        "idle"
+    );
+
+
+    utterance.onend =
+        () => {
+
+            isLexiSpeaking =
+                false;
+
+        };
+
+
+    utterance.onerror =
+        () => {
+
+            isLexiSpeaking =
+                false;
+
+        };
+
+
+    window.speechSynthesis.speak(
+        utterance
+    );
+
+}
+
+
+// ===============================
+// VOICE BUTTON
+// ===============================
 
 if (voiceBtn) {
 
@@ -1885,19 +2351,29 @@ if (voiceBtn) {
         "click",
         () => {
 
-            if (isSending) return;
+            if (isLexiSpeaking) {
 
+                window.speechSynthesis.cancel();
 
-            if (!currentConversationId) {
+                isLexiSpeaking =
+                    false;
 
-                createNewConversation();
+                return;
 
             }
 
 
-            addTeacherMessage(
-                "🎤 Voice practice will be available soon!"
-            );
+            if (isListening) {
+
+                stopListening();
+
+            }
+
+            else {
+
+                startListening();
+
+            }
 
         }
     );

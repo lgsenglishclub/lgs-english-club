@@ -69,6 +69,16 @@ let currentConversationId = null;
 
 
 // ===============================
+// SEND LOCK
+// ===============================
+
+// Aynı anda iki API isteğinin
+// gönderilmesini engeller.
+
+let isSending = false;
+
+
+// ===============================
 // SAVE CONVERSATIONS
 // ===============================
 
@@ -124,8 +134,6 @@ function createNewConversation() {
     );
 
 
-    // En fazla 10 sohbet
-
     conversations =
         conversations.slice(0, MAX_CHATS);
 
@@ -173,16 +181,12 @@ function generateChatTitle(text) {
             .trim();
 
 
-    // Soru işareti vb. temizle
-
     title =
         title.replace(
             /[.!?]+$/,
             ""
         );
 
-
-    // Çok uzunsa kısalt
 
     if (title.length > 34) {
 
@@ -298,382 +302,404 @@ function renderChatHistory() {
 
     }
 
+
     conversations.forEach(conversation => {
 
-    const item = document.createElement("div");
+        const item =
+            document.createElement("div");
 
-    item.className = "chat-history-item";
+        item.className =
+            "chat-history-item";
 
-    if (conversation.id === currentConversationId) {
-        item.classList.add("active");
-    }
 
-    item.innerHTML = `
+        if (
+            conversation.id ===
+            currentConversationId
+        ) {
 
-        <div class="chat-history-main">
+            item.classList.add("active");
 
-            <div class="chat-history-title">
+        }
 
-                <span class="chat-history-icon">
-                    <i class="fa-regular fa-message"></i>
-                </span>
 
-                <span class="chat-history-title-text">
-                    ${escapeHTML(conversation.title)}
-                </span>
+        item.innerHTML = `
+
+            <div class="chat-history-main">
+
+                <div class="chat-history-title">
+
+                    <span class="chat-history-icon">
+                        <i class="fa-regular fa-message"></i>
+                    </span>
+
+                    <span class="chat-history-title-text">
+                        ${escapeHTML(conversation.title)}
+                    </span>
+
+                </div>
+
+                <div class="chat-history-date">
+                    ${formatChatDate(conversation.updatedAt)}
+                </div>
 
             </div>
 
-            <div class="chat-history-date">
-                ${formatChatDate(conversation.updatedAt)}
+
+            <button
+                class="chat-history-menu"
+                title="More options"
+                type="button"
+            >
+                <i class="fa-solid fa-ellipsis"></i>
+            </button>
+
+
+            <div class="chat-history-dropdown">
+
+                <button
+                    class="rename-chat-btn"
+                    type="button"
+                >
+                    <i class="fa-solid fa-pen"></i>
+                    Rename
+                </button>
+
+                <button
+                    class="delete-chat-btn"
+                    type="button"
+                >
+                    <i class="fa-solid fa-trash"></i>
+                    Delete
+                </button>
+
             </div>
 
-        </div>
+        `;
 
 
-        <button
-            class="chat-history-menu"
-            title="More options"
-            type="button"
-        >
-            <i class="fa-solid fa-ellipsis"></i>
-        </button>
+        // ===============================
+        // OPEN CHAT
+        // ===============================
+
+        item
+            .querySelector(".chat-history-main")
+            .addEventListener(
+                "click",
+                () => {
+
+                    loadConversation(
+                        conversation.id
+                    );
+
+                }
+            );
 
 
-        <div class="chat-history-dropdown">
+        // ===============================
+        // MENU
+        // ===============================
 
-            <button
-                class="rename-chat-btn"
-                type="button"
-            >
-                <i class="fa-solid fa-pen"></i>
-                Rename
-            </button>
+        const menuBtn =
+            item.querySelector(
+                ".chat-history-menu"
+            );
 
-            <button
-                class="delete-chat-btn"
-                type="button"
-            >
-                <i class="fa-solid fa-trash"></i>
-                Delete
-            </button>
-
-        </div>
-
-    `;
-
-
-    // ===============================
-    // OPEN CHAT
-    // ===============================
-
-    item
-        .querySelector(".chat-history-main")
-        .addEventListener(
-            "click",
-            () => {
-
-                loadConversation(
-                    conversation.id
-                );
-
-            }
-        );
-
-
-    // ===============================
-    // MENU
-    // ===============================
-
-    const menuBtn =
-        item.querySelector(
-            ".chat-history-menu"
-        );
-
-    const dropdown =
-        item.querySelector(
-            ".chat-history-dropdown"
-        );
-
-
-    menuBtn.addEventListener(
-    "click",
-    event => {
-
-        event.stopPropagation();
-
-
-        // Diğer menüleri kapat
-
-        document
-            .querySelectorAll(
+        const dropdown =
+            item.querySelector(
                 ".chat-history-dropdown"
-            )
-            .forEach(menu => {
+            );
 
-                if (menu !== dropdown) {
 
-                    menu.classList.remove("show");
+        menuBtn.addEventListener(
+            "click",
+            event => {
 
-                    menu.style.top = "";
-                    menu.style.left = "";
+                event.stopPropagation();
+
+
+                document
+                    .querySelectorAll(
+                        ".chat-history-dropdown"
+                    )
+                    .forEach(menu => {
+
+                        if (menu !== dropdown) {
+
+                            menu.classList.remove(
+                                "show"
+                            );
+
+                            menu.style.top = "";
+                            menu.style.left = "";
+
+                        }
+
+                    });
+
+
+                const isOpen =
+                    dropdown.classList.contains(
+                        "show"
+                    );
+
+
+                if (isOpen) {
+
+                    dropdown.classList.remove(
+                        "show"
+                    );
+
+                    dropdown.style.top = "";
+                    dropdown.style.left = "";
+
+                    return;
+
                 }
 
-            });
 
-
-        const isOpen =
-            dropdown.classList.contains("show");
-
-
-        if (isOpen) {
-
-            dropdown.classList.remove("show");
-
-            dropdown.style.top = "";
-            dropdown.style.left = "";
-
-            return;
-
-        }
-
-
-        // Menüyü aç
-
-        dropdown.classList.add("show");
-
-
-        // Mobilde gerçek ekran konumunu hesapla
-
-        if (window.innerWidth <= 600) {
-
-            const rect =
-                menuBtn.getBoundingClientRect();
-
-            const menuWidth = 125;
-
-            let left =
-                rect.right - menuWidth;
-
-            let top =
-                rect.bottom + 5;
-
-
-            // Sağdan taşmasını engelle
-
-            if (
-                left + menuWidth >
-                window.innerWidth - 8
-            ) {
-
-                left =
-                    window.innerWidth -
-                    menuWidth -
-                    8;
-
-            }
-
-
-            // Soldan taşmasını engelle
-
-            if (left < 8) {
-
-                left = 8;
-
-            }
-
-
-            // Alttan taşarsa yukarı aç
-
-            const estimatedHeight = 80;
-
-            if (
-                top + estimatedHeight >
-                window.innerHeight - 8
-            ) {
-
-                top =
-                    rect.top -
-                    estimatedHeight -
-                    5;
-
-            }
-
-
-            dropdown.style.top =
-                `${top}px`;
-
-            dropdown.style.left =
-                `${left}px`;
-
-        }
-
-    }
-);
-
-
-// ===============================
-// RENAME
-// ===============================
-
-item
-    .querySelector(".rename-chat-btn")
-    .addEventListener(
-        "click",
-        event => {
-
-            event.stopPropagation();
-
-            // Menüyü hemen kapat
-            const dropdown =
-                item.querySelector(
-                    ".chat-history-dropdown"
+                dropdown.classList.add(
+                    "show"
                 );
 
-            if (dropdown) {
-                dropdown.classList.remove("show");
-            }
 
-            const titleText =
-                item.querySelector(
-                    ".chat-history-title-text"
-                );
+                // Mobil menü konumu
 
-            if (!titleText) return;
+                if (
+                    window.innerWidth <= 600
+                ) {
 
-            const oldTitle =
-                conversation.title;
+                    const rect =
+                        menuBtn.getBoundingClientRect();
 
-            const input =
-                document.createElement("input");
+                    const menuWidth = 125;
 
-            input.type = "text";
-            input.value = oldTitle;
+                    let left =
+                        rect.right -
+                        menuWidth;
 
-            input.className =
-                "chat-history-rename-input";
+                    let top =
+                        rect.bottom + 5;
 
-            titleText.replaceWith(input);
-
-            input.focus();
-            input.select();
-
-
-            // ===============================
-            // SAVE RENAME
-            // ===============================
-
-            function saveRename() {
-
-                const newTitle =
-                    input.value.trim();
-
-                conversation.title =
-                    newTitle || oldTitle;
-
-                conversation.updatedAt =
-                    Date.now();
-
-                saveConversations();
-
-                renderChatHistory();
-
-            }
-
-
-            // ===============================
-            // ENTER / ESCAPE
-            // ===============================
-
-            input.addEventListener(
-                "keydown",
-                event => {
 
                     if (
-                        event.key === "Enter"
+                        left + menuWidth >
+                        window.innerWidth - 8
                     ) {
 
-                        event.preventDefault();
-
-                        saveRename();
+                        left =
+                            window.innerWidth -
+                            menuWidth -
+                            8;
 
                     }
 
+
+                    if (left < 8) {
+
+                        left = 8;
+
+                    }
+
+
+                    const estimatedHeight =
+                        80;
+
+
                     if (
-                        event.key === "Escape"
+                        top + estimatedHeight >
+                        window.innerHeight - 8
                     ) {
 
-                        event.preventDefault();
+                        top =
+                            rect.top -
+                            estimatedHeight -
+                            5;
+
+                    }
+
+
+                    dropdown.style.top =
+                        `${top}px`;
+
+                    dropdown.style.left =
+                        `${left}px`;
+
+                }
+
+            }
+        );
+
+
+        // ===============================
+        // RENAME
+        // ===============================
+
+        item
+            .querySelector(".rename-chat-btn")
+            .addEventListener(
+                "click",
+                event => {
+
+                    event.stopPropagation();
+
+
+                    dropdown.classList.remove(
+                        "show"
+                    );
+
+
+                    const titleText =
+                        item.querySelector(
+                            ".chat-history-title-text"
+                        );
+
+
+                    if (!titleText) return;
+
+
+                    const oldTitle =
+                        conversation.title;
+
+
+                    const input =
+                        document.createElement(
+                            "input"
+                        );
+
+
+                    input.type = "text";
+
+                    input.value =
+                        oldTitle;
+
+                    input.className =
+                        "chat-history-rename-input";
+
+
+                    titleText.replaceWith(
+                        input
+                    );
+
+
+                    input.focus();
+
+                    input.select();
+
+
+                    function saveRename() {
+
+                        const newTitle =
+                            input.value.trim();
+
+
+                        conversation.title =
+                            newTitle ||
+                            oldTitle;
+
+
+                        conversation.updatedAt =
+                            Date.now();
+
+
+                        saveConversations();
 
                         renderChatHistory();
 
                     }
 
+
+                    input.addEventListener(
+                        "keydown",
+                        event => {
+
+                            if (
+                                event.key ===
+                                "Enter"
+                            ) {
+
+                                event.preventDefault();
+
+                                saveRename();
+
+                            }
+
+
+                            if (
+                                event.key ===
+                                "Escape"
+                            ) {
+
+                                event.preventDefault();
+
+                                renderChatHistory();
+
+                            }
+
+                        }
+                    );
+
+
+                    input.addEventListener(
+                        "blur",
+                        () => {
+
+                            saveRename();
+
+                        }
+                    );
+
                 }
             );
 
 
-            // ===============================
-            // CLICK OUTSIDE
-            // ===============================
+        // ===============================
+        // DELETE
+        // ===============================
 
-            input.addEventListener(
-                "blur",
-                () => {
-
-                    saveRename();
-
-                }
-            );
-
-        }
-    );
-
-
-    // ===============================
-// DELETE
-// ===============================
-
-item
-    .querySelector(".delete-chat-btn")
-    .addEventListener(
-        "click",
-        event => {
-
-            event.stopPropagation();
-
-            conversations =
-                conversations.filter(
-                    chat =>
-                        chat.id !==
-                        conversation.id
-                );
-
-            saveConversations();
-
-            // Eğer aktif sohbet silindiyse
-            if (
-                currentConversationId ===
-                conversation.id
-            ) {
-
-                currentConversationId =
-                    null;
-
-                clearChatScreen();
-            }
-
-            renderChatHistory();
-
-        }
-    );
-
-
-    chatHistoryList.appendChild(
         item
-    );
+            .querySelector(".delete-chat-btn")
+            .addEventListener(
+                "click",
+                event => {
 
-});
+                    event.stopPropagation();
+
+
+                    conversations =
+                        conversations.filter(
+                            chat =>
+                                chat.id !==
+                                conversation.id
+                        );
+
+
+                    saveConversations();
+
+
+                    if (
+                        currentConversationId ===
+                        conversation.id
+                    ) {
+
+                        currentConversationId =
+                            null;
+
+                        clearChatScreen();
+
+                    }
+
+
+                    renderChatHistory();
+
+                }
+            );
+
+
+        chatHistoryList.appendChild(
+            item
+        );
+
+    });
 
 }
 
@@ -688,7 +714,7 @@ function escapeHTML(text) {
         document.createElement("div");
 
     div.textContent =
-        text;
+        text ?? "";
 
     return div.innerHTML;
 
@@ -696,7 +722,7 @@ function escapeHTML(text) {
 
 
 // ===============================
-// SAVE MESSAGE TO CURRENT CHAT
+// SAVE MESSAGE
 // ===============================
 
 function saveMessage(
@@ -708,9 +734,6 @@ function saveMessage(
         getCurrentConversation();
 
 
-    // Eğer henüz sohbet yoksa
-    // otomatik oluştur
-
     if (!conversation) {
 
         createNewConversation();
@@ -719,6 +742,9 @@ function saveMessage(
             getCurrentConversation();
 
     }
+
+
+    if (!conversation) return;
 
 
     conversation.messages.push({
@@ -754,8 +780,6 @@ function saveMessage(
     }
 
 
-    // Güncel sohbeti en üste taşı
-
     conversations =
         conversations.filter(
             item =>
@@ -769,8 +793,6 @@ function saveMessage(
     );
 
 
-    // Son 10 sohbet
-
     conversations =
         conversations.slice(
             0,
@@ -781,6 +803,34 @@ function saveMessage(
     saveConversations();
 
     renderChatHistory();
+
+}
+
+
+// ===============================
+// IS WELCOME MESSAGE?
+// ===============================
+
+function isWelcomeMessage(text) {
+
+    if (!text) return false;
+
+
+    const clean =
+        String(text)
+            .replace(/\s+/g, " ")
+            .trim()
+            .toLowerCase();
+
+
+    return (
+        clean.startsWith(
+            "hi there! 👋 welcome to lgs english club"
+        ) ||
+        clean.startsWith(
+            "hi! i'm lexi"
+        )
+    );
 
 }
 
@@ -813,8 +863,6 @@ function clearChatScreen() {
 
     });
 
-
-    // Quick actions tekrar görünsün
 
     const quickActionsElement =
         chatContainer.querySelector(
@@ -870,6 +918,22 @@ function loadConversation(
     conversation.messages.forEach(
         message => {
 
+            // Eski sistemde kaydedilmiş
+            // hoş geldin mesajlarını gösterme
+
+            if (
+                message.sender ===
+                "teacher" &&
+                isWelcomeMessage(
+                    message.text
+                )
+            ) {
+
+                return;
+
+            }
+
+
             if (
                 message.sender ===
                 "user"
@@ -881,6 +945,7 @@ function loadConversation(
                 );
 
             }
+
 
             else if (
                 message.sender ===
@@ -911,7 +976,7 @@ function loadConversation(
 
 
 // ===============================
-// START EMPTY CHAT
+// START NEW CHAT
 // ===============================
 
 function startNewChat() {
@@ -945,7 +1010,11 @@ async function loadUserAvatar(user) {
     try {
 
         const userRef =
-            doc(db, "users", user.uid);
+            doc(
+                db,
+                "users",
+                user.uid
+            );
 
 
         const snap =
@@ -974,8 +1043,8 @@ async function loadUserAvatar(user) {
                     user.email ||
                     "Student"
                 )
-                .charAt(0)
-                .toUpperCase();
+                    .charAt(0)
+                    .toUpperCase();
 
         }
 
@@ -1031,7 +1100,14 @@ function addUserMessage(
     save = true
 ) {
 
-    if (!text || !text.trim()) return;
+    if (
+        !text ||
+        !text.trim()
+    ) {
+
+        return;
+
+    }
 
 
     const row =
@@ -1089,6 +1165,184 @@ function addUserMessage(
 
 
 // ===============================
+// FORMAT LEXI MESSAGE
+// ===============================
+
+function formatLexiMessage(text) {
+
+    if (!text) return "";
+
+
+    let html =
+        escapeHTML(
+            String(text)
+        );
+
+
+    // ===============================
+    // BOLD
+    // **text**
+    // ===============================
+
+    html =
+        html.replace(
+            /\*\*(.*?)\*\*/g,
+            "<strong>$1</strong>"
+        );
+
+
+    // ===============================
+    // ITALIC
+    // *text*
+    // ===============================
+
+    html =
+        html.replace(
+            /(^|[^*])\*([^*\n]+)\*(?!\*)/g,
+            "$1<em>$2</em>"
+        );
+
+
+    // ===============================
+    // HEADINGS
+    // ===============================
+
+    html =
+        html.replace(
+            /^### (.+)$/gm,
+            "<h4>$1</h4>"
+        );
+
+
+    html =
+        html.replace(
+            /^## (.+)$/gm,
+            "<h3>$1</h3>"
+        );
+
+
+    html =
+        html.replace(
+            /^# (.+)$/gm,
+            "<h3>$1</h3>"
+        );
+
+
+    // ===============================
+    // BULLET LIST
+    // ===============================
+
+    html =
+        html.replace(
+            /(?:^|\n)((?:[-*] .+(?:\n|$))+)/g,
+            function (match, list) {
+
+                const items =
+                    list
+                        .trim()
+                        .split("\n")
+                        .map(item => {
+
+                            return `
+                                <li>
+                                    ${item
+                                        .replace(
+                                            /^[-*]\s+/,
+                                            ""
+                                        )
+                                        .trim()}
+                                </li>
+                            `;
+
+                        })
+                        .join("");
+
+
+                return `
+                    <ul class="lexi-list">
+                        ${items}
+                    </ul>
+                `;
+
+            }
+        );
+
+
+    // ===============================
+    // NUMBERED LIST
+    // ===============================
+
+    html =
+        html.replace(
+            /(?:^|\n)((?:\d+\.\s+.+(?:\n|$))+)/g,
+            function (match, list) {
+
+                const items =
+                    list
+                        .trim()
+                        .split("\n")
+                        .map(item => {
+
+                            return `
+                                <li>
+                                    ${item
+                                        .replace(
+                                            /^\d+\.\s+/,
+                                            ""
+                                        )
+                                        .trim()}
+                                </li>
+                            `;
+
+                        })
+                        .join("");
+
+
+                return `
+                    <ol class="lexi-list">
+                        ${items}
+                    </ol>
+                `;
+
+            }
+        );
+
+
+    // ===============================
+    // NEW LINES
+    // ===============================
+
+    html =
+        html.replace(
+            /\n/g,
+            "<br>"
+        );
+
+
+    // ===============================
+    // CLEAN UP
+    // ===============================
+
+    html =
+        html.replace(
+            /<br>\s*<(ul|ol)/g,
+            "<$1"
+        );
+
+
+    html =
+        html.replace(
+            /<\/(ul|ol)>\s*<br>/g,
+            "</$1>"
+        );
+
+
+    return html;
+
+}
+
+
+// ===============================
 // ADD LEXI MESSAGE
 // ===============================
 
@@ -1096,6 +1350,9 @@ function addTeacherMessage(
     text,
     save = true
 ) {
+
+    if (!text) return;
+
 
     const row =
         document.createElement("div");
@@ -1123,9 +1380,10 @@ function addTeacherMessage(
                 Lexi
             </div>
 
+
             <div class="chat-bubble teacher-bubble">
 
-                ${text}
+                ${formatLexiMessage(text)}
 
             </div>
 
@@ -1160,6 +1418,9 @@ function addTeacherMessage(
 
 function scrollToBottom() {
 
+    if (!chatContainer) return;
+
+
     requestAnimationFrame(() => {
 
         requestAnimationFrame(() => {
@@ -1175,78 +1436,77 @@ function scrollToBottom() {
 
 
 // ===============================
-// SEND MESSAGE TO LEXI AI
+// SEND MESSAGE
 // ===============================
 
 async function sendMessage(text) {
 
-    if (!text || !text.trim()) return;
+    // ===============================
+    // EMPTY MESSAGE
+    // ===============================
 
-    const cleanText = text.trim();
+    if (
+        !text ||
+        !text.trim()
+    ) {
 
-
-    // İlk mesajsa yeni sohbet oluştur
-    if (!currentConversationId) {
-
-        createNewConversation();
+        return;
 
     }
 
 
-    // Kullanıcının mesajını göster
-    addUserMessage(cleanText);
+    // ===============================
+    // PREVENT DOUBLE REQUEST
+    // ===============================
 
-    chatInput.value = "";
+    if (isSending) {
+
+        return;
+
+    }
 
 
-    // Lexi düşünüyor mesajı
-    const thinkingRow =
-        document.createElement("div");
+    isSending = true;
 
-    thinkingRow.className =
-        "message-row teacher-message lexi-thinking";
 
-    thinkingRow.innerHTML = `
+    const cleanText =
+        text.trim();
 
-        <div class="message-avatar">
 
-            <img
-                src="images/lexi1.png"
-                alt="Lexi"
-            >
+    // ===============================
+    // DISABLE SEND UI
+    // ===============================
 
-        </div>
+    if (sendBtn) {
 
-        <div>
+        sendBtn.disabled = true;
 
-            <div class="message-name">
-                Lexi
-            </div>
+    }
 
-            <div class="chat-bubble teacher-bubble">
 
-                <span class="lexi-thinking-dots">
-                    Lexi is thinking<span>.</span><span>.</span><span>.</span>
-                </span>
+    if (chatInput) {
 
-            </div>
+        chatInput.disabled = true;
 
-        </div>
-
-    `;
-
-    chatContainer.appendChild(
-        thinkingRow
-    );
-
-    scrollToBottom();
+    }
 
 
     try {
 
-        // ========================================
-        // CURRENT CONVERSATION
-        // ========================================
+        // ===============================
+        // CREATE CHAT
+        // ===============================
+
+        if (!currentConversationId) {
+
+            createNewConversation();
+
+        }
+
+
+        // ===============================
+        // GET OLD MESSAGES
+        // ===============================
 
         const conversation =
             getCurrentConversation();
@@ -1254,24 +1514,104 @@ async function sendMessage(text) {
 
         const previousMessages =
             conversation
-                ? conversation.messages.slice(-12)
+                ? conversation.messages
+                    .slice(-12)
+                    .filter(message => {
+
+                        return !(
+                            message.sender ===
+                            "teacher" &&
+                            isWelcomeMessage(
+                                message.text
+                            )
+                        );
+
+                    })
                 : [];
 
 
-        // ========================================
+        // ===============================
+        // SHOW USER MESSAGE
+        // ===============================
+
+        addUserMessage(
+            cleanText
+        );
+
+
+        if (chatInput) {
+
+            chatInput.value = "";
+
+        }
+
+
+        // ===============================
+        // THINKING
+        // ===============================
+
+        const thinkingRow =
+            document.createElement("div");
+
+
+        thinkingRow.className =
+            "message-row teacher-message lexi-thinking";
+
+
+        thinkingRow.innerHTML = `
+
+            <div class="message-avatar">
+
+                <img
+                    src="images/lexi1.png"
+                    alt="Lexi"
+                >
+
+            </div>
+
+            <div>
+
+                <div class="message-name">
+                    Lexi
+                </div>
+
+                <div class="chat-bubble teacher-bubble">
+
+                    <span class="lexi-thinking-dots">
+                        Lexi is thinking<span>.</span><span>.</span><span>.</span>
+                    </span>
+
+                </div>
+
+            </div>
+
+        `;
+
+
+        chatContainer.appendChild(
+            thinkingRow
+        );
+
+
+        scrollToBottom();
+
+
+        // ===============================
         // FIREBASE FUNCTION
-        // ========================================
+        // ===============================
 
         const response =
             await fetch(
-                "https://us-central1-lgs-english-club.cloudfunctions.net/lexiChat",
+                "https://lexichat-yjr5iecahq-uc.a.run.app",
                 {
 
                     method: "POST",
 
                     headers: {
+
                         "Content-Type":
                             "application/json"
+
                     },
 
                     body: JSON.stringify({
@@ -1288,20 +1628,49 @@ async function sendMessage(text) {
             );
 
 
-        const data =
-            await response.json();
+        // ===============================
+        // READ RESPONSE SAFELY
+        // ===============================
+
+        let data = null;
 
 
-        // ========================================
+        try {
+
+            data =
+                await response.json();
+
+        }
+
+        catch (jsonError) {
+
+            console.error(
+                "Lexi invalid JSON response:",
+                jsonError
+            );
+
+            data = null;
+
+        }
+
+
+        // ===============================
         // REMOVE THINKING
-        // ========================================
+        // ===============================
 
-        thinkingRow.remove();
+        if (
+            thinkingRow &&
+            thinkingRow.parentNode
+        ) {
+
+            thinkingRow.remove();
+
+        }
 
 
-        // ========================================
-        // ERROR
-        // ========================================
+        // ===============================
+        // API ERROR
+        // ===============================
 
         if (!response.ok) {
 
@@ -1310,18 +1679,20 @@ async function sendMessage(text) {
                 data
             );
 
+
             addTeacherMessage(
                 "Sorry! 😔 I couldn't connect right now. Please try again."
             );
+
 
             return;
 
         }
 
 
-        // ========================================
-        // LEXI RESPONSE
-        // ========================================
+        // ===============================
+        // SUCCESS
+        // ===============================
 
         if (
             data &&
@@ -1329,12 +1700,18 @@ async function sendMessage(text) {
         ) {
 
             addTeacherMessage(
-                data.reply
+                String(data.reply)
             );
 
         }
 
         else {
+
+            console.error(
+                "Lexi returned no reply:",
+                data
+            );
+
 
             addTeacherMessage(
                 "Sorry! 😔 Lexi couldn't generate a response."
@@ -1352,13 +1729,50 @@ async function sendMessage(text) {
         );
 
 
-        // Thinking mesajını kaldır
-        thinkingRow.remove();
+        const thinkingMessages =
+            chatContainer.querySelectorAll(
+                ".lexi-thinking"
+            );
+
+
+        thinkingMessages.forEach(
+            message => {
+
+                message.remove();
+
+            }
+        );
 
 
         addTeacherMessage(
             "Sorry! 😔 I couldn't connect to Lexi right now."
         );
+
+    }
+
+    finally {
+
+        // ===============================
+        // UNLOCK SEND
+        // ===============================
+
+        isSending = false;
+
+
+        if (sendBtn) {
+
+            sendBtn.disabled = false;
+
+        }
+
+
+        if (chatInput) {
+
+            chatInput.disabled = false;
+
+            chatInput.focus();
+
+        }
 
     }
 
@@ -1373,10 +1787,18 @@ if (sendBtn) {
 
     sendBtn.addEventListener(
         "click",
-        () => {
+        event => {
+
+            event.preventDefault();
+
+
+            if (isSending) return;
+
 
             sendMessage(
-                chatInput.value
+                chatInput
+                    ? chatInput.value
+                    : ""
             );
 
         }
@@ -1402,6 +1824,10 @@ if (chatInput) {
 
                 event.preventDefault();
 
+
+                if (isSending) return;
+
+
                 sendMessage(
                     chatInput.value
                 );
@@ -1425,8 +1851,12 @@ quickActions.forEach(
             "click",
             () => {
 
+                if (isSending) return;
+
+
                 const message =
                     button.dataset.message;
+
 
                 sendMessage(
                     message
@@ -1455,6 +1885,9 @@ if (voiceBtn) {
         "click",
         () => {
 
+            if (isSending) return;
+
+
             if (!currentConversationId) {
 
                 createNewConversation();
@@ -1463,9 +1896,7 @@ if (voiceBtn) {
 
 
             addTeacherMessage(
-
                 "🎤 Voice practice will be available soon!"
-
             );
 
         }
@@ -1483,6 +1914,9 @@ if (newChatBtn) {
     newChatBtn.addEventListener(
         "click",
         () => {
+
+            if (isSending) return;
+
 
             startNewChat();
 
@@ -1502,9 +1936,10 @@ if (clearChatBtn) {
         "click",
         () => {
 
-            if (
-                !currentConversationId
-            ) {
+            if (isSending) return;
+
+
+            if (!currentConversationId) {
 
                 clearChatScreen();
 
@@ -1553,7 +1988,9 @@ onAuthStateChanged(
                 "Lexi: User not logged in."
             );
 
+
             renderChatHistory();
+
 
             return;
 
@@ -1566,7 +2003,9 @@ onAuthStateChanged(
         );
 
 
-        await loadUserAvatar(user);
+        await loadUserAvatar(
+            user
+        );
 
 
         renderChatHistory();

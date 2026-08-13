@@ -2839,3 +2839,47 @@ body .chat-container {
     }
 
 }
+
+/* =========================================
+   LEXI FORMATTED MESSAGE
+========================================= */
+
+.teacher-bubble strong {
+    font-weight: 700;
+}
+
+.teacher-bubble em {
+    font-style: italic;
+}
+
+.teacher-bubble h3,
+.teacher-bubble h4 {
+    margin: 10px 0 6px;
+    line-height: 1.35;
+}
+
+.teacher-bubble h3 {
+    font-size: 17px;
+}
+
+.teacher-bubble h4 {
+    font-size: 15px;
+}
+
+.teacher-bubble .lexi-list {
+    margin: 7px 0;
+    padding-left: 22px;
+}
+
+.teacher-bubble .lexi-list li {
+    margin: 4px 0;
+    padding-left: 2px;
+}
+
+.teacher-bubble ul.lexi-list {
+    list-style-type: disc;
+}
+
+.teacher-bubble ol.lexi-list {
+    list-style-type: decimal;
+}

@@ -42,7 +42,7 @@
         <div class="lexi-avatar">
 
             <img
-                src="/pages/ai-teacher/images/lexi3.png"
+                src="/pages/ai-teacher/images/lexi.png"
                 alt="Lexi AI English Teacher"
             >
 

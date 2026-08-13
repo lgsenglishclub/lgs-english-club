@@ -513,31 +513,29 @@ body .chat-bubble p:last-child {
 ========================================= */
 
 body .user-message {
+    width: 100% !important;
+
+    display: flex !important;
     justify-content: flex-end !important;
 
     margin-left: 0 !important;
+    margin-right: 0 !important;
 
-    margin-right: 20px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 
-    padding-right: 10px !important;
+    box-sizing: border-box !important;
 }
 
-
 body .user-message > div:first-child {
-    order: 1 !important;
-
-    max-width: 680px !important;
-
-    text-align: right !important;
+    margin-left: auto !important;
+    margin-right: 0 !important;
 }
 
 
 body .user-message .message-avatar {
-    order: 2 !important;
-
-    background: transparent !important;
-
-    border-radius: 0 !important;
+    margin-left: 10px !important;
+    margin-right: 0 !important;
 }
 
 
@@ -1522,3 +1520,1322 @@ body .chat-container {
     object-fit: contain !important;
 }
 
+/* =========================================
+   LEXI CHAT LAYOUT - FINAL
+========================================= */
+
+.ai-content-layout {
+    width: 100%;
+    height: calc(100vh - 68px);
+
+    display: flex;
+    align-items: stretch;
+
+    overflow: hidden;
+
+    background: #f8fafc;
+}
+
+
+/* =========================================
+   RECENT CHATS
+========================================= */
+
+.chat-history {
+    width: 270px;
+    min-width: 270px;
+
+    height: 100%;
+
+    margin-top: 0;
+
+    padding: 18px 12px 12px;
+
+    background: #ffffff;
+
+    border-right: none;
+    border-top: none;
+
+    border-radius: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    position: relative;
+
+    z-index: 2;
+
+    overflow: visible !important;
+}
+
+
+/* Header */
+
+.chat-history-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 8px;
+
+    padding: 0 4px 14px;
+
+    border-bottom: 1px solid #eef2f7;
+
+    flex-shrink: 0;
+}
+
+
+.chat-history-header h3 {
+    margin: 0;
+
+    color: #1e3a8a;
+
+    font-size: 15px;
+    font-weight: 700;
+}
+
+
+/* New Chat */
+
+.new-chat-btn {
+    border: none;
+
+    background: #eff6ff;
+    color: #2563eb;
+
+    padding: 7px 10px;
+
+    border-radius: 9px;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    transition: all .2s ease;
+}
+
+
+.new-chat-btn:hover {
+    background: #dbeafe;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   HISTORY LIST
+========================================= */
+
+.chat-history-list {
+    flex: 1;
+
+    min-height: 0;
+
+    margin-top: 10px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+
+    overflow-y: auto;
+
+    padding-right: 2px;
+
+    overflow-x: visible !important;
+    overflow-y: auto !important;
+}
+
+
+.chat-history-list::-webkit-scrollbar {
+    width: 4px;
+}
+
+.chat-history-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.chat-history-list::-webkit-scrollbar-thumb {
+    background: #dbeafe;
+
+    border-radius: 10px;
+}
+
+
+/* =========================================
+   HISTORY ITEM
+========================================= */
+
+.chat-history-item {
+    width: 100%;
+
+    padding: 11px 10px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    flex-shrink: 0;
+
+    transition:
+        background .2s ease,
+        transform .15s ease;
+}
+
+
+.chat-history-item:hover {
+    background: #f1f6ff;
+}
+
+
+.chat-history-item.active {
+    background: #eaf3ff;
+}
+
+
+.chat-history-title {
+    width: 100%;
+
+    color: #1e3a8a;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    line-height: 1.4;
+}
+
+
+.chat-history-date {
+    margin-top: 4px;
+
+    color: #94a3b8;
+
+    font-size: 10px;
+}
+
+
+/* =========================================
+   MAIN CHAT
+========================================= */
+
+.ai-content-layout .ai-chat-page {
+
+    flex: 1;
+
+    width: auto !important;
+    max-width: none !important;
+
+    height: 100% !important;
+    min-height: 0 !important;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+
+/* =========================================
+   CHAT AREA
+========================================= */
+
+.ai-content-layout .chat-container {
+
+    flex: 1 !important;
+
+    width: 100% !important;
+
+    min-width: 0;
+
+    overflow-y: auto !important;
+
+    padding: 55px 40px 130px !important;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+/* =========================================
+   MESSAGE WIDTH
+========================================= */
+
+.ai-content-layout .teacher-message {
+
+    width: 100% !important;
+
+    max-width: 850px !important;
+
+    padding-left: 0 !important;
+
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+
+.ai-content-layout .teacher-message > div:last-child {
+
+    max-width: 680px !important;
+}
+
+
+/* =========================================
+   QUICK ACTIONS
+========================================= */
+
+.ai-content-layout .quick-actions {
+
+    width: 100% !important;
+
+    max-width: 850px !important;
+
+    margin: 0 auto 30px !important;
+
+    padding-left: 42px !important;
+
+    display: grid !important;
+
+    grid-template-columns: repeat(2, 1fr) !important;
+
+    gap: 12px !important;
+}
+
+
+.ai-content-layout .quick-action {
+
+    min-height: 64px !important;
+
+    border-radius: 15px !important;
+
+    padding: 12px 18px !important;
+}
+
+
+/* =========================================
+   INPUT AREA
+========================================= */
+
+.ai-content-layout .chat-input-area {
+
+    position: absolute !important;
+
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+
+    width: 100% !important;
+
+    min-height: 78px !important;
+
+    padding: 14px 25px !important;
+
+    background: rgba(255,255,255,.98) !important;
+
+    border-top: 1px solid #e2e8f0 !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    justify-content: center !important;
+
+    gap: 10px !important;
+
+    z-index: 10 !important;
+}
+
+
+/* Input */
+
+.ai-content-layout .chat-input-area input {
+
+    flex: 1 !important;
+
+    width: auto !important;
+
+    max-width: 850px !important;
+
+    height: 48px !important;
+
+    border-radius: 25px !important;
+}
+
+
+/* =========================================
+   IMPORTANT:
+   NO VERTICAL LINE BESIDE MICROPHONE
+========================================= */
+
+.ai-content-layout .chat-history {
+
+    border-right: none !important;
+}
+
+.ai-content-layout .chat-input-area {
+
+    border-left: none !important;
+}
+
+
+/* =========================================
+   DESKTOP CENTER
+========================================= */
+
+@media (min-width: 601px) {
+
+    .ai-content-layout .chat-container {
+
+        padding-top: 45px !important;
+
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+    }
+
+
+    .ai-content-layout .teacher-message {
+
+        max-width: 850px !important;
+    }
+
+
+    .ai-content-layout .quick-actions {
+
+        max-width: 850px !important;
+
+        padding-left: 42px !important;
+        padding-right: 0 !important;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .ai-content-layout {
+
+        height: calc(100vh - 62px);
+
+        display: block;
+
+        overflow: hidden;
+    }
+
+
+    .chat-history {
+
+        display: none;
+    }
+
+
+    .ai-content-layout .ai-chat-page {
+
+        width: 100% !important;
+
+        height: 100% !important;
+
+        max-width: 100% !important;
+    }
+
+
+    .ai-content-layout .chat-container {
+
+        padding: 35px 15px 130px !important;
+
+        align-items: stretch;
+    }
+
+
+    .ai-content-layout .teacher-message {
+
+        max-width: 100% !important;
+
+        padding-left: 0 !important;
+    }
+
+
+    .ai-content-layout .quick-actions {
+
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        padding: 0 !important;
+
+        margin: 10px auto 30px !important;
+
+        grid-template-columns: repeat(2, 145px) !important;
+
+        justify-content: center !important;
+
+        gap: 10px !important;
+    }
+
+
+    .ai-content-layout .quick-action {
+
+        width: 145px !important;
+
+        min-height: 48px !important;
+    }
+
+
+    .ai-content-layout .chat-input-area {
+
+        padding: 10px !important;
+
+        min-height: 70px !important;
+    }
+
+}
+
+/* =========================================
+   CHAT HISTORY EMPTY STATE
+========================================= */
+
+.chat-history-empty {
+    width: 100%;
+
+    min-height: 120px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 20px 15px;
+
+    text-align: center;
+
+    color: #94a3b8;
+
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.chat-history-empty i {
+    font-size: 25px;
+
+    color: #bfdbfe;
+}
+
+.chat-history-empty span {
+    display: block;
+
+    color: #94a3b8;
+
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   CHAT HISTORY ICON
+========================================= */
+
+.chat-history-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+
+.chat-history-icon {
+    width: 18px;
+    min-width: 18px;
+
+    color: #60a5fa;
+
+    font-size: 11px;
+}
+
+
+.chat-history-title-text {
+    min-width: 0;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+}
+
+/* =========================================
+   CHAT HISTORY ITEMS
+========================================= */
+
+.chat-history-item {
+    position: relative;
+
+    width: 100%;
+
+    margin-bottom: 5px;
+
+    border-radius: 10px;
+
+    transition:
+        background .2s ease;
+}
+
+
+.chat-history-item:hover {
+    background: #f8fafc;
+}
+
+
+.chat-history-item.active {
+    background: #eff6ff;
+}
+
+
+.chat-history-main {
+    width: 100%;
+
+    padding: 9px 34px 8px 8px;
+
+    cursor: pointer;
+
+    border-radius: 10px;
+}
+
+
+.chat-history-main:hover {
+    background: #f1f5f9;
+}
+
+
+/* TITLE */
+
+.chat-history-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    min-width: 0;
+}
+
+
+.chat-history-icon {
+    width: 18px;
+
+    min-width: 18px;
+
+    color: #60a5fa;
+
+    font-size: 11px;
+}
+
+
+.chat-history-title-text {
+    min-width: 0;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+    color: #334155;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+.chat-history-date {
+    margin-left: 25px;
+
+    margin-top: 3px;
+
+    color: #94a3b8;
+
+    font-size: 9px;
+}
+
+
+/* =========================================
+   THREE DOT BUTTON
+========================================= */
+
+.chat-history-menu {
+    position: absolute;
+
+    top: 8px;
+
+    right: 6px;
+
+    width: 26px;
+
+    height: 26px;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: #94a3b8;
+
+    border-radius: 7px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    opacity: 0;
+
+    transition:
+        opacity .2s ease,
+        background .2s ease,
+        color .2s ease;
+}
+
+
+.chat-history-item:hover
+.chat-history-menu {
+
+    opacity: 1;
+}
+
+
+.chat-history-menu:hover {
+
+    background: #e2e8f0;
+
+    color: #334155;
+}
+
+
+/* =========================================
+   DROPDOWN
+========================================= */
+
+.chat-history-dropdown {
+
+    position: absolute;
+
+    top: 35px;
+
+    right: 5px;
+
+    width: 125px;
+
+    padding: 5px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 8px 22px
+        rgba(15, 23, 42, 0.12);
+
+    display: none;
+
+    z-index: 50;
+}
+
+
+.chat-history-dropdown.show {
+
+    display: block;
+}
+
+
+.chat-history-dropdown button {
+
+    width: 100%;
+
+    height: 32px;
+
+    padding: 0 9px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: transparent;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    cursor: pointer;
+
+    font-size: 11px;
+
+    text-align: left;
+
+    color: #334155;
+}
+
+
+.chat-history-dropdown button:hover {
+
+    background: #f1f5f9;
+}
+
+
+.chat-history-dropdown
+.rename-chat-btn i {
+
+    color: #3b82f6;
+}
+
+
+.chat-history-dropdown
+.delete-chat-btn {
+
+    color: #dc2626;
+}
+
+
+.chat-history-dropdown
+.delete-chat-btn i {
+
+    color: #ef4444;
+}
+
+/* =========================================
+   CHAT RENAME INPUT
+========================================= */
+
+.chat-history-rename-input {
+    width: 100%;
+
+    min-width: 0;
+
+    padding: 3px 6px;
+
+    border: 1px solid #93c5fd;
+
+    border-radius: 6px;
+
+    outline: none;
+
+    background: #ffffff;
+
+    color: #1e3a8a;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    box-shadow:
+        0 0 0 2px rgba(37, 99, 235, 0.08);
+}
+
+.chat-history-rename-input:focus {
+    border-color: #2563eb;
+}
+
+/* =========================================
+   MOBILE LAYOUT
+   CHAT HISTORY + CHAT
+========================================= */
+
+@media (max-width: 600px) {
+
+    /* Ana içerik */
+    body .ai-content-layout {
+        width: 100% !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        height: calc(100vh - 62px) !important;
+        min-height: 0 !important;
+
+        overflow: hidden !important;
+    }
+
+
+    /* =========================================
+       CHAT HISTORY
+    ========================================= */
+
+    body .chat-history {
+        display: block !important;
+
+        width: 100% !important;
+        height: 96px !important;
+        min-height: 96px !important;
+
+        flex-shrink: 0 !important;
+
+        margin: 0 !important;
+        padding: 10px 14px 8px !important;
+
+        background: #ffffff !important;
+
+        border: none !important;
+        border-bottom: 1px solid #e2e8f0 !important;
+
+        box-sizing: border-box !important;
+
+        overflow: hidden !important;
+
+        position: relative !important;
+    }
+
+
+    /* History başlığı */
+
+    body .chat-history-header {
+        width: 100% !important;
+
+        height: 28px !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+
+        margin: 0 0 7px 0 !important;
+        padding: 0 !important;
+    }
+
+
+    body .chat-history-header h3 {
+        margin: 0 !important;
+        padding: 0 !important;
+
+        font-size: 13px !important;
+        font-weight: 700 !important;
+
+        color: #1e3a8a !important;
+    }
+
+
+    body .new-chat-btn {
+        height: 28px !important;
+
+        padding: 0 10px !important;
+
+        border: none !important;
+        border-radius: 8px !important;
+
+        background: #eff6ff !important;
+        color: #2563eb !important;
+
+        font-size: 11px !important;
+        font-weight: 600 !important;
+
+        white-space: nowrap !important;
+    }
+
+
+    /* =========================================
+       HORIZONTAL CHAT LIST
+    ========================================= */
+
+    body .chat-history-list {
+
+        width: 100% !important;
+        height: 48px !important;
+
+        display: flex !important;
+
+        flex-direction: row !important;
+
+        align-items: stretch !important;
+
+        gap: 8px !important;
+
+        margin: 0 !important;
+        padding: 0 2px 4px !important;
+
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+
+        white-space: nowrap !important;
+
+        scroll-behavior: smooth !important;
+
+        -webkit-overflow-scrolling: touch !important;
+
+        scrollbar-width: none !important;
+    }
+
+
+    body .chat-history-list::-webkit-scrollbar {
+        display: none !important;
+    }
+
+
+    /* =========================================
+       CHAT HISTORY CARD
+    ========================================= */
+
+    body .chat-history-item {
+
+        flex: 0 0 calc((100vw - 44px) / 2) !important;
+        width: calc((100vw - 44px) / 2) !important;
+        min-width: calc((100vw - 44px) / 2) !important;
+
+        height: 42px !important;
+
+        margin: 0 !important;
+        padding: 6px 8px !important;
+
+        display: flex !important;
+        align-items: center !important;
+
+        position: relative !important;
+
+        background: #f8fafc !important;
+
+        border: 1px solid #e2e8f0 !important;
+
+        border-radius: 10px !important;
+
+        box-sizing: border-box !important;
+    }
+
+
+    body .chat-history-item.active {
+        background: #eff6ff !important;
+
+        border-color: #93c5fd !important;
+    }
+
+
+    body .chat-history-main {
+        min-width: 0 !important;
+
+        flex: 1 !important;
+
+        overflow: hidden !important;
+
+        cursor: pointer !important;
+    }
+
+
+    body .chat-history-title {
+        display: flex !important;
+        align-items: center !important;
+
+        gap: 5px !important;
+
+        min-width: 0 !important;
+    }
+
+
+    body .chat-history-icon {
+        flex-shrink: 0 !important;
+
+        font-size: 11px !important;
+
+        color: #2563eb !important;
+    }
+
+
+    body .chat-history-title-text {
+        display: block !important;
+
+        overflow: hidden !important;
+
+        text-overflow: ellipsis !important;
+        white-space: nowrap !important;
+
+        font-size: 11px !important;
+        font-weight: 600 !important;
+
+        color: #334155 !important;
+    }
+
+
+    body .chat-history-date {
+        margin-top: 1px !important;
+
+        font-size: 8px !important;
+
+        color: #94a3b8 !important;
+    }
+
+
+    /* =========================================
+       THREE DOT MENU
+    ========================================= */
+
+    body .chat-history-menu {
+        width: 24px !important;
+        height: 30px !important;
+
+        flex-shrink: 0 !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        border: none !important;
+
+        background: transparent !important;
+
+        color: #64748b !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        cursor: pointer !important;
+    }
+
+
+    /* =========================================
+       DROPDOWN
+    ========================================= */
+
+    body .chat-history-dropdown {
+        z-index: 2000 !important;
+    }
+
+
+    /* =========================================
+       CHAT AREA
+    ========================================= */
+
+    body .ai-chat-page {
+
+        width: 100% !important;
+        max-width: none !important;
+
+        height: calc(100vh - 62px - 96px) !important;
+        min-height: 0 !important;
+
+        flex: 1 !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+
+        overflow: hidden !important;
+    }
+
+
+    body .chat-container {
+
+        flex: 1 !important;
+
+        min-height: 0 !important;
+
+        width: 100% !important;
+
+        overflow-y: auto !important;
+
+        padding: 20px 15px 150px !important;
+
+        box-sizing: border-box !important;
+    }
+
+}
+
+/* =========================================
+   MOBILE CHAT HISTORY DROPDOWN FIX
+========================================= */
+
+@media (max-width: 600px) {
+
+    body .chat-history-dropdown {
+        position: fixed !important;
+
+        z-index: 99999 !important;
+
+        min-width: 125px !important;
+
+        background: #ffffff !important;
+
+        border: 1px solid #e2e8f0 !important;
+
+        border-radius: 10px !important;
+
+        box-shadow:
+            0 8px 25px rgba(15, 23, 42, 0.15) !important;
+
+        padding: 5px !important;
+    }
+
+
+    body .chat-history-dropdown button {
+        width: 100% !important;
+
+        min-height: 34px !important;
+
+        padding: 7px 10px !important;
+
+        display: flex !important;
+
+        align-items: center !important;
+
+        gap: 8px !important;
+
+        border: none !important;
+
+        background: transparent !important;
+
+        border-radius: 7px !important;
+
+        font-size: 11px !important;
+
+        text-align: left !important;
+
+        cursor: pointer !important;
+    }
+
+
+    body .chat-history-dropdown button:hover {
+        background: #f1f5f9 !important;
+    }
+
+}
+
+/* =========================================
+   EMPTY CHAT HISTORY
+========================================= */
+
+@media (max-width: 600px) {
+
+    .chat-history-empty {
+        min-height: 110px;
+
+        padding: 18px 10px;
+
+        gap: 8px;
+    }
+
+    .chat-history-empty i {
+        font-size: 23px;
+    }
+
+    .chat-history-empty span {
+        font-size: 11px;
+    }
+
+}
+
+/* =========================================
+   MOBILE EMPTY CHAT HISTORY
+========================================= */
+
+@media (max-width: 600px) {
+
+    /* Recent Chats başlığı */
+    .chat-history-header {
+        padding-bottom: 12px !important;
+    }
+
+    /* New Chat butonu */
+    .new-chat-btn {
+        margin-bottom: 8px !important;
+    }
+
+    /* Boş geçmiş alanı */
+    .chat-history-empty {
+        min-height: 58px !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        padding: 6px 10px 14px !important;
+
+        text-align: center !important;
+    }
+
+    /* Konuşma balonu ikonu */
+    .chat-history-empty i {
+        font-size: 25px !important;
+
+        margin-bottom: -10px !important;
+    }
+
+    /* Yazı */
+    .chat-history-empty span {
+        font-size: 9px !important;
+        line-height: 1.35 !important;
+    }
+
+}
+
+@media (min-width: 601px) {
+
+    body .ai-chat-page {
+        max-width: none !important;
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    body .chat-container {
+        width: 100% !important;
+    }
+
+    body .user-message {
+        width: 60% !important;
+        display: flex !important;
+        justify-content: flex-end !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    body .user-message > div:first-child {
+        margin-left: auto !important;
+        margin-right: 0 !important;
+    }
+
+    body .user-message .message-avatar {
+        margin-left: 10px !important;
+        margin-right: 0 !important;
+    }
+
+}

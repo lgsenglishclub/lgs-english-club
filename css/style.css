@@ -884,7 +884,7 @@ button:hover {
 
 /* PROFILE CARD MOBILE */
 
-@media(max-width:600px){
+@media(max-width:768px){
 
 
     #profileCard{
@@ -3678,7 +3678,7 @@ button{
     }
 
     #dailyWords > *{
-        flex:0 0 92%;
+        flex:0 0 100%;
         scroll-snap-align:center;
     }
 
@@ -4687,7 +4687,7 @@ font-size:0;
 }
 
 
-@media(max-width:600px){
+@media(max-width:768px){
 
     .vocabulary-container{
 
@@ -5510,7 +5510,7 @@ font-size:0;
     }
 
     #dailyWords > *{
-        flex:0 0 92%;
+        flex:0 0 100%;
         scroll-snap-align:center;
     }
 
@@ -6681,7 +6681,7 @@ font-size:0;
 
 /* MOBILE */
 
-@media(max-width:600px){
+@media(max-width:768px){
 
     .vocabulary-container{
 
@@ -6898,7 +6898,7 @@ font-size:0;
 }
 
 
-@media(max-width:600px){
+@media(max-width:768px){
 
     .vocabulary-container{
 
@@ -10031,7 +10031,7 @@ body{
     font-size:14px;
 }
 
-@media (max-width:600px){
+@media (max-width:768px){
 
     .question-card{
         padding:18px;
@@ -10216,7 +10216,7 @@ body{
 }
 
 
-@media(max-width:600px){
+@media(max-width:768px){
 
 .stats{
     flex-wrap:wrap;
@@ -12642,7 +12642,7 @@ line-height:1.6;
 
 /* Mobile */
 
-@media(max-width:600px){
+@media(max-width:768px){
 
 
     .lgs-box{
@@ -12735,7 +12735,7 @@ line-height:1.6;
 
 /* Mobile */
 
-@media(max-width:600px){
+@media(max-width:768px){
 
 
     .lgs-box{
@@ -14583,7 +14583,7 @@ Premium Kart
    MOBILE RESPONSIVE
 ================================ */
 
-@media(max-width:600px){
+@media(max-width:768px){
 
     .video-container{
 
@@ -15052,7 +15052,7 @@ Premium Kart
    MOBILE SETTINGS BUTTON
 ================================ */
 
-@media (max-width: 600px){
+@media (max-width: 768px){
 
     .settings-btn{
         top:-45px;
@@ -16558,7 +16558,7 @@ body{
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
 
     /* ==============================
        ANA BÖLÜM
@@ -16958,7 +16958,7 @@ opacity: 0.75;
 MOBILE
 ================================ */
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
 
 .xp-card {
 
@@ -17089,7 +17089,7 @@ MOBILE
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
 
     .level-up-popup {
 
@@ -17500,7 +17500,7 @@ MOBILE
         0 5px 14px rgba(37, 99, 235, 0.25);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
 
     .xp-history {
         padding: 14px;
@@ -17516,7 +17516,7 @@ MOBILE
         gap: 9px;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
 
     .xp-history-list {
         max-height: 190px;
@@ -17542,7 +17542,7 @@ MOBILE
 
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
 
     .xp-history-item {
         padding: 10px;
@@ -17570,7 +17570,7 @@ MOBILE
 
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
 
     #xpHistoryBtn {
         margin: 18px auto 12px;
@@ -17588,7 +17588,7 @@ MOBILE
 
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
 
     .xp-history-close {
         width: 28px;
@@ -17842,7 +17842,7 @@ a {
    MOBILE
 ========================================= */
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
 
     .lexi-assistant {
 
@@ -17958,3 +17958,78 @@ a {
     }
 
 }
+
+/* =========================================
+   MEMBERSHIP CARD — TABLET
+   481px - 768px
+========================================= */
+
+@media (min-width:481px) and (max-width:768px){
+
+    .membership-card{
+        position:static;
+        width:calc(100% - 120px);
+        max-width:360px;
+        margin:20px auto;
+        left:auto;
+        top:auto;
+        padding:20px;
+        box-sizing:border-box;
+    }
+
+    .membership-card h2{
+        font-size:20px;
+    }
+
+    .membership-title{
+        font-size:16px;
+    }
+
+    .membership-text{
+        font-size:15px;
+        line-height:1.5;
+    }
+
+    .membership-features{
+        font-size:14px;
+    }
+
+    .plan-badge{
+        font-size:14px;
+    }
+
+}
+
+/* =========================================
+   DAILY VOCABULARIES — TABLET
+   481px - 768px
+========================================= */
+
+@media (min-width:481px) and (max-width:768px){
+
+    #dailyWords{
+        display:flex;
+        overflow-x:auto;
+        gap:18px;
+
+        scroll-snap-type:x mandatory;
+        -webkit-overflow-scrolling:touch;
+
+        scrollbar-width:none;
+        padding-bottom:10px;
+    }
+
+    #dailyWords::-webkit-scrollbar{
+        display:none;
+    }
+
+    #dailyWords > *{
+        flex:0 0 100%;
+        width:100%;
+        min-width:100%;
+        box-sizing:border-box;
+        scroll-snap-align:center;
+    }
+
+}
+

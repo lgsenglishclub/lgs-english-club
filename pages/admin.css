@@ -80,7 +80,7 @@
 
 }
 
-@media(max-width:600px){
+@media(max-width:768px){
 
     .dashboard{
 
@@ -490,7 +490,7 @@ button[onclick="removePremium"] {
 
 }
 
-@media(max-width:600px){
+@media(max-width:768px){
 
     .user-action-btn,
     .view-user-btn{
@@ -673,7 +673,7 @@ button[onclick="removePremium"] {
 
 }
 
-@media(max-width:600px){
+@media(max-width:768px){
 
     .view-user-btn{
 
@@ -887,7 +887,7 @@ button[onclick="removePremium"] {
 
 }
 
-@media(max-width:600px){
+@media(max-width:768px){
 
     .profile-header{
 
@@ -1178,7 +1178,7 @@ button[onclick="removePremium"] {
 
 }
 
-@media(max-width:600px){
+@media(max-width:768px){
 
     .modal{
 
@@ -1272,7 +1272,7 @@ button[onclick="removePremium"] {
 }
 
 
-@media(max-width:600px){
+@media(max-width:768px){
 
     .modal{
 
@@ -2609,7 +2609,7 @@ button[onclick="removePremium"] {
 }
 
 
-@media(max-width:600px){
+@media(max-width:768px){
 
 
     .messages-toolbar{
@@ -2699,7 +2699,7 @@ button[onclick="removePremium"] {
 }
 
 
-@media(max-width:600px){
+@media(max-width:768px){
 
 
     .messages-panel{
@@ -2833,7 +2833,7 @@ button[onclick="removePremium"] {
 ===================================== */
 
 
-@media(max-width:600px){
+@media(max-width:768px){
 
 
    .messages-toolbar{
@@ -2922,7 +2922,7 @@ button[onclick="removePremium"] {
 ===================================== */
 
 
-@media(max-width:600px){
+@media(max-width:768px){
 
 
     .empty-preview{

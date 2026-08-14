@@ -99,7 +99,7 @@ body {
     text-decoration: none;
 
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 768;
 
     box-shadow:
         0 3px 8px rgba(0, 0, 0, 0.12);
@@ -624,7 +624,7 @@ body .quick-action {
 
     font-size: 14px !important;
 
-    font-weight: 600 !important;
+    font-weight: 768 !important;
 
     text-align: left !important;
 
@@ -1413,7 +1413,7 @@ body .chat-container {
     border-radius: 10px;
 
     font-size: 12px;
-    font-weight: 600;
+    font-weight: 768;
 
     cursor: pointer;
 
@@ -1470,7 +1470,7 @@ body .chat-container {
     color: #22c55e !important;
 
     font-size: 11px !important;
-    font-weight: 600 !important;
+    font-weight: 768 !important;
 }
 
 .ai-online .status-dot {
@@ -1707,7 +1707,7 @@ body .chat-container {
     color: #1e3a8a;
 
     font-size: 13px;
-    font-weight: 600;
+    font-weight: 768;
 
     white-space: nowrap;
 
@@ -2172,7 +2172,7 @@ body .chat-container {
 
     font-size: 12px;
 
-    font-weight: 600;
+    font-weight: 768;
 }
 
 
@@ -2363,7 +2363,7 @@ body .chat-container {
 
     font-size: 13px;
 
-    font-weight: 600;
+    font-weight: 768;
 
     box-shadow:
         0 0 0 2px rgba(37, 99, 235, 0.08);
@@ -2465,7 +2465,7 @@ body .chat-container {
         color: #2563eb !important;
 
         font-size: 11px !important;
-        font-weight: 600 !important;
+        font-weight: 768 !important;
 
         white-space: nowrap !important;
     }
@@ -2585,7 +2585,7 @@ body .chat-container {
         white-space: nowrap !important;
 
         font-size: 11px !important;
-        font-weight: 600 !important;
+        font-weight: 768 !important;
 
         color: #334155 !important;
     }
@@ -2936,6 +2936,31 @@ body .chat-container {
 
         transform: scale(1.05);
 
+    }
+
+}
+
+/* =========================================
+   LEXI - TABLET USER MESSAGE ALIGNMENT
+   481px - 768px
+========================================= */
+
+@media (min-width:481px) and (max-width:768px){
+
+    .message-row.user-message{
+        width:100% !important;
+        max-width:none !important;
+
+        display:flex !important;
+        justify-content:flex-end !important;
+
+        margin-left:0 !important;
+        margin-right:0 !important;
+
+        padding-left:20px !important;
+        padding-right:20px !important;
+
+        box-sizing:border-box;
     }
 
 }

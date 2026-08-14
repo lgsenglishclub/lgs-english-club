@@ -11426,7 +11426,7 @@ line-height:1.6;
 
     .recent-tests-card {
         width: calc(100% - 30px);
-        max-width: 340px;
+        max-width: 705px;
         margin-left: auto;
         margin-right: auto;
         box-sizing: border-box;
@@ -11504,7 +11504,7 @@ line-height:1.6;
 
      .recent-tests-card{
         width:calc(100% - 30px);
-        max-width:340px;
+        max-width:390px;
         margin-left:auto;
         margin-right:auto;
         padding:15px;
@@ -15727,7 +15727,7 @@ body{
 
     .week-grid{
 
-        grid-template-columns:repeat(4,1fr);
+        grid-template-columns:repeat(7,1fr);
 
     }
 
@@ -16329,7 +16329,7 @@ body{
     }
 
     .achievement{
-        flex:0 0 300px;
+        flex:0 0 327px;
         box-sizing:border-box;
         scroll-snap-align:start;
     }
@@ -16599,21 +16599,27 @@ body{
     ============================== */
 
     .mobile-week-tabs {
-        display: flex;
-        width: 100%;
+    display: flex;
 
-        gap: 6px;
+    width: fit-content;
+    max-width: 100%;
 
-        overflow-x: auto;
+    gap: 8px;
 
-        padding: 0 0 8px;
+    overflow-x: auto;
 
-        margin: 0;
+    padding: 0 0 8px;
 
-        scrollbar-width: none;
+    margin: 0 auto;
 
-        box-sizing: border-box;
-    }
+    scrollbar-width: none;
+
+    box-sizing: border-box;
+
+    justify-content: center;
+
+    -webkit-overflow-scrolling: touch;
+}
 
     .mobile-week-tabs::-webkit-scrollbar {
         display: none;

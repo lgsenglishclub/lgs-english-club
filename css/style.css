@@ -4831,16 +4831,16 @@ font-size:0;
    RESPONSIVE - LESSON & UNIT PAGES
 =================================== */
 
-@media (max-width:1024px){
+@media (max-width:1176px){
 
     /* Unit Cards */
     .features{
-        grid-template-columns:repeat(3,1fr);
+        grid-template-columns:repeat(2fr);
         gap:20px;
     }
 
     .features .card{
-        width:100%;
+        width:40%;
         height:auto;
         min-height:190px;
     }
@@ -4932,48 +4932,35 @@ font-size:0;
 
 }
 
-@media (max-width:480px){
+@media (max-width: 480px) {
 
-    .features{
-        grid-template-columns:1fr;
+    .features {
+        display: grid;
+        grid-template-columns: 1fr !important;
+        gap: 15px;
+        padding: 15px;
     }
 
-    .lesson-page h1{
-        font-size:28px;
+    .features .card {
+        width: 100%;
+        height: auto;
+        padding: 15px;
+        box-sizing: border-box;
     }
 
-    .lesson-page>p{
-        font-size:15px;
+    .features .card h2 {
+        font-size: 16px;
     }
 
-    .lesson-box{
-        padding:15px;
+    .features .card h3 {
+        font-size: 14px;
     }
 
-    .lesson-box h2{
-        font-size:20px;
+    .features .start-btn {
+        width: 250px;
+        height: 32px;
+        font-size: 12px;
     }
-
-    .word-card{
-        padding:15px;
-    }
-
-    .word-card h3{
-        font-size:18px;
-    }
-
-    .question{
-        padding:10px;
-    }
-
-    .status-card{
-        padding:12px;
-    }
-
-    .progress-bar{
-        height:20px;
-    }
-
 }
 
 /* Units 5 column layout */
@@ -5267,10 +5254,12 @@ font-size:0;
 }
 
 
-@media(max-width:1100px){
+@media(max-width:1176px){
+
 
     .unit-cards{
-        grid-template-columns:repeat(2,1fr);
+        display:grid;
+        grid-template-columns:repeat(5, 1fr);
     }
 
 }
@@ -6108,6 +6097,31 @@ font-size:0;
 /* ===================================
    RESPONSIVE - UNIT PROGRESS CARDS
 =================================== */
+
+@media (max-width:1176px){
+
+    .progress-area{
+        width:95%;
+    }
+
+    .unit-cards{
+        display:grid;
+        grid-template-columns:repeat(3,1fr);
+        gap:0px;
+    }
+
+    .unit-card{
+        width:80%;
+        min-height:280px;
+        height:auto;
+        margin:40px;
+    }
+
+    .unit-card a{
+        width:100%;
+        text-align:center;
+    }
+}
 
 @media (max-width:1024px){
 
@@ -8071,13 +8085,13 @@ transform:translateY(0);
 ========================================== */
 
 /* Tablet */
-@media (max-width:1024px){
+@media (max-width:1176px){
 
     .units-container,
     .unit-container{
         grid-template-columns:repeat(2,1fr);
         gap:20px;
-        width:95%;
+        width:100%;
     }
 
     .unit-card{
@@ -11932,17 +11946,17 @@ line-height:1.6;
 /* ===========================
    OFFICIAL EXAMS - MOBILE
 =========================== */
-@media (max-width:1100px){
+@media (max-width:1176px){
 
     .voca-grid{
-        grid-template-columns:repeat(2,1fr);
-        gap:20px;
+        grid-template-columns:repeat(5,1fr);
+        gap:0px;
     }
 
     .voca-card{
-        width:80%;
-        padding:20px 50px 20px;
-        margin:15px 50px;
+        width:90%;
+        padding:20px 0px 20px;
+        margin:15px 10px;
     }
 
     .voca-card h3{
@@ -12167,17 +12181,17 @@ line-height:1.6;
 /* ===========================
    MOCK EXAMS - MOBILE
 =========================== */
-@media (max-width:1100px){
+@media (max-width:1176px){
 
     .mock-grid{
-        grid-template-columns:repeat(3,1fr);
-        gap:15px;
+        grid-template-columns:repeat(4,1fr);
+        gap:0px;
     }
 
     .mock-card{
-        width:80%;
+        width:90%;
         padding:15px;
-        margin:0px 30px 15px;
+        margin:0px 15px 0px;
     }
 
     .mock-card h3{
@@ -12703,329 +12717,7 @@ line-height:1.6;
 
 }
 
-@media(max-width:2600px){
-
-    .lgscountdown {
-    position: absolute;
-    left: 2310px;
-    top: 100px;
-}
-
-.lgs-box{
-
-    width:200px;
-
-    background:linear-gradient(
-        135deg,
-        #1e3a8a,
-        #2563eb
-    );
-
-    color:white;
-
-    border-radius:20px;
-
-    padding:10px 10px;
-
-    text-align:center;
-
-    position:relative;
-
-    overflow:hidden;
-
-    box-shadow:
-    0 15px 35px rgba(37,99,235,.25);
-
-    transition:.3s ease;
-
-}
-
-
-/* Hover */
-
-.lgs-box:hover{
-
-    transform:translateY(-6px);
-
-}
-
-
-/* Takvim ışık efekti */
-
-.lgs-box::before{
-
-    content:"";
-
-    position:absolute;
-
-    width:180px;
-
-    height:180px;
-
-    background:rgba(255,255,255,.12);
-
-    border-radius:50%;
-
-    top:-100px;
-
-    right:-80px;
-
-}
-
-
-
-/* Başlık */
-
-.lgs-box h2{
-
-    position:relative;
-
-    z-index:2;
-
-    font-size:15px;
-
-    margin-bottom:10px;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    gap:8px;
-
-}
-
-
-
-/* Gün sayısı */
-
-#lgsDays{
-
-    position:relative;
-
-    z-index:2;
-
-    font-size:35px;
-
-    font-weight:900;
-
-    margin:10px 0;
-
-    line-height:1;
-
-
-    color:#facc15;
-
-
-    text-shadow:
-    0 4px 12px rgba(0,0,0,.25);
-
-    animation:pulseDays 2s infinite;
-
-}
-
-
-@keyframes pulseDays{
-
-    0%,100%{
-
-        transform:scale(1);
-
-    }
-
-
-    50%{
-
-        transform:scale(1.05);
-
-    }
-
-}
-
-
-/* Days left */
-
-.lgs-box b{
-
-    position:relative;
-
-    z-index:2;
-
-    font-size:13px;
-
-    letter-spacing:2px;
-
-    opacity:.9;
-
-    text-transform:uppercase;
-
-}
-
-}
-
-@media(max-width:2000px){
-
-    .lgscountdown {
-    position: absolute;
-    left: 1670px;
-    top: 100px;
-}
-
-.lgs-box{
-
-    width:200px;
-
-    background:linear-gradient(
-        135deg,
-        #1e3a8a,
-        #2563eb
-    );
-
-    color:white;
-
-    border-radius:20px;
-
-    padding:10px 10px;
-
-    text-align:center;
-
-    position:relative;
-
-    overflow:hidden;
-
-    box-shadow:
-    0 15px 35px rgba(37,99,235,.25);
-
-    transition:.3s ease;
-
-}
-
-
-/* Hover */
-
-.lgs-box:hover{
-
-    transform:translateY(-6px);
-
-}
-
-
-/* Takvim ışık efekti */
-
-.lgs-box::before{
-
-    content:"";
-
-    position:absolute;
-
-    width:180px;
-
-    height:180px;
-
-    background:rgba(255,255,255,.12);
-
-    border-radius:50%;
-
-    top:-100px;
-
-    right:-80px;
-
-}
-
-
-
-/* Başlık */
-
-.lgs-box h2{
-
-    position:relative;
-
-    z-index:2;
-
-    font-size:15px;
-
-    margin-bottom:10px;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    gap:8px;
-
-}
-
-
-
-/* Gün sayısı */
-
-#lgsDays{
-
-    position:relative;
-
-    z-index:2;
-
-    font-size:35px;
-
-    font-weight:900;
-
-    margin:10px 0;
-
-    line-height:1;
-
-
-    color:#facc15;
-
-
-    text-shadow:
-    0 4px 12px rgba(0,0,0,.25);
-
-    animation:pulseDays 2s infinite;
-
-}
-
-
-@keyframes pulseDays{
-
-    0%,100%{
-
-        transform:scale(1);
-
-    }
-
-
-    50%{
-
-        transform:scale(1.05);
-
-    }
-
-}
-
-
-/* Days left */
-
-.lgs-box b{
-
-    position:relative;
-
-    z-index:2;
-
-    font-size:13px;
-
-    letter-spacing:2px;
-
-    opacity:.9;
-
-    text-transform:uppercase;
-
-}
-
-}
-
-@media(max-width:1600px){
+@media(max-width:1440px){
 
     .lgscountdown {
     position: absolute;
@@ -13187,7 +12879,168 @@ line-height:1.6;
 }
 
 
-@media(max-width:1100px){
+@media(max-width:1176px){
+
+    .lgscountdown {
+    position: absolute;
+    left: 930px;
+    top: 100px;
+}
+
+.lgs-box{
+
+    width:200px;
+
+    background:linear-gradient(
+        135deg,
+        #1e3a8a,
+        #2563eb
+    );
+
+    color:white;
+
+    border-radius:20px;
+
+    padding:10px 10px;
+
+    text-align:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 15px 35px rgba(37,99,235,.25);
+
+    transition:.3s ease;
+
+}
+
+
+/* Hover */
+
+.lgs-box:hover{
+
+    transform:translateY(-6px);
+
+}
+
+
+/* Takvim ışık efekti */
+
+.lgs-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+
+    height:180px;
+
+    background:rgba(255,255,255,.12);
+
+    border-radius:50%;
+
+    top:-100px;
+
+    right:-80px;
+
+}
+
+
+
+/* Başlık */
+
+.lgs-box h2{
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:15px;
+
+    margin-bottom:10px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+
+
+/* Gün sayısı */
+
+#lgsDays{
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:35px;
+
+    font-weight:900;
+
+    margin:10px 0;
+
+    line-height:1;
+
+
+    color:#facc15;
+
+
+    text-shadow:
+    0 4px 12px rgba(0,0,0,.25);
+
+    animation:pulseDays 2s infinite;
+
+}
+
+
+@keyframes pulseDays{
+
+    0%,100%{
+
+        transform:scale(1);
+
+    }
+
+
+    50%{
+
+        transform:scale(1.05);
+
+    }
+
+}
+
+
+/* Days left */
+
+.lgs-box b{
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:13px;
+
+    letter-spacing:2px;
+
+    opacity:.9;
+
+    text-transform:uppercase;
+
+}
+
+}
+
+@media(max-width:1024px){
 
     .lgscountdown {
     position: absolute;
@@ -13588,11 +13441,37 @@ line-height:1.6;
    TENSES PAGE - MOBILE
 =========================== */
 
-@media (max-width:1100px){
+@media (max-width:1176px){
 
     .tenses-page{
         grid-template-columns:repeat(5,1fr);
         max-width:1000px;
+        gap:15px;
+        padding:5px;
+    }
+
+    .tense-card{
+        padding:10px 10px;
+    }
+
+    .tense-icon{
+        width:65px;
+        height:65px;
+        font-size:32px;
+        margin-bottom:15px;
+    }
+
+    .tense-card h3{
+        font-size:18px;
+    }
+
+}
+
+@media (max-width:1024px){
+
+    .tenses-page{
+        grid-template-columns:repeat(5,1fr);
+        max-width:950px;
         gap:15px;
         padding:5px;
     }
@@ -16396,7 +16275,7 @@ body{
 /* ===========================
    WEEKLY STUDY PROGRAM
 =========================== */
-
+@media (min-width:1176px){
 .weekly-plan{
     margin:40px auto;
 }
@@ -16470,7 +16349,7 @@ body{
 .day-card:nth-child(6){border-top-color:#eab308;}
 .day-card:nth-child(7){border-top-color:#6b7280;}
 
-
+}
 
 /* Mobil */
 
@@ -17242,6 +17121,41 @@ body{
     color:#64748b;
 }
 
+@media(max-width:1176px){
+
+    .achievements-card{
+        width:90%;
+        padding:20px;
+    }
+
+    .achievements-card h2{
+        font-size:20px;
+    }
+
+    .achievements-grid{
+        display:flex;
+        overflow-x:auto;
+        gap:14px;
+
+        padding:5px 2px 10px;
+
+        scroll-snap-type:x mandatory;
+        -webkit-overflow-scrolling:touch;
+        scrollbar-width:none;
+    }
+
+    .achievements-grid::-webkit-scrollbar{
+        display:none;
+    }
+
+    .achievement{
+        flex:0 0 242px;
+        box-sizing:border-box;
+        scroll-snap-align:start;
+    }
+
+}
+
 @media(max-width:1024px){
 
     .achievements-card{
@@ -17603,6 +17517,261 @@ body{
     display: none;
 }
 
+@media (max-width: 1440px) {
+
+    /* ==============================
+       ANA BÖLÜM
+    ============================== */
+
+    .weekly-plan {
+        width: 40%;
+        margin: 18px 25 25px;
+        padding: 0 14px;
+        box-sizing: border-box;
+    }
+
+
+    /* ==============================
+       BAŞLIK
+    ============================== */
+
+    .weekly-plan-header {
+        text-align: center;
+        padding: 0;
+        margin-bottom: 0px;
+    }
+
+    .weekly-plan-header h2 {
+        justify-content: center;
+        text-align: center;
+        margin: 0;
+    }
+
+    .weekly-plan-header p {
+        text-align: center;
+        margin: 5px 0 0;
+    }
+
+
+    /* ==============================
+       GÜN SEKMELEME
+    ============================== */
+
+    .mobile-week-tabs {
+    display: flex;
+
+    width: fit-content;
+    max-width: 100%;
+
+    gap: 8px;
+
+    overflow-x: auto;
+
+    padding: 0 0 8px;
+
+    margin: 0 auto;
+
+    scrollbar-width: none;
+
+    box-sizing: border-box;
+
+    justify-content: center;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+    .mobile-week-tabs::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    .week-tab {
+        flex: 0 0 auto;
+
+        border: none;
+
+        background: #f1f4f8;
+
+        color: #687386;
+
+        border-radius: 10px;
+
+        padding: 10px 10px;
+
+        font-size: 11px;
+
+        font-weight: 700;
+
+        cursor: pointer;
+
+        transition: 0.2s ease;
+    }
+
+    .week-tab.active {
+        background: #3478f6;
+        color: white;
+
+        box-shadow:
+            0 4px 10px rgba(52, 120, 246, 0.22);
+    }
+
+
+    /* ==============================
+       SADECE SEÇİLİ GÜN
+    ============================== */
+
+    .week-grid {
+    display: block;
+    width: 100%;
+    margin: 20px 0 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+    .week-grid .day-card {
+        display: none;
+    }
+
+    .week-grid .day-card.active-day {
+        display: block;
+
+        width: 100%;
+
+        margin: 0 auto;
+
+        padding: 0;
+
+        background: transparent;
+
+        border: none;
+
+        border-radius: 0;
+
+        box-shadow: none;
+
+        box-sizing: border-box;
+
+        text-align: center;
+    }
+
+
+    /* ==============================
+       GÜN BAŞLIĞI
+    ============================== */
+
+    .desktop-card-header {
+        width: 100%;
+
+        padding: 4px 0 10px;
+
+        margin: 0 0 4px;
+
+        box-sizing: border-box;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: center;
+
+        border-bottom: 2px solid var(--card-color);
+    }
+
+    .desktop-card-header h3 {
+        width: 100%;
+
+        margin: 0 0 8px;
+
+        padding: 0;
+
+        text-align: center;
+
+        font-size: 21px;
+
+        line-height: 1.2;
+
+        font-weight: 700;
+
+        color: #202938;
+    }
+
+    .desktop-card-header::after {
+        content: none;
+    }
+
+
+    /* ==============================
+       DERS LİSTESİ
+    ============================== */
+
+    .desktop-task-list {
+        width: 100%;
+
+        margin: 0;
+        padding: 0;
+
+        box-sizing: border-box;
+
+        text-align: center;
+    }
+
+
+    /* ==============================
+       DERSLER
+    ============================== */
+
+    .desktop-task {
+    width: 100%;
+
+    min-height: 40px;
+
+    padding: 5px 0;
+
+    margin: 0;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background: transparent;
+
+    border: none;
+
+    border-bottom: 1px solid #e9edf3;
+
+    border-radius: 0;
+
+    box-shadow: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #374151;
+}
+
+    .desktop-task:last-child {
+        border-bottom: none;
+    }
+
+
+    /* ==============================
+       EMOJİLER
+    ============================== */
+
+    .desktop-task::first-letter {
+        font-size: 16px;
+    }
+
+}
 
 @media (max-width: 1024px) {
 
@@ -18266,6 +18435,91 @@ opacity: 0.75;
 /* ===============================
 MOBILE
 ================================ */
+@media (max-width: 1176px) {
+
+.xp-card {
+
+    width: 75%;
+
+    padding: 20px;
+
+    margin: 20px auto;
+
+}
+
+
+.xp-header h2 {
+
+    font-size: 24px;
+
+}
+
+
+.xp-number {
+
+    font-size: 18px;
+
+}
+
+
+.xp-bar {
+
+    height: 13px;
+
+}
+
+
+.xp-remaining {
+
+    font-size: 12px;
+
+}
+
+}
+
+
+@media (max-width: 768px) {
+
+.xp-card {
+
+    width: 92%;
+
+    padding: 20px;
+
+    margin: 20px auto;
+
+}
+
+
+.xp-header h2 {
+
+    font-size: 24px;
+
+}
+
+
+.xp-number {
+
+    font-size: 18px;
+
+}
+
+
+.xp-bar {
+
+    height: 13px;
+
+}
+
+
+.xp-remaining {
+
+    font-size: 12px;
+
+}
+
+}
+
 
 @media (max-width: 1024px) {
 
@@ -19295,11 +19549,11 @@ a {
 
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1176px) {
 
     .lexi-assistant {
 
-        right: 0px !important;
+        right: 10px !important;
         bottom: 5px !important;
 
     }
@@ -19523,7 +19777,7 @@ a {
    1024px RESPONSIVE UNITS
 ========================================= */
 
-@media (max-width: 1100px) and (min-width: 769px) {
+@media (max-width: 1176px) and (min-width: 769px) {
 
     .units-container {
         display: grid !important;

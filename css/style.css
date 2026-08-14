@@ -504,9 +504,9 @@ button:hover {
    (Tablet + Telefon)
 ===================================================== */
 
-/* ---------- Tablet (1024px) ---------- */
+/* ---------- Tablet (1030px) ---------- */
 
-@media (max-width:1024px){
+@media (max-width:1030px){
 
     header{
         padding:18px 25px;
@@ -1208,7 +1208,7 @@ button:hover {
 
 /* ---------- Tablet ---------- */
 
-@media (max-width:1024px){
+@media (max-width:1030px){
 
     .vocabulary{
         gap:20px;
@@ -1590,7 +1590,7 @@ button:hover {
 
 /* ---------- Tablet ---------- */
 
-@media (max-width:1024px){
+@media (max-width:1030px){
 
     .dashboard{
         width:90%;
@@ -2006,7 +2006,7 @@ body.dark #badgeArea > div{
 
 /* ---------- Tablet ---------- */
 
-@media (max-width:1024px){
+@media (max-width:1030px){
 
     #badgeArea{
         justify-content:center;
@@ -4831,7 +4831,7 @@ font-size:0;
    RESPONSIVE - LESSON & UNIT PAGES
 =================================== */
 
-@media (max-width:1176px){
+@media (max-width:1285px){
 
     /* Unit Cards */
     .features{
@@ -5254,7 +5254,7 @@ font-size:0;
 }
 
 
-@media(max-width:1176px){
+@media(max-width:1285px){
 
 
     .unit-cards{
@@ -5803,7 +5803,7 @@ font-size:0;
    RESPONSIVE - UNIT PAGE DESIGN
 =================================== */
 
-@media (max-width:1024px){
+@media (max-width:1030px){
 
     .lesson-page{
         padding:35px 20px;
@@ -6098,7 +6098,7 @@ font-size:0;
    RESPONSIVE - UNIT PROGRESS CARDS
 =================================== */
 
-@media (max-width:1176px){
+@media (max-width:1285px){
 
     .progress-area{
         width:95%;
@@ -6123,7 +6123,7 @@ font-size:0;
     }
 }
 
-@media (max-width:1024px){
+@media (max-width:1030px){
 
     .progress-area{
         width:95%;
@@ -6425,7 +6425,7 @@ font-size:0;
    RESPONSIVE - PREMIUM UNIT MENU
 =================================== */
 
-@media (max-width:1024px){
+@media (max-width:1030px){
 
     .unit-nav{
         max-width:95%;
@@ -8085,7 +8085,7 @@ transform:translateY(0);
 ========================================== */
 
 /* Tablet */
-@media (max-width:1176px){
+@media (max-width:1285px){
 
     .units-container,
     .unit-container{
@@ -8590,7 +8590,7 @@ transform:translateY(0);
 ========================================== */
 
 /* Tablet */
-@media (max-width:1024px){
+@media (max-width:1030px){
 
     .notes-section{
         width:95%;
@@ -9252,7 +9252,7 @@ grid-template-columns:1fr;
 ========================================== */
 
 /* Tablet */
-@media (max-width:1024px){
+@media (max-width:1030px){
 
     .questions-section{
         width:95%;
@@ -9689,7 +9689,7 @@ font-size:22px;
 ========================================== */
 
 /* Tablet */
-@media (max-width:1024px){
+@media (max-width:1030px){
 
     #quiz{
         width:95%;
@@ -11946,7 +11946,7 @@ line-height:1.6;
 /* ===========================
    OFFICIAL EXAMS - MOBILE
 =========================== */
-@media (max-width:1176px){
+@media (max-width:1925px){
 
     .voca-grid{
         grid-template-columns:repeat(5,1fr);
@@ -12181,7 +12181,7 @@ line-height:1.6;
 /* ===========================
    MOCK EXAMS - MOBILE
 =========================== */
-@media (max-width:1176px){
+@media (max-width:1925px){
 
     .mock-grid{
         grid-template-columns:repeat(4,1fr);
@@ -12717,7 +12717,329 @@ line-height:1.6;
 
 }
 
-@media(max-width:1440px){
+@media(max-width:1925px){
+
+    .lgscountdown {
+    position: absolute;
+    left: 1670px;
+    top: 100px;
+}
+
+.lgs-box{
+
+    width:200px;
+
+    background:linear-gradient(
+        135deg,
+        #1e3a8a,
+        #2563eb
+    );
+
+    color:white;
+
+    border-radius:20px;
+
+    padding:10px 10px;
+
+    text-align:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 15px 35px rgba(37,99,235,.25);
+
+    transition:.3s ease;
+
+}
+
+
+/* Hover */
+
+.lgs-box:hover{
+
+    transform:translateY(-6px);
+
+}
+
+
+/* Takvim ışık efekti */
+
+.lgs-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+
+    height:180px;
+
+    background:rgba(255,255,255,.12);
+
+    border-radius:50%;
+
+    top:-100px;
+
+    right:-80px;
+
+}
+
+
+
+/* Başlık */
+
+.lgs-box h2{
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:15px;
+
+    margin-bottom:10px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+
+
+/* Gün sayısı */
+
+#lgsDays{
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:35px;
+
+    font-weight:900;
+
+    margin:10px 0;
+
+    line-height:1;
+
+
+    color:#facc15;
+
+
+    text-shadow:
+    0 4px 12px rgba(0,0,0,.25);
+
+    animation:pulseDays 2s infinite;
+
+}
+
+
+@keyframes pulseDays{
+
+    0%,100%{
+
+        transform:scale(1);
+
+    }
+
+
+    50%{
+
+        transform:scale(1.05);
+
+    }
+
+}
+
+
+/* Days left */
+
+.lgs-box b{
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:13px;
+
+    letter-spacing:2px;
+
+    opacity:.9;
+
+    text-transform:uppercase;
+
+}
+
+}
+
+@media(max-width:1685px){
+
+    .lgscountdown {
+    position: absolute;
+    left: 1430px;
+    top: 100px;
+}
+
+.lgs-box{
+
+    width:200px;
+
+    background:linear-gradient(
+        135deg,
+        #1e3a8a,
+        #2563eb
+    );
+
+    color:white;
+
+    border-radius:20px;
+
+    padding:10px 10px;
+
+    text-align:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 15px 35px rgba(37,99,235,.25);
+
+    transition:.3s ease;
+
+}
+
+
+/* Hover */
+
+.lgs-box:hover{
+
+    transform:translateY(-6px);
+
+}
+
+
+/* Takvim ışık efekti */
+
+.lgs-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+
+    height:180px;
+
+    background:rgba(255,255,255,.12);
+
+    border-radius:50%;
+
+    top:-100px;
+
+    right:-80px;
+
+}
+
+
+
+/* Başlık */
+
+.lgs-box h2{
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:15px;
+
+    margin-bottom:10px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+
+
+/* Gün sayısı */
+
+#lgsDays{
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:35px;
+
+    font-weight:900;
+
+    margin:10px 0;
+
+    line-height:1;
+
+
+    color:#facc15;
+
+
+    text-shadow:
+    0 4px 12px rgba(0,0,0,.25);
+
+    animation:pulseDays 2s infinite;
+
+}
+
+
+@keyframes pulseDays{
+
+    0%,100%{
+
+        transform:scale(1);
+
+    }
+
+
+    50%{
+
+        transform:scale(1.05);
+
+    }
+
+}
+
+
+/* Days left */
+
+.lgs-box b{
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:13px;
+
+    letter-spacing:2px;
+
+    opacity:.9;
+
+    text-transform:uppercase;
+
+}
+
+}
+
+@media(max-width:1445px){
 
     .lgscountdown {
     position: absolute;
@@ -12878,8 +13200,330 @@ line-height:1.6;
 
 }
 
+@media(max-width:1370px){
 
-@media(max-width:1176px){
+    .lgscountdown {
+    position: absolute;
+    left: 1120px;
+    top: 100px;
+}
+
+.lgs-box{
+
+    width:200px;
+
+    background:linear-gradient(
+        135deg,
+        #1e3a8a,
+        #2563eb
+    );
+
+    color:white;
+
+    border-radius:20px;
+
+    padding:10px 10px;
+
+    text-align:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 15px 35px rgba(37,99,235,.25);
+
+    transition:.3s ease;
+
+}
+
+
+/* Hover */
+
+.lgs-box:hover{
+
+    transform:translateY(-6px);
+
+}
+
+
+/* Takvim ışık efekti */
+
+.lgs-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+
+    height:180px;
+
+    background:rgba(255,255,255,.12);
+
+    border-radius:50%;
+
+    top:-100px;
+
+    right:-80px;
+
+}
+
+
+
+/* Başlık */
+
+.lgs-box h2{
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:15px;
+
+    margin-bottom:10px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+
+
+/* Gün sayısı */
+
+#lgsDays{
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:35px;
+
+    font-weight:900;
+
+    margin:10px 0;
+
+    line-height:1;
+
+
+    color:#facc15;
+
+
+    text-shadow:
+    0 4px 12px rgba(0,0,0,.25);
+
+    animation:pulseDays 2s infinite;
+
+}
+
+
+@keyframes pulseDays{
+
+    0%,100%{
+
+        transform:scale(1);
+
+    }
+
+
+    50%{
+
+        transform:scale(1.05);
+
+    }
+
+}
+
+
+/* Days left */
+
+.lgs-box b{
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:13px;
+
+    letter-spacing:2px;
+
+    opacity:.9;
+
+    text-transform:uppercase;
+
+}
+
+}
+
+@media(max-width:1285px){
+
+    .lgscountdown {
+    position: absolute;
+    left: 1030px;
+    top: 100px;
+}
+
+.lgs-box{
+
+    width:200px;
+
+    background:linear-gradient(
+        135deg,
+        #1e3a8a,
+        #2563eb
+    );
+
+    color:white;
+
+    border-radius:20px;
+
+    padding:10px 10px;
+
+    text-align:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 15px 35px rgba(37,99,235,.25);
+
+    transition:.3s ease;
+
+}
+
+
+/* Hover */
+
+.lgs-box:hover{
+
+    transform:translateY(-6px);
+
+}
+
+
+/* Takvim ışık efekti */
+
+.lgs-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+
+    height:180px;
+
+    background:rgba(255,255,255,.12);
+
+    border-radius:50%;
+
+    top:-100px;
+
+    right:-80px;
+
+}
+
+
+
+/* Başlık */
+
+.lgs-box h2{
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:15px;
+
+    margin-bottom:10px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+
+
+/* Gün sayısı */
+
+#lgsDays{
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:35px;
+
+    font-weight:900;
+
+    margin:10px 0;
+
+    line-height:1;
+
+
+    color:#facc15;
+
+
+    text-shadow:
+    0 4px 12px rgba(0,0,0,.25);
+
+    animation:pulseDays 2s infinite;
+
+}
+
+
+@keyframes pulseDays{
+
+    0%,100%{
+
+        transform:scale(1);
+
+    }
+
+
+    50%{
+
+        transform:scale(1.05);
+
+    }
+
+}
+
+
+/* Days left */
+
+.lgs-box b{
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:13px;
+
+    letter-spacing:2px;
+
+    opacity:.9;
+
+    text-transform:uppercase;
+
+}
+
+}
+
+
+@media(max-width:1180px){
 
     .lgscountdown {
     position: absolute;
@@ -13038,9 +13682,170 @@ line-height:1.6;
 
 }
 
+@media(max-width:1060px){
+
+    .lgscountdown {
+    position: absolute;
+    left: 805px;
+    top: 100px;
 }
 
-@media(max-width:1024px){
+.lgs-box{
+
+    width:200px;
+
+    background:linear-gradient(
+        135deg,
+        #1e3a8a,
+        #2563eb
+    );
+
+    color:white;
+
+    border-radius:20px;
+
+    padding:10px 10px;
+
+    text-align:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 15px 35px rgba(37,99,235,.25);
+
+    transition:.3s ease;
+
+}
+
+
+/* Hover */
+
+.lgs-box:hover{
+
+    transform:translateY(-6px);
+
+}
+
+
+/* Takvim ışık efekti */
+
+.lgs-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+
+    height:180px;
+
+    background:rgba(255,255,255,.12);
+
+    border-radius:50%;
+
+    top:-100px;
+
+    right:-80px;
+
+}
+
+
+
+/* Başlık */
+
+.lgs-box h2{
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:15px;
+
+    margin-bottom:10px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+
+
+/* Gün sayısı */
+
+#lgsDays{
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:35px;
+
+    font-weight:900;
+
+    margin:10px 0;
+
+    line-height:1;
+
+
+    color:#facc15;
+
+
+    text-shadow:
+    0 4px 12px rgba(0,0,0,.25);
+
+    animation:pulseDays 2s infinite;
+
+}
+
+
+@keyframes pulseDays{
+
+    0%,100%{
+
+        transform:scale(1);
+
+    }
+
+
+    50%{
+
+        transform:scale(1.05);
+
+    }
+
+}
+
+
+/* Days left */
+
+.lgs-box b{
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:13px;
+
+    letter-spacing:2px;
+
+    opacity:.9;
+
+    text-transform:uppercase;
+
+}
+
+}
+
+}
+
+@media(max-width:1030px){
 
     .lgscountdown {
     position: absolute;
@@ -13204,7 +14009,7 @@ line-height:1.6;
 
 /* Mobile */
 
-@media(max-width:768px){
+@media(max-width:770px){
 
 
     .lgs-box{
@@ -13441,7 +14246,7 @@ line-height:1.6;
    TENSES PAGE - MOBILE
 =========================== */
 
-@media (max-width:1176px){
+@media (max-width:1925px){
 
     .tenses-page{
         grid-template-columns:repeat(5,1fr);
@@ -13467,7 +14272,7 @@ line-height:1.6;
 
 }
 
-@media (max-width:1024px){
+@media (max-width:1030px){
 
     .tenses-page{
         grid-template-columns:repeat(5,1fr);
@@ -16275,7 +17080,7 @@ body{
 /* ===========================
    WEEKLY STUDY PROGRAM
 =========================== */
-@media (min-width:1176px){
+@media (min-width:1285px){
 .weekly-plan{
     margin:40px auto;
 }
@@ -16350,6 +17155,8 @@ body{
 .day-card:nth-child(7){border-top-color:#6b7280;}
 
 }
+
+
 
 /* Mobil */
 
@@ -16709,7 +17516,7 @@ body{
     color:#1e3a8a;
 }
 
-@media(max-width:1024px){
+@media(max-width:1030px){
 
     .personal-stats-card{
         width:90%;
@@ -17121,7 +17928,7 @@ body{
     color:#64748b;
 }
 
-@media(max-width:1176px){
+@media(max-width:1285px){
 
     .achievements-card{
         width:90%;
@@ -17156,7 +17963,7 @@ body{
 
 }
 
-@media(max-width:1024px){
+@media(max-width:1030px){
 
     .achievements-card{
         width:90%;
@@ -17517,7 +18324,7 @@ body{
     display: none;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1925px) {
 
     /* ==============================
        ANA BÖLÜM
@@ -17525,7 +18332,7 @@ body{
 
     .weekly-plan {
         width: 40%;
-        margin: 18px 25 25px;
+        margin: 18px 575px 25px;
         padding: 0 14px;
         box-sizing: border-box;
     }
@@ -17773,7 +18580,7 @@ body{
 
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1685px) {
 
     /* ==============================
        ANA BÖLÜM
@@ -17781,7 +18588,775 @@ body{
 
     .weekly-plan {
         width: 40%;
-        margin: 18px 25 25px;
+        margin: 18px 475px 25px;
+        padding: 0 14px;
+        box-sizing: border-box;
+    }
+
+
+    /* ==============================
+       BAŞLIK
+    ============================== */
+
+    .weekly-plan-header {
+        text-align: center;
+        padding: 0;
+        margin-bottom: 0px;
+    }
+
+    .weekly-plan-header h2 {
+        justify-content: center;
+        text-align: center;
+        margin: 0;
+    }
+
+    .weekly-plan-header p {
+        text-align: center;
+        margin: 5px 0 0;
+    }
+
+
+    /* ==============================
+       GÜN SEKMELEME
+    ============================== */
+
+    .mobile-week-tabs {
+    display: flex;
+
+    width: fit-content;
+    max-width: 100%;
+
+    gap: 8px;
+
+    overflow-x: auto;
+
+    padding: 0 0 8px;
+
+    margin: 0 auto;
+
+    scrollbar-width: none;
+
+    box-sizing: border-box;
+
+    justify-content: center;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+    .mobile-week-tabs::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    .week-tab {
+        flex: 0 0 auto;
+
+        border: none;
+
+        background: #f1f4f8;
+
+        color: #687386;
+
+        border-radius: 10px;
+
+        padding: 10px 10px;
+
+        font-size: 11px;
+
+        font-weight: 700;
+
+        cursor: pointer;
+
+        transition: 0.2s ease;
+    }
+
+    .week-tab.active {
+        background: #3478f6;
+        color: white;
+
+        box-shadow:
+            0 4px 10px rgba(52, 120, 246, 0.22);
+    }
+
+
+    /* ==============================
+       SADECE SEÇİLİ GÜN
+    ============================== */
+
+    .week-grid {
+    display: block;
+    width: 100%;
+    margin: 20px 0 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+    .week-grid .day-card {
+        display: none;
+    }
+
+    .week-grid .day-card.active-day {
+        display: block;
+
+        width: 100%;
+
+        margin: 0 auto;
+
+        padding: 0;
+
+        background: transparent;
+
+        border: none;
+
+        border-radius: 0;
+
+        box-shadow: none;
+
+        box-sizing: border-box;
+
+        text-align: center;
+    }
+
+
+    /* ==============================
+       GÜN BAŞLIĞI
+    ============================== */
+
+    .desktop-card-header {
+        width: 100%;
+
+        padding: 4px 0 10px;
+
+        margin: 0 0 4px;
+
+        box-sizing: border-box;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: center;
+
+        border-bottom: 2px solid var(--card-color);
+    }
+
+    .desktop-card-header h3 {
+        width: 100%;
+
+        margin: 0 0 8px;
+
+        padding: 0;
+
+        text-align: center;
+
+        font-size: 21px;
+
+        line-height: 1.2;
+
+        font-weight: 700;
+
+        color: #202938;
+    }
+
+    .desktop-card-header::after {
+        content: none;
+    }
+
+
+    /* ==============================
+       DERS LİSTESİ
+    ============================== */
+
+    .desktop-task-list {
+        width: 100%;
+
+        margin: 0;
+        padding: 0;
+
+        box-sizing: border-box;
+
+        text-align: center;
+    }
+
+
+    /* ==============================
+       DERSLER
+    ============================== */
+
+    .desktop-task {
+    width: 100%;
+
+    min-height: 40px;
+
+    padding: 5px 0;
+
+    margin: 0;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background: transparent;
+
+    border: none;
+
+    border-bottom: 1px solid #e9edf3;
+
+    border-radius: 0;
+
+    box-shadow: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #374151;
+}
+
+    .desktop-task:last-child {
+        border-bottom: none;
+    }
+
+
+    /* ==============================
+       EMOJİLER
+    ============================== */
+
+    .desktop-task::first-letter {
+        font-size: 16px;
+    }
+
+}
+
+@media (max-width: 1445px) {
+
+    /* ==============================
+       ANA BÖLÜM
+    ============================== */
+
+    .weekly-plan {
+        width: 40%;
+        margin: 18px 425px 25px;
+        padding: 0 14px;
+        box-sizing: border-box;
+    }
+
+
+    /* ==============================
+       BAŞLIK
+    ============================== */
+
+    .weekly-plan-header {
+        text-align: center;
+        padding: 0;
+        margin-bottom: 0px;
+    }
+
+    .weekly-plan-header h2 {
+        justify-content: center;
+        text-align: center;
+        margin: 0;
+    }
+
+    .weekly-plan-header p {
+        text-align: center;
+        margin: 5px 0 0;
+    }
+
+
+    /* ==============================
+       GÜN SEKMELEME
+    ============================== */
+
+    .mobile-week-tabs {
+    display: flex;
+
+    width: fit-content;
+    max-width: 100%;
+
+    gap: 8px;
+
+    overflow-x: auto;
+
+    padding: 0 0 8px;
+
+    margin: 0 auto;
+
+    scrollbar-width: none;
+
+    box-sizing: border-box;
+
+    justify-content: center;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+    .mobile-week-tabs::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    .week-tab {
+        flex: 0 0 auto;
+
+        border: none;
+
+        background: #f1f4f8;
+
+        color: #687386;
+
+        border-radius: 10px;
+
+        padding: 10px 10px;
+
+        font-size: 11px;
+
+        font-weight: 700;
+
+        cursor: pointer;
+
+        transition: 0.2s ease;
+    }
+
+    .week-tab.active {
+        background: #3478f6;
+        color: white;
+
+        box-shadow:
+            0 4px 10px rgba(52, 120, 246, 0.22);
+    }
+
+
+    /* ==============================
+       SADECE SEÇİLİ GÜN
+    ============================== */
+
+    .week-grid {
+    display: block;
+    width: 100%;
+    margin: 20px 0 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+    .week-grid .day-card {
+        display: none;
+    }
+
+    .week-grid .day-card.active-day {
+        display: block;
+
+        width: 100%;
+
+        margin: 0 auto;
+
+        padding: 0;
+
+        background: transparent;
+
+        border: none;
+
+        border-radius: 0;
+
+        box-shadow: none;
+
+        box-sizing: border-box;
+
+        text-align: center;
+    }
+
+
+    /* ==============================
+       GÜN BAŞLIĞI
+    ============================== */
+
+    .desktop-card-header {
+        width: 100%;
+
+        padding: 4px 0 10px;
+
+        margin: 0 0 4px;
+
+        box-sizing: border-box;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: center;
+
+        border-bottom: 2px solid var(--card-color);
+    }
+
+    .desktop-card-header h3 {
+        width: 100%;
+
+        margin: 0 0 8px;
+
+        padding: 0;
+
+        text-align: center;
+
+        font-size: 21px;
+
+        line-height: 1.2;
+
+        font-weight: 700;
+
+        color: #202938;
+    }
+
+    .desktop-card-header::after {
+        content: none;
+    }
+
+
+    /* ==============================
+       DERS LİSTESİ
+    ============================== */
+
+    .desktop-task-list {
+        width: 100%;
+
+        margin: 0;
+        padding: 0;
+
+        box-sizing: border-box;
+
+        text-align: center;
+    }
+
+
+    /* ==============================
+       DERSLER
+    ============================== */
+
+    .desktop-task {
+    width: 100%;
+
+    min-height: 40px;
+
+    padding: 5px 0;
+
+    margin: 0;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background: transparent;
+
+    border: none;
+
+    border-bottom: 1px solid #e9edf3;
+
+    border-radius: 0;
+
+    box-shadow: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #374151;
+}
+
+    .desktop-task:last-child {
+        border-bottom: none;
+    }
+
+
+    /* ==============================
+       EMOJİLER
+    ============================== */
+
+    .desktop-task::first-letter {
+        font-size: 16px;
+    }
+
+}
+
+@media (max-width: 1285px) {
+
+    /* ==============================
+       ANA BÖLÜM
+    ============================== */
+
+    .weekly-plan {
+        width: 40%;
+        margin: 18px 325px 25px;
+        padding: 0 14px;
+        box-sizing: border-box;
+    }
+
+
+    /* ==============================
+       BAŞLIK
+    ============================== */
+
+    .weekly-plan-header {
+        text-align: center;
+        padding: 0;
+        margin-bottom: 0px;
+    }
+
+    .weekly-plan-header h2 {
+        justify-content: center;
+        text-align: center;
+        margin: 0;
+    }
+
+    .weekly-plan-header p {
+        text-align: center;
+        margin: 5px 0 0;
+    }
+
+
+    /* ==============================
+       GÜN SEKMELEME
+    ============================== */
+
+    .mobile-week-tabs {
+    display: flex;
+
+    width: fit-content;
+    max-width: 100%;
+
+    gap: 8px;
+
+    overflow-x: auto;
+
+    padding: 0 0 8px;
+
+    margin: 0 auto;
+
+    scrollbar-width: none;
+
+    box-sizing: border-box;
+
+    justify-content: center;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+    .mobile-week-tabs::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    .week-tab {
+        flex: 0 0 auto;
+
+        border: none;
+
+        background: #f1f4f8;
+
+        color: #687386;
+
+        border-radius: 10px;
+
+        padding: 10px 10px;
+
+        font-size: 11px;
+
+        font-weight: 700;
+
+        cursor: pointer;
+
+        transition: 0.2s ease;
+    }
+
+    .week-tab.active {
+        background: #3478f6;
+        color: white;
+
+        box-shadow:
+            0 4px 10px rgba(52, 120, 246, 0.22);
+    }
+
+
+    /* ==============================
+       SADECE SEÇİLİ GÜN
+    ============================== */
+
+    .week-grid {
+    display: block;
+    width: 100%;
+    margin: 20px 0 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+    .week-grid .day-card {
+        display: none;
+    }
+
+    .week-grid .day-card.active-day {
+        display: block;
+
+        width: 100%;
+
+        margin: 0 auto;
+
+        padding: 0;
+
+        background: transparent;
+
+        border: none;
+
+        border-radius: 0;
+
+        box-shadow: none;
+
+        box-sizing: border-box;
+
+        text-align: center;
+    }
+
+
+    /* ==============================
+       GÜN BAŞLIĞI
+    ============================== */
+
+    .desktop-card-header {
+        width: 100%;
+
+        padding: 4px 0 10px;
+
+        margin: 0 0 4px;
+
+        box-sizing: border-box;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: center;
+
+        border-bottom: 2px solid var(--card-color);
+    }
+
+    .desktop-card-header h3 {
+        width: 100%;
+
+        margin: 0 0 8px;
+
+        padding: 0;
+
+        text-align: center;
+
+        font-size: 21px;
+
+        line-height: 1.2;
+
+        font-weight: 700;
+
+        color: #202938;
+    }
+
+    .desktop-card-header::after {
+        content: none;
+    }
+
+
+    /* ==============================
+       DERS LİSTESİ
+    ============================== */
+
+    .desktop-task-list {
+        width: 100%;
+
+        margin: 0;
+        padding: 0;
+
+        box-sizing: border-box;
+
+        text-align: center;
+    }
+
+
+    /* ==============================
+       DERSLER
+    ============================== */
+
+    .desktop-task {
+    width: 100%;
+
+    min-height: 40px;
+
+    padding: 5px 0;
+
+    margin: 0;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background: transparent;
+
+    border: none;
+
+    border-bottom: 1px solid #e9edf3;
+
+    border-radius: 0;
+
+    box-shadow: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #374151;
+}
+
+    .desktop-task:last-child {
+        border-bottom: none;
+    }
+
+
+    /* ==============================
+       EMOJİLER
+    ============================== */
+
+    .desktop-task::first-letter {
+        font-size: 16px;
+    }
+
+}
+
+@media (max-width: 1030px) {
+
+    /* ==============================
+       ANA BÖLÜM
+    ============================== */
+
+    .weekly-plan {
+        width: 40%;
+        margin: 18px 300px 25px;
         padding: 0 14px;
         box-sizing: border-box;
     }
@@ -18037,7 +19612,7 @@ body{
 
     .weekly-plan {
         width: 100%;
-        margin: 18px 25 25px;
+        margin: 18px 5px 25px;
         padding: 0 14px;
         box-sizing: border-box;
     }
@@ -18435,7 +20010,7 @@ opacity: 0.75;
 /* ===============================
 MOBILE
 ================================ */
-@media (max-width: 1176px) {
+@media (max-width: 1285px) {
 
 .xp-card {
 
@@ -18521,7 +20096,7 @@ MOBILE
 }
 
 
-@media (max-width: 1024px) {
+@media (max-width: 1030px) {
 
 .xp-card {
 
@@ -19549,7 +21124,7 @@ a {
 
 }
 
-@media (max-width: 1176px) {
+@media (max-width: 1285px) {
 
     .lexi-assistant {
 
@@ -19726,9 +21301,9 @@ a {
 
 /* =========================================
    DAILY VOCABULARIES — TABLET
-   481px - 768px - 1024px
+   481px - 768px - 1030px
 ========================================= */
-@media (max-width:1024px) {
+@media (max-width:1030px) {
 
     #dailyWords{
         display: grid;
@@ -19774,10 +21349,10 @@ a {
 }
 
 /* =========================================
-   1024px RESPONSIVE UNITS
+   1030px RESPONSIVE UNITS
 ========================================= */
 
-@media (max-width: 1176px) and (min-width: 769px) {
+@media (max-width: 1285px) and (min-width: 769px) {
 
     .units-container {
         display: grid !important;

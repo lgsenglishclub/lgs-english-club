@@ -5493,9 +5493,6 @@ font-size:0;
         padding:12px;
     }
 
-    /* Mobil */
-@media (max-width:768px){
-
     #dailyWords{
         display:flex;
         overflow-x:auto;
@@ -5516,8 +5513,6 @@ font-size:0;
         flex:0 0 92%;
         scroll-snap-align:center;
     }
-
-}
 
     .unit-header{
         padding:35px 15px;
@@ -12489,7 +12484,7 @@ line-height:1.6;
 
 .lgscountdown {
     position: absolute;
-    left: 1670px;
+    left: 1655px;
     top: 100px;
 }
 
@@ -13227,7 +13222,7 @@ iframe{
 
     width:150px;
 
-    padding:12px;
+    padding:4px;
 
     background:white;
 
@@ -13243,7 +13238,7 @@ iframe{
 
     top:100px;
 
-    left:30px;
+    left:50px;
 
 }
 
@@ -13651,6 +13646,41 @@ iframe{
 }
 
 /* ================= MEMBERSHIP & PREMIUM MOBILE ================= */
+
+@media (max-width:900px){
+
+    .membership-card{
+    position:static;
+    width:90%;
+    max-width:240px;
+    margin:20px auto;
+    left:auto;
+    top:auto;
+    padding:18px;
+    
+}
+
+.membership-icon{
+    font-size:30px;
+}
+
+.membership-card h2{
+    font-size:18px;
+}
+
+.membership-title{
+    font-size:15px;
+}
+
+.membership-text{
+    font-size:13px;
+}
+
+.membership-features{
+    font-size:13px;
+}
+
+}
 
 @media (max-width:768px){
 
@@ -17847,6 +17877,39 @@ a {
 }
 
 /* =========================================
+   LEXI — TABLET
+   481px - 768px
+========================================= */
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+    .lexi-assistant {
+        right: 18px !important;
+        bottom: 18px !important;
+    }
+
+    .lexi-avatar {
+        width: 82px !important;
+        height: 98px !important;
+    }
+
+    .lexi-message {
+        display: none !important;
+    }
+
+    .lexi-status {
+        width: 8px !important;
+        height: 8px !important;
+
+        border-width: 1px !important;
+
+        top: 9px !important;
+        right: 18px !important;
+    }
+
+}
+
+/* =========================================
    LEXI — DESKTOP SIZE
 ========================================= */
 
@@ -17859,3 +17922,39 @@ a {
 
 }
 
+/* =========================================
+   TABLET - HOME PAGE
+   481px - 768px
+========================================= */
+
+@media (min-width:481px) and (max-width:768px){
+
+    /* Upgrade to Premium */
+
+    .premium-btn{
+        display:block;
+        width:calc(100% - 60px);
+        max-width:560px;
+        margin:20px auto;
+        padding:18px 30px;
+        font-size:22px;
+        box-sizing:border-box;
+    }
+
+
+    /* LGS Countdown */
+
+    .lgscountdown{
+        position:static;
+        width:calc(100% - 60px);
+        max-width:560px;
+        margin:20px auto 60px;
+    }
+
+
+    .lgs-box{
+        width:100%;
+        box-sizing:border-box;
+    }
+
+}

@@ -3481,48 +3481,6 @@ button{
 
 }
 
-/* ==================================================
-   TABLET (992px)
-================================================== */
-
-@media (max-width:992px){
-
-    .meaning{
-        font-size:18px;
-    }
-
-    .example{
-        font-size:16px;
-    }
-
-    .quiz-intro{
-        font-size:18px;
-        margin-bottom:30px;
-    }
-
-    .progress-box{
-        width:90%;
-    }
-
-    .game-xp{
-        font-size:15px;
-        padding:8px 18px;
-    }
-
-    #dailyWords{
-        grid-template-columns:repeat(3,1fr);
-        gap:15px;
-    }
-
-    .word-item h3{
-        font-size:17px;
-    }
-
-    .word-item p{
-        font-size:14px;
-    }
-
-}
 
 /* ==================================================
    TELEFON (768px)
@@ -5309,7 +5267,7 @@ font-size:0;
 }
 
 
-@media(max-width:1000px){
+@media(max-width:1100px){
 
     .unit-cards{
         grid-template-columns:repeat(2,1fr);
@@ -5318,7 +5276,7 @@ font-size:0;
 }
 
 
-@media(max-width:700px){
+@media(max-width:768px){
 
     .unit-cards{
         grid-template-columns:1fr;
@@ -5422,7 +5380,7 @@ font-size:0;
    RESPONSIVE - UNITS & DAILY WORDS
 =================================== */
 
-@media (max-width:1024px){
+@media (max-width:1100px){
 
     /* Lesson Features */
     .lesson-page .features{
@@ -5447,7 +5405,7 @@ font-size:0;
 
     /* Unit Cards */
     .unit-cards{
-        grid-template-columns:repeat(3,1fr);
+        grid-template-columns:repeat(2,1fr);
         gap:18px;
     }
 
@@ -5535,7 +5493,7 @@ font-size:0;
     }
 
     .unit-cards{
-        grid-template-columns:repeat(2,1fr);
+        grid-template-columns:repeat(1,1fr);
         gap:15px;
     }
 
@@ -6164,11 +6122,16 @@ font-size:0;
     }
 
     .unit-card{
-        width:100%;
+        width:80%;
         min-height:280px;
         height:auto;
+        margin:50px;
     }
 
+    .unit-card a{
+        width:50%;
+        text-align:center;
+    }
 }
 
 @media (max-width:768px){
@@ -6187,10 +6150,11 @@ font-size:0;
     }
 
     .unit-card{
-        width:100%;
+        width:90%;
         min-height:auto;
         height:auto;
-        padding:20px;
+        padding:5px;
+        margin:35px;
     }
 
     .unit-card h2{
@@ -6206,7 +6170,7 @@ font-size:0;
     }
 
     .unit-card a{
-        width:100%;
+        width:50%;
         text-align:center;
     }
 
@@ -6227,7 +6191,8 @@ font-size:0;
     }
 
     .unit-card{
-        padding:18px 15px;
+        padding:5px 5px;
+        margin:20px;
     }
 
     .unit-card h2{
@@ -6236,6 +6201,11 @@ font-size:0;
 
     .unit-card p{
         font-size:14px;
+    }
+
+    .unit-card a{
+        width:50%;
+        text-align:center;
     }
 
 }
@@ -6668,11 +6638,11 @@ font-size:0;
 
 /* TABLET */
 
-@media(max-width:900px){
+@media(max-width:1100px){
 
     .vocabulary-container{
 
-        grid-template-columns:repeat(2,1fr);
+        grid-template-columns:repeat(4,1fr);
 
     }
 
@@ -6682,6 +6652,16 @@ font-size:0;
 /* MOBILE */
 
 @media(max-width:768px){
+
+    .vocabulary-container{
+
+        grid-template-columns:(2,1fr);
+
+    }
+
+}
+
+@media(max-width:480px){
 
     .vocabulary-container{
 
@@ -7647,75 +7627,6 @@ font-size:0;
     transform:translateY(-6px);
 
     box-shadow:0 12px 25px rgba(0,0,0,.12);
-
-}
-
-/* UNITS CARDS BIGGER SIZE */
-
-.units-container{
-
-    display:grid;
-
-    grid-template-columns:repeat(5, 1fr);
-
-    gap:30px;
-
-    width:90%;
-
-    max-width:1400px;
-
-    margin:50px auto;
-
-}
-
-
-
-.unit-card{
-
-    min-height:260px;
-
-    padding:30px 20px;
-
-    border-radius:25px;
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
-
-    align-items:center;
-
-    text-align:center;
-
-    transition:.3s;
-
-}
-
-
-.unit-card:hover{
-
-    transform:translateY(-8px);
-
-    box-shadow:0 15px 30px rgba(0,0,0,.15);
-
-}
-
-
-
-.unit-card h2{
-
-    font-size:24px;
-
-    margin:15px 0;
-
-}
-
-
-
-.unit-card p{
-
-    font-size:16px;
 
 }
 
@@ -11459,8 +11370,8 @@ line-height:1.6;
     }
 
     .test-percent{
-        width:48px;
-        height:48px;
+        width:40px;
+        height:40px;
         font-size:15px;
     }
 
@@ -11975,7 +11886,7 @@ line-height:1.6;
     margin-top:20px;
 }
 
-.pdf-btn,
+.pdf-butn,
 .voca-btn{
     flex:1;
     text-align:center;
@@ -11987,7 +11898,7 @@ line-height:1.6;
     transition:.3s;
 }
 
-.pdf-btn{
+.pdf-butn{
     background:#d32f2f;
 }
 
@@ -11995,7 +11906,7 @@ line-height:1.6;
     background:#1565c0;
 }
 
-.pdf-btn:hover{
+.pdf-butn:hover{
     background:#b71c1c;
 }
 
@@ -12021,8 +11932,7 @@ line-height:1.6;
 /* ===========================
    OFFICIAL EXAMS - MOBILE
 =========================== */
-
-@media (max-width:768px){
+@media (max-width:1100px){
 
     .voca-grid{
         grid-template-columns:repeat(2,1fr);
@@ -12030,8 +11940,9 @@ line-height:1.6;
     }
 
     .voca-card{
-        width:100%;
-        padding:15px;
+        width:80%;
+        padding:20px 50px 20px;
+        margin:15px 50px;
     }
 
     .voca-card h3{
@@ -12053,11 +11964,55 @@ line-height:1.6;
         gap:10px;
     }
 
-    .pdf-btn,
+    .pdf-butn,
     .voca-btn{
-        width:100%;
+        width:80%;
         padding:10px;
         font-size:14px;
+        margin:0px 22px 0px;
+    }
+
+}
+
+@media (max-width:768px){
+
+    .voca-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:20px;
+    }
+
+    .voca-card{
+        width:100%;
+        max-width:330px;
+        padding:20px 40px 20px;
+        margin: 5px 25px 10px
+    }
+
+    .voca-card h3{
+        font-size:22px;
+    }
+
+    .voca-card p{
+        font-size:16px;
+        margin-bottom:15px;
+    }
+
+    .voca-card span{
+        font-size:12px;
+        padding:6px 12px;
+    }
+
+    .voca-buttons{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .pdf-butn,
+    .voca-btn{
+        width:60%;
+        padding:10px;
+        font-size:14px;
+        margin:0px 50px 0px;
     }
 
 }
@@ -12071,8 +12026,37 @@ line-height:1.6;
     }
 
     .voca-card{
-        max-width:340px;
+        max-width:380px;
         margin:0 auto;
+    }
+
+     .pdf-butn,
+    .voca-btn{
+        width:70%;
+        padding:10px;
+        font-size:14px;
+        margin:0px 50px 0px;
+    }
+
+}
+
+@media (max-width:380px){
+
+    .voca-grid{
+        grid-template-columns:1fr;
+    }
+
+    .voca-card{
+        max-width:330px;
+        margin:0 auto;
+    }
+
+     .pdf-butn,
+    .voca-btn{
+        width:60%;
+        padding:10px;
+        font-size:14px;
+        margin:0px 50px 0px;
     }
 
 }
@@ -12183,17 +12167,17 @@ line-height:1.6;
 /* ===========================
    MOCK EXAMS - MOBILE
 =========================== */
-
-@media (max-width:768px){
+@media (max-width:1100px){
 
     .mock-grid{
-        grid-template-columns:repeat(2,1fr);
+        grid-template-columns:repeat(3,1fr);
         gap:15px;
     }
 
     .mock-card{
-        width:100%;
+        width:80%;
         padding:15px;
+        margin:0px 30px 15px;
     }
 
     .mock-card h3{
@@ -12212,14 +12196,61 @@ line-height:1.6;
     .mock-buttons a,
     .pdf-btn,
     .solve-btn{
-        width:100%;
+        width:80%;
         padding:10px;
+        margin:0px 23px 0px;
         font-size:14px;
         box-sizing:border-box;
     }
 
     .print-btn{
         width:100%;
+        justify-content:center;
+        font-size:14px;
+    }
+
+}
+
+
+@media (max-width:768px){
+
+    .mock-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:10px;
+    }
+
+    .mock-card{
+        width:100%;
+        max-width:330px;
+        padding:15px;
+        margin:0px 23px 0px;
+    }
+
+    .mock-card h3{
+        font-size:16px;
+    }
+
+    .mock-card p{
+        font-size:13px;
+    }
+
+    .mock-buttons{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .mock-buttons a,
+    .pdf-btn,
+    .solve-btn{
+        width:60%;
+        padding:10px;
+        margin:0px 65px 0px;
+        font-size:14px;
+        box-sizing:border-box;
+    }
+
+    .print-btn{
+        width:90%;
         justify-content:center;
         font-size:14px;
     }
@@ -12235,8 +12266,41 @@ line-height:1.6;
     }
 
     .mock-card{
-        max-width:320px;
+        max-width:190px;
         margin:0 auto;
+    }
+
+    .mock-buttons a,
+    .pdf-btn,
+    .solve-btn{
+        width:80%;
+        padding:10px;
+        margin:0px 15px 0px;
+        font-size:14px;
+        box-sizing:border-box;
+    }
+
+}
+
+@media (max-width:380px){
+
+    .mock-grid{
+        grid-template-columns:1fr;
+    }
+
+    .mock-card{
+        max-width:160px;
+        margin:0 auto;
+    }
+
+    .mock-buttons a,
+    .pdf-btn,
+    .solve-btn{
+        width:80%;
+        padding:10px;
+        margin:0px 15px 0px;
+        font-size:14px;
+        box-sizing:border-box;
     }
 
 }
@@ -12639,6 +12703,651 @@ line-height:1.6;
 
 }
 
+@media(max-width:2600px){
+
+    .lgscountdown {
+    position: absolute;
+    left: 2310px;
+    top: 100px;
+}
+
+.lgs-box{
+
+    width:200px;
+
+    background:linear-gradient(
+        135deg,
+        #1e3a8a,
+        #2563eb
+    );
+
+    color:white;
+
+    border-radius:20px;
+
+    padding:10px 10px;
+
+    text-align:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 15px 35px rgba(37,99,235,.25);
+
+    transition:.3s ease;
+
+}
+
+
+/* Hover */
+
+.lgs-box:hover{
+
+    transform:translateY(-6px);
+
+}
+
+
+/* Takvim ışık efekti */
+
+.lgs-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+
+    height:180px;
+
+    background:rgba(255,255,255,.12);
+
+    border-radius:50%;
+
+    top:-100px;
+
+    right:-80px;
+
+}
+
+
+
+/* Başlık */
+
+.lgs-box h2{
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:15px;
+
+    margin-bottom:10px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+
+
+/* Gün sayısı */
+
+#lgsDays{
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:35px;
+
+    font-weight:900;
+
+    margin:10px 0;
+
+    line-height:1;
+
+
+    color:#facc15;
+
+
+    text-shadow:
+    0 4px 12px rgba(0,0,0,.25);
+
+    animation:pulseDays 2s infinite;
+
+}
+
+
+@keyframes pulseDays{
+
+    0%,100%{
+
+        transform:scale(1);
+
+    }
+
+
+    50%{
+
+        transform:scale(1.05);
+
+    }
+
+}
+
+
+/* Days left */
+
+.lgs-box b{
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:13px;
+
+    letter-spacing:2px;
+
+    opacity:.9;
+
+    text-transform:uppercase;
+
+}
+
+}
+
+@media(max-width:2000px){
+
+    .lgscountdown {
+    position: absolute;
+    left: 1670px;
+    top: 100px;
+}
+
+.lgs-box{
+
+    width:200px;
+
+    background:linear-gradient(
+        135deg,
+        #1e3a8a,
+        #2563eb
+    );
+
+    color:white;
+
+    border-radius:20px;
+
+    padding:10px 10px;
+
+    text-align:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 15px 35px rgba(37,99,235,.25);
+
+    transition:.3s ease;
+
+}
+
+
+/* Hover */
+
+.lgs-box:hover{
+
+    transform:translateY(-6px);
+
+}
+
+
+/* Takvim ışık efekti */
+
+.lgs-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+
+    height:180px;
+
+    background:rgba(255,255,255,.12);
+
+    border-radius:50%;
+
+    top:-100px;
+
+    right:-80px;
+
+}
+
+
+
+/* Başlık */
+
+.lgs-box h2{
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:15px;
+
+    margin-bottom:10px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+
+
+/* Gün sayısı */
+
+#lgsDays{
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:35px;
+
+    font-weight:900;
+
+    margin:10px 0;
+
+    line-height:1;
+
+
+    color:#facc15;
+
+
+    text-shadow:
+    0 4px 12px rgba(0,0,0,.25);
+
+    animation:pulseDays 2s infinite;
+
+}
+
+
+@keyframes pulseDays{
+
+    0%,100%{
+
+        transform:scale(1);
+
+    }
+
+
+    50%{
+
+        transform:scale(1.05);
+
+    }
+
+}
+
+
+/* Days left */
+
+.lgs-box b{
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:13px;
+
+    letter-spacing:2px;
+
+    opacity:.9;
+
+    text-transform:uppercase;
+
+}
+
+}
+
+@media(max-width:1600px){
+
+    .lgscountdown {
+    position: absolute;
+    left: 1195px;
+    top: 100px;
+}
+
+.lgs-box{
+
+    width:200px;
+
+    background:linear-gradient(
+        135deg,
+        #1e3a8a,
+        #2563eb
+    );
+
+    color:white;
+
+    border-radius:20px;
+
+    padding:10px 10px;
+
+    text-align:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 15px 35px rgba(37,99,235,.25);
+
+    transition:.3s ease;
+
+}
+
+
+/* Hover */
+
+.lgs-box:hover{
+
+    transform:translateY(-6px);
+
+}
+
+
+/* Takvim ışık efekti */
+
+.lgs-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+
+    height:180px;
+
+    background:rgba(255,255,255,.12);
+
+    border-radius:50%;
+
+    top:-100px;
+
+    right:-80px;
+
+}
+
+
+
+/* Başlık */
+
+.lgs-box h2{
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:15px;
+
+    margin-bottom:10px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+
+
+/* Gün sayısı */
+
+#lgsDays{
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:35px;
+
+    font-weight:900;
+
+    margin:10px 0;
+
+    line-height:1;
+
+
+    color:#facc15;
+
+
+    text-shadow:
+    0 4px 12px rgba(0,0,0,.25);
+
+    animation:pulseDays 2s infinite;
+
+}
+
+
+@keyframes pulseDays{
+
+    0%,100%{
+
+        transform:scale(1);
+
+    }
+
+
+    50%{
+
+        transform:scale(1.05);
+
+    }
+
+}
+
+
+/* Days left */
+
+.lgs-box b{
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:13px;
+
+    letter-spacing:2px;
+
+    opacity:.9;
+
+    text-transform:uppercase;
+
+}
+
+}
+
+
+@media(max-width:1100px){
+
+    .lgscountdown {
+    position: absolute;
+    left: 775px;
+    top: 100px;
+}
+
+.lgs-box{
+
+    width:200px;
+
+    background:linear-gradient(
+        135deg,
+        #1e3a8a,
+        #2563eb
+    );
+
+    color:white;
+
+    border-radius:20px;
+
+    padding:10px 10px;
+
+    text-align:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 15px 35px rgba(37,99,235,.25);
+
+    transition:.3s ease;
+
+}
+
+
+/* Hover */
+
+.lgs-box:hover{
+
+    transform:translateY(-6px);
+
+}
+
+
+/* Takvim ışık efekti */
+
+.lgs-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+
+    height:180px;
+
+    background:rgba(255,255,255,.12);
+
+    border-radius:50%;
+
+    top:-100px;
+
+    right:-80px;
+
+}
+
+
+
+/* Başlık */
+
+.lgs-box h2{
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:15px;
+
+    margin-bottom:10px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+
+
+/* Gün sayısı */
+
+#lgsDays{
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:35px;
+
+    font-weight:900;
+
+    margin:10px 0;
+
+    line-height:1;
+
+
+    color:#facc15;
+
+
+    text-shadow:
+    0 4px 12px rgba(0,0,0,.25);
+
+    animation:pulseDays 2s infinite;
+
+}
+
+
+@keyframes pulseDays{
+
+    0%,100%{
+
+        transform:scale(1);
+
+    }
+
+
+    50%{
+
+        transform:scale(1.05);
+
+    }
+
+}
+
+
+/* Days left */
+
+.lgs-box b{
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:13px;
+
+    letter-spacing:2px;
+
+    opacity:.9;
+
+    text-transform:uppercase;
+
+}
+
+}
+
 
 /* Mobile */
 
@@ -12776,7 +13485,7 @@ line-height:1.6;
     }
 
     .unit-box{
-        max-width:300px;
+        max-width:400px;
         margin:0 auto;
     }
 
@@ -12879,16 +13588,43 @@ line-height:1.6;
    TENSES PAGE - MOBILE
 =========================== */
 
+@media (max-width:1100px){
+
+    .tenses-page{
+        grid-template-columns:repeat(5,1fr);
+        max-width:1000px;
+        gap:15px;
+        padding:5px;
+    }
+
+    .tense-card{
+        padding:10px 10px;
+    }
+
+    .tense-icon{
+        width:65px;
+        height:65px;
+        font-size:32px;
+        margin-bottom:15px;
+    }
+
+    .tense-card h3{
+        font-size:18px;
+    }
+
+}
+
 @media (max-width:768px){
 
     .tenses-page{
         grid-template-columns:repeat(2,1fr);
+        max-width:700px;
         gap:18px;
-        padding:15px;
+        padding:5px;
     }
 
     .tense-card{
-        padding:20px 15px;
+        padding:15px 15px;
     }
 
     .tense-icon{
@@ -12907,6 +13643,19 @@ line-height:1.6;
 /* Küçük Telefonlar */
 
 @media (max-width:480px){
+
+    .tenses-page{
+        grid-template-columns:1fr;
+    }
+
+    .tense-card{
+        max-width:380px;
+        margin:0 auto;
+    }
+
+}
+
+@media (max-width:380px){
 
     .tenses-page{
         grid-template-columns:1fr;
@@ -15721,17 +16470,7 @@ body{
 .day-card:nth-child(6){border-top-color:#eab308;}
 .day-card:nth-child(7){border-top-color:#6b7280;}
 
-/* Tablet */
 
-@media(max-width:1200px){
-
-    .week-grid{
-
-        grid-template-columns:repeat(7,1fr);
-
-    }
-
-}
 
 /* Mobil */
 
@@ -16091,7 +16830,139 @@ body{
     color:#1e3a8a;
 }
 
+@media(max-width:1024px){
+
+    .personal-stats-card{
+        width:90%;
+        padding:10px;
+        box-sizing:border-box;
+    }
+
+    .personal-stats-card h2{
+        font-size:20px;
+    }
+
+    .stats-grid{
+        display:flex;
+        overflow-x:auto;
+        gap:14px;
+
+        padding:5px 22px 10px;
+
+        scroll-snap-type:x mandatory;
+        -webkit-overflow-scrolling:touch;
+
+        scrollbar-width:none;
+    }
+
+    .stats-grid::-webkit-scrollbar{
+        display:none;
+    }
+
+    .stat-box{
+        flex:0 0 200px;
+
+        padding:15px 10px;
+        box-sizing:border-box;
+
+        scroll-snap-align:start;
+    }
+
+    .stat-box strong{
+        font-size:22px;
+    }
+
+}
+
 @media(max-width:768px){
+
+    .personal-stats-card{
+        width:92%;
+        padding:18px;
+        box-sizing:border-box;
+    }
+
+    .personal-stats-card h2{
+        font-size:20px;
+    }
+
+    .stats-grid{
+        display:flex;
+        overflow-x:auto;
+        gap:12px;
+
+        padding:5px 2px 10px;
+
+        scroll-snap-type:x mandatory;
+        -webkit-overflow-scrolling:touch;
+
+        scrollbar-width:none;
+    }
+
+    .stats-grid::-webkit-scrollbar{
+        display:none;
+    }
+
+    .stat-box{
+        flex:0 0 160px;
+
+        padding:15px 10px;
+        box-sizing:border-box;
+
+        scroll-snap-align:start;
+    }
+
+    .stat-box strong{
+        font-size:22px;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .personal-stats-card{
+        width:92%;
+        padding:18px;
+        box-sizing:border-box;
+    }
+
+    .personal-stats-card h2{
+        font-size:20px;
+    }
+
+    .stats-grid{
+        display:flex;
+        overflow-x:auto;
+        gap:12px;
+
+        padding:5px 2px 10px;
+
+        scroll-snap-type:x mandatory;
+        -webkit-overflow-scrolling:touch;
+
+        scrollbar-width:none;
+    }
+
+    .stats-grid::-webkit-scrollbar{
+        display:none;
+    }
+
+    .stat-box{
+        flex:0 0 170px;
+
+        padding:15px 10px;
+        box-sizing:border-box;
+
+        scroll-snap-align:start;
+    }
+
+    .stat-box strong{
+        font-size:22px;
+    }
+
+}
+
+@media(max-width:380px){
 
     .personal-stats-card{
         width:92%;
@@ -16136,10 +17007,10 @@ body{
 }
 
 .study-streak-card{
-    width:90%;
-    max-width:1100px;
-    margin:25px auto;
-    padding:25px;
+    width:100%;
+    max-width:600px;
+    margin:5px auto;
+    padding:5px;
     background:#fff;
     border-radius:18px;
     box-shadow:0 8px 24px rgba(15,23,42,.08);
@@ -16187,8 +17058,8 @@ body{
 @media(max-width:768px){
 
     .study-streak-card{
-        width:92%;
-        padding:18px;
+        width:75%;
+        padding:5px;
     }
 
     .study-streak-card h2{
@@ -16198,7 +17069,7 @@ body{
     .streak-grid{
         display:flex;
         overflow-x:auto;
-        gap:12px;
+        gap:10px;
         padding:5px 2px 10px;
 
         scroll-snap-type:x mandatory;
@@ -16211,8 +17082,78 @@ body{
     }
 
     .streak-box{
-        flex:0 0 145px;
-        padding:15px;
+        flex:0 0 240px;
+        padding:5px;
+        box-sizing:border-box;
+        scroll-snap-align:start;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .study-streak-card{
+        width:92%;
+        padding:5px;
+    }
+
+    .study-streak-card h2{
+        font-size:20px;
+    }
+
+    .streak-grid{
+        display:flex;
+        overflow-x:auto;
+        gap:10px;
+        padding:5px 2px 10px;
+
+        scroll-snap-type:x mandatory;
+        scrollbar-width:none;
+        -webkit-overflow-scrolling:touch;
+    }
+
+    .streak-grid::-webkit-scrollbar{
+        display:none;
+    }
+
+    .streak-box{
+        flex:0 0 150px;
+        padding:5px;
+        box-sizing:border-box;
+        scroll-snap-align:start;
+    }
+
+}
+
+@media(max-width:380px){
+
+    .study-streak-card{
+        width:92%;
+        padding:5px;
+    }
+
+    .study-streak-card h2{
+        font-size:20px;
+    }
+
+    .streak-grid{
+        display:flex;
+        overflow-x:auto;
+        gap:10px;
+        padding:5px 2px 10px;
+
+        scroll-snap-type:x mandatory;
+        scrollbar-width:none;
+        -webkit-overflow-scrolling:touch;
+    }
+
+    .streak-grid::-webkit-scrollbar{
+        display:none;
+    }
+
+    .streak-box{
+        flex:0 0 140px;
+        padding:5px;
         box-sizing:border-box;
         scroll-snap-align:start;
     }
@@ -16301,6 +17242,41 @@ body{
     color:#64748b;
 }
 
+@media(max-width:1024px){
+
+    .achievements-card{
+        width:90%;
+        padding:20px;
+    }
+
+    .achievements-card h2{
+        font-size:20px;
+    }
+
+    .achievements-grid{
+        display:flex;
+        overflow-x:auto;
+        gap:14px;
+
+        padding:5px 2px 10px;
+
+        scroll-snap-type:x mandatory;
+        -webkit-overflow-scrolling:touch;
+        scrollbar-width:none;
+    }
+
+    .achievements-grid::-webkit-scrollbar{
+        display:none;
+    }
+
+    .achievement{
+        flex:0 0 285px;
+        box-sizing:border-box;
+        scroll-snap-align:start;
+    }
+
+}
+
 @media(max-width:768px){
 
     .achievements-card{
@@ -16330,6 +17306,76 @@ body{
 
     .achievement{
         flex:0 0 327px;
+        box-sizing:border-box;
+        scroll-snap-align:start;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .achievements-card{
+        width:92%;
+        padding:18px;
+    }
+
+    .achievements-card h2{
+        font-size:20px;
+    }
+
+    .achievements-grid{
+        display:flex;
+        overflow-x:auto;
+        gap:12px;
+
+        padding:5px 2px 10px;
+
+        scroll-snap-type:x mandatory;
+        -webkit-overflow-scrolling:touch;
+        scrollbar-width:none;
+    }
+
+    .achievements-grid::-webkit-scrollbar{
+        display:none;
+    }
+
+    .achievement{
+        flex:0 0 352px;
+        box-sizing:border-box;
+        scroll-snap-align:start;
+    }
+
+}
+
+@media(max-width:380px){
+
+    .achievements-card{
+        width:92%;
+        padding:18px;
+    }
+
+    .achievements-card h2{
+        font-size:20px;
+    }
+
+    .achievements-grid{
+        display:flex;
+        overflow-x:auto;
+        gap:12px;
+
+        padding:5px 2px 10px;
+
+        scroll-snap-type:x mandatory;
+        -webkit-overflow-scrolling:touch;
+        scrollbar-width:none;
+    }
+
+    .achievements-grid::-webkit-scrollbar{
+        display:none;
+    }
+
+    .achievement{
+        flex:0 0 307px;
         box-sizing:border-box;
         scroll-snap-align:start;
     }
@@ -16558,15 +17604,15 @@ body{
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
 
     /* ==============================
        ANA BÖLÜM
     ============================== */
 
     .weekly-plan {
-        width: 100%;
-        margin: 18px 0 25px;
+        width: 40%;
+        margin: 18px 25 25px;
         padding: 0 14px;
         box-sizing: border-box;
     }
@@ -16814,6 +17860,263 @@ body{
 
 }
 
+@media (max-width: 768px) {
+
+    /* ==============================
+       ANA BÖLÜM
+    ============================== */
+
+    .weekly-plan {
+        width: 100%;
+        margin: 18px 25 25px;
+        padding: 0 14px;
+        box-sizing: border-box;
+    }
+
+
+    /* ==============================
+       BAŞLIK
+    ============================== */
+
+    .weekly-plan-header {
+        text-align: center;
+        padding: 0;
+        margin-bottom: 0px;
+    }
+
+    .weekly-plan-header h2 {
+        justify-content: center;
+        text-align: center;
+        margin: 0;
+    }
+
+    .weekly-plan-header p {
+        text-align: center;
+        margin: 5px 0 0;
+    }
+
+
+    /* ==============================
+       GÜN SEKMELEME
+    ============================== */
+
+    .mobile-week-tabs {
+    display: flex;
+
+    width: fit-content;
+    max-width: 100%;
+
+    gap: 8px;
+
+    overflow-x: auto;
+
+    padding: 0 0 8px;
+
+    margin: 0 auto;
+
+    scrollbar-width: none;
+
+    box-sizing: border-box;
+
+    justify-content: center;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+    .mobile-week-tabs::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    .week-tab {
+        flex: 0 0 auto;
+
+        border: none;
+
+        background: #f1f4f8;
+
+        color: #687386;
+
+        border-radius: 10px;
+
+        padding: 10px 10px;
+
+        font-size: 11px;
+
+        font-weight: 700;
+
+        cursor: pointer;
+
+        transition: 0.2s ease;
+    }
+
+    .week-tab.active {
+        background: #3478f6;
+        color: white;
+
+        box-shadow:
+            0 4px 10px rgba(52, 120, 246, 0.22);
+    }
+
+
+    /* ==============================
+       SADECE SEÇİLİ GÜN
+    ============================== */
+
+    .week-grid {
+    display: block;
+    width: 100%;
+    margin: 20px 0 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+    .week-grid .day-card {
+        display: none;
+    }
+
+    .week-grid .day-card.active-day {
+        display: block;
+
+        width: 100%;
+
+        margin: 0 auto;
+
+        padding: 0;
+
+        background: transparent;
+
+        border: none;
+
+        border-radius: 0;
+
+        box-shadow: none;
+
+        box-sizing: border-box;
+
+        text-align: center;
+    }
+
+
+    /* ==============================
+       GÜN BAŞLIĞI
+    ============================== */
+
+    .desktop-card-header {
+        width: 100%;
+
+        padding: 4px 0 10px;
+
+        margin: 0 0 4px;
+
+        box-sizing: border-box;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: center;
+
+        border-bottom: 2px solid var(--card-color);
+    }
+
+    .desktop-card-header h3 {
+        width: 100%;
+
+        margin: 0 0 8px;
+
+        padding: 0;
+
+        text-align: center;
+
+        font-size: 21px;
+
+        line-height: 1.2;
+
+        font-weight: 700;
+
+        color: #202938;
+    }
+
+    .desktop-card-header::after {
+        content: none;
+    }
+
+
+    /* ==============================
+       DERS LİSTESİ
+    ============================== */
+
+    .desktop-task-list {
+        width: 100%;
+
+        margin: 0;
+        padding: 0;
+
+        box-sizing: border-box;
+
+        text-align: center;
+    }
+
+
+    /* ==============================
+       DERSLER
+    ============================== */
+
+    .desktop-task {
+    width: 100%;
+
+    min-height: 40px;
+
+    padding: 5px 0;
+
+    margin: 0;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background: transparent;
+
+    border: none;
+
+    border-bottom: 1px solid #e9edf3;
+
+    border-radius: 0;
+
+    box-shadow: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #374151;
+}
+
+    .desktop-task:last-child {
+        border-bottom: none;
+    }
+
+
+    /* ==============================
+       EMOJİLER
+    ============================== */
+
+    .desktop-task::first-letter {
+        font-size: 16px;
+    }
+
+}
+
+
 /* ===============================
 🎮 XP & LEVEL SYSTEM
 ================================ */
@@ -16822,7 +18125,7 @@ body{
 
 
 width: 100%;
-max-width: 800px;
+max-width: 1100px;
 
 margin: 25px auto;
 
@@ -16963,6 +18266,49 @@ opacity: 0.75;
 /* ===============================
 MOBILE
 ================================ */
+
+@media (max-width: 1024px) {
+
+.xp-card {
+
+    width: 75%;
+
+    padding: 20px;
+
+    margin: 20px auto;
+
+}
+
+
+.xp-header h2 {
+
+    font-size: 24px;
+
+}
+
+
+.xp-number {
+
+    font-size: 18px;
+
+}
+
+
+.xp-bar {
+
+    height: 13px;
+
+}
+
+
+.xp-remaining {
+
+    font-size: 12px;
+
+}
+
+}
+
 
 @media (max-width: 768px) {
 
@@ -17847,20 +19193,155 @@ a {
 /* =========================================
    MOBILE
 ========================================= */
+@media (max-width: 2600px) {
+
+    .lexi-assistant {
+
+        right: 40px !important;
+        bottom: 520px !important;
+
+    }
+
+    .lexi-avatar {
+
+        width: 266px !important;
+        height: 282px !important;
+
+    }
+
+    .lexi-message {
+
+        display: none !important;
+
+    }
+
+    .lexi-status {
+
+        width: 28px !important;
+        height: 28px !important;
+
+        border-width: 2px !important;
+        top: 12px !important;
+        right: 58px !important;
+    }
+
+}
+
+@media (max-width: 2000px) {
+
+    .lexi-assistant {
+
+        right: 20px !important;
+        bottom: 5px !important;
+
+    }
+
+    .lexi-avatar {
+
+        width: 166px !important;
+        height: 182px !important;
+
+    }
+
+    .lexi-message {
+
+        display: none !important;
+
+    }
+
+    .lexi-status {
+
+        width: 18px !important;
+        height: 18px !important;
+
+        border-width: 2px !important;
+        top: 10px !important;
+        right: 36px !important;
+    }
+
+}
+
+@media (max-width: 1600px) {
+
+    .lexi-assistant {
+
+        right: 0px !important;
+        bottom: 5px !important;
+
+    }
+
+    .lexi-avatar {
+
+        width: 146px !important;
+        height: 162px !important;
+
+    }
+
+    .lexi-message {
+
+        display: none !important;
+
+    }
+
+    .lexi-status {
+
+        width: 17px !important;
+        height: 17px !important;
+
+        border-width: 2px !important;
+        top: 9px !important;
+        right: 31px !important;
+    }
+
+}
+
+@media (max-width: 1100px) {
+
+    .lexi-assistant {
+
+        right: 0px !important;
+        bottom: 5px !important;
+
+    }
+
+    .lexi-avatar {
+
+        width: 131px !important;
+        height: 147px !important;
+
+    }
+
+    .lexi-message {
+
+        display: none !important;
+
+    }
+
+    .lexi-status {
+
+        width: 15px !important;
+        height: 15px !important;
+
+        border-width: 2px !important;
+        top: 9px !important;
+        right: 28px !important;
+    }
+
+}
 
 @media (max-width: 768px) {
 
     .lexi-assistant {
 
-        right: 12px !important;
-        bottom: 12px !important;
+        right: 0px !important;
+        bottom: 5px !important;
 
     }
 
     .lexi-avatar {
 
-        width: 76px !important;
-        height: 92px !important;
+        width: 116px !important;
+        height: 132px !important;
 
     }
 
@@ -17872,31 +19353,26 @@ a {
 
     .lexi-status {
 
-        width: 7px !important;
-        height: 7px !important;
+        width: 13px !important;
+        height: 13px !important;
 
-        border-width: 1px !important;
+        border-width: 2px !important;
         top: 9px !important;
-        right: 17px !important;
+        right: 25px !important;
     }
 
 }
 
-/* =========================================
-   LEXI — TABLET
-   481px - 768px
-========================================= */
-
-@media (min-width: 481px) and (max-width: 768px) {
+@media (max-width: 480px) {
 
     .lexi-assistant {
-        right: 18px !important;
-        bottom: 18px !important;
+        right: -10px !important;
+        bottom: 5px !important;
     }
 
     .lexi-avatar {
-        width: 82px !important;
-        height: 98px !important;
+        width: 90% !important;
+        height: 106px !important;
     }
 
     .lexi-message {
@@ -17904,29 +19380,17 @@ a {
     }
 
     .lexi-status {
-        width: 8px !important;
-        height: 8px !important;
+        width: 11px !important;
+        height: 10px !important;
 
         border-width: 1px !important;
 
-        top: 9px !important;
-        right: 18px !important;
+        top: 6px !important;
+        right: 20px !important;
     }
 
 }
 
-/* =========================================
-   LEXI — DESKTOP SIZE
-========================================= */
-
-@media (min-width: 769px) {
-
-    .lexi-avatar img {
-        width: 190px !important;
-        height: auto !important;
-    }
-
-}
 
 /* =========================================
    TABLET - HOME PAGE
@@ -18008,10 +19472,26 @@ a {
 
 /* =========================================
    DAILY VOCABULARIES — TABLET
-   481px - 768px
+   481px - 768px - 1024px
 ========================================= */
+@media (max-width:1024px) {
 
-@media (min-width:481px) and (max-width:768px){
+    #dailyWords{
+        display: grid;
+
+    grid-template-columns: repeat(5, 170px);
+
+    gap: 10px;
+
+    justify-content: center;
+
+    margin-top: 25px;
+
+}
+
+}
+
+@media (max-width:768px) {
 
     #dailyWords{
         display:flex;
@@ -18039,3 +19519,26 @@ a {
 
 }
 
+/* =========================================
+   1024px RESPONSIVE UNITS
+========================================= */
+
+@media (max-width: 1100px) and (min-width: 769px) {
+
+    .units-container {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 24px !important;
+        width: calc(100% - 40px) !important;
+        max-width: 1000px !important;
+        margin: 0 auto !important;
+        box-sizing: border-box;
+    }
+
+    .unit-box {
+        width: 100% !important;
+        min-width: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+}

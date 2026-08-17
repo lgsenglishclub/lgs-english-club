@@ -19906,3 +19906,35 @@ a {
     font-size: 13px;
 }
 
+.question-text {
+    width: 100%;
+    box-sizing: border-box;
+
+    height: auto;
+    min-height: 0;
+
+    padding: 16px 20px;
+    margin: 20px 0;
+
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.6;
+
+    border-radius: 12px;
+}
+
+.dialogue-box p {
+    margin: 0 0 10px 0;
+    line-height: 1.6;
+}
+
+.dialogue-box p:last-child {
+    margin-bottom: 0;
+}
+
+.dialogue-box strong {
+    font-weight: 700;
+}
+
+
+

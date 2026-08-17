@@ -106,7 +106,7 @@ const unit1FriendshipTest1 = [
         id: "u1_f_test1_q1",
         unit: "Friendship",
         test: "Mini Deneme 1",
-        difficulty: "medium",
+        difficulty: "hard",
 
         image: "images/test1/q1.png",
 
@@ -114,19 +114,18 @@ const unit1FriendshipTest1 = [
             "According to the information above, which of the following is TRUE?",
 
         options: [
-            "Students can only take part in individual activities.",
-            "The activities give students opportunities to spend time together.",
-            "Students should bring their school books to the event.",
-            "The event is organized for students who do not like meeting others."
+            "Lily is honest but she doesn't enjoy spending time with her friends.",
+            "Lily keeps her friends' secrets and enjoys watching films with them.",
+            "Lily prefers outdoor activities to watching films.",
+            "Lily often shares her friends' secrets with other students."
         ],
 
         answer: 1,
-
     },
 
 
     // =====================================================
-    // QUESTION 2 — DIALOGUE
+    // QUESTION 2 — INVITATION
     // =====================================================
 
     {
@@ -136,53 +135,51 @@ const unit1FriendshipTest1 = [
         difficulty: "medium",
 
         dialogue: [
-            "Jason: Hi, Kevin. Are you free on Saturday afternoon?",
-            "Kevin: I think so. Why?",
-            "Jason: I'm having a small birthday party at my house. Would you like to come?",
-            "Kevin: I'd love to, but ______________________.",
-            "Jason: That's a pity. Maybe you can come to my next party."
+            "Mia: Are you free tomorrow afternoon, Daniel?",
+            "Daniel: Yes. Why?",
+            "Mia: A few of us are going to the new sports centre. Would you like to join us?",
+            "Daniel: I'd love to, but I promised my brother that I'd help him with his project.",
+            "Mia: That's okay. Maybe you can come with us next weekend."
         ],
 
         question:
-            "Which of the following completes the dialogue?",
+            "Why can't Daniel join Mia and her friends?",
 
         options: [
-            "I have already made plans for that day.",
-            "I really enjoy birthday parties.",
-            "I want to invite you to the cinema.",
-            "I always spend my weekends with my friends."
+            "He doesn't enjoy spending time with his friends.",
+            "He has promised to help a family member.",
+            "He has already planned an activity with Mia.",
+            "He doesn't like going to the sports centre."
         ],
 
-        answer: 0,
-
+        answer: 1,
     },
 
 
     // =====================================================
-    // QUESTION 3 — INFORMATION MATCHING
+    // QUESTION 3 — FRIENDSHIP PREFERENCES
     // =====================================================
 
     {
         id: "u1_f_test1_q3",
         unit: "Friendship",
         test: "Mini Deneme 1",
-        difficulty: "medium",
+        difficulty: "hard",
 
         passage:
-            "Mia always tells the truth and never shares her friends' secrets. Tom enjoys making people laugh and loves outdoor activities. Lucy likes helping her friends and sharing what she has with them. Jack is quiet and prefers spending his free time at home.",
+            "Alex loves trying exciting things with his friends. He doesn't like staying at home at weekends.\n\nBella prefers quiet activities. She usually reads books or watches films with a few close friends.\n\nChris enjoys meeting new people and doesn't mind crowded places.\n\nDaisy feels happier when she spends time with only a few close friends. She also loves being outdoors.",
 
         question:
-            "The Friendship Club wants a student who can make new members feel happy during outdoor activities. Who is the most suitable student?",
+            "Which activity is the most suitable for Daisy?",
 
         options: [
-            "Mia",
-            "Tom",
-            "Lucy",
-            "Jack"
+            "A large music festival",
+            "A cinema event with fifty students",
+            "A small picnic with three close friends",
+            "A crowded adventure camp"
         ],
 
-        answer: 1,
-
+        answer: 2,
     },
 
 
@@ -199,22 +196,21 @@ const unit1FriendshipTest1 = [
         image: "images/test1/q4.png",
 
         question:
-            "Emma is free only on Saturday afternoon. She doesn't enjoy indoor activities and wants to join an activity with fewer than ten students. Which activity should she choose?",
+            "Emma has two hours free on Saturday morning. She doesn't want to pay for an activity and prefers spending time outdoors with a small group of friends. Which activity is the most suitable for her?",
 
         options: [
             "Cycling",
-            "Bowling",
             "Hiking",
-            "Movie Night"
+            "Bowling",
+            "Movie Club"
         ],
 
         answer: 0,
-
     },
 
 
     // =====================================================
-    // QUESTION 5 — DIALOGUE
+    // QUESTION 5 — INVITATION
     // =====================================================
 
     {
@@ -224,27 +220,24 @@ const unit1FriendshipTest1 = [
         difficulty: "medium",
 
         dialogue: [
-            "Sophie: Hi, Emily. Are you free this Sunday?",
-            "Emily: Yes. Why?",
-            "Sophie: I'm organizing a picnic with some of our classmates. Would you like to join us?",
-            "Emily: Sure. I'd love to. Should I bring anything?",
-            "Sophie: Yes. We are going to share our food, so please bring something to eat.",
-            "Emily: No problem. What time are we meeting?",
-            "Sophie: At 11 a.m. near the school gate."
+            "Ryan: Hi, Jack. Would you like to come to the basketball match with us tomorrow?",
+            "Jack: Thanks for inviting me, but I can't.",
+            "Ryan: Why not?",
+            "Jack: I have to look after my little sister because my parents will be out.",
+            "Ryan: I see. That's a pity. Maybe you can join us next time."
         ],
 
         question:
-            "Which of the following is NOT mentioned in the dialogue?",
+            "Which of the following is TRUE according to the conversation?",
 
         options: [
-            "The activity they are going to do",
-            "The meeting time",
-            "The meeting place",
-            "The number of students joining the activity"
+            "Jack refuses the invitation because he dislikes basketball.",
+            "Jack has another plan with his friends.",
+            "Jack cannot join because he has a family responsibility.",
+            "Ryan doesn't want Jack to join the match."
         ],
 
-        answer: 3,
-
+        answer: 2,
     },
 
 
@@ -256,123 +249,74 @@ const unit1FriendshipTest1 = [
         id: "u1_f_test1_q6",
         unit: "Friendship",
         test: "Mini Deneme 1",
-        difficulty: "medium",
+        difficulty: "hard",
 
         image: "images/test1/q6.png",
 
-        post: {
-            title: "YOU ARE INVITED!",
-            date: "Sunday, May 10",
-            time: "2:00 - 5:00 p.m.",
-            place: "Green Café",
-
-            activities: [
-                "Playing games",
-                "Listening to music",
-                "Having birthday cake"
-            ],
-
-            note:
-                "Please call Emma by Friday if you can come."
-        },
-
-        comments: [
-            "Anna: I'd love to come, Emma. I'll call you tomorrow.",
-            "Ben: Thanks for inviting me. Unfortunately, I can't come because I have to visit my grandparents.",
-            "Lisa: Great! I'll be there on Sunday afternoon.",
-            "Tom: I'd love to join you, but I have an important exam on Monday."
-        ],
-
         question:
-            "Who cannot be at Emma's party according to the information?",
+            "Look at Emma's invitation and her friends' responses. Who is definitely going to attend the party?",
 
         options: [
-            "Anna",
-            "Ben",
-            "Lisa",
-            "Tom"
+            "Liam",
+            "Sophie",
+            "Noah",
+            "Olivia"
         ],
 
-        answer: 1,
-
+        answer: 2,
     },
 
 
     // =====================================================
-    // QUESTION 7 — INFORMATION MATCHING
+    // QUESTION 7 — FRIENDSHIP CLUB
     // =====================================================
 
     {
         id: "u1_f_test1_q7",
         unit: "Friendship",
         test: "Mini Deneme 1",
-        difficulty: "medium",
+        difficulty: "hard",
 
         passage:
-            "Sarah enjoys spending time outdoors, but she doesn't like crowded places. She prefers doing activities with a few close friends. David loves meeting lots of people and enjoys listening to music. Lisa doesn't like outdoor activities and prefers watching movies. Jack enjoys team sports and doesn't mind crowded places.",
+            "Mia likes meeting new people and joining exciting activities.\n\nLeo is quite calm. He enjoys reading books and watching films with a few close friends.\n\nNora always helps her friends when they need her. They can tell her their secrets because she never shares them with others.\n\nSam loves making jokes and making people laugh. He also enjoys outdoor activities.",
 
         question:
-            "Which activity is suitable for Sarah?",
+            "The Friendship Club needs a student who can welcome new members and organize exciting weekend activities. Who is the most suitable student?",
 
         options: [
-            "A small picnic in the forest",
-            "A music festival",
-            "A movie night at school",
-            "A basketball tournament"
+            "Mia",
+            "Leo",
+            "Nora",
+            "Sam"
         ],
 
         answer: 0,
-
     },
 
 
     // =====================================================
-    // QUESTION 8 — FRIENDSHIP CLUB WEEKEND
+    // QUESTION 8 — FRIENDSHIP DAY
     // =====================================================
 
     {
         id: "u1_f_test1_q8",
         unit: "Friendship",
         test: "Mini Deneme 1",
-        difficulty: "medium",
+        difficulty: "hard",
 
         image: "images/test1/q8.png",
 
-        post: {
-            title: "Friendship Club Weekend",
-            date: "Saturday",
-            time: "9:30 a.m. - 1:00 p.m.",
-            place: "School Garden and Nearby Park",
-
-            activities: [
-                "Having breakfast together",
-                "Cycling",
-                "Playing outdoor games",
-                "Having lunch together"
-            ],
-
-            note:
-                "Students will return to school after lunch."
-        },
-
-        comments: [
-            "Mia: I love cycling, so I'm going to join that activity.",
-            "Tom: I prefer team activities, so I'll play outdoor games.",
-            "Lisa: I hurt my leg recently. I'll stay in the park and take photos."
-        ],
-
         question:
-            "Which of the following is TRUE according to the information?",
+            "Look at the Friendship Day notice and the students' comments. Who can take part in the whole event without breaking any of the instructions?",
 
         options: [
-            "Lisa will join the cycling activity.",
-            "Tom prefers cycling to team activities.",
-            "The students will have breakfast before their activities.",
-            "The students will go home before having lunch."
+            "Kate",
+            "Ben",
+            "Lucy",
+            "Kate and Ben"
         ],
 
         answer: 2,
-
     },
 
 
@@ -387,25 +331,24 @@ const unit1FriendshipTest1 = [
         difficulty: "hard",
 
         passage:
-            "A Special Friendship\n\nLily and Kate met when they started secondary school. At first, they didn't talk much because they had different interests. Lily enjoyed reading books and spending quiet afternoons at home, while Kate loved outdoor activities and meeting new people.\n\nOne day, their teacher asked them to work together on a school project. They discovered that they both enjoyed taking photos and listening to music. While working on the project, they started spending more time together. They also learned that they could help each other in different ways. Lily was good at organizing their work, and Kate was good at communicating with other students.\n\nToday, they are close friends. They still have different interests, but they respect each other's preferences.",
+            "Maya and Olivia met at the beginning of the school year. They were quite different at first. Maya enjoyed reading and preferred quiet weekends, while Olivia loved outdoor activities and meeting new people.\n\nTheir teacher asked them to prepare a presentation together. During the project, they discovered that they both enjoyed taking photos and listening to music. Maya was good at organizing their work, while Olivia was good at speaking in front of the class.\n\nAfter finishing the project, they started spending more time together. They still have different interests, but they respect each other's choices and help each other when necessary.",
 
         question:
-            "Which of the following can we understand from the text?",
+            "Which of the following can be inferred from the text?",
 
         options: [
-            "Lily and Kate became friends because they had exactly the same interests.",
-            "Lily helped Kate communicate with other students.",
-            "Working together helped Lily and Kate discover things they both enjoyed.",
-            "Kate didn't want to work with Lily at the beginning of the project."
+            "Maya and Olivia became friends because they had exactly the same personality.",
+            "Their different interests prevented them from working successfully together.",
+            "Working together helped Maya and Olivia discover common interests.",
+            "Olivia did most of the work because Maya disliked the project."
         ],
 
         answer: 2,
-
     },
 
 
     // =====================================================
-    // QUESTION 10 — READING / INFERENCE
+    // QUESTION 10 — SAME READING
     // =====================================================
 
     {
@@ -415,20 +358,19 @@ const unit1FriendshipTest1 = [
         difficulty: "hard",
 
         passage:
-            "Friendship Club Weekend\n\nOur school Friendship Club is organizing a special weekend for its members. The students will meet at the school gate at 9:30 on Saturday morning. First, they will walk to the nearby park and have breakfast together. After breakfast, they will choose one of two activities: cycling or playing outdoor games.\n\nMia wants to go cycling because she loves riding a bike. Tom prefers outdoor games because he enjoys team activities. Lisa, however, doesn't want to join either activity. She has recently hurt her leg, so she plans to sit in the park, talk to her friends and take some photos.\n\nAt 1:00 p.m., all the students will have lunch together. After lunch, they will return to school. The club president says the aim of the event is not to win competitions but to spend enjoyable time together and strengthen friendships.",
+            "Maya and Olivia met at the beginning of the school year. They were quite different at first. Maya enjoyed reading and preferred quiet weekends, while Olivia loved outdoor activities and meeting new people.\n\nTheir teacher asked them to prepare a presentation together. During the project, they discovered that they both enjoyed taking photos and listening to music. Maya was good at organizing their work, while Olivia was good at speaking in front of the class.\n\nAfter finishing the project, they started spending more time together. They still have different interests, but they respect each other's choices and help each other when necessary.",
 
         question:
-            "Which of the following is NOT correct according to the text?",
+            "Which of the following is NOT mentioned in the text?",
 
         options: [
-            "The students will have breakfast before their activities.",
-            "Lisa will take part in one of the two activities.",
-            "Mia prefers cycling to playing outdoor games.",
-            "The students will have lunch together after their activities."
+            "Maya's favourite type of weekend",
+            "Olivia's personality",
+            "The reason they started working together",
+            "The activities they discovered they both enjoyed"
         ],
 
         answer: 1,
-
     }
 
 ];
@@ -493,16 +435,34 @@ function loadQuestion() {
 
     if (q.dialogue) {
 
-        extraContent += `
-            <div class="dialogue-box">
+    extraContent += `
+        <div class="dialogue-box">
 
-                ${q.dialogue.map(line => `
-                    <p>${line}</p>
-                `).join("")}
+            ${q.dialogue.map(line => {
 
-            </div>
-        `;
-    }
+                const parts = line.split(":");
+
+                if (parts.length > 1) {
+
+                    const speaker = parts.shift().trim();
+                    const text = parts.join(":").trim();
+
+                    return `
+                        <p>
+                            <strong>${speaker}:</strong>
+                            ${text}
+                        </p>
+                    `;
+
+                }
+
+                return `<p>${line}</p>`;
+
+            }).join("")}
+
+        </div>
+    `;
+}
 
 
     // =========================================

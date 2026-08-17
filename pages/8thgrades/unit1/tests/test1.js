@@ -99,7 +99,8 @@ async function addTestXP(percent) {
 const unit1FriendshipTest1 = [
 
     // =====================================================
-    // QUESTION 1 — FRIENDSHIP DAY
+    // QUESTION 1 — INVITATION CARD
+    // Skill: Multiple-condition reasoning
     // =====================================================
 
     {
@@ -111,45 +112,47 @@ const unit1FriendshipTest1 = [
         image: "images/test1/q1.png",
 
         question:
-            "According to the information above, which of the following is TRUE?",
+            "Look at the invitation card. Which of the following students can attend the whole event?",
 
         options: [
-            "Lily is honest but she doesn't enjoy spending time with her friends.",
-            "Lily keeps her friends' secrets and enjoys watching films with them.",
-            "Lily prefers outdoor activities to watching films.",
-            "Lily often shares her friends' secrets with other students."
+            "A student who has to leave at 3 p.m.",
+            "A student who dislikes outdoor activities.",
+            "A student who can stay from 1 p.m. to 5 p.m. and enjoys team games.",
+            "A student who cannot come to the park."
         ],
 
-        answer: 1,
+        answer: 2,
     },
 
 
     // =====================================================
-    // QUESTION 2 — INVITATION
+    // QUESTION 2 — TEXT MESSAGES
+    // Skill: Inference
     // =====================================================
 
     {
         id: "u1_f_test1_q2",
         unit: "Friendship",
         test: "Mini Deneme 1",
-        difficulty: "medium",
+        difficulty: "hard",
 
         dialogue: [
-            "Mia: Are you free tomorrow afternoon, Daniel?",
-            "Daniel: Yes. Why?",
-            "Mia: A few of us are going to the new sports centre. Would you like to join us?",
-            "Daniel: I'd love to, but I promised my brother that I'd help him with his project.",
-            "Mia: That's okay. Maybe you can come with us next weekend."
+            "Mia: Are you coming to the Friendship Club meeting after school?",
+            "Leo: I wanted to, but I have to finish a project with my partner.",
+            "Mia: Can't you finish it before the meeting?",
+            "Leo: We have already planned to meet at the library at four.",
+            "Mia: I see. Maybe you can join us next time.",
+            "Leo: Yes. Please tell me what you decide about the weekend activity."
         ],
 
         question:
-            "Why can't Daniel join Mia and her friends?",
+            "Which of the following can we understand from the conversation?",
 
         options: [
-            "He doesn't enjoy spending time with his friends.",
-            "He has promised to help a family member.",
-            "He has already planned an activity with Mia.",
-            "He doesn't like going to the sports centre."
+            "Leo doesn't want to join the Friendship Club anymore.",
+            "Leo has another responsibility at the same time as the meeting.",
+            "Leo has already joined the weekend activity.",
+            "Mia refuses to help Leo with his project."
         ],
 
         answer: 1,
@@ -157,7 +160,8 @@ const unit1FriendshipTest1 = [
 
 
     // =====================================================
-    // QUESTION 3 — FRIENDSHIP PREFERENCES
+    // QUESTION 3 — PREFERENCE TABLE
+    // Skill: Comparing information
     // =====================================================
 
     {
@@ -166,17 +170,16 @@ const unit1FriendshipTest1 = [
         test: "Mini Deneme 1",
         difficulty: "hard",
 
-        passage:
-            "Alex loves trying exciting things with his friends. He doesn't like staying at home at weekends.\n\nBella prefers quiet activities. She usually reads books or watches films with a few close friends.\n\nChris enjoys meeting new people and doesn't mind crowded places.\n\nDaisy feels happier when she spends time with only a few close friends. She also loves being outdoors.",
+        image: "images/test1/q3.png",
 
         question:
-            "Which activity is the most suitable for Daisy?",
+            "According to the table, which activity would be suitable for ALL the students who want to spend time together?",
 
         options: [
-            "A large music festival",
-            "A cinema event with fifty students",
-            "A small picnic with three close friends",
-            "A crowded adventure camp"
+            "A crowded music festival",
+            "A quiet movie night at home",
+            "A small picnic in the park",
+            "An indoor basketball tournament"
         ],
 
         answer: 2,
@@ -184,7 +187,8 @@ const unit1FriendshipTest1 = [
 
 
     // =====================================================
-    // QUESTION 4 — ACTIVITY SCHEDULE
+    // QUESTION 4 — ACTIVITY POSTER
+    // Skill: Evaluating conditions
     // =====================================================
 
     {
@@ -196,53 +200,56 @@ const unit1FriendshipTest1 = [
         image: "images/test1/q4.png",
 
         question:
-            "Emma has two hours free on Saturday morning. She doesn't want to pay for an activity and prefers spending time outdoors with a small group of friends. Which activity is the most suitable for her?",
+            "A group of friends wants to join an activity that is free, outdoors and suitable for a small group. Which activity meets ALL of their requirements?",
 
         options: [
-            "Cycling",
-            "Hiking",
-            "Bowling",
-            "Movie Club"
+            "Movie Club",
+            "Park Picnic",
+            "Bowling Night",
+            "School Concert"
         ],
 
-        answer: 0,
+        answer: 1,
     },
 
 
     // =====================================================
-    // QUESTION 5 — INVITATION
+    // QUESTION 5 — E-MAIL
+    // Skill: Understanding purpose
     // =====================================================
 
     {
         id: "u1_f_test1_q5",
         unit: "Friendship",
         test: "Mini Deneme 1",
-        difficulty: "medium",
+        difficulty: "hard",
 
-        dialogue: [
-            "Ryan: Hi, Jack. Would you like to come to the basketball match with us tomorrow?",
-            "Jack: Thanks for inviting me, but I can't.",
-            "Ryan: Why not?",
-            "Jack: I have to look after my little sister because my parents will be out.",
-            "Ryan: I see. That's a pity. Maybe you can join us next time."
-        ],
+        passage:
+            "Hi Emma,\n\n" +
+            "I'm having a small birthday party at my house this Saturday. " +
+            "I'm inviting only a few close friends because I don't really like crowded parties. " +
+            "We're going to watch a movie, play some board games and have pizza together. " +
+            "I hope you can come!\n\n" +
+            "See you,\n" +
+            "Sophie",
 
         question:
-            "Which of the following is TRUE according to the conversation?",
+            "Why does Sophie mention that she is inviting only a few friends?",
 
         options: [
-            "Jack refuses the invitation because he dislikes basketball.",
-            "Jack has another plan with his friends.",
-            "Jack cannot join because he has a family responsibility.",
-            "Ryan doesn't want Jack to join the match."
+            "She doesn't know many students at school.",
+            "She prefers spending time with a small group.",
+            "She wants to save money on food.",
+            "She doesn't want to celebrate her birthday."
         ],
 
-        answer: 2,
+        answer: 1,
     },
 
 
     // =====================================================
-    // QUESTION 6 — BIRTHDAY INVITATION
+    // QUESTION 6 — WEEKEND SCHEDULE
+    // Skill: Matching information
     // =====================================================
 
     {
@@ -254,21 +261,22 @@ const unit1FriendshipTest1 = [
         image: "images/test1/q6.png",
 
         question:
-            "Look at Emma's invitation and her friends' responses. Who is definitely going to attend the party?",
+            "Tom is free on Saturday afternoon. He wants to do an outdoor activity with his friends, but he doesn't want to spend any money. Which activity can he join?",
 
         options: [
-            "Liam",
-            "Sophie",
-            "Noah",
-            "Olivia"
+            "Watching a movie",
+            "Playing basketball in the park",
+            "Going bowling",
+            "Joining the school concert"
         ],
 
-        answer: 2,
+        answer: 1,
     },
 
 
     // =====================================================
-    // QUESTION 7 — FRIENDSHIP CLUB
+    // QUESTION 7 — DIALOGUE
+    // Skill: Communication function
     // =====================================================
 
     {
@@ -277,25 +285,32 @@ const unit1FriendshipTest1 = [
         test: "Mini Deneme 1",
         difficulty: "hard",
 
-        passage:
-            "Mia likes meeting new people and joining exciting activities.\n\nLeo is quite calm. He enjoys reading books and watching films with a few close friends.\n\nNora always helps her friends when they need her. They can tell her their secrets because she never shares them with others.\n\nSam loves making jokes and making people laugh. He also enjoys outdoor activities.",
-
-        question:
-            "The Friendship Club needs a student who can welcome new members and organize exciting weekend activities. Who is the most suitable student?",
-
-        options: [
-            "Mia",
-            "Leo",
-            "Nora",
-            "Sam"
+        dialogue: [
+            "Sarah: Would you like to come to the cinema with us tonight?",
+            "Jack: Thanks, but I can't.",
+            "Sarah: Is everything okay?",
+            "Jack: Yes. My little brother isn't feeling well, so I need to stay at home with him.",
+            "Sarah: I understand. I hope he feels better soon.",
+            "Jack: Thanks. Have fun!"
         ],
 
-        answer: 0,
+        question:
+            "What is the main reason for Jack's refusal?",
+
+        options: [
+            "He doesn't like watching films.",
+            "He has to take care of a family member.",
+            "He has already watched the film.",
+            "He wants to spend the evening with his friends."
+        ],
+
+        answer: 1,
     },
 
 
     // =====================================================
-    // QUESTION 8 — FRIENDSHIP DAY
+    // QUESTION 8 — FRIENDSHIP CLUB NOTICE
+    // Skill: Choosing according to several conditions
     // =====================================================
 
     {
@@ -307,21 +322,22 @@ const unit1FriendshipTest1 = [
         image: "images/test1/q8.png",
 
         question:
-            "Look at the Friendship Day notice and the students' comments. Who can take part in the whole event without breaking any of the instructions?",
+            "A student wants to join an activity where they can meet new people, work in a group and spend time outdoors. Which activity is the best choice?",
 
         options: [
-            "Kate",
-            "Ben",
-            "Lucy",
-            "Kate and Ben"
+            "Reading Circle",
+            "Outdoor Team Challenge",
+            "Movie Afternoon",
+            "Board Game Club"
         ],
 
-        answer: 2,
+        answer: 1,
     },
 
 
     // =====================================================
     // QUESTION 9 — READING
+    // Skill: Inference
     // =====================================================
 
     {
@@ -331,24 +347,31 @@ const unit1FriendshipTest1 = [
         difficulty: "hard",
 
         passage:
-            "Maya and Olivia met at the beginning of the school year. They were quite different at first. Maya enjoyed reading and preferred quiet weekends, while Olivia loved outdoor activities and meeting new people.\n\nTheir teacher asked them to prepare a presentation together. During the project, they discovered that they both enjoyed taking photos and listening to music. Maya was good at organizing their work, while Olivia was good at speaking in front of the class.\n\nAfter finishing the project, they started spending more time together. They still have different interests, but they respect each other's choices and help each other when necessary.",
+            "When Maya and Olivia first met, they didn't have many common interests. " +
+            "Maya enjoyed reading and drawing, while Olivia loved outdoor activities and meeting new people. " +
+            "Their teacher asked them to prepare a project together. " +
+            "During the project, Maya helped Olivia organize their ideas, and Olivia encouraged Maya to present them in front of the class. " +
+            "They discovered that they both enjoyed taking photos. " +
+            "After the project, they started spending more time together. " +
+            "Although they still have different interests, they respect each other's choices and support each other.",
 
         question:
             "Which of the following can be inferred from the text?",
 
         options: [
-            "Maya and Olivia became friends because they had exactly the same personality.",
-            "Their different interests prevented them from working successfully together.",
-            "Working together helped Maya and Olivia discover common interests.",
-            "Olivia did most of the work because Maya disliked the project."
+            "Maya and Olivia became friends because they had exactly the same hobbies.",
+            "Working together helped Maya and Olivia discover something they both enjoyed.",
+            "Olivia stopped meeting new people after becoming friends with Maya.",
+            "Maya refused to help Olivia during the project."
         ],
 
-        answer: 2,
+        answer: 1,
     },
 
 
     // =====================================================
-    // QUESTION 10 — SAME READING
+    // QUESTION 10 — EVENT NOTICE
+    // Skill: Detailed interpretation
     // =====================================================
 
     {
@@ -357,20 +380,19 @@ const unit1FriendshipTest1 = [
         test: "Mini Deneme 1",
         difficulty: "hard",
 
-        passage:
-            "Maya and Olivia met at the beginning of the school year. They were quite different at first. Maya enjoyed reading and preferred quiet weekends, while Olivia loved outdoor activities and meeting new people.\n\nTheir teacher asked them to prepare a presentation together. During the project, they discovered that they both enjoyed taking photos and listening to music. Maya was good at organizing their work, while Olivia was good at speaking in front of the class.\n\nAfter finishing the project, they started spending more time together. They still have different interests, but they respect each other's choices and help each other when necessary.",
+        image: "images/test1/q10.png",
 
         question:
-            "Which of the following is NOT mentioned in the text?",
+            "Which of the following is NOT suitable for a student who wants to follow ALL the rules of the event?",
 
         options: [
-            "Maya's favourite type of weekend",
-            "Olivia's personality",
-            "The reason they started working together",
-            "The activities they discovered they both enjoyed"
+            "Joining the outdoor activity with a friend",
+            "Bringing food from home",
+            "Arriving before the event starts",
+            "Bringing more than the allowed number of friends"
         ],
 
-        answer: 1,
+        answer: 3,
     }
 
 ];

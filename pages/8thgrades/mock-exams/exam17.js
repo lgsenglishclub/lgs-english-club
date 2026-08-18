@@ -138,133 +138,153 @@ async function addTestXP(percent) {
 const questions = [
 
 {
-image:"images/exam1/1.png",
+image:"images/exam17/1.png",
+
+question:"Read the conversation. Which statement best describes the relationship between the two students?",
 
 options:[
-"Watching TV is the most preferred activity.",
-"Reading books is more popular than doing sports.",
-"Playing computer games is the most preferred activity.",
-"Doing sports is less popular than reading books."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/2.png",
-
-options:[
-"Watching TV is the least preferred activity.",
-"Playing computer games is the most preferred activity.",
-"Reading books is more popular than playing computer games.",
-"Doing sports is more popular than reading books."
+"They disagree about what makes a good friend.",
+"They are planning to solve a problem together.",
+"They are meeting for the first time at school.",
+"They are trying to choose a present for their teacher."
 ],
 
 answer:1
 },
 
 {
-image:"images/exam1/3.png",
+image:"images/exam17/2.png",
+
+question:"The students have different free-time preferences. Which activity would be suitable for both Olivia and Ethan?",
 
 options:[
-"Going camping is the most popular activity.",
-"Riding a bike is less popular than playing tennis.",
-"Doing sport is more popular than going camping.",
-"Playing tennis is the most preferred activity."
+"Joining a crowded school party",
+"Playing a competitive team game",
+"Spending a quiet afternoon at a café",
+"Going to a concert with a large group"
+],
+
+answer:2
+},
+
+{
+image:"images/exam17/3.png",
+
+question:"A chef wants to prepare the meal in the shortest possible time. Which step can be done while the vegetables are cooking?",
+
+options:[
+"Wash and chop the vegetables.",
+"Put the finished meal on the table.",
+"Prepare the sauce for the vegetables.",
+"Serve the food to the guests."
+],
+
+answer:2
+},
+
+{
+image:"images/exam17/4.png",
+
+question:"Read the phone messages. What problem do the students need to solve before their meeting?",
+
+options:[
+"They don't know where to meet.",
+"They have forgotten the project deadline.",
+"They cannot agree on who will join the group.",
+"They have lost the materials for the project."
 ],
 
 answer:0
 },
 
 {
-image:"images/exam1/4.png",
+image:"images/exam17/5.png",
+
+question:"The chart shows the number of students who prefer different ways of spending their weekends. Which statement is supported by the chart?",
 
 options:[
-"Skiing is the most preferred sport.",
-"Ice-skating is more popular than diving.",
-"Diving is the most preferred activity.",
-"Bungee jumping is less popular than skiing."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/5.png",
-
-options:[
-"Girls prefer camping more than boys.",
-"Boys enjoy playing tennis more than girls.",
-"Boys' favourite activity is going camping.",
-"Girls like riding a bike the most."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/6.png",
-
-options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/7.png",
-
-options:[
-"Internet usage was highest in 2024.",
-"Internet usage decreased every year.",
-"The lowest internet usage was in 2023.",
-"Internet usage in 2026 was higher than in 2024."
+"Outdoor activities are more popular than staying at home.",
+"Going shopping is the least popular choice.",
+"Exactly the same number of students prefer sports and movies.",
+"More students prefer reading than meeting their friends."
 ],
 
 answer:0
 },
 
 {
-image:"images/exam1/8.png",
+image:"images/exam17/6.png",
+
+question:"A website announces four adventure activities. Which activity would be the BEST choice for a beginner who wants a safe but exciting experience?",
 
 options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
+"Advanced rock climbing on a difficult mountain route",
+"Beginner kayaking with an instructor on a calm lake",
+"Solo mountain climbing without a guide",
+"Night hiking on an unfamiliar forest trail"
 ],
 
-answer:2
+answer:1
 },
 
 {
-image:"images/exam1/9.png",
+image:"images/exam17/7.png",
+
+question:"A tourist has only one day in the city. He wants to see a historical place, eat traditional food and buy a local souvenir. Which plan meets ALL his needs?",
 
 options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
+"Visit the shopping mall, eat at an international restaurant and go to the cinema.",
+"Visit the old town, have lunch at a traditional restaurant and explore the local market.",
+"Spend the morning at the beach, eat fast food and visit an amusement park.",
+"Visit a modern art centre, have dinner at a hotel and go shopping at a chain store."
 ],
 
-answer:2
+answer:1
 },
 
 {
-image:"images/exam1/10.png",
+image:"images/exam17/8.png",
+
+question:"The chore schedule has a mistake. Which change would make the schedule possible?",
 
 options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
+"Move the laundry task from Monday to Wednesday.",
+"Give the same task to two family members.",
+"Remove the kitchen cleaning from the schedule.",
+"Ask the youngest family member to do every chore."
 ],
 
-answer:2
+answer:0
+},
+
+{
+image:"images/exam17/9.png",
+
+question:"Read the text. What made the students change their original idea for the science project?",
+
+options:[
+"They discovered that their first idea would not work as they expected.",
+"They wanted to finish the project without doing any experiments.",
+"They received a completely different assignment from their teacher.",
+"They decided that the original topic was too easy for them."
+],
+
+answer:0
+},
+
+{
+image:"images/exam17/10.png",
+
+question:"Read the text. Which conclusion can be drawn from the students' experience?",
+
+options:[
+"Being successful sometimes requires changing your approach.",
+"Working quickly is always more important than checking information.",
+"Group projects are easier when students have exactly the same ideas.",
+"Making a mistake means that the whole project should be cancelled."
+],
+
+answer:0
 }
 
 ];
@@ -310,7 +330,25 @@ function showQuestion(){
     progress + "%";
 
 
-    // SORU METNİ
+     // SORU METNİ
+
+  const questionText =
+    document.getElementById("questionText");
+
+questionText.textContent =
+    q.question || "";
+
+    // RESİM VARSA GÖSTER
+    if(q.image && q.image !== ""){
+
+        document.getElementById("questionImage").style.display = "block";
+        document.getElementById("questionImage").src = q.image;
+
+    }else{
+
+        document.getElementById("questionImage").style.display = "none";
+
+    }
   
 
     // RESİM VARSA GÖSTER

@@ -138,133 +138,153 @@ async function addTestXP(percent) {
 const questions = [
 
 {
-image:"images/exam1/1.png",
+image:"images/exam19/1.png",
+
+question:"Read the messages. Which of the following is the BEST response to Emily's situation?",
 
 options:[
-"Watching TV is the most preferred activity.",
-"Reading books is more popular than doing sports.",
-"Playing computer games is the most preferred activity.",
-"Doing sports is less popular than reading books."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/2.png",
-
-options:[
-"Watching TV is the least preferred activity.",
-"Playing computer games is the most preferred activity.",
-"Reading books is more popular than playing computer games.",
-"Doing sports is more popular than reading books."
+"You should keep your problems to yourself because friends may misunderstand you.",
+"You should talk to someone you trust because a good friend listens and supports you.",
+"You should stop spending time with your friends if they have different interests.",
+"You should tell everyone about your problem so that they can give you advice."
 ],
 
 answer:1
 },
 
 {
-image:"images/exam1/3.png",
+image:"images/exam19/2.png",
+
+question:"Four students are planning their Sunday. They all want to spend time together, but they have different responsibilities. Which plan is possible for ALL of them?",
 
 options:[
-"Going camping is the most popular activity.",
-"Riding a bike is less popular than playing tennis.",
-"Doing sport is more popular than going camping.",
-"Playing tennis is the most preferred activity."
+"Meet at 10:00, go cycling until 13:00 and have lunch together.",
+"Meet at 12:30, have lunch and leave before 14:00.",
+"Meet at 14:00, go to the cinema and stay until 18:00.",
+"Meet at 16:00, go shopping and return home after 20:00."
+],
+
+answer:1
+},
+
+{
+image:"images/exam19/3.png",
+
+question:"A cooking club is preparing a meal for six students. The recipe requires two tomatoes, one onion, three peppers and some cheese. Which shopping list is NOT suitable for the recipe?",
+
+options:[
+"2 tomatoes, 1 onion, 3 peppers and 200 g cheese",
+"4 tomatoes, 2 onions, 5 peppers and 300 g cheese",
+"2 tomatoes, 1 onion, 2 peppers and 200 g cheese",
+"3 tomatoes, 1 onion, 4 peppers and 250 g cheese"
+],
+
+answer:2
+},
+
+{
+image:"images/exam19/4.png",
+
+question:"Read the phone conversation. What can we understand about the students' plan?",
+
+options:[
+"They have completely cancelled their activity.",
+"They have changed one part of their original plan.",
+"They are waiting for their teacher to choose an activity.",
+"They have decided to do the activity on another day."
+],
+
+answer:1
+},
+
+{
+image:"images/exam19/5.png",
+
+question:"The graph shows the results of a survey about students' favourite ways of communicating with their friends. Which statement is NOT supported by the graph?",
+
+options:[
+"Sending messages is more popular than making video calls.",
+"Some students prefer communicating face to face.",
+"Making phone calls is the least preferred method.",
+"The number of students choosing video calls is higher than the number choosing messages."
+],
+
+answer:3
+},
+
+{
+image:"images/exam19/6.png",
+
+question:"A group of friends wants to join an adventure camp. They have the following requirements: the activity must be suitable for beginners, finish before 5 p.m. and not require an overnight stay. Which activity meets ALL the requirements?",
+
+options:[
+"09:00–18:00 Advanced Mountain Trekking",
+"10:00–14:00 Beginner Kayaking",
+"15:00–20:00 Forest Survival Camp",
+"08:00–16:00 Experienced Climbers' Tour"
+],
+
+answer:1
+},
+
+{
+image:"images/exam19/7.png",
+
+question:"A family is visiting a town for one day. They want to learn about its history, eat local food and avoid crowded places. Which option is the MOST suitable?",
+
+options:[
+"Visit the historical district in the morning, eat at a small local restaurant and explore a quiet village market.",
+"Spend the morning at a popular shopping centre, have lunch at a fast-food restaurant and visit the city stadium.",
+"Go to the busiest beach, eat at an international restaurant and visit a large amusement park.",
+"Visit a modern art centre, eat at a hotel restaurant and spend the afternoon in a crowded mall."
 ],
 
 answer:0
 },
 
 {
-image:"images/exam1/4.png",
+image:"images/exam19/8.png",
+
+question:"The members of a family have made a chore plan. However, one task has been assigned to someone who will not be at home that day. Which change solves the problem without giving one person two extra chores?",
 
 options:[
-"Skiing is the most preferred sport.",
-"Ice-skating is more popular than diving.",
-"Diving is the most preferred activity.",
-"Bungee jumping is less popular than skiing."
+"Move the task to another family member who is already responsible for three chores.",
+"Cancel the task although it is necessary before the guests arrive.",
+"Give the task to a family member who has only one chore that day.",
+"Leave the task until next week."
 ],
 
 answer:2
 },
 
 {
-image:"images/exam1/5.png",
+image:"images/exam19/9.png",
+
+question:"Read the text. Which problem did the students solve while preparing their science project?",
 
 options:[
-"Girls prefer camping more than boys.",
-"Boys enjoy playing tennis more than girls.",
-"Boys' favourite activity is going camping.",
-"Girls like riding a bike the most."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/6.png",
-
-options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/7.png",
-
-options:[
-"Internet usage was highest in 2024.",
-"Internet usage decreased every year.",
-"The lowest internet usage was in 2023.",
-"Internet usage in 2026 was higher than in 2024."
+"They did not have enough information to explain how their experiment worked.",
+"They could not decide which students should attend the presentation.",
+"They wanted to change the subject because science was too difficult.",
+"They had to cancel the project because they could not find a teacher."
 ],
 
 answer:0
 },
 
 {
-image:"images/exam1/8.png",
+image:"images/exam19/10.png",
+
+question:"Read the text. What is the main message of the text?",
 
 options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
+"Trying a different method can help people overcome an unexpected difficulty.",
+"People should always follow their first plan even when it does not work.",
+"Working alone is the best way to complete a difficult task.",
+"Unexpected problems usually make group activities impossible."
 ],
 
-answer:2
-},
-
-{
-image:"images/exam1/9.png",
-
-options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/10.png",
-
-options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
-],
-
-answer:2
+answer:0
 }
 
 ];
@@ -310,7 +330,25 @@ function showQuestion(){
     progress + "%";
 
 
-    // SORU METNİ
+     // SORU METNİ
+
+  const questionText =
+    document.getElementById("questionText");
+
+questionText.textContent =
+    q.question || "";
+
+    // RESİM VARSA GÖSTER
+    if(q.image && q.image !== ""){
+
+        document.getElementById("questionImage").style.display = "block";
+        document.getElementById("questionImage").src = q.image;
+
+    }else{
+
+        document.getElementById("questionImage").style.display = "none";
+
+    }
   
 
     // RESİM VARSA GÖSTER

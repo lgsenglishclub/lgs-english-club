@@ -138,130 +138,150 @@ async function addTestXP(percent) {
 const questions = [
 
 {
-image:"images/exam1/1.png",
+image:"images/exam11/1.png",
+
+question:"The students are planning a surprise party for their teacher. According to their messages, who has NOT completed his/her task yet?",
 
 options:[
-"Watching TV is the most preferred activity.",
-"Reading books is more popular than doing sports.",
-"Playing computer games is the most preferred activity.",
-"Doing sports is less popular than reading books."
+"Julia",
+"David",
+"Mike",
+"Sarah"
 ],
 
 answer:2
 },
 
 {
-image:"images/exam1/2.png",
+image:"images/exam11/2.png",
+
+question:"The table shows four students' free-time preferences. Which activity can all four students enjoy together?",
 
 options:[
-"Watching TV is the least preferred activity.",
-"Playing computer games is the most preferred activity.",
-"Reading books is more popular than playing computer games.",
-"Doing sports is more popular than reading books."
+"Going cycling",
+"Watching a movie",
+"Playing tennis",
+"Going shopping"
 ],
 
 answer:1
 },
 
 {
-image:"images/exam1/3.png",
+image:"images/exam11/3.png",
+
+question:"Mert is preparing a vegetable pizza. He has already prepared the dough and chopped the vegetables. According to the recipe, what should he do before putting the pizza in the oven?",
 
 options:[
-"Going camping is the most popular activity.",
-"Riding a bike is less popular than playing tennis.",
-"Doing sport is more popular than going camping.",
-"Playing tennis is the most preferred activity."
+"Spread the tomato sauce over the dough.",
+"Take the pizza out of the oven.",
+"Serve it with a glass of juice.",
+"Let the pizza cool for ten minutes."
 ],
 
 answer:0
 },
 
 {
-image:"images/exam1/4.png",
+image:"images/exam11/4.png",
+
+question:"You call your friend to invite her to a concert, but she isn't at home. Her sister answers the phone. Which dialogue is appropriate?",
 
 options:[
-"Skiing is the most preferred sport.",
-"Ice-skating is more popular than diving.",
-"Diving is the most preferred activity.",
-"Bungee jumping is less popular than skiing."
+"You should ask her to buy the tickets for me.",
+"Could you tell her that I called and ask her to call me back?",
+"I don't want to leave a message, so I'll wait here.",
+"Can you tell me why she isn't at home?"
 ],
 
-answer:2
+answer:1
 },
 
 {
-image:"images/exam1/5.png",
+image:"images/exam11/5.png",
+
+question:"Look at the graph about teenagers' Internet activities. Which statement is supported by the data?",
 
 options:[
-"Girls prefer camping more than boys.",
-"Boys enjoy playing tennis more than girls.",
-"Boys' favourite activity is going camping.",
-"Girls like riding a bike the most."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/6.png",
-
-options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/7.png",
-
-options:[
-"Internet usage was highest in 2024.",
-"Internet usage decreased every year.",
-"The lowest internet usage was in 2023.",
-"Internet usage in 2026 was higher than in 2024."
+"Teenagers use the Internet more for communication than for entertainment.",
+"Doing homework is the most common Internet activity.",
+"Online gaming is more popular than watching videos.",
+"Shopping online is the least preferred activity."
 ],
 
 answer:0
 },
 
 {
-image:"images/exam1/8.png",
+image:"images/exam11/6.png",
+
+question:"Read the situation. Deniz wants to join a rafting trip with his classmates. He can swim well, but he has never tried rafting before. Which advice is the most suitable for him?",
 
 options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
+"He should ignore the guide because he already knows how to swim.",
+"He should learn the safety rules and follow the guide's instructions.",
+"He should choose the fastest boat to make the trip more exciting.",
+"He should go without safety equipment because he is a good swimmer."
+],
+
+answer:1
+},
+
+{
+image:"images/exam11/7.png",
+
+question:"A tourist wants to buy a traditional souvenir, visit a historical building and have dinner at a local restaurant. Which part of the city should she visit?",
+
+options:[
+"The modern shopping district",
+"The seaside entertainment area",
+"The old town",
+"The business centre"
 ],
 
 answer:2
 },
 
 {
-image:"images/exam1/9.png",
+image:"images/exam11/8.png",
+
+question:"The family wants to change their weekly chore plan because one member has too many responsibilities. Which change would be the fairest?",
 
 options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
+"Give all the chores to the parents.",
+"Cancel the chores that nobody likes.",
+"Move one of the tasks to a family member who has fewer responsibilities.",
+"Let the person with the most chores choose the tasks for everyone."
 ],
 
 answer:2
 },
 
 {
-image:"images/exam1/10.png",
+image:"images/exam11/9.png",
+
+question:"Read the text. What was the main reason for developing the invention?",
 
 options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
+"To make an existing product more expensive",
+"To solve a problem people experience in their daily lives",
+"To replace all traditional scientific methods",
+"To provide entertainment for young people"
+],
+
+answer:1
+},
+
+{
+image:"images/exam11/10.png",
+
+question:"Read the conversation between two students. What can we understand about Emma?",
+
+options:[
+"She prefers having many friends rather than a close friend.",
+"She thinks friends should always have the same hobbies.",
+"She believes trust is an important part of a friendship.",
+"She avoids sharing her problems with people she knows."
 ],
 
 answer:2
@@ -310,7 +330,25 @@ function showQuestion(){
     progress + "%";
 
 
-    // SORU METNİ
+     // SORU METNİ
+
+  const questionText =
+    document.getElementById("questionText");
+
+questionText.textContent =
+    q.question || "";
+
+    // RESİM VARSA GÖSTER
+    if(q.image && q.image !== ""){
+
+        document.getElementById("questionImage").style.display = "block";
+        document.getElementById("questionImage").src = q.image;
+
+    }else{
+
+        document.getElementById("questionImage").style.display = "none";
+
+    }
   
 
     // RESİM VARSA GÖSTER

@@ -138,137 +138,156 @@ async function addTestXP(percent) {
 const questions = [
 
 {
-image:"images/exam1/1.png",
+image:"images/exam9/1.png",
+
+question:"Which student has a friend whose qualities match the information in the note?",
 
 options:[
-"Watching TV is the most preferred activity.",
-"Reading books is more popular than doing sports.",
-"Playing computer games is the most preferred activity.",
-"Doing sports is less popular than reading books."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/2.png",
-
-options:[
-"Watching TV is the least preferred activity.",
-"Playing computer games is the most preferred activity.",
-"Reading books is more popular than playing computer games.",
-"Doing sports is more popular than reading books."
+"Emma: My best friend is cheerful, but she never tells me the truth.",
+"Jason: My best friend is honest, reliable and always supports me.",
+"Lucy: My best friend doesn't like helping people, but she is very popular.",
+"Mark: My best friend and I argue about almost everything."
 ],
 
 answer:1
 },
 
 {
-image:"images/exam1/3.png",
+image:"images/exam9/2.png",
+
+question:"Look at the weekend activity cards. Which student has a plan that includes both an outdoor activity and spending time with friends?",
 
 options:[
-"Going camping is the most popular activity.",
-"Riding a bike is less popular than playing tennis.",
-"Doing sport is more popular than going camping.",
-"Playing tennis is the most preferred activity."
+"Alex",
+"Linda",
+"Michael",
+"Sophie"
+],
+
+answer:2
+},
+
+{
+image:"images/exam9/3.png",
+
+question:"Sarah wants to make the dish in the recipe. She has completed the first three steps. What should she do immediately before serving it?",
+
+options:[
+"Add the vegetables to the pan.",
+"Mix the ingredients with the sauce.",
+"Put the dish in the oven for ten minutes.",
+"Wash and chop the vegetables."
+],
+
+answer:2
+},
+
+{
+image:"images/exam9/4.png",
+
+question:"Why does Jack call his friend?",
+
+options:[
+"To apologize for missing an appointment",
+"To invite him to a birthday party",
+"To ask him about a homework assignment",
+"To change the time of their meeting"
+],
+
+answer:3
+},
+
+{
+image:"images/exam9/5.png",
+
+question:"Four teenagers use the Internet for different purposes. Which activity is the most popular among them according to the chart?",
+
+options:[
+"Doing research for school",
+"Watching videos",
+"Communicating with friends",
+"Playing online games"
+],
+
+answer:2
+},
+
+{
+image:"images/exam9/6.png",
+
+question:"Ece wants to try an adventure activity, but she has never done it before. Which action should she take FIRST?",
+
+options:[
+"Choose the most challenging route.",
+"Buy expensive equipment without getting advice.",
+"Learn the rules and safety precautions from an instructor.",
+"Start the activity alone to gain experience."
+],
+
+answer:2
+},
+
+{
+image:"images/exam9/7.png",
+
+question:"Which destination would be the best choice for a tourist who wants to visit historical places and taste traditional food?",
+
+options:[
+"Sun Beach – famous for its water sports and modern hotels",
+"Green Camp – popular for hiking and camping",
+"Old City – famous for its castle, museums and local dishes",
+"Funland – known for amusement parks and shopping centres"
+],
+
+answer:2
+},
+
+{
+image:"images/exam9/8.png",
+
+question:"According to the chore schedule, which statement is correct?",
+
+options:[
+"All family members have exactly the same responsibilities.",
+"Only the parents are responsible for cleaning the house.",
+"One family member is responsible for both washing the dishes and feeding the pet.",
+"The children do all the household chores at the weekend."
+],
+
+answer:2
+},
+
+{
+image:"images/exam9/9.png",
+
+question:"What is the main idea of the text?",
+
+options:[
+"A young scientist develops a practical invention to solve an everyday problem.",
+"Scientists usually work alone when they develop new technologies.",
+"Most scientific inventions are created only for entertainment.",
+"Young people are more interested in technology than scientific research."
 ],
 
 answer:0
 },
 
 {
-image:"images/exam1/4.png",
+image:"images/exam9/10.png",
+
+question:"According to the text, what can people do to reduce the effects of a natural disaster?",
 
 options:[
-"Skiing is the most preferred sport.",
-"Ice-skating is more popular than diving.",
-"Diving is the most preferred activity.",
-"Bungee jumping is less popular than skiing."
+"They can prevent all natural disasters by following safety rules.",
+"They can prepare an emergency plan and learn what to do beforehand.",
+"They can leave their homes whenever the weather becomes cloudy.",
+"They can avoid learning about natural disasters because they are unpredictable."
 ],
 
-answer:2
-},
-
-{
-image:"images/exam1/5.png",
-
-options:[
-"Girls prefer camping more than boys.",
-"Boys enjoy playing tennis more than girls.",
-"Boys' favourite activity is going camping.",
-"Girls like riding a bike the most."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/6.png",
-
-options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/7.png",
-
-options:[
-"Internet usage was highest in 2024.",
-"Internet usage decreased every year.",
-"The lowest internet usage was in 2023.",
-"Internet usage in 2026 was higher than in 2024."
-],
-
-answer:0
-},
-
-{
-image:"images/exam1/8.png",
-
-options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/9.png",
-
-options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/10.png",
-
-options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
-],
-
-answer:2
+answer:1
 }
 
 ];
-
 
 let questionStatus = [];
 
@@ -310,7 +329,25 @@ function showQuestion(){
     progress + "%";
 
 
-    // SORU METNİ
+     // SORU METNİ
+
+  const questionText =
+    document.getElementById("questionText");
+
+questionText.textContent =
+    q.question || "";
+
+    // RESİM VARSA GÖSTER
+    if(q.image && q.image !== ""){
+
+        document.getElementById("questionImage").style.display = "block";
+        document.getElementById("questionImage").src = q.image;
+
+    }else{
+
+        document.getElementById("questionImage").style.display = "none";
+
+    }
   
 
     // RESİM VARSA GÖSTER

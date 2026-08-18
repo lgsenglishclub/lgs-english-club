@@ -138,133 +138,153 @@ async function addTestXP(percent) {
 const questions = [
 
 {
-image:"images/exam1/1.png",
+image:"images/exam14/1.png",
+
+question:"Read the short messages. Who has a problem with keeping a promise?",
 
 options:[
-"Watching TV is the most preferred activity.",
-"Reading books is more popular than doing sports.",
-"Playing computer games is the most preferred activity.",
-"Doing sports is less popular than reading books."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/2.png",
-
-options:[
-"Watching TV is the least preferred activity.",
-"Playing computer games is the most preferred activity.",
-"Reading books is more popular than playing computer games.",
-"Doing sports is more popular than reading books."
+"Lucas",
+"Emma",
+"Oliver",
+"Sophia"
 ],
 
 answer:1
 },
 
 {
-image:"images/exam1/3.png",
+image:"images/exam14/2.png",
+
+question:"According to the timetable, which activity does Mia have enough time to attend after school?",
 
 options:[
-"Going camping is the most popular activity.",
-"Riding a bike is less popular than playing tennis.",
-"Doing sport is more popular than going camping.",
-"Playing tennis is the most preferred activity."
+"The drama club",
+"The tennis practice",
+"The science club",
+"The music rehearsal"
+],
+
+answer:2
+},
+
+{
+image:"images/exam14/3.png",
+
+question:"Look at the shopping note. Which ingredient does Kevin need to buy?",
+
+options:[
+"Tomatoes",
+"Flour",
+"Olives",
+"Garlic"
 ],
 
 answer:0
 },
 
 {
-image:"images/exam1/4.png",
+image:"images/exam14/4.png",
+
+question:"Read the phone conversation. Why can't Jason join the meeting at the planned time?",
 
 options:[
-"Skiing is the most preferred sport.",
-"Ice-skating is more popular than diving.",
-"Diving is the most preferred activity.",
-"Bungee jumping is less popular than skiing."
+"He has to finish a school project.",
+"He has forgotten about the meeting.",
+"He has to help his brother at home.",
+"He is going to visit his grandparents."
 ],
 
 answer:2
 },
 
 {
-image:"images/exam1/5.png",
+image:"images/exam14/5.png",
+
+question:"According to the graph, which statement is TRUE about the students' internet habits?",
 
 options:[
-"Girls prefer camping more than boys.",
-"Boys enjoy playing tennis more than girls.",
-"Boys' favourite activity is going camping.",
-"Girls like riding a bike the most."
+"Watching videos is less popular than playing online games.",
+"Searching for information is the most common activity.",
+"More students use the internet for shopping than for studying.",
+"Listening to music is the least preferred activity."
 ],
 
-answer:2
+answer:1
 },
 
 {
-image:"images/exam1/6.png",
+image:"images/exam14/6.png",
+
+question:"Four teenagers want to join an adventure camp. Which teenager meets ALL the requirements?",
 
 options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
+"Adam: 13 years old, good at swimming, no sleeping bag.",
+"Linda: 14 years old, has a sleeping bag and comfortable shoes.",
+"Mark: 15 years old, afraid of heights, has all the equipment.",
+"Nina: 16 years old, has equipment but cannot stay overnight."
 ],
 
-answer:2
+answer:1
 },
 
 {
-image:"images/exam1/7.png",
+image:"images/exam14/7.png",
+
+question:"Read the holiday information. Which tourist would be MOST interested in this tour?",
 
 options:[
-"Internet usage was highest in 2024.",
-"Internet usage decreased every year.",
-"The lowest internet usage was in 2023.",
-"Internet usage in 2026 was higher than in 2024."
+"A tourist who wants to spend the whole holiday at a luxury hotel.",
+"A tourist who enjoys discovering local culture and traditional food.",
+"A tourist who prefers shopping in large modern shopping centres.",
+"A tourist who wants to spend most of the day swimming in a pool."
+],
+
+answer:1
+},
+
+{
+image:"images/exam14/8.png",
+
+question:"The family members have different chores. Which person has TWO chores to do before dinner?",
+
+options:[
+"Jack",
+"Mary",
+"Tom",
+"Lisa"
+],
+
+answer:3
+},
+
+{
+image:"images/exam14/9.png",
+
+question:"Read the text. What is the main purpose of the writer's trip?",
+
+options:[
+"To learn about a city's historical places and local culture.",
+"To spend a quiet holiday without meeting other people.",
+"To take part in an international sports competition.",
+"To visit modern shopping centres with friends."
 ],
 
 answer:0
 },
 
 {
-image:"images/exam1/8.png",
+image:"images/exam14/10.png",
+
+question:"Read the text. Which of the following can we understand about the students?",
 
 options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
+"They preferred using the first idea without discussing it.",
+"They completed the task by sharing different responsibilities.",
+"They avoided asking for help when they had difficulties.",
+"They decided to stop working when their first plan failed."
 ],
 
-answer:2
-},
-
-{
-image:"images/exam1/9.png",
-
-options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/10.png",
-
-options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
-],
-
-answer:2
+answer:1
 }
 
 ];
@@ -310,8 +330,25 @@ function showQuestion(){
     progress + "%";
 
 
-    // SORU METNİ
-  
+     // SORU METNİ
+
+  const questionText =
+    document.getElementById("questionText");
+
+questionText.textContent =
+    q.question || "";
+
+    // RESİM VARSA GÖSTER
+    if(q.image && q.image !== ""){
+
+        document.getElementById("questionImage").style.display = "block";
+        document.getElementById("questionImage").src = q.image;
+
+    }else{
+
+        document.getElementById("questionImage").style.display = "none";
+
+    }
 
     // RESİM VARSA GÖSTER
     if(q.image && q.image !== ""){

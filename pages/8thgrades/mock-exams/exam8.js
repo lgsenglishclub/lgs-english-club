@@ -138,130 +138,150 @@ async function addTestXP(percent) {
 const questions = [
 
 {
-image:"images/exam1/1.png",
+image:"images/exam8/1.png",
+
+question:"According to the school club announcement, which student would be the most suitable for the Science Club?",
 
 options:[
-"Watching TV is the most preferred activity.",
-"Reading books is more popular than doing sports.",
-"Playing computer games is the most preferred activity.",
-"Doing sports is less popular than reading books."
+"A student who enjoys designing simple experiments and finding out how things work.",
+"A student who prefers spending time outdoors and taking photographs.",
+"A student who likes preparing meals and trying new recipes.",
+"A student who enjoys making travel plans for the summer."
 ],
 
-answer:2
+answer:0
 },
 
 {
-image:"images/exam1/2.png",
+image:"images/exam8/2.png",
+
+question:"Four students are planning activities for Saturday. They have different preferences. Which activity can all four students enjoy together?",
 
 options:[
-"Watching TV is the least preferred activity.",
-"Playing computer games is the most preferred activity.",
-"Reading books is more popular than playing computer games.",
-"Doing sports is more popular than reading books."
+"Going to a crowded music festival",
+"Visiting a quiet science museum",
+"Playing an online game at home",
+"Going shopping at a busy mall"
 ],
 
 answer:1
 },
 
 {
-image:"images/exam1/3.png",
+image:"images/exam8/3.png",
+
+question:"Mert is talking to his friend about a school project. He has collected enough information, but he doesn't know how to organize it. What should his friend say?",
 
 options:[
-"Going camping is the most popular activity.",
-"Riding a bike is less popular than playing tennis.",
-"Doing sport is more popular than going camping.",
-"Playing tennis is the most preferred activity."
+"You should give up the project and start a new one.",
+"Why don't you classify the information under different headings?",
+"You should delete the information you don't like.",
+"You don't need to organize the information before presenting it."
+],
+
+answer:1
+},
+
+{
+image:"images/exam8/4.png",
+
+question:"Read the steps below. Which option shows the correct order for preparing the meal?",
+
+options:[
+"Serve the meal → chop the vegetables → heat the pan → add the ingredients",
+"Chop the vegetables → heat the pan → add the ingredients → serve the meal",
+"Heat the pan → serve the meal → chop the vegetables → add the ingredients",
+"Add the ingredients → chop the vegetables → serve the meal → heat the pan"
+],
+
+answer:1
+},
+
+{
+image:"images/exam8/5.png",
+
+question:"A website gives the following advice to teenagers. Which of the following is NOT recommended?",
+
+options:[
+"Use strong passwords for your online accounts.",
+"Check whether information comes from a reliable source.",
+"Share your personal information with people you meet online.",
+"Think carefully before posting something on social media."
+],
+
+answer:2
+},
+
+{
+image:"images/exam8/6.png",
+
+question:"A student wants to try an adventure activity for the first time. He is afraid of heights but enjoys being in nature. Which activity would be the most appropriate choice?",
+
+options:[
+"Paragliding from a high mountain",
+"Rock climbing on a very high cliff",
+"Mountain biking on a forest trail",
+"Bungee jumping from a bridge"
+],
+
+answer:2
+},
+
+{
+image:"images/exam8/7.png",
+
+question:"Look at the travel information. Which destination is the best choice for a person who wants to see historical buildings and stay in a quiet town?",
+
+options:[
+"A busy coastal city famous for its nightlife",
+"A small town with an old castle and traditional houses",
+"A modern city known for shopping centres",
+"A popular beach resort with crowded hotels"
+],
+
+answer:1
+},
+
+{
+image:"images/exam8/8.png",
+
+question:"Look at the family's chore chart. Which of the following can we say about the family members?",
+
+options:[
+"Everyone in the family shares the housework.",
+"Only the parents are responsible for the chores.",
+"Tom does more chores than all the other family members.",
+"Emily never helps with the housework at weekends."
 ],
 
 answer:0
 },
 
 {
-image:"images/exam1/4.png",
+image:"images/exam8/9.png",
+
+question:"What is the main purpose of the text?",
 
 options:[
-"Skiing is the most preferred sport.",
-"Ice-skating is more popular than diving.",
-"Diving is the most preferred activity.",
-"Bungee jumping is less popular than skiing."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/5.png",
-
-options:[
-"Girls prefer camping more than boys.",
-"Boys enjoy playing tennis more than girls.",
-"Boys' favourite activity is going camping.",
-"Girls like riding a bike the most."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/6.png",
-
-options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/7.png",
-
-options:[
-"Internet usage was highest in 2024.",
-"Internet usage decreased every year.",
-"The lowest internet usage was in 2023.",
-"Internet usage in 2026 was higher than in 2024."
+"To explain how a simple scientific invention was developed and why it is useful.",
+"To describe the most popular inventions used by teenagers today.",
+"To compare scientists from different countries.",
+"To explain why modern technology should not be used at schools."
 ],
 
 answer:0
 },
 
 {
-image:"images/exam1/8.png",
+image:"images/exam8/10.png",
+
+question:"Which conclusion can be drawn from the text about the natural event?",
 
 options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/9.png",
-
-options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/10.png",
-
-options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
+"People could completely prevent the event from happening.",
+"The event affected only people living in large cities.",
+"Being prepared helped people respond to the event more safely.",
+"People had no information about the event before it happened."
 ],
 
 answer:2
@@ -310,7 +330,25 @@ function showQuestion(){
     progress + "%";
 
 
-    // SORU METNİ
+     // SORU METNİ
+
+  const questionText =
+    document.getElementById("questionText");
+
+questionText.textContent =
+    q.question || "";
+
+    // RESİM VARSA GÖSTER
+    if(q.image && q.image !== ""){
+
+        document.getElementById("questionImage").style.display = "block";
+        document.getElementById("questionImage").src = q.image;
+
+    }else{
+
+        document.getElementById("questionImage").style.display = "none";
+
+    }
   
 
     // RESİM VARSA GÖSTER

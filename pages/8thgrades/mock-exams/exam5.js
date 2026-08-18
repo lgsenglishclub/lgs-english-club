@@ -140,63 +140,73 @@ const questions = [
 {
 image:"images/exam5/1.png",
 
-options:[
-"Emma is responsible for doing the laundry.",
-"Her father takes out the garbage.",
-"Her mother washes the dishes and vacuums the floor.",
-"Her brother is responsible for setting the table."
-],
-
-answer:0
-},
-
-{
-image:"images/exam5/2.png",
+question:"Which of the following is TRUE according to Emily's profile?",
 
 options:[
-"She prefers fried chicken with rice.",
-"She wants grilled chicken with vegetables.",
-"She would like boiled chicken with salad.",
-"She wants roasted chicken with potatoes."
+"Emily prefers friends who never disagree with her.",
+"Emily thinks being honest is one of the most important qualities of a friend.",
+"Emily doesn't like spending time with her friends.",
+"Emily believes friends should have exactly the same hobbies."
 ],
 
 answer:1
 },
 
 {
-image:"images/exam5/3.png",
+image:"images/exam5/2.png",
+
+question:"Which of the following is CORRECT according to the activity schedule?",
 
 options:[
-"Why don't you send text messages?",
-"Can I leave a message for your brother?",
-"How do you keep in touch with your friends?",
-"How often do you check your e-mails?"
+"Sarah is going to meet her friends on Friday evening.",
+"Sarah spends Sunday morning playing computer games.",
+"Sarah does an outdoor activity on Saturday afternoon.",
+"Sarah never spends her free time with her family."
 ],
 
 answer:2
 },
 
 {
-image:"images/exam5/4.png",
+image:"images/exam5/3.png",
+
+question:"Which of the following completes the dialogue?",
 
 options:[
-"A burglary",
-"A natural disaster",
-"A forest fire",
-"A traffic accident"
+"I prefer reading books to watching TV.",
+"I can't stand reading books.",
+"I never watch TV at home.",
+"I don't have any free time."
 ],
 
-answer:3
+answer:0
+},
+
+{
+image:"images/exam5/4.png",
+
+question:"Which of the following completes the phone conversation?",
+
+options:[
+"Can I speak to Jake, please?",
+"Would you like to leave a message?",
+"Sure, I'll ask him to call you back.",
+"Who is calling, please?"
+],
+
+answer:2
 },
 
 {
 image:"images/exam5/5.png",
 
+question:"Which of the following is TRUE according to the Internet usage chart?",
+
 options:[
-"Why did you choose Germany?",
-"Have you ever travelled abroad?",
-"Where did you stay during your trip?",
-"How long did you stay there?"
+"Teenagers mainly use the Internet for doing homework.",
+"Watching videos is more popular than using social media.",
+"Online shopping is the least common activity.",
+"Playing online games is more popular than communicating with friends."
 ],
 
 answer:1
@@ -205,66 +215,76 @@ answer:1
 {
 image:"images/exam5/6.png",
 
-options:[
-"Only ten percent of teenagers chat online.",
-"Less than half of the teenagers use social networking sites.",
-"Most teenagers prefer using social networking sites.",
-"More than half of the teenagers play online games."
-],
-
-answer:2
-},
-
-{
-image:"images/exam5/7.png",
+question:"Which of the following is the best advice for someone who wants to go camping for the first time?",
 
 options:[
-"You should always wear the necessary safety equipment.",
-"You don't need any equipment for this activity.",
-"You can do extreme sports without any preparation.",
-"You should choose the most dangerous activity."
+"You should check the weather and prepare the necessary equipment.",
+"You should go alone without telling anyone about your plans.",
+"You don't need to take enough food or water with you.",
+"You should ignore the camping rules and explore the area alone."
 ],
 
 answer:0
 },
 
 {
-image:"images/exam5/8.png",
+image:"images/exam5/7.png",
+
+question:"Which of the following is CORRECT according to the travel information?",
 
 options:[
-"She spent her holiday at home.",
-"She didn't enjoy any outdoor activities.",
-"She only travelled to another city for shopping.",
-"She preferred visiting adventurous places during her holiday."
-],
-
-answer:3
-},
-
-{
-image:"images/exam5/9.png",
-
-options:[
-"A pair of diving fins",
-"A climbing rope",
-"A pair of boxing gloves",
-"A tennis racket"
+"Jack is planning a relaxing holiday at a beach resort.",
+"Jack will visit historical places during his trip.",
+"Jack is going to travel abroad with his classmates.",
+"Jack plans to spend his whole holiday at the hotel."
 ],
 
 answer:1
 },
 
 {
-image:"images/exam5/10.png",
+image:"images/exam5/8.png",
+
+question:"Which of the following is TRUE according to the chores chart?",
 
 options:[
-"Where did the scientist work?",
-"Which invention changed the world most?",
-"What about modern scientific studies?",
-"What did the scientist discover in the past?"
+"Nobody helps with the housework at the weekend.",
+"Tom is responsible for cleaning his room and taking out the rubbish.",
+"Tom's mother does all the chores in the house.",
+"Everyone in the family has exactly the same responsibilities."
+],
+
+answer:1
+},
+
+{
+image:"images/exam5/9.png",
+
+question:"Which of the following is TRUE according to the text?",
+
+options:[
+"Sarah believes that true friends should always agree with each other.",
+"Sarah prefers having many friends rather than a few close friends.",
+"Sarah thinks honesty and trust are essential in a friendship.",
+"Sarah never talks to her friends about her problems."
 ],
 
 answer:2
+},
+
+{
+image:"images/exam5/10.png",
+
+question:"What does Lucas prefer doing at the weekend according to the text?",
+
+options:[
+"Staying at home and playing computer games.",
+"Spending time outdoors with his friends.",
+"Watching television with his family.",
+"Going shopping with his parents."
+],
+
+answer:1
 }
 
 ];
@@ -310,7 +330,25 @@ function showQuestion(){
     progress + "%";
 
 
-    // SORU METNİ
+     // SORU METNİ
+
+  const questionText =
+    document.getElementById("questionText");
+
+questionText.textContent =
+    q.question || "";
+
+    // RESİM VARSA GÖSTER
+    if(q.image && q.image !== ""){
+
+        document.getElementById("questionImage").style.display = "block";
+        document.getElementById("questionImage").src = q.image;
+
+    }else{
+
+        document.getElementById("questionImage").style.display = "none";
+
+    }
   
 
     // RESİM VARSA GÖSTER

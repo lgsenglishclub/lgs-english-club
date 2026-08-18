@@ -138,133 +138,153 @@ async function addTestXP(percent) {
 const questions = [
 
 {
-image:"images/exam1/1.png",
+image:"images/exam18/1.png",
+
+question:"Read the students' comments. Which student would be the BEST person to help Mia with her problem?",
 
 options:[
-"Watching TV is the most preferred activity.",
-"Reading books is more popular than doing sports.",
-"Playing computer games is the most preferred activity.",
-"Doing sports is less popular than reading books."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/2.png",
-
-options:[
-"Watching TV is the least preferred activity.",
-"Playing computer games is the most preferred activity.",
-"Reading books is more popular than playing computer games.",
-"Doing sports is more popular than reading books."
+"Emily, who always tells funny stories but rarely listens to her friends.",
+"Jack, who is honest and usually supports his friends when they have problems.",
+"Lucas, who prefers spending time alone and doesn't like giving advice.",
+"Sophie, who thinks friends should have exactly the same interests."
 ],
 
 answer:1
 },
 
 {
-image:"images/exam1/3.png",
+image:"images/exam18/2.png",
+
+question:"Look at the daily schedules. Emma has only two free hours after school. She wants to do an outdoor activity and still have enough time to finish her homework. Which plan is suitable for her?",
 
 options:[
-"Going camping is the most popular activity.",
-"Riding a bike is less popular than playing tennis.",
-"Doing sport is more popular than going camping.",
-"Playing tennis is the most preferred activity."
+"Go cycling from 16:00 to 18:00 and do homework after dinner.",
+"Meet friends at 15:30, go shopping until 18:30 and study at night.",
+"Play computer games from 16:00 to 18:00 and leave her homework for the next morning.",
+"Attend the school club from 17:00 to 19:00 and start her homework at 19:30."
 ],
 
 answer:0
 },
 
 {
-image:"images/exam1/4.png",
+image:"images/exam18/3.png",
+
+question:"Look at the menu and the order card. Which meal can the customer order according to ALL of her preferences?",
 
 options:[
-"Skiing is the most preferred sport.",
-"Ice-skating is more popular than diving.",
-"Diving is the most preferred activity.",
-"Bungee jumping is less popular than skiing."
+"Chicken soup and a cheese sandwich",
+"Vegetable soup and grilled vegetables",
+"Tomato soup and a chicken burger",
+"Mushroom soup and a cheese pizza"
+],
+
+answer:1
+},
+
+{
+image:"images/exam18/4.png",
+
+question:"Listen to the information in the voice message. Which piece of information does Daniel need to find out?",
+
+options:[
+"The exact number of students joining the trip.",
+"The reason why the school cancelled the trip.",
+"The place where the students will meet.",
+"The name of the teacher organizing the activity."
 ],
 
 answer:2
 },
 
 {
-image:"images/exam1/5.png",
+image:"images/exam18/5.png",
+
+question:"The graph shows how 100 students use the Internet in their free time. Which conclusion is supported by the data?",
 
 options:[
-"Girls prefer camping more than boys.",
-"Boys enjoy playing tennis more than girls.",
-"Boys' favourite activity is going camping.",
-"Girls like riding a bike the most."
+"Students use the Internet mainly for educational purposes.",
+"Watching videos and listening to music are more common than online shopping.",
+"The number of students playing online games is twice the number using social media.",
+"Online shopping is more popular than all the other activities."
 ],
 
-answer:2
+answer:1
 },
 
 {
-image:"images/exam1/6.png",
+image:"images/exam18/6.png",
+
+question:"A student wants to join an adventure trip. She is 15 years old, has never tried rafting before, and does not want to stay overnight. Which activity is the MOST suitable for her?",
 
 options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
+"A two-day advanced rafting and camping trip.",
+"A beginner rafting tour lasting three hours.",
+"An overnight mountain climbing activity for experienced hikers.",
+"A difficult canyoning tour requiring previous experience."
 ],
 
-answer:2
+answer:1
 },
 
 {
-image:"images/exam1/7.png",
+image:"images/exam18/7.png",
+
+question:"A tourist has the following plan: He wants to visit a historical place in the morning, try traditional food at lunch and buy handmade souvenirs before returning to his hotel at 6 p.m. Which plan fits his wishes best?",
 
 options:[
-"Internet usage was highest in 2024.",
-"Internet usage decreased every year.",
-"The lowest internet usage was in 2023.",
-"Internet usage in 2026 was higher than in 2024."
+"09:00 museum visit → 12:30 local restaurant → 15:00 traditional market",
+"10:00 shopping mall → 13:00 fast-food restaurant → 15:30 beach",
+"09:30 amusement park → 12:00 hotel lunch → 14:00 shopping mall",
+"11:00 beach visit → 13:30 international restaurant → 16:00 cinema"
 ],
 
 answer:0
 },
 
 {
-image:"images/exam1/8.png",
+image:"images/exam18/8.png",
+
+question:"The family members have to finish their chores before their guests arrive. Which change would make the schedule possible?",
 
 options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
+"Let Anna wash the dishes while she is still preparing the dinner.",
+"Move the garden work to tomorrow because it is not necessary today.",
+"Ask Tom to do the same cleaning task twice instead of helping with another task.",
+"Cancel all the chores and prepare only the dining table."
 ],
 
-answer:2
+answer:1
 },
 
 {
-image:"images/exam1/9.png",
+image:"images/exam18/9.png",
+
+question:"Read the text. Why did the scientists develop the new system?",
 
 options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
+"To help people use natural resources more efficiently.",
+"To make traditional machines work without electricity.",
+"To replace all human workers in scientific laboratories.",
+"To make scientific experiments more expensive and complex."
 ],
 
-answer:2
+answer:0
 },
 
 {
-image:"images/exam1/10.png",
+image:"images/exam18/10.png",
+
+question:"Read the text. What can we understand about the campers from their experience?",
 
 options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
+"They continued with their original plan even though it was unsafe.",
+"They understood that cooperation was important when an unexpected problem occurred.",
+"They preferred exploring the area alone instead of staying with the group.",
+"They cancelled the activity because none of them had any previous experience."
 ],
 
-answer:2
+answer:1
 }
 
 ];
@@ -310,7 +330,25 @@ function showQuestion(){
     progress + "%";
 
 
-    // SORU METNİ
+     // SORU METNİ
+
+  const questionText =
+    document.getElementById("questionText");
+
+questionText.textContent =
+    q.question || "";
+
+    // RESİM VARSA GÖSTER
+    if(q.image && q.image !== ""){
+
+        document.getElementById("questionImage").style.display = "block";
+        document.getElementById("questionImage").src = q.image;
+
+    }else{
+
+        document.getElementById("questionImage").style.display = "none";
+
+    }
   
 
     // RESİM VARSA GÖSTER

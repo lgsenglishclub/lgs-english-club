@@ -138,133 +138,153 @@ async function addTestXP(percent) {
 const questions = [
 
 {
-image:"images/exam1/1.png",
+image:"images/exam10/1.png",
+
+question:"Read the messages. Which statement explains why Alice cannot join the activity?",
 
 options:[
-"Watching TV is the most preferred activity.",
-"Reading books is more popular than doing sports.",
-"Playing computer games is the most preferred activity.",
-"Doing sports is less popular than reading books."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/2.png",
-
-options:[
-"Watching TV is the least preferred activity.",
-"Playing computer games is the most preferred activity.",
-"Reading books is more popular than playing computer games.",
-"Doing sports is more popular than reading books."
+"She doesn't enjoy spending time with her friends.",
+"She has already made another plan for that day.",
+"She thinks the activity will be too expensive.",
+"She doesn't know where the activity will take place."
 ],
 
 answer:1
 },
 
 {
-image:"images/exam1/3.png",
+image:"images/exam10/2.png",
+
+question:"The students want to choose one activity for their class trip. Considering everyone's preferences, which activity is the best choice?",
 
 options:[
-"Going camping is the most popular activity.",
-"Riding a bike is less popular than playing tennis.",
-"Doing sport is more popular than going camping.",
-"Playing tennis is the most preferred activity."
+"A cooking workshop where students prepare different dishes",
+"A crowded football match in a large stadium",
+"A quiet visit to a historical museum",
+"An extreme climbing activity in the mountains"
 ],
 
 answer:0
 },
 
 {
-image:"images/exam1/4.png",
+image:"images/exam10/3.png",
+
+question:"A chef is preparing a meal for a school event. What should he do after adding the chopped vegetables to the pan?",
 
 options:[
-"Skiing is the most preferred sport.",
-"Ice-skating is more popular than diving.",
-"Diving is the most preferred activity.",
-"Bungee jumping is less popular than skiing."
+"Serve the meal immediately.",
+"Add the spices and cook the mixture for a few minutes.",
+"Put the uncooked ingredients back into the refrigerator.",
+"Wash the vegetables again and start the recipe."
 ],
 
-answer:2
+answer:1
 },
 
 {
-image:"images/exam1/5.png",
+image:"images/exam10/4.png",
+
+question:"You call your friend, but her brother answers the phone. You want to ask your friend to call you back. What should you say?",
 
 options:[
-"Girls prefer camping more than boys.",
-"Boys enjoy playing tennis more than girls.",
-"Boys' favourite activity is going camping.",
-"Girls like riding a bike the most."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/6.png",
-
-options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/7.png",
-
-options:[
-"Internet usage was highest in 2024.",
-"Internet usage decreased every year.",
-"The lowest internet usage was in 2023.",
-"Internet usage in 2026 was higher than in 2024."
+"Could you ask her to call me when she is available?",
+"Would you like to leave a message for me?",
+"Can I know who you are speaking to?",
+"Why don't you answer the phone next time?"
 ],
 
 answer:0
 },
 
 {
-image:"images/exam1/8.png",
+image:"images/exam10/5.png",
+
+question:"Study the Internet habits of the students. Which conclusion is supported by the information?",
 
 options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
+"Students use the Internet only for entertainment.",
+"Communication and education are both common reasons for using the Internet.",
+"Online shopping is more popular than all other activities.",
+"None of the students use the Internet to learn new things."
 ],
 
-answer:2
+answer:1
 },
 
 {
-image:"images/exam1/9.png",
+image:"images/exam10/6.png",
+
+question:"Eren is going on an adventure trip with his friends. He wants to be safe. Which action should NOT be part of his preparation?",
 
 options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
+"Checking the weather conditions",
+"Learning the basic rules of the activity",
+"Taking the necessary safety equipment",
+"Going without an instructor because he wants more excitement"
 ],
 
-answer:2
+answer:3
 },
 
 {
-image:"images/exam1/10.png",
+image:"images/exam10/7.png",
+
+question:"A tourist has only one day in the city. She is interested in history, local culture and traditional food. Which plan is the most suitable for her?",
 
 options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
+"Spend the morning at the beach and the afternoon at a shopping centre.",
+"Visit the old town, see the historical museum and try local dishes.",
+"Stay at the hotel and use the swimming pool all day.",
+"Visit a modern amusement park and watch a sports event."
 ],
 
-answer:2
+answer:1
+},
+
+{
+image:"images/exam10/8.png",
+
+question:"Look at the chore schedule. Which change would make the distribution of chores more balanced?",
+
+options:[
+"Give all the chores to the person who has the fewest tasks.",
+"Ask the family member with the most tasks to share one of them with another member.",
+"Let the parents do all the chores during the week.",
+"Remove the chores that children are responsible for."
+],
+
+answer:1
+},
+
+{
+image:"images/exam10/9.png",
+
+question:"Which sentence best expresses the main idea of the text?",
+
+options:[
+"A simple scientific discovery can lead to a useful solution for an everyday problem.",
+"Scientists only make discoveries when they work with expensive equipment.",
+"Most inventions are created to make entertainment more enjoyable.",
+"Scientific studies are useful only for people who work in laboratories."
+],
+
+answer:0
+},
+
+{
+image:"images/exam10/10.png",
+
+question:"Read the text and answer the question. Why did the family choose Cappadocia for their holiday?",
+
+options:[
+"They wanted to spend the whole holiday at a seaside resort.",
+"They were interested in its unique landscape and historical places.",
+"They wanted to visit a large shopping centre with their friends.",
+"They preferred staying at a hotel and doing no outdoor activities."
+],
+
+answer:1
 }
 
 ];
@@ -310,7 +330,25 @@ function showQuestion(){
     progress + "%";
 
 
-    // SORU METNİ
+     // SORU METNİ
+
+  const questionText =
+    document.getElementById("questionText");
+
+questionText.textContent =
+    q.question || "";
+
+    // RESİM VARSA GÖSTER
+    if(q.image && q.image !== ""){
+
+        document.getElementById("questionImage").style.display = "block";
+        document.getElementById("questionImage").src = q.image;
+
+    }else{
+
+        document.getElementById("questionImage").style.display = "none";
+
+    }
   
 
     // RESİM VARSA GÖSTER

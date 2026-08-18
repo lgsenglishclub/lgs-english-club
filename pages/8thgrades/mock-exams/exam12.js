@@ -138,133 +138,153 @@ async function addTestXP(percent) {
 const questions = [
 
 {
-image:"images/exam1/1.png",
+image:"images/exam12/1.png",
+
+question:"Which of the following is TRUE according to the conversation?",
 
 options:[
-"Watching TV is the most preferred activity.",
-"Reading books is more popular than doing sports.",
-"Playing computer games is the most preferred activity.",
-"Doing sports is less popular than reading books."
+"Jack often shares his friends’ secrets.",
+"Mia wants to organize a party for Jack.",
+"Jack thinks everyone at school should be invited.",
+"Mia trusts Jack with the surprise."
 ],
 
-answer:2
+answer:3
 },
 
 {
-image:"images/exam1/2.png",
+image:"images/exam12/2.png",
+
+question:"Which activity does NOT match the student's opinion?",
 
 options:[
-"Watching TV is the least preferred activity.",
-"Playing computer games is the most preferred activity.",
-"Reading books is more popular than playing computer games.",
-"Doing sports is more popular than reading books."
+"Lily – shopping",
+"Noah – chess",
+"Sophie – concerts",
+"Ethan – computer games"
+],
+
+answer:3
+},
+
+{
+image:"images/exam12/3.png",
+
+question:"Which of the following shows the correct order?",
+
+options:[
+"4 → 3 → 1 → 5 → 2",
+"3 → 4 → 1 → 5 → 2",
+"4 → 1 → 3 → 5 → 2",
+"3 → 1 → 4 → 5 → 2"
+],
+
+answer:0
+},
+
+{
+image:"images/exam12/4.png",
+
+question:"What is Ben calling Daniel for?",
+
+options:[
+"To cancel their basketball practice.",
+"To change the time of their basketball practice.",
+"To invite Daniel to a basketball match.",
+"To ask Daniel about tomorrow’s weather."
 ],
 
 answer:1
 },
 
 {
-image:"images/exam1/3.png",
+image:"images/exam12/5.png",
+
+question:"Which of the following is the BEST advice for Mert?",
 
 options:[
-"Going camping is the most popular activity.",
-"Riding a bike is less popular than playing tennis.",
-"Doing sport is more popular than going camping.",
-"Playing tennis is the most preferred activity."
+"Share his password only with his closest friends.",
+"Give the information because the game is free.",
+"Avoid sharing personal information on suspicious websites.",
+"Download the game before checking the website."
+],
+
+answer:2
+},
+
+{
+image:"images/exam12/6.png",
+
+question:"Which of the following is NOT necessary to join the activities?",
+
+options:[
+"Being 14 or older.",
+"Wearing comfortable clothes.",
+"Taking part in outdoor activities.",
+"Having lunch at the activity center."
+],
+
+answer:3
+},
+
+{
+image:"images/exam12/7.png",
+
+question:"Which destination is the MOST suitable for Tom and Ella?",
+
+options:[
+"A",
+"B",
+"C",
+"D"
 ],
 
 answer:0
 },
 
 {
-image:"images/exam1/4.png",
+image:"images/exam12/8.png",
+
+question:"Which of the following is NOT mentioned as a responsibility?",
 
 options:[
-"Skiing is the most preferred sport.",
-"Ice-skating is more popular than diving.",
-"Diving is the most preferred activity.",
-"Bungee jumping is less popular than skiing."
+"Preparing food.",
+"Cleaning the floor.",
+"Washing the dishes.",
+"Taking out the rubbish."
 ],
 
-answer:2
+answer:3
 },
 
 {
-image:"images/exam1/5.png",
+image:"images/exam12/9.png",
+
+question:"According to the text, what makes the smart greenhouse useful in dry areas?",
 
 options:[
-"Girls prefer camping more than boys.",
-"Boys enjoy playing tennis more than girls.",
-"Boys' favourite activity is going camping.",
-"Girls like riding a bike the most."
+"It allows farmers to grow vegetables without using electricity.",
+"It gives plants water automatically when the soil becomes dry.",
+"It helps farmers collect more rainwater during the summer.",
+"It keeps the temperature of the greenhouse the same all day."
 ],
 
-answer:2
+answer:1
 },
 
 {
-image:"images/exam1/6.png",
+image:"images/exam12/10.png",
+
+question:"Read the text. What can we understand about the students' project?",
 
 options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
+"They changed their whole project because they could not agree.",
+"They divided the work and worked together to complete the project.",
+"They prepared the presentation without using any outside information.",
+"They focused only on online games because it was the most popular topic."
 ],
 
-answer:2
-},
-
-{
-image:"images/exam1/7.png",
-
-options:[
-"Internet usage was highest in 2024.",
-"Internet usage decreased every year.",
-"The lowest internet usage was in 2023.",
-"Internet usage in 2026 was higher than in 2024."
-],
-
-answer:0
-},
-
-{
-image:"images/exam1/8.png",
-
-options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/9.png",
-
-options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/10.png",
-
-options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
-],
-
-answer:2
+answer:1
 }
 
 ];
@@ -310,7 +330,25 @@ function showQuestion(){
     progress + "%";
 
 
-    // SORU METNİ
+     // SORU METNİ
+
+  const questionText =
+    document.getElementById("questionText");
+
+questionText.textContent =
+    q.question || "";
+
+    // RESİM VARSA GÖSTER
+    if(q.image && q.image !== ""){
+
+        document.getElementById("questionImage").style.display = "block";
+        document.getElementById("questionImage").src = q.image;
+
+    }else{
+
+        document.getElementById("questionImage").style.display = "none";
+
+    }
   
 
     // RESİM VARSA GÖSTER

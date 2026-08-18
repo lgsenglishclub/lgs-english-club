@@ -1,0 +1,1533 @@
+/* =====================================================
+   UNIT 1 GRAMMAR
+===================================================== */
+
+.grammar-page {
+
+    width: min(1050px, calc(100% - 32px));
+
+    margin: 0 auto;
+
+    padding: 40px 0 80px;
+
+    color: #202533;
+
+}
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.grammar-intro {
+
+    padding: 25px 5px 35px;
+
+    border-bottom: 1px solid #e5e8ed;
+
+    margin-bottom: 45px;
+
+}
+
+
+.lesson-label {
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    color: #6875f5;
+
+}
+
+
+.grammar-intro h2 {
+
+    margin: 8px 0;
+
+    font-size: 36px;
+
+}
+
+
+.grammar-intro p {
+
+    margin: 0;
+
+    color: #737b88;
+
+    font-size: 16px;
+
+}
+
+
+/* =====================================================
+   SECTIONS
+===================================================== */
+
+.grammar-section {
+
+    margin-bottom: 65px;
+
+}
+
+
+.section-heading {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 14px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.section-number {
+
+    flex: 0 0 38px;
+
+    height: 38px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 10px;
+
+    background: #eef1ff;
+
+    color: #6875f5;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+}
+
+
+.section-heading h2 {
+
+    margin: 0 0 5px;
+
+    font-size: 25px;
+
+}
+
+
+.section-heading p {
+
+    margin: 0;
+
+    color: #737b88;
+
+    line-height: 1.5;
+
+}
+
+
+/* =====================================================
+   MAKING AN OFFER
+===================================================== */
+
+.offer-list {
+
+    border: 1px solid #e2e6eb;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+}
+
+
+.offer-item {
+
+    display: grid;
+
+    grid-template-columns: 230px 1fr 150px;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 18px 20px;
+
+    border-bottom: 1px solid #edf0f3;
+
+}
+
+
+.offer-item:last-child {
+
+    border-bottom: none;
+
+}
+
+
+.offer-expression {
+
+    font-size: 16px;
+
+    font-weight: 800;
+
+}
+
+
+.offer-example {
+
+    color: #505867;
+
+    line-height: 1.5;
+
+}
+
+
+.offer-example strong {
+
+    color: #6875f5;
+
+}
+
+
+.offer-meaning {
+
+    color: #858c97;
+
+    font-size: 13px;
+
+}
+
+
+/* =====================================================
+   PATTERNS
+===================================================== */
+
+.pattern-box {
+
+    margin-top: 18px;
+
+    padding: 22px;
+
+    border-radius: 14px;
+
+    background: #f7f8ff;
+
+    border: 1px solid #e1e5ff;
+
+}
+
+
+.pattern-title {
+
+    margin-bottom: 15px;
+
+    color: #505fc5;
+
+    font-weight: 800;
+
+}
+
+
+.pattern-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 9px 35px;
+
+    line-height: 1.7;
+
+    font-size: 14px;
+
+}
+
+
+/* =====================================================
+   ACCEPT / REFUSE
+===================================================== */
+
+.response-columns {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+
+}
+
+
+.response-box {
+
+    border: 1px solid #e2e5ea;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+}
+
+
+.response-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 18px 20px;
+
+}
+
+
+.response-header > span {
+
+    font-size: 22px;
+
+}
+
+
+.response-header h3 {
+
+    margin: 0 0 3px;
+
+    font-size: 18px;
+
+}
+
+
+.response-header p {
+
+    margin: 0;
+
+    font-size: 12px;
+
+    color: #7b828e;
+
+}
+
+
+.accepting .response-header {
+
+    background: #edf9f2;
+
+}
+
+
+.refusing .response-header {
+
+    background: #fff1f1;
+
+}
+
+
+.response-list > div {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 12px 17px;
+
+    border-top: 1px solid #edf0f2;
+
+}
+
+
+.response-list strong {
+
+    font-size: 14px;
+
+}
+
+
+.response-list span {
+
+    color: #7b828d;
+
+    font-size: 12px;
+
+    text-align: right;
+
+}
+
+
+/* =====================================================
+   SMART TIPS
+===================================================== */
+
+.tips-section {
+    margin-top: 10px;
+}
+
+
+/* ================================
+   HERO
+================================ */
+
+.tips-hero {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 24px 26px;
+
+    margin-bottom: 20px;
+
+    border-radius: 18px;
+
+    background: linear-gradient(
+        135deg,
+        #f7f8ff,
+        #ffffff
+    );
+
+    border: 1px solid #e2e5f2;
+
+    overflow: hidden;
+
+}
+
+
+.tips-hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 150px;
+
+    height: 150px;
+
+    right: -55px;
+
+    top: -70px;
+
+    border-radius: 50%;
+
+    background: #eef1ff;
+
+}
+
+
+.tips-hero-icon {
+
+    width: 52px;
+
+    height: 52px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background: #6875f5;
+
+    font-size: 25px;
+
+    box-shadow: 0 8px 20px rgba(104,117,245,.18);
+
+}
+
+
+.tips-hero span {
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.3px;
+
+    color: #6875f5;
+
+}
+
+
+.tips-hero h2 {
+
+    margin: 4px 0;
+
+    font-size: 25px;
+
+}
+
+
+.tips-hero p {
+
+    margin: 0;
+
+    color: #747c88;
+
+    font-size: 13px;
+
+}
+
+
+/* ================================
+   GRID
+================================ */
+
+.tips-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+
+}
+
+
+/* ================================
+   CARD
+================================ */
+
+.tip-card {
+
+    position: relative;
+
+    padding: 22px;
+
+    border: 1px solid #e2e5ea;
+
+    border-radius: 16px;
+
+    background: #fff;
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        border-color .2s ease;
+
+}
+
+
+.tip-card:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 28px rgba(30,40,60,.07);
+
+    border-color: #cfd4e5;
+
+}
+
+
+.tip-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 15px;
+
+}
+
+
+.tip-number {
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    color: #a0a6b1;
+
+}
+
+
+.tip-symbol {
+
+    font-size: 22px;
+
+}
+
+
+.tip-category {
+
+    display: inline-block;
+
+    margin-bottom: 7px;
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.2px;
+
+    color: #6875f5;
+
+}
+
+
+.tip-card h3 {
+
+    margin: 0 0 9px;
+
+    font-size: 17px;
+
+}
+
+
+.tip-card > p {
+
+    margin: 0 0 15px;
+
+    color: #69717e;
+
+    font-size: 13px;
+
+    line-height: 1.65;
+
+}
+
+
+/* ================================
+   EXAMPLE
+================================ */
+
+.tip-example {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    padding: 13px 14px;
+
+    border-radius: 10px;
+
+    background: #f7f8fa;
+
+    font-size: 13px;
+
+}
+
+
+.tip-example strong {
+
+    color: #6875f5;
+
+}
+
+
+.tip-rule {
+
+    margin-top: 9px;
+
+    color: #737b87;
+
+    font-size: 11px;
+
+}
+
+
+.tip-rule strong {
+
+    color: #6875f5;
+
+}
+
+
+/* ================================
+   RESULT
+================================ */
+
+.tip-result {
+
+    display: inline-block;
+
+    margin-left: auto;
+
+    padding: 5px 8px;
+
+    border-radius: 6px;
+
+    background: #eaf8f0;
+
+    color: #238253;
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    letter-spacing: .5px;
+
+}
+
+
+/* ================================
+   COMPARE
+================================ */
+
+.compare-box {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+}
+
+
+.compare-box > div {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 10px 12px;
+
+    border-radius: 9px;
+
+    background: #f7f8fa;
+
+}
+
+
+.compare-box strong {
+
+    font-size: 12px;
+
+}
+
+
+.compare-box span {
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+}
+
+
+.compare-box > div:first-child span {
+
+    color: #238253;
+
+}
+
+
+.compare-box > div:last-child span {
+
+    color: #c34d4d;
+
+}
+
+
+/* ================================
+   DIALOGUE
+================================ */
+
+.dialogue-tip {
+
+    background: #f8f8ff;
+
+}
+
+
+.refuse-result {
+
+    display: inline-block;
+
+    margin-top: 9px;
+
+    padding: 5px 8px;
+
+    border-radius: 6px;
+
+    background: #fff0f0;
+
+    color: #c34d4d;
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+}
+
+
+/* ================================
+   WIDE MEMORY CARD
+================================ */
+
+.tip-wide {
+
+    grid-column: 1 / -1;
+
+}
+
+
+.memory-expression {
+
+    display: grid;
+
+    grid-template-columns: 1fr auto 150px;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 15px;
+
+    border-radius: 11px;
+
+    background: #f7f8fa;
+
+}
+
+
+.memory-expression strong {
+
+    display: block;
+
+    font-size: 14px;
+
+}
+
+
+.memory-expression span {
+
+    display: block;
+
+    margin-top: 3px;
+
+    color: #7a818d;
+
+    font-size: 11px;
+
+}
+
+
+.memory-arrow {
+
+    font-size: 22px;
+
+    color: #9ba1ac;
+
+}
+
+
+.memory-result {
+
+    padding: 9px;
+
+    border-radius: 8px;
+
+    text-align: center;
+
+    background: #fff0f0;
+
+    color: #c34d4d !important;
+
+    font-size: 10px !important;
+
+    font-weight: 900;
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1030px) {
+
+    .tips-grid {
+
+        gap: 12px;
+
+    }
+
+}
+
+
+/* =====================================================
+   PHONE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .tips-hero {
+
+        padding: 20px;
+
+    }
+
+
+    .tips-hero-icon {
+
+        width: 45px;
+
+        height: 45px;
+
+        font-size: 21px;
+
+    }
+
+
+    .tips-hero h2 {
+
+        font-size: 21px;
+
+    }
+
+
+    .tips-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .tip-wide {
+
+        grid-column: auto;
+
+    }
+
+
+    .memory-expression {
+
+        grid-template-columns: 1fr;
+
+        gap: 8px;
+
+    }
+
+
+    .memory-arrow {
+
+        display: none;
+
+    }
+
+
+    .memory-result {
+
+        width: fit-content;
+
+    }
+
+}
+
+
+/* =====================================================
+   EXAMPLES
+===================================================== */
+
+.example-dialogues {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+
+}
+
+
+.dialogue-card {
+
+    padding: 20px;
+
+    border: 1px solid #e2e6eb;
+
+    border-radius: 13px;
+
+    background: #fff;
+
+}
+
+
+.dialogue-number {
+
+    display: block;
+
+    margin-bottom: 15px;
+
+    color: #6875f5;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+}
+
+
+.dialogue-card p {
+
+    margin: 8px 0;
+
+    line-height: 1.65;
+
+    font-size: 14px;
+
+}
+
+
+.accept-text {
+
+    color: #228451;
+
+    font-style: normal;
+
+    font-weight: 700;
+
+}
+
+
+.refuse-text {
+
+    color: #c04d4d;
+
+    font-style: normal;
+
+    font-weight: 700;
+
+}
+
+
+/* =====================================================
+   CHECK YOUR UNDERSTANDING
+===================================================== */
+
+.question-list {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 16px;
+
+}
+
+
+.question-card {
+
+    padding: 20px;
+
+    border: 1px solid #e0e4e9;
+
+    border-radius: 15px;
+
+    background: #fff;
+
+}
+
+
+.question-number {
+
+    margin-bottom: 10px;
+
+    color: #6875f5;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: .8px;
+
+    text-transform: uppercase;
+
+}
+
+
+.question-text {
+
+    margin: 0 0 16px;
+
+    line-height: 1.6;
+
+    font-size: 14px;
+
+}
+
+
+/* =====================================================
+   QUESTION OPTIONS
+===================================================== */
+
+.question-options button {
+
+    width: 100%;
+
+    min-height: 46px;
+
+    padding: 11px 13px;
+
+    display: block;
+
+    box-sizing: border-box;
+
+    text-align: left;
+
+    border: 1px solid #d9dee6;
+
+    border-radius: 9px;
+
+    background: #ffffff;
+
+    color: #202533 !important;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    line-height: 1.45;
+
+    opacity: 1 !important;
+
+    cursor: pointer;
+
+    transition:
+        background .18s ease,
+        border-color .18s ease,
+        transform .18s ease,
+        box-shadow .18s ease;
+
+}
+
+
+/* NORMAL */
+
+.question-options button:not(:disabled) {
+
+    color: #202533 !important;
+
+}
+
+
+/* HOVER */
+
+.question-options button:hover:not(:disabled) {
+
+    color: #202533 !important;
+
+    background: #f5f7ff !important;
+
+    border-color: #6875f5 !important;
+
+    box-shadow: 0 3px 10px rgba(40,50,90,.06);
+
+    transform: translateY(-1px);
+
+}
+
+
+/* =====================================================
+   DISABLED
+===================================================== */
+
+.question-options button:disabled {
+
+    opacity: 1 !important;
+
+    color: #202533 !important;
+
+    cursor: default;
+
+}
+
+
+/* =====================================================
+   CORRECT
+===================================================== */
+
+.question-options button.correct {
+
+    color: #176b43 !important;
+
+    background: #eaf8f0 !important;
+
+    border-color: #2c9861 !important;
+
+    font-weight: 700;
+
+}
+
+
+/* =====================================================
+   WRONG
+===================================================== */
+
+.question-options button.wrong {
+
+    color: #a83f3f !important;
+
+    background: #fff0f0 !important;
+
+    border-color: #d25555 !important;
+
+    font-weight: 700;
+
+}
+
+
+/* =====================================================
+   FEEDBACK
+===================================================== */
+
+.question-feedback {
+
+    margin-top: 11px;
+
+    color: #5f6875;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    line-height: 1.5;
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1030px) {
+
+    .question-list {
+
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+}
+
+
+/* =====================================================
+   PHONE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .question-list {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .question-options {
+
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+}
+
+
+/* =====================================================
+   LGS
+===================================================== */
+
+.lgs-card {
+
+    padding: 28px;
+
+    border: 1px solid #dfe3e9;
+
+    border-radius: 16px;
+
+}
+
+
+.lgs-dialogue {
+
+    padding: 20px;
+
+    margin-bottom: 25px;
+
+    border-radius: 11px;
+
+    background: #f6f7f9;
+
+}
+
+
+.lgs-dialogue p {
+
+    margin: 8px 0;
+
+    line-height: 1.7;
+
+}
+
+
+.lgs-card h3 {
+
+    margin-bottom: 18px;
+
+    font-size: 17px;
+
+}
+
+
+.lgs-options {
+
+    display: grid;
+
+    gap: 10px;
+
+}
+
+
+.lgs-options button {
+
+    padding: 14px 16px;
+
+    text-align: left;
+
+    border: 1px solid #dfe3e8;
+
+    border-radius: 9px;
+
+    background: white;
+
+    cursor: pointer;
+
+}
+
+
+.lgs-options button:hover {
+
+    border-color: #6875f5;
+
+}
+
+
+.lgs-options button.correct {
+
+    background: #eaf8f0;
+
+    border-color: #2c9861;
+
+}
+
+
+.lgs-options button.wrong {
+
+    background: #fff0f0;
+
+    border-color: #d25555;
+
+}
+
+
+.lgs-feedback {
+
+    margin-top: 15px;
+
+    font-weight: 700;
+
+    line-height: 1.6;
+
+}
+
+
+/* =====================================================
+   FINISH
+===================================================== */
+
+.grammar-finish {
+
+    padding: 35px;
+
+    text-align: center;
+
+    border-top: 1px solid #e5e8ed;
+
+}
+
+
+.finish-icon {
+
+    font-size: 35px;
+
+}
+
+
+.grammar-finish h2 {
+
+    margin: 10px 0 5px;
+
+}
+
+
+.grammar-finish p {
+
+    margin: 0;
+
+    color: #737b88;
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1030px) {
+
+    .grammar-page {
+
+        width: min(900px, calc(100% - 28px));
+
+    }
+
+
+    .offer-item {
+
+        grid-template-columns: 190px 1fr 120px;
+
+    }
+
+
+    .response-list span {
+
+        font-size: 11px;
+
+    }
+
+}
+
+
+/* =====================================================
+   PHONE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .grammar-page {
+
+        width: calc(100% - 20px);
+
+        padding-top: 25px;
+
+    }
+
+
+    .grammar-intro h2 {
+
+        font-size: 29px;
+
+    }
+
+
+    .section-heading h2 {
+
+        font-size: 21px;
+
+    }
+
+
+    .offer-item {
+
+        grid-template-columns: 1fr;
+
+        gap: 6px;
+
+        padding: 17px;
+
+    }
+
+
+    .offer-meaning {
+
+        font-size: 12px;
+
+    }
+
+
+    .pattern-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .response-columns {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .response-list > div {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 3px;
+
+    }
+
+
+    .response-list span {
+
+        text-align: left;
+
+    }
+
+
+    .example-dialogues {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .question-options {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .question-card,
+    .lgs-card {
+
+        padding: 20px;
+
+    }
+
+}

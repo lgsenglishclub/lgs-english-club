@@ -138,133 +138,153 @@ async function addTestXP(percent) {
 const questions = [
 
 {
-image:"images/exam1/1.png",
+image:"images/exam6/1.png",
+
+question:"Which of the following is TRUE according to the friendship survey?",
 
 options:[
-"Watching TV is the most preferred activity.",
-"Reading books is more popular than doing sports.",
-"Playing computer games is the most preferred activity.",
-"Doing sports is less popular than reading books."
+"Most students prefer spending time with friends who have different interests.",
+"Being honest is the least important quality for the students.",
+"Keeping promises is more important than being supportive.",
+"Very few students think that having fun together is important."
 ],
 
-answer:2
+answer:0
 },
 
 {
-image:"images/exam1/2.png",
+image:"images/exam6/2.png",
+
+question:"Which of the following is CORRECT according to the weekend plan?",
 
 options:[
-"Watching TV is the least preferred activity.",
-"Playing computer games is the most preferred activity.",
-"Reading books is more popular than playing computer games.",
-"Doing sports is more popular than reading books."
+"Alex is going to spend Saturday morning at home.",
+"Alex plans to meet his friends on Sunday afternoon.",
+"Alex prefers playing computer games to doing outdoor activities.",
+"Alex is going to go shopping with his family on Saturday evening."
 ],
 
 answer:1
 },
 
 {
-image:"images/exam1/3.png",
+image:"images/exam6/3.png",
+
+question:"Which of the following completes the dialogue?",
 
 options:[
-"Going camping is the most popular activity.",
-"Riding a bike is less popular than playing tennis.",
-"Doing sport is more popular than going camping.",
-"Playing tennis is the most preferred activity."
+"I prefer staying at home.",
+"I am crazy about outdoor activities.",
+"I can't stand going for a walk.",
+"I would rather watch TV."
+],
+
+answer:1
+},
+
+{
+image:"images/exam6/4.png",
+
+question:"Which of the following completes the phone conversation?",
+
+options:[
+"Can I speak to Olivia, please?",
+"Would you like to leave a message?",
+"She isn't available right now.",
+"Sure, I'll tell her when she comes back."
+],
+
+answer:3
+},
+
+{
+image:"images/exam6/5.png",
+
+question:"Which of the following is TRUE according to the preferences chart?",
+
+options:[
+"Watching movies is more popular than listening to music.",
+"Reading books is the most popular free-time activity.",
+"Going shopping is less popular than playing sports.",
+"Playing computer games is the least preferred activity."
+],
+
+answer:2
+},
+
+{
+image:"images/exam6/6.png",
+
+question:"Which of the following is the best advice for someone who wants to have a strong friendship?",
+
+options:[
+"You should hide your problems from your friends.",
+"You should expect your friends to agree with you all the time.",
+"You should listen to your friends and be there when they need you.",
+"You should only choose friends who have the same hobbies."
+],
+
+answer:2
+},
+
+{
+image:"images/exam6/7.png",
+
+question:"Which of the following is CORRECT according to the invitation?",
+
+options:[
+"Michael is inviting his friends to a picnic on Sunday.",
+"The event will take place at Michael's house.",
+"Guests should arrive in the morning.",
+"Michael is organizing the event because he is leaving town."
 ],
 
 answer:0
 },
 
 {
-image:"images/exam1/4.png",
+image:"images/exam6/8.png",
+
+question:"Which of the following is TRUE according to the activity table?",
 
 options:[
-"Skiing is the most preferred sport.",
-"Ice-skating is more popular than diving.",
-"Diving is the most preferred activity.",
-"Bungee jumping is less popular than skiing."
+"Emma prefers indoor activities to outdoor activities.",
+"Emma spends most of her free time alone.",
+"Emma enjoys both spending time with friends and doing outdoor activities.",
+"Emma never makes plans with her family at the weekend."
 ],
 
 answer:2
 },
 
 {
-image:"images/exam1/5.png",
+image:"images/exam6/9.png",
+
+question:"Which of the following is TRUE according to the text?",
 
 options:[
-"Girls prefer camping more than boys.",
-"Boys enjoy playing tennis more than girls.",
-"Boys' favourite activity is going camping.",
-"Girls like riding a bike the most."
+"Michael thinks people should have exactly the same interests to become close friends.",
+"Michael believes a true friend should be honest and keep secrets.",
+"Michael prefers having many friends instead of a few close friends.",
+"Michael never asks his friends for help when he has a problem."
 ],
 
-answer:2
+answer:1
 },
 
 {
-image:"images/exam1/6.png",
+image:"images/exam6/10.png",
+
+question:"What does Sophie prefer according to the text?",
 
 options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
+"Staying indoors and watching television.",
+"Spending her free time doing outdoor activities.",
+"Playing computer games with her friends.",
+"Going shopping with her family."
 ],
 
-answer:2
-},
-
-{
-image:"images/exam1/7.png",
-
-options:[
-"Internet usage was highest in 2024.",
-"Internet usage decreased every year.",
-"The lowest internet usage was in 2023.",
-"Internet usage in 2026 was higher than in 2024."
-],
-
-answer:0
-},
-
-{
-image:"images/exam1/8.png",
-
-options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/9.png",
-
-options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/10.png",
-
-options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
-],
-
-answer:2
+answer:1
 }
 
 ];
@@ -310,7 +330,25 @@ function showQuestion(){
     progress + "%";
 
 
-    // SORU METNİ
+     // SORU METNİ
+
+  const questionText =
+    document.getElementById("questionText");
+
+questionText.textContent =
+    q.question || "";
+
+    // RESİM VARSA GÖSTER
+    if(q.image && q.image !== ""){
+
+        document.getElementById("questionImage").style.display = "block";
+        document.getElementById("questionImage").src = q.image;
+
+    }else{
+
+        document.getElementById("questionImage").style.display = "none";
+
+    }
   
 
     // RESİM VARSA GÖSTER

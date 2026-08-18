@@ -138,137 +138,156 @@ async function addTestXP(percent) {
 const questions = [
 
 {
-image:"images/exam1/1.png",
+image:"images/exam20/1.png",
+
+question:"Read the conversation. Which sentence best completes the dialogue?",
 
 options:[
-"Watching TV is the most preferred activity.",
-"Reading books is more popular than doing sports.",
-"Playing computer games is the most preferred activity.",
-"Doing sports is less popular than reading books."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/2.png",
-
-options:[
-"Watching TV is the least preferred activity.",
-"Playing computer games is the most preferred activity.",
-"Reading books is more popular than playing computer games.",
-"Doing sports is more popular than reading books."
+"I don't think being honest is important when you want to make new friends.",
+"I agree. A good friend should be someone you can trust even when things are difficult.",
+"That's why I prefer having lots of friends who don't know much about me.",
+"I disagree because friends should always have the same interests."
 ],
 
 answer:1
 },
 
 {
-image:"images/exam1/3.png",
+image:"images/exam20/2.png",
+
+question:"Four students are trying to arrange a study meeting. They can meet only when ALL of them are free. Which time is suitable for everyone?",
 
 options:[
-"Going camping is the most popular activity.",
-"Riding a bike is less popular than playing tennis.",
-"Doing sport is more popular than going camping.",
-"Playing tennis is the most preferred activity."
+"Tuesday at 16:00",
+"Wednesday at 17:00",
+"Thursday at 15:30",
+"Friday at 18:00"
+],
+
+answer:2
+},
+
+{
+image:"images/exam20/3.png",
+
+question:"A cooking club wants to prepare a meal for a student who cannot eat dairy products. Which option should the club choose?",
+
+options:[
+"Cheese pizza with tomato sauce",
+"Chicken salad with olive oil dressing",
+"Creamy mushroom pasta",
+"Grilled vegetables with butter"
+],
+
+answer:1
+},
+
+{
+image:"images/exam20/4.png",
+
+question:"Read the phone messages. What should Jack do FIRST?",
+
+options:[
+"Send the completed project to the teacher.",
+"Ask his group members for the missing information.",
+"Change the date of the presentation.",
+"Cancel the meeting with his group."
+],
+
+answer:1
+},
+
+{
+image:"images/exam20/5.png",
+
+question:"The graph shows the results of a survey conducted among 120 students about their preferred online activities. Which statement is NOT supported by the data?",
+
+options:[
+"Watching videos is more popular than reading online articles.",
+"More students use the Internet for communication than for shopping.",
+"Playing online games is the second most popular activity.",
+"Reading online articles is more popular than communicating with friends."
+],
+
+answer:3
+},
+
+{
+image:"images/exam20/6.png",
+
+question:"A student wants to take part in ONE of the activities below. He is 14, has no previous experience, can stay only until 4 p.m. and has his own helmet. Which activity can he join?",
+
+options:[
+"09:00–17:00 Advanced Mountain Biking – experienced participants only",
+"10:00–15:00 Beginner Cycling Tour – suitable for ages 12+",
+"13:00–18:00 Rock Climbing – previous experience required",
+"08:00–16:30 Forest Survival – participants must be 16+"
+],
+
+answer:1
+},
+
+{
+image:"images/exam20/7.png",
+
+question:"A tourist wants to spend a day discovering a city. She has three priorities: visiting a historical place, eating traditional food and buying a handmade souvenir. She does NOT want to use public transport. Which plan is the MOST suitable?",
+
+options:[
+"Old Castle → Traditional Restaurant → Local Craft Market",
+"City Mall → Fast-Food Restaurant → Art Gallery",
+"Beach → International Restaurant → Shopping Centre",
+"Amusement Park → Hotel Restaurant → Cinema"
 ],
 
 answer:0
 },
 
 {
-image:"images/exam1/4.png",
+image:"images/exam20/8.png",
+
+question:"The family wants to finish all the chores before their guests arrive. Each person can do only the tasks shown in the table. Which task should be changed to another family member to make the plan possible?",
 
 options:[
-"Skiing is the most preferred sport.",
-"Ice-skating is more popular than diving.",
-"Diving is the most preferred activity.",
-"Bungee jumping is less popular than skiing."
+"Cooking dinner",
+"Cleaning the living room",
+"Watering the plants",
+"Setting the table"
 ],
 
 answer:2
 },
 
 {
-image:"images/exam1/5.png",
+image:"images/exam20/9.png",
+
+question:"Read the text. What was the main advantage of the new idea developed by the students?",
 
 options:[
-"Girls prefer camping more than boys.",
-"Boys enjoy playing tennis more than girls.",
-"Boys' favourite activity is going camping.",
-"Girls like riding a bike the most."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/6.png",
-
-options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/7.png",
-
-options:[
-"Internet usage was highest in 2024.",
-"Internet usage decreased every year.",
-"The lowest internet usage was in 2023.",
-"Internet usage in 2026 was higher than in 2024."
+"It allowed them to complete the experiment using less water.",
+"It made their experiment more difficult but more expensive.",
+"It helped them avoid collecting any data during the experiment.",
+"It allowed them to replace the experiment with a computer game."
 ],
 
 answer:0
 },
 
 {
-image:"images/exam1/8.png",
+image:"images/exam20/10.png",
+
+question:"Read the text. Which conclusion can be drawn from the campers' experience?",
 
 options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
+"Planning is unnecessary when people work as a group.",
+"Unexpected difficulties can be overcome by making sensible changes.",
+"People should avoid asking others for help during difficult activities.",
+"Following the original plan is always better than changing it."
 ],
 
-answer:2
-},
-
-{
-image:"images/exam1/9.png",
-
-options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/10.png",
-
-options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
-],
-
-answer:2
+answer:1
 }
 
 ];
-
 
 let questionStatus = [];
 
@@ -310,7 +329,25 @@ function showQuestion(){
     progress + "%";
 
 
-    // SORU METNİ
+     // SORU METNİ
+
+  const questionText =
+    document.getElementById("questionText");
+
+questionText.textContent =
+    q.question || "";
+
+    // RESİM VARSA GÖSTER
+    if(q.image && q.image !== ""){
+
+        document.getElementById("questionImage").style.display = "block";
+        document.getElementById("questionImage").src = q.image;
+
+    }else{
+
+        document.getElementById("questionImage").style.display = "none";
+
+    }
   
 
     // RESİM VARSA GÖSTER

@@ -140,89 +140,103 @@ const questions = [
 {
 image:"images/exam2/1.png",
 
-options:[
-"Julia spends most of her free time meeting her friends.",
-"Julia prefers doing sports to surfing the Internet.",
-"Tony spends more time online than doing any other activity.",
-"Tony and Julia spend exactly the same amount of time doing sports."
-],
-
-answer:2
-},
-
-{
-image:"images/exam2/2.png",
+question:"Which of the following is TRUE according to Jack's profile?",
 
 options:[
-"Add the sauce before cutting the vegetables.",
-"Put the noodles into cold water after cooking them.",
-"Cook the noodles first and then add the vegetables and sauce.",
-"Wash the vegetables after serving the noodles."
-],
-
-answer:2
-},
-
-{
-image:"images/exam2/3.png",
-
-options:[
-"She never keeps her friends' secrets.",
-"She always tells her friends what they want to hear.",
-"She is willing to help her friends when they have problems.",
-"She prefers spending time alone instead of meeting her friends."
-],
-
-answer:2
-},
-
-{
-image:"images/exam2/4.png",
-
-options:[
-"She wants to share her personal information with everyone.",
-"She wants to make her online account safer.",
-"She wants to spend more time on social media.",
-"She wants to buy a new computer."
+"Jack prefers friends who are always serious and quiet.",
+"Jack values friends who are honest and helpful.",
+"Jack doesn't like spending time with his friends.",
+"Jack thinks keeping promises is not important."
 ],
 
 answer:1
 },
 
 {
-image:"images/exam2/5.png",
+image:"images/exam2/2.png",
+
+question:"Which of the following is CORRECT according to the weekly schedule?",
 
 options:[
-"He is interested in activities that require courage and physical strength.",
-"He prefers relaxing activities that he can do at home.",
-"He wants to try an activity in the water because he loves swimming.",
-"He is looking for an activity that does not require any special equipment."
+"She spends all of her free time studying at home.",
+"She usually meets her friends at the weekend.",
+"She prefers playing computer games to doing sports.",
+"She never does any outdoor activities."
 ],
 
-answer:0
+answer:1
+},
+
+{
+image:"images/exam2/3.png",
+
+question:"Which of the following completes the dialogue?",
+
+options:[
+"I can't stand playing tennis.",
+"I prefer swimming to playing tennis.",
+"I never go swimming with my friends.",
+"I don't think tennis is an outdoor activity."
+],
+
+answer:1
+},
+
+{
+image:"images/exam2/4.png",
+
+question:"Which of the following completes the phone conversation?",
+
+options:[
+"Can I speak to Emily, please?",
+"Would you like to take a message?",
+"Sure, I'll ask her to call you back.",
+"Who is calling, please?"
+],
+
+answer:2
+},
+
+{
+image:"images/exam2/5.png",
+
+question:"Which of the following is TRUE according to the preferences chart?",
+
+options:[
+"Most students prefer reading books to watching movies.",
+"Playing computer games is the least popular activity.",
+"Watching movies is more popular than going shopping.",
+"Going shopping is the most popular activity among the students."
+],
+
+answer:2
 },
 
 {
 image:"images/exam2/6.png",
 
+question:"Which of the following is the best advice for someone who wants to make good friends?",
+
 options:[
-"She is looking for a hotel near the airport.",
-"She wants to learn about traditional food in the city.",
-"She is searching for information about a historical place.",
-"She wants to find a suitable flight for her trip."
+"You should always expect your friends to agree with you.",
+"You should be honest and support your friends when they need you.",
+"You should avoid sharing your ideas with your friends.",
+"You should choose friends who have exactly the same interests."
 ],
 
-answer:3
+answer:1
 },
 
 {
 image:"images/exam2/7.png",
 
+question:"Which of the following is CORRECT according to the invitation?",
+
 options:[
-"Jack takes out the garbage and does the laundry.",
-"Jack is responsible for all the household chores.",
-"Jack never helps his family with housework.",
-"Jack only helps with cleaning the kitchen."
+"Lucy invites her friend to a birthday party on Saturday.",
+"Lucy is going to visit her grandparents on Sunday.",
+"Lucy doesn't want her friend to come to the party.",
+"Lucy is organizing the party at school after the lessons."
 ],
 
 answer:0
@@ -231,11 +245,13 @@ answer:0
 {
 image:"images/exam2/8.png",
 
+question:"Which of the following is TRUE according to the activity chart?",
+
 options:[
-"She received the Nobel Prize before starting her scientific career.",
-"She worked in science and made important discoveries.",
-"She became a scientist because her parents were rich.",
-"She stopped working after making her first discovery."
+"Tom prefers indoor activities to outdoor activities.",
+"Tom enjoys spending time with his friends at the weekend.",
+"Tom never goes cycling because he dislikes outdoor activities.",
+"Tom likes watching TV more than meeting his friends."
 ],
 
 answer:1
@@ -244,11 +260,13 @@ answer:1
 {
 image:"images/exam2/9.png",
 
+question:"Which of the following is TRUE according to the text?",
+
 options:[
-"The ground becomes completely dry because there is too much rain.",
-"Large amounts of snow suddenly fall in a warm region.",
-"A powerful movement of the Earth's surface causes buildings to shake.",
-"Strong winds disappear after a long period of sunshine."
+"Daniel thinks having many friends is more important than having good friends.",
+"Daniel believes true friends should always have the same interests.",
+"Daniel values friends who are honest and support each other.",
+"Daniel never shares his problems with his friends."
 ],
 
 answer:2
@@ -257,11 +275,13 @@ answer:2
 {
 image:"images/exam2/10.png",
 
+question:"What does Olivia prefer according to the text?",
+
 options:[
-"Would you like me to call you back later?",
-"Could you tell me who is calling, please?",
-"Can you leave a message after the tone?",
-"Why don't you turn off your phone?"
+"Spending time at home instead of meeting her friends.",
+"Doing outdoor activities instead of staying indoors.",
+"Watching movies instead of doing sports.",
+"Going shopping instead of spending time with her family."
 ],
 
 answer:1
@@ -310,7 +330,25 @@ function showQuestion(){
     progress + "%";
 
 
-    // SORU METNİ
+     // SORU METNİ
+
+  const questionText =
+    document.getElementById("questionText");
+
+questionText.textContent =
+    q.question || "";
+
+    // RESİM VARSA GÖSTER
+    if(q.image && q.image !== ""){
+
+        document.getElementById("questionImage").style.display = "block";
+        document.getElementById("questionImage").src = q.image;
+
+    }else{
+
+        document.getElementById("questionImage").style.display = "none";
+
+    }
   
 
     // RESİM VARSA GÖSTER

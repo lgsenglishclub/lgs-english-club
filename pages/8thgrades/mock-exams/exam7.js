@@ -138,133 +138,153 @@ async function addTestXP(percent) {
 const questions = [
 
 {
-image:"images/exam1/1.png",
+image:"images/exam7/1.png",
+
+question:"According to Mia's social media post, which activity would she most probably enjoy doing with her friends?",
 
 options:[
-"Watching TV is the most preferred activity.",
-"Reading books is more popular than doing sports.",
-"Playing computer games is the most preferred activity.",
-"Doing sports is less popular than reading books."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/2.png",
-
-options:[
-"Watching TV is the least preferred activity.",
-"Playing computer games is the most preferred activity.",
-"Reading books is more popular than playing computer games.",
-"Doing sports is more popular than reading books."
+"Spending a quiet evening at home",
+"Trying a new activity together",
+"Studying for an exam all day",
+"Playing computer games alone"
 ],
 
 answer:1
 },
 
 {
-image:"images/exam1/3.png",
+image:"images/exam7/2.png",
+
+question:"Four students are talking about their free-time preferences. Who prefers an activity that is completely different from the others?",
 
 options:[
-"Going camping is the most popular activity.",
-"Riding a bike is less popular than playing tennis.",
-"Doing sport is more popular than going camping.",
-"Playing tennis is the most preferred activity."
+"Emma",
+"Lucas",
+"Oliver",
+"Sophie"
+],
+
+answer:3
+},
+
+{
+image:"images/exam7/3.png",
+
+question:"Tom wants to invite Ben to an activity, but Ben doesn't like crowded places. Which suggestion would be the most suitable for Ben?",
+
+options:[
+"Let's go to the shopping mall.",
+"How about joining the school festival?",
+"Why don't we have a picnic in the park?",
+"Would you like to go to a busy concert?"
+],
+
+answer:2
+},
+
+{
+image:"images/exam7/4.png",
+
+question:"Why does Anna call her friend?",
+
+options:[
+"To cancel their weekend plan",
+"To ask for help with her homework",
+"To invite her friend to a birthday party",
+"To learn about her friend's new hobby"
 ],
 
 answer:0
 },
 
 {
-image:"images/exam1/4.png",
+image:"images/exam7/5.png",
+
+question:"Look at the students' preferences. Which statement shows a correct comparison?",
 
 options:[
-"Skiing is the most preferred sport.",
-"Ice-skating is more popular than diving.",
-"Diving is the most preferred activity.",
-"Bungee jumping is less popular than skiing."
+"Jack enjoys reading more than playing sports.",
+"Kate likes shopping less than watching movies.",
+"Tom enjoys listening to music more than Jack does.",
+"Lucy and Kate have exactly the same preferences."
+],
+
+answer:1
+},
+
+{
+image:"images/exam7/6.png",
+
+question:"Your friend tells you that she has a problem with her best friend. She says they had an argument yesterday. What would be the best response?",
+
+options:[
+"You should ignore your friend until she apologizes.",
+"You should talk to her calmly and try to understand each other.",
+"You should tell everyone about the argument.",
+"You should end the friendship immediately."
+],
+
+answer:1
+},
+
+{
+image:"images/exam7/7.png",
+
+question:"Sarah receives an invitation to a picnic, but she cannot attend because she has to visit her grandparents. Which reply is appropriate?",
+
+options:[
+"That sounds great. I'll definitely be there.",
+"Thanks for inviting me, but I can't come because I have another plan.",
+"I don't like picnics, so I don't want to come.",
+"Why don't you invite somebody else instead?"
+],
+
+answer:1
+},
+
+{
+image:"images/exam7/8.png",
+
+question:"Jack likes doing outdoor activities and meeting his friends. Emily prefers quiet activities at home. Which activity would be suitable for BOTH of them?",
+
+options:[
+"Going to a crowded concert",
+"Playing a computer game separately",
+"Reading a book in a quiet park",
+"Going to a noisy shopping centre"
 ],
 
 answer:2
 },
 
 {
-image:"images/exam1/5.png",
+image:"images/exam7/9.png",
+
+question:"What is the main idea of the text?",
 
 options:[
-"Girls prefer camping more than boys.",
-"Boys enjoy playing tennis more than girls.",
-"Boys' favourite activity is going camping.",
-"Girls like riding a bike the most."
+"Having the same hobbies is necessary for a strong friendship.",
+"Good friendships depend on understanding, respect and trust.",
+"Teenagers should spend all their free time with their friends.",
+"People usually become friends because they have the same interests."
 ],
 
-answer:2
+answer:1
 },
 
 {
-image:"images/exam1/6.png",
+image:"images/exam7/10.png",
+
+question:"Which conclusion can be drawn from the text about Daniel?",
 
 options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
+"He prefers spending time alone to being with other people.",
+"He is interested in trying different activities with his friends.",
+"He doesn't enjoy outdoor activities because they are tiring.",
+"He only spends his weekends doing activities with his family."
 ],
 
-answer:2
-},
-
-{
-image:"images/exam1/7.png",
-
-options:[
-"Internet usage was highest in 2024.",
-"Internet usage decreased every year.",
-"The lowest internet usage was in 2023.",
-"Internet usage in 2026 was higher than in 2024."
-],
-
-answer:0
-},
-
-{
-image:"images/exam1/8.png",
-
-options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/9.png",
-
-options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/10.png",
-
-options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
-],
-
-answer:2
+answer:1
 }
 
 ];
@@ -310,7 +330,25 @@ function showQuestion(){
     progress + "%";
 
 
-    // SORU METNİ
+     // SORU METNİ
+
+  const questionText =
+    document.getElementById("questionText");
+
+questionText.textContent =
+    q.question || "";
+
+    // RESİM VARSA GÖSTER
+    if(q.image && q.image !== ""){
+
+        document.getElementById("questionImage").style.display = "block";
+        document.getElementById("questionImage").src = q.image;
+
+    }else{
+
+        document.getElementById("questionImage").style.display = "none";
+
+    }
   
 
     // RESİM VARSA GÖSTER

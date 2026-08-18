@@ -138,133 +138,153 @@ async function addTestXP(percent) {
 const questions = [
 
 {
-image:"images/exam1/1.png",
+image:"images/exam16/1.png",
+
+question:"Read the messages. What can we understand about Chloe?",
 
 options:[
-"Watching TV is the most preferred activity.",
-"Reading books is more popular than doing sports.",
-"Playing computer games is the most preferred activity.",
-"Doing sports is less popular than reading books."
+"She is looking for a friend who can help her with a school problem.",
+"She has decided to cancel the activity because she is too busy.",
+"She wants to organize a party without telling her classmates.",
+"She prefers working on school projects completely by herself."
+],
+
+answer:0
+},
+
+{
+image:"images/exam16/2.png",
+
+question:"Four teenagers are talking about their plans for Saturday. Who has made a plan that is NOT suitable for their situation?",
+
+options:[
+"Alex, who wants to go cycling although the weather forecast says it will rain all day.",
+"Emma, who wants to study at the library because she has an exam on Monday.",
+"Ryan, who wants to meet his friends at a café after finishing his chores.",
+"Sophie, who wants to watch a film at home because she has already finished her homework."
+],
+
+answer:0
+},
+
+{
+image:"images/exam16/3.png",
+
+question:"Read the recipe and the instructions. What should Julia do immediately before putting the mixture into the oven?",
+
+options:[
+"Add the flour and mix it with the other ingredients.",
+"Leave the mixture in the refrigerator for an hour.",
+"Pour the mixture into a greased baking dish.",
+"Decorate the cake with pieces of chocolate."
 ],
 
 answer:2
 },
 
 {
-image:"images/exam1/2.png",
+image:"images/exam16/4.png",
+
+question:"Read the phone conversation. What is the main reason for Alex's call?",
 
 options:[
-"Watching TV is the least preferred activity.",
-"Playing computer games is the most preferred activity.",
-"Reading books is more popular than playing computer games.",
-"Doing sports is more popular than reading books."
+"To find out why the school activity was cancelled.",
+"To remind his friend about something they have planned.",
+"To ask his friend to lend him some money.",
+"To invite his friend to a different activity."
 ],
 
 answer:1
 },
 
 {
-image:"images/exam1/3.png",
+image:"images/exam16/5.png",
+
+question:"The graph shows how a group of students use the Internet during a typical week. Which conclusion can be drawn from the graph?",
 
 options:[
-"Going camping is the most popular activity.",
-"Riding a bike is less popular than playing tennis.",
-"Doing sport is more popular than going camping.",
-"Playing tennis is the most preferred activity."
+"Students spend the same amount of time on every online activity.",
+"Entertainment is more common than educational use among the students.",
+"Communication is the least preferred reason for using the Internet.",
+"Students mainly use the Internet for shopping and online games."
+],
+
+answer:1
+},
+
+{
+image:"images/exam16/6.png",
+
+question:"A travel company offers the following activities. Which student can join the activity without breaking any of the rules?",
+
+options:[
+"Jack, who is 13 and wants to join the 15+ mountain climbing tour.",
+"Lily, who is 15 but doesn't have the required safety equipment.",
+"Tom, who is 16, has the required equipment and has parental permission.",
+"Anna, who is 17 but refuses to follow the guide's instructions."
+],
+
+answer:2
+},
+
+{
+image:"images/exam16/7.png",
+
+question:"Read the information about four holiday destinations. Which destination would be the BEST choice for someone who wants to experience local life rather than a typical tourist holiday?",
+
+options:[
+"A resort with all-inclusive hotels, swimming pools and international restaurants.",
+"A small village with local markets, traditional workshops and family-run restaurants.",
+"A modern coastal city with large shopping centres and amusement parks.",
+"A popular beach town with luxury hotels and crowded night clubs."
+],
+
+answer:1
+},
+
+{
+image:"images/exam16/8.png",
+
+question:"The family has guests coming at 7 p.m. They have four chores to finish. Which plan is the MOST efficient?",
+
+options:[
+"Emily sets the table while her brother cleans the living room; their mother prepares the food.",
+"Emily watches TV while her brother cooks; their mother waters the plants.",
+"Emily goes shopping after dinner while her brother plays computer games.",
+"Emily cleans the garden while her brother takes a nap; their mother washes one plate."
 ],
 
 answer:0
 },
 
 {
-image:"images/exam1/4.png",
+image:"images/exam16/9.png",
+
+question:"Read the text. What was the most important reason for choosing the new solution?",
 
 options:[
-"Skiing is the most preferred sport.",
-"Ice-skating is more popular than diving.",
-"Diving is the most preferred activity.",
-"Bungee jumping is less popular than skiing."
+"It was cheaper but required more time.",
+"It solved the problem without wasting unnecessary resources.",
+"It allowed the students to avoid doing the experiment themselves.",
+"It made the project more entertaining for the audience."
 ],
 
-answer:2
+answer:1
 },
 
 {
-image:"images/exam1/5.png",
+image:"images/exam16/10.png",
+
+question:"Read the text. Which of the following can we infer about the students' experience?",
 
 options:[
-"Girls prefer camping more than boys.",
-"Boys enjoy playing tennis more than girls.",
-"Boys' favourite activity is going camping.",
-"Girls like riding a bike the most."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/6.png",
-
-options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/7.png",
-
-options:[
-"Internet usage was highest in 2024.",
-"Internet usage decreased every year.",
-"The lowest internet usage was in 2023.",
-"Internet usage in 2026 was higher than in 2024."
+"They understood that changing their plan could help them achieve their goal.",
+"They realized that working together was less useful than working alone.",
+"They decided that the original problem was impossible to solve.",
+"They completed the project successfully without facing any difficulties."
 ],
 
 answer:0
-},
-
-{
-image:"images/exam1/8.png",
-
-options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/9.png",
-
-options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/10.png",
-
-options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
-],
-
-answer:2
 }
 
 ];
@@ -310,7 +330,25 @@ function showQuestion(){
     progress + "%";
 
 
-    // SORU METNİ
+     // SORU METNİ
+
+  const questionText =
+    document.getElementById("questionText");
+
+questionText.textContent =
+    q.question || "";
+
+    // RESİM VARSA GÖSTER
+    if(q.image && q.image !== ""){
+
+        document.getElementById("questionImage").style.display = "block";
+        document.getElementById("questionImage").src = q.image;
+
+    }else{
+
+        document.getElementById("questionImage").style.display = "none";
+
+    }
   
 
     // RESİM VARSA GÖSTER

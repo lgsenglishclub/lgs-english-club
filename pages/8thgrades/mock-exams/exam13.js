@@ -138,130 +138,150 @@ async function addTestXP(percent) {
 const questions = [
 
 {
-image:"images/exam1/1.png",
+image:"images/exam13/1.png",
+
+question:"Read the message. Why does Daniel want to talk to Lisa?",
 
 options:[
-"Watching TV is the most preferred activity.",
-"Reading books is more popular than doing sports.",
-"Playing computer games is the most preferred activity.",
-"Doing sports is less popular than reading books."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/2.png",
-
-options:[
-"Watching TV is the least preferred activity.",
-"Playing computer games is the most preferred activity.",
-"Reading books is more popular than playing computer games.",
-"Doing sports is more popular than reading books."
+"To ask her to join a school club.",
+"To get her opinion about a problem.",
+"To invite her to his birthday party.",
+"To borrow something from her."
 ],
 
 answer:1
 },
 
 {
-image:"images/exam1/3.png",
+image:"images/exam13/2.png",
+
+question:"Look at the teenagers' plans. Who has a different plan from the others?",
 
 options:[
-"Going camping is the most popular activity.",
-"Riding a bike is less popular than playing tennis.",
-"Doing sport is more popular than going camping.",
-"Playing tennis is the most preferred activity."
+"Emily",
+"Ryan",
+"Lucy",
+"Tom"
+],
+
+answer:3
+},
+
+{
+image:"images/exam13/3.png",
+
+question:"Which of the following is NOT included in the shopping list for the recipe?",
+
+options:[
+"Flour",
+"Garlic",
+"Cheese",
+"Butter"
+],
+
+answer:3
+},
+
+{
+image:"images/exam13/4.png",
+
+question:"Read the phone conversation. What does Sarah want Mike to do?",
+
+options:[
+"Meet her at the library.",
+"Send her the project file.",
+"Call their teacher.",
+"Change their project topic."
+],
+
+answer:1
+},
+
+{
+image:"images/exam13/5.png",
+
+question:"Read the comments on the website. Who gives advice about protecting personal information?",
+
+options:[
+"Alex",
+"Jenny",
+"Mark",
+"Olivia"
+],
+
+answer:2
+},
+
+{
+image:"images/exam13/6.png",
+
+question:"Which student can take part in the adventure activity?",
+
+options:[
+"Ben, who is 12 and doesn't like swimming.",
+"Kate, who is 13 and has no camping equipment.",
+"Leo, who is 15 and has some camping experience.",
+"Anna, who is 16 but doesn't have comfortable shoes."
+],
+
+answer:2
+},
+
+{
+image:"images/exam13/7.png",
+
+question:"According to the tour brochure, which activity is NOT available during the trip?",
+
+options:[
+"Visiting a historical museum.",
+"Trying local dishes.",
+"Swimming in the sea.",
+"Going on a mountain bike tour."
+],
+
+answer:3
+},
+
+{
+image:"images/exam13/8.png",
+
+question:"The family has only one hour before their guests arrive. Which plan would help them finish all the chores?",
+
+options:[
+"Mother cooks, Jack washes the dishes and Kate cleans the living room.",
+"Mother watches TV, Jack cooks and Kate waters the garden.",
+"Mother cleans the garden, Jack watches TV and Kate prepares the table.",
+"Mother washes the dishes, Jack plays games and Kate goes shopping."
 ],
 
 answer:0
 },
 
 {
-image:"images/exam1/4.png",
+image:"images/exam13/9.png",
+
+question:"Read the text. Why do scientists use solar-powered devices in remote areas?",
 
 options:[
-"Skiing is the most preferred sport.",
-"Ice-skating is more popular than diving.",
-"Diving is the most preferred activity.",
-"Bungee jumping is less popular than skiing."
+"Because these areas usually have more electricity than cities.",
+"Because the devices can work without depending on a regular power supply.",
+"Because solar energy makes the devices work faster than computers.",
+"Because scientists want to avoid using sensors in these areas."
 ],
 
-answer:2
+answer:1
 },
 
 {
-image:"images/exam1/5.png",
+image:"images/exam13/10.png",
+
+question:"Read the text. Which of the following can we infer about the students?",
 
 options:[
-"Girls prefer camping more than boys.",
-"Boys enjoy playing tennis more than girls.",
-"Boys' favourite activity is going camping.",
-"Girls like riding a bike the most."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/6.png",
-
-options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/7.png",
-
-options:[
-"Internet usage was highest in 2024.",
-"Internet usage decreased every year.",
-"The lowest internet usage was in 2023.",
-"Internet usage in 2026 was higher than in 2024."
-],
-
-answer:0
-},
-
-{
-image:"images/exam1/8.png",
-
-options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/9.png",
-
-options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/10.png",
-
-options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
+"They gave up when they faced a problem during the project.",
+"They preferred working alone instead of sharing responsibilities.",
+"They were able to improve their project by considering different ideas.",
+"They chose their topic without discussing it with their teacher."
 ],
 
 answer:2
@@ -310,7 +330,25 @@ function showQuestion(){
     progress + "%";
 
 
-    // SORU METNİ
+     // SORU METNİ
+
+  const questionText =
+    document.getElementById("questionText");
+
+questionText.textContent =
+    q.question || "";
+
+    // RESİM VARSA GÖSTER
+    if(q.image && q.image !== ""){
+
+        document.getElementById("questionImage").style.display = "block";
+        document.getElementById("questionImage").src = q.image;
+
+    }else{
+
+        document.getElementById("questionImage").style.display = "none";
+
+    }
   
 
     // RESİM VARSA GÖSTER

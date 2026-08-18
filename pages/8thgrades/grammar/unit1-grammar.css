@@ -1,0 +1,1507 @@
+/* =========================================================
+   UNIT 1 GRAMMAR
+   OFFER EXPRESSIONS
+   Independent stylesheet
+   ========================================================= */
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.grammar-page {
+    width: min(1120px, calc(100% - 32px));
+    margin: 42px auto 80px;
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.grammar-intro {
+    text-align: center;
+    margin-bottom: 38px;
+}
+
+.lesson-label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 7px 14px;
+    margin-bottom: 13px;
+
+    border-radius: 999px;
+
+    background: #eef1ff;
+    color: #5967e8;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+}
+
+.grammar-intro h2 {
+    margin: 0;
+
+    color: #5865e8;
+
+    font-size: 36px;
+    line-height: 1.2;
+    font-weight: 850;
+}
+
+.grammar-intro p {
+    max-width: 620px;
+
+    margin: 11px auto 0;
+
+    color: #737b91;
+
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   ACCORDION
+   ========================================================= */
+
+.grammar-accordion {
+    margin: 0 0 18px;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid #e6e8ef;
+    border-radius: 20px;
+
+    box-shadow:
+        0 7px 25px rgba(28, 35, 60, 0.06);
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.grammar-accordion:hover {
+    border-color: #d9dded;
+}
+
+.grammar-accordion[open] {
+    border-color: #d7dcff;
+
+    box-shadow:
+        0 10px 32px rgba(78, 91, 190, 0.09);
+}
+
+
+/* =========================================================
+   ACCORDION HEADER
+   ========================================================= */
+
+.accordion-header {
+    display: grid;
+
+    grid-template-columns: 54px minmax(0, 1fr) 44px;
+
+    align-items: center;
+
+    gap: 17px;
+
+    min-height: 86px;
+
+    padding: 16px 20px;
+
+    cursor: pointer;
+
+    list-style: none;
+
+    user-select: none;
+}
+
+.accordion-header::-webkit-details-marker {
+    display: none;
+}
+
+.accordion-header::marker {
+    display: none;
+}
+
+
+/* =========================================================
+   SECTION NUMBER
+   ========================================================= */
+
+.section-number {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background: #eef1ff;
+    color: #5967e8;
+
+    font-size: 14px;
+    font-weight: 900;
+}
+
+
+/* =========================================================
+   ACCORDION TITLE
+   ========================================================= */
+
+.accordion-title {
+    min-width: 0;
+}
+
+.accordion-title h2 {
+    margin: 0 0 5px;
+
+    color: #252a3d;
+
+    font-size: 20px;
+    line-height: 1.3;
+    font-weight: 800;
+}
+
+.accordion-title p {
+    margin: 0;
+
+    color: #7a8194;
+
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   ACCORDION ICON
+   ========================================================= */
+
+.accordion-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #eef1ff;
+    color: #5967e8;
+
+    font-size: 25px;
+    font-weight: 400;
+
+    line-height: 1;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.grammar-accordion[open] .accordion-icon {
+    background: #5967e8;
+    color: #ffffff;
+
+    transform: rotate(180deg);
+}
+
+
+/* =========================================================
+   ACCORDION CONTENT
+   ========================================================= */
+
+.accordion-content {
+    padding: 4px 25px 28px;
+
+    border-top: 1px solid #eef0f5;
+
+    animation: unit1GrammarOpen 0.25s ease;
+}
+
+@keyframes unit1GrammarOpen {
+
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   01 — OFFER LIST
+   ========================================================= */
+
+.offer-list {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 13px;
+
+    padding-top: 20px;
+}
+
+.offer-item {
+    position: relative;
+
+    padding: 19px 20px;
+
+    border: 1px solid #e7e9f0;
+    border-radius: 15px;
+
+    background: #fafbfe;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.offer-item:hover {
+    transform: translateY(-2px);
+
+    border-color: #d7dcff;
+
+    box-shadow:
+        0 7px 20px rgba(54, 66, 150, 0.07);
+}
+
+.offer-expression {
+    margin-bottom: 10px;
+
+    color: #5967e8;
+
+    font-size: 17px;
+    font-weight: 850;
+}
+
+.offer-example {
+    color: #353b4d;
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.offer-example strong {
+    color: #5967e8;
+    font-weight: 850;
+}
+
+.offer-meaning {
+    display: inline-flex;
+
+    margin-top: 11px;
+    padding: 5px 9px;
+
+    border-radius: 8px;
+
+    background: #f0f2ff;
+    color: #707897;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   02 — ACCEPT / REFUSE
+   ========================================================= */
+
+.response-columns {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 18px;
+
+    padding-top: 20px;
+}
+
+.response-box {
+    overflow: hidden;
+
+    border-radius: 17px;
+
+    border: 1px solid #e6e8ef;
+
+    background: #fafbfc;
+}
+
+.response-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 13px;
+
+    padding: 18px 20px;
+
+    border-bottom: 1px solid #e8eaf0;
+}
+
+.response-header > span {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 12px;
+
+    font-size: 20px;
+}
+
+.response-header > div {
+    text-align: center;
+}
+
+.accepting .response-header {
+    background: #f1fbf4;
+}
+
+.accepting .response-header > span {
+    background: #dff5e5;
+}
+
+.refusing .response-header {
+    background: #fff5f5;
+}
+
+.refusing .response-header > span {
+    background: #ffe2e2;
+}
+
+.response-header h3 {
+    margin: 0 0 3px;
+
+    color: #282d3e;
+
+    font-size: 17px;
+}
+
+.response-header p {
+    margin: 0;
+
+    color: #7c8292;
+
+    font-size: 12px;
+}
+
+.response-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.response-list > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+
+    padding: 12px 18px;
+
+    border-bottom: 1px solid #eceef3;
+}
+
+.response-list > div:last-child {
+    border-bottom: none;
+}
+
+.response-list strong {
+    display: block;
+
+    width: 100%;
+
+    text-align: center;
+
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.response-list span {
+    display: block;
+
+    width: 100%;
+
+    text-align: center;
+
+    font-size: 12px;
+    color: #7c8290;
+}
+
+.accepting .response-list strong {
+    color: #25824a;
+}
+
+.refusing .response-list strong {
+    color: #bd4c4c;
+}
+
+
+/* =========================================================
+   03 — TIPS
+   ========================================================= */
+
+.tips-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 17px;
+
+    padding-top: 20px;
+}
+
+.tip-card {
+    padding: 21px;
+
+    border: 1px solid #e7e9ef;
+    border-radius: 17px;
+
+    background: #fafbfe;
+}
+
+.tip-top {
+    margin-bottom: 12px;
+}
+
+.tip-number {
+    width: 37px;
+    height: 37px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background: #eef1ff;
+    color: #5967e8;
+
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.tip-card h3 {
+    margin: 0 0 9px;
+
+    color: #292e40;
+
+    font-size: 17px;
+    line-height: 1.4;
+}
+
+.tip-card p {
+    margin: 0;
+
+    color: #6f7688;
+
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+.tip-example {
+    margin-top: 13px;
+
+    padding: 13px 15px;
+
+    border: 1px solid #e7e9f2;
+    border-radius: 11px;
+
+    background: #ffffff;
+
+    color: #4a5061;
+
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.tip-example strong {
+    color: #5967e8;
+}
+
+.dialogue-tip {
+    background: #f5f7ff;
+}
+
+.compare-box {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+
+    margin-top: 15px;
+}
+
+.compare-box div {
+    padding: 14px 10px;
+
+    border-radius: 12px;
+
+    background: #ffffff;
+
+    border: 1px solid #e8eaf0;
+
+    text-align: center;
+}
+
+.compare-box strong {
+    display: block;
+
+    color: #353b4c;
+
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.compare-box span {
+    display: block;
+
+    margin-top: 6px;
+
+    color: #777f91;
+
+    font-size: 11px;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   04 — EXAMPLE DIALOGUES
+   ========================================================= */
+
+.example-dialogues {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 17px;
+
+    padding-top: 20px;
+}
+
+.dialogue-card {
+    position: relative;
+
+    padding: 20px;
+
+    border: 1px solid #e7e9ef;
+    border-radius: 17px;
+
+    background: #fafbfe;
+}
+
+.dialogue-number {
+    display: inline-flex;
+
+    margin-bottom: 13px;
+
+    padding: 6px 10px;
+
+    border-radius: 8px;
+
+    background: #eef1ff;
+    color: #5967e8;
+
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 0.3px;
+}
+
+.dialogue-card p {
+    margin: 9px 0;
+
+    color: #464c5d;
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.dialogue-card p:last-child {
+    margin-bottom: 0;
+}
+
+.dialogue-card p strong {
+    color: #292e40;
+}
+
+.accept-text {
+    color: #21894c;
+    font-weight: 800;
+}
+
+.refuse-text {
+    color: #c04d4d;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   05 — QUESTIONS
+   ========================================================= */
+
+.question-list {
+    display: grid;
+
+    gap: 18px;
+
+    padding-top: 20px;
+}
+
+.question-card {
+    padding: 22px;
+
+    border: 1px solid #e6e8ef;
+    border-radius: 17px;
+
+    background: #fafbfe;
+}
+
+.question-number {
+    display: inline-flex;
+
+    margin-bottom: 12px;
+
+    padding: 6px 10px;
+
+    border-radius: 8px;
+
+    background: #eef1ff;
+    color: #5967e8;
+
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 0.4px;
+}
+
+.question-text {
+    margin: 0 0 17px;
+
+    color: #343a4b;
+
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.question-options {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+}
+
+.question-options button {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 1px solid #dfe2ea;
+    border-radius: 11px;
+
+    background: #ffffff;
+
+    color: #3f4556;
+
+    font-family: inherit;
+    font-size: 13px;
+    line-height: 1.5;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.18s ease,
+        border-color 0.18s ease,
+        background 0.18s ease;
+}
+
+.question-options button:hover {
+    transform: translateY(-2px);
+
+    border-color: #aeb8f5;
+
+    background: #f8f9ff;
+}
+
+.question-options button.correct {
+    background: #eaf8ee;
+    border-color: #63b879;
+    color: #217942;
+}
+
+.question-options button.wrong {
+    background: #fff0f0;
+    border-color: #e47b7b;
+    color: #b33f3f;
+}
+
+.question-options button:disabled {
+    cursor: default;
+}
+
+.question-options button:disabled:hover {
+    transform: none;
+}
+
+.question-feedback {
+    min-height: 20px;
+
+    margin-top: 13px;
+
+    color: #596174;
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .grammar-page {
+        width: min(100% - 28px, 760px);
+
+        margin-top: 32px;
+    }
+
+    .offer-list {
+        grid-template-columns: 1fr;
+    }
+
+    .response-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .tips-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .example-dialogues {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .grammar-page {
+        width: calc(100% - 18px);
+
+        margin: 22px auto 50px;
+    }
+
+    .grammar-intro {
+        margin-bottom: 25px;
+    }
+
+    .grammar-intro h2 {
+        font-size: 29px;
+    }
+
+    .grammar-intro p {
+        font-size: 14px;
+    }
+
+    .accordion-header {
+        grid-template-columns: 43px minmax(0, 1fr) 38px;
+
+        gap: 10px;
+
+        min-height: 72px;
+
+        padding: 13px;
+    }
+
+    .section-number {
+        width: 40px;
+        height: 40px;
+
+        border-radius: 12px;
+
+        font-size: 12px;
+    }
+
+    .accordion-title h2 {
+        margin-bottom: 3px;
+
+        font-size: 16px;
+    }
+
+    .accordion-title p {
+        font-size: 11px;
+
+        line-height: 1.4;
+    }
+
+    .accordion-icon {
+        width: 36px;
+        height: 36px;
+
+        font-size: 22px;
+    }
+
+    .accordion-content {
+        padding: 2px 13px 20px;
+    }
+
+    .offer-list,
+    .tips-grid,
+    .example-dialogues {
+        grid-template-columns: 1fr;
+
+        gap: 11px;
+    }
+
+    .response-columns {
+        grid-template-columns: 1fr;
+
+        gap: 13px;
+    }
+
+    .offer-item {
+        padding: 16px;
+    }
+
+    .offer-expression {
+        font-size: 15px;
+    }
+
+    .offer-example {
+        font-size: 13px;
+    }
+
+    .response-list > div {
+        grid-template-columns: 1fr;
+
+        gap: 3px;
+
+        padding: 11px 14px;
+    }
+
+    .response-list span {
+        text-align: left;
+
+        font-size: 11px;
+    }
+
+    .tip-card,
+    .dialogue-card,
+    .question-card {
+        padding: 17px;
+    }
+
+    .question-options {
+        grid-template-columns: 1fr;
+    }
+
+    .compare-box {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 450px) {
+
+    .grammar-page {
+        width: calc(100% - 12px);
+
+        margin-top: 16px;
+    }
+
+    .grammar-intro h2 {
+        font-size: 25px;
+    }
+
+    .lesson-label {
+        padding: 6px 11px;
+
+        font-size: 10px;
+    }
+
+    .accordion-header {
+        grid-template-columns: 38px minmax(0, 1fr) 34px;
+
+        padding: 11px;
+    }
+
+    .section-number {
+        width: 36px;
+        height: 36px;
+
+        border-radius: 10px;
+    }
+
+    .accordion-title h2 {
+        font-size: 14px;
+    }
+
+    .accordion-title p {
+        font-size: 10px;
+    }
+
+    .accordion-icon {
+        width: 32px;
+        height: 32px;
+
+        font-size: 19px;
+    }
+
+    .accordion-content {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .offer-item {
+        padding: 14px;
+    }
+
+    .offer-expression {
+        font-size: 14px;
+    }
+
+    .offer-example {
+        font-size: 12px;
+    }
+
+    .offer-meaning {
+        font-size: 10px;
+    }
+
+    .response-header {
+        padding: 15px;
+    }
+
+    .response-list strong {
+        font-size: 12px;
+    }
+
+    .question-text {
+        font-size: 13px;
+    }
+
+    .question-options button {
+        padding: 12px;
+
+        font-size: 12px;
+    }
+
+}
+
+/* =========================================================
+   INVITATIONS
+   ========================================================= */
+
+.invitation-intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    padding: 18px 20px;
+    margin-bottom: 22px;
+
+    border-radius: 15px;
+
+    background: #f7f8ff;
+    border: 1px solid #e6e9ff;
+
+    text-align: center;
+}
+
+.invitation-intro > span {
+    font-size: 24px;
+}
+
+.invitation-intro strong {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.invitation-intro p {
+    margin: 0;
+    color: #777;
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   INVITATION CARDS
+   ========================================================= */
+
+.invitation-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   INVITATION CARD
+   ========================================================= */
+
+.invitation-card {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+    height: 100%;
+
+    padding: 20px;
+
+    border-radius: 18px;
+
+    background: #ffffff;
+
+    border: 1px solid #e7e9f2;
+
+    box-shadow:
+        0 6px 20px rgba(0, 0, 0, 0.05);
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        border-color .2s ease;
+}
+
+.invitation-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #cfd4ff;
+
+    box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================================
+   CARD HEADER
+   ========================================================= */
+
+.invitation-card-header {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding-bottom: 16px;
+
+    margin-bottom: 16px;
+
+    border-bottom: 1px solid #eef0f5;
+}
+
+
+.invitation-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 14px;
+
+    background: #eef0ff;
+
+    font-size: 23px;
+}
+
+
+.invitation-card-header h3 {
+    margin: 0 0 4px;
+
+    color: #5865e8;
+
+    font-size: 18px;
+
+    font-weight: 800;
+}
+
+
+.invitation-card-header span:not(.invitation-icon) {
+    color: #888;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.invitation-content {
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+}
+
+
+.invitation-content p {
+    margin: 0;
+
+    padding: 9px 0;
+
+    color: #555;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    border-bottom: 1px solid #f1f2f6;
+}
+
+
+.invitation-content p:last-child {
+    border-bottom: none;
+}
+
+
+.invitation-content strong {
+    color: #5865e8;
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   INVITATION MESSAGE
+   ========================================================= */
+
+.invitation-message {
+    margin-top: auto !important;
+
+    padding: 13px 14px !important;
+
+    border: none !important;
+
+    border-radius: 12px;
+
+    background: #f7f8ff;
+
+    color: #5865e8 !important;
+
+    font-size: 13px !important;
+
+    font-weight: 700;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .invitation-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .invitation-grid {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .invitation-card {
+        padding: 17px;
+    }
+
+}
+
+/* =========================================================
+   INVITATION QUICK GUIDE
+   ========================================================= */
+
+.invitation-guide {
+    margin-top: 24px;
+
+    padding: 22px;
+
+    border-radius: 20px;
+
+    background: linear-gradient(
+        135deg,
+        #f7f8ff,
+        #ffffff
+    );
+
+    border: 1px solid #e4e7f5;
+
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+
+/* HEADER */
+
+.invitation-guide-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.guide-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 14px;
+
+    background: #eef0ff;
+
+    font-size: 28px;
+}
+
+.invitation-guide-header h3 {
+    margin: 0 0 4px;
+
+    color: #5865e8;
+
+    font-size: 23px;
+
+    font-weight: 800;
+}
+
+.invitation-guide-header p {
+    margin: 0;
+
+    color: #777;
+
+    font-size: 18px;
+}
+
+
+/* ITEMS */
+
+.guide-items {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 12px;
+}
+
+
+/* ITEM */
+
+.guide-item {
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    min-height: 78px;
+
+    padding: 13px;
+
+    border-radius: 14px;
+
+    background: #ffffff;
+
+    border: 1px solid #e8eaf1;
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        border-color .2s ease;
+}
+
+.guide-item:hover {
+    transform: translateY(-2px);
+
+    border-color: #cfd4ff;
+
+    box-shadow:
+        0 6px 16px rgba(0, 0, 0, 0.06);
+}
+
+
+/* ICON */
+
+.guide-item-icon {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 11px;
+
+    background: #f1f3ff;
+
+    font-size: 24px;
+}
+
+
+/* TEXT */
+
+.guide-item > div {
+    min-width: 0;
+}
+
+.guide-label {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #5865e8;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    letter-spacing: .8px;
+}
+
+.guide-item strong {
+    display: block;
+
+    color: #333;
+
+    font-size: 13px;
+
+    line-height: 1.3;
+}
+
+.guide-item small {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #888;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .guide-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .invitation-guide {
+        padding: 16px;
+    }
+
+    .invitation-guide-header {
+        align-items: flex-start;
+    }
+
+    .guide-items {
+        grid-template-columns: 1fr;
+    }
+
+    .guide-item {
+        min-height: auto;
+    }
+
+}
+
+
+/* =========================================================
+   INVITATIONS MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .invitation-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .invitation-intro {
+        padding: 15px;
+    }
+
+    .invitation-card-header {
+        padding: 15px;
+    }
+
+    .invitation-content {
+        padding: 16px;
+    }
+
+    .invitation-note {
+        padding: 15px;
+    }
+
+}

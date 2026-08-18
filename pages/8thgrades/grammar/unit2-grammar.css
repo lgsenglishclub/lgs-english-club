@@ -1,0 +1,1281 @@
+/* =========================================================
+   UNIT 2 GRAMMAR
+   FREQUENCY ADVERBS
+   Same design system as Unit 1 Grammar
+   ========================================================= */
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.grammar-page {
+    width: min(1120px, calc(100% - 32px));
+    margin: 42px auto 80px;
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.grammar-intro {
+    text-align: center;
+    margin-bottom: 38px;
+}
+
+.lesson-label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 7px 14px;
+    margin-bottom: 13px;
+
+    border-radius: 999px;
+
+    background: #eef1ff;
+    color: #5967e8;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+}
+
+.grammar-intro h2 {
+    margin: 0;
+
+    color: #5865e8;
+
+    font-size: 36px;
+    line-height: 1.2;
+    font-weight: 850;
+}
+
+.grammar-intro p {
+    max-width: 620px;
+
+    margin: 11px auto 0;
+
+    color: #737b91;
+
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   ACCORDION
+   ========================================================= */
+
+.grammar-accordion {
+    margin: 0 0 18px;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid #e6e8ef;
+    border-radius: 20px;
+
+    box-shadow:
+        0 7px 25px rgba(28, 35, 60, 0.06);
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.grammar-accordion:hover {
+    border-color: #d9dded;
+}
+
+.grammar-accordion[open] {
+    border-color: #d7dcff;
+
+    box-shadow:
+        0 10px 32px rgba(78, 91, 190, 0.09);
+}
+
+
+/* =========================================================
+   ACCORDION HEADER
+   ========================================================= */
+
+.accordion-header {
+    display: grid;
+    grid-template-columns: 58px 1fr 35px;
+    align-items: center;
+    gap: 18px;
+    padding: 20px 24px;
+    cursor: pointer;
+    list-style: none;
+}
+
+.accordion-header::-webkit-details-marker {
+    display: none;
+}
+
+.accordion-header::marker {
+    display: none;
+}
+
+
+/* =========================================================
+   SECTION NUMBER
+   ========================================================= */
+
+.section-number {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background: #eef1ff;
+    color: #5967e8;
+
+    font-size: 14px;
+    font-weight: 900;
+}
+
+
+/* =========================================================
+   ACCORDION TITLE
+   ========================================================= */
+
+.accordion-title {
+    min-width: 0;
+}
+
+.accordion-title h2 {
+    margin: 0 0 5px;
+
+    color: #252a3d;
+
+    font-size: 20px;
+    line-height: 1.3;
+    font-weight: 800;
+}
+
+.accordion-title p {
+    margin: 0;
+
+    color: #7a8194;
+
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   ACCORDION ICON
+   ========================================================= */
+
+.accordion-icon {
+    width: 43px;
+    height: 43px;
+    min-width: 43px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #eef0ff;
+    color: #5865e8;
+
+    font-size: 27px;
+    font-weight: 400;
+    line-height: 1;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+/* AÇIKKEN */
+
+.grammar-accordion[open] .accordion-icon {
+
+    background: #5865e8;
+    color: #ffffff;
+
+    transform: rotate(180deg);
+
+    font-size: 0;
+}
+
+
+/* AÇIKKEN + yerine − */
+
+.grammar-accordion[open] .accordion-icon::after {
+
+    content: "−";
+
+    font-size: 27px;
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.accordion-content {
+    padding: 4px 25px 28px;
+
+    border-top: 1px solid #eef0f5;
+
+    animation: unit2GrammarOpen 0.25s ease;
+}
+
+@keyframes unit2GrammarOpen {
+
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   GENERAL NOTE / WARNING
+   ========================================================= */
+
+.grammar-note,
+.grammar-warning {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    margin-top: 18px;
+    padding: 17px 18px;
+
+    border-radius: 14px;
+
+    background: #f7f8fc;
+    border: 1px solid #e8eaf1;
+}
+
+.grammar-note > span,
+.grammar-warning > span {
+    flex-shrink: 0;
+
+    font-size: 22px;
+    line-height: 1.3;
+}
+
+.grammar-note strong,
+.grammar-warning strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #303647;
+
+    font-size: 14px;
+}
+
+.grammar-note p,
+.grammar-warning p {
+    margin: 4px 0;
+
+    color: #666e80;
+
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.grammar-note > div {
+    text-align: center;
+}
+
+/* =========================================================
+   01 — FREQUENCY SCALE
+   ========================================================= */
+
+.frequency-scale {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 13px;
+
+    padding-top: 20px;
+}
+
+.frequency-item {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    min-height: 78px;
+
+    padding: 15px 16px;
+
+    border: 1px solid #e7e9f0;
+    border-radius: 15px;
+
+    background: #fafbfe;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.frequency-item:hover {
+    transform: translateY(-2px);
+
+    border-color: #d7dcff;
+
+    box-shadow:
+        0 7px 20px rgba(54, 66, 150, 0.07);
+}
+
+.frequency-percent {
+    min-width: 46px;
+
+    padding: 6px 7px;
+
+    border-radius: 9px;
+
+    background: #eef1ff;
+    color: #5967e8;
+
+    font-size: 11px;
+    font-weight: 900;
+
+    text-align: center;
+}
+
+.frequency-item > div {
+    min-width: 0;
+}
+
+.frequency-item strong {
+    display: block;
+
+    color: #303648;
+
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.frequency-item > div > span {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #777f91;
+
+    font-size: 12px;
+}
+
+.frequency-high .frequency-percent {
+    background: #e7f8ec;
+    color: #27844a;
+}
+
+.frequency-low .frequency-percent {
+    background: #fff0f0;
+    color: #c04c4c;
+}
+
+
+/* =========================================================
+   02 — HOW OFTEN
+   ========================================================= */
+
+.how-often-box {
+    margin: 20px 0;
+
+    padding: 23px;
+
+    border-radius: 17px;
+
+    background: #f7f8ff;
+    border: 1px solid #e5e8ff;
+
+    text-align: center;
+}
+
+.how-often-title {
+    margin-bottom: 7px;
+
+    color: #5967e8;
+
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.how-often-box p {
+    margin: 0;
+
+    color: #6f7688;
+
+    font-size: 14px;
+}
+
+.question-patterns {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 17px;
+}
+
+.pattern-card {
+    padding: 20px;
+
+    border: 1px solid #e7e9ef;
+    border-radius: 17px;
+
+    background: #fafbfe;
+}
+
+.pattern-label {
+    display: inline-flex;
+
+    margin-bottom: 15px;
+
+    padding: 6px 10px;
+
+    border-radius: 9px;
+
+    background: #eef1ff;
+    color: #5967e8;
+
+    font-size: 11px;
+    font-weight: 900;
+}
+
+.pattern {
+    color: #343a4b;
+
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.pattern-example,
+.pattern-answer {
+    margin-top: 14px;
+
+    padding: 13px 14px;
+
+    border-radius: 10px;
+
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.pattern-example {
+    background: #f0f3ff;
+
+    border: 1px solid #e1e5ff;
+
+    color: #4d5680;
+}
+
+.pattern-answer {
+    background: #edf8f0;
+
+    border: 1px solid #d8efde;
+
+    color: #277946;
+}
+
+
+/* =========================================================
+   WRONG / CORRECT
+   ========================================================= */
+
+.wrong-example {
+    color: #c04d4d !important;
+
+    font-weight: 800;
+}
+
+.correct-example {
+    color: #21894c !important;
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   03 — WORD ORDER
+   ========================================================= */
+
+.word-order-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 15px;
+
+    padding-top: 20px;
+}
+
+.order-card {
+    padding: 20px;
+
+    border: 1px solid #e7e9ef;
+    border-radius: 17px;
+
+    background: #fafbfe;
+}
+
+.order-number {
+    width: 36px;
+    height: 36px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background: #eef1ff;
+    color: #5967e8;
+
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.order-card h3 {
+    margin: 14px 0 8px;
+
+    color: #303647;
+
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.order-card p {
+    margin: 0;
+
+    color: #70788a;
+
+    font-size: 13px;
+    line-height: 1.65;
+}
+
+.order-example {
+    margin-top: 12px;
+
+    padding: 12px;
+
+    border: 1px solid #e8eaf0;
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    color: #454b5c;
+
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   04 — ONCE / TWICE / TIMES
+   ========================================================= */
+
+.times-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 13px;
+
+    padding-top: 20px;
+}
+
+.times-card {
+    padding: 20px 15px;
+
+    border: 1px solid #e7e9ef;
+    border-radius: 16px;
+
+    background: #fafbfe;
+
+    text-align: center;
+}
+
+.times-card strong {
+    display: block;
+
+    color: #5967e8;
+
+    font-size: 18px;
+}
+
+.times-card > span {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #777f91;
+
+    font-size: 12px;
+}
+
+.times-card p {
+    margin: 14px 0 0;
+
+    color: #555d6e;
+
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.time-expression-box {
+    margin-top: 18px;
+
+    padding: 19px;
+
+    border-radius: 16px;
+
+    background: #f7f8ff;
+
+    border: 1px solid #e5e8ff;
+}
+
+.time-expression-box h3 {
+    margin: 0 0 13px;
+
+    color: #343a4b;
+
+    font-size: 16px;
+}
+
+.time-expression-grid {
+    display: grid;
+
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+
+    gap: 9px;
+}
+
+.time-expression-grid span {
+    padding: 11px 8px;
+
+    border-radius: 9px;
+
+    background: #ffffff;
+
+    border: 1px solid #e6e8ef;
+
+    color: #596174;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   05 — EVERY
+   ========================================================= */
+
+.every-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 13px;
+
+    padding-top: 20px;
+}
+
+.every-card {
+    padding: 19px;
+
+    border: 1px solid #e7e9ef;
+    border-radius: 16px;
+
+    background: #fafbfe;
+}
+
+.every-card strong,
+.every-card span {
+    display: block;
+}
+
+.every-card strong {
+    color: #5967e8;
+
+    font-size: 17px;
+}
+
+.every-card span {
+    margin-top: 4px;
+
+    color: #777f91;
+
+    font-size: 12px;
+}
+
+.every-card p {
+    margin: 13px 0 0;
+
+    color: #555d6e;
+
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   06 — TIPS
+   ========================================================= */
+
+.tips-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 17px;
+
+    padding-top: 20px;
+}
+
+.tip-card {
+    padding: 21px;
+
+    border: 1px solid #e7e9ef;
+    border-radius: 17px;
+
+    background: #fafbfe;
+}
+
+.tip-top {
+    margin-bottom: 12px;
+}
+
+.tip-number {
+    width: 37px;
+    height: 37px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background: #eef1ff;
+    color: #5967e8;
+
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.tip-card h3 {
+    margin: 0 0 9px;
+
+    color: #292f40;
+
+    font-size: 17px;
+    line-height: 1.4;
+}
+
+.tip-card p {
+    margin: 0;
+
+    color: #6f7688;
+
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+.tip-example {
+    margin-top: 13px;
+
+    padding: 13px 15px;
+
+    border: 1px solid #e7e9f2;
+    border-radius: 11px;
+
+    background: #ffffff;
+
+    color: #4a5061;
+
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.tip-example strong {
+    color: #5967e8;
+}
+
+.compare-box {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+
+    margin-top: 15px;
+}
+
+.compare-box div {
+    padding: 14px 10px;
+
+    border-radius: 12px;
+
+    background: #ffffff;
+
+    border: 1px solid #e8eaf0;
+
+    text-align: center;
+}
+
+.compare-box strong {
+    display: block;
+
+    color: #353b4c;
+
+    font-size: 14px;
+}
+
+.compare-box span {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #777f91;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   07 — EXAMPLE DIALOGUES
+   ========================================================= */
+
+.example-dialogues {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 17px;
+
+    padding-top: 20px;
+}
+
+.dialogue-card {
+    padding: 20px;
+
+    border: 1px solid #e7e9ef;
+    border-radius: 17px;
+
+    background: #fafbfe;
+}
+
+.dialogue-number {
+    display: inline-flex;
+
+    margin-bottom: 13px;
+
+    padding: 6px 10px;
+
+    border-radius: 8px;
+
+    background: #eef1ff;
+    color: #5967e8;
+
+    font-size: 11px;
+    font-weight: 900;
+}
+
+.dialogue-card p {
+    margin: 9px 0;
+
+    color: #464c5d;
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.dialogue-card p:last-child {
+    margin-bottom: 0;
+}
+
+.dialogue-card p strong {
+    color: #292e40;
+}
+
+.accept-text {
+    color: #21894c;
+    font-weight: 800;
+}
+
+.refuse-text {
+    color: #c04d4d;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   08 — QUESTIONS
+   ========================================================= */
+
+.question-list {
+    display: grid;
+
+    gap: 18px;
+
+    padding-top: 20px;
+}
+
+.question-card {
+    padding: 22px;
+
+    border: 1px solid #e6e8ef;
+    border-radius: 17px;
+
+    background: #fafbfe;
+}
+
+.question-number {
+    display: inline-flex;
+
+    margin-bottom: 12px;
+
+    padding: 6px 10px;
+
+    border-radius: 8px;
+
+    background: #eef1ff;
+    color: #5967e8;
+
+    font-size: 11px;
+    font-weight: 900;
+}
+
+.question-text {
+    margin: 0 0 17px;
+
+    color: #343a4b;
+
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.question-options {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+}
+
+.question-options button {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 1px solid #dfe2ea;
+    border-radius: 11px;
+
+    background: #ffffff;
+
+    color: #3f4556;
+
+    font-family: inherit;
+    font-size: 13px;
+    line-height: 1.5;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.18s ease,
+        border-color 0.18s ease,
+        background 0.18s ease;
+}
+
+.question-options button:hover {
+    transform: translateY(-2px);
+
+    border-color: #aeb8f5;
+
+    background: #f8f9ff;
+}
+
+.question-options button.correct {
+    background: #eaf8ee;
+    border-color: #63b879;
+    color: #217942;
+}
+
+.question-options button.wrong {
+    background: #fff0f0;
+    border-color: #e47b7b;
+    color: #b33f3f;
+}
+
+.question-options button:disabled {
+    cursor: default;
+}
+
+.question-options button:disabled:hover {
+    transform: none;
+}
+
+.question-feedback {
+    min-height: 20px;
+
+    margin-top: 13px;
+
+    color: #596174;
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .grammar-page {
+        width: min(100% - 28px, 760px);
+
+        margin-top: 32px;
+    }
+
+    .frequency-scale {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .word-order-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .times-grid,
+    .every-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .grammar-page {
+        width: calc(100% - 18px);
+
+        margin: 22px auto 50px;
+    }
+
+    .grammar-intro {
+        margin-bottom: 25px;
+    }
+
+    .grammar-intro h2 {
+        font-size: 29px;
+    }
+
+    .grammar-intro p {
+        font-size: 14px;
+    }
+
+    .accordion-header {
+        grid-template-columns: 43px minmax(0, 1fr) 38px;
+
+        gap: 10px;
+
+        min-height: 72px;
+
+        padding: 13px;
+    }
+
+    .section-number {
+        width: 40px;
+        height: 40px;
+
+        border-radius: 12px;
+
+        font-size: 12px;
+    }
+
+    .accordion-title h2 {
+        margin-bottom: 3px;
+
+        font-size: 16px;
+    }
+
+    .accordion-title p {
+        font-size: 11px;
+
+        line-height: 1.4;
+    }
+
+    .accordion-icon {
+        width: 36px;
+        height: 36px;
+
+        font-size: 22px;
+    }
+
+    .accordion-content {
+        padding: 2px 13px 20px;
+    }
+
+    .frequency-scale,
+    .question-patterns,
+    .tips-grid,
+    .example-dialogues {
+        grid-template-columns: 1fr;
+
+        gap: 11px;
+    }
+
+    .word-order-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .times-grid,
+    .every-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .time-expression-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .question-options {
+        grid-template-columns: 1fr;
+    }
+
+    .frequency-item {
+        min-height: 68px;
+    }
+
+    .pattern-card,
+    .tip-card,
+    .dialogue-card,
+    .question-card {
+        padding: 17px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 450px) {
+
+    .grammar-page {
+        width: calc(100% - 12px);
+
+        margin-top: 16px;
+    }
+
+    .grammar-intro h2 {
+        font-size: 25px;
+    }
+
+    .lesson-label {
+        padding: 6px 11px;
+
+        font-size: 10px;
+    }
+
+    .accordion-header {
+        grid-template-columns: 38px minmax(0, 1fr) 34px;
+
+        padding: 11px;
+    }
+
+    .section-number {
+        width: 36px;
+        height: 36px;
+
+        border-radius: 10px;
+    }
+
+    .accordion-title h2 {
+        font-size: 14px;
+    }
+
+    .accordion-title p {
+        font-size: 10px;
+    }
+
+    .accordion-icon {
+        width: 32px;
+        height: 32px;
+
+        font-size: 19px;
+    }
+
+    .accordion-content {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .frequency-item {
+        padding: 13px;
+    }
+
+    .frequency-item strong {
+        font-size: 14px;
+    }
+
+    .frequency-item > div > span {
+        font-size: 11px;
+    }
+
+    .frequency-percent {
+        min-width: 42px;
+    }
+
+    .times-grid,
+    .every-grid,
+    .time-expression-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .question-text {
+        font-size: 13px;
+    }
+
+    .question-options button {
+        padding: 12px;
+
+        font-size: 12px;
+    }
+
+    .grammar-note,
+    .grammar-warning {
+        padding: 14px;
+    }
+
+}

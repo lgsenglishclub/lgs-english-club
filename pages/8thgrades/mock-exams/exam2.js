@@ -138,133 +138,133 @@ async function addTestXP(percent) {
 const questions = [
 
 {
-image:"images/exam1/1.png",
+image:"images/exam2/1.png",
 
 options:[
-"Watching TV is the most preferred activity.",
-"Reading books is more popular than doing sports.",
-"Playing computer games is the most preferred activity.",
-"Doing sports is less popular than reading books."
+"Julia spends most of her free time meeting her friends.",
+"Julia prefers doing sports to surfing the Internet.",
+"Tony spends more time online than doing any other activity.",
+"Tony and Julia spend exactly the same amount of time doing sports."
 ],
 
 answer:2
 },
 
 {
-image:"images/exam1/2.png",
+image:"images/exam2/2.png",
 
 options:[
-"Watching TV is the least preferred activity.",
-"Playing computer games is the most preferred activity.",
-"Reading books is more popular than playing computer games.",
-"Doing sports is more popular than reading books."
+"Add the sauce before cutting the vegetables.",
+"Put the noodles into cold water after cooking them.",
+"Cook the noodles first and then add the vegetables and sauce.",
+"Wash the vegetables after serving the noodles."
+],
+
+answer:2
+},
+
+{
+image:"images/exam2/3.png",
+
+options:[
+"She never keeps her friends' secrets.",
+"She always tells her friends what they want to hear.",
+"She is willing to help her friends when they have problems.",
+"She prefers spending time alone instead of meeting her friends."
+],
+
+answer:2
+},
+
+{
+image:"images/exam2/4.png",
+
+options:[
+"She wants to share her personal information with everyone.",
+"She wants to make her online account safer.",
+"She wants to spend more time on social media.",
+"She wants to buy a new computer."
 ],
 
 answer:1
 },
 
 {
-image:"images/exam1/3.png",
+image:"images/exam2/5.png",
 
 options:[
-"Going camping is the most popular activity.",
-"Riding a bike is less popular than playing tennis.",
-"Doing sport is more popular than going camping.",
-"Playing tennis is the most preferred activity."
+"He is interested in activities that require courage and physical strength.",
+"He prefers relaxing activities that he can do at home.",
+"He wants to try an activity in the water because he loves swimming.",
+"He is looking for an activity that does not require any special equipment."
 ],
 
 answer:0
 },
 
 {
-image:"images/exam1/4.png",
+image:"images/exam2/6.png",
 
 options:[
-"Skiing is the most preferred sport.",
-"Ice-skating is more popular than diving.",
-"Diving is the most preferred activity.",
-"Bungee jumping is less popular than skiing."
+"She is looking for a hotel near the airport.",
+"She wants to learn about traditional food in the city.",
+"She is searching for information about a historical place.",
+"She wants to find a suitable flight for her trip."
 ],
 
-answer:2
+answer:3
 },
 
 {
-image:"images/exam1/5.png",
+image:"images/exam2/7.png",
 
 options:[
-"Girls prefer camping more than boys.",
-"Boys enjoy playing tennis more than girls.",
-"Boys' favourite activity is going camping.",
-"Girls like riding a bike the most."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/6.png",
-
-options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/7.png",
-
-options:[
-"Internet usage was highest in 2024.",
-"Internet usage decreased every year.",
-"The lowest internet usage was in 2023.",
-"Internet usage in 2026 was higher than in 2024."
+"Jack takes out the garbage and does the laundry.",
+"Jack is responsible for all the household chores.",
+"Jack never helps his family with housework.",
+"Jack only helps with cleaning the kitchen."
 ],
 
 answer:0
 },
 
 {
-image:"images/exam1/8.png",
+image:"images/exam2/8.png",
 
 options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
+"She received the Nobel Prize before starting her scientific career.",
+"She worked in science and made important discoveries.",
+"She became a scientist because her parents were rich.",
+"She stopped working after making her first discovery."
+],
+
+answer:1
+},
+
+{
+image:"images/exam2/9.png",
+
+options:[
+"The ground becomes completely dry because there is too much rain.",
+"Large amounts of snow suddenly fall in a warm region.",
+"A powerful movement of the Earth's surface causes buildings to shake.",
+"Strong winds disappear after a long period of sunshine."
 ],
 
 answer:2
 },
 
 {
-image:"images/exam1/9.png",
+image:"images/exam2/10.png",
 
 options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
+"Would you like me to call you back later?",
+"Could you tell me who is calling, please?",
+"Can you leave a message after the tone?",
+"Why don't you turn off your phone?"
 ],
 
-answer:2
-},
-
-{
-image:"images/exam1/10.png",
-
-options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
-],
-
-answer:2
+answer:1
 }
 
 ];

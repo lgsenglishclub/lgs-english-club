@@ -140,11 +140,13 @@ const questions = [
 {
 image:"images/exam1/1.png",
 
+question:"Which of the following is TRUE according to Linda's profile?",
+
 options:[
-"Watching TV is the most preferred activity.",
-"Reading books is more popular than doing sports.",
-"Playing computer games is the most preferred activity.",
-"Doing sports is less popular than reading books."
+"Linda prefers spending time with friends who have different interests.",
+"Linda thinks being honest is less important than being funny.",
+"Linda values friends who are honest and supportive.",
+"Linda doesn't care whether her friends keep their promises."
 ],
 
 answer:2
@@ -153,50 +155,58 @@ answer:2
 {
 image:"images/exam1/2.png",
 
-options:[
-"Watching TV is the least preferred activity.",
-"Playing computer games is the most preferred activity.",
-"Reading books is more popular than playing computer games.",
-"Doing sports is more popular than reading books."
-],
-
-answer:1
-},
-
-{
-image:"images/exam1/3.png",
+question:"Which of the following is CORRECT according to the schedule below?",
 
 options:[
-"Going camping is the most popular activity.",
-"Riding a bike is less popular than playing tennis.",
-"Doing sport is more popular than going camping.",
-"Playing tennis is the most preferred activity."
+"She usually spends her free time doing outdoor activities.",
+"She never meets her friends after school.",
+"She prefers studying alone to doing any other activity.",
+"She spends most of her time playing computer games."
 ],
 
 answer:0
 },
 
 {
-image:"images/exam1/4.png",
+image:"images/exam1/3.png",
+
+question:"Which of the following should you do as the final step of the recipe?",
 
 options:[
-"Skiing is the most preferred sport.",
-"Ice-skating is more popular than diving.",
-"Diving is the most preferred activity.",
-"Bungee jumping is less popular than skiing."
+"Put the vegetables into the oven.",
+"Serve the chicken with some fresh salad.",
+"Mix the ingredients with the sauce.",
+"Add some grated cheese before serving."
 ],
 
-answer:2
+answer:3
+},
+
+{
+image:"images/exam1/4.png",
+
+question:"Which of the following completes the phone conversation?",
+
+options:[
+"Would you like to leave a message?",
+"Sure. I'll tell him to call you back.",
+"Could you speak a little louder, please?",
+"Can I speak to Daniel, please?"
+],
+
+answer:1
 },
 
 {
 image:"images/exam1/5.png",
 
+question:"Which of the following is TRUE according to the Internet usage chart?",
+
 options:[
-"Girls prefer camping more than boys.",
-"Boys enjoy playing tennis more than girls.",
-"Boys' favourite activity is going camping.",
-"Girls like riding a bike the most."
+"Most teenagers use the Internet mainly for educational purposes.",
+"Playing online games is less popular than practising English.",
+"Social networking is the most common Internet activity.",
+"Only a small number of teenagers use the Internet for communication."
 ],
 
 answer:2
@@ -205,63 +215,73 @@ answer:2
 {
 image:"images/exam1/6.png",
 
-options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/7.png",
+question:"Which of the following is the best advice for someone who wants to try an extreme sport?",
 
 options:[
-"Internet usage was highest in 2024.",
-"Internet usage decreased every year.",
-"The lowest internet usage was in 2023.",
-"Internet usage in 2026 was higher than in 2024."
+"You should wear the necessary safety equipment before starting.",
+"You don't need to take any precautions during the activity.",
+"You should choose the most difficult activity to feel excited.",
+"You can try the activity without learning the basic rules."
 ],
 
 answer:0
 },
 
 {
-image:"images/exam1/8.png",
+image:"images/exam1/7.png",
+
+question:"Which of the following is CORRECT according to the travel information?",
 
 options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
+"She is going to travel by train and stay in a hotel.",
+"She will visit Ankara before going to Cappadocia.",
+"She has planned a beach holiday with her family.",
+"She is interested in visiting historical and natural attractions."
 ],
 
-answer:2
+answer:3
+},
+
+{
+image:"images/exam1/8.png",
+
+question:"Which of the following is TRUE according to the chores chart?",
+
+options:[
+"Her father is responsible for doing all the housework.",
+"Everyone in the family has at least one responsibility.",
+"She never helps with the chores during the week.",
+"Her brother does the laundry and washes all the dishes."
+],
+
+answer:1
 },
 
 {
 image:"images/exam1/9.png",
 
+question:"Which of the following is TRUE according to the text?",
+
 options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
+"The scientist stopped working on new projects after his first invention.",
+"The scientist believes scientific studies can make people's lives easier.",
+"The scientist thinks technology has caused more problems than solutions.",
+"The scientist only studies inventions that were developed in the past."
 ],
 
-answer:2
+answer:1
 },
 
 {
 image:"images/exam1/10.png",
 
+question:"What does Emma think about being a good friend?",
+
 options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
+"Being a good friend means spending all your free time together.",
+"Good friends should always have the same interests and hobbies.",
+"Being honest and supporting each other are important in a friendship.",
+"Good friends should avoid talking about their personal problems."
 ],
 
 answer:2
@@ -311,7 +331,12 @@ function showQuestion(){
 
 
     // SORU METNİ
-  
+
+  const questionText =
+    document.getElementById("questionText");
+
+questionText.textContent =
+    q.question || "";
 
     // RESİM VARSA GÖSTER
     if(q.image && q.image !== ""){
@@ -496,9 +521,9 @@ onclick="location.reload()">
 </button>
 
 <button class="menu-btn"
-onclick="window.location.href='unit1-questions.html'"
+onclick="window.location.href='mock-exams.html'"
 
-🏠 Testler Sayfasına Dön
+🏠 Mock Exams
 
 </button>
 

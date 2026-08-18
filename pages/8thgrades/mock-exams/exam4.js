@@ -138,133 +138,133 @@ async function addTestXP(percent) {
 const questions = [
 
 {
-image:"images/exam1/1.png",
+image:"images/exam4/1.png",
 
 options:[
-"Watching TV is the most preferred activity.",
-"Reading books is more popular than doing sports.",
-"Playing computer games is the most preferred activity.",
-"Doing sports is less popular than reading books."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/2.png",
-
-options:[
-"Watching TV is the least preferred activity.",
-"Playing computer games is the most preferred activity.",
-"Reading books is more popular than playing computer games.",
-"Doing sports is more popular than reading books."
+"Pour the mixture into a bowl.",
+"Add some cheese and serve the pasta.",
+"Boil the pasta for eight minutes.",
+"Wash the tomatoes before cutting them."
 ],
 
 answer:1
 },
 
 {
-image:"images/exam1/3.png",
+image:"images/exam4/2.png",
 
 options:[
-"Going camping is the most popular activity.",
-"Riding a bike is less popular than playing tennis.",
-"Doing sport is more popular than going camping.",
-"Playing tennis is the most preferred activity."
+"What do you use the Internet for?",
+"How do you connect to the Internet?",
+"How often do you use the Internet?",
+"How many hours do you spend online?"
+],
+
+answer:1
+},
+
+{
+image:"images/exam4/3.png",
+
+options:[
+"What didn't you like about Rome?",
+"How long did you stay in Rome?",
+"What did you buy from Rome?",
+"How many people live in Rome?"
 ],
 
 answer:0
 },
 
 {
-image:"images/exam1/4.png",
+image:"images/exam4/4.png",
 
 options:[
-"Skiing is the most preferred sport.",
-"Ice-skating is more popular than diving.",
-"Diving is the most preferred activity.",
-"Bungee jumping is less popular than skiing."
+"How much does it cost?",
+"What kind of equipment do you need?",
+"Where can you do this sport?",
+"How often do you do extreme sports?"
 ],
 
-answer:2
+answer:1
 },
 
 {
-image:"images/exam1/5.png",
+image:"images/exam4/5.png",
 
 options:[
-"Girls prefer camping more than boys.",
-"Boys enjoy playing tennis more than girls.",
-"Boys' favourite activity is going camping.",
-"Girls like riding a bike the most."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/6.png",
-
-options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/7.png",
-
-options:[
-"Internet usage was highest in 2024.",
-"Internet usage decreased every year.",
-"The lowest internet usage was in 2023.",
-"Internet usage in 2026 was higher than in 2024."
+"Can I ask who is calling?.",
+"Yes, she called me yesterday.",
+"She is going to the cinema tonight.",
+"Her phone number is 0532 456 78 90."
 ],
 
 answer:0
 },
 
 {
-image:"images/exam1/8.png",
+image:"images/exam4/6.png",
 
 options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
+"You should share the responsibilities with your family.",
+"I don't think doing chores is necessary.",
+"You shouldn't help your parents at home.",
+"Only your mother should do the housework."
+],
+
+answer:0
+},
+
+{
+image:"images/exam4/7.png",
+
+options:[
+"A drought",
+"An earthquake",
+"A flood",
+"A landslide"
 ],
 
 answer:2
 },
 
 {
-image:"images/exam1/9.png",
+image:"images/exam4/8.png",
 
 options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
+"I'd love to, but I have an important exam tomorrow.",
+"I'm busy but I can't miss this chance.",
+"Sorry, I don't like watching movies with you.",
+"I'm sorry but I'm busy."
+],
+
+answer:1
+},
+
+{
+image:"images/exam4/9.png",
+
+options:[
+"She has to wash the dishes on Monday.",
+"She is responsible for taking out the garbage on Wednesday.",
+"She does the laundry twice a week.",
+"She never helps with the housework."
 ],
 
 answer:2
 },
 
 {
-image:"images/exam1/10.png",
+image:"images/exam4/10.png",
 
 options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
+"Which invention has changed our lives the most?",
+"Where did you see the disaster?",
+"Who is the most popular scientist?",
+"Who invented the first telephone?"
 ],
 
-answer:2
+answer:0
 }
 
 ];

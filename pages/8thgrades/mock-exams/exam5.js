@@ -138,130 +138,130 @@ async function addTestXP(percent) {
 const questions = [
 
 {
-image:"images/exam1/1.png",
+image:"images/exam5/1.png",
 
 options:[
-"Watching TV is the most preferred activity.",
-"Reading books is more popular than doing sports.",
-"Playing computer games is the most preferred activity.",
-"Doing sports is less popular than reading books."
+"Emma is responsible for doing the laundry.",
+"Her father takes out the garbage.",
+"Her mother washes the dishes and vacuums the floor.",
+"Her brother is responsible for setting the table."
 ],
 
-answer:2
+answer:0
 },
 
 {
-image:"images/exam1/2.png",
+image:"images/exam5/2.png",
 
 options:[
-"Watching TV is the least preferred activity.",
-"Playing computer games is the most preferred activity.",
-"Reading books is more popular than playing computer games.",
-"Doing sports is more popular than reading books."
+"She prefers fried chicken with rice.",
+"She wants grilled chicken with vegetables.",
+"She would like boiled chicken with salad.",
+"She wants roasted chicken with potatoes."
 ],
 
 answer:1
 },
 
 {
-image:"images/exam1/3.png",
+image:"images/exam5/3.png",
 
 options:[
-"Going camping is the most popular activity.",
-"Riding a bike is less popular than playing tennis.",
-"Doing sport is more popular than going camping.",
-"Playing tennis is the most preferred activity."
+"Why don't you send text messages?",
+"Can I leave a message for your brother?",
+"How do you keep in touch with your friends?",
+"How often do you check your e-mails?"
+],
+
+answer:2
+},
+
+{
+image:"images/exam5/4.png",
+
+options:[
+"A burglary",
+"A natural disaster",
+"A forest fire",
+"A traffic accident"
+],
+
+answer:3
+},
+
+{
+image:"images/exam5/5.png",
+
+options:[
+"Why did you choose Germany?",
+"Have you ever travelled abroad?",
+"Where did you stay during your trip?",
+"How long did you stay there?"
+],
+
+answer:1
+},
+
+{
+image:"images/exam5/6.png",
+
+options:[
+"Only ten percent of teenagers chat online.",
+"Less than half of the teenagers use social networking sites.",
+"Most teenagers prefer using social networking sites.",
+"More than half of the teenagers play online games."
+],
+
+answer:2
+},
+
+{
+image:"images/exam5/7.png",
+
+options:[
+"You should always wear the necessary safety equipment.",
+"You don't need any equipment for this activity.",
+"You can do extreme sports without any preparation.",
+"You should choose the most dangerous activity."
 ],
 
 answer:0
 },
 
 {
-image:"images/exam1/4.png",
+image:"images/exam5/8.png",
 
 options:[
-"Skiing is the most preferred sport.",
-"Ice-skating is more popular than diving.",
-"Diving is the most preferred activity.",
-"Bungee jumping is less popular than skiing."
+"She spent her holiday at home.",
+"She didn't enjoy any outdoor activities.",
+"She only travelled to another city for shopping.",
+"She preferred visiting adventurous places during her holiday."
 ],
 
-answer:2
+answer:3
 },
 
 {
-image:"images/exam1/5.png",
+image:"images/exam5/9.png",
 
 options:[
-"Girls prefer camping more than boys.",
-"Boys enjoy playing tennis more than girls.",
-"Boys' favourite activity is going camping.",
-"Girls like riding a bike the most."
+"A pair of diving fins",
+"A climbing rope",
+"A pair of boxing gloves",
+"A tennis racket"
 ],
 
-answer:2
+answer:1
 },
 
 {
-image:"images/exam1/6.png",
+image:"images/exam5/10.png",
 
 options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/7.png",
-
-options:[
-"Internet usage was highest in 2024.",
-"Internet usage decreased every year.",
-"The lowest internet usage was in 2023.",
-"Internet usage in 2026 was higher than in 2024."
-],
-
-answer:0
-},
-
-{
-image:"images/exam1/8.png",
-
-options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/9.png",
-
-options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/10.png",
-
-options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
+"Where did the scientist work?",
+"Which invention changed the world most?",
+"What about modern scientific studies?",
+"What did the scientist discover in the past?"
 ],
 
 answer:2

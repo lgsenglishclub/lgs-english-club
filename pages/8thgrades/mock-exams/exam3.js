@@ -138,133 +138,133 @@ async function addTestXP(percent) {
 const questions = [
 
 {
-image:"images/exam1/1.png",
+image:"images/exam3/1.png",
 
 options:[
-"Watching TV is the most preferred activity.",
-"Reading books is more popular than doing sports.",
-"Playing computer games is the most preferred activity.",
-"Doing sports is less popular than reading books."
+"Only Liam",
+"Noah and Ethan",
+"Liam and Emma",
+"Ava and Noah"
 ],
 
-answer:2
+answer:0
 },
 
 {
-image:"images/exam1/2.png",
+image:"images/exam3/2.png",
 
 options:[
-"Watching TV is the least preferred activity.",
-"Playing computer games is the most preferred activity.",
-"Reading books is more popular than playing computer games.",
-"Doing sports is more popular than reading books."
+"achievements",
+"education",
+"family",
+"birthday"
 ],
 
 answer:1
 },
 
 {
-image:"images/exam1/3.png",
+image:"images/exam3/3.png",
 
 options:[
-"Going camping is the most popular activity.",
-"Riding a bike is less popular than playing tennis.",
-"Doing sport is more popular than going camping.",
-"Playing tennis is the most preferred activity."
+"You have to wear your school uniform.",
+"You must bring your books to class.",
+"You mustn't use your mobile phone during the lesson.",
+"You have to help your parents with the housework."
+],
+
+answer:3
+},
+
+{
+image:"images/exam3/4.png",
+
+options:[
+"How long should I boil the rice?",
+"What is the cooking tip for a better taste?",
+"When should I add the vegetables?",
+"How many people can eat this meal?"
+],
+
+answer:3
+},
+
+{
+image:"images/exam3/5.png",
+
+options:[
+"I",
+"II",
+"III",
+"IV"
+],
+
+answer:2
+},
+
+{
+image:"images/exam3/6.png",
+
+options:[
+"book a table at a restaurant",
+"make a hotel reservation",
+"buy a plane ticket",
+"complain about a hotel"
 ],
 
 answer:0
 },
 
 {
-image:"images/exam1/4.png",
+image:"images/exam3/7.png",
 
 options:[
-"Skiing is the most preferred sport.",
-"Ice-skating is more popular than diving.",
-"Diving is the most preferred activity.",
-"Bungee jumping is less popular than skiing."
+"A birthday party",
+"A costume party",
+"A school trip",
+"A graduation ceremony"
+],
+
+answer:1
+},
+
+{
+image:"images/exam3/8.png",
+
+options:[
+"Oliver",
+"Sam",
+"Emily",
+"Lucas"
+],
+
+answer:1
+},
+
+{
+image:"images/exam3/9.png",
+
+options:[
+"Skydiving",
+"Kayaking",
+"Paragliding",
+"Ice climbing"
 ],
 
 answer:2
 },
 
 {
-image:"images/exam1/5.png",
+image:"images/exam3/10.png",
 
 options:[
-"Girls prefer camping more than boys.",
-"Boys enjoy playing tennis more than girls.",
-"Boys' favourite activity is going camping.",
-"Girls like riding a bike the most."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/6.png",
-
-options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/7.png",
-
-options:[
-"Internet usage was highest in 2024.",
-"Internet usage decreased every year.",
-"The lowest internet usage was in 2023.",
-"Internet usage in 2026 was higher than in 2024."
+"More people shared photos in 2020.",
+"People sent more e-mails in 2020.",
+"Fewer people made comments in 2020.",
+"More people did online shopping in 2020."
 ],
 
 answer:0
-},
-
-{
-image:"images/exam1/8.png",
-
-options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/9.png",
-
-options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
-],
-
-answer:2
-},
-
-{
-image:"images/exam1/10.png",
-
-options:[
-"Adults go camping more than teenagers.",
-"Teenagers watch TV more than adults.",
-"Teenagers and adults read books at the same rate.",
-"Adults go to the cinema less than teenagers."
-],
-
-answer:2
 }
 
 ];

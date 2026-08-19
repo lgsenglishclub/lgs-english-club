@@ -35,507 +35,131 @@ const vocabulary = [
 },
 
 {
-    word: "Addict",
-    type: "noun",
-    meaning: "Bağımlı",
-    example: "He is an internet addict.",
-    exampleTr: "O bir internet bağımlısı."
-},
-
-{
-    word: "Adult",
-    type: "noun",
-    meaning: "Yetişkin",
-    example: "Adults should teach children about internet safety.",
-    exampleTr: "Yetişkinler çocuklara internet güvenliği hakkında bilgi vermelidir."
-},
-
-{
-    word: "Advantage",
-    type: "noun",
-    meaning: "Avantaj",
-    example: "One advantage of the internet is getting information quickly.",
-    exampleTr: "İnternetin bir avantajı hızlıca bilgi almaktır."
-},
-
-{
-    word: "Advise",
-    type: "verb",
-    meaning: "Tavsiye etmek",
-    example: "I advise you to use a strong password.",
-    exampleTr: "Güçlü bir şifre kullanmanı tavsiye ederim."
-},
-
-{
-    word: "Affect",
-    type: "verb",
-    meaning: "Etkilemek",
-    example: "Spending too much time online can affect your health.",
-    exampleTr: "Çevrimiçi çok fazla zaman geçirmek sağlığını etkileyebilir."
-},
-
-{
     word: "Application",
     type: "noun",
     meaning: "Uygulama",
-    example: "I downloaded a new application.",
-    exampleTr: "Yeni bir uygulama indirdim."
+    example: "I use this application every day.",
+    exampleTr: "Bu uygulamayı her gün kullanırım."
 },
 
 {
     word: "Attachment",
     type: "noun",
     meaning: "Ek dosya",
-    example: "I sent the document as an attachment.",
-    exampleTr: "Belgeyi ek dosya olarak gönderdim."
+    example: "I sent the attachment with my e-mail.",
+    exampleTr: "Ek dosyayı e-postamla gönderdim."
 },
 
 {
-    word: "Authorities",
+    word: "Username",
     type: "noun",
-    meaning: "Yetkililer",
-    example: "The authorities warned people about the danger.",
-    exampleTr: "Yetkililer insanları tehlike hakkında uyardı."
-},
-
-{
-    word: "Become",
-    type: "phrase",
-    meaning: "olmak",
-    example: "Some teenagers can become internet addicts.",
-    exampleTr: "Bazı gençler internet bağımlısı olabilir."
-},
-
-{
-    word: "Break a relationship",
-    type: "phrase",
-    meaning: "İlişkiyi bitirmek",
-    example: "Too much time online can break relationships.",
-    exampleTr: "Nette çok fazla zaman geçirmek ilişkileri bitirebilir."
-},
-
-{
-    word: "Broken",
-    type: "adjective",
-    meaning: "Kırık, bozuk",
-    example: "My computer is broken.",
-    exampleTr: "Bilgisayarım bozuk."
-},
-
-{
-    word: "Browse",
-    type: "verb",
-    meaning: "Göz atmak",
-    example: "I like to browse websites in my free time.",
-    exampleTr: "Boş zamanlarımda web sitelerine göz atmayı severim."
-},
-
-{
-    word: "Browser",
-    type: "noun",
-    meaning: "Tarayıcı",
-    example: "Which browser do you use?",
-    exampleTr: "Hangi tarayıcıyı kullanıyorsun?"
-},
-
-{
-    word: "Buy",
-    type: "verb",
-    meaning: "Satın almak",
-    example: "I want to buy a new computer.",
-    exampleTr: "Yeni bir bilgisayar satın almak istiyorum."
-},
-
-{
-    word: "By mistake",
-    type: "phrase",
-    meaning: "Yanlışlıkla",
-    example: "I deleted the file by mistake.",
-    exampleTr: "Dosyayı yanlışlıkla sildim."
-},
-
-{
-    word: "Careful",
-    type: "adjective",
-    meaning: "Dikkatli",
-    example: "Be careful when sharing personal information online.",
-    exampleTr: "İnternette kişisel bilgilerini paylaşırken dikkatli ol."
-},
-
-{
-    word: "Cause",
-    type: "verb",
-    meaning: "Sebep olmak",
-    example: "Too much screen time can cause problems.",
-    exampleTr: "Çok fazla ekran süresi sorunlara sebep olabilir."
-},
-
-{
-    word: "Cell phone",
-    type: "noun",
-    meaning: "Cep telefonu",
-    example: "I always keep my cell phone with me.",
-    exampleTr: "Cep telefonumu her zaman yanımda tutarım."
-},
-
-{
-    word: "Change",
-    type: "verb",
-    meaning: "Değiştirmek",
-    example: "You should change your password regularly.",
-    exampleTr: "Şifreni düzenli olarak değiştirmelisin."
-},
-
-{
-    word: "Chat live",
-    type: "phrase",
-    meaning: "Canlı sohbet etmek",
-    example: "We can chat live on this website.",
-    exampleTr: "Bu web sitesinde canlı sohbet edebiliriz."
-},
-
-{
-    word: "Cheap",
-    type: "adjective",
-    meaning: "Ucuz",
-    example: "This is the cheap option.",
-    exampleTr: "Bu ucuz bir seçenek."
-},
-
-{
-    word: "Check",
-    type: "phrase",
-    meaning: "Kontrol etmek",
-    example: "Check the cable if the computer doesn't work.",
-    exampleTr: "Bilgisayar çalışmıyorsa kabloyu kontrol et."
-},
-
-{
-    word: "Comment",
-    type: "verb",
-    meaning: "Yorum yapmak",
-    example: "Many people comment on this post.",
-    exampleTr: "Birçok insan bu gönderiye yorum yapıyor."
-},
-
-{
-    word: "Post",
-    type: "noun",
-    meaning: "Gönderi",
-    example: "I want to comment on your post.",
-    exampleTr: "Gönderine yorum yapmak istiyorum."
-},
-
-{
-    word: "Communicate",
-    type: "verb",
-    meaning: "İletişim kurmak",
-    example: "We use the internet to communicate with others.",
-    exampleTr: "Başkalarıyla iletişim kurmak için interneti kullanıyoruz."
-},
-
-{
-    word: "Confirm",
-    type: "verb",
-    meaning: "Onaylamak",
-    example: "Please confirm your e-mail address.",
-    exampleTr: "Lütfen e-posta adresini onayla."
-},
-
-{
-    word: "Connect",
-    type: "verb",
-    meaning: "Bağlanmak",
-    example: "I can't connect to the internet.",
-    exampleTr: "İnternete bağlanamıyorum."
-},
-
-{
-    word: "Connection",
-    type: "noun",
-    meaning: "Bağlantı",
-    example: "The internet connection is very slow.",
-    exampleTr: "İnternet bağlantısı çok yavaş."
-},
-
-{
-    word: "Contact",
-    type: "verb",
-    meaning: "İletişime geçmek",
-    example: "You can contact me by e-mail.",
-    exampleTr: "Benimle e-posta yoluyla iletişime geçebilirsin."
-},
-
-{
-    word: "Conversation",
-    type: "noun",
-    meaning: "Konuşma",
-    example: "We had a long conversation online.",
-    exampleTr: "İnternette uzun bir konuşma yaptık."
-},
-
-{
-    word: "Create",
-    type: "phrase",
-    meaning: "Oluşturmak",
-    example: "Many teenagers create content for social media.",
-    exampleTr: "Birçok genç sosyal medya için içerik oluşturuyor."
-},
-
-{
-    word: "Dangerous",
-    type: "adjective",
-    meaning: "Tehlikeli",
-    example: "Sharing personal information online can be dangerous.",
-    exampleTr: "İnternette kişisel bilgileri paylaşmak tehlikeli olabilir."
-},
-
-{
-    word: "Delete",
-    type: "verb",
-    meaning: "Silmek",
-    example: "Don't forget to delete old messages.",
-    exampleTr: "Eski mesajları silmeyi unutma."
-},
-
-{
-    word: "Detail",
-    type: "noun",
-    meaning: "Detay",
-    example: "Please read the details carefully.",
-    exampleTr: "Lütfen detayları dikkatlice oku."
-},
-
-{
-    word: "Develop",
-    type: "phrase",
-    meaning: "Geliştirmek",
-    example: "Meeting people can develop your social skills.",
-    exampleTr: "İnsanlarla tanışmak sosyal becerilerini geliştirebilir."
-},
-
-{
-    word: "Disadvantage",
-    type: "noun",
-    meaning: "Dezavantaj",
-    example: "One disadvantage of the internet is spending too much time online.",
-    exampleTr: "İnternetin bir dezavantajı çevrimiçi çok fazla zaman geçirmektir."
-},
-
-{
-    word: "Do research",
-    type: "phrase",
-    meaning: "Araştırma yapmak",
-    example: "I use the internet to do research for my homework.",
-    exampleTr: "Ödevim için araştırma yapmak amacıyla interneti kullanıyorum."
-},
-
-{
-    word: "Download",
-    type: "verb",
-    meaning: "İndirmek",
-    example: "I downloaded the application yesterday.",
-    exampleTr: "Uygulamayı dün indirdim."
-},
-
-{
-    word: "Easy",
-    type: "adjective",
-    meaning: "Kolay",
-    example: "This is an easy way to connect to the internet.",
-    exampleTr: "Bu internete bağlanmanın kolay bir yolu."
-},
-
-{
-    word: "Feel",
-    type: "phrase",
-    meaning: "Hissetmek",
-    example: "Some people feel isolated.",
-    exampleTr: "Bazı insanlar yalnız hisseder."
-},
-
-{
-    word: "Get information",
-    type: "phrase",
-    meaning: "Bilgi almak",
-    example: "We can get information quickly on the internet.",
-    exampleTr: "İnternetten hızlıca bilgi alabiliriz."
-},
-
-{
-    word: "Do harm",
-    type: "phrase",
-    meaning: "Zarar vermek",
-    example: "Spending too much time online can do harm.",
-    exampleTr: "İnternette çok fazla zaman geçirmek zarar verebilir."
-},
-
-{
-    word: "Go online",
-    type: "phrase",
-    meaning: "Çevrimiçi olmak",
-    example: "I go online every evening.",
-    exampleTr: "Her akşam çevrimiçi olurum."
-},
-
-{
-    word: "Harmful",
-    type: "adjective",
-    meaning: "Zararlı",
-    example: "Too much screen time can be harmful.",
-    exampleTr: "Çok fazla ekran süresi zararlı olabilir."
-},
-
-{
-    word: "Hour",
-    type: "noun",
-    meaning: "Saat",
-    example: "I spend one hour online every day.",
-    exampleTr: "Her gün internette bir saat geçiririm."
-},
-
-{
-    word: "Ignore",
-    type: "verb",
-    meaning: "Görmezden gelmek",
-    example: "Don't ignore online safety rules.",
-    exampleTr: "İnternet güvenliği kurallarını görmezden gelme."
-},
-
-{
-    word: "Important",
-    type: "adjective",
-    meaning: "Önemli",
-    example: "Internet safety is very important.",
-    exampleTr: "İnternet güvenliği çok önemlidir."
-},
-
-{
-    word: "Instant messaging",
-    type: "noun",
-    meaning: "Anlık mesajlaşma",
-    example: "Instant messaging is a fast way to communicate.",
-    exampleTr: "Anlık mesajlaşma hızlı bir iletişim yoludur."
-},
-
-{
-    word: "Keep in touch ",
-    type: "phrase",
-    meaning: "İletişimde kalmak",
-    example: "I use social media to keep in touch with my friends.",
-    exampleTr: "Arkadaşlarımla iletişimde kalmak için sosyal medya kullanıyorum."
-},
-
-{
-    word: "Leave",
-    type: "verb",
-    meaning: "Bırakmak",
-    example: "Don't forget to leave a comment.",
-    exampleTr: "Yorum bırakmayı unutma."
-},
-
-{
-    word: "Letter",
-    type: "noun",
-    meaning: "Mektup",
-    example: "I wrote a letter to my friend.",
-    exampleTr: "Arkadaşıma bir mektup yazdım."
-},
-
-{
-    word: "Log in",
-    type: "phrasal verb",
-    meaning: "Giriş yapmak",
-    example: "I need to log in to my account.",
-    exampleTr: "Hesabıma giriş yapmam gerekiyor."
-},
-
-{
-    word: "Log off",
-    type: "phrasal verb",
-    meaning: "Çıkış yapmak",
-    example: "Don't forget to log off your account.",
-    exampleTr: "Hesabından çıkış yapmayı unutma."
-},
-
-{
-    word: "Make life difficult",
-    type: "phrase",
-    meaning: "Hayatı zorlaştırmak",
-    example: "Too much screen time can make life difficult.",
-    exampleTr: "Çok fazla ekran süresi hayatı zorlaştırabilir."
-},
-
-{
-    word: "Make new friends",
-    type: "phrase",
-    meaning: "Yeni arkadaşlar edinmek",
-    example: "Social media can help us make new friends.",
-    exampleTr: "Sosyal medya yeni arkadaşlar edinmemize yardımcı olabilir."
-},
-
-{
-    word: "Mean",
-    type: "verb",
-    meaning: "Anlamına gelmek",
-    example: "What does this word mean?",
-    exampleTr: "Bu kelime ne anlama geliyor?"
-},
-
-{
-    word: "Stranger",
-    type: "phrase",
-    meaning: "Yabancı",
-    example: "You shouldn't meet strangers.",
-    exampleTr: "Yabancılarla buluşmamalısın."
-},
-
-{
-    word: "Member",
-    type: "noun",
-    meaning: "Üye",
-    example: "She is a member of the website.",
-    exampleTr: "O, web sitesinin bir üyesidir."
-},
-
-{
-    word: "Others",
-    type: "pronoun",
-    meaning: "Diğerleri",
-    example: "We should respect others online.",
-    exampleTr: "İnternette diğerlerine saygı göstermeliyiz."
+    meaning: "Kullanıcı adı",
+    example: "Enter your username to log in.",
+    exampleTr: "Giriş yapmak için kullanıcı adını gir."
 },
 
 {
     word: "Password",
     type: "noun",
     meaning: "Şifre",
-    example: "You should choose a strong password.",
-    exampleTr: "Güçlü bir şifre seçmelisin."
+    example: "You should keep your password secret.",
+    exampleTr: "Şifreni gizli tutmalısın."
 },
 
 {
-    word: "Percent",
+    word: "Search engine",
     type: "noun",
-    meaning: "Yüzde",
-    example: "Ninety percent of the students use the internet.",
-    exampleTr: "Öğrencilerin yüzde doksanı internet kullanıyor."
+    meaning: "Arama motoru",
+    example: "I used a search engine to find the information.",
+    exampleTr: "Bilgiyi bulmak için bir arama motoru kullandım."
 },
 
 {
-    word: "Phone call",
+    word: "Wireless",
+    type: "adjective",
+    meaning: "Kablosuz ağ",
+    example: "We have a wireless internet connection at home.",
+    exampleTr: "Evimizde kablosuz internet bağlantısı var."
+},
+
+{
+    word: "Connection",
     type: "noun",
-    meaning: "Telefon görüşmesi",
-    example: "I had a phone call with my friend.",
-    exampleTr: "Arkadaşımla telefon görüşmesi yaptım."
+    meaning: "Bağlantı",
+    example: "The internet connection is very slow today.",
+    exampleTr: "İnternet bağlantısı bugün çok yavaş."
 },
 
 {
-    word: "Prefer",
-    type: "verb",
-    meaning: "Tercih etmek",
-    example: "I prefer chatting online to making phone calls.",
-    exampleTr: "Telefon görüşmesi yapmaktansa çevrimiçi sohbet etmeyi tercih ederim."
+    word: "Website",
+    type: "noun",
+    meaning: "Web sitesi",
+    example: "I visited the school website.",
+    exampleTr: "Okulun web sitesini ziyaret ettim."
+},
+
+{
+    word: "Browser",
+    type: "noun",
+    meaning: "Tarayıcı",
+    example: "Open the website in your browser.",
+    exampleTr: "Web sitesini tarayıcında aç."
+},
+
+{
+    word: "File",
+    type: "noun",
+    meaning: "Dosya",
+    example: "I saved the file on my computer.",
+    exampleTr: "Dosyayı bilgisayarıma kaydettim."
+},
+
+{
+    word: "Social network",
+    type: "noun",
+    meaning: "Sosyal ağ",
+    example: "Many teenagers use social networks.",
+    exampleTr: "Birçok genç sosyal ağları kullanıyor."
+},
+
+{
+    word: "Computer",
+    type: "noun",
+    meaning: "Bilgisayar",
+    example: "I do my homework on my computer.",
+    exampleTr: "Ödevimi bilgisayarımda yaparım."
+},
+
+{
+    word: "Smart phone",
+    type: "noun",
+    meaning: "Akıllı telefon",
+    example: "My smart phone has a good camera.",
+    exampleTr: "Akıllı telefonumun iyi bir kamerası var."
+},
+
+{
+    word: "Online",
+    type: "adjective",
+    meaning: "Çevrimiçi",
+    example: "I am online now.",
+    exampleTr: "Şu anda çevrimiçiyim."
+},
+
+{
+    word: "Offline",
+    type: "adjective",
+    meaning: "Çevrimdışı",
+    example: "He is offline at the moment.",
+    exampleTr: "O şu anda çevrimdışı."
+},
+
+{
+    word: "Post",
+    type: "noun",
+    meaning: "Gönderi",
+    example: "She shared a new post on social media.",
+    exampleTr: "Sosyal medyada yeni bir gönderi paylaştı."
 },
 
 {
@@ -543,7 +167,39 @@ const vocabulary = [
     type: "verb",
     meaning: "Kaydolmak",
     example: "You need to register before using the website.",
-    exampleTr: "Web sitesini kullanmadan önce kaydolman gerekiyor."
+    exampleTr: "Web sitesini kullanmadan önce kaydolmalısın."
+},
+
+{
+    word: "Sign up",
+    type: "verb",
+    meaning: "Kayıt olmak",
+    example: "I signed up for a new website.",
+    exampleTr: "Yeni bir web sitesine kayıt oldum."
+},
+
+{
+    word: "Log in",
+    type: "verb",
+    meaning: "Giriş yapmak",
+    example: "Please log in to your account.",
+    exampleTr: "Lütfen hesabına giriş yap."
+},
+
+{
+    word: "Log off",
+    type: "verb",
+    meaning: "Çıkış yapmak",
+    example: "Don't forget to log off after using the computer.",
+    exampleTr: "Bilgisayarı kullandıktan sonra çıkış yapmayı unutma."
+},
+
+{
+    word: "Reset",
+    type: "verb",
+    meaning: "Sıfırlamak",
+    example: "I forgot my password, so I need to reset it.",
+    exampleTr: "Şifremi unuttum, bu yüzden onu sıfırlamam gerekiyor."
 },
 
 {
@@ -563,260 +219,139 @@ const vocabulary = [
 },
 
 {
-    word: "Reset",
+    word: "Send",
     type: "verb",
-    meaning: "Sıfırlamak",
-    example: "I forgot my password, so I need to reset it.",
-    exampleTr: "Şifremi unuttum, bu yüzden onu sıfırlamam gerekiyor."
+    meaning: "Göndermek",
+    example: "I will send you the file.",
+    exampleTr: "Sana dosyayı göndereceğim."
 },
 
 {
-    word: "Follow online courses",
-    type: "phrase",
-    meaning: "Çevrimiçi kursları takip etmek",
-    example: "I follow online courses to improve my English.",
-    exampleTr: "İngilizcemi geliştirmek için çevrimiçi kursları takip ediyorum."
+    word: "Search",
+    type: "verb",
+    meaning: "Araştırmak",
+    example: "I searched for information on the Internet.",
+    exampleTr: "İnternette bilgi araştırdım."
 },
 
 {
-    word: "Safety",
-    type: "noun",
-    meaning: "Güvenlik",
-    example: "Internet safety is important for everyone.",
-    exampleTr: "İnternet güvenliği herkes için önemlidir."
+    word: "Save",
+    type: "verb",
+    meaning: "Kaydetmek",
+    example: "Don't forget to save the document.",
+    exampleTr: "Belgeyi kaydetmeyi unutma."
 },
 
 {
-    word: "Screen",
-    type: "noun",
-    meaning: "Ekran",
-    example: "Don't look at the screen for too long.",
-    exampleTr: "Ekrana çok uzun süre bakma."
+    word: "Change",
+    type: "verb",
+    meaning: "Değiştirmek",
+    example: "You should change your password regularly.",
+    exampleTr: "Şifreni düzenli olarak değiştirmelisin."
 },
 
 {
-    word: "Etiquette",
-    type: "noun",
-    meaning: "Görgü kuralları",
-    example: "We should follow Internet etiquette.",
-    exampleTr: "İnternet görgü kurallarına uymalıyız."
+    word: "Check",
+    type: "verb",
+    meaning: "Kontrol etmek",
+    example: "Check your e-mail before you leave.",
+    exampleTr: "Gitmeden önce e-postanı kontrol et."
+},
+
+{
+    word: "Confirm",
+    type: "verb",
+    meaning: "Onaylamak",
+    example: "Please confirm your e-mail address.",
+    exampleTr: "Lütfen e-posta adresini onayla."
+},
+
+{
+    word: "Connect",
+    type: "verb",
+    meaning: "Bağlanmak",
+    example: "I can't connect to the Internet.",
+    exampleTr: "İnternete bağlanamıyorum."
+},
+
+{
+    word: "Create",
+    type: "verb",
+    meaning: "Oluşturmak",
+    example: "She created a new account.",
+    exampleTr: "Yeni bir hesap oluşturdu."
+},
+
+{
+    word: "Develop",
+    type: "verb",
+    meaning: "Geliştirmek",
+    example: "They developed a new application.",
+    exampleTr: "Yeni bir uygulama geliştirdiler."
+},
+
+{
+    word: "Communicate",
+    type: "verb",
+    meaning: "İletişim kurmak",
+    example: "We communicate with our friends online.",
+    exampleTr: "Arkadaşlarımızla çevrimiçi iletişim kurarız."
+},
+
+{
+    word: "Contact",
+    type: "verb",
+    meaning: "İletişime geçmek",
+    example: "You can contact me by e-mail.",
+    exampleTr: "Benimle e-posta yoluyla iletişime geçebilirsin."
+},
+
+{
+    word: "Attach a file",
+    type: "verb",
+    meaning: "Dosya eklemek",
+    example: "Don't forget to attach the file.",
+    exampleTr: "Dosyayı eklemeyi unutma."
 },
 
 {
     word: "Insert",
     type: "verb",
     meaning: "Eklemek",
-    example: "Insert the file into the email.",
-    exampleTr: "Dosyayı e-postaya ekle."
-},
-
-
-{
-    word: "Search engine",
-    type: "noun",
-    meaning: "Arama motoru",
-    example: "I use a search engine to find information.",
-    exampleTr: "Bilgi bulmak için bir arama motoru kullanıyorum."
+    example: "Insert the picture into the document.",
+    exampleTr: "Resmi belgeye ekle."
 },
 
 {
-    word: "Secret word",
-    type: "noun",
-    meaning: "Gizli kelime",
-    example: "Choose a secret word for your account.",
-    exampleTr: "Hesabın için bir gizli kelime seç."
-},
-
-{
-    word: "Send",
+    word: "Download",
     type: "verb",
-    meaning: "Göndermek",
-    example: "I will send you the document.",
-    exampleTr: "Sana belgeyi göndereceğim."
-},
-
-{
-    word: "Personal information",
-    type: "noun",
-    meaning: "Kişisel bilgiler",
-    example: "Never share personal information online.",
-    exampleTr: "İnternette asla kişisel bilgilerini paylaşma."
-},
-
-{
-    word: "Sign up",
-    type: "phrasal verb",
-    meaning: "Kayıt olmak",
-    example: "I signed up for a new website.",
-    exampleTr: "Yeni bir web sitesine kayıt oldum."
-},
-
-{
-    word: "Sorry to hear that",
-    type: "phrase",
-    meaning: "Bunu duyduğuma üzüldüm",
-    example: "Sorry to hear that you lost your account.",
-    exampleTr: "Hesabını kaybettiğini duyduğuma üzüldüm."
-},
-
-{
-    word: "Spend time",
-    type: "phrase",
-    meaning: "Zaman harcamak",
-    example: "Don't spend too much time online.",
-    exampleTr: "İnternette çok fazla zaman harcama."
-},
-
-{
-    word: "Worldwide",
-    type: "adverb / adjective",
-    meaning: "Dünya çapında",
-    example: "People use the Internet worldwide.",
-    exampleTr: "İnsanlar dünya çapında internet kullanıyor."
-},
-
-{
-    word: "Wireless",
-    type: "adjective",
-    meaning: "Kablosuz",
-    example: "I use a wireless connection at home.",
-    exampleTr: "Evde kablosuz bağlantı kullanıyorum."
-},
-
-{
-    word: "Store",
-    type: "verb",
-    meaning: "Depolamak",
-    example: "The website stores your information.",
-    exampleTr: "Web sitesi bilgilerini depolar."
-},
-
-{
-    word: "Surf the internet",
-    type: "phrase",
-    meaning: "İnternette gezinmek",
-    example: "I like to surf the internet in my free time.",
-    exampleTr: "Boş zamanlarımda internette gezinmeyi severim."
-},
-
-{
-    word: "Take precaution",
-    type: "phrase",
-    meaning: "Önlem almak",
-    example: "We should take precautions when using the internet.",
-    exampleTr: "İnterneti kullanırken önlem almalıyız."
-},
-
-{
-    word: "Teen",
-    type: "noun",
-    meaning: "Ergen, genç",
-    example: "Many teens use social media every day.",
-    exampleTr: "Birçok ergen her gün sosyal medya kullanıyor."
-},
-
-{
-    word: "Teenager",
-    type: "noun",
-    meaning: "Genç, ergen",
-    example: "Every teenager should know about internet safety.",
-    exampleTr: "Her genç internet güvenliği hakkında bilgi sahibi olmalıdır."
-},
-
-{
-    word: "Tell",
-    type: "verb",
-    meaning: "Söylemek",
-    example: "Never tell anyone your password.",
-    exampleTr: "Şifreni asla kimseye söyleme."
-},
-
-{
-    word: "Text",
-    type: "verb / noun",
-    meaning: "Mesaj yazmak, metin",
-    example: "I usually text my friends after school.",
-    exampleTr: "Okuldan sonra genellikle arkadaşlarıma mesaj atarım."
-},
-
-{
-    word: "Text message",
-    type: "noun",
-    meaning: "Kısa mesaj",
-    example: "I sent him a text message.",
-    exampleTr: "Ona kısa bir mesaj gönderdim."
+    meaning: "İndirmek",
+    example: "I downloaded a new game.",
+    exampleTr: "Yeni bir oyun indirdim."
 },
 
 {
     word: "Upload",
     type: "verb",
     meaning: "Yüklemek",
-    example: "I uploaded the photos to the website.",
-    exampleTr: "Fotoğrafları web sitesine yükledim."
+    example: "She uploaded a photo to her account.",
+    exampleTr: "Hesabına bir fotoğraf yükledi."
 },
 
 {
-    word: "Useful",
-    type: "adjective",
-    meaning: "Faydalı",
-    example: "The internet is useful for doing research.",
-    exampleTr: "İnternet araştırma yapmak için faydalıdır."
-},
-
-{
-    word: "Purpose",
-    type: "noun",
-    meaning: "Amaç",
-    example: "We should use technology for a useful purpose.",
-    exampleTr: "Teknolojiyi faydalı bir amaç için kullanmalıyız."
-},
-
-{
-    word: "Username",
-    type: "noun",
-    meaning: "Kullanıcı adı",
-    example: "Enter your username and password.",
-    exampleTr: "Kullanıcı adını ve şifreni gir."
-},
-
-{
-    word: "Via",
-    type: "preposition",
-    meaning: "Aracılığıyla, yoluyla",
-    example: "I sent the file via e-mail.",
-    exampleTr: "Dosyayı e-posta aracılığıyla gönderdim."
-},
-
-{
-    word: "Want",
+    word: "Delete",
     type: "verb",
-    meaning: "İstemek",
-    example: "I want to create a new account.",
-    exampleTr: "Yeni bir hesap oluşturmak istiyorum."
+    meaning: "Silmek",
+    example: "I deleted the old messages.",
+    exampleTr: "Eski mesajları sildim."
 },
 
 {
-    word: "Way",
-    type: "noun",
-    meaning: "Yol",
-    example: "The internet is a useful way to communicate.",
-    exampleTr: "İnternet iletişim kurmanın faydalı bir yoludur."
-},
-
-{
-    word: "Ways of communication",
-    type: "phrase",
-    meaning: "İletişim yolları",
-    example: "There are many ways of communication today.",
-    exampleTr: "Günümüzde birçok iletişim yolu vardır."
-},
-
-{
-    word: "Attach a file",
-    type: "phrase",
-    meaning: "Dosya eklemek",
-    example: "Don't forget to attach the file.",
-    exampleTr: "Dosyayı eklemeyi unutma."
+    word: "Comment",
+    type: "verb",
+    meaning: "Yorum yapmak",
+    example: "She commented on my post.",
+    exampleTr: "Gönderime yorum yaptı."
 },
 
 {
@@ -824,7 +359,7 @@ const vocabulary = [
     type: "verb",
     meaning: "Tıklamak",
     example: "Click the button to continue.",
-    exampleTr: "Devam etmek için butona tıkla."
+    exampleTr: "Devam etmek için düğmeye tıkla."
 },
 
 {
@@ -836,44 +371,187 @@ const vocabulary = [
 },
 
 {
-    word: "Questionnaire",
-    type: "noun",
-    meaning: "Anket",
-    example: "Please complete this questionnaire.",
-    exampleTr: "Lütfen bu anketi doldur."
-},
-
-{
-    word: "Regulate",
+    word: "Go online",
     type: "verb",
-    meaning: "Düzenlemek",
-    example: "Authorities regulate Internet services.",
-    exampleTr: "Yetkililer internet hizmetlerini düzenler."
+    meaning: "Çevrimiçi olmak",
+    example: "I usually go online after dinner.",
+    exampleTr: "Genellikle akşam yemeğinden sonra çevrimiçi olurum."
 },
 
 {
-    word: "Widespread",
-    type: "adjective",
-    meaning: "Yaygın",
-    example: "Internet use is widespread around the world.",
-    exampleTr: "İnternet kullanımı dünya genelinde yaygındır."
+    word: "Browse",
+    type: "verb",
+    meaning: "Göz atmak",
+    example: "I like browsing websites in my free time.",
+    exampleTr: "Boş zamanlarımda web sitelerine göz atmayı severim."
 },
 
+{
+    word: "Store",
+    type: "verb",
+    meaning: "Depolamak",
+    example: "We store our photos online.",
+    exampleTr: "Fotoğraflarımızı çevrimiçi depolarız."
+},
 
 {
-    word: "Social media",
+    word: "Ignore",
+    type: "verb",
+    meaning: "Görmezden gelmek",
+    example: "You should ignore messages from strangers.",
+    exampleTr: "Yabancılardan gelen mesajları görmezden gelmelisin."
+},
+
+{
+    word: "Do research",
+    type: "verb",
+    meaning: "Araştırma yapmak",
+    example: "I use the Internet to do research.",
+    exampleTr: "Araştırma yapmak için interneti kullanırım."
+},
+
+{
+    word: "Do homework",
+    type: "verb",
+    meaning: "Ödev yapmak",
+    example: "I do my homework online sometimes.",
+    exampleTr: "Bazen ödevimi çevrimiçi yaparım."
+},
+
+{
+    word: "Do online shopping",
+    type: "verb",
+    meaning: "Çevrimiçi alışveriş yapmak",
+    example: "My mother likes doing online shopping.",
+    exampleTr: "Annem çevrimiçi alışveriş yapmayı sever."
+},
+
+{
+    word: "Send emails",
+    type: "verb",
+    meaning: "E-posta göndermek",
+    example: "I send emails to my teachers.",
+    exampleTr: "Öğretmenlerime e-posta gönderirim."
+},
+
+{
+    word: "Chat live",
+    type: "verb",
+    meaning: "Canlı sohbet etmek",
+    example: "We can chat live on the website.",
+    exampleTr: "Web sitesinde canlı sohbet edebiliriz."
+},
+
+{
+    word: "Make new friends",
+    type: "verb",
+    meaning: "Yeni arkadaşlar edinmek",
+    example: "Social networks help people make new friends.",
+    exampleTr: "Sosyal ağlar insanların yeni arkadaşlar edinmesine yardımcı olur."
+},
+
+{
+    word: "Download music",
+    type: "verb",
+    meaning: "Müzik indirmek",
+    example: "He likes downloading music from the Internet.",
+    exampleTr: "İnternetten müzik indirmeyi sever."
+},
+
+{
+    word: "Upload photo",
+    type: "verb",
+    meaning: "Fotoğraf yüklemek",
+    example: "She uploaded a photo yesterday.",
+    exampleTr: "Dün bir fotoğraf yükledi."
+},
+
+{
+    word: "Surf the internet",
+    type: "verb",
+    meaning: "İnternette gezinmek",
+    example: "I surf the Internet in the evening.",
+    exampleTr: "Akşamları internette gezinirim."
+},
+
+{
+    word: "Pay the bill",
+    type: "verb",
+    meaning: "Fatura ödemek",
+    example: "My father pays the bills online.",
+    exampleTr: "Babam faturaları çevrimiçi öder."
+},
+
+{
+    word: "Play online games",
+    type: "verb",
+    meaning: "Çevrimiçi oyun oynamak",
+    example: "My brother plays online games with his friends.",
+    exampleTr: "Kardeşim arkadaşlarıyla çevrimiçi oyun oynar."
+},
+
+{
+    word: "Watch a movie or video",
+    type: "verb",
+    meaning: "Film veya video izlemek",
+    example: "We watch movies and videos online.",
+    exampleTr: "İnternette film ve videolar izleriz."
+},
+
+{
+    word: "Spend time",
+    type: "verb",
+    meaning: "Zaman harcamak",
+    example: "I spend a lot of time on social media.",
+    exampleTr: "Sosyal medyada çok zaman harcıyorum."
+},
+
+{
+    word: "Get information",
+    type: "verb",
+    meaning: "Bilgi almak",
+    example: "People use the Internet to get information.",
+    exampleTr: "İnsanlar bilgi almak için interneti kullanır."
+},
+
+{
+    word: "Follow fashion",
+    type: "verb",
+    meaning: "Modayı takip etmek",
+    example: "Some teenagers follow fashion on social media.",
+    exampleTr: "Bazı gençler sosyal medyada modayı takip eder."
+},
+
+{
+    word: "Attend online courses",
+    type: "verb",
+    meaning: "Çevrimiçi kurslara katılmak",
+    example: "I attend online courses at weekends.",
+    exampleTr: "Hafta sonları çevrimiçi kurslara katılırım."
+},
+
+{
+    word: "Read newspapers",
+    type: "verb",
+    meaning: "Gazete okumak",
+    example: "My grandfather reads newspapers online.",
+    exampleTr: "Dedem gazeteleri çevrimiçi okur."
+},
+
+{
+    word: "Read online magazines",
+    type: "verb",
+    meaning: "Çevrimiçi dergiler okumak",
+    example: "She reads online magazines in her free time.",
+    exampleTr: "Boş zamanlarında çevrimiçi dergiler okur."
+},
+
+{
+    word: "Safety",
     type: "noun",
-    meaning: "Sosyal medya",
-    example: "Social media is popular among teenagers.",
-    exampleTr: "Sosyal medya gençler arasında popülerdir."
-},
-
-{
-    word: "Social network",
-    type: "noun",
-    meaning: "Sosyal ağ",
-    example: "I use social networks to keep in touch with my friends.",
-    exampleTr: "Arkadaşlarımla iletişimde kalmak için sosyal ağları kullanıyorum."
+    meaning: "Güvenlik",
+    example: "Online safety is very important.",
+    exampleTr: "Çevrimiçi güvenlik çok önemlidir."
 },
 
 {
@@ -881,7 +559,7 @@ const vocabulary = [
     type: "noun",
     meaning: "Gizlilik",
     example: "You should protect your privacy online.",
-    exampleTr: "İnternette gizliliğini korumalısın."
+    exampleTr: "Çevrimiçi gizliliğini korumalısın."
 },
 
 {
@@ -897,103 +575,247 @@ const vocabulary = [
     type: "adjective",
     meaning: "Herkese açık",
     example: "Don't share private information in public.",
-    exampleTr: "Özel bilgilerini herkesin görebileceği şekilde paylaşma."
+    exampleTr: "Özel bilgilerini herkese açık şekilde paylaşma."
 },
 
 {
-    word: "Online",
-    type: "adjective / adverb",
-    meaning: "Çevrimiçi",
-    example: "I spend two hours online every day.",
-    exampleTr: "Her gün internette iki saat geçiriyorum."
-},
-
-{
-    word: "Do online shopping",
-    type: "phrase",
-    meaning: "Çevrimiçi alışveriş yapmak",
-    example: "My mother does online shopping.",
-    exampleTr: "Annem çevrimiçi alışveriş yapar."
-},
-
-{
-    word: "Play online games",
-    type: "phrase",
-    meaning: "Çevrimiçi oyun oynamak",
-    example: "I sometimes play online games with my friends.",
-    exampleTr: "Bazen arkadaşlarımla çevrimiçi oyun oynarım."
-},
-
-{
-    word: "Pay the bill",
-    type: "phrase",
-    meaning: "Fatura ödemek",
-    example: "We can pay the bill online.",
-    exampleTr: "Faturayı internetten ödeyebiliriz."
-},
-
-{
-    word: "Watch a movie or video",
-    type: "phrase",
-    meaning: "Film veya video izlemek",
-    example: "I watch movies and videos online.",
-    exampleTr: "İnternette film ve video izlerim."
-},
-
-{
-    word: "Use social networking sites",
-    type: "phrase",
-    meaning: "Sosyal medya sitelerini kullanmak",
-    example: "Teenagers often use social networking sites.",
-    exampleTr: "Gençler sık sık sosyal medya sitelerini kullanır."
-},
-
-{
-    word: "Social media usage",
-    type: "phrase",
-    meaning: "Sosyal medya kullanımı",
-    example: "Too much social media usage can be harmful.",
-    exampleTr: "Çok fazla sosyal medya kullanımı zararlı olabilir."
-},
-
-{
-    word: "Read newspapers",
-    type: "phrase",
-    meaning: "Gazete okumak",
-    example: "My father reads newspapers online.",
-    exampleTr: "Babam gazeteleri internetten okur."
-},
-
-{
-    word: "Read online magazines",
-    type: "phrase",
-    meaning: "Çevrimiçi dergiler okumak",
-    example: "I like reading online magazines.",
-    exampleTr: "Çevrimiçi dergiler okumayı severim."
-},
-
-{
-    word: "Send emails",
-    type: "phrase",
-    meaning: "E-posta göndermek",
-    example: "I send emails to my teachers.",
-    exampleTr: "Öğretmenlerime e-posta gönderirim."
-},
-
-{
-    word: "Offline",
-    type: "adjective / adverb",
-    meaning: "Çevrimdışı",
-    example: "I usually read books when I am offline.",
-    exampleTr: "Çevrimdışıyken genellikle kitap okurum."
-},
-
-{
-    word: "Website",
+    word: "Personal information",
     type: "noun",
-    meaning: "Web sitesi",
-    example: "I found this information on a website.",
-    exampleTr: "Bu bilgiyi bir web sitesinde buldum."
+    meaning: "Kişisel bilgiler",
+    example: "Never share your personal information with strangers.",
+    exampleTr: "Kişisel bilgilerini asla yabancılarla paylaşma."
+},
+
+{
+    word: "Secret word",
+    type: "noun",
+    meaning: "Gizli kelime",
+    example: "Choose a secret word for your account.",
+    exampleTr: "Hesabın için bir gizli kelime seç."
+},
+
+{
+    word: "Precaution",
+    type: "noun",
+    meaning: "Önlem",
+    example: "We should take precautions when using the Internet.",
+    exampleTr: "İnterneti kullanırken önlemler almalıyız."
+},
+
+{
+    word: "Questionnaire",
+    type: "noun",
+    meaning: "Anket",
+    example: "I completed an online questionnaire.",
+    exampleTr: "Çevrimiçi bir anket doldurdum."
+},
+
+{
+    word: "Authorities",
+    type: "noun",
+    meaning: "Yetkililer",
+    example: "You should contact the authorities if you have a problem.",
+    exampleTr: "Bir sorun yaşarsan yetkililerle iletişime geçmelisin."
+},
+
+{
+    word: "Purpose",
+    type: "noun",
+    meaning: "Amaç",
+    example: "What is the purpose of this website?",
+    exampleTr: "Bu web sitesinin amacı nedir?"
+},
+
+{
+    word: "Way",
+    type: "noun",
+    meaning: "Yol",
+    example: "The Internet is a useful way to communicate.",
+    exampleTr: "İnternet iletişim kurmak için faydalı bir yoldur."
+},
+
+{
+    word: "Adult",
+    type: "noun",
+    meaning: "Yetişkin",
+    example: "Adults should help children stay safe online.",
+    exampleTr: "Yetişkinler çocukların çevrimiçi güvende kalmasına yardımcı olmalıdır."
+},
+
+{
+    word: "Percent",
+    type: "noun",
+    meaning: "Yüzde",
+    example: "Eighty percent of the students use the Internet every day.",
+    exampleTr: "Öğrencilerin yüzde sekseni her gün internet kullanıyor."
+},
+
+{
+    word: "Mistake",
+    type: "noun",
+    meaning: "Yanlışlık",
+    example: "Everyone can make a mistake online.",
+    exampleTr: "Herkes internette bir hata yapabilir."
+},
+
+{
+    word: "Addict",
+    type: "noun",
+    meaning: "Bağımlı",
+    example: "He is an Internet addict.",
+    exampleTr: "O bir internet bağımlısı."
+},
+
+{
+    word: "Stranger",
+    type: "noun",
+    meaning: "Yabancı",
+    example: "Never meet a stranger you know only from the Internet.",
+    exampleTr: "Sadece internetten tanıdığın bir yabancıyla asla buluşma."
+},
+
+{
+    word: "Member",
+    type: "noun",
+    meaning: "Üye",
+    example: "She is a member of a social network.",
+    exampleTr: "O bir sosyal ağın üyesidir."
+},
+
+{
+    word: "Others",
+    type: "pronoun",
+    meaning: "Diğerleri",
+    example: "Some people share information, while others keep it private.",
+    exampleTr: "Bazı insanlar bilgi paylaşırken diğerleri onu gizli tutar."
+},
+
+{
+    word: "Teen",
+    type: "noun",
+    meaning: "Ergen, genç",
+    example: "The teen spends a lot of time online.",
+    exampleTr: "Genç internette çok zaman geçiriyor."
+},
+
+{
+    word: "Detail",
+    type: "noun",
+    meaning: "Detay",
+    example: "Don't share every detail of your private life online.",
+    exampleTr: "Özel hayatının her detayını internette paylaşma."
+},
+
+{
+    word: "Via",
+    type: "preposition",
+    meaning: "Aracılığıyla",
+    example: "We communicate via social media.",
+    exampleTr: "Sosyal medya aracılığıyla iletişim kurarız."
+},
+
+{
+    word: "Advantage",
+    type: "noun",
+    meaning: "Avantaj",
+    example: "One advantage of the Internet is easy communication.",
+    exampleTr: "İnternetin bir avantajı kolay iletişim kurmaktır."
+},
+
+{
+    word: "Disadvantage",
+    type: "noun",
+    meaning: "Dezavantaj",
+    example: "One disadvantage of social media is wasting time.",
+    exampleTr: "Sosyal medyanın bir dezavantajı zaman kaybetmektir."
+},
+
+{
+    word: "Easy",
+    type: "adjective",
+    meaning: "Kolay",
+    example: "It is easy to communicate online.",
+    exampleTr: "Çevrimiçi iletişim kurmak kolaydır."
+},
+
+{
+    word: "Worldwide",
+    type: "adjective",
+    meaning: "Dünya çapında",
+    example: "The Internet is used worldwide.",
+    exampleTr: "İnternet dünya çapında kullanılıyor."
+},
+
+{
+    word: "Widespread",
+    type: "adjective",
+    meaning: "Yaygın",
+    example: "Social media is widespread among teenagers.",
+    exampleTr: "Sosyal medya gençler arasında yaygındır."
+},
+
+{
+    word: "Safe",
+    type: "adjective",
+    meaning: "Güvenli",
+    example: "Use safe websites when shopping online.",
+    exampleTr: "Çevrimiçi alışveriş yaparken güvenli web sitelerini kullan."
+},
+
+{
+    word: "Risky",
+    type: "adjective",
+    meaning: "Riskli",
+    example: "Sharing your password is risky.",
+    exampleTr: "Şifreni paylaşmak risklidir."
+},
+
+{
+    word: "Careful",
+    type: "adjective",
+    meaning: "Dikkatli",
+    example: "Be careful when talking to strangers online.",
+    exampleTr: "İnternette yabancılarla konuşurken dikkatli ol."
+},
+
+{
+    word: "Dangerous",
+    type: "adjective",
+    meaning: "Tehlikeli",
+    example: "Sharing personal information with strangers can be dangerous.",
+    exampleTr: "Kişisel bilgileri yabancılarla paylaşmak tehlikeli olabilir."
+},
+
+{
+    word: "Harmful",
+    type: "adjective",
+    meaning: "Zararlı",
+    example: "Spending too much time online can be harmful.",
+    exampleTr: "İnternette çok fazla zaman geçirmek zararlı olabilir."
+},
+
+{
+    word: "Useful",
+    type: "adjective",
+    meaning: "Faydalı",
+    example: "The Internet is very useful for students.",
+    exampleTr: "İnternet öğrenciler için çok faydalıdır."
+},
+
+{
+    word: "Broken",
+    type: "adjective",
+    meaning: "Kırık, bozuk",
+    example: "My computer is broken.",
+    exampleTr: "Bilgisayarım bozuk."
+},
+
+{
+    word: "Important",
+    type: "adjective",
+    meaning: "Önemli",
+    example: "Online safety is important for everyone.",
+    exampleTr: "Çevrimiçi güvenlik herkes için önemlidir."
 }
 
 ];

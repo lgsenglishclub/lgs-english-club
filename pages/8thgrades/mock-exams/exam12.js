@@ -140,88 +140,88 @@ const questions = [
 {
 image:"images/exam12/1.png",
 
-question:"Which of the following is TRUE according to the conversation?",
+question:"The students have different responsibilities for the school picnic. Which of the following is NOT mentioned as a completed task?",
 
 options:[
-"Jack often shares his friends’ secrets.",
-"Mia wants to organize a party for Jack.",
-"Jack thinks everyone at school should be invited.",
-"Mia trusts Jack with the surprise."
-],
-
-answer:3
-},
-
-{
-image:"images/exam12/2.png",
-
-question:"Which activity does NOT match the student's opinion?",
-
-options:[
-"Lily – shopping",
-"Noah – chess",
-"Sophie – concerts",
-"Ethan – computer games"
-],
-
-answer:3
-},
-
-{
-image:"images/exam12/3.png",
-
-question:"Which of the following shows the correct order?",
-
-options:[
-"4 → 3 → 1 → 5 → 2",
-"3 → 4 → 1 → 5 → 2",
-"4 → 1 → 3 → 5 → 2",
-"3 → 1 → 4 → 5 → 2"
-],
-
-answer:0
-},
-
-{
-image:"images/exam12/4.png",
-
-question:"What is Ben calling Daniel for?",
-
-options:[
-"To cancel their basketball practice.",
-"To change the time of their basketball practice.",
-"To invite Daniel to a basketball match.",
-"To ask Daniel about tomorrow’s weather."
-],
-
-answer:1
-},
-
-{
-image:"images/exam12/5.png",
-
-question:"Which of the following is the BEST advice for Mert?",
-
-options:[
-"Share his password only with his closest friends.",
-"Give the information because the game is free.",
-"Avoid sharing personal information on suspicious websites.",
-"Download the game before checking the website."
+"Bringing the drinks",
+"Preparing the sandwiches",
+"Finding a place for the picnic",
+"Preparing the music playlist"
 ],
 
 answer:2
 },
 
 {
-image:"images/exam12/6.png",
+image:"images/exam12/2.png",
 
-question:"Which of the following is NOT necessary to join the activities?",
+question:"Look at the activity cards. Which activity would be the BEST choice for her?",
 
 options:[
-"Being 14 or older.",
-"Wearing comfortable clothes.",
-"Taking part in outdoor activities.",
-"Having lunch at the activity center."
+"Going hiking in the forest",
+"Watching a film at the cinema",
+"Playing tennis at the sports club",
+"Going shopping at the city centre"
+],
+
+answer:0
+},
+
+{
+image:"images/exam12/3.png",
+
+question:"Mert wants to prepare the dish shown in the recipe. Which step should he complete next to finish the dish as quickly as possible?",
+
+options:[
+"Let the mixture rest for thirty minutes.",
+"Put the prepared mixture in the oven.",
+"Chop the vegetables again.",
+"Serve the ingredients separately."
+],
+
+answer:1
+},
+
+{
+image:"images/exam12/4.png",
+
+question:"Read the phone conversation. What does the caller want the person answering the phone to do?",
+
+options:[
+"Give him information about the school trip",
+"Ask the teacher to change the meeting time",
+"Tell the teacher that he will arrive late",
+"Ask the teacher to call him back"
+],
+
+answer:3
+},
+
+{
+image:"images/exam12/5.png",
+
+question:"The students' Internet habits are shown in the chart. Which comment is NOT supported by the chart?",
+
+options:[
+"Ali: 'Using the Internet to communicate is clearly more common than using it for shopping.'",
+"Defne: 'Watching videos is more popular than playing online games.'",
+"Kerem: 'Doing homework is one of the two least common activities.'",
+"Melis: 'Shopping online is more common than communicating with friends.'"
+],
+
+answer:3
+},
+
+{
+image:"images/exam12/6.png",
+
+question:"Read the adventure camp notice. Four students are preparing for the trip. Which student has prepared something that is NOT necessary according to the notice?",
+
+options:[
+"Can, who has packed a raincoat and enough water",
+"Ece, who has comfortable walking shoes and a flashlight",
+"Mert, who has a helmet and a first-aid kit",
+"Selin, who has packed formal clothes and high-heeled shoes"
 ],
 
 answer:3
@@ -230,13 +230,13 @@ answer:3
 {
 image:"images/exam12/7.png",
 
-question:"Which destination is the MOST suitable for Tom and Ella?",
+question:"A tourist arrives at the bus station at 10:00. She has three hours before her bus leaves. According to the city map, she wants to visit a historical place, buy a traditional souvenir and eat local food. Which route is the MOST suitable?",
 
 options:[
-"A",
-"B",
-"C",
-"D"
+"Bus station → museum → old market → traditional restaurant",
+"Bus station → shopping mall → sports centre → beach",
+"Bus station → amusement park → café → shopping mall",
+"Bus station → business centre → cinema → fast-food restaurant"
 ],
 
 answer:0
@@ -245,43 +245,43 @@ answer:0
 {
 image:"images/exam12/8.png",
 
-question:"Which of the following is NOT mentioned as a responsibility?",
+question:"Look at the family's weekly schedule. On Saturday morning, everyone is free except one family member. The family wants to choose a chore that can be completed by two people together. Which chore is the MOST suitable?",
 
 options:[
-"Preparing food.",
-"Cleaning the floor.",
-"Washing the dishes.",
-"Taking out the rubbish."
-],
-
-answer:3
-},
-
-{
-image:"images/exam12/9.png",
-
-question:"According to the text, what makes the smart greenhouse useful in dry areas?",
-
-options:[
-"It allows farmers to grow vegetables without using electricity.",
-"It gives plants water automatically when the soil becomes dry.",
-"It helps farmers collect more rainwater during the summer.",
-"It keeps the temperature of the greenhouse the same all day."
+"Walking the dog",
+"Cleaning the garden",
+"Doing the laundry",
+"Setting the table for dinner"
 ],
 
 answer:1
 },
 
 {
-image:"images/exam12/10.png",
+image:"images/exam12/9.png",
 
-question:"Read the text. What can we understand about the students' project?",
+question:"Read the text.\n\nWhich of the following best explains the main purpose of Eren's invention?",
 
 options:[
-"They changed their whole project because they could not agree.",
-"They divided the work and worked together to complete the project.",
-"They prepared the presentation without using any outside information.",
-"They focused only on online games because it was the most popular topic."
+"To help students carry unfinished food instead of throwing it away",
+"To encourage students to buy more food from the cafeteria",
+"To make school bags larger and more comfortable",
+"To replace all the containers used in the cafeteria"
+],
+
+answer:0
+},
+
+{
+image:"images/exam12/10.png",
+
+question:"Read the text.\n\nWhat can we understand about Lara and İrem?",
+
+options:[
+"They always prefer exactly the same activities.",
+"They solve their disagreements by considering each other's interests.",
+"Lara gives up her favourite activities whenever İrem disagrees.",
+"İrem doesn't enjoy spending time outdoors."
 ],
 
 answer:1

@@ -155,7 +155,7 @@ answer:2
 {
 image:"images/exam11/2.png",
 
-question:"The table shows four students' free-time preferences. Which activity can all four students enjoy together?",
+question:"The table shows four students' free-time preferences. Which activity is enjoyed by only one student?",
 
 options:[
 "Going cycling",
@@ -164,49 +164,49 @@ options:[
 "Going shopping"
 ],
 
-answer:1
+answer:2
 },
 
 {
 image:"images/exam11/3.png",
 
-question:"Mert is preparing a vegetable pizza. He has already prepared the dough and chopped the vegetables. According to the recipe, what should he do before putting the pizza in the oven?",
+question:"Mert is preparing a vegetable pizza. He has already prepared the dough and chopped the vegetables. According to the recipe, what should he do next?",
 
 options:[
+"Put the pizza in the oven.",
 "Spread the tomato sauce over the dough.",
-"Take the pizza out of the oven.",
-"Serve it with a glass of juice.",
-"Let the pizza cool for ten minutes."
+"Let the pizza cool and serve it.",
+"Take the pizza out of the oven."
+],
+
+answer:1
+},
+
+{
+image:"images/exam11/4.png",
+
+question:"Linda calls Emma to invite her to a concert, but Emma is not at home. According to the situation in the picture, what should Linda do?",
+
+options:[
+"Ask Emma's sister to leave a message.",
+"Ask Emma's sister to buy the tickets.",
+"Wait at Emma's house until she comes back.",
+"Ask Emma's sister why she left home."
 ],
 
 answer:0
 },
 
 {
-image:"images/exam11/4.png",
-
-question:"You call your friend to invite her to a concert, but she isn't at home. Her sister answers the phone. Which dialogue is appropriate?",
-
-options:[
-"You should ask her to buy the tickets for me.",
-"Could you tell her that I called and ask her to call me back?",
-"I don't want to leave a message, so I'll wait here.",
-"Can you tell me why she isn't at home?"
-],
-
-answer:1
-},
-
-{
 image:"images/exam11/5.png",
 
-question:"Look at the graph about teenagers' Internet activities. Which statement is supported by the data?",
+question:"The graph shows teenagers' Internet activities. Which statement is TRUE according to the data?",
 
 options:[
-"Teenagers use the Internet more for communication than for entertainment.",
-"Doing homework is the most common Internet activity.",
-"Online gaming is more popular than watching videos.",
-"Shopping online is the least preferred activity."
+"Communication is more common than all the other activities.",
+"Online gaming is more popular than doing homework.",
+"Shopping online is more popular than entertainment.",
+"Doing homework is the second most common activity."
 ],
 
 answer:0
@@ -215,13 +215,13 @@ answer:0
 {
 image:"images/exam11/6.png",
 
-question:"Read the situation. Deniz wants to join a rafting trip with his classmates. He can swim well, but he has never tried rafting before. Which advice is the most suitable for him?",
+question:"Deniz wants to join a rafting trip for the first time. According to the information in the picture, which of the following should he do?",
 
 options:[
-"He should ignore the guide because he already knows how to swim.",
-"He should learn the safety rules and follow the guide's instructions.",
-"He should choose the fastest boat to make the trip more exciting.",
-"He should go without safety equipment because he is a good swimmer."
+"Go without a life jacket because he can swim well.",
+"Follow the guide's instructions and use the safety equipment.",
+"Choose the fastest boat without listening to the guide.",
+"Stay away from the group during the trip."
 ],
 
 answer:1
@@ -230,13 +230,13 @@ answer:1
 {
 image:"images/exam11/7.png",
 
-question:"A tourist wants to buy a traditional souvenir, visit a historical building and have dinner at a local restaurant. Which part of the city should she visit?",
+question:"A tourist wants to buy a traditional souvenir, visit a historical building and have dinner at a local restaurant. According to the information in the picture, where should she go?",
 
 options:[
+"The business centre",
 "The modern shopping district",
-"The seaside entertainment area",
 "The old town",
-"The business centre"
+"The seaside entertainment area"
 ],
 
 answer:2
@@ -245,43 +245,43 @@ answer:2
 {
 image:"images/exam11/8.png",
 
-question:"The family wants to change their weekly chore plan because one member has too many responsibilities. Which change would be the fairest?",
+question:"Look at the weekly chore chart. Which statement is TRUE?",
 
 options:[
-"Give all the chores to the parents.",
-"Cancel the chores that nobody likes.",
-"Move one of the tasks to a family member who has fewer responsibilities.",
-"Let the person with the most chores choose the tasks for everyone."
+"Dad cleans the rooms but does not set the table.",
+"Anna does the laundry but never waters the plants.",
+"Ben takes out the trash but does not clean the rooms.",
+"Mom does all the chores alone."
 ],
 
-answer:2
+answer:0
 },
 
 {
 image:"images/exam11/9.png",
 
-question:"Read the text. What was the main reason for developing the invention?",
+question:"Read the invention note. What problem does the invention aim to solve?",
 
 options:[
-"To make an existing product more expensive",
-"To solve a problem people experience in their daily lives",
-"To replace all traditional scientific methods",
-"To provide entertainment for young people"
+"People forget to drink enough water.",
+"People cannot carry water bottles easily.",
+"People spend too much money on drinks.",
+"People do not know how to exercise regularly."
 ],
 
-answer:1
+answer:0
 },
 
 {
 image:"images/exam11/10.png",
 
-question:"Read the conversation between two students. What can we understand about Emma?",
+question:"Read the conversation in the picture. Which statement is TRUE about the girl?",
 
 options:[
-"She prefers having many friends rather than a close friend.",
-"She thinks friends should always have the same hobbies.",
-"She believes trust is an important part of a friendship.",
-"She avoids sharing her problems with people she knows."
+"She prefers having many friends.",
+"She thinks friends should have the same hobbies.",
+"She believes trust is important in a friendship.",
+"She does not like sharing her ideas with friends."
 ],
 
 answer:2

@@ -39,48 +39,48 @@ const vocabulary = [
         word: "Best friend",
         type: "noun",
         meaning: "En iyi arkadaş",
-        example: "My best friend always helps me.",
-        exampleTr: "En iyi arkadaşım bana her zaman yardım eder."
+        example: "My best friend always supports me.",
+        exampleTr: "En iyi arkadaşım beni her zaman destekler."
     },
 
     {
         word: "Close friend",
         type: "noun",
         meaning: "Yakın arkadaş",
-        example: "She is a close friend of mine.",
-        exampleTr: "O benim yakın bir arkadaşım."
+        example: "She is one of my close friends.",
+        exampleTr: "O, yakın arkadaşlarımdan biridir."
     },
 
     {
         word: "Buddy",
         type: "noun",
         meaning: "Dost, kanka",
-        example: "My buddy and I play football together.",
-        exampleTr: "Kankam ve ben birlikte futbol oynarız."
+        example: "I usually hang out with my buddies after school.",
+        exampleTr: "Okuldan sonra genellikle dostlarımla vakit geçiririm."
     },
 
     {
         word: "Classmate",
         type: "noun",
         meaning: "Sınıf arkadaşı",
-        example: "My classmate sits next to me.",
-        exampleTr: "Sınıf arkadaşım yanımda oturuyor."
+        example: "My classmate helped me with my homework.",
+        exampleTr: "Sınıf arkadaşım ödevimde bana yardım etti."
     },
 
     {
         word: "Communication",
         type: "noun",
         meaning: "İletişim",
-        example: "Good communication is important in friendship.",
-        exampleTr: "İyi iletişim arkadaşlıkta önemlidir."
+        example: "Good communication is important in a friendship.",
+        exampleTr: "İyi iletişim bir arkadaşlıkta önemlidir."
     },
 
     {
         word: "Trust",
         type: "noun",
         meaning: "Güven",
-        example: "Trust is important in a friendship.",
-        exampleTr: "Güven bir arkadaşlıkta önemlidir."
+        example: "Trust is the most important part of a friendship.",
+        exampleTr: "Güven, bir arkadaşlığın en önemli parçasıdır."
     },
 
     {
@@ -95,56 +95,56 @@ const vocabulary = [
         word: "Relationship",
         type: "noun",
         meaning: "İlişki",
-        example: "They have a good relationship.",
-        exampleTr: "Onların iyi bir ilişkisi var."
+        example: "They have a strong relationship.",
+        exampleTr: "Onların güçlü bir ilişkisi var."
     },
 
     {
         word: "Invitation",
         type: "noun",
         meaning: "Davet",
-        example: "I sent an invitation to my friend.",
-        exampleTr: "Arkadaşıma bir davet gönderdim."
+        example: "I received an invitation to Sarah's party.",
+        exampleTr: "Sarah'nın partisi için bir davet aldım."
     },
 
     {
         word: "Honest",
         type: "adjective",
         meaning: "Dürüst",
-        example: "My best friend is always honest with me.",
-        exampleTr: "En iyi arkadaşım bana karşı her zaman dürüsttür."
+        example: "A good friend should be honest.",
+        exampleTr: "İyi bir arkadaş dürüst olmalıdır."
     },
 
     {
         word: "Dishonest/Liar",
-        type: "adjective / noun",
+        type: "adjective/noun",
         meaning: "Yalancı",
-        example: "He is dishonest and often tells lies.",
-        exampleTr: "O dürüst değildir ve sık sık yalan söyler."
+        example: "Nobody trusts a dishonest person.",
+        exampleTr: "Hiç kimse dürüst olmayan birine güvenmez."
     },
 
     {
         word: "Generous",
         type: "adjective",
         meaning: "Cömert",
-        example: "She is generous and likes helping others.",
-        exampleTr: "O cömerttir ve başkalarına yardım etmeyi sever."
+        example: "My friend is very generous and always shares her things.",
+        exampleTr: "Arkadaşım çok cömerttir ve eşyalarını her zaman paylaşır."
     },
 
     {
         word: "Stingy/Mean",
         type: "adjective",
         meaning: "Cimri",
-        example: "He is stingy and never shares his things.",
-        exampleTr: "O cimridir ve eşyalarını asla paylaşmaz."
+        example: "He is too stingy to share his food.",
+        exampleTr: "Yemeğini paylaşamayacak kadar cimridir."
     },
 
     {
         word: "Helpful",
         type: "adjective",
         meaning: "Yardımsever",
-        example: "My friend is very helpful when I need help.",
-        exampleTr: "Yardıma ihtiyacım olduğunda arkadaşım çok yardımseverdir."
+        example: "My classmates are always helpful.",
+        exampleTr: "Sınıf arkadaşlarım her zaman yardımseverdir."
     },
 
     {
@@ -159,32 +159,32 @@ const vocabulary = [
         word: "Polite/Kind",
         type: "adjective",
         meaning: "Kibar",
-        example: "She is polite and kind to everyone.",
-        exampleTr: "O herkese karşı kibar ve naziktir."
+        example: "She is always polite and kind to everyone.",
+        exampleTr: "O, herkese karşı her zaman kibar ve naziktir."
     },
 
     {
         word: "Rude",
         type: "adjective",
         meaning: "Kaba",
-        example: "It is rude to interrupt people.",
-        exampleTr: "İnsanların sözünü kesmek kabalıktır."
+        example: "It is rude to interrupt someone.",
+        exampleTr: "Birinin sözünü kesmek kabalıktır."
     },
 
     {
         word: "Funny",
         type: "adjective",
         meaning: "Komik, eğlenceli",
-        example: "My friend is very funny.",
-        exampleTr: "Arkadaşım çok komiktir."
+        example: "Tom is funny and makes everyone laugh.",
+        exampleTr: "Tom komiktir ve herkesi güldürür."
     },
 
     {
         word: "Boring",
         type: "adjective",
         meaning: "Sıkıcı",
-        example: "The movie was boring.",
-        exampleTr: "Film sıkıcıydı."
+        example: "The movie was boring, so we left early.",
+        exampleTr: "Film sıkıcıydı, bu yüzden erkenden ayrıldık."
     },
 
     {
@@ -192,87 +192,87 @@ const vocabulary = [
         type: "adjective",
         meaning: "Arkadaş canlısı",
         example: "Our new classmate is very friendly.",
-        exampleTr: "Yeni sınıf arkadaşımız çok arkadaş canlısıdır."
+        exampleTr: "Yeni sınıf arkadaşımız çok arkadaş canlısı."
     },
 
     {
         word: "Cheerful",
         type: "adjective",
         meaning: "Neşeli",
-        example: "She is always cheerful and happy.",
-        exampleTr: "O her zaman neşeli ve mutludur."
+        example: "She is always cheerful and positive.",
+        exampleTr: "O her zaman neşeli ve olumludur."
     },
 
     {
         word: "Aggressive",
         type: "adjective",
         meaning: "Agresif",
-        example: "He can be aggressive when he is angry.",
-        exampleTr: "Kızdığında agresif olabilir."
+        example: "He can be aggressive when he gets angry.",
+        exampleTr: "Sinirlendiğinde agresif olabilir."
     },
 
     {
         word: "Jealous",
         type: "adjective",
         meaning: "Kıskanç",
-        example: "She is jealous of her friend's success.",
-        exampleTr: "Arkadaşının başarısını kıskanıyor."
+        example: "She gets jealous when I spend time with other friends.",
+        exampleTr: "Başka arkadaşlarımla vakit geçirdiğimde kıskanıyor."
     },
 
     {
         word: "Calm",
         type: "adjective",
         meaning: "Sakin",
-        example: "My friend is calm in difficult situations.",
-        exampleTr: "Arkadaşım zor durumlarda sakindir."
+        example: "My best friend is always calm in difficult situations.",
+        exampleTr: "En iyi arkadaşım zor durumlarda her zaman sakindir."
     },
 
     {
         word: "Outgoing",
         type: "adjective",
         meaning: "Sosyal/Girişken",
-        example: "She is outgoing and makes friends easily.",
-        exampleTr: "O sosyal ve kolayca arkadaş edinir."
+        example: "Jack is outgoing and loves meeting new people.",
+        exampleTr: "Jack sosyal ve girişkendir ve yeni insanlarla tanışmayı sever."
     },
 
     {
         word: "Easygoing",
         type: "adjective",
         meaning: "Uysal",
-        example: "He is easygoing and gets along with everyone.",
-        exampleTr: "O uysaldır ve herkesle iyi anlaşır."
+        example: "My brother is easygoing and never gets angry easily.",
+        exampleTr: "Kardeşim uysaldır ve kolay kolay sinirlenmez."
     },
 
     {
         word: "Punctual",
         type: "adjective",
         meaning: "Dakik",
-        example: "My friend is always punctual.",
-        exampleTr: "Arkadaşım her zaman dakiktir."
+        example: "A punctual person always arrives on time.",
+        exampleTr: "Dakik bir insan her zaman zamanında gelir."
     },
 
     {
         word: "Laid-back",
         type: "adjective",
         meaning: "Rahat/Umursamaz",
-        example: "He is laid-back and never gets stressed.",
-        exampleTr: "O rahattır ve asla strese girmez."
+        example: "He is laid-back and doesn't worry about small problems.",
+        exampleTr: "O rahattır ve küçük sorunlar hakkında endişelenmez."
     },
 
     {
         word: "Supportive",
         type: "adjective",
         meaning: "Destekleyici",
-        example: "A good friend is always supportive.",
-        exampleTr: "İyi bir arkadaş her zaman destekleyicidir."
+        example: "A supportive friend helps you when you have problems.",
+        exampleTr: "Destekleyici bir arkadaş sorun yaşadığında sana yardım eder."
     },
 
     {
         word: "Reliable",
         type: "adjective",
         meaning: "Güvenilir",
-        example: "She is reliable and keeps her promises.",
-        exampleTr: "O güvenilirdir ve sözlerini tutar."
+        example: "Sarah is reliable, so I can always count on her.",
+        exampleTr: "Sarah güvenilirdir, bu yüzden ona her zaman güvenebilirim."
     },
 
     {
@@ -287,16 +287,16 @@ const vocabulary = [
         word: "Tactful",
         type: "adjective",
         meaning: "İnce düşünceli",
-        example: "She is tactful when talking to her friends.",
-        exampleTr: "Arkadaşlarıyla konuşurken ince düşüncelidir."
+        example: "She is tactful and never hurts people's feelings.",
+        exampleTr: "O ince düşüncelidir ve insanların duygularını asla incitmez."
     },
 
     {
         word: "Sneaky",
         type: "adjective",
         meaning: "Sinsi",
-        example: "The sneaky boy took his friend's book.",
-        exampleTr: "Sinsi çocuk arkadaşının kitabını aldı."
+        example: "Nobody likes his sneaky behavior.",
+        exampleTr: "Hiç kimse onun sinsi davranışını sevmez."
     },
 
     {
@@ -311,80 +311,80 @@ const vocabulary = [
         word: "Unfair",
         type: "adjective",
         meaning: "Adaletsiz",
-        example: "It is unfair to blame your friend.",
-        exampleTr: "Arkadaşını suçlamak adaletsizdir."
+        example: "It is unfair to blame your friend for everything.",
+        exampleTr: "Her şey için arkadaşını suçlamak adaletsizdir."
     },
 
     {
         word: "Loyal",
         type: "adjective",
         meaning: "Sadık",
-        example: "A loyal friend always stands by you.",
-        exampleTr: "Sadık bir arkadaş her zaman senin yanında olur."
+        example: "A loyal friend stays with you in difficult times.",
+        exampleTr: "Sadık bir arkadaş zor zamanlarda senin yanında olur."
     },
 
     {
         word: "Caring",
         type: "adjective",
         meaning: "İlgili",
-        example: "She is caring and always listens to me.",
-        exampleTr: "O ilgili biridir ve beni her zaman dinler."
+        example: "My mother is a caring person.",
+        exampleTr: "Annem ilgili bir insandır."
     },
 
     {
         word: "Arrogant",
         type: "adjective",
         meaning: "Kibirli",
-        example: "He is arrogant and thinks he is better than others.",
-        exampleTr: "O kibirlidir ve kendisinin diğerlerinden daha iyi olduğunu düşünür."
+        example: "Nobody likes an arrogant person.",
+        exampleTr: "Hiç kimse kibirli bir insanı sevmez."
     },
 
     {
         word: "Understanding",
         type: "adjective",
         meaning: "Anlayışlı",
-        example: "My friend is understanding when I have problems.",
-        exampleTr: "Sorunlarım olduğunda arkadaşım anlayışlıdır."
+        example: "My best friend is very understanding.",
+        exampleTr: "En iyi arkadaşım çok anlayışlıdır."
     },
 
     {
         word: "Respectful",
         type: "adjective",
         meaning: "Saygılı",
-        example: "She is respectful to her teachers and friends.",
-        exampleTr: "O öğretmenlerine ve arkadaşlarına karşı saygılıdır."
+        example: "Good friends are respectful to each other.",
+        exampleTr: "İyi arkadaşlar birbirlerine karşı saygılıdır."
     },
 
     {
         word: "Cool",
         type: "adjective",
         meaning: "Havalı",
-        example: "My new friend is really cool.",
-        exampleTr: "Yeni arkadaşım gerçekten havalı."
+        example: "My new classmate is really cool.",
+        exampleTr: "Yeni sınıf arkadaşım gerçekten havalı."
     },
 
     {
         word: "Bad-tempered",
         type: "adjective",
         meaning: "Kötü huylu",
-        example: "He is bad-tempered when he is tired.",
-        exampleTr: "Yorgun olduğunda kötü huylu olur."
+        example: "He is bad-tempered and gets angry easily.",
+        exampleTr: "O kötü huyludur ve kolayca sinirlenir."
     },
 
     {
         word: "Good-tempered",
         type: "adjective",
         meaning: "İyi huylu",
-        example: "She is good-tempered and rarely gets angry.",
-        exampleTr: "O iyi huyludur ve nadiren sinirlenir."
+        example: "She is good-tempered and gets along with everyone.",
+        exampleTr: "O iyi huyludur ve herkesle iyi anlaşır."
     },
 
     {
         word: "Invite",
         type: "verb",
         meaning: "Davet etmek",
-        example: "I want to invite my friend to my birthday party.",
-        exampleTr: "Arkadaşımı doğum günü partime davet etmek istiyorum."
+        example: "I want to invite my friends to my birthday party.",
+        exampleTr: "Arkadaşlarımı doğum günü partime davet etmek istiyorum."
     },
 
     {
@@ -399,40 +399,40 @@ const vocabulary = [
         word: "Refuse",
         type: "verb",
         meaning: "Reddetmek",
-        example: "He refused my invitation.",
-        exampleTr: "Davetimi reddetti."
+        example: "He refused my invitation because he was busy.",
+        exampleTr: "Meşgul olduğu için davetimi reddetti."
     },
 
     {
         word: "Apologize",
         type: "verb",
         meaning: "Özür dilemek",
-        example: "I apologized to my friend.",
-        exampleTr: "Arkadaşımdan özür diledim."
+        example: "I apologized to my friend for being late.",
+        exampleTr: "Geç kaldığım için arkadaşımdan özür diledim."
     },
 
     {
         word: "Forgive",
         type: "verb",
         meaning: "Affetmek",
-        example: "I forgave my friend after the argument.",
-        exampleTr: "Tartışmadan sonra arkadaşımı affettim."
+        example: "I hope you can forgive me.",
+        exampleTr: "Umarım beni affedebilirsin."
     },
 
     {
         word: "Share",
         type: "verb",
         meaning: "Paylaşmak",
-        example: "Good friends share their things.",
-        exampleTr: "İyi arkadaşlar eşyalarını paylaşır."
+        example: "Good friends share their secrets.",
+        exampleTr: "İyi arkadaşlar sırlarını paylaşır."
     },
 
     {
         word: "Join/Attend",
         type: "verb",
         meaning: "Katılmak",
-        example: "I will join the party with my friends.",
-        exampleTr: "Arkadaşlarımla partiye katılacağım."
+        example: "Would you like to join our party?",
+        exampleTr: "Partimize katılmak ister misin?"
     },
 
     {
@@ -447,369 +447,97 @@ const vocabulary = [
         word: "Keep in touch",
         type: "phrase",
         meaning: "İletişimde kalmak",
-        example: "We keep in touch during the summer.",
-        exampleTr: "Yaz boyunca iletişimde kalırız."
+        example: "Let's keep in touch after we leave school.",
+        exampleTr: "Okuldan ayrıldıktan sonra iletişimde kalalım."
     },
 
     {
         word: "Get on well with",
-        type: "phrase",
+        type: "phrasal verb",
         meaning: "İyi anlaşmak",
-        example: "I get on well with my classmates.",
-        exampleTr: "Sınıf arkadaşlarımla iyi anlaşırım."
+        example: "I get on well with all my classmates.",
+        exampleTr: "Tüm sınıf arkadaşlarımla iyi anlaşırım."
     },
 
     {
         word: "Come over",
         type: "phrasal verb",
         meaning: "Uğramak",
-        example: "Why don't you come over after school?",
-        exampleTr: "Okuldan sonra neden bize uğramıyorsun?"
+        example: "Why don't you come over this afternoon?",
+        exampleTr: "Bu öğleden sonra neden bize uğramıyorsun?"
     },
 
     {
         word: "Ask",
         type: "verb",
         meaning: "Sormak",
-        example: "I asked my friend a question.",
-        exampleTr: "Arkadaşıma bir soru sordum."
+        example: "I want to ask you a question.",
+        exampleTr: "Sana bir soru sormak istiyorum."
     },
 
     {
         word: "Communicate",
         type: "verb",
         meaning: "İletişim kurmak",
-        example: "Good friends communicate with each other.",
-        exampleTr: "İyi arkadaşlar birbirleriyle iletişim kurarlar."
+        example: "Friends should communicate with each other.",
+        exampleTr: "Arkadaşlar birbirleriyle iletişim kurmalıdır."
     },
 
     {
         word: "Keep secret",
         type: "phrase",
         meaning: "Sır tutmak",
-        example: "I can keep your secret.",
-        exampleTr: "Sırrını saklayabilirim."
+        example: "I know I can trust you to keep my secret.",
+        exampleTr: "Sırrımı tutacağına güvenebileceğimi biliyorum."
     },
 
     {
         word: "Support/Back up",
         type: "verb",
         meaning: "Desteklemek",
-        example: "My friends always support me.",
-        exampleTr: "Arkadaşlarım beni her zaman destekler."
+        example: "My friends always support me when I need help.",
+        exampleTr: "Yardıma ihtiyacım olduğunda arkadaşlarım beni her zaman destekler."
     },
 
     {
         word: "Trust/Count on",
         type: "verb",
         meaning: "Güvenmek",
-        example: "I can always trust my best friend.",
-        exampleTr: "En iyi arkadaşıma her zaman güvenebilirim."
+        example: "I know I can trust and count on my best friend.",
+        exampleTr: "En iyi arkadaşıma güvenebileceğimi ve ona güvenerek hareket edebileceğimi biliyorum."
     },
 
     {
         word: "Believe in",
-        type: "phrase",
+        type: "phrasal verb",
         meaning: "İnanmak",
-        example: "My parents believe in me.",
-        exampleTr: "Ailem bana inanıyor."
+        example: "My friends always believe in me.",
+        exampleTr: "Arkadaşlarım bana her zaman inanır."
     },
 
     {
         word: "Make an excuse",
         type: "phrase",
         meaning: "Bahane bulmak",
-        example: "He always makes an excuse when he is late.",
-        exampleTr: "Geç kaldığında her zaman bahane bulur."
+        example: "He always makes an excuse when he doesn't want to come.",
+        exampleTr: "Gelmek istemediğinde her zaman bir bahane bulur."
     },
 
     {
         word: "Argue",
         type: "verb",
         meaning: "Tartışmak",
-        example: "Good friends do not argue about small things.",
-        exampleTr: "İyi arkadaşlar küçük şeyler hakkında tartışmaz."
+        example: "Good friends sometimes argue, but they forgive each other.",
+        exampleTr: "İyi arkadaşlar bazen tartışır ama birbirlerini affederler."
     },
 
     {
         word: "Send",
         type: "verb",
         meaning: "Göndermek",
-        example: "I sent an invitation to my friend.",
-        exampleTr: "Arkadaşıma bir davet gönderdim."
-    },
-
-    {
-    word: "Would you like to...?",
-    type: "phrase",
-    meaning: "İster misin?",
-    example: "Would you like to watch a movie?",
-    exampleTr: "Film izlemek ister misin?"
-},
-
-{
-    word: "Do you want to...?",
-    type: "phrase",
-    meaning: "İster misin?",
-    example: "Do you want to play football?",
-    exampleTr: "Futbol oynamak ister misin?"
-},
-
-{
-    word: "Shall we...?",
-    type: "phrase",
-    meaning: "Yapalım mı?",
-    example: "Shall we go shopping?",
-    exampleTr: "Alışverişe gidelim mi?"
-},
-
-{
-    word: "Why don't we...?",
-    type: "phrase",
-    meaning: "Neden yapmıyoruz?",
-    example: "Why don't we study together?",
-    exampleTr: "Neden birlikte ders çalışmıyoruz?"
-},
-
-{
-    word: "Let's...",
-    type: "phrase",
-    meaning: "Hadi yapalım!",
-    example: "Let's play basketball.",
-    exampleTr: "Hadi basketbol oynayalım."
-},
-
-{
-    word: "How about...?",
-    type: "phrase",
-    meaning: "Yapmaya ne dersin?",
-    example: "How about going camping?",
-    exampleTr: "Kampa gitmeye ne dersin?"
-},
-
-{
-    word: "Fancy...?",
-    type: "phrase",
-    meaning: "İster misin?",
-    example: "Fancy playing tennis?",
-    exampleTr: "Tenis oynamak ister misin?"
-},
-
-{
-    word: "Sure!",
-    type: "phrase",
-    meaning: "Tabii.",
-    example: "It is an accepting phrase.",
-    exampleTr: "O bir kabul etme ifadesi."
-},
-
-{
-    word: "I'd love to.",
-    type: "phrase",
-    meaning: "Çok isterim.",
-    example: "It is an accepting phrase.",
-    exampleTr: "O bir kabul etme ifadesi."
-},
-
-{
-    word: "That sounds great.",
-    type: "phrase",
-    meaning: "Kulağa harika geliyor.",
-    example: "It is an accepting phrase.",
-    exampleTr: "O bir kabul etme ifadesi."
-},
-
-{
-    word: "That would be great.",
-    type: "phrase",
-    meaning: "Bu harika olur.",
-    example: "It is an accepting phrase.",
-    exampleTr: "O bir kabul etme ifadesi."
-},
-
-{
-    word: "Why not?",
-    type: "phrase",
-    meaning: "Neden olmasın?",
-    example: "It is an accepting phrase.",
-    exampleTr: "O bir kabul etme ifadesi."
-},
-
-{
-    word: "With pleasure.",
-    type: "phrase",
-    meaning: "Zevkle, memnuniyetle.",
-    example: "It is an accepting phrase.",
-    exampleTr: "O bir kabul etme ifadesi."
-},
-
-{
-    word: "It is a good idea.",
-    type: "phrase",
-    meaning: "Bu iyi bir fikir.",
-    example: "It is an accepting phrase.",
-    exampleTr: "O bir kabul etme ifadesi."
-},
-
-{
-    word: "It is a great idea.",
-    type: "phrase",
-    meaning: "Bu harika bir fikir.",
-    example: "It is an accepting phrase.",
-    exampleTr: "O bir kabul etme ifadesi."
-},
-
-{
-    word: "I can't refuse it.",
-    type: "phrase",
-    meaning: "Bunu reddedemem.",
-    example: "It is an accepting phrase.",
-    exampleTr: "O bir kabul etme ifadesi."
-},
-
-{
-    word: "I can't miss it.",
-    type: "phrase",
-    meaning: "Bunu kaçıramam.",
-    example: "It is an accepting phrase.",
-    exampleTr: "O bir kabul etme ifadesi."
-},
-
-{
-    word: "Of course.",
-    type: "phrase",
-    meaning: "Elbette, tabii ki.",
-    example: "It is an accepting phrase.",
-    exampleTr: "O bir kabul etme ifadesi."
-},
-
-{
-    word: "Yes, please.",
-    type: "phrase",
-    meaning: "Evet, lütfen.",
-    example: "It is an accepting phrase.",
-    exampleTr: "O bir kabul etme ifadesi."
-},
-
-{
-    word: "Count me in.",
-    type: "phrase",
-    meaning: "Beni de say, ben de varım.",
-    example: "It is an accepting phrase.",
-    exampleTr: "O bir kabul etme ifadesi."
-},
-
-{
-    word: "I have nothing to do better.",
-    type: "phrase",
-    meaning: "Daha iyi bir işim yok.",
-    example: "It is an accepting phrase.",
-    exampleTr: "O bir kabul etme ifadesi."
-},
-
-{
-    word: "I'm sorry but I can't.",
-    type: "phrase",
-    meaning: "Üzgünüm ama yapamam.",
-    example: "It is a refusing phrase.",
-    exampleTr: "O bir reddetme ifadesi."
-},
-
-{
-    word: "I'd love to, but...",
-    type: "phrase",
-    meaning: "Çok isterim ama...",
-    example: "It is a refusing phrase.",
-    exampleTr: "O bir reddetme ifadesi."
-},
-
-{
-    word: "Maybe another time.",
-    type: "phrase",
-    meaning: "Belki başka zaman.",
-    example: "It is a refusing phrase.",
-    exampleTr: "O bir reddetme ifadesi."
-},
-
-{
-    word: "I'm afraid I can't.",
-    type: "phrase",
-    meaning: "Korkarım yapamam.",
-    example: "It is a refusing phrase.",
-    exampleTr: "O bir reddetme ifadesi."
-},
-
-{
-    word: "No, thanks.",
-    type: "phrase",
-    meaning: "Hayır, teşekkürler.",
-    example: "It is a refusing phrase.",
-    exampleTr: "O bir reddetme ifadesi."
-},
-
-{
-    word: "It is a bad idea.",
-    type: "phrase",
-    meaning: "Bu kötü bir fikir.",
-    example: "It is a refusing phrase.",
-    exampleTr: "O bir reddetme ifadesi."
-},
-
-{
-    word: "Sorry, I have another plan.",
-    type: "phrase",
-    meaning: "Üzgünüm, başka planım var.",
-    example: "It is a refusing phrase.",
-    exampleTr: "O bir reddetme ifadesi."
-},
-
-{
-    word: "Thanks for asking but...",
-    type: "phrase",
-    meaning: "Sorduğun için teşekkürler ama...",
-    example: "It is a refusing phrase.",
-    exampleTr: "O bir reddetme ifadesi."
-},
-
-{
-    word: "I can't accept it.",
-    type: "phrase",
-    meaning: "Kabul edemem.",
-    example: "It is a refusing phrase.",
-    exampleTr: "O bir reddetme ifadesi."
-},
-
-{
-    word: "I can't make it.",
-    type: "phrase",
-    meaning: "Gelemiyorum, yapamıyorum.",
-    example: "It is a refusing phrase.",
-    exampleTr: "O bir reddetme ifadesi."
-},
-
-{
-    word: "I'm busy.",
-    type: "phrase",
-    meaning: "Meşgulüm.",
-    example: "It is a refusing phrase.",
-    exampleTr: "O bir reddetme ifadesi."
-},
-
-{
-    word: "I don't think so.",
-    type: "phrase",
-    meaning: "Sanmıyorum.",
-    example: "It is a refusing phrase.",
-    exampleTr: "O bir reddetme ifadesi."
-},
-
-{
-    word: "I would rather not.",
-    type: "phrase",
-    meaning: "Tercih etmem.",
-    example: "It is a refusing phrase.",
-    exampleTr: "O bir reddetme ifadesi."
-}
+        example: "I will send you an invitation tonight.",
+        exampleTr: "Bu gece sana bir davet göndereceğim."
+    }
 
 ];
 

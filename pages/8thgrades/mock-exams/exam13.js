@@ -140,58 +140,58 @@ const questions = [
 {
 image:"images/exam13/1.png",
 
-question:"Read the message. Why does Daniel want to talk to Lisa?",
+question:"Read the e-mail. Which of the following would be the BEST reply to Jack?",
 
 options:[
-"To ask her to join a school club.",
-"To get her opinion about a problem.",
-"To invite her to his birthday party.",
-"To borrow something from her."
+"Sure! I would be happy to join you. What time does the match start?",
+"Sorry, I don't like watching football, so you should go alone.",
+"That's a great idea, but I have already bought the tickets.",
+"Thanks, but I prefer playing tennis with my brother."
+],
+
+answer:0
+},
+
+{
+image:"images/exam13/2.png",
+
+question:"Five students are choosing a club for the school festival. The club must include an activity that is suitable for students who enjoy BOTH being outdoors and working in groups. Which club meets these requirements?",
+
+options:[
+"The Photography Club – taking pictures alone in the classroom",
+"The Drama Club – performing a play together on the school stage",
+"The Chess Club – playing board games indoors",
+"The Reading Club – reading books silently in the library"
 ],
 
 answer:1
 },
 
 {
-image:"images/exam13/2.png",
-
-question:"Look at the teenagers' plans. Who has a different plan from the others?",
-
-options:[
-"Emily",
-"Ryan",
-"Lucy",
-"Tom"
-],
-
-answer:3
-},
-
-{
 image:"images/exam13/3.png",
 
-question:"Which of the following is NOT included in the shopping list for the recipe?",
+question:"A recipe has four steps, but one step is missing. Which sentence completes the recipe correctly?",
 
 options:[
-"Flour",
-"Garlic",
-"Cheese",
-"Butter"
+"Finally, serve the pancakes with fruit and honey.",
+"Then, pour the mixture into a hot pan and cook both sides.",
+"First, wash the vegetables and cut them into small pieces.",
+"After that, put the pancakes in the refrigerator for an hour."
 ],
 
-answer:3
+answer:1
 },
 
 {
 image:"images/exam13/4.png",
 
-question:"Read the phone conversation. What does Sarah want Mike to do?",
+question:"You are calling the school to ask about a science project. The person who can answer your question is not available. Which question is the MOST appropriate to ask the receptionist?",
 
 options:[
-"Meet her at the library.",
-"Send her the project file.",
-"Call their teacher.",
-"Change their project topic."
+"Why isn't the teacher in the office?",
+"Can you tell me when the teacher will be available?",
+"Could you do my science project for me?",
+"Can you explain why the project is difficult?"
 ],
 
 answer:1
@@ -200,88 +200,88 @@ answer:1
 {
 image:"images/exam13/5.png",
 
-question:"Read the comments on the website. Who gives advice about protecting personal information?",
+question:"Read the online comments about Internet use. Which person has a different opinion from the others?",
 
 options:[
-"Alex",
-"Jenny",
-"Mark",
-"Olivia"
-],
-
-answer:2
-},
-
-{
-image:"images/exam13/6.png",
-
-question:"Which student can take part in the adventure activity?",
-
-options:[
-"Ben, who is 12 and doesn't like swimming.",
-"Kate, who is 13 and has no camping equipment.",
-"Leo, who is 15 and has some camping experience.",
-"Anna, who is 16 but doesn't have comfortable shoes."
-],
-
-answer:2
-},
-
-{
-image:"images/exam13/7.png",
-
-question:"According to the tour brochure, which activity is NOT available during the trip?",
-
-options:[
-"Visiting a historical museum.",
-"Trying local dishes.",
-"Swimming in the sea.",
-"Going on a mountain bike tour."
+"Emma: I use the Internet to find information for my homework.",
+"Leo: I often watch tutorials when I don't understand a topic.",
+"Sara: I think the Internet is useful when I need to learn something.",
+"Tom: I mainly use the Internet to play games with my friends."
 ],
 
 answer:3
 },
 
 {
-image:"images/exam13/8.png",
+image:"images/exam13/6.png",
 
-question:"The family has only one hour before their guests arrive. Which plan would help them finish all the chores?",
+question:"A group of students is preparing for a mountain-bike trip. They have the equipment shown in the picture. Which item is NOT suitable for the activity?",
 
 options:[
-"Mother cooks, Jack washes the dishes and Kate cleans the living room.",
-"Mother watches TV, Jack cooks and Kate waters the garden.",
-"Mother cleans the garden, Jack watches TV and Kate prepares the table.",
-"Mother washes the dishes, Jack plays games and Kate goes shopping."
+"A helmet",
+"A water bottle",
+"A pair of cycling gloves",
+"Formal leather shoes"
+],
+
+answer:3
+},
+
+{
+image:"images/exam13/7.png",
+
+question:"A tourist has only three hours before leaving the city. She wants to buy a handmade gift, see a historical place and eat a traditional dish. Which plan should she choose?",
+
+options:[
+"Visit the museum → have lunch at a traditional restaurant → buy a handmade gift",
+"Go to the beach → visit the shopping mall → eat at a fast-food restaurant",
+"Visit the sports centre → go to the cinema → buy clothes",
+"Go to the business centre → visit a café → return to the hotel"
 ],
 
 answer:0
 },
 
 {
-image:"images/exam13/9.png",
+image:"images/exam13/8.png",
 
-question:"Read the text. Why do scientists use solar-powered devices in remote areas?",
+question:"The family members have different free times during the week. Which chore would be the MOST suitable for Alex, who is away from home every evening but is free on Saturday mornings?",
 
 options:[
-"Because these areas usually have more electricity than cities.",
-"Because the devices can work without depending on a regular power supply.",
-"Because solar energy makes the devices work faster than computers.",
-"Because scientists want to avoid using sensors in these areas."
+"Walking the dog every evening",
+"Setting the table before dinner every day",
+"Cleaning the garden on Saturday morning",
+"Doing the laundry every night"
 ],
 
-answer:1
+answer:2
+},
+
+{
+image:"images/exam13/9.png",
+
+question:"Read the text.\n\nWhen Elif started secondary school, she noticed that many students threw away half-used notebooks at the end of each term. She talked to her science teacher and designed a notebook with removable pages. Students could take out the used pages and replace them with new ones instead of buying a completely new notebook. After testing the idea with her classmates, Elif changed the cover to make it stronger. The school later started using the notebooks in several classes.\n\nWhat makes Elif's invention different from an ordinary notebook?",
+
+options:[
+"It allows students to reuse the same notebook by replacing used pages.",
+"It helps students finish their homework more quickly.",
+"It is designed mainly to make notebooks more colourful.",
+"It prevents students from writing too much in their notebooks."
+],
+
+answer:0
 },
 
 {
 image:"images/exam13/10.png",
 
-question:"Read the text. Which of the following can we infer about the students?",
+question:"Read the text.\n\nMina and Zoe became friends even though they have very different interests. Mina loves trying new activities and often makes plans at the last minute. Zoe prefers making detailed plans and feels more comfortable when she knows what will happen. At first, this difference caused some problems. Later, they learned to meet halfway. Mina started telling Zoe about her plans earlier, while Zoe became more open to spontaneous activities. Now they say their differences actually help them understand each other better.\n\nWhat helped Mina and Zoe maintain their friendship?",
 
 options:[
-"They gave up when they faced a problem during the project.",
-"They preferred working alone instead of sharing responsibilities.",
-"They were able to improve their project by considering different ideas.",
-"They chose their topic without discussing it with their teacher."
+"They stopped doing activities together.",
+"They decided to have exactly the same interests.",
+"They learned to respect and adapt to each other's differences.",
+"They avoided talking about their different personalities."
 ],
 
 answer:2

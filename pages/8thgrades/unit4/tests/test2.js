@@ -919,7 +919,7 @@ async function saveTestResult(){
     email: sessionStorage.getItem("email"),
 
 
-        testName: "Friendship Test 2",
+        testName: "On the Phone Test 2",
         correct: score,
         wrong: wrong,
         net: (score - wrong/3).toFixed(2),

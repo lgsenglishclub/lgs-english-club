@@ -26,1480 +26,1445 @@ import {
 
 const vocabulary = [
 
-{
-    word: "Add",
-    type: "verb",
-    meaning: "Eklemek",
-    example: "Add some salt to the soup.",
-    exampleTr: "Çorbaya biraz tuz ekle."
-},
-
-{
-    word: "Fatty",
-    type: "adjective",
-    meaning: "Yağlı",
-    example: "I don't like fatty food.",
-    exampleTr: "Yağlı yiyecekleri sevmiyorum."
-},
-
-{
-    word: "After",
-    type: "conjunction",
-    meaning: "Yaptıktan sonra",
-    example: "Wash your hands after cooking.",
-    exampleTr: "Yemek yaptıktan sonra ellerini yıka."
-},
-
-{
-    word: "Apple pie",
-    type: "noun",
-    meaning: "Elmalı turta",
-    example: "My mother makes delicious apple pie.",
-    exampleTr: "Annem lezzetli elmalı turta yapar."
-},
-
-{
-    word: "Fish",
-    type: "noun",
-    meaning: "Balık",
-    example: "We usually eat fish on Fridays.",
-    exampleTr: "Cuma günleri genellikle balık yeriz."
-},
-
-{
-    word: "Cuisine",
-    type: "noun",
-    meaning: "Mutfak kültürü",
-    example: "I really enjoy Asian cuisine.",
-    exampleTr: "Asya mutfağından gerçekten hoşlanıyorum."
-},
-
-{
-    word: "Flavor",
-    type: "noun",
-    meaning: "Tat, lezzet",
-    example: "This sauce has a delicious flavor.",
-    exampleTr: "Bu sosun lezzetli bir tadı var."
-},
-
-{
-    word: "Flour",
-    type: "noun",
-    meaning: "Un",
-    example: "Add two cups of flour to the bowl.",
-    exampleTr: "Kaseye iki fincan un ekle."
-},
-
-{
-    word: "Baking powder",
-    type: "noun",
-    meaning: "Kabartma tozu",
-    example: "Add some baking powder to the flour.",
-    exampleTr: "Una biraz kabartma tozu ekle."
-},
-
-{
-    word: "Baking tray",
-    type: "noun",
-    meaning: "Fırın tepsisi",
-    example: "Put the cookies on the baking tray.",
-    exampleTr: "Kurabiyeleri fırın tepsisine koy."
-},
-
-{
-    word: "Banana",
-    type: "noun",
-    meaning: "Muz",
-    example: "I eat a banana every morning.",
-    exampleTr: "Her sabah bir muz yerim."
-},
-
-{
-    word: "Fork",
-    type: "noun",
-    meaning: "Çatal",
-    example: "Use a fork to eat the salad.",
-    exampleTr: "Salatayı yemek için çatal kullan."
-},
-
-{
-    word: "Freezer",
-    type: "noun",
-    meaning: "Dondurucu",
-    example: "Keep the meat in the freezer.",
-    exampleTr: "Eti dondurucuda sakla."
-},
-
-{
-    word: "Bitter",
-    type: "adjective",
-    meaning: "Acı, buruk",
-    example: "Dark chocolate can taste bitter.",
-    exampleTr: "Bitter çikolatanın tadı acı olabilir."
-},
-
-{
-    word: "Fruit",
-    type: "noun",
-    meaning: "Meyve",
-    example: "Eating fresh fruit is healthy.",
-    exampleTr: "Taze meyve yemek sağlıklıdır."
-},
-
-{
-    word: "Black pepper",
-    type: "noun",
-    meaning: "Karabiber",
-    example: "Add some black pepper to the soup.",
-    exampleTr: "Çorbaya biraz karabiber ekle."
-},
-
-{
-    word: "Fry",
-    type: "verb",
-    meaning: "Kızartmak",
-    example: "Fry the potatoes in hot oil.",
-    exampleTr: "Patatesleri kızgın yağda kızart."
-},
-
-{
-    word: "Blueberries",
-    type: "noun",
-    meaning: "Yaban mersini",
-    example: "I like eating blueberries with yogurt.",
-    exampleTr: "Yoğurtla yaban mersini yemeyi severim."
-},
-
-{
-    word: "Garlic",
-    type: "noun",
-    meaning: "Sarımsak",
-    example: "Add some garlic to the sauce.",
-    exampleTr: "Sosa biraz sarımsak ekle."
-},
-
-{
-    word: "Boil",
-    type: "verb",
-    meaning: "Suda kaynatmak",
-    example: "Boil the eggs for ten minutes.",
-    exampleTr: "Yumurtaları on dakika kaynat."
-},
-
-{
-    word: "Bottle",
-    type: "noun",
-    meaning: "Şişe",
-    example: "There is a bottle of water on the table.",
-    exampleTr: "Masanın üzerinde bir şişe su var."
-},
-
-{
-    word: "Ginger",
-    type: "noun",
-    meaning: "Zencefil",
-    example: "Add some ginger to the tea.",
-    exampleTr: "Çaya biraz zencefil ekle."
-},
-
-{
-    word: "Bowl",
-    type: "noun",
-    meaning: "Kase",
-    example: "Put the flour in a large bowl.",
-    exampleTr: "Unu büyük bir kaseye koy."
-},
-
-{
-    word: "Bread",
-    type: "noun",
-    meaning: "Ekmek",
-    example: "We need some fresh bread.",
-    exampleTr: "Biraz taze ekmeğe ihtiyacımız var."
-},
-
-{
-    word: "Grape",
-    type: "noun",
-    meaning: "Üzüm",
-    example: "These grapes are very sweet.",
-    exampleTr: "Bu üzümler çok tatlı."
-},
-
-{
-    word: "Grate",
-    type: "verb",
-    meaning: "Rendelemek",
-    example: "Grate the cheese into the bowl.",
-    exampleTr: "Peyniri kasenin içine rendele."
-},
-
-{
-    word: "Bunch",
-    type: "noun",
-    meaning: "Demet",
-    example: "I bought a bunch of bananas.",
-    exampleTr: "Bir demet muz aldım."
-},
-
-{
-    word: "Grater",
-    type: "noun",
-    meaning: "Rende",
-    example: "Use a grater to grate the cheese.",
-    exampleTr: "Peyniri rendelemek için rende kullan."
-},
-
-{
-    word: "Butter",
-    type: "noun",
-    meaning: "Tereyağı",
-    example: "Spread some butter on the bread.",
-    exampleTr: "Ekmeğin üzerine biraz tereyağı sür."
-},
-
-{
-    word: "Greasy",
-    type: "adjective",
-    meaning: "Yağlı",
-    example: "I don't like greasy food.",
-    exampleTr: "Yağlı yiyecekleri sevmiyorum."
-},
-
-{
-    word: "Cake",
-    type: "noun",
-    meaning: "Kek",
-    example: "She baked a chocolate cake.",
-    exampleTr: "Çikolatalı bir kek pişirdi."
-},
-
-{
-    word: "Onion",
-    type: "noun",
-    meaning: "Soğan",
-    example: "Add some onion to the salad.",
-    exampleTr: "Salataya biraz soğan ekle."
-},
-
-{
-    word: "Cake pan",
-    type: "noun",
-    meaning: "Kek kalıbı",
-    example: "Pour the mixture into the cake pan.",
-    exampleTr: "Karışımı kek kalıbına dök."
-},
-
-{
-    word: "Grill",
-    type: "verb",
-    meaning: "Izgara yapmak",
-    example: "We grill chicken in the garden.",
-    exampleTr: "Bahçede tavuk ızgara yaparız."
-},
-
-
-{
-    word: "Carrot",
-    type: "noun",
-    meaning: "Havuç",
-    example: "Cut the carrot into small pieces.",
-    exampleTr: "Havucu küçük parçalara kes."
-},
-
-{
-    word: "Half",
-    type: "noun",
-    meaning: "Yarım, yarısı",
-    example: "Add half a cup of milk.",
-    exampleTr: "Yarım fincan süt ekle."
-},
-
-{
-    word: "Cheese",
-    type: "noun",
-    meaning: "Peynir",
-    example: "I like cheese with my breakfast.",
-    exampleTr: "Kahvaltımda peyniri severim."
-},
-
-{
-    word: "Chef",
-    type: "noun",
-    meaning: "Şef, aşçı",
-    example: "The chef prepared a delicious meal.",
-    exampleTr: "Şef lezzetli bir yemek hazırladı."
-},
-
-{
-    word: "Hazelnut",
-    type: "noun",
-    meaning: "Fındık",
-    example: "Add some hazelnuts to the cake.",
-    exampleTr: "Keke biraz fındık ekle."
-},
-
-{
-    word: "Cherry",
-    type: "noun",
-    meaning: "Kiraz",
-    example: "I love eating fresh cherries.",
-    exampleTr: "Taze kiraz yemeyi çok severim."
-},
-
-{
-    word: "Healthy",
-    type: "adjective",
-    meaning: "Sağlıklı",
-    example: "Fresh vegetables are healthy.",
-    exampleTr: "Taze sebzeler sağlıklıdır."
-},
-
-{
-    word: "Chicken",
-    type: "noun",
-    meaning: "Tavuk",
-    example: "We are cooking chicken for dinner.",
-    exampleTr: "Akşam yemeği için tavuk pişiriyoruz."
-},
-
-{
-    word: "Heat",
-    type: "verb",
-    meaning: "Isıtmak",
-    example: "Heat the oil in a pan.",
-    exampleTr: "Yağı bir tavada ısıt."
-},
-
-{
-    word: "Pepper",
-    type: "noun",
-    meaning: "Biber",
-    example: "Add a pepper to the sauce.",
-    exampleTr: "Sosa bir biber ekle."
-},
-
-{
-    word: "Homemade",
-    type: "adjective",
-    meaning: "Ev yapımı",
-    example: "I love homemade cookies.",
-    exampleTr: "Ev yapımı kurabiyeleri çok severim."
-},
-
-{
-    word: "Chop",
-    type: "verb",
-    meaning: "Küçük doğramak",
-    example: "Chop the onions into small pieces.",
-    exampleTr: "Soğanları küçük parçalar halinde doğra."
-},
-
-{
-    word: "Honey",
-    type: "noun",
-    meaning: "Bal",
-    example: "I like honey in my tea.",
-    exampleTr: "Çayımda balı severim."
-},
-
-{
-    word: "How long?",
-    type: "phrase",
-    meaning: "Ne kadar süre?",
-    example: "How long should I cook the chicken?",
-    exampleTr: "Tavuğu ne kadar süre pişirmeliyim?"
-},
-
-{
-    word: "Coconut",
-    type: "noun",
-    meaning: "Hindistan cevizi",
-    example: "Add some coconut to the cake.",
-    exampleTr: "Keke biraz Hindistan cevizi ekle."
-},
-
-{
-    word: "Ice cream",
-    type: "noun",
-    meaning: "Dondurma",
-    example: "I love eating ice cream in summer.",
-    exampleTr: "Yazın dondurma yemeyi çok severim."
-},
-
-{
-    word: "Ingredients",
-    type: "noun",
-    meaning: "Malzemeler",
-    example: "Check all the ingredients before cooking.",
-    exampleTr: "Yemek yapmadan önce tüm malzemeleri kontrol et."
-},
-
-{
-    word: "Constantly",
-    type: "adverb",
-    meaning: "Sürekli",
-    example: "Stir the mixture constantly.",
-    exampleTr: "Karışımı sürekli karıştır."
-},
-
-{
-    word: "Cook",
-    type: "verb",
-    meaning: "Pişirmek",
-    example: "I cook dinner for my family.",
-    exampleTr: "Ailem için akşam yemeği pişiririm."
-},
-
-{
-    word: "Recipe",
-    type: "noun",
-    meaning: "Tarif",
-    example: "Give the recipe of this soup, please.",
-    exampleTr: "Bu çorbanın tarifini ver, lütfen."
-},
-
-{
-    word: "Cooking",
-    type: "noun",
-    meaning: "Pişirme, yemek yapma",
-    example: "Cooking is my favorite hobby.",
-    exampleTr: "Yemek yapmak en sevdiğim hobimdir."
-},
-
-{
-    word: "Kitchen",
-    type: "noun",
-    meaning: "Mutfak",
-    example: "My mother is in the kitchen.",
-    exampleTr: "Annem mutfakta."
-},
-
-{
-    word: "Cooking methods",
-    type: "noun",
-    meaning: "Pişirme yöntemleri",
-    example: "There are many different cooking methods.",
-    exampleTr: "Birçok farklı pişirme yöntemi vardır."
-},
-
-{
-    word: "Knead",
-    type: "verb",
-    meaning: "Yoğurmak",
-    example: "Knead the dough for five minutes.",
-    exampleTr: "Hamuru beş dakika yoğur."
-},
-
-{
-    word: "Corn",
-    type: "noun",
-    meaning: "Mısır",
-    example: "Add some corn to the salad.",
-    exampleTr: "Salataya biraz mısır ekle."
-},
-
-{
-    word: "Knife",
-    type: "noun",
-    meaning: "Bıçak",
-    example: "Be careful with the knife.",
-    exampleTr: "Bıçakla dikkatli ol."
-},
-
-{
-    word: "Cover",
-    type: "verb",
-    meaning: "Kapatmak, üzerini örtmek",
-    example: "Cover the bowl with a lid.",
-    exampleTr: "Kâsenin üzerini bir kapakla kapat."
-},
-
-{
-    word: "Lemon juice",
-    type: "noun",
-    meaning: "Limon suyu",
-    example: "Add some lemon juice to the salad.",
-    exampleTr: "Salataya biraz limon suyu ekle."
-},
-
-{
-    word: "Crack",
-    type: "verb",
-    meaning: "Kırmak",
-    example: "Crack two eggs into the bowl.",
-    exampleTr: "Kaseye iki yumurta kır."
-},
-
-{
-    word: "Lengthwise",
-    type: "adverb",
-    meaning: "Boylamasına",
-    example: "Cut the cucumber lengthwise.",
-    exampleTr: "Salatalığı boylamasına kes."
-},
-
-{
-    word: "Cranberries",
-    type: "noun",
-    meaning: "Turna yemişi",
-    example: "I like adding cranberries to my salad.",
-    exampleTr: "Salatama turna yemişi eklemeyi severim."
-},
-
-{
-    word: "Lentil",
-    type: "noun",
-    meaning: "Mercimek",
-    example: "Lentil soup is very popular in Türkiye.",
-    exampleTr: "Mercimek çorbası Türkiye'de çok popülerdir."
-},
-
-{
-    word: "Crazy about",
-    type: "adjective",
-    meaning: "Tutkun olmak, çok sevmek",
-    example: "She is crazy about chocolate cake.",
-    exampleTr: "O, çikolatalı keke bayılır."
-},
-
-{
-    word: "Marinate",
-    type: "verb",
-    meaning: "Terbiyelemek, marine etmek",
-    example: "Marinate the chicken before cooking it.",
-    exampleTr: "Tavuğu pişirmeden önce marine et."
-},
-
-{
-    word: "Cream",
-    type: "noun",
-    meaning: "Krema",
-    example: "Add some cream to the soup.",
-    exampleTr: "Çorbaya biraz krema ekle."
-},
-
-{
-    word: "Mash",
-    type: "verb",
-    meaning: "Ezmek",
-    example: "Mash the potatoes with a fork.",
-    exampleTr: "Patatesleri çatalla ez."
-},
-
-{
-    word: "Crush",
-    type: "verb",
-    meaning: "Ezmek, ufalamak",
-    example: "Crush the biscuits into small pieces.",
-    exampleTr: "Bisküvileri küçük parçalara ufala."
-},
-
-{
-    word: "Mat",
-    type: "noun",
-    meaning: "Hasır, mat",
-    example: "Put the hot dish on the mat.",
-    exampleTr: "Sıcak yemeği matın üzerine koy."
-},
-
-{
-    word: "Cucumber",
-    type: "noun",
-    meaning: "Salatalık",
-    example: "Slice the cucumber for the salad.",
-    exampleTr: "Salatalığı salata için dilimle."
-},
-
-{
-    word: "Match",
-    type: "verb",
-    meaning: "Eşleştirmek, uymak",
-    example: "Match the ingredients with the pictures.",
-    exampleTr: "Malzemeleri resimlerle eşleştir."
-},
-
-{
-    word: "Cumin",
-    type: "noun",
-    meaning: "Kimyon",
-    example: "Add some cumin to the meatballs.",
-    exampleTr: "Köftelere biraz kimyon ekle."
-},
-
-{
-    word: "Meal",
-    type: "noun",
-    meaning: "Yemek, öğün",
-    example: "We have three meals a day.",
-    exampleTr: "Günde üç öğün yemek yeriz."
-},
-
-{
-    word: "Cup",
-    type: "noun",
-    meaning: "Fincan, kupa",
-    example: "Add one cup of milk.",
-    exampleTr: "Bir fincan süt ekle."
-},
-
-{
-    word: "Meat",
-    type: "noun",
-    meaning: "Et",
-    example: "We don't eat much meat.",
-    exampleTr: "Çok fazla et yemeyiz."
-},
-
-{
-    word: "Cut",
-    type: "verb",
-    meaning: "Kesmek",
-    example: "Cut the bread into small pieces.",
-    exampleTr: "Ekmeği küçük parçalara kes."
-},
-
-{
-    word: "Meatball",
-    type: "noun",
-    meaning: "Köfte",
-    example: "My mother makes delicious meatballs.",
-    exampleTr: "Annem lezzetli köfteler yapar."
-},
-
-{
-    word: "Dessert",
-    type: "noun",
-    meaning: "Tatlı",
-    example: "We had ice cream for dessert.",
-    exampleTr: "Tatlı olarak dondurma yedik."
-},
-
-{
-    word: "Microwave",
-    type: "noun",
-    meaning: "Mikrodalga fırın",
-    example: "Heat the food in the microwave.",
-    exampleTr: "Yemeği mikrodalga fırında ısıt."
-},
-
-{
-    word: "Dice",
-    type: "verb",
-    meaning: "Küp küp doğramak",
-    example: "Dice the tomatoes into small pieces.",
-    exampleTr: "Domatesleri küçük küpler halinde doğra."
-},
-
-{
-    word: "Milk",
-    type: "noun",
-    meaning: "Süt",
-    example: "I drink a glass of milk every morning.",
-    exampleTr: "Her sabah bir bardak süt içerim."
-},
-
-{
-    word: "Drain",
-    type: "verb",
-    meaning: "Süzmek",
-    example: "Drain the pasta after boiling it.",
-    exampleTr: "Makarnayı kaynattıktan sonra süz."
-},
-
-{
-    word: "Milky",
-    type: "adjective",
-    meaning: "Sütlü",
-    example: "I like milky coffee.",
-    exampleTr: "Sütlü kahveyi severim."
-},
-
-{
-    word: "Dish",
-    type: "noun",
-    meaning: "Yemek, bulaşık",
-    example: "This is my favorite dish.",
-    exampleTr: "Bu benim en sevdiğim yemek."
-},
-
-{
-    word: "Mince",
-    type: "verb",
-    meaning: "Kıyma haline getirmek",
-    example: "Mince the meat before making meatballs.",
-    exampleTr: "Köfte yapmadan önce eti kıyma haline getir."
-},
-
-{
-    word: "Dough",
-    type: "noun",
-    meaning: "Hamur",
-    example: "The dough needs to rest for ten minutes.",
-    exampleTr: "Hamurun on dakika dinlenmesi gerekiyor."
-},
-
-{
-    word: "Mint",
-    type: "noun",
-    meaning: "Nane",
-    example: "Add some fresh mint to the salad.",
-    exampleTr: "Salataya biraz taze nane ekle."
-},
-
-{
-    word: "Dried",
-    type: "adjective",
-    meaning: "Kuru, kurutulmuş",
-    example: "Add some dried fruit to the cake.",
-    exampleTr: "Keke biraz kuru meyve ekle."
-},
-
-{
-    word: "Minute",
-    type: "noun",
-    meaning: "Dakika",
-    example: "Cook the rice for twenty minutes.",
-    exampleTr: "Pirinci yirmi dakika pişir."
-},
-
-{
-    word: "Egg",
-    type: "noun",
-    meaning: "Yumurta",
-    example: "Crack an egg into the bowl.",
-    exampleTr: "Kaseye bir yumurta kır."
-},
-
-{
-    word: "Mix / Stir",
-    type: "verb",
-    meaning: "Karıştırmak",
-    example: "Mix the ingredients well.",
-    exampleTr: "Malzemeleri iyice karıştır."
-},
-
-{
-    word: "Extract",
-    type: "verb",
-    meaning: "Çıkarmak, özünü çıkarmak",
-    example: "Extract the juice from the lemon.",
-    exampleTr: "Limonun suyunu çıkar."
-},
-
-{
-    word: "Mixture",
-    type: "noun",
-    meaning: "Karışım",
-    example: "Pour the mixture into the cake pan.",
-    exampleTr: "Karışımı kek kalıbına dök."
-},
-
-{
-    word: "Eye-catching",
-    type: "adjective",
-    meaning: "Göz alıcı, dikkat çekici",
-    example: "The cake has an eye-catching design.",
-    exampleTr: "Kekin göz alıcı bir tasarımı var."
-},
-
-{
-    word: "Oil",
-    type: "noun",
-    meaning: "Yağ",
-    example: "Heat some oil in a pan.",
-    exampleTr: "Bir tavada biraz yağ ısıt."
-},
-
-{
-    word: "Olive",
-    type: "noun",
-    meaning: "Zeytin",
-    example: "I like eating olives for breakfast.",
-    exampleTr: "Kahvaltıda zeytin yemeyi severim."
-},
-
-{
-    word: "Step",
-    type: "noun",
-    meaning: "Adım, aşama",
-    example: "Follow each step of the recipe carefully.",
-    exampleTr: "Tarifin her adımını dikkatlice takip et."
-},
-
-{
-    word: "Olive oil",
-    type: "noun",
-    meaning: "Zeytinyağı",
-    example: "Add some olive oil to the salad.",
-    exampleTr: "Salataya biraz zeytinyağı ekle."
-},
-
-{
-    word: "Spoon",
-    type: "verb",
-    meaning: "Kaşık",
-    example: "Stir the soup with a spoon.",
-    exampleTr: "Çorbayı kaşıkla karıştır."
-},
-
-{
-    word: "Omelet",
-    type: "noun",
-    meaning: "Omlet",
-    example: "I usually have an omelet for breakfast.",
-    exampleTr: "Kahvaltıda genellikle omlet yerim."
-},
-
-{
-    word: "Strainer",
-    type: "noun",
-    meaning: "Süzgeç",
-    example: "Use a strainer to drain the pasta.",
-    exampleTr: "Makarnayı süzmek için süzgeç kullan."
-},
-
-{
-    word: "Parsley",
-    type: "noun",
-    meaning: "Maydanoz",
-    example: "Chop the parsley into small pieces.",
-    exampleTr: "Maydanozu küçük parçalar halinde doğra."
-},
-
-{
-    word: "Strawberry",
-    type: "noun",
-    meaning: "Çilek",
-    example: "These strawberries are very sweet.",
-    exampleTr: "Bu çilekler çok tatlı."
-},
-
-{
-    word: "Oven",
-    type: "noun",
-    meaning: "Fırın",
-    example: "Preheat the oven before baking the cake.",
-    exampleTr: "Keki pişirmeden önce fırını önceden ısıt."
-},
-
-{
-    word: "Sugar",
-    type: "noun",
-    meaning: "Şeker",
-    example: "Add two spoons of sugar to the tea.",
-    exampleTr: "Çaya iki kaşık şeker ekle."
-},
-
-{
-    word: "Pan",
-    type: "noun",
-    meaning: "Tava",
-    example: "Heat the oil in a pan.",
-    exampleTr: "Yağı bir tavada ısıt."
-},
-
-{
-    word: "Enjoy it",
-    type: "phrase",
-    meaning: "Afiyet olsun",
-    example: "Enjoy your pizza.",
-    exampleTr: "Pizzanız afiyet olsun."
-},
-
-{
-    word: "Surface",
-    type: "noun",
-    meaning: "Yüzey",
-    example: "Clean the kitchen surface after cooking.",
-    exampleTr: "Yemek yaptıktan sonra mutfak yüzeyini temizle."
-},
-
-{
-    word: "Pasta",
-    type: "noun",
-    meaning: "Makarna",
-    example: "I often cook pasta for dinner.",
-    exampleTr: "Akşam yemeği için sık sık makarna pişiririm."
-},
-
-{
-    word: "Sweet",
-    type: "adjective",
-    meaning: "Tatlı",
-    example: "This cake is too sweet.",
-    exampleTr: "Bu kek çok tatlı."
-},
-
-{
-    word: "Peel",
-    type: "verb",
-    meaning: "Soymak",
-    example: "Peel the potatoes before cooking them.",
-    exampleTr: "Patatesleri pişirmeden önce soy."
-},
-
-{
-    word: "Sweet basil",
-    type: "noun",
-    meaning: "Fesleğen, reyhan",
-    example: "Add some sweet basil to the pizza.",
-    exampleTr: "Pizzaya biraz fesleğen ekle."
-},
-
-{
-    word: "Red pepper",
-    type: "noun",
-    meaning: "Pul biber",
-    example: "Add some red pepper to the soup.",
-    exampleTr: "Çorbaya biraz pul biber ekle."
-},
-
-{
-    word: "Sweet tooth",
-    type: "noun",
-    meaning: "Tatlıya düşkünlük",
-    example: "I have a sweet tooth, so I love cakes.",
-    exampleTr: "Tatlıya düşkünüm, bu yüzden kekleri severim."
-},
-
-{
-    word: "Put",
-    type: "verb",
-    meaning: "Koymak",
-    example: "Can you put some cheese in the mixture?",
-    exampleTr: "Karışıma biraz peynir koyabilir misin?"
-},
-
-{
-    word: "Tablespoon",
-    type: "noun",
-    meaning: "Yemek kaşığı",
-    example: "Add one tablespoon of olive oil.",
-    exampleTr: "Bir yemek kaşığı zeytinyağı ekle."
-},
-
-{
-    word: "Place",
-    type: "verb",
-    meaning: "Koymak, yerleştirmek",
-    example: "Place the vegetables on the plate.",
-    exampleTr: "Sebzeleri tabağa koy."
-},
-
-{
-    word: "Take part",
-    type: "phrase",
-    meaning: "Yer almak, katılmak",
-    example: "I want to take part in the cooking competition.",
-    exampleTr: "Yemek yarışmasına katılmak istiyorum."
-},
-
-{
-    word: "Plant",
-    type: "noun",
-    meaning: "Bitki",
-    example: "This plant needs plenty of water.",
-    exampleTr: "Bu bitkinin bol suya ihtiyacı var."
-},
-
-{
-    word: "Taste",
-    type: "verb",
-    meaning: "Tadına bakmak",
-    example: "Taste the soup before serving it.",
-    exampleTr: "Çorbayı servis etmeden önce tadına bak."
-},
-
-{
-    word: "Plate",
-    type: "noun",
-    meaning: "Tabak",
-    example: "Put the food on a clean plate.",
-    exampleTr: "Yemeği temiz bir tabağa koy."
-},
-
-{
-    word: "Tasty",
-    type: "adjective",
-    meaning: "Lezzetli",
-    example: "The homemade soup is very tasty.",
-    exampleTr: "Ev yapımı çorba çok lezzetli."
-},
-
-{
-    word: "Popcorn",
-    type: "noun",
-    meaning: "Patlamış mısır",
-    example: "We ate popcorn while watching the movie.",
-    exampleTr: "Film izlerken patlamış mısır yedik."
-},
-
-{
-    word: "Teaspoon",
-    type: "noun",
-    meaning: "Çay kaşığı",
-    example: "Add one teaspoon of salt.",
-    exampleTr: "Bir çay kaşığı tuz ekle."
-},
-
-{
-    word: "Pot",
-    type: "noun",
-    meaning: "Geniş kap, tencere",
-    example: "Put the soup in a large pot.",
-    exampleTr: "Çorbayı büyük bir tencereye koy."
-},
-
-{
-    word: "Tex-Mex",
-    type: "noun",
-    meaning: "Teksas-Meksika mutfağı",
-    example: "Tex-Mex cuisine is very popular.",
-    exampleTr: "Teksas-Meksika mutfağı çok popülerdir."
-},
-
-{
-    word: "Potatoes",
-    type: "noun",
-    meaning: "Patates",
-    example: "Peel the potatoes before cooking them.",
-    exampleTr: "Patatesleri pişirmeden önce soy."
-},
-
-{
-    word: "Tip",
-    type: "noun",
-    meaning: "İpucu",
-    example: "Here is a useful cooking tip.",
-    exampleTr: "İşte faydalı bir yemek yapma ipucu."
-},
-
-{
-    word: "Pour",
-    type: "verb",
-    meaning: "Dökmek",
-    example: "Pour the milk into the bowl.",
-    exampleTr: "Sütü kasenin içine dök."
-},
-
-{
-    word: "Toast",
-    type: "noun",
-    meaning: "Tost",
-    example: "I had toast for breakfast.",
-    exampleTr: "Kahvaltıda tost yedim."
-},
-
-{
-    word: "Powdered sugar",
-    type: "noun",
-    meaning: "Pudra şekeri",
-    example: "Sprinkle some powdered sugar on the cake.",
-    exampleTr: "Kekin üzerine biraz pudra şekeri serp."
-},
-
-{
-    word: "Prefer",
-    type: "verb",
-    meaning: "Tercih etmek",
-    example: "I prefer homemade food.",
-    exampleTr: "Ev yapımı yemekleri tercih ederim."
-},
-
-{
-    word: "Traditional",
-    type: "adjective",
-    meaning: "Geleneksel",
-    example: "This is a traditional Turkish dish.",
-    exampleTr: "Bu geleneksel bir Türk yemeğidir."
-},
-
-{
-    word: "Preference",
-    type: "noun",
-    meaning: "Tercih",
-    example: "Everyone has different food preferences.",
-    exampleTr: "Herkesin farklı yemek tercihleri vardır."
-},
-
-{
-    word: "Unhealthy",
-    type: "adjective",
-    meaning: "Sağlıksız",
-    example: "Eating too much fast food is unhealthy.",
-    exampleTr: "Çok fazla fast food yemek sağlıksızdır."
-},
-
-{
-    word: "Preheated oven",
-    type: "noun",
-    meaning: "Önceden ısıtılmış fırın",
-    example: "Put the cake into the preheated oven.",
-    exampleTr: "Keki önceden ısıtılmış fırına koy."
-},
-
-{
-    word: "Vanilla",
-    type: "noun",
-    meaning: "Vanilya",
-    example: "Add some vanilla to the cake mixture.",
-    exampleTr: "Kek karışımına biraz vanilya ekle."
-},
-
-{
-    word: "Prepare",
-    type: "verb",
-    meaning: "Hazırlamak",
-    example: "I prepare breakfast for my family.",
-    exampleTr: "Ailem için kahvaltı hazırlarım."
-},
-
-{
-    word: "Various",
-    type: "adjective",
-    meaning: "Çeşitli",
-    example: "The restaurant serves various dishes.",
-    exampleTr: "Restoran çeşitli yemekler sunuyor."
-},
-
-{
-    word: "Presentation",
-    type: "noun",
-    meaning: "Sunum",
-    example: "The presentation of the dish looks amazing.",
-    exampleTr: "Yemeğin sunumu harika görünüyor."
-},
-
-{
-    word: "Vegetable",
-    type: "noun",
-    meaning: "Sebze",
-    example: "You should eat fresh vegetables every day.",
-    exampleTr: "Her gün taze sebzeler yemelisin."
-},
-
-{
-    word: "Press",
-    type: "verb",
-    meaning: "Bastırmak",
-    example: "Press the dough firmly with your hands.",
-    exampleTr: "Hamura ellerinle sıkıca bastır."
-},
-
-{
-    word: "Heat",
-    type: "verb",
-    meaning: "Isıtmak",
-    example: "heat the oil in the pan.",
-    exampleTr: "Yağı tavada ısıt."
-},
-
-{
-    word: "Process",
-    type: "noun",
-    meaning: "İşlem, süreç",
-    example: "Cooking can be a long process.",
-    exampleTr: "Yemek yapmak uzun bir süreç olabilir."
-},
-
-{
-    word: "Walnut",
-    type: "noun",
-    meaning: "Ceviz",
-    example: "Add some walnuts to the cake.",
-    exampleTr: "Keke biraz ceviz ekle."
-},
-
-
-{
-    word: "Warm",
-    type: "adjective",
-    meaning: "Ilık, sıcak",
-    example: "Serve the soup while it is warm.",
-    exampleTr: "Çorbayı ılıkken servis et."
-},
-
-
-{
-    word: "Watermelon",
-    type: "noun",
-    meaning: "Karpuz",
-    example: "Watermelon is my favorite summer fruit.",
-    exampleTr: "Karpuz en sevdiğim yaz meyvesidir."
-},
-
-{
-    word: "Well-known",
-    type: "adjective",
-    meaning: "Ünlü, tanınmış",
-    example: "This restaurant is well-known for its desserts.",
-    exampleTr: "Bu restoran tatlılarıyla ünlüdür."
-},
-
-{
-    word: "Refrigerator",
-    type: "noun",
-    meaning: "Buzdolabı",
-    example: "Keep the milk in the refrigerator.",
-    exampleTr: "Sütü buzdolabında sakla."
-},
-
-{
-    word: "Whisk",
-    type: "verb",
-    meaning: "Çırpmak",
-    example: "Whisk the eggs in a bowl.",
-    exampleTr: "Yumurtaları bir kasede çırp."
-},
-
-{
-    word: "Remove",
-    type: "verb",
-    meaning: "Çıkarmak, ayırmak",
-    example: "Remove the pan from the oven.",
-    exampleTr: "Tavayı fırından çıkar."
-},
-
-{
-    word: "Workshop",
-    type: "noun",
-    meaning: "Atölye, seminer",
-    example: "I joined a cooking workshop last weekend.",
-    exampleTr: "Geçen hafta sonu bir yemek atölyesine katıldım."
-},
-
-{
-    word: "Rice",
-    type: "noun",
-    meaning: "Pirinç",
-    example: "Wash the rice before cooking it.",
-    exampleTr: "Pirinci pişirmeden önce yıka."
-},
-
-{
-    word: "Worth trying",
-    type: "phrase",
-    meaning: "Denemeye değer",
-    example: "This recipe is definitely worth trying.",
-    exampleTr: "Bu tarif kesinlikle denemeye değer."
-},
-
-{
-    word: "Rice",
-    type: "noun",
-    meaning: "Pirinç",
-    example: "We need some rice.",
-    exampleTr: "Biraz pirinç lazım."
-},
-
-{
-    word: "Wrap",
-    type: "verb",
-    meaning: "Sarmak, paketlemek",
-    example: "Wrap the sandwich in some paper.",
-    exampleTr: "Sandviçi biraz kâğıda sar."
-},
-
-{
-    word: "Rinse",
-    type: "verb",
-    meaning: "Durulamak",
-    example: "Rinse the vegetables before eating them.",
-    exampleTr: "Sebzeleri yemeden önce durula."
-},
-
-{
-    word: "Roast",
-    type: "verb",
-    meaning: "Fırında kızartmak",
-    example: "Roast the chicken in the oven.",
-    exampleTr: "Tavuğu fırında kızart."
-},
-
-{
-    word: "Roll",
-    type: "verb",
-    meaning: "Yuvarlamak, sarmak",
-    example: "Roll the dough into a thin sheet.",
-    exampleTr: "Hamuru ince bir tabaka halinde aç."
-},
-
-{
-    word: "Salt",
-    type: "noun",
-    meaning: "Tuz",
-    example: "Add a little salt to the soup.",
-    exampleTr: "Çorbaya biraz tuz ekle."
-},
-
-{
-    word: "Salty",
-    type: "adjective",
-    meaning: "Tuzlu",
-    example: "The soup is too salty.",
-    exampleTr: "Çorba çok tuzlu."
-},
-
-{
-    word: "Sauce",
-    type: "noun",
-    meaning: "Sos",
-    example: "Pour the sauce over the pasta.",
-    exampleTr: "Sosu makarnanın üzerine dök."
-},
-
-{
-    word: "Saucepan",
-    type: "noun",
-    meaning: "Saplı tencere",
-    example: "Heat the milk in a saucepan.",
-    exampleTr: "Sütü saplı tencerede ısıt."
-},
-
-{
-    word: "Season",
-    type: "verb",
-    meaning: "Baharatlamak",
-    example: "Season the meat with salt and pepper.",
-    exampleTr: "Eti tuz ve biberle baharatlandır."
-},
-
-{
-    word: "Seaweed",
-    type: "noun",
-    meaning: "Su yosunu",
-    example: "Seaweed is often used in Asian cuisine.",
-    exampleTr: "Su yosunu Asya mutfağında sıkça kullanılır."
-},
-
-{
-    word: "Serve",
-    type: "verb",
-    meaning: "Servis etmek",
-    example: "Serve the soup while it is hot.",
-    exampleTr: "Çorbayı sıcakken servis et."
-},
-
-{
-    word: "Sesame oil",
-    type: "noun",
-    meaning: "Susam yağı",
-    example: "Add a little sesame oil to the noodles.",
-    exampleTr: "Eriştelere biraz susam yağı ekle."
-},
-
-{
-    word: "Shape",
-    type: "verb",
-    meaning: "Şekillendirmek",
-    example: "Shape the dough into small balls.",
-    exampleTr: "Hamuru küçük toplar şeklinde şekillendir."
-},
-
-{
-    word: "Share",
-    type: "verb",
-    meaning: "Paylaşmak",
-    example: "Let's share the pizza.",
-    exampleTr: "Pizzayı paylaşalım."
-},
-
-{
-    word: "Slice",
-    type: "verb",
-    meaning: "Dilimlemek",
-    example: "Slice the tomatoes thinly.",
-    exampleTr: "Domatesleri ince ince dilimle."
-},
-
-{
-    word: "Sour",
-    type: "adjective",
-    meaning: "Ekşi",
-    example: "This lemon is very sour.",
-    exampleTr: "Bu limon çok ekşi."
-},
-
-{
-    word: "Soy sauce",
-    type: "noun",
-    meaning: "Soya sosu",
-    example: "Add some soy sauce to the noodles.",
-    exampleTr: "Eriştelere biraz soya sosu ekle."
-},
-
-{
-    word: "Spicy",
-    type: "adjective",
-    meaning: "Baharatlı",
-    example: "I don't like very spicy food.",
-    exampleTr: "Çok baharatlı yemekleri sevmiyorum."
-},
-
-{
-    word: "Spread",
-    type: "verb",
-    meaning: "Sürmek, yaymak",
-    example: "Spread some butter on the bread.",
-    exampleTr: "Ekmeğin üzerine biraz tereyağı sür."
-},
-
-{
-    word: "Sprinkle",
-    type: "verb",
-    meaning: "Serpmek",
-    example: "Sprinkle some cheese on the pizza.",
-    exampleTr: "Pizzanın üzerine biraz peynir serp."
-},
-
-{
-    word: "Squeeze",
-    type: "verb",
-    meaning: "Sıkmak",
-    example: "Squeeze some lemon juice over the salad.",
-    exampleTr: "Salatanın üzerine biraz limon suyu sık."
-},
-
-{
-    word: "Steak",
-    type: "noun",
-    meaning: "Biftek",
-    example: "He ordered a grilled steak.",
-    exampleTr: "Izgara biftek sipariş etti."
-},
-
-{
-    word: "Boil",
-    type: "verb",
-    meaning: "Haşlamak, kaynatmak",
-    example: "Boil the water for 100 degree celcius.",
-    exampleTr: "Suyu 100 derecede kaynat."
-},
-
-{
-    word: "Steam",
-    type: "verb",
-    meaning: "Buharda pişirmek",
-    example: "Steam the vegetables for ten minutes.",
-    exampleTr: "Sebzeleri on dakika buharda pişir."
-},
-
-{
-    word: "Fry",
-    type: "verb",
-    meaning: "Yağda kızartmak",
-    example: "Fry the patatoes in the pan.",
-    exampleTr: "Patatesleri tavanın içinde yağda kızart."
-},
-
-{
-    word: "Bake",
-    type: "verb",
-    meaning: "Fırında pişirmek",
-    example: "Bake the cake for 30 minutes.",
-    exampleTr: "Keki 30 dakika fırında ğişir."
-}
+    {
+        word: "Baking tray",
+        type: "noun",
+        meaning: "Fırın tepsisi",
+        example: "Put the cookies on the baking tray.",
+        exampleTr: "Kurabiyeleri fırın tepsisine koy."
+    },
+
+    {
+        word: "Bowl",
+        type: "noun",
+        meaning: "Kase",
+        example: "Put the flour in a bowl.",
+        exampleTr: "Unu bir kaseye koy."
+    },
+
+    {
+        word: "Tablespoon",
+        type: "noun",
+        meaning: "Yemek kaşığı",
+        example: "Add two tablespoons of sugar.",
+        exampleTr: "İki yemek kaşığı şeker ekle."
+    },
+
+    {
+        word: "Teaspoon",
+        type: "noun",
+        meaning: "Çay kaşığı",
+        example: "Add a teaspoon of salt.",
+        exampleTr: "Bir çay kaşığı tuz ekle."
+    },
+
+    {
+        word: "Bottle",
+        type: "noun",
+        meaning: "Şişe",
+        example: "There is a bottle of water on the table.",
+        exampleTr: "Masanın üzerinde bir şişe su var."
+    },
+
+    {
+        word: "Glass",
+        type: "noun",
+        meaning: "Bardak",
+        example: "Pour the juice into a glass.",
+        exampleTr: "Meyve suyunu bir bardağa dök."
+    },
+
+    {
+        word: "Oven",
+        type: "noun",
+        meaning: "Fırın",
+        example: "Preheat the oven before cooking.",
+        exampleTr: "Pişirmeden önce fırını önceden ısıt."
+    },
+
+    {
+        word: "Microwave",
+        type: "noun",
+        meaning: "Mikrodalga fırın",
+        example: "Heat the soup in the microwave.",
+        exampleTr: "Çorbayı mikrodalga fırında ısıt."
+    },
+
+    {
+        word: "Freezer",
+        type: "noun",
+        meaning: "Dondurucu",
+        example: "Keep the meat in the freezer.",
+        exampleTr: "Eti dondurucuda sakla."
+    },
+
+    {
+        word: "Refrigerator",
+        type: "noun",
+        meaning: "Buzdolabı",
+        example: "Put the milk in the refrigerator.",
+        exampleTr: "Sütü buzdolabına koy."
+    },
+
+    {
+        word: "Pan",
+        type: "noun",
+        meaning: "Tava",
+        example: "Heat the oil in a pan.",
+        exampleTr: "Yağı bir tavada ısıt."
+    },
+
+    {
+        word: "Pot",
+        type: "noun",
+        meaning: "Geniş kap, tencere",
+        example: "Put the vegetables in the pot.",
+        exampleTr: "Sebzeleri tencereye koy."
+    },
+
+    {
+        word: "Saucepan",
+        type: "noun",
+        meaning: "Saplı tencere",
+        example: "Heat the milk in a saucepan.",
+        exampleTr: "Sütü saplı tencerede ısıt."
+    },
+
+    {
+        word: "Cake pan",
+        type: "noun",
+        meaning: "Kek kalıbı",
+        example: "Pour the mixture into the cake pan.",
+        exampleTr: "Karışımı kek kalıbına dök."
+    },
+
+    {
+        word: "Fork",
+        type: "noun",
+        meaning: "Çatal",
+        example: "Use a fork to eat the pasta.",
+        exampleTr: "Makarnayı yemek için çatal kullan."
+    },
+
+    {
+        word: "Grater",
+        type: "noun",
+        meaning: "Rende",
+        example: "Use a grater to grate the cheese.",
+        exampleTr: "Peyniri rendelemek için rende kullan."
+    },
+
+    {
+        word: "Knife",
+        type: "noun",
+        meaning: "Bıçak",
+        example: "Cut the bread with a knife.",
+        exampleTr: "Ekmeği bıçakla kes."
+    },
+
+    {
+        word: "Spoon",
+        type: "noun",
+        meaning: "Kaşık",
+        example: "Stir the soup with a spoon.",
+        exampleTr: "Çorbayı kaşıkla karıştır."
+    },
+
+    {
+        word: "Strainer",
+        type: "noun",
+        meaning: "Süzgeç",
+        example: "Use a strainer to drain the pasta.",
+        exampleTr: "Makarnayı süzmek için süzgeç kullan."
+    },
+
+    {
+        word: "Plate",
+        type: "noun",
+        meaning: "Tabak",
+        example: "Put the food on a plate.",
+        exampleTr: "Yemeği tabağa koy."
+    },
+
+    {
+        word: "Cup",
+        type: "noun",
+        meaning: "Fincan, kupa",
+        example: "She is drinking a cup of tea.",
+        exampleTr: "O bir fincan çay içiyor."
+    },
+
+    {
+        word: "Peeler",
+        type: "noun",
+        meaning: "Soyacak",
+        example: "Use a peeler to peel the potatoes.",
+        exampleTr: "Patatesleri soymak için soyacak kullan."
+    },
+
+    {
+        word: "Teapot",
+        type: "noun",
+        meaning: "Çaydanlık",
+        example: "The tea is in the teapot.",
+        exampleTr: "Çay çaydanlıkta."
+    },
+
+    {
+        word: "Bake",
+        type: "verb",
+        meaning: "Fırında pişirmek",
+        example: "Bake the cake for thirty minutes.",
+        exampleTr: "Keki otuz dakika fırında pişir."
+    },
+
+    {
+        word: "Boil",
+        type: "verb",
+        meaning: "Haşlamak, kaynatmak",
+        example: "Boil the potatoes for ten minutes.",
+        exampleTr: "Patatesleri on dakika haşla."
+    },
+
+    {
+        word: "Fry",
+        type: "verb",
+        meaning: "Yağda kızartmak",
+        example: "Fry the eggs in a pan.",
+        exampleTr: "Yumurtaları tavada kızart."
+    },
+
+    {
+        word: "Grill",
+        type: "verb",
+        meaning: "Izgara yapmak",
+        example: "Grill the chicken for fifteen minutes.",
+        exampleTr: "Tavuğu on beş dakika ızgara yap."
+    },
+
+    {
+        word: "Roast",
+        type: "verb",
+        meaning: "Fırında kızartmak",
+        example: "Roast the vegetables in the oven.",
+        exampleTr: "Sebzeleri fırında kızart."
+    },
+
+    {
+        word: "Steam",
+        type: "verb",
+        meaning: "Buharda pişirmek",
+        example: "Steam the vegetables until they are soft.",
+        exampleTr: "Sebzeleri yumuşayana kadar buharda pişir."
+    },
+
+    {
+        word: "Add",
+        type: "verb",
+        meaning: "Eklemek",
+        example: "Add some salt to the soup.",
+        exampleTr: "Çorbaya biraz tuz ekle."
+    },
+
+    {
+        word: "Chop",
+        type: "verb",
+        meaning: "Küçük doğramak",
+        example: "Chop the onions into small pieces.",
+        exampleTr: "Soğanları küçük parçalar halinde doğra."
+    },
+
+    {
+        word: "Crack",
+        type: "verb",
+        meaning: "Kırmak",
+        example: "Crack two eggs into the bowl.",
+        exampleTr: "Kaseye iki yumurta kır."
+    },
+
+    {
+        word: "Cut",
+        type: "verb",
+        meaning: "Kesmek",
+        example: "Cut the bread into slices.",
+        exampleTr: "Ekmeği dilimler halinde kes."
+    },
+
+    {
+        word: "Cover",
+        type: "verb",
+        meaning: "Kapatmak, üzerini örtmek",
+        example: "Cover the bowl with a plate.",
+        exampleTr: "Kasenin üzerini bir tabakla kapat."
+    },
+
+    {
+        word: "Dice",
+        type: "verb",
+        meaning: "Küp küp doğramak",
+        example: "Dice the tomatoes into small cubes.",
+        exampleTr: "Domatesleri küçük küpler halinde doğra."
+    },
+
+    {
+        word: "Drain / Strain",
+        type: "verb",
+        meaning: "Süzmek",
+        example: "Drain the pasta after boiling it.",
+        exampleTr: "Makarnayı haşladıktan sonra süz."
+    },
+
+    {
+        word: "Grate",
+        type: "verb",
+        meaning: "Rendelemek",
+        example: "Grate some cheese over the pasta.",
+        exampleTr: "Makarnanın üzerine biraz peynir rendele."
+    },
+
+    {
+        word: "Knead",
+        type: "verb",
+        meaning: "Yoğurmak",
+        example: "Knead the dough for five minutes.",
+        exampleTr: "Hamuru beş dakika yoğur."
+    },
+
+    {
+        word: "Place",
+        type: "verb",
+        meaning: "Yerleştirmek",
+        example: "Place the vegetables on the plate.",
+        exampleTr: "Sebzeleri tabağa yerleştir."
+    },
+
+    {
+        word: "Shape",
+        type: "verb",
+        meaning: "Şekillendirmek",
+        example: "Shape the dough into small balls.",
+        exampleTr: "Hamuru küçük toplar şeklinde şekillendir."
+    },
+
+    {
+        word: "Mash",
+        type: "verb",
+        meaning: "Ezmek",
+        example: "Mash the potatoes with a fork.",
+        exampleTr: "Patatesleri çatalla ez."
+    },
+
+    {
+        word: "Melt",
+        type: "verb",
+        meaning: "Eritmek",
+        example: "Melt the butter in a pan.",
+        exampleTr: "Tereyağını tavada erit."
+    },
+
+    {
+        word: "Mix / Stir",
+        type: "verb",
+        meaning: "Karıştırmak",
+        example: "Mix the ingredients in a bowl.",
+        exampleTr: "Malzemeleri bir kasede karıştır."
+    },
+
+    {
+        word: "Peel",
+        type: "verb",
+        meaning: "Soymak",
+        example: "Peel the potatoes before cooking them.",
+        exampleTr: "Patatesleri pişirmeden önce soy."
+    },
+
+    {
+        word: "Pour",
+        type: "verb",
+        meaning: "Dökmek",
+        example: "Pour the milk into the glass.",
+        exampleTr: "Sütü bardağa dök."
+    },
+
+    {
+        word: "Press",
+        type: "verb",
+        meaning: "Bastırmak",
+        example: "Press the dough gently.",
+        exampleTr: "Hamura hafifçe bastır."
+    },
+
+    {
+        word: "Put",
+        type: "verb",
+        meaning: "Koymak",
+        example: "Put the ingredients in the bowl.",
+        exampleTr: "Malzemeleri kaseye koy."
+    },
+
+    {
+        word: "Remove",
+        type: "verb",
+        meaning: "Çıkarmak, ayırmak",
+        example: "Remove the pan from the oven.",
+        exampleTr: "Tavayı fırından çıkar."
+    },
+
+    {
+        word: "Rinse",
+        type: "verb",
+        meaning: "Durulamak",
+        example: "Rinse the vegetables with water.",
+        exampleTr: "Sebzeleri suyla durula."
+    },
+
+    {
+        word: "Roll",
+        type: "verb",
+        meaning: "Yuvarlamak, sarmak",
+        example: "Roll the dough into a thin layer.",
+        exampleTr: "Hamuru ince bir tabaka halinde aç."
+    },
+
+    {
+        word: "Season",
+        type: "verb",
+        meaning: "Baharatlamak",
+        example: "Season the chicken with salt and pepper.",
+        exampleTr: "Tavuğu tuz ve karabiberle baharatla."
+    },
+
+    {
+        word: "Serve",
+        type: "verb",
+        meaning: "Servis etmek",
+        example: "Serve the soup while it is hot.",
+        exampleTr: "Çorbayı sıcakken servis et."
+    },
+
+    {
+        word: "Slice",
+        type: "verb",
+        meaning: "Dilimlemek",
+        example: "Slice the tomatoes thinly.",
+        exampleTr: "Domatesleri ince ince dilimle."
+    },
+
+    {
+        word: "Spread",
+        type: "verb",
+        meaning: "Sürmek, yaymak",
+        example: "Spread some butter on the bread.",
+        exampleTr: "Ekmeğin üzerine biraz tereyağı sür."
+    },
+
+    {
+        word: "Sprinkle",
+        type: "verb",
+        meaning: "Serpmek",
+        example: "Sprinkle some cheese on the pizza.",
+        exampleTr: "Pizzanın üzerine biraz peynir serp."
+    },
+
+    {
+        word: "Squeeze",
+        type: "verb",
+        meaning: "Sıkmak",
+        example: "Squeeze some lemon juice over the salad.",
+        exampleTr: "Salatanın üzerine biraz limon suyu sık."
+    },
+
+    {
+        word: "Whisk",
+        type: "verb",
+        meaning: "Çırpmak",
+        example: "Whisk the eggs in a bowl.",
+        exampleTr: "Yumurtaları bir kasede çırp."
+    },
+
+    {
+        word: "Wrap",
+        type: "verb",
+        meaning: "Sarmak, paketlemek",
+        example: "Wrap the sandwich in paper.",
+        exampleTr: "Sandviçi kağıda sar."
+    },
+
+    {
+        word: "Carrot",
+        type: "noun",
+        meaning: "Havuç",
+        example: "Cut the carrot into small pieces.",
+        exampleTr: "Havucu küçük parçalara kes."
+    },
+
+    {
+        word: "Corn",
+        type: "noun",
+        meaning: "Mısır",
+        example: "Add some corn to the salad.",
+        exampleTr: "Salataya biraz mısır ekle."
+    },
+
+    {
+        word: "Cucumber",
+        type: "noun",
+        meaning: "Salatalık",
+        example: "Slice the cucumber for the salad.",
+        exampleTr: "Salata için salatalığı dilimle."
+    },
+
+    {
+        word: "Tomato",
+        type: "noun",
+        meaning: "Domates",
+        example: "Chop the tomatoes into small pieces.",
+        exampleTr: "Domatesleri küçük parçalar halinde doğra."
+    },
+
+    {
+        word: "Garlic",
+        type: "noun",
+        meaning: "Sarımsak",
+        example: "Add some garlic to the sauce.",
+        exampleTr: "Sosa biraz sarımsak ekle."
+    },
+
+    {
+        word: "Onion",
+        type: "noun",
+        meaning: "Soğan",
+        example: "Chop the onion finely.",
+        exampleTr: "Soğanı ince ince doğra."
+    },
+
+    {
+        word: "Parsley",
+        type: "noun",
+        meaning: "Maydanoz",
+        example: "Sprinkle some parsley on the soup.",
+        exampleTr: "Çorbanın üzerine biraz maydanoz serp."
+    },
+
+    {
+        word: "Pepper",
+        type: "noun",
+        meaning: "Biber",
+        example: "Add a red pepper to the dish.",
+        exampleTr: "Yemeğe bir kırmızı biber ekle."
+    },
+
+    {
+        word: "Lemon",
+        type: "noun",
+        meaning: "Limon",
+        example: "Squeeze a lemon over the fish.",
+        exampleTr: "Balığın üzerine limon sık."
+    },
+
+    {
+        word: "Potatoes",
+        type: "noun",
+        meaning: "Patates",
+        example: "Boil the potatoes for ten minutes.",
+        exampleTr: "Patatesleri on dakika haşla."
+    },
+
+    {
+        word: "Lettuce",
+        type: "noun",
+        meaning: "Marul",
+        example: "Wash the lettuce before making the salad.",
+        exampleTr: "Salata yapmadan önce marulu yıka."
+    },
+
+    {
+        word: "Zucchini",
+        type: "noun",
+        meaning: "Kabak",
+        example: "Cut the zucchini into slices.",
+        exampleTr: "Kabağı dilimler halinde kes."
+    },
+
+    {
+        word: "Seaweed",
+        type: "noun",
+        meaning: "Su yosunu",
+        example: "Seaweed is often used in some dishes.",
+        exampleTr: "Su yosunu bazı yemeklerde sıklıkla kullanılır."
+    },
+
+    {
+        word: "Apple",
+        type: "noun",
+        meaning: "Elma",
+        example: "Cut the apple into small pieces.",
+        exampleTr: "Elmayı küçük parçalara kes."
+    },
+
+    {
+        word: "Banana",
+        type: "noun",
+        meaning: "Muz",
+        example: "Peel the banana before eating it.",
+        exampleTr: "Muzu yemeden önce soy."
+    },
+
+    {
+        word: "Blueberries",
+        type: "noun",
+        meaning: "Yaban mersini",
+        example: "Add some blueberries to the yogurt.",
+        exampleTr: "Yoğurda biraz yaban mersini ekle."
+    },
+
+    {
+        word: "Cherry",
+        type: "noun",
+        meaning: "Kiraz",
+        example: "The cake is decorated with cherries.",
+        exampleTr: "Kek kirazlarla süslenmiş."
+    },
+
+    {
+        word: "Coconut",
+        type: "noun",
+        meaning: "Hindistan cevizi",
+        example: "Add some coconut to the dessert.",
+        exampleTr: "Tatlıya biraz Hindistan cevizi ekle."
+    },
+
+    {
+        word: "Cranberries",
+        type: "noun",
+        meaning: "Turna yemişi",
+        example: "Cranberries are used in some desserts.",
+        exampleTr: "Turna yemişleri bazı tatlılarda kullanılır."
+    },
+
+    {
+        word: "Grape",
+        type: "noun",
+        meaning: "Üzüm",
+        example: "Wash the grapes before eating them.",
+        exampleTr: "Üzümleri yemeden önce yıka."
+    },
+
+    {
+        word: "Strawberry",
+        type: "noun",
+        meaning: "Çilek",
+        example: "She put strawberries on the cake.",
+        exampleTr: "Kekin üzerine çilek koydu."
+    },
+
+    {
+        word: "Watermelon",
+        type: "noun",
+        meaning: "Karpuz",
+        example: "We eat watermelon in summer.",
+        exampleTr: "Yazın karpuz yeriz."
+    },
+
+    {
+        word: "Orange",
+        type: "noun",
+        meaning: "Portakal",
+        example: "Squeeze an orange to make juice.",
+        exampleTr: "Meyve suyu yapmak için bir portakalı sık."
+    },
+
+    {
+        word: "Water",
+        type: "noun",
+        meaning: "Su",
+        example: "Drink plenty of water every day.",
+        exampleTr: "Her gün bolca su iç."
+    },
+
+    {
+        word: "Tea",
+        type: "noun",
+        meaning: "Çay",
+        example: "I usually drink tea after breakfast.",
+        exampleTr: "Genellikle kahvaltıdan sonra çay içerim."
+    },
+
+    {
+        word: "Ice tea",
+        type: "noun",
+        meaning: "Soğuk çay",
+        example: "She ordered an ice tea.",
+        exampleTr: "O bir soğuk çay sipariş etti."
+    },
+
+    {
+        word: "Milk",
+        type: "noun",
+        meaning: "Süt",
+        example: "Add some milk to the mixture.",
+        exampleTr: "Karışıma biraz süt ekle."
+    },
+
+    {
+        word: "Coke",
+        type: "noun",
+        meaning: "Kola",
+        example: "He ordered a bottle of Coke.",
+        exampleTr: "Bir şişe kola sipariş etti."
+    },
+
+    {
+        word: "Lemonade",
+        type: "noun",
+        meaning: "Limonata",
+        example: "We made fresh lemonade.",
+        exampleTr: "Taze limonata yaptık."
+    },
+
+    {
+        word: "Coffee",
+        type: "noun",
+        meaning: "Kahve",
+        example: "My father drinks coffee every morning.",
+        exampleTr: "Babam her sabah kahve içer."
+    },
+
+    {
+        word: "Fruit juice",
+        type: "noun",
+        meaning: "Meyve suyu",
+        example: "I would like some fruit juice.",
+        exampleTr: "Biraz meyve suyu istiyorum."
+    },
+
+    {
+        word: "Cake",
+        type: "noun",
+        meaning: "Kek",
+        example: "My mother baked a delicious cake.",
+        exampleTr: "Annem lezzetli bir kek yaptı."
+    },
+
+    {
+        word: "Apple pie",
+        type: "noun",
+        meaning: "Elmalı turta",
+        example: "Apple pie is my favorite dessert.",
+        exampleTr: "Elmalı turta en sevdiğim tatlıdır."
+    },
+
+    {
+        word: "Ice cream",
+        type: "noun",
+        meaning: "Dondurma",
+        example: "I would like some chocolate ice cream.",
+        exampleTr: "Biraz çikolatalı dondurma istiyorum."
+    },
+
+    {
+        word: "Dessert",
+        type: "noun",
+        meaning: "Tatlı",
+        example: "We had dessert after dinner.",
+        exampleTr: "Akşam yemeğinden sonra tatlı yedik."
+    },
+
+    {
+        word: "Toast",
+        type: "noun",
+        meaning: "Tost",
+        example: "I had cheese toast for breakfast.",
+        exampleTr: "Kahvaltıda peynirli tost yedim."
+    },
+
+    {
+        word: "Hamburger",
+        type: "noun",
+        meaning: "Hamburger",
+        example: "He ordered a hamburger.",
+        exampleTr: "O bir hamburger sipariş etti."
+    },
+
+    {
+        word: "Sandwich",
+        type: "noun",
+        meaning: "Sandeviç",
+        example: "I made a cheese sandwich.",
+        exampleTr: "Peynirli bir sandviç yaptım."
+    },
+
+    {
+        word: "Pizza",
+        type: "noun",
+        meaning: "Pizza",
+        example: "We ordered a large pizza.",
+        exampleTr: "Büyük bir pizza sipariş ettik."
+    },
+
+    {
+        word: "Popcorn",
+        type: "noun",
+        meaning: "Patlamış mısır",
+        example: "We ate popcorn while watching the movie.",
+        exampleTr: "Film izlerken patlamış mısır yedik."
+    },
+
+    {
+        word: "Omelet",
+        type: "noun",
+        meaning: "Omlet",
+        example: "She made an omelet for breakfast.",
+        exampleTr: "Kahvaltı için omlet yaptı."
+    },
+
+    {
+        word: "Fish",
+        type: "noun",
+        meaning: "Balık",
+        example: "We had grilled fish for dinner.",
+        exampleTr: "Akşam yemeğinde ızgara balık yedik."
+    },
+
+    {
+        word: "Chicken",
+        type: "noun",
+        meaning: "Tavuk",
+        example: "Put the chicken in the oven.",
+        exampleTr: "Tavuğu fırına koy."
+    },
+
+    {
+        word: "Meat",
+        type: "noun",
+        meaning: "Et",
+        example: "We need some meat for the recipe.",
+        exampleTr: "Tarif için biraz ete ihtiyacımız var."
+    },
+
+    {
+        word: "Steak",
+        type: "noun",
+        meaning: "Biftek",
+        example: "He ordered a grilled steak.",
+        exampleTr: "Izgara biftek sipariş etti."
+    },
+
+    {
+        word: "Mince",
+        type: "noun",
+        meaning: "Kıyma",
+        example: "Add the mince to the pan.",
+        exampleTr: "Kıymayı tavaya ekle."
+    },
+
+    {
+        word: "Meatball",
+        type: "noun",
+        meaning: "Köfte",
+        example: "She made meatballs for dinner.",
+        exampleTr: "Akşam yemeği için köfte yaptı."
+    },
+
+    {
+        word: "Bread",
+        type: "noun",
+        meaning: "Ekmek",
+        example: "We need some bread for breakfast.",
+        exampleTr: "Kahvaltı için biraz ekmeğe ihtiyacımız var."
+    },
+
+    {
+        word: "Cheese",
+        type: "noun",
+        meaning: "Peynir",
+        example: "Add some cheese to the sandwich.",
+        exampleTr: "Sandviçe biraz peynir ekle."
+    },
+
+    {
+        word: "Olive",
+        type: "noun",
+        meaning: "Zeytin",
+        example: "I like eating olives for breakfast.",
+        exampleTr: "Kahvaltıda zeytin yemeyi severim."
+    },
+
+    {
+        word: "Egg",
+        type: "noun",
+        meaning: "Yumurta",
+        example: "Crack two eggs into the bowl.",
+        exampleTr: "Kaseye iki yumurta kır."
+    },
+
+    {
+        word: "Pasta",
+        type: "noun",
+        meaning: "Makarna",
+        example: "She cooked pasta for lunch.",
+        exampleTr: "Öğle yemeği için makarna pişirdi."
+    },
+
+    {
+        word: "Rice",
+        type: "noun",
+        meaning: "Pirinç",
+        example: "Wash the rice before cooking it.",
+        exampleTr: "Pirinci pişirmeden önce yıka."
+    },
+
+    {
+        word: "Lentil",
+        type: "noun",
+        meaning: "Mercimek",
+        example: "Lentils are used to make soup.",
+        exampleTr: "Mercimek çorba yapmak için kullanılır."
+    },
+
+    {
+        word: "Flour",
+        type: "noun",
+        meaning: "Un",
+        example: "Add two cups of flour.",
+        exampleTr: "İki bardak un ekle."
+    },
+
+    {
+        word: "Baking powder",
+        type: "noun",
+        meaning: "Kabartma tozu",
+        example: "Add a teaspoon of baking powder.",
+        exampleTr: "Bir çay kaşığı kabartma tozu ekle."
+    },
+
+    {
+        word: "Butter",
+        type: "noun",
+        meaning: "Tereyağı",
+        example: "Melt the butter in a pan.",
+        exampleTr: "Tereyağını tavada erit."
+    },
+
+    {
+        word: "Cream",
+        type: "noun",
+        meaning: "Krema",
+        example: "Add some cream to the soup.",
+        exampleTr: "Çorbaya biraz krema ekle."
+    },
+
+    {
+        word: "Honey",
+        type: "noun",
+        meaning: "Bal",
+        example: "I like honey with my breakfast.",
+        exampleTr: "Kahvaltımda bal yemeyi severim."
+    },
+
+    {
+        word: "Oil",
+        type: "noun",
+        meaning: "Yağ",
+        example: "Heat some oil in the pan.",
+        exampleTr: "Tavada biraz yağ ısıt."
+    },
+
+    {
+        word: "Olive oil",
+        type: "noun",
+        meaning: "Zeytinyağı",
+        example: "Add some olive oil to the salad.",
+        exampleTr: "Salataya biraz zeytinyağı ekle."
+    },
+
+    {
+        word: "Sugar",
+        type: "noun",
+        meaning: "Şeker",
+        example: "Add two spoons of sugar.",
+        exampleTr: "İki kaşık şeker ekle."
+    },
+
+    {
+        word: "Powdered sugar",
+        type: "noun",
+        meaning: "Pudra şekeri",
+        example: "Sprinkle powdered sugar on the cake.",
+        exampleTr: "Kekin üzerine pudra şekeri serp."
+    },
+
+    {
+        word: "Vanilla",
+        type: "noun",
+        meaning: "Vanilya",
+        example: "Add some vanilla to the mixture.",
+        exampleTr: "Karışıma biraz vanilya ekle."
+    },
+
+    {
+        word: "Walnut",
+        type: "noun",
+        meaning: "Ceviz",
+        example: "Add chopped walnuts to the cake.",
+        exampleTr: "Keke doğranmış ceviz ekle."
+    },
+
+    {
+        word: "Hazelnut",
+        type: "noun",
+        meaning: "Fındık",
+        example: "The cake contains hazelnuts.",
+        exampleTr: "Kekin içinde fındık var."
+    },
+
+    {
+        word: "Lemon juice",
+        type: "noun",
+        meaning: "Limon suyu",
+        example: "Add some lemon juice to the salad.",
+        exampleTr: "Salataya biraz limon suyu ekle."
+    },
+
+    {
+        word: "Black pepper",
+        type: "noun",
+        meaning: "Karabiber",
+        example: "Sprinkle some black pepper on the meat.",
+        exampleTr: "Etin üzerine biraz karabiber serp."
+    },
+
+    {
+        word: "Cumin",
+        type: "noun",
+        meaning: "Kimyon",
+        example: "Add some cumin to the meatballs.",
+        exampleTr: "Köftelere biraz kimyon ekle."
+    },
+
+    {
+        word: "Cinnamon",
+        type: "noun",
+        meaning: "Tarçın",
+        example: "Sprinkle some cinnamon on the dessert.",
+        exampleTr: "Tatlının üzerine biraz tarçın serp."
+    },
+
+    {
+        word: "Mint",
+        type: "noun",
+        meaning: "Nane",
+        example: "Add some fresh mint to the salad.",
+        exampleTr: "Salataya biraz taze nane ekle."
+    },
+
+    {
+        word: "Red pepper",
+        type: "noun",
+        meaning: "Pul biber",
+        example: "Add some red pepper to the soup.",
+        exampleTr: "Çorbaya biraz pul biber ekle."
+    },
+
+    {
+        word: "Salt",
+        type: "noun",
+        meaning: "Tuz",
+        example: "Add a little salt to the soup.",
+        exampleTr: "Çorbaya biraz tuz ekle."
+    },
+
+    {
+        word: "Soy sauce",
+        type: "noun",
+        meaning: "Soya sosu",
+        example: "Add some soy sauce to the noodles.",
+        exampleTr: "Eriştelere biraz soya sosu ekle."
+    },
+
+    {
+        word: "Ginger",
+        type: "noun",
+        meaning: "Zencefil",
+        example: "Add some ginger to the soup.",
+        exampleTr: "Çorbaya biraz zencefil ekle."
+    },
+
+    {
+        word: "Bitter",
+        type: "adjective",
+        meaning: "Acı, buruk",
+        example: "The coffee tastes bitter.",
+        exampleTr: "Kahvenin tadı acı."
+    },
+
+    {
+        word: "Fatty / Greasy",
+        type: "adjective",
+        meaning: "Yağlı",
+        example: "This food is too greasy.",
+        exampleTr: "Bu yemek çok yağlı."
+    },
+
+    {
+        word: "Healthy",
+        type: "adjective",
+        meaning: "Sağlıklı",
+        example: "Vegetables are healthy foods.",
+        exampleTr: "Sebzeler sağlıklı yiyeceklerdir."
+    },
+
+    {
+        word: "Unhealthy",
+        type: "adjective",
+        meaning: "Sağlıksız",
+        example: "Eating too much fast food is unhealthy.",
+        exampleTr: "Çok fazla fast food yemek sağlıksızdır."
+    },
+
+    {
+        word: "Milky",
+        type: "adjective",
+        meaning: "Sütlü",
+        example: "I prefer milky coffee.",
+        exampleTr: "Sütlü kahveyi tercih ederim."
+    },
+
+    {
+        word: "Salty",
+        type: "adjective",
+        meaning: "Tuzlu",
+        example: "The soup is too salty.",
+        exampleTr: "Çorba çok tuzlu."
+    },
+
+    {
+        word: "Sour",
+        type: "adjective",
+        meaning: "Ekşi",
+        example: "The lemon tastes sour.",
+        exampleTr: "Limonun tadı ekşi."
+    },
+
+    {
+        word: "Spicy",
+        type: "adjective",
+        meaning: "Baharatlı",
+        example: "I don't like spicy food.",
+        exampleTr: "Baharatlı yemekleri sevmiyorum."
+    },
+
+    {
+        word: "Sweet",
+        type: "adjective",
+        meaning: "Tatlı",
+        example: "This cake is very sweet.",
+        exampleTr: "Bu kek çok tatlı."
+    },
+
+    {
+        word: "Tasty",
+        type: "adjective",
+        meaning: "Lezzetli",
+        example: "The meal was really tasty.",
+        exampleTr: "Yemek gerçekten lezzetliydi."
+    },
+
+    {
+        word: "After",
+        type: "preposition",
+        meaning: "Sonra",
+        example: "Wash the dishes after dinner.",
+        exampleTr: "Akşam yemeğinden sonra bulaşıkları yıka."
+    },
+
+    {
+        word: "Before",
+        type: "preposition",
+        meaning: "Önce",
+        example: "Wash your hands before cooking.",
+        exampleTr: "Yemek yapmadan önce ellerini yıka."
+    },
+
+    {
+        word: "Enjoy it",
+        type: "expression",
+        meaning: "Afiyet olsun",
+        example: "Here is your meal. Enjoy it!",
+        exampleTr: "İşte yemeğiniz. Afiyet olsun!"
+    },
+
+    {
+        word: "Flavor",
+        type: "noun",
+        meaning: "Tat, lezzet",
+        example: "This sauce has a strong flavor.",
+        exampleTr: "Bu sosun güçlü bir tadı var."
+    },
+
+    {
+        word: "Homemade",
+        type: "adjective",
+        meaning: "Ev yapımı",
+        example: "My grandmother makes homemade bread.",
+        exampleTr: "Büyükannem ev yapımı ekmek yapar."
+    },
+
+    {
+        word: "Preference",
+        type: "noun",
+        meaning: "Tercih",
+        example: "Everyone has different food preferences.",
+        exampleTr: "Herkesin farklı yemek tercihleri vardır."
+    },
+
+    {
+        word: "Tip",
+        type: "noun",
+        meaning: "İpucu",
+        example: "Here is a useful cooking tip.",
+        exampleTr: "İşte kullanışlı bir yemek yapma ipucu."
+    },
+
+    {
+        word: "Well-known",
+        type: "adjective",
+        meaning: "Ünlü, tanınmış",
+        example: "Turkish cuisine is well-known around the world.",
+        exampleTr: "Türk mutfağı dünya çapında tanınmıştır."
+    },
+
+    {
+        word: "Food",
+        type: "noun",
+        meaning: "Yiyecek",
+        example: "We need to buy some food.",
+        exampleTr: "Biraz yiyecek almamız gerekiyor."
+    },
+
+    {
+        word: "Meal",
+        type: "noun",
+        meaning: "Yemek, öğün",
+        example: "Breakfast is my favorite meal.",
+        exampleTr: "Kahvaltı en sevdiğim öğündür."
+    },
+
+    {
+        word: "Dish",
+        type: "noun",
+        meaning: "Yemek, bulaşık",
+        example: "This is a traditional Turkish dish.",
+        exampleTr: "Bu geleneksel bir Türk yemeğidir."
+    },
+
+    {
+        word: "Ingredients",
+        type: "noun",
+        meaning: "Malzemeler",
+        example: "Check the ingredients before cooking.",
+        exampleTr: "Yemek yapmadan önce malzemeleri kontrol et."
+    },
+
+    {
+        word: "Cooking",
+        type: "noun",
+        meaning: "Pişirme, yemek yapma",
+        example: "Cooking can be fun.",
+        exampleTr: "Yemek yapmak eğlenceli olabilir."
+    },
+
+    {
+        word: "Kitchen",
+        type: "noun",
+        meaning: "Mutfak",
+        example: "My mother is in the kitchen.",
+        exampleTr: "Annem mutfakta."
+    },
+
+    {
+        word: "Cuisine",
+        type: "noun",
+        meaning: "Mutfak kültürü",
+        example: "I love Italian cuisine.",
+        exampleTr: "İtalyan mutfağını seviyorum."
+    },
+
+    {
+        word: "Chef",
+        type: "noun",
+        meaning: "Şef, aşçı",
+        example: "The chef prepared a delicious meal.",
+        exampleTr: "Şef lezzetli bir yemek hazırladı."
+    },
+
+    {
+        word: "Recipe",
+        type: "noun",
+        meaning: "Tarif",
+        example: "I found a new recipe online.",
+        exampleTr: "İnternette yeni bir tarif buldum."
+    },
+
+    {
+        word: "Step",
+        type: "noun",
+        meaning: "Adım, aşama",
+        example: "Follow each step of the recipe.",
+        exampleTr: "Tarifin her adımını takip et."
+    },
+
+    {
+        word: "Process",
+        type: "noun",
+        meaning: "İşlem, süreç",
+        example: "The cooking process takes about an hour.",
+        exampleTr: "Pişirme süreci yaklaşık bir saat sürer."
+    },
+
+    {
+        word: "How long?",
+        type: "expression",
+        meaning: "Ne kadar süre?",
+        example: "How long should I cook the chicken?",
+        exampleTr: "Tavuğu ne kadar süre pişirmeliyim?"
+    },
+
+    {
+        word: "Minute",
+        type: "noun",
+        meaning: "Dakika",
+        example: "Cook it for ten minutes.",
+        exampleTr: "On dakika pişir."
+    },
+
+    {
+        word: "Lengthwise",
+        type: "adverb",
+        meaning: "Boylamasına",
+        example: "Cut the cucumber lengthwise.",
+        exampleTr: "Salatalığı boylamasına kes."
+    },
+
+    {
+        word: "Bunch",
+        type: "noun",
+        meaning: "Demet",
+        example: "Add a bunch of parsley.",
+        exampleTr: "Bir demet maydanoz ekle."
+    },
+
+    {
+        word: "Packet",
+        type: "noun",
+        meaning: "Paket",
+        example: "Add a packet of baking powder.",
+        exampleTr: "Bir paket kabartma tozu ekle."
+    },
+
+    {
+        word: "Traditional",
+        type: "adjective",
+        meaning: "Geleneksel",
+        example: "This is a traditional Turkish recipe.",
+        exampleTr: "Bu geleneksel bir Türk tarifidir."
+    },
+
+    {
+        word: "Various",
+        type: "adjective",
+        meaning: "Çeşitli",
+        example: "The recipe uses various vegetables.",
+        exampleTr: "Tarifte çeşitli sebzeler kullanılıyor."
+    },
+
+    {
+        word: "Constantly",
+        type: "adverb",
+        meaning: "Sürekli",
+        example: "Stir the mixture constantly.",
+        exampleTr: "Karışımı sürekli karıştır."
+    },
+
+    {
+        word: "Dried",
+        type: "adjective",
+        meaning: "Kuru, kurutulmuş",
+        example: "Add some dried mint to the soup.",
+        exampleTr: "Çorbaya biraz kuru nane ekle."
+    },
+
+    {
+        word: "Plant",
+        type: "noun",
+        meaning: "Bitki",
+        example: "Mint is a useful plant.",
+        exampleTr: "Nane faydalı bir bitkidir."
+    },
+
+    {
+        word: "Presentation",
+        type: "noun",
+        meaning: "Sunum",
+        example: "The presentation of the food is important.",
+        exampleTr: "Yemeğin sunumu önemlidir."
+    },
+
+    {
+        word: "Taste",
+        type: "verb",
+        meaning: "Tadına bakmak",
+        example: "Taste the soup before serving it.",
+        exampleTr: "Servis etmeden önce çorbanın tadına bak."
+    },
+
+    {
+        word: "Warm",
+        type: "adjective",
+        meaning: "Ilık, sıcak",
+        example: "Serve the bread while it is warm.",
+        exampleTr: "Ekmeği sıcakken servis et."
+    },
+
+    {
+        word: "Preheated",
+        type: "adjective",
+        meaning: "Önceden ısıtılmış",
+        example: "Put the cake in the preheated oven.",
+        exampleTr: "Keki önceden ısıtılmış fırına koy."
+    },
+
+    {
+        word: "Mixture",
+        type: "noun",
+        meaning: "Karışım",
+        example: "Pour the mixture into the pan.",
+        exampleTr: "Karışımı tavaya dök."
+    },
+
+    {
+        word: "Surface",
+        type: "noun",
+        meaning: "Yüzey",
+        example: "Put the dough on a clean surface.",
+        exampleTr: "Hamuru temiz bir yüzeye koy."
+    },
+
+    {
+        word: "Tex-Mex",
+        type: "noun",
+        meaning: "Teksas-Meksika mutfağı",
+        example: "Tex-Mex cuisine is popular in many places.",
+        exampleTr: "Tex-Mex mutfağı birçok yerde popülerdir."
+    },
+
+    {
+        word: "Workshop",
+        type: "noun",
+        meaning: "Atölye, seminer",
+        example: "We joined a cooking workshop.",
+        exampleTr: "Bir yemek yapma atölyesine katıldık."
+    }
 
 ];
 

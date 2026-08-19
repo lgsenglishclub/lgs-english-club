@@ -641,7 +641,7 @@ async function saveTestResult(){
     email: sessionStorage.getItem("email"),
 
 
-        testName: "Friendship Test 6",
+        testName: "The Internet Test 6",
         correct: score,
         wrong: wrong,
         net: (score - wrong/3).toFixed(2),

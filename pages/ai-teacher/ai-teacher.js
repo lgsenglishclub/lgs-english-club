@@ -1538,21 +1538,21 @@ async function sendMessage(text) {
 
 
         const previousMessages =
-            conversation
-                ? conversation.messages
-                    .slice(-12)
-                    .filter(message => {
+    conversation
+        ? conversation.messages
+            .slice(-8)
+            .filter(message => {
 
-                        return !(
-                            message.sender ===
-                            "teacher" &&
-                            isWelcomeMessage(
-                                message.text
-                            )
-                        );
+                return !(
+                    message.sender ===
+                    "teacher" &&
+                    isWelcomeMessage(
+                        message.text
+                    )
+                );
 
-                    })
-                : [];
+            })
+        : [];
 
 
         // ===============================
@@ -1624,7 +1624,7 @@ async function sendMessage(text) {
         // ===============================
         // FIREBASE FUNCTION
         // ===============================
-
+console.time("Lexi API");
         const response =
             await fetch(
                 "https://lexichat-yjr5iecahq-uc.a.run.app",
@@ -1651,7 +1651,8 @@ async function sendMessage(text) {
 
                 }
             );
-
+            
+console.timeEnd("Lexi API");
 
         // ===============================
         // READ RESPONSE SAFELY
@@ -1907,12 +1908,35 @@ quickActions.forEach(
 const voiceBtn =
     document.getElementById("voiceBtn");
 
+const voiceLanguageSelect =
+    document.getElementById("voiceLanguage");
+
 
 let voiceRecognition = null;
 
 let isListening = false;
 
 let isLexiSpeaking = false;
+
+let voiceLanguage =
+    voiceLanguageSelect
+        ? voiceLanguageSelect.value
+        : "tr-TR";
+
+
+if (voiceLanguageSelect) {
+
+    voiceLanguageSelect.addEventListener(
+        "change",
+        () => {
+
+            voiceLanguage =
+                voiceLanguageSelect.value;
+
+        }
+    );
+
+}
 
 
 // ===============================
@@ -1999,63 +2023,30 @@ function startListening() {
     }
 
 
+    // ========================================
+    // CREATE RECOGNITION
+    // ========================================
+
     voiceRecognition =
         new SpeechRecognition();
 
 
-    voiceRecognition.lang =
-        "en-US";
+    // ========================================
+    // LANGUAGE
+    // ========================================
+
+    voiceRecognition.lang = voiceLanguage;
+
+voiceRecognition.continuous = true;
+
+voiceRecognition.interimResults = true;
+
+voiceRecognition.maxAlternatives = 1;
 
 
-    voiceRecognition.continuous =
-        false;
-
-
-    voiceRecognition.interimResults =
-        true;
-
-
-    voiceRecognition.maxAlternatives =
-        1;
-
-
-    isListening = true;
-
-
-    setVoiceStatus(
-        "listening"
-    );
-
-
-    // ===============================
-    // START
-    // ===============================
-
-    try {
-
-        voiceRecognition.start();
-
-    }
-
-    catch (error) {
-
-        console.error(
-            "Voice start error:",
-            error
-        );
-
-        isListening = false;
-
-        setVoiceStatus(
-            "idle"
-        );
-
-    }
-
-
-    // ===============================
+    // ========================================
     // RESULT
-    // ===============================
+    // ========================================
 
     voiceRecognition.onresult =
         event => {
@@ -2080,8 +2071,11 @@ function startListening() {
                 transcript.trim();
 
 
-            // Kullanıcının konuşmasını
-            // input'a göster
+            console.log(
+                "Lexi voice transcript:",
+                transcript
+            );
+
 
             if (chatInput) {
 
@@ -2090,8 +2084,6 @@ function startListening() {
 
             }
 
-
-            // Sadece final sonuç geldiğinde gönder
 
             const lastResult =
                 event.results[
@@ -2104,7 +2096,15 @@ function startListening() {
                 lastResult.isFinal
             ) {
 
-                stopListening();
+                console.log(
+                    "Lexi final transcript:",
+                    transcript
+                );
+
+
+                isListening = false;
+
+                setVoiceStatus("idle");
 
 
                 if (transcript) {
@@ -2120,12 +2120,36 @@ function startListening() {
         };
 
 
-    // ===============================
+    // ========================================
+    // START
+    // ========================================
+
+    voiceRecognition.onstart =
+        () => {
+
+            console.log(
+                "Lexi microphone started."
+            );
+
+            isListening = true;
+
+            setVoiceStatus(
+                "listening"
+            );
+
+        };
+
+
+    // ========================================
     // END
-    // ===============================
+    // ========================================
 
     voiceRecognition.onend =
         () => {
+
+            console.log(
+                "Lexi microphone ended."
+            );
 
             isListening = false;
 
@@ -2136,21 +2160,20 @@ function startListening() {
         };
 
 
-    // ===============================
+    // ========================================
     // ERROR
-    // ===============================
+    // ========================================
 
     voiceRecognition.onerror =
         event => {
 
             console.error(
-                "Speech recognition error:",
+                "Lexi speech recognition error:",
                 event.error
             );
 
 
             isListening = false;
-
 
             setVoiceStatus(
                 "idle"
@@ -2163,10 +2186,11 @@ function startListening() {
             ) {
 
                 addTeacherMessage(
-                    "🎤 Please allow microphone access so you can talk to me."
+                    "🎤 Mikrofon izni verilmedi. Tarayıcıdan mikrofon erişimine izin ver."
                 );
 
             }
+
 
             else if (
                 event.error ===
@@ -2174,12 +2198,62 @@ function startListening() {
             ) {
 
                 console.log(
-                    "No speech detected."
+                    "Lexi: No speech detected."
+                );
+
+            }
+
+
+            else if (
+                event.error ===
+                "audio-capture"
+            ) {
+
+                addTeacherMessage(
+                    "🎤 Mikrofon bulunamadı veya kullanılamıyor."
+                );
+
+            }
+
+
+            else if (
+                event.error ===
+                "network"
+            ) {
+
+                addTeacherMessage(
+                    "🌐 Ses tanıma bağlantısında bir sorun oluştu."
                 );
 
             }
 
         };
+
+
+    // ========================================
+    // START RECOGNITION
+    // ========================================
+
+    try {
+
+        voiceRecognition.start();
+
+    }
+
+    catch (error) {
+
+        console.error(
+            "Lexi voice start error:",
+            error
+        );
+
+        isListening = false;
+
+        setVoiceStatus(
+            "idle"
+        );
+
+    }
 
 }
 
@@ -2286,20 +2360,55 @@ function speakLexi(
         );
 
 
+   // ===============================
+// DETECT LANGUAGE
+// ===============================
+
+const turkishChars =
+    /[çğıöşüÇĞİÖŞÜ]/;
+
+const englishWords =
+    /\b(the|is|are|am|you|your|what|how|why|where|when|do|does|did|can|could|would|should|hello|hi|thanks|thank|please)\b/i;
+
+
+// Türkçe karakter veya Türkçe ağırlıklı
+// kelime varsa Türkçe kabul et
+
+const isTurkish =
+    turkishChars.test(cleanText) ||
+    !englishWords.test(cleanText);
+
+
+// ===============================
+// SET SPEECH LANGUAGE
+// ===============================
+
+if (isTurkish) {
+
     utterance.lang =
-        "en-US";
+        "tr-TR";
+
+}
+else {
+
+    utterance.lang =
+        "en-GB";
+
+}
 
 
-    utterance.rate =
-        0.82;
+// ===============================
+// VOICE SETTINGS
+// ===============================
 
+utterance.rate =
+    0.92;
 
-    utterance.pitch =
-        0.90;
+utterance.pitch =
+    1.08;
 
-
-    utterance.volume =
-        1;
+utterance.volume =
+    1;
 
 
     // ===============================
@@ -2310,23 +2419,115 @@ function speakLexi(
         window.speechSynthesis
             .getVoices();
 
+            console.table(
+    voices.map(voice => ({
+        name: voice.name,
+        lang: voice.lang
+    }))
+);
 
-    const englishVoice =
+
+    // ===============================
+// FIND VOICE BY LANGUAGE
+// ===============================
+
+// ===============================
+// FIND BEST LEXI VOICE
+// ===============================
+
+let selectedVoice = null;
+
+
+// ========================================
+// TURKISH VOICE
+// ========================================
+
+if (isTurkish) {
+
+    selectedVoice =
+        voices.find(
+            voice =>
+                voice.name
+                    .toLowerCase()
+                    .includes("tolga") &&
+                voice.lang
+                    .toLowerCase()
+                    .startsWith("tr")
+        );
+
+}
+
+
+// ========================================
+// ENGLISH FEMALE VOICE
+// ========================================
+
+else {
+
+    selectedVoice =
+        voices.find(
+            voice =>
+                voice.name ===
+                "Google UK English Female"
+        );
+
+}
+
+
+// ========================================
+// FALLBACK — GOOGLE US ENGLISH
+// ========================================
+
+if (!selectedVoice && !isTurkish) {
+
+    selectedVoice =
+        voices.find(
+            voice =>
+                voice.name ===
+                "Google US English"
+        );
+
+}
+
+
+// ========================================
+// FINAL FALLBACK
+// ========================================
+
+if (!selectedVoice) {
+
+    selectedVoice =
         voices.find(
             voice =>
                 voice.lang &&
                 voice.lang
                     .toLowerCase()
-                    .startsWith("en")
+                    .startsWith(
+                        isTurkish
+                            ? "tr"
+                            : "en"
+                    )
         );
 
+}
 
-    if (englishVoice) {
 
-        utterance.voice =
-            englishVoice;
+// ========================================
+// APPLY VOICE
+// ========================================
 
-    }
+if (selectedVoice) {
+
+    utterance.voice =
+        selectedVoice;
+
+    console.log(
+        "Lexi voice:",
+        selectedVoice.name,
+        selectedVoice.lang
+    );
+
+}
 
 
     isLexiSpeaking =
@@ -2685,3 +2886,17 @@ onAuthStateChanged(
 
     }
 );
+
+// ========================================
+// LOAD SPEECH SYNTHESIS VOICES
+// ========================================
+
+if (window.speechSynthesis) {
+
+    window.speechSynthesis.onvoiceschanged = () => {
+
+        window.speechSynthesis.getVoices();
+
+    };
+
+}

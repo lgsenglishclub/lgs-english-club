@@ -2964,3 +2964,40 @@ body .chat-container {
     }
 
 }
+
+/* ========================================
+   VOICE LANGUAGE SELECTOR
+======================================== */
+
+.voice-language {
+    height: 42px;
+    padding: 0 10px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+    background: #fff;
+    color: #333;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+    transition: 0.2s ease;
+}
+
+.voice-language:hover {
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+.voice-language:focus {
+    border-color: #777;
+}
+
+@media (max-width: 600px) {
+
+    .voice-language {
+        height: 40px;
+        padding: 0 7px;
+        font-size: 12px;
+        border-radius: 9px;
+    }
+
+}

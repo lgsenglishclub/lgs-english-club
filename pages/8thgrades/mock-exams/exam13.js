@@ -138,153 +138,277 @@ async function addTestXP(percent) {
 const questions = [
 
 {
-image:"images/exam13/1.png",
+    image:"images/exam13/1.png",
 
-question:"Read the e-mail. Which of the following would be the BEST reply to Jack?",
+    question:`
+Look at the invitation card and answer the question.
 
-options:[
-"Sure! I would be happy to join you. What time does the match start?",
-"Sorry, I don't like watching football, so you should go alone.",
-"That's a great idea, but I have already bought the tickets.",
-"Thanks, but I prefer playing tennis with my brother."
-],
+Which of the following questions DOES NOT have an answer
+in the invitation card?
+`,
 
-answer:0
+    options:[
+        "How much is the entrance fee for the event?",
+        "Where will the event take place?",
+        "When should the participants register?",
+        "Who can you contact for more information?"
+    ],
+
+    answer:2
 },
 
+
 {
-image:"images/exam13/2.png",
+    question:`
+Read the text and answer the question.
 
-question:"Five students are choosing a club for the school festival. The club must include an activity that is suitable for students who enjoy BOTH being outdoors and working in groups. Which club meets these requirements?",
+Ryan went to an adventure camp last month.
 
-options:[
-"The Photography Club – taking pictures alone in the classroom",
-"The Drama Club – performing a play together on the school stage",
-"The Chess Club – playing board games indoors",
-"The Reading Club – reading books silently in the library"
-],
+It was an amazing experience for me. On the first day,
+I tried bungee jumping. It was exciting and I loved it.
 
-answer:1
+On the second day, I went rock climbing. It was a little
+difficult, but I enjoyed it.
+
+Later, we wanted to try paragliding, but we couldn't
+because it was too windy.
+
+On the last day, we did rafting on the river.
+It was great!
+
+Next summer, I want to try skydiving.
+
+
+Which of the following questions DOES NOT have an answer
+in the paragraph?
+`,
+
+    options:[
+        "What did Ryan think about rafting?",
+        "Which sport did he try on the second day?",
+        "What equipment did he need for kayaking?",
+        "Why couldn't he try paragliding?"
+    ],
+
+    answer:2
 },
 
+
 {
-image:"images/exam13/3.png",
+    image:"images/exam13/3.png",
 
-question:"A recipe has four steps, but one step is missing. Which sentence completes the recipe correctly?",
+    question:`
+Mert is a new student at school. He wants to make a friend
+who is reliable, honest and supportive.
 
-options:[
-"Finally, serve the pancakes with fruit and honey.",
-"Then, pour the mixture into a hot pan and cook both sides.",
-"First, wash the vegetables and cut them into small pieces.",
-"After that, put the pancakes in the refrigerator for an hour."
-],
+The table shows the characteristics of some of his classmates.
 
-answer:1
+
+Who is the most appropriate friend for him?
+`,
+
+    options:[
+        "Jason",
+        "Kevin",
+        "Oliver",
+        "Lucas"
+    ],
+
+    answer:1
 },
 
+
 {
-image:"images/exam13/4.png",
+    image:"images/exam13/4.png",
 
-question:"You are calling the school to ask about a science project. The person who can answer your question is not available. Which question is the MOST appropriate to ask the receptionist?",
+    question:`
+Look at the table and answer the question.
 
-options:[
-"Why isn't the teacher in the office?",
-"Can you tell me when the teacher will be available?",
-"Could you do my science project for me?",
-"Can you explain why the project is difficult?"
-],
+According to the information in the table,
+Aziz Sancar - - - -.
+`,
 
-answer:1
+    options:[
+        "was born in Turkey in 1946",
+        "has never received an important award",
+        "worked only as a university teacher",
+        "received the Nobel Prize in Chemistry"
+    ],
+
+    answer:3
 },
 
+
 {
-image:"images/exam13/5.png",
+    image:"images/exam13/4.png",
 
-question:"Read the online comments about Internet use. Which person has a different opinion from the others?",
+    question:`
+Look at the table and answer the question.
 
-options:[
-"Emma: I use the Internet to find information for my homework.",
-"Leo: I often watch tutorials when I don't understand a topic.",
-"Sara: I think the Internet is useful when I need to learn something.",
-"Tom: I mainly use the Internet to play games with my friends."
-],
+There is NO information about Aziz Sancar's - - - -
+in the table.
+`,
 
-answer:3
+    options:[
+        "education",
+        "profession",
+        "awards",
+        "date of birth"
+    ],
+
+    answer:0
 },
 
+
 {
-image:"images/exam13/6.png",
+    image:"images/exam13/6.png",
 
-question:"A group of students is preparing for a mountain-bike trip. They have the equipment shown in the picture. Which item is NOT suitable for the activity?",
+    question:`
+Read the information and look at the to-do list.
 
-options:[
-"A helmet",
-"A water bottle",
-"A pair of cycling gloves",
-"Formal leather shoes"
-],
+Sarah is a mother of four children. She wants them to share
+the responsibilities at home, so she prepares a to-do list.
 
-answer:3
+After breakfast, she wants to do the grocery shopping,
+but she cannot find any clean clothes to wear.
+
+
+Who hasn't done his/her chore?
+`,
+
+    options:[
+        "Daniel",
+        "Lucy",
+        "Michael",
+        "Emma"
+    ],
+
+    answer:1
 },
 
+
 {
-image:"images/exam13/7.png",
+    question:`
+Read the dialogue and answer the question.
 
-question:"A tourist has only three hours before leaving the city. She wants to buy a handmade gift, see a historical place and eat a traditional dish. Which plan should she choose?",
+Ella: What would you like to have?
+I will have grilled chicken and a salad.
 
-options:[
-"Visit the museum → have lunch at a traditional restaurant → buy a handmade gift",
-"Go to the beach → visit the shopping mall → eat at a fast-food restaurant",
-"Visit the sports centre → go to the cinema → buy clothes",
-"Go to the business centre → visit a café → return to the hotel"
-],
+Ryan: I am not very hungry, so I just want a piece of
+cheesecake. I have a sweet tooth.
 
-answer:0
+Ella: - - - -
+
+Ryan: I mean I love sweet food, especially desserts.
+
+
+Which of the following completes the conversation?
+`,
+
+    options:[
+        "What does that mean?",
+        "How does cheesecake taste?",
+        "Why don't you want a salad?",
+        "Would you like some grilled chicken?"
+    ],
+
+    answer:0
 },
 
+
 {
-image:"images/exam13/8.png",
+    question:`
+Look at the dialogue and answer the question.
 
-question:"The family members have different free times during the week. Which chore would be the MOST suitable for Alex, who is away from home every evening but is free on Saturday mornings?",
+Mia: - - - -?
 
-options:[
-"Walking the dog every evening",
-"Setting the table before dinner every day",
-"Cleaning the garden on Saturday morning",
-"Doing the laundry every night"
-],
+Noah: Well, I would rather go scuba diving.
 
-answer:2
+Mia: - - - -?
+
+Noah: Because I enjoy discovering the underwater world.
+
+Mia: I prefer going rafting.
+I think it is really exciting.
+
+
+Which of the following DOES NOT complete the dialogue?
+`,
+
+    options:[
+        "How dangerous is scuba diving?",
+        "Why do you prefer it?",
+        "What extreme sport do you prefer doing?",
+        "What about you?"
+    ],
+
+    answer:0
 },
 
+
 {
-image:"images/exam13/9.png",
+    question:`
+Look at the dialogue and answer the question.
 
-question:"Read the text.\n\nWhen Elif started secondary school, she noticed that many students threw away half-used notebooks at the end of each term. She talked to her science teacher and designed a notebook with removable pages. Students could take out the used pages and replace them with new ones instead of buying a completely new notebook. After testing the idea with her classmates, Elif changed the cover to make it stronger. The school later started using the notebooks in several classes.\n\nWhat makes Elif's invention different from an ordinary notebook?",
+Alex: Hi, Ben! I returned from my holiday.
 
-options:[
-"It allows students to reuse the same notebook by replacing used pages.",
-"It helps students finish their homework more quickly.",
-"It is designed mainly to make notebooks more colourful.",
-"It prevents students from writing too much in their notebooks."
-],
+Alex: (1) - - - -?
 
-answer:0
+Ben: It was fantastic! I really had a great time.
+
+Alex: (2) - - - -?
+
+Ben: I stayed at a small hotel near the beach.
+
+Alex: (3) - - - -?
+
+Ben: I visited ancient ruins, swam in the sea
+and tried local food.
+
+Alex: (4) - - - -?
+
+Ben: Yes, I bought some magnets and a handmade
+necklace for my sister.
+
+
+Which of the following matches is CORRECT?
+`,
+
+    options:[
+        "(1) How was your holiday? (2) What was your accommodation choice? (3) What did you do there? (4) Did you buy any souvenirs?",
+
+        "(1) What did you do there? (2) How was your holiday? (3) Did you buy any souvenirs? (4) What was your accommodation choice?",
+
+        "(1) Did you buy any souvenirs? (2) What was your accommodation choice? (3) How was your holiday? (4) What did you do there?",
+
+        "(1) What was your accommodation choice? (2) Did you buy any souvenirs? (3) What did you do there? (4) How was your holiday?"
+    ],
+
+    answer:0
 },
 
+
 {
-image:"images/exam13/10.png",
+    image:"images/exam13/10.png",
 
-question:"Read the text.\n\nMina and Zoe became friends even though they have very different interests. Mina loves trying new activities and often makes plans at the last minute. Zoe prefers making detailed plans and feels more comfortable when she knows what will happen. At first, this difference caused some problems. Later, they learned to meet halfway. Mina started telling Zoe about her plans earlier, while Zoe became more open to spontaneous activities. Now they say their differences actually help them understand each other better.\n\nWhat helped Mina and Zoe maintain their friendship?",
+    question:`
+Read the text messages and answer the question.
 
-options:[
-"They stopped doing activities together.",
-"They decided to have exactly the same interests.",
-"They learned to respect and adapt to each other's differences.",
-"They avoided talking about their different personalities."
-],
+Which of the following DOES NOT match with
+one of the messages above?
+`,
 
-answer:2
+    options:[
+        "You can leave a message when the person you are calling is unavailable.",
+
+        "You can press a number to get information about a service.",
+
+        "The caller can expect the person to call back later.",
+
+        "You should visit the office because the person cannot take phone calls."
+    ],
+
+    answer:3
 }
 
 ];

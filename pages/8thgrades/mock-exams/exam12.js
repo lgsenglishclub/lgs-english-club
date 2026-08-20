@@ -140,151 +140,160 @@ const questions = [
 {
 image:"images/exam12/1.png",
 
-question:"The students have different responsibilities for the school picnic. Which of the following is NOT mentioned as a completed task?",
+question:"Look at Emma and Mia's messages. Which of the following is TRUE according to the conversation?",
 
 options:[
-"Bringing the drinks",
-"Preparing the sandwiches",
-"Finding a place for the picnic",
-"Preparing the music playlist"
+"Emma asks Mia to bring drinks and snacks to Jack's birthday party.",
+"Mia refuses to help Emma because she has another plan for Saturday.",
+"Emma is organizing a surprise party for Mia on Saturday.",
+"Leo says that Jack already knows everything about the surprise party."
+],
+
+answer:0
+},
+
+
+{
+image:"images/exam12/2.png",
+
+question:"Look at the chart. Which of the following is CORRECT according to the teenagers' weekend preferences?",
+
+options:[
+"Watching movies is more popular than all the other activities.",
+"Reading books is preferred by more teenagers than outdoor activities.",
+"Going shopping is twice as popular as playing computer games.",
+"Playing computer games is the least preferred activity among the teenagers."
+],
+
+answer:0
+},
+
+
+{
+image:"images/exam12/3.png",
+
+question:"Sarah is preparing the chicken casserole for her family. According to the recipe, what should she do BEFORE she adds the chicken, sauce and the other ingredients?",
+
+options:[
+"She should chop the vegetables and put them in a bowl.",
+"She should mix all the ingredients well.",
+"She should put the mixture in a baking dish.",
+"She should bake the casserole for 30 minutes."
+],
+
+answer:0
+},
+
+
+{
+image:"images/exam12/4.png",
+
+question:"Look at the messages. Which of the following is NOT mentioned in any of the messages?",
+
+options:[
+"Someone wants to talk about concert tickets.",
+"Someone is driving and cannot answer the phone.",
+"Someone is not at home and asks the caller to leave a message.",
+"Someone wants to invite a friend to a concert."
+],
+
+answer:3
+},
+
+
+{
+image:"images/exam12/5.png",
+
+question:"Look at the Teen Forum. Which of the following is NOT mentioned as a problem by the users?",
+
+options:[
+"Spending too much time online before going to bed.",
+"Sharing personal information on websites.",
+"Receiving messages from unknown people.",
+"Having difficulty remembering passwords."
+],
+
+answer:3
+},
+
+
+{
+image:"images/exam12/6.png",
+
+question:"Look at the Adventure Camp schedule. Which of the following is TRUE according to the schedule?",
+
+options:[
+"Students can go rafting on Monday morning.",
+"Rock climbing is an afternoon activity on Tuesday.",
+"Archery takes place on Thursday afternoon.",
+"Zipline is planned for Wednesday afternoon."
+],
+
+answer:0
+},
+
+
+{
+image:"images/exam12/7.png",
+
+question:"Look at the travel information. Which of the following is NOT included in the Istanbul tour?",
+
+options:[
+"A Bosphorus boat tour.",
+"A visit to Topkapi Palace and Hagia Sophia.",
+"A Grand Bazaar visit.",
+"A three-day stay at a five-star beach hotel."
+],
+
+answer:3
+},
+
+
+{
+image:"images/exam12/8.png",
+
+question:"Look at the family chore chart. Which of the following is CORRECT according to the chart?",
+
+options:[
+"Mum waters the plants on Monday.",
+"Lucy does the laundry on Tuesday.",
+"Dad washes the car on Friday.",
+"Lucy sets the table on Saturday."
 ],
 
 answer:2
 },
 
-{
-image:"images/exam12/2.png",
-
-question:"Look at the activity cards. Which activity would be the BEST choice for her?",
-
-options:[
-"Going hiking in the forest",
-"Watching a film at the cinema",
-"Playing tennis at the sports club",
-"Going shopping at the city centre"
-],
-
-answer:0
-},
-
-{
-image:"images/exam12/3.png",
-
-question:"Mert wants to prepare the dish shown in the recipe. Which step should he complete next to finish the dish as quickly as possible?",
-
-options:[
-"Let the mixture rest for thirty minutes.",
-"Put the prepared mixture in the oven.",
-"Chop the vegetables again.",
-"Serve the ingredients separately."
-],
-
-answer:1
-},
-
-{
-image:"images/exam12/4.png",
-
-question:"Read the phone conversation. What does the caller want the person answering the phone to do?",
-
-options:[
-"Give him information about the school trip",
-"Ask the teacher to change the meeting time",
-"Tell the teacher that he will arrive late",
-"Ask the teacher to call him back"
-],
-
-answer:3
-},
-
-{
-image:"images/exam12/5.png",
-
-question:"The students' Internet habits are shown in the chart. Which comment is NOT supported by the chart?",
-
-options:[
-"Ali: 'Using the Internet to communicate is clearly more common than using it for shopping.'",
-"Defne: 'Watching videos is more popular than playing online games.'",
-"Kerem: 'Doing homework is one of the two least common activities.'",
-"Melis: 'Shopping online is more common than communicating with friends.'"
-],
-
-answer:3
-},
-
-{
-image:"images/exam12/6.png",
-
-question:"Read the adventure camp notice. Four students are preparing for the trip. Which student has prepared something that is NOT necessary according to the notice?",
-
-options:[
-"Can, who has packed a raincoat and enough water",
-"Ece, who has comfortable walking shoes and a flashlight",
-"Mert, who has a helmet and a first-aid kit",
-"Selin, who has packed formal clothes and high-heeled shoes"
-],
-
-answer:3
-},
-
-{
-image:"images/exam12/7.png",
-
-question:"A tourist arrives at the bus station at 10:00. She has three hours before her bus leaves. According to the city map, she wants to visit a historical place, buy a traditional souvenir and eat local food. Which route is the MOST suitable?",
-
-options:[
-"Bus station → museum → old market → traditional restaurant",
-"Bus station → shopping mall → sports centre → beach",
-"Bus station → amusement park → café → shopping mall",
-"Bus station → business centre → cinema → fast-food restaurant"
-],
-
-answer:0
-},
-
-{
-image:"images/exam12/8.png",
-
-question:"Look at the family's weekly schedule. On Saturday morning, everyone is free except one family member. The family wants to choose a chore that can be completed by two people together. Which chore is the MOST suitable?",
-
-options:[
-"Walking the dog",
-"Cleaning the garden",
-"Doing the laundry",
-"Setting the table for dinner"
-],
-
-answer:1
-},
 
 {
 image:"images/exam12/9.png",
 
-question:"Read the text.\n\nWhich of the following best explains the main purpose of Eren's invention?",
+question:"Look at the information about the Green Valley School Solar Energy Project. Which of the following is TRUE according to the infographic?",
 
 options:[
-"To help students carry unfinished food instead of throwing it away",
-"To encourage students to buy more food from the cafeteria",
-"To make school bags larger and more comfortable",
-"To replace all the containers used in the cafeteria"
+"The students have been collecting data for six months.",
+"The solar panels produce more than half of the school's electricity.",
+"The students presented their results at the beginning of the school year.",
+"The project aims to increase the school's use of traditional energy sources."
 ],
 
 answer:0
 },
 
+
 {
 image:"images/exam12/10.png",
 
-question:"Read the text.\n\nWhat can we understand about Lara and İrem?",
+question:"Look at the infographic about the Mars mission. What did the scientists do immediately after the robot landed on Mars?",
 
 options:[
-"They always prefer exactly the same activities.",
-"They solve their disagreements by considering each other's interests.",
-"Lara gives up her favourite activities whenever İrem disagrees.",
-"İrem doesn't enjoy spending time outdoors."
+"They sent scientific data and images back to Earth.",
+"They changed the robot's route because of obstacles.",
+"They explored the area and took photos of rocks and soil.",
+"They launched the robot into space."
 ],
 
-answer:1
+answer:2
 }
 
 ];

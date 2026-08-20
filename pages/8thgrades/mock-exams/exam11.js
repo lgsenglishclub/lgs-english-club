@@ -138,153 +138,198 @@ async function addTestXP(percent) {
 const questions = [
 
 {
-image:"images/exam11/1.png",
+    image:"images/exam11/1.png",
 
-question:"The students are planning a surprise party for their teacher. According to their messages, who has NOT completed his/her task yet?",
+    question:`
 
-options:[
-"Julia",
-"David",
-"Mike",
-"Sarah"
-],
+Which of the following questions DOES NOT have an answer
+in the invitation card?
+`,
 
-answer:2
+    options:[
+        "How much should a participant pay to attend the event?",
+        "Where will the event take place and how long will it last?",
+        "What is the last date for registering for the event?",
+        "Who should participants contact if they need more information?"
+    ],
+
+    answer:1
 },
+
 
 {
 image:"images/exam11/2.png",
 
-question:"The table shows four students' free-time preferences. Which activity is enjoyed by only one student?",
+    question:`
 
-options:[
-"Going cycling",
-"Watching a movie",
-"Playing tennis",
-"Going shopping"
-],
+Which of the following questions DOES NOT have an answer
+in the text?
+`,
 
-answer:2
+    options:[
+        "Why did Daniel enjoy rock climbing?",
+        "Why couldn't the students go paragliding?",
+        "Which activity did Daniel find the most relaxing?",
+        "Who taught Daniel how to kayak during the camp?"
+    ],
+
+    answer:3
 },
+
 
 {
-image:"images/exam11/3.png",
+    image:"images/exam11/3.png",
 
-question:"Mert is preparing a vegetable pizza. He has already prepared the dough and chopped the vegetables. According to the recipe, what should he do next?",
+    question:`
 
-options:[
-"Put the pizza in the oven.",
-"Spread the tomato sauce over the dough.",
-"Let the pizza cool and serve it.",
-"Take the pizza out of the oven."
-],
+According to the information in the table, who would be
+the best friend for Emma?
+`,
 
-answer:1
+    options:[
+        "Jason, because he is funny and outgoing but sometimes forgets his promises.",
+        "Mila, because she is honest, reliable and always helps her friends when they need her.",
+        "Ryan, because he is generous and enjoys meeting new people although he can be a little careless.",
+        "Sophie, because she is ambitious and successful but prefers solving problems on her own."
+    ],
+
+    answer:1
 },
+
 
 {
-image:"images/exam11/4.png",
+    image:"images/exam11/4.png",
 
-question:"Linda calls Emma to invite her to a concert, but Emma is not at home. According to the situation in the picture, what should Linda do?",
+    question:`
 
-options:[
-"Ask Emma's sister to leave a message.",
-"Ask Emma's sister to buy the tickets.",
-"Wait at Emma's house until she comes back.",
-"Ask Emma's sister why she left home."
-],
+According to the information in the table, Dr. Elif Yılmaz
+- - - -.
+`,
 
-answer:0
+    options:[
+        "started her scientific career after she moved to another country",
+        "received an international award for her research on renewable energy",
+        "studied only environmental problems during her university education",
+        "stopped working as a scientist after completing her doctoral studies"
+    ],
+
+    answer:1
 },
+
 
 {
-image:"images/exam11/5.png",
+    image:"images/exam11/5.png",
 
-question:"The graph shows teenagers' Internet activities. Which statement is TRUE according to the data?",
+    question:`
 
-options:[
-"Communication is more common than all the other activities.",
-"Online gaming is more popular than doing homework.",
-"Shopping online is more popular than entertainment.",
-"Doing homework is the second most common activity."
-],
+There is NO information about Dr. Elif Yılmaz's - - - -.
+`,
 
-answer:0
+    options:[
+        "academic background and university education",
+        "scientific achievements and international awards",
+        "research areas and professional experience",
+        "family members and personal hobbies"
+    ],
+
+    answer:3
 },
+
 
 {
-image:"images/exam11/6.png",
+    image:"images/exam11/6.png",
 
-question:"Deniz wants to join a rafting trip for the first time. According to the information in the picture, which of the following should he do?",
+    question:`
 
-options:[
-"Go without a life jacket because he can swim well.",
-"Follow the guide's instructions and use the safety equipment.",
-"Choose the fastest boat without listening to the guide.",
-"Stay away from the group during the trip."
-],
 
-answer:1
+Who hasn't completed his/her responsibility?
+`,
+
+    options:[
+        "Alex, who was responsible for taking out the rubbish after breakfast.",
+        "Lucy, who was supposed to put the clean clothes in the wardrobe.",
+        "Mark, who had to wash the dishes after the family finished breakfast.",
+        "Sophie, who was responsible for watering the plants in the living room."
+    ],
+
+    answer:2
 },
+
 
 {
 image:"images/exam11/7.png",
 
-question:"A tourist wants to buy a traditional souvenir, visit a historical building and have dinner at a local restaurant. According to the information in the picture, where should she go?",
+    question:`
 
-options:[
-"The business centre",
-"The modern shopping district",
-"The old town",
-"The seaside entertainment area"
-],
+Which of the following is CORRECT according to the dialogue?
+`,
 
-answer:2
+    options:[
+        "Jack orders a sweet drink because he is very thirsty.",
+        "Jack chooses fruit salad because he wants a lighter dessert.",
+        "Jack refuses to eat dessert because he doesn't like fruit.",
+        "Jack orders chocolate cake because he prefers very sweet food."
+    ],
+
+    answer:1
 },
+
 
 {
 image:"images/exam11/8.png",
 
-question:"Look at the weekly chore chart. Which statement is TRUE?",
+    question:`
 
-options:[
-"Dad cleans the rooms but does not set the table.",
-"Anna does the laundry but never waters the plants.",
-"Ben takes out the trash but does not clean the rooms.",
-"Mom does all the chores alone."
-],
+Which of the following completes the dialogue?
+`,
 
-answer:0
+    options:[
+        "How often do you go mountain biking?",
+        "Why would you prefer mountain biking?",
+        "Where did you learn how to ride a bike?",
+        "Who usually goes mountain biking with you?"
+    ],
+
+    answer:1
 },
+
 
 {
 image:"images/exam11/9.png",
 
-question:"Read the invention note. What problem does the invention aim to solve?",
+    question:`
 
-options:[
-"People forget to drink enough water.",
-"People cannot carry water bottles easily.",
-"People spend too much money on drinks.",
-"People do not know how to exercise regularly."
-],
+Which of the following correctly completes the dialogue?
+`,
 
-answer:0
+    options:[
+        "(1) Where did you stay? (2) What did you do there? (3) Did you buy any souvenirs? (4) Did you taste any traditional food?",
+        "(1) What did you do there? (2) Where did you stay? (3) Did you taste any traditional food? (4) Did you buy any souvenirs?",
+        "(1) Did you buy any souvenirs? (2) Where did you stay? (3) What did you do there? (4) How was your holiday?",
+        "(1) Did you taste any traditional food? (2) What did you do there? (3) Where did you stay? (4) Did you buy any souvenirs?"
+    ],
+
+    answer:0
 },
 
+
 {
-image:"images/exam11/10.png",
+    image:"images/exam11/10.png",
 
-question:"Read the conversation in the picture. Which statement is TRUE about the girl?",
+    question:`
 
-options:[
-"She prefers having many friends.",
-"She thinks friends should have the same hobbies.",
-"She believes trust is important in a friendship.",
-"She does not like sharing her ideas with friends."
-],
+Which of the following DOES NOT match with one
+of the messages above?
+`,
 
-answer:2
+    options:[
+        "A person who needs information about a cinema.",
+        "A person who wants to buy a ticket online.",
+        "A person who leaves a message for someone who is not at home.",
+        "A person who visits an office to talk to a manager."
+    ],
+
+    answer:3
 }
 
 ];

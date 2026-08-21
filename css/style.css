@@ -20116,3 +20116,197 @@ a {
     text-align: right;
 }
 
+.turkish-meaning {
+    display: block;
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin-top: 4px;
+}
+
+/* ==================================================
+   SHOULD / SHOULDN'T — GRAMMAR LESSON
+================================================== */
+
+.grammar-section {
+    margin-bottom: 30px;
+}
+
+.grammar-section:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ==================================================
+   GRAMMAR SECTION TITLES
+================================================== */
+
+.grammar-section h3 {
+    margin: 0 0 14px;
+
+    text-align: center;
+
+    font-size: 1.08rem;
+    font-weight: 750;
+
+    color: var(--text-color, #1e293b);
+}
+
+
+/* --------------------------------------------------
+   EXPLANATION
+-------------------------------------------------- */
+
+.grammar-section > p:not(.grammar-formula) {
+    margin: 0 0 16px;
+
+    line-height: 1.75;
+    font-size: 0.98rem;
+
+    color: var(--text-secondary, #64748b);
+}
+
+
+/* --------------------------------------------------
+   GRAMMAR FORMULA
+-------------------------------------------------- */
+
+.grammar-formula {
+    display: inline-flex;
+    align-items: center;
+
+    margin: 0 0 16px;
+    padding: 11px 18px;
+
+    border-radius: 12px;
+
+    background: var(--card-bg, #f8fafc);
+    border: 1px solid rgba(99, 102, 241, 0.15);
+
+    font-size: 0.95rem;
+    letter-spacing: 0.2px;
+
+    color: var(--text-color, #1e293b);
+}
+
+
+/* --------------------------------------------------
+   EXAMPLE BOX
+-------------------------------------------------- */
+
+.grammar-example {
+    position: relative;
+
+    margin: 0 0 12px;
+    padding: 16px 18px;
+
+    border-radius: 14px;
+
+    background: var(--card-bg, #ffffff);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+
+    box-shadow:
+        0 4px 14px rgba(0, 0, 0, 0.04);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.grammar-example:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 22px rgba(0, 0, 0, 0.07);
+}
+
+.grammar-example p {
+    margin: 0 0 6px;
+
+    line-height: 1.6;
+}
+
+.grammar-example p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* English */
+
+.grammar-example p:first-child {
+    font-size: 1rem;
+    font-weight: 600;
+
+    color: var(--text-color, #1e293b);
+}
+
+
+/* Turkish */
+
+.grammar-example .example-tr {
+    font-size: 0.88rem;
+    font-weight: 400;
+
+    color: var(--text-secondary, #64748b);
+}
+
+
+/* --------------------------------------------------
+   SHOULD / SHOULDN'T EMPHASIS
+-------------------------------------------------- */
+
+.grammar-example strong {
+    font-weight: 750;
+}
+
+
+/* --------------------------------------------------
+   EXAMPLE SENTENCES GRID
+-------------------------------------------------- */
+
+.grammar-section .expression-grid {
+    margin-top: 14px;
+}
+
+
+/* --------------------------------------------------
+   MOBILE
+-------------------------------------------------- */
+
+@media (max-width: 768px) {
+
+    .grammar-section {
+        margin-bottom: 24px;
+    }
+
+    .grammar-section h3 {
+        font-size: 1rem;
+    }
+
+    .grammar-section > p:not(.grammar-formula) {
+        font-size: 0.94rem;
+        line-height: 1.65;
+    }
+
+    .grammar-formula {
+        width: 100%;
+        box-sizing: border-box;
+
+        padding: 11px 14px;
+
+        font-size: 0.9rem;
+    }
+
+    .grammar-example {
+        padding: 14px;
+        border-radius: 12px;
+    }
+
+    .grammar-example p:first-child {
+        font-size: 0.95rem;
+    }
+
+    .grammar-example .example-tr {
+        font-size: 0.84rem;
+    }
+
+}

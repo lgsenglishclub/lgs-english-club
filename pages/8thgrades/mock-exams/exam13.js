@@ -137,279 +137,185 @@ async function addTestXP(percent) {
 
 const questions = [
 
-{
-    image:"images/exam13/1.png",
+    {
+        image: "images/exam13/1.png",
 
-    question:`
-Look at the invitation card and answer the question.
+        question: "Frank has a new telephone. He wants to connect to the Internet.\n\nWhich icon should Frank click?",
 
-Which of the following questions DOES NOT have an answer
-in the invitation card?
-`,
+        options: [
+            "Networks",
+            "Sounds",
+            "Date and time",
+            "Passwords"
+        ],
 
-    options:[
-        "How much is the entrance fee for the event?",
-        "Where will the event take place?",
-        "When should the participants register?",
-        "Who can you contact for more information?"
-    ],
+        answer: 0
+    },
 
-    answer:2
-},
+    {
+        image: "images/exam13/2.png",
 
+        question: "According to the conversation above, which of the following are the most appropriate activities for Janet and Sam?",
 
-{
-    question:`
-Read the text and answer the question.
+        options: [
+            "Janet: playing volleyball / joining a guitar course — Sam: going to the shopping mall / doing basketball training",
+            "Janet: watching a play / going to a concert — Sam: going to the theatre / joining a drawing course",
+            "Janet: swimming / playing the piano — Sam: watching a play / visiting an art exhibition",
+            "Janet: listening to music / going to the theatre — Sam: cycling / going shopping"
+        ],
 
-Ryan went to an adventure camp last month.
+        answer: 3
+    },
 
-It was an amazing experience for me. On the first day,
-I tried bungee jumping. It was exciting and I loved it.
+    {
+        image: "images/exam13/3.png",
 
-On the second day, I went rock climbing. It was a little
-difficult, but I enjoyed it.
+        question: "Answer the question using the invitation card above.\n\nWhich of the following does NOT have an answer in the invitation?",
 
-Later, we wanted to try paragliding, but we couldn't
-because it was too windy.
+        options: [
+            "Who is the party for?",
+            "What time are they meeting?",
+            "Where is the party going to be?",
+            "How can they learn about the details of the event?"
+        ],
 
-On the last day, we did rafting on the river.
-It was great!
+        answer: 1
+    },
 
-Next summer, I want to try skydiving.
+    {
+        image: "images/exam13/4.png",
 
+        question: "Which of the following IS NOT correct according to the conversation above?",
 
-Which of the following questions DOES NOT have an answer
-in the paragraph?
-`,
+        options: [
+            "Jack does his shopping online.",
+            "Julia improves her science knowledge.",
+            "Tim uses his smartphone for communication.",
+            "Maggy reads magazines and newspapers on the Net."
+        ],
 
-    options:[
-        "What did Ryan think about rafting?",
-        "Which sport did he try on the second day?",
-        "What equipment did he need for kayaking?",
-        "Why couldn't he try paragliding?"
-    ],
+        answer: 1
+    },
 
-    answer:2
-},
+    {
+        image: "images/exam13/5.png",
 
+        question: "Which of the following is CORRECT according to the information above?",
 
-{
-    image:"images/exam13/3.png",
+        options: [
+            "Girls listen to jazz and folk music more than boys do.",
+            "More than half of the girls prefer listening to pop music.",
+            "Rap music is the most popular kind of music for both groups.",
+            "Both boys and girls like classical music at the same rate."
+        ],
 
-    question:`
-Mert is a new student at school. He wants to make a friend
-who is reliable, honest and supportive.
+        answer: 1
+    },
 
-The table shows the characteristics of some of his classmates.
+    {
+        image: "images/exam13/6.png",
 
+        question: "Which of the following is CORRECT according to the text?",
 
-Who is the most appropriate friend for him?
-`,
+        options: [
+            "People have to bring their own rafting equipment.",
+            "If you want to try rafting on Çoruh, go there in the winter.",
+            "Çoruh is the most popular white-water river in the world.",
+            "There are various accommodation options for rafting lovers."
+        ],
 
-    options:[
-        "Jason",
-        "Kevin",
-        "Oliver",
-        "Lucas"
-    ],
+        answer: 3
+    },
 
-    answer:1
-},
+    {
+        image: "images/exam13/7.png",
 
+        question: "Looking at the information above, who can buy Dean’s computer?",
 
-{
-    image:"images/exam13/4.png",
+        options: [
+            "Carl",
+            "Jack",
+            "Bobby",
+            "Sam"
+        ],
 
-    question:`
-Look at the table and answer the question.
+        answer: 3
+    },
 
-According to the information in the table,
-Aziz Sancar - - - -.
-`,
+    {
+        image: "images/exam13/8.png",
 
-    options:[
-        "was born in Turkey in 1946",
-        "has never received an important award",
-        "worked only as a university teacher",
-        "received the Nobel Prize in Chemistry"
-    ],
+        question: "Kimberly, Matthew, Laura, and Vincent want to attend a teen camp. They see a brochure at school and try to find a camp matching their interests. The brochure and some information about the students are below:\n\n• Kimberly loves spending time in nature. She enjoys trekking and climbing mountains.\n• Matthew wants to explore other cultures and learn Spanish.\n• Laura likes teaching children and taking part in projects about saving the environment.\n• Vincent likes theatre, music, and dance.\n\nWhich student’s interests do NOT match any of the camps on the brochure?",
 
-    answer:3
-},
+        options: [
+            "Kimberly",
+            "Matthew",
+            "Laura",
+            "Vincent"
+        ],
 
+        answer: 3
+    },
 
-{
-    image:"images/exam13/4.png",
+    {
+        image: "images/exam13/9.png",
 
-    question:`
-Look at the table and answer the question.
+        question: "The event will be - - - -.",
 
-There is NO information about Aziz Sancar's - - - -
-in the table.
-`,
+        options: [
+            "in the afternoon",
+            "at the weekend",
+            "$25 for 2 students",
+            "in the school garden"
+        ],
 
-    options:[
-        "education",
-        "profession",
-        "awards",
-        "date of birth"
-    ],
+        answer: 1
+    },
 
-    answer:0
-},
+    {
+        image: "images/exam13/10.png",
 
+        question: "Which of the following is CORRECT according to the research results?",
 
-{
-    image:"images/exam13/6.png",
+        options: [
+            "Korean teens are more interested in sports than English teens are.",
+            "Korean teens spend less time studying than English teens do.",
+            "English teens’ favourite activity is going online.",
+            "English teens prefer artistic activities."
+        ],
 
-    question:`
-Read the information and look at the to-do list.
+        answer: 2
+    },
 
-Sarah is a mother of four children. She wants them to share
-the responsibilities at home, so she prepares a to-do list.
+    {
+        image: "images/exam13/11.png",
 
-After breakfast, she wants to do the grocery shopping,
-but she cannot find any clean clothes to wear.
+        question: "Read Arthur's plans and the conversation. Answer the question.\n\nBlake: We are planning to gather on Monday. Will you come?\n\nArthur: What time?\n\nBlake: At 4 pm.\n\nArthur: - - - -.\n\nWhich of the following completes the conversation?",
 
+        options: [
+            "It is awesome, but I will be at John’s party",
+            "I’d love to, but I have to leave before six",
+            "That sounds great, but I have to train for the tournament",
+            "I am sorry, but I am taking care of my brother at that time"
+        ],
 
-Who hasn't done his/her chore?
-`,
+        answer: 1
+    },
 
-    options:[
-        "Daniel",
-        "Lucy",
-        "Michael",
-        "Emma"
-    ],
+    {
+        image: "images/exam13/12.png",
 
-    answer:1
-},
+        question: "Read the text and complete the sentence.\n\nIf you want to have a safe and amusing safari tour, you should - - - -.",
 
+        options: [
+            "wear comfortable clothes",
+            "be close to the animals",
+            "not stay in the tour car",
+            "not take any photos"
+        ],
 
-{
-    question:`
-Read the dialogue and answer the question.
-
-Ella: What would you like to have?
-I will have grilled chicken and a salad.
-
-Ryan: I am not very hungry, so I just want a piece of
-cheesecake. I have a sweet tooth.
-
-Ella: - - - -
-
-Ryan: I mean I love sweet food, especially desserts.
-
-
-Which of the following completes the conversation?
-`,
-
-    options:[
-        "What does that mean?",
-        "How does cheesecake taste?",
-        "Why don't you want a salad?",
-        "Would you like some grilled chicken?"
-    ],
-
-    answer:0
-},
-
-
-{
-    question:`
-Look at the dialogue and answer the question.
-
-Mia: - - - -?
-
-Noah: Well, I would rather go scuba diving.
-
-Mia: - - - -?
-
-Noah: Because I enjoy discovering the underwater world.
-
-Mia: I prefer going rafting.
-I think it is really exciting.
-
-
-Which of the following DOES NOT complete the dialogue?
-`,
-
-    options:[
-        "How dangerous is scuba diving?",
-        "Why do you prefer it?",
-        "What extreme sport do you prefer doing?",
-        "What about you?"
-    ],
-
-    answer:0
-},
-
-
-{
-    question:`
-Look at the dialogue and answer the question.
-
-Alex: Hi, Ben! I returned from my holiday.
-
-Alex: (1) - - - -?
-
-Ben: It was fantastic! I really had a great time.
-
-Alex: (2) - - - -?
-
-Ben: I stayed at a small hotel near the beach.
-
-Alex: (3) - - - -?
-
-Ben: I visited ancient ruins, swam in the sea
-and tried local food.
-
-Alex: (4) - - - -?
-
-Ben: Yes, I bought some magnets and a handmade
-necklace for my sister.
-
-
-Which of the following matches is CORRECT?
-`,
-
-    options:[
-        "(1) How was your holiday? (2) What was your accommodation choice? (3) What did you do there? (4) Did you buy any souvenirs?",
-
-        "(1) What did you do there? (2) How was your holiday? (3) Did you buy any souvenirs? (4) What was your accommodation choice?",
-
-        "(1) Did you buy any souvenirs? (2) What was your accommodation choice? (3) How was your holiday? (4) What did you do there?",
-
-        "(1) What was your accommodation choice? (2) Did you buy any souvenirs? (3) What did you do there? (4) How was your holiday?"
-    ],
-
-    answer:0
-},
-
-
-{
-    image:"images/exam13/10.png",
-
-    question:`
-Read the text messages and answer the question.
-
-Which of the following DOES NOT match with
-one of the messages above?
-`,
-
-    options:[
-        "You can leave a message when the person you are calling is unavailable.",
-
-        "You can press a number to get information about a service.",
-
-        "The caller can expect the person to call back later.",
-
-        "You should visit the office because the person cannot take phone calls."
-    ],
-
-    answer:3
-}
+        answer: 0
+    }
 
 ];
 

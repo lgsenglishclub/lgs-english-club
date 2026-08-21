@@ -21,7 +21,7 @@ import {
 
 
 // =========================================
-// UNIT 2 VOCABULARY
+// UNIT 3 VOCABULARY
 // =========================================
 
 const vocabulary = [

@@ -96,40 +96,254 @@ async function addTestXP(percent) {
 
 }
 
-const unit1FriendshipTest2 = [
+const unit1FriendshipTest4 = [
 
     // =====================================================
-    // QUESTION 1 — FRIENDSHIP DAY
+    // QUESTION 1
     // =====================================================
 
     {
-        id: "u1_f_test2_q1",
+        id: "u1_f_test4_q1",
         unit: "Friendship",
-        test: "Mini Deneme 2",
+        test: "Unit 1 Test 4",
         difficulty: "medium",
 
-        image: "images/test2/q1.png",
+        image: "images/test4/q1.png",
 
         question:
-            "According to the information above, which of the following is TRUE?",
+            "Who refuses the offer by giving an excuse?",
 
         options: [
-            "Students can only take part in individual activities.",
-            "The activities give students opportunities to spend time together.",
-            "Students should bring their school books to the event.",
-            "The event is organized for students who do not like meeting others."
+            "Fergie",
+            "Meggie",
+            "Liva",
+            "Nina"
+        ],
+
+        answer: 2,
+    },
+
+
+    // =====================================================
+    // QUESTION 2
+    // =====================================================
+
+    {
+        id: "u1_f_test4_q2",
+        unit: "Friendship",
+        test: "Unit 1 Test 4",
+        difficulty: "medium",
+
+        image: "images/test4/q2.png",
+
+        options: [
+            "What do you like doing with your friends",
+            "Who is coming to the barbeque party at Bob’s place",
+            "What would you like to have for dinner",
+            "Would you like to join me for a pop concert"
+        ],
+
+        answer: 0,
+    },
+
+
+    // =====================================================
+    // QUESTION 3
+    // =====================================================
+
+    {
+        id: "u1_f_test4_q3",
+        unit: "Friendship",
+        test: "Unit 1 Test 4",
+        difficulty: "medium",
+
+        image: "images/test4/q3.png",
+
+        options: [
+            "Yes, I am",
+            "No, not at all",
+            "I’d love to, but I can’t",
+            "Sorry, but I am too busy"
         ],
 
         answer: 1,
+    },
 
-        explanation:
-            "The activities give students opportunities to spend enjoyable time together with their friends."
+
+    // =====================================================
+    // QUESTION 4
+    // =====================================================
+
+    {
+        id: "u1_f_test4_q4",
+        unit: "Friendship",
+        test: "Unit 1 Test 4",
+        difficulty: "medium",
+
+        image: "images/test4/q4.png",
+
+        options: [
+            "I will join you of course",
+            "I must meet with my mother today",
+            "that sounds great",
+            "what are you going to buy"
+        ],
+
+        answer: 1,
+    },
+
+
+    // =====================================================
+    // QUESTION 5
+    // =====================================================
+
+    {
+        id: "u1_f_test4_q5",
+        unit: "Friendship",
+        test: "Unit 1 Test 4",
+        difficulty: "medium",
+
+        image: "images/test4/q5.png",
+
+        options: [
+            "Shall we have a walk at the park?",
+            "Let’s watch a movie on TV.",
+            "What about cooking something in the kitchen?",
+            "Would you like to rest in your room?"
+        ],
+
+        answer: 0,
+    },
+
+
+    // =====================================================
+    // QUESTION 6
+    // =====================================================
+
+    {
+        id: "u1_f_test4_q6",
+        unit: "Friendship",
+        test: "Unit 1 Test 4",
+        difficulty: "medium",
+
+        image: "images/test4/q6.png",
+
+        options: [
+            "jealous",
+            "stubborn",
+            "aggressive",
+            "supportive"
+        ],
+
+        answer: 3,
+    },
+
+
+    // =====================================================
+    // QUESTION 7
+    // =====================================================
+
+    {
+        id: "u1_f_test4_q7",
+        unit: "Friendship",
+        test: "Unit 1 Test 4",
+        difficulty: "medium",
+
+        image: "images/test4/q7.png",
+
+        question:
+            "Which of the following is NOT correct according to the dialogue?",
+
+        options: [
+            "Gwen asks about the place of the party.",
+            "Jack knows everything about the party.",
+            "They will meet at Mike’s home first.",
+            "Liam has an excuse for not attending."
+        ],
+
+        answer: 1,
+    },
+
+
+    // =====================================================
+    // QUESTION 8
+    // =====================================================
+
+    {
+        id: "u1_f_test4_q8",
+        unit: "Friendship",
+        test: "Unit 1 Test 4",
+        difficulty: "medium",
+
+        image: "images/test4/q8.png",
+
+        question:
+            "They will give the party at - - - -.",
+
+        options: [
+            "the garage of Liam’s father",
+            "Mike’s house",
+            "Jack’s house",
+            "a cafe"
+        ],
+
+        answer: 3,
+    },
+
+
+    // =====================================================
+    // QUESTION 9
+    // =====================================================
+
+    {
+        id: "u1_f_test4_q9",
+        unit: "Friendship",
+        test: "Unit 1 Test 4",
+        difficulty: "medium",
+
+        image: "images/test4/q9.png",
+
+        question:
+            "Which of the following questions does NOT have an answer in the text?",
+
+        options: [
+            "Where are they going to have the party?",
+            "What are they going to do at the party?",
+            "Are there any food and beverages at the party?",
+            "What time is the party?"
+        ],
+
+        answer: 2,
+    },
+
+        // =====================================================
+    // QUESTION 10
+    // =====================================================
+
+    {
+        id: "u1_f_test4_q10",
+        unit: "Friendship",
+        test: "Unit 1 Test 4",
+        difficulty: "medium",
+
+        image: "images/test4/q10.png",
+
+        question:
+            "Keeping in mind Carol’s interests, which of the following does NOT complete the conversation above?",
+
+        options: [
+            "Shall we go on a picnic?",
+            "What about cycling together?",
+            "How about watching a movie?",
+            "Would you like to go to a concert?"
+        ],
+
+        answer: 2,
     }
 
 ];
 
-
-const questions = unit1FriendshipTest2;
+const questions = unit1FriendshipTest4;
 
 let timer;
 let timeLeft = 90;
@@ -356,14 +570,7 @@ function loadQuestion() {
 
             </div>
 
-
-            <div class="question-type">
-
-                ${q.skill || q.type || ""}
-
-            </div>
-
-
+            
             ${extraContent}
 
 
@@ -404,15 +611,6 @@ function loadQuestion() {
                 }
 
             </div>
-
-
-            <div
-                class="explanation"
-                id="explanation"
-            >
-                ${q.explanation || ""}
-            </div>
-
 
             <button
                 id="nextBtn"

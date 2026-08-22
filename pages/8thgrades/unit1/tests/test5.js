@@ -96,40 +96,259 @@ async function addTestXP(percent) {
 
 }
 
-const unit1FriendshipTest2 = [
+const unit1FriendshipTest5 = [
 
     // =====================================================
-    // QUESTION 1 — FRIENDSHIP DAY
+    // QUESTION 1
     // =====================================================
 
     {
-        id: "u1_f_test2_q1",
+        id: "u1_f_test5_q1",
         unit: "Friendship",
-        test: "Mini Deneme 2",
+        test: "Unit 1 Test 5",
         difficulty: "medium",
 
-        image: "images/test2/q1.png",
-
-        question:
-            "According to the information above, which of the following is TRUE?",
+        image: "images/test5/q1.png",
 
         options: [
-            "Students can only take part in individual activities.",
-            "The activities give students opportunities to spend time together.",
-            "Students should bring their school books to the event.",
-            "The event is organized for students who do not like meeting others."
+            "Yes, sure",
+            "I’d love some",
+            "No, thanks",
+            "Yes, I would"
+        ],
+
+        answer: 2,
+    },
+
+
+    // =====================================================
+    // QUESTION 2
+    // =====================================================
+
+    {
+        id: "u1_f_test5_q2",
+        unit: "Friendship",
+        test: "Unit 1 Test 5",
+        difficulty: "medium",
+
+        image: "images/test5/q2.png",
+
+        options: [
+            "What would you like",
+            "What do you usually have for lunch",
+            "Would you like to sit here",
+            "Do you often have your meal here"
+        ],
+
+        answer: 0,
+    },
+
+
+    // =====================================================
+    // QUESTION 3
+    // =====================================================
+
+    {
+        id: "u1_f_test5_q3",
+        unit: "Friendship",
+        test: "Unit 1 Test 5",
+        difficulty: "medium",
+
+        image: "images/test5/q3.png",
+
+        options: [
+            "I’d love to, but I can’t",
+            "Thanks for inviting me",
+            "I’m too busy",
+            "I’m sorry"
         ],
 
         answer: 1,
+    },
 
-        explanation:
-            "The activities give students opportunities to spend enjoyable time together with their friends."
+
+    // =====================================================
+    // QUESTION 4
+    // =====================================================
+
+     {
+        id: "u1_f_test5_q4",
+        unit: "Friendship",
+        test: "Unit 1 Test 5",
+        difficulty: "medium",
+
+        image: "images/test5/q4.png",
+
+        question:
+            "According to the information above, which of the following can be Laura’s message to Mary?",
+
+        options: [
+            "Why do you hate concerts?",
+            "Where is the event?",
+            "Do you know a nice cafe nearby?",
+            "Are you busy tonight?"
+        ],
+
+        answer: 1,
+    },
+
+
+    // =====================================================
+    // QUESTION 5
+    // =====================================================
+
+    {
+        id: "u1_f_test5_q5",
+        unit: "Friendship",
+        test: "Unit 1 Test 5",
+        difficulty: "medium",
+
+        image: "images/test5/q5.png",
+
+        options: [
+            "Yes, of course.",
+            "It sounds great, I can’t wait.",
+            "Yeah, good idea.",
+            "It sounds awesome, but I don’t like meat."
+        ],
+
+        answer: 3,
+    },
+
+
+    // =====================================================
+    // QUESTION 6
+    // =====================================================
+
+    {
+        id: "u1_f_test5_q7",
+        unit: "Friendship",
+        test: "Unit 1 Test 5",
+        difficulty: "medium",
+
+        image: "images/test5/q7.png",
+
+        question:
+            "Which of the following is CORRECT?",
+
+        options: [
+            "Bruce refuses the invitation.",
+            "The event is fishing.",
+            "Jason accepts the invitation.",
+            "Bruce won’t go fishing."
+        ],
+
+        answer: 1,
+    },
+
+
+    // =====================================================
+    // QUESTION 7
+    // =====================================================
+
+    {
+        id: "u1_f_test5_q8",
+        unit: "Friendship",
+        test: "Unit 1 Test 5",
+        difficulty: "medium",
+
+        image: "images/test5/q8.png",
+
+        question:
+            "Put the following dialogue into a correct order.",
+
+        options: [
+            "IV - III - II - I",
+            "I - II - III - IV",
+            "II - IV - I - III",
+            "II - III - I - IV"
+        ],
+
+        answer: 2,
+    },
+
+
+    // =====================================================
+    // QUESTION 8
+    // =====================================================
+
+    {
+        id: "u1_f_test5_q9",
+        unit: "Friendship",
+        test: "Unit 1 Test 5",
+        difficulty: "medium",
+
+        image: "images/test5/q9.png",
+
+         question:
+            "What do you say to invite?",
+
+        options: [
+            "Shall we go to the cinema?",
+            "What do you like watching?",
+            "How about watching a documentary on TV?",
+            "Would you like to join me for another cup of coffee?"
+        ],
+
+        answer: 0,
+    },
+
+
+    // =====================================================
+    // QUESTION 9
+    // =====================================================
+
+    {
+        id: "u1_f_test5_q10",
+        unit: "Friendship",
+        test: "Unit 1 Test 5",
+        difficulty: "medium",
+
+        image: "images/test5/q10.png",
+
+        question:
+            "Michael’s parents bought Lexie because - - - - .",
+
+        options: [
+            "they had money",
+            "it was a gift for their son’s birthday",
+            "Michael’s father had birthday",
+            "they hate pets"
+        ],
+
+        answer: 1,
+    },
+
+
+    // =====================================================
+    // QUESTION 10
+    // =====================================================
+
+    {
+        id: "u1_f_test5_q11",
+        unit: "Friendship",
+        test: "Unit 1 Test 5",
+        difficulty: "medium",
+
+        image: "images/test5/q11.png",
+
+        question:
+            "What did Lexie teach Michael?",
+
+        options: [
+            "The basic commands.",
+            "To go to the bathroom.",
+            "To be bored.",
+            "To be responsible."
+        ],
+
+        answer: 3,
     }
 
 ];
 
 
-const questions = unit1FriendshipTest2;
+const questions = unit1FriendshipTest5;
 
 let timer;
 let timeLeft = 90;
@@ -357,13 +576,6 @@ function loadQuestion() {
             </div>
 
 
-            <div class="question-type">
-
-                ${q.skill || q.type || ""}
-
-            </div>
-
-
             ${extraContent}
 
 
@@ -404,15 +616,6 @@ function loadQuestion() {
                 }
 
             </div>
-
-
-            <div
-                class="explanation"
-                id="explanation"
-            >
-                ${q.explanation || ""}
-            </div>
-
 
             <button
                 id="nextBtn"

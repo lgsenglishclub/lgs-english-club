@@ -99,60 +99,77 @@ async function addTestXP(percent) {
 const unit1FriendshipTest1 = [
 
     // =====================================================
-    // QUESTION 1 — INVITATION CARD
-    // Skill: Multiple-condition reasoning
+    // QUESTION 1
     // =====================================================
 
     {
         id: "u1_f_test1_q1",
         unit: "Friendship",
-        test: "Mini Deneme 1",
-        difficulty: "hard",
+        test: "Unit 1 Test 1",
+        difficulty: "medium",
 
         image: "images/test1/q1.png",
 
         question:
-            "Look at the invitation card. Which of the following students can attend the whole event?",
+            "Classmates come together on July 30 because - - - -.",
 
         options: [
-            "A student who has to leave at 3 p.m.",
-            "A student who dislikes outdoor activities.",
-            "A student who can stay from 1 p.m. to 5 p.m. and enjoys team games.",
-            "A student who cannot come to the park."
+            "some of them like activities",
+            "they like playing games together",
+            "their teachers want to organize a party",
+            "there is an organization on Friendship Day"
         ],
 
-        answer: 2,
+        answer: 3,
     },
 
 
     // =====================================================
-    // QUESTION 2 — TEXT MESSAGES
-    // Skill: Inference
+    // QUESTION 2
     // =====================================================
 
     {
         id: "u1_f_test1_q2",
         unit: "Friendship",
-        test: "Mini Deneme 1",
-        difficulty: "hard",
+        test: "Unit 1 Test 1",
+        difficulty: "medium",
 
-        dialogue: [
-            "Mia: Are you coming to the Friendship Club meeting after school?",
-            "Leo: I wanted to, but I have to finish a project with my partner.",
-            "Mia: Can't you finish it before the meeting?",
-            "Leo: We have already planned to meet at the library at four.",
-            "Mia: I see. Maybe you can join us next time.",
-            "Leo: Yes. Please tell me what you decide about the weekend activity."
-        ],
+        image: "images/test1/q2.png",
 
         question:
-            "Which of the following can we understand from the conversation?",
+            "According to the saying on the card, your best friend can count on you because - - - -.",
 
         options: [
-            "Leo doesn't want to join the Friendship Club anymore.",
-            "Leo has another responsibility at the same time as the meeting.",
-            "Leo has already joined the weekend activity.",
-            "Mia refuses to help Leo with his project."
+            "you always support him/her",
+            "you can organize a meeting together",
+            "you have a lot of fun with your teachers",
+            "your friends come together on Friendship Day"
+        ],
+
+        answer: 0,
+    },
+
+
+    // =====================================================
+    // QUESTION 3
+    // =====================================================
+
+    {
+        id: "u1_f_test1_q3",
+        unit: "Friendship",
+        test: "Unit 1 Test 1",
+        difficulty: "medium",
+
+        image: "images/test1/q3.png",
+
+        question:
+            "We can understand from the text that Mark Twain and Nikola Tesla - - - -.",
+
+        options: [
+            "had the same jobs",
+            "were good friends",
+            "usually argued",
+            "rarely met"
         ],
 
         answer: 1,
@@ -160,26 +177,25 @@ const unit1FriendshipTest1 = [
 
 
     // =====================================================
-    // QUESTION 3 — PREFERENCE TABLE
-    // Skill: Comparing information
+    // QUESTION 4
     // =====================================================
 
     {
-        id: "u1_f_test1_q3",
+        id: "u1_f_test1_q4",
         unit: "Friendship",
-        test: "Mini Deneme 1",
-        difficulty: "hard",
+        test: "Unit 1 Test 1",
+        difficulty: "easy",
 
-        image: "images/test1/q3.png",
+        image: "images/test1/q4.png",
 
         question:
-            "According to the table, which activity would be suitable for ALL the students who want to spend time together?",
+            "The invitation card is for a/an - - - -.",
 
         options: [
-            "A crowded music festival",
-            "A quiet movie night at home",
-            "A small picnic in the park",
-            "An indoor basketball tournament"
+            "school lunch",
+            "birthday party",
+            "graduation party",
+            "online exhibition"
         ],
 
         answer: 2,
@@ -187,60 +203,25 @@ const unit1FriendshipTest1 = [
 
 
     // =====================================================
-    // QUESTION 4 — ACTIVITY POSTER
-    // Skill: Evaluating conditions
-    // =====================================================
-
-    {
-        id: "u1_f_test1_q4",
-        unit: "Friendship",
-        test: "Mini Deneme 1",
-        difficulty: "hard",
-
-        image: "images/test1/q4.png",
-
-        question:
-            "A group of friends wants to join an activity that is free, outdoors and suitable for a small group. Which activity meets ALL of their requirements?",
-
-        options: [
-            "Movie Club",
-            "Park Picnic",
-            "Bowling Night",
-            "School Concert"
-        ],
-
-        answer: 1,
-    },
-
-
-    // =====================================================
-    // QUESTION 5 — E-MAIL
-    // Skill: Understanding purpose
+    // QUESTION 5
     // =====================================================
 
     {
         id: "u1_f_test1_q5",
         unit: "Friendship",
-        test: "Mini Deneme 1",
-        difficulty: "hard",
+        test: "Unit 1 Test 1",
+        difficulty: "easy",
 
-        passage:
-            "Hi Emma,\n\n" +
-            "I'm having a small birthday party at my house this Saturday. " +
-            "I'm inviting only a few close friends because I don't really like crowded parties. " +
-            "We're going to watch a movie, play some board games and have pizza together. " +
-            "I hope you can come!\n\n" +
-            "See you,\n" +
-            "Sophie",
+        image: "images/test1/q5.png",
 
         question:
-            "Why does Sophie mention that she is inviting only a few friends?",
+            "The event will be - - - -.",
 
         options: [
-            "She doesn't know many students at school.",
-            "She prefers spending time with a small group.",
-            "She wants to save money on food.",
-            "She doesn't want to celebrate her birthday."
+            "in the afternoon",
+            "at the weekend",
+            "$25 for 2 students",
+            "in the school garden"
         ],
 
         answer: 1,
@@ -248,121 +229,103 @@ const unit1FriendshipTest1 = [
 
 
     // =====================================================
-    // QUESTION 6 — WEEKEND SCHEDULE
-    // Skill: Matching information
+    // QUESTION 6
     // =====================================================
 
     {
         id: "u1_f_test1_q6",
         unit: "Friendship",
-        test: "Mini Deneme 1",
-        difficulty: "hard",
+        test: "Unit 1 Test 1",
+        difficulty: "easy",
 
         image: "images/test1/q6.png",
 
         question:
-            "Tom is free on Saturday afternoon. He wants to do an outdoor activity with his friends, but he doesn't want to spend any money. Which activity can he join?",
+            "If students want to ask for more information, they should - - - -.",
 
         options: [
-            "Watching a movie",
-            "Playing basketball in the park",
-            "Going bowling",
-            "Joining the school concert"
+            "call Jack by phone",
+            "meet Jack on July 7",
+            "visit Jack at the hotel",
+            "send an e-mail to Jack"
         ],
 
-        answer: 1,
+        answer: 3,
     },
 
 
     // =====================================================
-    // QUESTION 7 — DIALOGUE
-    // Skill: Communication function
+    // QUESTION 7
     // =====================================================
 
     {
         id: "u1_f_test1_q7",
         unit: "Friendship",
-        test: "Mini Deneme 1",
-        difficulty: "hard",
+        test: "Unit 1 Test 1",
+        difficulty: "medium",
 
-        dialogue: [
-            "Sarah: Would you like to come to the cinema with us tonight?",
-            "Jack: Thanks, but I can't.",
-            "Sarah: Is everything okay?",
-            "Jack: Yes. My little brother isn't feeling well, so I need to stay at home with him.",
-            "Sarah: I understand. I hope he feels better soon.",
-            "Jack: Thanks. Have fun!"
-        ],
+        image: "images/test1/q7.png",
 
         question:
-            "What is the main reason for Jack's refusal?",
+            "According to the conversation, Sophie - - - -.",
 
         options: [
-            "He doesn't like watching films.",
-            "He has to take care of a family member.",
-            "He has already watched the film.",
-            "He wants to spend the evening with his friends."
+            "tells Nathalie what she is doing now",
+            "makes an excuse for not going there",
+            "cannot go there because she is busy",
+            "asks for some details about the event"
         ],
 
-        answer: 1,
+        answer: 3,
     },
 
 
     // =====================================================
-    // QUESTION 8 — FRIENDSHIP CLUB NOTICE
-    // Skill: Choosing according to several conditions
+    // QUESTION 8
     // =====================================================
 
     {
         id: "u1_f_test1_q8",
         unit: "Friendship",
-        test: "Mini Deneme 1",
-        difficulty: "hard",
+        test: "Unit 1 Test 1",
+        difficulty: "medium",
 
         image: "images/test1/q8.png",
 
         question:
-            "A student wants to join an activity where they can meet new people, work in a group and spend time outdoors. Which activity is the best choice?",
+            "Which of the following is NOT related to Rosa’s personality?",
 
         options: [
-            "Reading Circle",
-            "Outdoor Team Challenge",
-            "Movie Afternoon",
-            "Board Game Club"
+            "She always says “please” and tells the truth.",
+            "She buys presents for her friends.",
+            "She likes doing extreme sports.",
+            "She never changes her mind."
         ],
 
-        answer: 1,
+        answer: 3,
     },
 
 
     // =====================================================
-    // QUESTION 9 — READING
-    // Skill: Inference
+    // QUESTION 9
     // =====================================================
 
     {
         id: "u1_f_test1_q9",
         unit: "Friendship",
-        test: "Mini Deneme 1",
+        test: "Unit 1 Test 1",
         difficulty: "hard",
 
-        passage:
-            "When Maya and Olivia first met, they didn't have many common interests. " +
-            "Maya enjoyed reading and drawing, while Olivia loved outdoor activities and meeting new people. " +
-            "Their teacher asked them to prepare a project together. " +
-            "During the project, Maya helped Olivia organize their ideas, and Olivia encouraged Maya to present them in front of the class. " +
-            "They discovered that they both enjoyed taking photos. " +
-            "After the project, they started spending more time together. " +
-            "Although they still have different interests, they respect each other's choices and support each other.",
+        image: "images/test1/q9.png",
 
         question:
-            "Which of the following can be inferred from the text?",
+            "Which of the following completes the conversation?",
 
         options: [
-            "Maya and Olivia became friends because they had exactly the same hobbies.",
-            "Working together helped Maya and Olivia discover something they both enjoyed.",
-            "Olivia stopped meeting new people after becoming friends with Maya.",
-            "Maya refused to help Olivia during the project."
+            "It is awesome but I will be at John’s party.",
+            "I’d love to but I have to leave before six.",
+            "That sounds great but I have to train for the tournament.",
+            "I am sorry but I am taking care of my brother at that time."
         ],
 
         answer: 1,
@@ -370,30 +333,30 @@ const unit1FriendshipTest1 = [
 
 
     // =====================================================
-    // QUESTION 10 — EVENT NOTICE
-    // Skill: Detailed interpretation
+    // QUESTION 10
     // =====================================================
 
     {
         id: "u1_f_test1_q10",
         unit: "Friendship",
-        test: "Mini Deneme 1",
-        difficulty: "hard",
+        test: "Unit 1 Test 1",
+        difficulty: "medium",
 
         image: "images/test1/q10.png",
 
         question:
-            "Which of the following is NOT suitable for a student who wants to follow ALL the rules of the event?",
+            "Which of the following does NOT have an answer in the poster?",
 
         options: [
-            "Joining the outdoor activity with a friend",
-            "Bringing food from home",
-            "Arriving before the event starts",
-            "Bringing more than the allowed number of friends"
+            "How long is the trip?",
+            "Is there anything to eat?",
+            "How can we learn details?",
+            "Which equipment do we need?"
         ],
 
-        answer: 3,
+        answer: 0,
     }
+    
 
 ];
 
@@ -625,13 +588,6 @@ function loadQuestion() {
             </div>
 
 
-            <div class="question-type">
-
-                ${q.skill || q.type || ""}
-
-            </div>
-
-
             ${extraContent}
 
 
@@ -671,14 +627,6 @@ function loadQuestion() {
                     .join("")
                 }
 
-            </div>
-
-
-            <div
-                class="explanation"
-                id="explanation"
-            >
-                ${q.explanation || ""}
             </div>
 
 

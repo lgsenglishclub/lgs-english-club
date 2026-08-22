@@ -99,31 +99,25 @@ async function addTestXP(percent) {
 const unit1FriendshipTest2 = [
 
     // =====================================================
-    // QUESTION 1
-    // Accepting / Refusing an invitation
+    // QUESTION 11
     // =====================================================
 
     {
-        id: "u1_f_test2_q1",
+        id: "u1_f_test1_q11",
         unit: "Friendship",
-        test: "Mini Deneme 2",
+        test: "Unit 1 Test 2",
         difficulty: "medium",
 
-        dialogue: [
-            "Megan: Would you like to join us for the school picnic on Saturday?",
-            "Oliver: I'd love to, but I have to help my grandfather in the garden.",
-            "Megan: Oh, that's a pity. Maybe next time.",
-            "Oliver: Sure. I hope you have a great time."
-        ],
+        image: "images/test2/q11.png",
 
         question:
-            "Which of the following completes Oliver's response?",
+            "Which of the following does NOT have an answer in the invitation?",
 
         options: [
-            "That sounds great. I can't wait.",
-            "I'd love to, but I have to help my grandfather.",
-            "Sure. What time shall we meet?",
-            "Yes, why not?"
+            "Who is the party for?",
+            "What time are they meeting?",
+            "Where is the party going to be?",
+            "How can they learn about the details of the event?"
         ],
 
         answer: 1,
@@ -131,31 +125,25 @@ const unit1FriendshipTest2 = [
 
 
     // =====================================================
-    // QUESTION 2
-    // Making an inquiry
+    // QUESTION 12
     // =====================================================
 
     {
-        id: "u1_f_test2_q2",
+        id: "u1_f_test1_q12",
         unit: "Friendship",
-        test: "Mini Deneme 2",
+        test: "Unit 1 Test 2",
         difficulty: "medium",
 
-        dialogue: [
-            "Jason: Hi, Emma. Are you free this afternoon?",
-            "Emma: Yes. Why do you ask?",
-            "Jason: I have two tickets for the new comedy show.",
-            "Emma: Really? I'd love to come!"
-        ],
+        image: "images/test2/q12.png",
 
         question:
-            "Which of the following completes Jason's first question?",
+            "According to the conversation above, which of the following is CORRECT?",
 
         options: [
-            "What do you usually do with your friends?",
-            "Would you like to watch a comedy show?",
-            "Are you free this afternoon?",
-            "Where is the comedy show?"
+            "Tina isn’t interested in playing chess.",
+            "Sam has to attend a course, so he can’t join the tournament.",
+            "Clark needs extra information about the event.",
+            "Peter is available all day on Sunday."
         ],
 
         answer: 2,
@@ -163,28 +151,25 @@ const unit1FriendshipTest2 = [
 
 
     // =====================================================
-    // QUESTION 3
-    // Friendship characteristics
+    // QUESTION 13
     // =====================================================
 
     {
-        id: "u1_f_test2_q3",
+        id: "u1_f_test1_q13",
         unit: "Friendship",
-        test: "Mini Deneme 2",
-        difficulty: "medium",
+        test: "Unit 1 Test 2",
+        difficulty: "hard",
 
-        passage:
-            "I think an ideal friend should always tell the truth and keep my secrets. " +
-            "I also want my friend to support me when I have a problem.",
+        image: "images/test2/q13.png",
 
         question:
-            "Which of the following is NOT related to the characteristics mentioned above?",
+            "According to the information above, which of the following is an appropriate movie for Sarah and Tim?",
 
         options: [
-            "Honest",
-            "Supportive",
-            "Reliable",
-            "Adventurous"
+            "Ridiculous Man",
+            "Out of the World",
+            "Impressive Life",
+            "Last Two Hours"
         ],
 
         answer: 3,
@@ -192,90 +177,25 @@ const unit1FriendshipTest2 = [
 
 
     // =====================================================
-    // QUESTION 4
-    // Invitation / activity
+    // QUESTION 14
     // =====================================================
 
     {
-        id: "u1_f_test2_q4",
+        id: "u1_f_test1_q14",
         unit: "Friendship",
-        test: "Mini Deneme 2",
-        difficulty: "medium",
-
-        dialogue: [
-            "Liam: I'm bored. I don't want to stay at home this afternoon.",
-            "Nora: Why don't we do something outside?",
-            "Liam: That's a good idea!"
-        ],
-
-        question:
-            "Which of the following completes Nora's suggestion?",
-
-        options: [
-            "How about going cycling in the park?",
-            "Would you like to stay at home?",
-            "Why don't you watch TV alone?",
-            "Do you want to read a book in your room?"
-        ],
-
-        answer: 0,
-    },
-
-
-    // =====================================================
-    // QUESTION 5
-    // Invitation card
-    // =====================================================
-
-    {
-        id: "u1_f_test2_q5",
-        unit: "Friendship",
-        test: "Mini Deneme 2",
+        test: "Unit 1 Test 2",
         difficulty: "hard",
 
-        image: "images/test2/q5.png",
+        image: "images/test2/q14.png",
 
         question:
-            "According to the invitation card, which of the following is CORRECT?",
+            "Which of the following does NOT have an answer in the table above?",
 
         options: [
-            "The event will take place on a weekday evening.",
-            "Students have to pay for the food separately.",
-            "The event will be held at the school garden.",
-            "Students should contact the school principal for details."
-        ],
-
-        answer: 0,
-    },
-
-
-    // =====================================================
-    // QUESTION 6
-    // Dialogue — NOT CORRECT
-    // =====================================================
-
-    {
-        id: "u1_f_test2_q6",
-        unit: "Friendship",
-        test: "Mini Deneme 2",
-        difficulty: "hard",
-
-        dialogue: [
-            "Mia: We are organizing a surprise party for Lucy on Friday. Would you like to join us?",
-            "Ben: I'd love to. What time should I come?",
-            "Mia: At 6 p.m. We'll meet at my house first.",
-            "Sally: Sorry, I can't come because I have basketball training.",
-            "Mia: That's okay. We'll tell Lucy about your best wishes."
-        ],
-
-        question:
-            "Which of the following is NOT correct according to the dialogue?",
-
-        options: [
-            "Ben accepts the invitation.",
-            "Sally has an excuse for refusing the invitation.",
-            "They will meet at Mia's house first.",
-            "Lucy knows about the surprise party."
+            "Which activity is at the weekend?",
+            "When does Alice want to ride a bike?",
+            "Who refuses the offer giving a reason?",
+            "How many people accept the invitation?"
         ],
 
         answer: 3,
@@ -283,125 +203,158 @@ const unit1FriendshipTest2 = [
 
 
     // =====================================================
-    // QUESTION 7
-    // Dialogue ordering
+    // QUESTION 15
     // =====================================================
 
     {
-    id: "u1_f_test2_q7",
-    unit: "Friendship",
-    test: "Mini Deneme 2",
-    difficulty: "hard",
-
-    dialogue: [
-        "Mia: Would you like to join us for a picnic on Sunday?",
-        "Jack: That sounds great. I'd love to come.",
-        "Mia: Sure. What time shall we meet?",
-        "Jack: At 11 a.m. We can meet in front of the school."
-    ],
-
-    question:
-        "Put the sentences into the correct order to make a meaningful dialogue.",
-
-    options: [
-        "II - IV - I - III",
-        "I - II - III - IV",
-        "III - I - IV - II",
-        "IV - II - I - III"
-    ],
-
-    answer: 1,
-    },
-
-
-    // =====================================================
-    // QUESTION 8
-    // Activity poster
-    // =====================================================
-
-    {
-        id: "u1_f_test2_q8",
+        id: "u1_f_test1_q15",
         unit: "Friendship",
-        test: "Mini Deneme 2",
-        difficulty: "hard",
+        test: "Unit 1 Test 2",
+        difficulty: "medium",
 
-        image: "images/test2/q8.png",
+        image: "images/test2/q15.png",
 
         question:
             "Which of the following does NOT have an answer in the poster?",
 
         options: [
-            "What activities can students do?",
-            "When is the event?",
-            "Who can students contact for more information?",
-            "How much does the activity cost?"
+            "Which equipment do we need?",
+            "Which activities can we do?",
+            "Where do we meet?",
+            "How long is the camp?"
         ],
 
-        answer: 3,
+        answer: 2,
     },
 
 
     // =====================================================
-    // QUESTION 9
-    // Reading
+    // QUESTION 16
     // =====================================================
 
     {
-        id: "u1_f_test2_q9",
+        id: "u1_f_test1_q16",
         unit: "Friendship",
-        test: "Mini Deneme 2",
+        test: "Unit 1 Test 2",
         difficulty: "hard",
 
-        passage:
-            "My best friend is Daniel. We met when we were in primary school. " +
-            "He is honest, helpful and funny. He always supports me when I have a problem, " +
-            "and he never tells my secrets to other people. We enjoy spending time together. " +
-            "At weekends, we usually ride our bikes or watch films at my house. " +
-            "Although we have different interests sometimes, we always respect each other's choices.",
+        image: "images/test2/q16.png",
 
-        question:
-            "Which of the following is CORRECT according to the text?",
-
+       question:
+    "Alice’s best friend, Sally, invites her to an art exhibition on Sunday. Alice really wants to go, but she has to attend her mother’s birthday party on the same day.\n\nWhich of the following CANNOT be Alice’s message?",
         options: [
-            "Daniel and the writer met at secondary school.",
-            "Daniel never helps the writer with his problems.",
-            "They always have exactly the same interests.",
-            "They respect each other's preferences."
-        ],
-
-        answer: 3,
-    },
-
-
-    // =====================================================
-    // QUESTION 10
-    // Reading / inference
-    // =====================================================
-
-    {
-        id: "u1_f_test2_q10",
-        unit: "Friendship",
-        test: "Mini Deneme 2",
-        difficulty: "hard",
-
-        passage:
-            "Lucy invited four friends to her birthday party. " +
-            "Molly said, 'I'd love to come, but I have to visit my grandparents.' " +
-            "Jack said, 'Sure! I can be there.' " +
-            "Emma said, 'That sounds great, but I have a piano lesson at that time.' " +
-            "Tom replied, 'Thanks for inviting me. I can't come because my family is going on a trip.'",
-
-        question:
-            "Who accepts Lucy's invitation?",
-
-        options: [
-            "Molly",
-            "Jack",
-            "Emma",
-            "Tom"
+            "Thanks for the invitation. I’d love to but I can’t make it. I’m busy at the weekend. Have a great time!",
+            "Thanks a lot! I cannot refuse your invitation because I love you and I love art. I will text you to learn the details in the evening.",
+            "Hey Sally, I was so happy to receive your invitation. I always have fun at exhibitions, but on that day, I have to be at a birthday party.",
+            "Dear Sally, that's very kind of you! I really want to come, but I am afraid I cannot. I must join another special event on that day."
         ],
 
         answer: 1,
+    },
+
+
+    // =====================================================
+    // QUESTION 17
+    // =====================================================
+
+    {
+        id: "u1_f_test1_q17",
+        unit: "Friendship",
+        test: "Unit 1 Test 2",
+        difficulty: "easy",
+
+        image: "images/test2/q17.png",
+
+        question:
+            "Which of the following is CORRECT according to the poster above?",
+
+        options: [
+            "You have to bring your own food.",
+            "For more information, you can call Dean.",
+            "If you want to attend the event, you must pay $50.",
+            "To join, you should be at Shine Café in the morning."
+        ],
+
+        answer: 1,
+    },
+
+
+    // =====================================================
+    // QUESTION 18
+    // =====================================================
+
+    {
+        id: "u1_f_test1_q18",
+        unit: "Friendship",
+        test: "Unit 1 Test 2",
+        difficulty: "hard",
+
+        image: "images/test2/q18.png",
+
+        question:
+            "Which sentence(s) in the conversation does NOT match the personal characteristics in Table 1?",
+
+        options: [
+            "Only I",
+            "I and IV",
+            "II and III",
+            "Only IV"
+        ],
+
+        answer: 3,
+    },
+
+
+    // =====================================================
+    // QUESTION 19
+    // =====================================================
+
+    {
+        id: "u1_f_test1_q19",
+        unit: "Friendship",
+        test: "Unit 1 Test 2",
+        difficulty: "medium",
+
+        image: "images/test2/q19.png",
+
+        question:
+            "Which of the following is NOT correct according to the conversation above?",
+
+        options: [
+            "Gary is having a birthday party.",
+            "Jenny is going to attend the event.",
+            "Amy refuses the invitation without making an excuse.",
+            "Joe will be with a guest on Sunday."
+        ],
+
+        answer: 0,
+    },
+
+
+    // =====================================================
+    // QUESTION 20
+    // =====================================================
+
+    {
+        id: "u1_f_test1_q20",
+        unit: "Friendship",
+        test: "Unit 1 Test 2",
+        difficulty: "medium",
+
+        image: "images/test2/q20.png",
+
+        question:
+            "According to the conversation above, who likes the same type of movies?",
+
+        options: [
+            "Dean and Sam",
+            "Dean and Charlie",
+            "Sam and Lily",
+            "Lily and Charlie"
+        ],
+
+        answer: 2,
+
     }
 
 ];
@@ -635,13 +588,6 @@ function loadQuestion() {
             </div>
 
 
-            <div class="question-type">
-
-                ${q.skill || q.type || ""}
-
-            </div>
-
-
             ${extraContent}
 
 
@@ -681,14 +627,6 @@ function loadQuestion() {
                     .join("")
                 }
 
-            </div>
-
-
-            <div
-                class="explanation"
-                id="explanation"
-            >
-                ${q.explanation || ""}
             </div>
 
 

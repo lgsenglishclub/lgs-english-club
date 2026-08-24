@@ -1695,26 +1695,29 @@ console.timeEnd("Lexi API");
 
 
         // ===============================
-        // API ERROR
-        // ===============================
+// API ERROR
+// ===============================
 
-        if (!response.ok) {
+if (!response.ok) {
 
-            console.error(
-                "Lexi Function Error:",
-                data
-            );
+    console.error("================================");
+    console.error("LEXI API ERROR");
+    console.error("HTTP STATUS:", response.status);
+    console.error("ERROR DATA:", data);
+    console.error("ERROR MESSAGE:", data?.error);
+    console.error(
+        "ERROR JSON:",
+        JSON.stringify(data, null, 2)
+    );
+    console.error("================================");
 
 
-            addTeacherMessage(
-                "Sorry! 😔 I couldn't connect right now. Please try again."
-            );
+    addTeacherMessage(
+        "Sorry! 😔 I couldn't connect right now. Please try again."
+    );
 
-
-            return;
-
-        }
-
+    return;
+}
 
         // ===============================
         // SUCCESS

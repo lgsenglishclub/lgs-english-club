@@ -96,311 +96,222 @@ async function addTestXP(percent) {
 
 }
 
-const unit1FriendshipTest3 = [
-
-    // =====================================================
-    // QUESTION 1
-    // Invitation - best option
-    // =====================================================
+const unit2TeenLifeTest3 = [
 
     {
-        id: "u1_f_test3_q1",
-        unit: "Friendship",
+        id: "u2_tl_test3_q21",
+        unit: "Teen Life",
         test: "Mini Deneme 3",
         difficulty: "medium",
 
-        dialogue: [
-            "Emma: I’m going to the new book fair with some friends on Saturday.",
-            "Jack: That sounds interesting.",
-            "Emma: - - - -?",
-            "Jack: Sure. I enjoy looking at new books."
-        ],
+        image: "images/test3/q21.png",
 
         question:
-            "Which of the following completes Emma's question?",
+            "Look at Alice's weekly plan. Which of the following does NOT have an answer in her weekly plan?",
 
         options: [
-            "Would you like to join us",
-            "What do you usually read",
-            "Why don't you like books",
-            "Are you at home now"
-        ],
-
-        answer: 0,
-    },
-
-
-    // =====================================================
-    // QUESTION 2
-    // Simple inquiry
-    // =====================================================
-
-    {
-        id: "u1_f_test3_q2",
-        unit: "Friendship",
-        test: "Mini Deneme 3",
-        difficulty: "medium",
-
-        dialogue: [
-            "Mia: I have two tickets for the school concert tonight.",
-            "Leo: Really? - - - -?",
-            "Mia: It starts at 7 p.m. at the school hall."
-        ],
-
-        question:
-            "Which of the following completes Leo's question?",
-
-        options: [
-            "Who is your best friend",
-            "What time does it start",
-            "Why do you hate concerts",
-            "What do you usually do at weekends"
-        ],
-
-        answer: 1,
-    },
-
-
-    // =====================================================
-    // QUESTION 3
-    // Refusing + reason
-    // =====================================================
-
-    {
-        id: "u1_f_test3_q3",
-        unit: "Friendship",
-        test: "Mini Deneme 3",
-        difficulty: "medium",
-
-        dialogue: [
-            "Daniel: How about joining us for a bike ride tomorrow morning?",
-            "Sophie: I’d love to, but - - - -.",
-            "Daniel: No problem. Maybe next weekend."
-        ],
-
-        question:
-            "Which of the following completes Sophie's response?",
-
-        options: [
-            "I have to study for my exam",
-            "that sounds great",
-            "I’d be happy to come",
-            "what time shall we meet"
-        ],
-
-        answer: 0,
-    },
-
-
-    // =====================================================
-    // QUESTION 4
-    // Friendship characteristics
-    // =====================================================
-
-    {
-        id: "u1_f_test3_q4",
-        unit: "Friendship",
-        test: "Mini Deneme 3",
-        difficulty: "medium",
-
-        question:
-            "In my opinion, an ideal friend should be - - - - because I can tell my secrets to him/her without worrying.",
-
-        options: [
-            "honest",
-            "jealous",
-            "selfish",
-            "stubborn"
-        ],
-
-        answer: 0,
-    },
-
-
-    // =====================================================
-    // QUESTION 5
-    // Friendship event card
-    // =====================================================
-
-    {
-        id: "u1_f_test3_q5",
-        unit: "Friendship",
-        test: "Mini Deneme 3",
-        difficulty: "hard",
-
-        image: "images/test3/q5.png",
-
-        question:
-            "According to the invitation card, which of the following is CORRECT?",
-
-        options: [
-            "The event will take place on a weekday morning.",
-            "Students can learn more information by contacting Amy.",
-            "The activity will be held at the city sports centre.",
-            "Students have to bring food because there will be no snacks."
-        ],
-
-        answer: 1,
-    },
-
-
-    // =====================================================
-    // QUESTION 6
-    // Who refuses by giving an excuse?
-    // =====================================================
-
-    {
-        id: "u1_f_test3_q6",
-        unit: "Friendship",
-        test: "Mini Deneme 3",
-        difficulty: "hard",
-
-        dialogue: [
-            "Ryan: We are going to the amusement park on Sunday. Would you like to come?",
-            "Molly: Yes, definitely. I love amusement parks.",
-            "Chris: Thanks, but I have a swimming competition that day.",
-            "Lucy: Great idea! What time are we meeting?",
-            "Ben: I’d love to come. It sounds fun."
-        ],
-
-        question:
-            "Who refuses the invitation by giving an excuse?",
-
-        options: [
-            "Molly",
-            "Chris",
-            "Lucy",
-            "Ben"
-        ],
-
-        answer: 1,
-    },
-
-
-    // =====================================================
-    // QUESTION 7
-    // Table + conversation
-    // =====================================================
-
-    {
-        id: "u1_f_test3_q7",
-        unit: "Friendship",
-        test: "Mini Deneme 3",
-        difficulty: "hard",
-
-        image: "images/test3/q7.png",
-
-        question:
-            "According to the information in the table, which activity can both students enjoy together?",
-
-        options: [
-            "Going shopping",
-            "Playing basketball",
-            "Taking photos",
-            "Watching films"
+            "When is Alice going to be in the hospital?",
+            "Where is Alice going to see her friends?",
+            "Who is going to take Alice after training?",
+            "What is Alice going to do on Thursday?"
         ],
 
         answer: 2,
     },
 
-
-    // =====================================================
-    // QUESTION 8
-    // Dialogue - NOT CORRECT
-    // =====================================================
-
     {
-        id: "u1_f_test3_q8",
-        unit: "Friendship",
+        id: "u2_tl_test3_q22",
+        unit: "Teen Life",
         test: "Mini Deneme 3",
         difficulty: "hard",
 
-        dialogue: [
-            "Anna: I'm organizing a movie night at my house on Friday.",
-            "Tom: That sounds great. I'd love to join you.",
-            "Sarah: Sorry, I can't come because I have a doctor's appointment.",
-            "Anna: That's okay. What about you, Jack?",
-            "Jack: Sure. What time should I come?",
-            "Anna: At 6 p.m. We can order some pizza together."
-        ],
+        image: "images/test3/q22.png",
 
         question:
-            "Which of the following is NOT correct according to the dialogue?",
+            "Which of the following CANNOT be the list of activities for this weekend?",
 
         options: [
-            "Tom accepts Anna's invitation.",
-            "Sarah gives a reason for refusing the invitation.",
-            "Jack asks for more information about the event.",
-            "Anna is going to organize the event at a cafe."
+            "Saturday: Cleaning up the forest / Sunday: Camping",
+            "Saturday: Climbing a mountain / Sunday: Riding a horse",
+            "Saturday: Having a picnic / Sunday: Attending a concert",
+            "Saturday: Cycling / Sunday: Trekking"
+        ],
+
+        answer: 2,
+    },
+
+    {
+        id: "u2_tl_test3_q23",
+        unit: "Teen Life",
+        test: "Mini Deneme 3",
+        difficulty: "medium",
+
+        image: "images/test3/q23.png",
+
+        question:
+            "Which of the following is CORRECT according to the information above?",
+
+        options: [
+            "April would rather wear fashionable clothes.",
+            "Gail thinks casual clothes are better than formal clothes.",
+            "Jane prefers fashionable clothes to casual clothes.",
+            "Nina says wearing trendy clothes is really important for her."
+        ],
+
+        answer: 2,
+    },
+
+    {
+        id: "u2_tl_test3_q24",
+        unit: "Teen Life",
+        test: "Mini Deneme 3",
+        difficulty: "easy",
+
+        image: "images/test3/q24.png",
+
+        question:
+            "Choose the best option to fill in the blanks.",
+
+        options: [
+            "I don't think so.",
+            "I am not sure about that.",
+            "I am crazy about it too.",
+            "I'm afraid I disagree."
+        ],
+
+        answer: 2,
+    },
+
+    {
+        id: "u2_tl_test3_q25",
+        unit: "Teen Life",
+        test: "Mini Deneme 3",
+        difficulty: "hard",
+
+        image: "images/test3/q25.png",
+
+        question:
+            "Which of the following is NOT appropriate for the blanks in the conversation?",
+
+        options: [
+            "Do you have any plans for the weekend?",
+            "When are we going to meet there?",
+            "How often do you go skiing?",
+            "Do you want to come with us?"
+        ],
+
+        answer: 1,
+    },
+
+    {
+        id: "u2_tl_test3_q26",
+        unit: "Teen Life",
+        test: "Mini Deneme 3",
+        difficulty: "medium",
+
+        image: "images/test3/q26.png",
+
+        question:
+            "Look at the table. Tim never - - - -.",
+
+        options: [
+            "takes yoga classes",
+            "listens to jazz music",
+            "goes to swimming pool",
+            "goes to shopping malls"
+        ],
+
+        answer: 1,
+    },
+
+    {
+        id: "u2_tl_test3_q27",
+        unit: "Teen Life",
+        test: "Mini Deneme 3",
+        difficulty: "medium",
+
+        image: "images/test3/q27.png",
+
+        question:
+            "Look at the table. Roger - - - -.",
+
+        options: [
+            "always takes yoga classes",
+            "often spends time at a shopping mall",
+            "never takes yoga lessons",
+            "seldom goes swimming in the pool"
         ],
 
         answer: 3,
     },
 
-
-    // =====================================================
-    // QUESTION 9
-    // Friendship characteristics + matching
-    // =====================================================
-
     {
-        id: "u1_f_test3_q9",
-        unit: "Friendship",
+        id: "u2_tl_test3_q28",
+        unit: "Teen Life",
         test: "Mini Deneme 3",
-        difficulty: "hard",
+        difficulty: "medium",
 
-        image: "images/test3/q9.png",
+        image: "images/test3/q28.png",
 
         question:
-            "Which student has the characteristics that are mentioned in the text?",
+            "Look at the table. Meg and Celine - - - -.",
 
         options: [
-            "A student who never tells the truth but always makes jokes.",
-            "A student who keeps secrets and supports friends when they need help.",
-            "A student who dislikes spending time with other people.",
-            "A student who gets angry when friends have different opinions."
+            "prefer swimming in the pool to spending time at a shopping mall",
+            "sometimes listen to jazz music",
+            "rarely take yoga lessons",
+            "sometimes spend time at a shopping mall"
         ],
 
-        answer: 1,
+        answer: 3,
     },
 
-
-    // =====================================================
-    // QUESTION 10
-    // Reading
-    // =====================================================
-
     {
-        id: "u1_f_test3_q10",
-        unit: "Friendship",
+        id: "u2_tl_test3_q29",
+        unit: "Teen Life",
         test: "Mini Deneme 3",
-        difficulty: "hard",
+        difficulty: "easy",
 
-        passage:
-            "Emma and Lily have been best friends for many years. " +
-            "They usually spend their free time together, but they don't always have the same interests. " +
-            "Emma loves outdoor activities, while Lily prefers watching films and reading books. " +
-            "However, they respect each other's choices. " +
-            "When Emma has a problem, Lily always listens to her and tries to help. " +
-            "Emma does the same for Lily.",
+        image: "images/test3/q29.png",
 
         question:
-            "Which of the following is NOT correct according to the text?",
+            "Which of the following is CORRECT according to the text?",
 
         options: [
-            "Emma and Lily have been friends for a long time.",
-            "They have exactly the same hobbies.",
-            "Lily supports Emma when she has a problem.",
-            "They respect each other's preferences."
+            "He gets up at eight o'clock every day.",
+            "Tom goes to school by bus because it is far away.",
+            "He is a lazy student and never does his homework.",
+            "Tom doesn't have his lunch at home."
         ],
 
-        answer: 1,
+        answer: 3,
+    },
+
+    {
+        id: "u2_tl_test3_q30",
+        unit: "Teen Life",
+        test: "Mini Deneme 3",
+        difficulty: "easy",
+
+        image: "images/test3/q30.png",
+
+        question:
+            "What does Tom usually do before doing his homework?",
+
+        options: [
+            "He takes a rest before he does his homework.",
+            "He always hangs out after school.",
+            "He reads some books before doing his homework.",
+            "He helps his mother to prepare the dinner."
+        ],
+
+        answer: 0,
     }
 
 ];
 
 
-const questions = unit1FriendshipTest3;
+const questions = unit2TeenLifeTest3;
 
 let timer;
 let timeLeft = 90;
@@ -627,14 +538,6 @@ function loadQuestion() {
 
             </div>
 
-
-            <div class="question-type">
-
-                ${q.skill || q.type || ""}
-
-            </div>
-
-
             ${extraContent}
 
 
@@ -674,14 +577,6 @@ function loadQuestion() {
                     .join("")
                 }
 
-            </div>
-
-
-            <div
-                class="explanation"
-                id="explanation"
-            >
-                ${q.explanation || ""}
             </div>
 
 
@@ -861,7 +756,7 @@ if (selected !== -1 && selected !== q.answer) {
 </button>
 
 <button
-    onclick="location.href='../unit1-questions.html'"
+    onclick="location.href='../unit2-questions.html'"
     class="restart-btn">
     ← Questions
 </button>

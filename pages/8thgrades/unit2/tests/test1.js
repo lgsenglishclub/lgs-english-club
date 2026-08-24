@@ -96,300 +96,214 @@ async function addTestXP(percent) {
 
 }
 
-const unit1FriendshipTest1 = [
 
-    // =====================================================
-    // QUESTION 1 — INVITATION CARD
-    // Skill: Multiple-condition reasoning
-    // =====================================================
+const unit2TeenLifeTest1 = [
 
     {
-        id: "u1_f_test1_q1",
-        unit: "Friendship",
+        id: "u2_tl_test1_q1",
+        unit: "Teen Life",
         test: "Mini Deneme 1",
-        difficulty: "hard",
+        difficulty: "medium",
 
         image: "images/test1/q1.png",
 
         question:
-            "Look at the invitation card. Which of the following students can attend the whole event?",
+            "Look at the research results. Which of the following is CORRECT according to the information?",
 
         options: [
-            "A student who has to leave at 3 p.m.",
-            "A student who dislikes outdoor activities.",
-            "A student who can stay from 1 p.m. to 5 p.m. and enjoys team games.",
-            "A student who cannot come to the park."
+            "Korean teens are more interested in sports than English teens are.",
+            "Korean teens spend less time studying than English teens do.",
+            "English teens' favourite activity is going online.",
+            "English teens prefer artistic activities."
         ],
 
         answer: 2,
     },
 
-
-    // =====================================================
-    // QUESTION 2 — TEXT MESSAGES
-    // Skill: Inference
-    // =====================================================
-
     {
-        id: "u1_f_test1_q2",
-        unit: "Friendship",
+        id: "u2_tl_test1_q2",
+        unit: "Teen Life",
         test: "Mini Deneme 1",
         difficulty: "hard",
 
-        dialogue: [
-            "Mia: Are you coming to the Friendship Club meeting after school?",
-            "Leo: I wanted to, but I have to finish a project with my partner.",
-            "Mia: Can't you finish it before the meeting?",
-            "Leo: We have already planned to meet at the library at four.",
-            "Mia: I see. Maybe you can join us next time.",
-            "Leo: Yes. Please tell me what you decide about the weekend activity."
-        ],
+        image: "images/test1/q2.png",
 
         question:
-            "Which of the following can we understand from the conversation?",
+            "Professor Barclay asked teenagers questions about their daily routines and habits. Which of the following CANNOT be one of the questions in his questionnaire?",
 
         options: [
-            "Leo doesn't want to join the Friendship Club anymore.",
-            "Leo has another responsibility at the same time as the meeting.",
-            "Leo has already joined the weekend activity.",
-            "Mia refuses to help Leo with his project."
+            "What do you do at weekends?",
+            "Why do you like going to the movies?",
+            "What is your favourite free time activity?",
+            "Which activities do you do on the Internet?"
         ],
 
         answer: 1,
     },
 
-
-    // =====================================================
-    // QUESTION 3 — PREFERENCE TABLE
-    // Skill: Comparing information
-    // =====================================================
-
     {
-        id: "u1_f_test1_q3",
-        unit: "Friendship",
+        id: "u2_tl_test1_q3",
+        unit: "Teen Life",
         test: "Mini Deneme 1",
-        difficulty: "hard",
+        difficulty: "medium",
 
         image: "images/test1/q3.png",
 
         question:
-            "According to the table, which activity would be suitable for ALL the students who want to spend time together?",
+            "The chart shows how Julia and Tony spend their free time. Which of the following is NOT correct according to the information?",
 
         options: [
-            "A crowded music festival",
-            "A quiet movie night at home",
-            "A small picnic in the park",
-            "An indoor basketball tournament"
+            "Both Tony and Julia like physical exercise.",
+            "They spend the same amount of time helping with housework.",
+            "Julia spends more time with her friends than Tony does.",
+            "Tony enjoys spending time online most."
+        ],
+
+        answer: 1,
+    },
+
+    {
+        id: "u2_tl_test1_q4",
+        unit: "Teen Life",
+        test: "Mini Deneme 1",
+        difficulty: "medium",
+
+        image: "images/test1/q4.png",
+
+        question:
+            "Helena and Tracy want to attend a course together. According to their interests, which of the following is appropriate for both of them?",
+
+        options: [
+            "Hunt the biggest",
+            "Improve musical skills",
+            "Learners in the kitchen",
+            "Art of camera"
         ],
 
         answer: 2,
     },
 
-
-    // =====================================================
-    // QUESTION 4 — ACTIVITY POSTER
-    // Skill: Evaluating conditions
-    // =====================================================
-
     {
-        id: "u1_f_test1_q4",
-        unit: "Friendship",
+        id: "u2_tl_test1_q5",
+        unit: "Teen Life",
         test: "Mini Deneme 1",
-        difficulty: "hard",
+        difficulty: "easy",
 
-        image: "images/test1/q4.png",
+        image: "images/test1/q5.png",
 
         question:
-            "A group of friends wants to join an activity that is free, outdoors and suitable for a small group. Which activity meets ALL of their requirements?",
+            "Four people commented on a rock concert. Whose comment was disappointing for the singer?",
 
         options: [
-            "Movie Club",
-            "Park Picnic",
-            "Bowling Night",
-            "School Concert"
+            "Sam",
+            "John",
+            "Jane",
+            "Mary"
         ],
 
-        answer: 1,
+        answer: 0,
     },
 
-
-    // =====================================================
-    // QUESTION 5 — E-MAIL
-    // Skill: Understanding purpose
-    // =====================================================
-
     {
-        id: "u1_f_test1_q5",
-        unit: "Friendship",
+        id: "u2_tl_test1_q6",
+        unit: "Teen Life",
         test: "Mini Deneme 1",
-        difficulty: "hard",
-
-        passage:
-            "Hi Emma,\n\n" +
-            "I'm having a small birthday party at my house this Saturday. " +
-            "I'm inviting only a few close friends because I don't really like crowded parties. " +
-            "We're going to watch a movie, play some board games and have pizza together. " +
-            "I hope you can come!\n\n" +
-            "See you,\n" +
-            "Sophie",
-
-        question:
-            "Why does Sophie mention that she is inviting only a few friends?",
-
-        options: [
-            "She doesn't know many students at school.",
-            "She prefers spending time with a small group.",
-            "She wants to save money on food.",
-            "She doesn't want to celebrate her birthday."
-        ],
-
-        answer: 1,
-    },
-
-
-    // =====================================================
-    // QUESTION 6 — WEEKEND SCHEDULE
-    // Skill: Matching information
-    // =====================================================
-
-    {
-        id: "u1_f_test1_q6",
-        unit: "Friendship",
-        test: "Mini Deneme 1",
-        difficulty: "hard",
+        difficulty: "easy",
 
         image: "images/test1/q6.png",
 
         question:
-            "Tom is free on Saturday afternoon. He wants to do an outdoor activity with his friends, but he doesn't want to spend any money. Which activity can he join?",
+            "The pie chart shows the favorite free time activities of 100 teenagers. Which of the following is CORRECT according to the information?",
 
         options: [
-            "Watching a movie",
-            "Playing basketball in the park",
-            "Going bowling",
-            "Joining the school concert"
+            "Watching movies is the most favourite activity of the teens.",
+            "Doing exercise is very popular among the teens.",
+            "The teens usually spend their time on the Net.",
+            "The teenagers never listen to music."
         ],
 
-        answer: 1,
+        answer: 2,
     },
 
-
-    // =====================================================
-    // QUESTION 7 — DIALOGUE
-    // Skill: Communication function
-    // =====================================================
-
     {
-        id: "u1_f_test1_q7",
-        unit: "Friendship",
+        id: "u2_tl_test1_q7",
+        unit: "Teen Life",
         test: "Mini Deneme 1",
-        difficulty: "hard",
+        difficulty: "medium",
 
-        dialogue: [
-            "Sarah: Would you like to come to the cinema with us tonight?",
-            "Jack: Thanks, but I can't.",
-            "Sarah: Is everything okay?",
-            "Jack: Yes. My little brother isn't feeling well, so I need to stay at home with him.",
-            "Sarah: I understand. I hope he feels better soon.",
-            "Jack: Thanks. Have fun!"
-        ],
+        image: "images/test1/q7.png",
 
         question:
-            "What is the main reason for Jack's refusal?",
+            "Brian and Jenny want to do something different this weekend. According to their interests, which of the following is an appropriate place for them to go?",
 
         options: [
-            "He doesn't like watching films.",
-            "He has to take care of a family member.",
-            "He has already watched the film.",
-            "He wants to spend the evening with his friends."
+            "Art exhibition",
+            "Book fair",
+            "Amusement park",
+            "Cinema"
         ],
 
-        answer: 1,
+        answer: 0,
     },
 
-
-    // =====================================================
-    // QUESTION 8 — FRIENDSHIP CLUB NOTICE
-    // Skill: Choosing according to several conditions
-    // =====================================================
-
     {
-        id: "u1_f_test1_q8",
-        unit: "Friendship",
+        id: "u2_tl_test1_q8",
+        unit: "Teen Life",
         test: "Mini Deneme 1",
         difficulty: "hard",
 
         image: "images/test1/q8.png",
 
         question:
-            "A student wants to join an activity where they can meet new people, work in a group and spend time outdoors. Which activity is the best choice?",
+            "According to the information, who is NOT planning an activity for the weekend?",
 
         options: [
-            "Reading Circle",
-            "Outdoor Team Challenge",
-            "Movie Afternoon",
-            "Board Game Club"
+            "Mary and Alice",
+            "Mary and Tom",
+            "David and Tom",
+            "David and Alice"
         ],
 
         answer: 1,
     },
 
-
-    // =====================================================
-    // QUESTION 9 — READING
-    // Skill: Inference
-    // =====================================================
-
     {
-        id: "u1_f_test1_q9",
-        unit: "Friendship",
+        id: "u2_tl_test1_q9",
+        unit: "Teen Life",
         test: "Mini Deneme 1",
-        difficulty: "hard",
+        difficulty: "medium",
 
-        passage:
-            "When Maya and Olivia first met, they didn't have many common interests. " +
-            "Maya enjoyed reading and drawing, while Olivia loved outdoor activities and meeting new people. " +
-            "Their teacher asked them to prepare a project together. " +
-            "During the project, Maya helped Olivia organize their ideas, and Olivia encouraged Maya to present them in front of the class. " +
-            "They discovered that they both enjoyed taking photos. " +
-            "After the project, they started spending more time together. " +
-            "Although they still have different interests, they respect each other's choices and support each other.",
+        image: "images/test1/q9.png",
 
         question:
-            "Which of the following can be inferred from the text?",
+            "Which of the following does NOT have an answer in the text?",
 
         options: [
-            "Maya and Olivia became friends because they had exactly the same hobbies.",
-            "Working together helped Maya and Olivia discover something they both enjoyed.",
-            "Olivia stopped meeting new people after becoming friends with Maya.",
-            "Maya refused to help Olivia during the project."
+            "What kind of games does Frank like playing?",
+            "What time does he get up on Tuesdays?",
+            "What does he do before breakfast?",
+            "Where does he play basketball?"
         ],
 
         answer: 1,
     },
 
-
-    // =====================================================
-    // QUESTION 10 — EVENT NOTICE
-    // Skill: Detailed interpretation
-    // =====================================================
-
     {
-        id: "u1_f_test1_q10",
-        unit: "Friendship",
+        id: "u2_tl_test1_q10",
+        unit: "Teen Life",
         test: "Mini Deneme 1",
         difficulty: "hard",
 
         image: "images/test1/q10.png",
 
         question:
-            "Which of the following is NOT suitable for a student who wants to follow ALL the rules of the event?",
+            "According to the information, which of the following is NOT an appropriate reply to Simon's invitation?",
 
         options: [
-            "Joining the outdoor activity with a friend",
-            "Bringing food from home",
-            "Arriving before the event starts",
-            "Bringing more than the allowed number of friends"
+            "Hi, buddy. That's a good idea. I can join you after my football training.",
+            "Simon, the activity sounds a bit boring, but I will be there after our family breakfast.",
+            "Hello, Simon. That's really awesome but I will go to the cinema with my sister.",
+            "Hey, that's cool but in the afternoon I will go and listen to my favourite band."
         ],
 
         answer: 3,
@@ -397,7 +311,7 @@ const unit1FriendshipTest1 = [
 
 ];
 
-const questions = unit1FriendshipTest1;
+const questions = unit2TeenLifeTest1;
 
 let timer;
 let timeLeft = 90;
@@ -625,13 +539,6 @@ function loadQuestion() {
             </div>
 
 
-            <div class="question-type">
-
-                ${q.skill || q.type || ""}
-
-            </div>
-
-
             ${extraContent}
 
 
@@ -671,14 +578,6 @@ function loadQuestion() {
                     .join("")
                 }
 
-            </div>
-
-
-            <div
-                class="explanation"
-                id="explanation"
-            >
-                ${q.explanation || ""}
             </div>
 
 
@@ -858,7 +757,7 @@ if (selected !== -1 && selected !== q.answer) {
 </button>
 
 <button
-    onclick="location.href='../unit1-questions.html'"
+    onclick="location.href='../unit2-questions.html'"
     class="restart-btn">
     ← Questions
 </button>

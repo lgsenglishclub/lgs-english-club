@@ -96,318 +96,222 @@ async function addTestXP(percent) {
 
 }
 
-const unit1FriendshipTest2 = [
-
-    // =====================================================
-    // QUESTION 1
-    // Accepting / Refusing an invitation
-    // =====================================================
+const unit2TeenLifeTest2 = [
 
     {
-        id: "u1_f_test2_q1",
-        unit: "Friendship",
+        id: "u2_tl_test2_q11",
+        unit: "Teen Life",
         test: "Mini Deneme 2",
         difficulty: "medium",
 
-        dialogue: [
-            "Megan: Would you like to join us for the school picnic on Saturday?",
-            "Oliver: I'd love to, but I have to help my grandfather in the garden.",
-            "Megan: Oh, that's a pity. Maybe next time.",
-            "Oliver: Sure. I hope you have a great time."
-        ],
+        image: "images/test2/q11.png",
 
         question:
-            "Which of the following completes Oliver's response?",
+            "According to his plans, Tim - - - -.",
 
         options: [
-            "That sounds great. I can't wait.",
-            "I'd love to, but I have to help my grandfather.",
-            "Sure. What time shall we meet?",
-            "Yes, why not?"
+            "spends time only with his mum",
+            "listens to music only once a week",
+            "studies two different languages",
+            "does art at the weekend"
         ],
 
-        answer: 1,
+        answer: 3,
     },
 
-
-    // =====================================================
-    // QUESTION 2
-    // Making an inquiry
-    // =====================================================
-
     {
-        id: "u1_f_test2_q2",
-        unit: "Friendship",
+        id: "u2_tl_test2_q12",
+        unit: "Teen Life",
         test: "Mini Deneme 2",
-        difficulty: "medium",
+        difficulty: "easy",
 
-        dialogue: [
-            "Jason: Hi, Emma. Are you free this afternoon?",
-            "Emma: Yes. Why do you ask?",
-            "Jason: I have two tickets for the new comedy show.",
-            "Emma: Really? I'd love to come!"
-        ],
+        image: "images/test2/q12.png",
 
         question:
-            "Which of the following completes Jason's first question?",
+            "Look at the poster. The poster does NOT have any information about the - - - - of the tournament.",
 
         options: [
-            "What do you usually do with your friends?",
-            "Would you like to watch a comedy show?",
-            "Are you free this afternoon?",
-            "Where is the comedy show?"
+            "date",
+            "place",
+            "reward",
+            "time"
         ],
 
         answer: 2,
     },
 
-
-    // =====================================================
-    // QUESTION 3
-    // Friendship characteristics
-    // =====================================================
-
     {
-        id: "u1_f_test2_q3",
-        unit: "Friendship",
+        id: "u2_tl_test2_q13",
+        unit: "Teen Life",
         test: "Mini Deneme 2",
         difficulty: "medium",
 
-        passage:
-            "I think an ideal friend should always tell the truth and keep my secrets. " +
-            "I also want my friend to support me when I have a problem.",
+        image: "images/test2/q13.png",
 
         question:
-            "Which of the following is NOT related to the characteristics mentioned above?",
+            "Which of the following is NOT one of the books Gloria discusses?",
 
         options: [
-            "Honest",
-            "Supportive",
-            "Reliable",
-            "Adventurous"
+            "The Challenging Life of a Woman",
+            "A Trip out of the World",
+            "Tasty Recipes",
+            "Dangerous Animals"
         ],
 
         answer: 3,
     },
 
-
-    // =====================================================
-    // QUESTION 4
-    // Invitation / activity
-    // =====================================================
-
     {
-        id: "u1_f_test2_q4",
-        unit: "Friendship",
+        id: "u2_tl_test2_q14",
+        unit: "Teen Life",
         test: "Mini Deneme 2",
         difficulty: "medium",
 
-        dialogue: [
-            "Liam: I'm bored. I don't want to stay at home this afternoon.",
-            "Nora: Why don't we do something outside?",
-            "Liam: That's a good idea!"
-        ],
+        image: "images/test2/q14.png",
 
         question:
-            "Which of the following completes Nora's suggestion?",
+            "Which of the following are the most appropriate activities for Janet and Sam?",
 
         options: [
-            "How about going cycling in the park?",
-            "Would you like to stay at home?",
-            "Why don't you watch TV alone?",
-            "Do you want to read a book in your room?"
-        ],
-
-        answer: 0,
-    },
-
-
-    // =====================================================
-    // QUESTION 5
-    // Invitation card
-    // =====================================================
-
-    {
-        id: "u1_f_test2_q5",
-        unit: "Friendship",
-        test: "Mini Deneme 2",
-        difficulty: "hard",
-
-        image: "images/test2/q5.png",
-
-        question:
-            "According to the invitation card, which of the following is CORRECT?",
-
-        options: [
-            "The event will take place on a weekday evening.",
-            "Students have to pay for the food separately.",
-            "The event will be held at the school garden.",
-            "Students should contact the school principal for details."
-        ],
-
-        answer: 0,
-    },
-
-
-    // =====================================================
-    // QUESTION 6
-    // Dialogue — NOT CORRECT
-    // =====================================================
-
-    {
-        id: "u1_f_test2_q6",
-        unit: "Friendship",
-        test: "Mini Deneme 2",
-        difficulty: "hard",
-
-        dialogue: [
-            "Mia: We are organizing a surprise party for Lucy on Friday. Would you like to join us?",
-            "Ben: I'd love to. What time should I come?",
-            "Mia: At 6 p.m. We'll meet at my house first.",
-            "Sally: Sorry, I can't come because I have basketball training.",
-            "Mia: That's okay. We'll tell Lucy about your best wishes."
-        ],
-
-        question:
-            "Which of the following is NOT correct according to the dialogue?",
-
-        options: [
-            "Ben accepts the invitation.",
-            "Sally has an excuse for refusing the invitation.",
-            "They will meet at Mia's house first.",
-            "Lucy knows about the surprise party."
+            "Janet: playing volleyball and joining a guitar course / Sam: going to the shopping mall and doing basketball training",
+            "Janet: watching a play and going to a concert / Sam: going to the theatre and joining a drawing course",
+            "Janet: swimming and playing the piano / Sam: watching a play and visiting an art exhibition",
+            "Janet: listening to music and going to the theatre / Sam: cycling and going shopping"
         ],
 
         answer: 3,
     },
 
-
-    // =====================================================
-    // QUESTION 7
-    // Dialogue ordering
-    // =====================================================
-
     {
-    id: "u1_f_test2_q7",
-    unit: "Friendship",
-    test: "Mini Deneme 2",
-    difficulty: "hard",
-
-    dialogue: [
-        "Mia: Would you like to join us for a picnic on Sunday?",
-        "Jack: That sounds great. I'd love to come.",
-        "Mia: Sure. What time shall we meet?",
-        "Jack: At 11 a.m. We can meet in front of the school."
-    ],
-
-    question:
-        "Put the sentences into the correct order to make a meaningful dialogue.",
-
-    options: [
-        "II - IV - I - III",
-        "I - II - III - IV",
-        "III - I - IV - II",
-        "IV - II - I - III"
-    ],
-
-    answer: 1,
-    },
-
-
-    // =====================================================
-    // QUESTION 8
-    // Activity poster
-    // =====================================================
-
-    {
-        id: "u1_f_test2_q8",
-        unit: "Friendship",
+        id: "u2_tl_test2_q15",
+        unit: "Teen Life",
         test: "Mini Deneme 2",
-        difficulty: "hard",
+        difficulty: "medium",
 
-        image: "images/test2/q8.png",
+        image: "images/test2/q15.png",
 
         question:
-            "Which of the following does NOT have an answer in the poster?",
+            "A survey shows the music preferences of 100 boys and 100 girls. Which of the following is CORRECT according to the information?",
 
         options: [
-            "What activities can students do?",
-            "When is the event?",
-            "Who can students contact for more information?",
-            "How much does the activity cost?"
-        ],
-
-        answer: 3,
-    },
-
-
-    // =====================================================
-    // QUESTION 9
-    // Reading
-    // =====================================================
-
-    {
-        id: "u1_f_test2_q9",
-        unit: "Friendship",
-        test: "Mini Deneme 2",
-        difficulty: "hard",
-
-        passage:
-            "My best friend is Daniel. We met when we were in primary school. " +
-            "He is honest, helpful and funny. He always supports me when I have a problem, " +
-            "and he never tells my secrets to other people. We enjoy spending time together. " +
-            "At weekends, we usually ride our bikes or watch films at my house. " +
-            "Although we have different interests sometimes, we always respect each other's choices.",
-
-        question:
-            "Which of the following is CORRECT according to the text?",
-
-        options: [
-            "Daniel and the writer met at secondary school.",
-            "Daniel never helps the writer with his problems.",
-            "They always have exactly the same interests.",
-            "They respect each other's preferences."
-        ],
-
-        answer: 3,
-    },
-
-
-    // =====================================================
-    // QUESTION 10
-    // Reading / inference
-    // =====================================================
-
-    {
-        id: "u1_f_test2_q10",
-        unit: "Friendship",
-        test: "Mini Deneme 2",
-        difficulty: "hard",
-
-        passage:
-            "Lucy invited four friends to her birthday party. " +
-            "Molly said, 'I'd love to come, but I have to visit my grandparents.' " +
-            "Jack said, 'Sure! I can be there.' " +
-            "Emma said, 'That sounds great, but I have a piano lesson at that time.' " +
-            "Tom replied, 'Thanks for inviting me. I can't come because my family is going on a trip.'",
-
-        question:
-            "Who accepts Lucy's invitation?",
-
-        options: [
-            "Molly",
-            "Jack",
-            "Emma",
-            "Tom"
+            "Girls listen to jazz and folk music more than boys do.",
+            "More than half of the girls prefer listening to pop music.",
+            "Rap music is the most popular kind of music for both groups.",
+            "Both boys and girls like classical music at the same rate."
         ],
 
         answer: 1,
+    },
+
+    {
+        id: "u2_tl_test2_q16",
+        unit: "Teen Life",
+        test: "Mini Deneme 2",
+        difficulty: "easy",
+
+        image: "images/test2/q16.png",
+
+        question:
+            "The table shows what Dean and his friends prefer doing at weekends. Which of the following is CORRECT?",
+
+        options: [
+            "Sarah and Hannah enjoy attending parties.",
+            "Sam and Dean love watching films.",
+            "Dean and Sarah are interested in music.",
+            "Hannah and Sam like spending time at home."
+        ],
+
+        answer: 2,
+    },
+
+    {
+        id: "u2_tl_test2_q17",
+        unit: "Teen Life",
+        test: "Mini Deneme 2",
+        difficulty: "hard",
+
+        image: "images/test2/q17.png",
+
+        question:
+            "Success High School teachers prepare a form to find out their students' interests. According to the information, which of the following is NOT correct?",
+
+        options: [
+            "Students can try extreme sports on Tuesday.",
+            "There will be environmental activities on Thursday.",
+            "Activities on Saturday are related to science.",
+            "Students can take part in cultural activities on Sunday."
+        ],
+
+        answer: 0,
+    },
+
+    {
+        id: "u2_tl_test2_q18",
+        unit: "Teen Life",
+        test: "Mini Deneme 2",
+        difficulty: "hard",
+
+        image: "images/test2/q18.png",
+
+        question:
+            "John's notes show which classmates have certain interests. According to the information, which of the following is CORRECT?",
+
+        options: [
+            "Four people enjoy doing outdoor activities.",
+            "Both Patricia and Larry like listening to music.",
+            "Carl and Alan never get on well with their friends.",
+            "Only one person prefers vegetables to hamburgers."
+        ],
+
+        answer: 3,
+    },
+
+    {
+        id: "u2_tl_test2_q19",
+        unit: "Teen Life",
+        test: "Mini Deneme 2",
+        difficulty: "hard",
+
+        image: "images/test2/q19.png",
+
+        question:
+            "According to the chart, which of the following completes the conversation correctly?",
+
+        options: [
+            "for breakfast",
+            "to have dinner after 7 pm",
+            "at about twelve o'clock",
+            "between 1 and 3 pm"
+        ],
+
+        answer: 3,
+    },
+
+    {
+        id: "u2_tl_test2_q20",
+        unit: "Teen Life",
+        test: "Mini Deneme 2",
+        difficulty: "hard",
+
+        image: "images/test2/q20.png",
+
+        question:
+            "Which student's interests do NOT match any of the camps on the brochure?",
+
+        options: [
+            "Kimberly",
+            "Matthew",
+            "Laura",
+            "Vincent"
+        ],
+
+        answer: 3,
     }
 
 ];
 
 
-const questions = unit1FriendshipTest2;
+const questions = unit2TeenLifeTest2;
 
 let timer;
 let timeLeft = 90;
@@ -635,13 +539,6 @@ function loadQuestion() {
             </div>
 
 
-            <div class="question-type">
-
-                ${q.skill || q.type || ""}
-
-            </div>
-
-
             ${extraContent}
 
 
@@ -681,14 +578,6 @@ function loadQuestion() {
                     .join("")
                 }
 
-            </div>
-
-
-            <div
-                class="explanation"
-                id="explanation"
-            >
-                ${q.explanation || ""}
             </div>
 
 
@@ -868,7 +757,7 @@ if (selected !== -1 && selected !== q.answer) {
 </button>
 
 <button
-    onclick="location.href='../unit1-questions.html'"
+    onclick="location.href='../unit2-questions.html'"
     class="restart-btn">
     ← Questions
 </button>

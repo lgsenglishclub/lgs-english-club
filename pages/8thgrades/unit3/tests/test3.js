@@ -96,311 +96,222 @@ async function addTestXP(percent) {
 
 }
 
-const unit1FriendshipTest3 = [
-
-    // =====================================================
-    // QUESTION 1
-    // Invitation - best option
-    // =====================================================
+const unit3InTheKitchenTest3 = [
 
     {
-        id: "u1_f_test3_q1",
-        unit: "Friendship",
+        id: "u3_k_test3_q21",
+        unit: "In The Kitchen",
         test: "Mini Deneme 3",
         difficulty: "medium",
 
-        dialogue: [
-            "Emma: I’m going to the new book fair with some friends on Saturday.",
-            "Jack: That sounds interesting.",
-            "Emma: - - - -?",
-            "Jack: Sure. I enjoy looking at new books."
-        ],
+        image: "images/test3/q21.png",
 
         question:
-            "Which of the following completes Emma's question?",
+            "Using the information above, which of the following questions can you answer?",
 
         options: [
-            "Would you like to join us",
-            "What do you usually read",
-            "Why don't you like books",
-            "Are you at home now"
-        ],
-
-        answer: 0,
-    },
-
-
-    // =====================================================
-    // QUESTION 2
-    // Simple inquiry
-    // =====================================================
-
-    {
-        id: "u1_f_test3_q2",
-        unit: "Friendship",
-        test: "Mini Deneme 3",
-        difficulty: "medium",
-
-        dialogue: [
-            "Mia: I have two tickets for the school concert tonight.",
-            "Leo: Really? - - - -?",
-            "Mia: It starts at 7 p.m. at the school hall."
-        ],
-
-        question:
-            "Which of the following completes Leo's question?",
-
-        options: [
-            "Who is your best friend",
-            "What time does it start",
-            "Why do you hate concerts",
-            "What do you usually do at weekends"
-        ],
-
-        answer: 1,
-    },
-
-
-    // =====================================================
-    // QUESTION 3
-    // Refusing + reason
-    // =====================================================
-
-    {
-        id: "u1_f_test3_q3",
-        unit: "Friendship",
-        test: "Mini Deneme 3",
-        difficulty: "medium",
-
-        dialogue: [
-            "Daniel: How about joining us for a bike ride tomorrow morning?",
-            "Sophie: I’d love to, but - - - -.",
-            "Daniel: No problem. Maybe next weekend."
-        ],
-
-        question:
-            "Which of the following completes Sophie's response?",
-
-        options: [
-            "I have to study for my exam",
-            "that sounds great",
-            "I’d be happy to come",
-            "what time shall we meet"
-        ],
-
-        answer: 0,
-    },
-
-
-    // =====================================================
-    // QUESTION 4
-    // Friendship characteristics
-    // =====================================================
-
-    {
-        id: "u1_f_test3_q4",
-        unit: "Friendship",
-        test: "Mini Deneme 3",
-        difficulty: "medium",
-
-        question:
-            "In my opinion, an ideal friend should be - - - - because I can tell my secrets to him/her without worrying.",
-
-        options: [
-            "honest",
-            "jealous",
-            "selfish",
-            "stubborn"
-        ],
-
-        answer: 0,
-    },
-
-
-    // =====================================================
-    // QUESTION 5
-    // Friendship event card
-    // =====================================================
-
-    {
-        id: "u1_f_test3_q5",
-        unit: "Friendship",
-        test: "Mini Deneme 3",
-        difficulty: "hard",
-
-        image: "images/test3/q5.png",
-
-        question:
-            "According to the invitation card, which of the following is CORRECT?",
-
-        options: [
-            "The event will take place on a weekday morning.",
-            "Students can learn more information by contacting Amy.",
-            "The activity will be held at the city sports centre.",
-            "Students have to bring food because there will be no snacks."
-        ],
-
-        answer: 1,
-    },
-
-
-    // =====================================================
-    // QUESTION 6
-    // Who refuses by giving an excuse?
-    // =====================================================
-
-    {
-        id: "u1_f_test3_q6",
-        unit: "Friendship",
-        test: "Mini Deneme 3",
-        difficulty: "hard",
-
-        dialogue: [
-            "Ryan: We are going to the amusement park on Sunday. Would you like to come?",
-            "Molly: Yes, definitely. I love amusement parks.",
-            "Chris: Thanks, but I have a swimming competition that day.",
-            "Lucy: Great idea! What time are we meeting?",
-            "Ben: I’d love to come. It sounds fun."
-        ],
-
-        question:
-            "Who refuses the invitation by giving an excuse?",
-
-        options: [
-            "Molly",
-            "Chris",
-            "Lucy",
-            "Ben"
-        ],
-
-        answer: 1,
-    },
-
-
-    // =====================================================
-    // QUESTION 7
-    // Table + conversation
-    // =====================================================
-
-    {
-        id: "u1_f_test3_q7",
-        unit: "Friendship",
-        test: "Mini Deneme 3",
-        difficulty: "hard",
-
-        image: "images/test3/q7.png",
-
-        question:
-            "According to the information in the table, which activity can both students enjoy together?",
-
-        options: [
-            "Going shopping",
-            "Playing basketball",
-            "Taking photos",
-            "Watching films"
-        ],
-
-        answer: 2,
-    },
-
-
-    // =====================================================
-    // QUESTION 8
-    // Dialogue - NOT CORRECT
-    // =====================================================
-
-    {
-        id: "u1_f_test3_q8",
-        unit: "Friendship",
-        test: "Mini Deneme 3",
-        difficulty: "hard",
-
-        dialogue: [
-            "Anna: I'm organizing a movie night at my house on Friday.",
-            "Tom: That sounds great. I'd love to join you.",
-            "Sarah: Sorry, I can't come because I have a doctor's appointment.",
-            "Anna: That's okay. What about you, Jack?",
-            "Jack: Sure. What time should I come?",
-            "Anna: At 6 p.m. We can order some pizza together."
-        ],
-
-        question:
-            "Which of the following is NOT correct according to the dialogue?",
-
-        options: [
-            "Tom accepts Anna's invitation.",
-            "Sarah gives a reason for refusing the invitation.",
-            "Jack asks for more information about the event.",
-            "Anna is going to organize the event at a cafe."
+            "Which food is cheaper than the others?",
+            "What kind of food is healthier than the others?",
+            "Why don't the teenagers prefer Indian food?",
+            "What is the most popular food among the teenagers?"
         ],
 
         answer: 3,
     },
 
+    {
+        id: "u3_k_test3_q22",
+        unit: "In The Kitchen",
+        test: "Mini Deneme 3",
+        difficulty: "medium",
 
-    // =====================================================
-    // QUESTION 9
-    // Friendship characteristics + matching
-    // =====================================================
+        image: "images/test3/q22.png",
+
+        question:
+            "According to the information above, Peter - - - -.",
+
+        options: [
+            "hates fast food and drinks too much water",
+            "eats fruits, vegetables, and fish every week",
+            "generally prefers eating out",
+            "dislikes sweet and salty food"
+        ],
+
+        answer: 2,
+    },
 
     {
-        id: "u1_f_test3_q9",
-        unit: "Friendship",
+        id: "u3_k_test3_q23",
+        unit: "In The Kitchen",
+        test: "Mini Deneme 3",
+        difficulty: "medium",
+
+        image: "images/test3/q23.png",
+
+        question:
+            "Which of the following statements does NOT match Shirley and any of her friends' preferences?",
+
+        options: [
+            "I am crazy about desserts. Eating sweet things makes me happy.",
+            "I know it is fast food, but I cannot stop myself when I see them.",
+            "I always prefer red meat to white meat as it is more delicious.",
+            "I prefer baking vegetables and serving them with different sauces."
+        ],
+
+        answer: 3,
+    },
+
+    {
+        id: "u3_k_test3_q24",
+        unit: "In The Kitchen",
         test: "Mini Deneme 3",
         difficulty: "hard",
 
-        image: "images/test3/q9.png",
+        image: "images/test3/q24.png",
 
         question:
-            "Which student has the characteristics that are mentioned in the text?",
+            "According to the comments above, which of the following can be a good choice for Amy?",
 
         options: [
-            "A student who never tells the truth but always makes jokes.",
-            "A student who keeps secrets and supports friends when they need help.",
-            "A student who dislikes spending time with other people.",
-            "A student who gets angry when friends have different opinions."
+            "I and III",
+            "I, IV, and VI",
+            "II, III, and IV",
+            "II and V"
+        ],
+
+        answer: 0,
+    },
+
+    {
+        id: "u3_k_test3_q25",
+        unit: "In The Kitchen",
+        test: "Mini Deneme 3",
+        difficulty: "easy",
+
+        image: "images/test3/q25.png",
+
+        question:
+            "According to the poster above, which of the following is NOT correct?",
+
+        options: [
+            "Breakfast makes it easier to succeed at school.",
+            "Drinking milk with honey is an important part of the breakfast.",
+            "Having breakfast will give you more energy during the day.",
+            "The poster shows that eating breakfast helps you feel better."
         ],
 
         answer: 1,
     },
 
-
-    // =====================================================
-    // QUESTION 10
-    // Reading
-    // =====================================================
-
     {
-        id: "u1_f_test3_q10",
-        unit: "Friendship",
+        id: "u3_k_test3_q26",
+        unit: "In The Kitchen",
         test: "Mini Deneme 3",
         difficulty: "hard",
 
-        passage:
-            "Emma and Lily have been best friends for many years. " +
-            "They usually spend their free time together, but they don't always have the same interests. " +
-            "Emma loves outdoor activities, while Lily prefers watching films and reading books. " +
-            "However, they respect each other's choices. " +
-            "When Emma has a problem, Lily always listens to her and tries to help. " +
-            "Emma does the same for Lily.",
+        image: "images/test3/q26.png",
 
         question:
-            "Which of the following is NOT correct according to the text?",
+            "According to the information above, which place is Noah going to order from?",
 
         options: [
-            "Emma and Lily have been friends for a long time.",
-            "They have exactly the same hobbies.",
-            "Lily supports Emma when she has a problem.",
-            "They respect each other's preferences."
+            "Grilled Fish Restaurant",
+            "Salad Garden",
+            "Burger House",
+            "Vegetable World"
+        ],
+
+        answer: 0,
+    },
+
+    {
+        id: "u3_k_test3_q27",
+        unit: "In The Kitchen",
+        test: "Mini Deneme 3",
+        difficulty: "hard",
+
+        image: "images/test3/q27.png",
+
+        question:
+            "Choose the best option to fill in the blanks.",
+
+        options: [
+            "First – After that",
+            "First – Finally",
+            "Then – After that",
+            "After that – First"
+        ],
+
+        answer: 0,
+    },
+
+    {
+        id: "u3_k_test3_q28",
+        unit: "In The Kitchen",
+        test: "Mini Deneme 3",
+        difficulty: "hard",
+
+        image: "images/test3/q28.png",
+
+        question:
+            "Which of the following is NOT correct according to the information above?",
+
+        options: [
+            "Jenna and her mother have a sweet tooth.",
+            "Mustafa prefers eating spicy foods to fatty foods.",
+            "Emma would rather drink lemonade.",
+            "Walter ate salty foods in the past."
         ],
 
         answer: 1,
+    },
+
+    {
+        id: "u3_k_test3_q29",
+        unit: "In The Kitchen",
+        test: "Mini Deneme 3",
+        difficulty: "hard",
+
+        image: "images/test3/q29.png",
+
+        question:
+            "According to information above, who is going to prefer making a pizza?",
+
+        options: [
+            "I",
+            "II",
+            "III",
+            "IV"
+        ],
+
+        answer: 3,
+    },
+
+    {
+        id: "u3_k_test3_q30",
+        unit: "In The Kitchen",
+        test: "Mini Deneme 3",
+        difficulty: "hard",
+
+        image: "images/test3/q30.png",
+
+        question:
+            "Which of the following is CORRECT according to the passage above?",
+
+        options: [
+            " She believes his kebabs are worth trying.",
+            "Arda Baba has a restaurant in Gaziantep.",
+            "Yeşim always watches videos instead of studying.",
+            " People never come to his restaurant from different cities."
+        ],
+
+        answer: 0,
     }
 
 ];
 
 
-const questions = unit1FriendshipTest3;
+const questions = unit3InTheKitchenTest3;
 
 let timer;
 let timeLeft = 90;
@@ -628,13 +539,6 @@ function loadQuestion() {
             </div>
 
 
-            <div class="question-type">
-
-                ${q.skill || q.type || ""}
-
-            </div>
-
-
             ${extraContent}
 
 
@@ -674,14 +578,6 @@ function loadQuestion() {
                     .join("")
                 }
 
-            </div>
-
-
-            <div
-                class="explanation"
-                id="explanation"
-            >
-                ${q.explanation || ""}
             </div>
 
 
@@ -861,7 +757,7 @@ if (selected !== -1 && selected !== q.answer) {
 </button>
 
 <button
-    onclick="location.href='../unit1-questions.html'"
+    onclick="location.href='../unit3-questions.html'"
     class="restart-btn">
     ← Questions
 </button>

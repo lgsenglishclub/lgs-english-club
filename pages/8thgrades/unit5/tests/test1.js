@@ -96,308 +96,221 @@ async function addTestXP(percent) {
 
 }
 
-const unit1FriendshipTest1 = [
-
-    // =====================================================
-    // QUESTION 1 — INVITATION CARD
-    // Skill: Multiple-condition reasoning
-    // =====================================================
+const unit5TheInternetTest1 = [
 
     {
         id: "u1_f_test1_q1",
-        unit: "Friendship",
+        unit: "The Internet",
         test: "Mini Deneme 1",
         difficulty: "hard",
 
         image: "images/test1/q1.png",
 
         question:
-            "Look at the invitation card. Which of the following students can attend the whole event?",
+            "If you want to be safe online, you should - - - -.",
 
         options: [
-            "A student who has to leave at 3 p.m.",
-            "A student who dislikes outdoor activities.",
-            "A student who can stay from 1 p.m. to 5 p.m. and enjoys team games.",
-            "A student who cannot come to the park."
+            "invite people you met online to your house",
+            "create a password such as your birthday",
+            "buy things from websites you trust",
+            " tell the place of your school"
         ],
 
         answer: 2,
     },
 
-
-    // =====================================================
-    // QUESTION 2 — TEXT MESSAGES
-    // Skill: Inference
-    // =====================================================
-
     {
         id: "u1_f_test1_q2",
-        unit: "Friendship",
+        unit: "The Internet",
         test: "Mini Deneme 1",
         difficulty: "hard",
 
-        dialogue: [
-            "Mia: Are you coming to the Friendship Club meeting after school?",
-            "Leo: I wanted to, but I have to finish a project with my partner.",
-            "Mia: Can't you finish it before the meeting?",
-            "Leo: We have already planned to meet at the library at four.",
-            "Mia: I see. Maybe you can join us next time.",
-            "Leo: Yes. Please tell me what you decide about the weekend activity."
-        ],
+        image: "images/test1/q2.png",
 
         question:
-            "Which of the following can we understand from the conversation?",
+            "What can be the best title for the text?",
 
         options: [
-            "Leo doesn't want to join the Friendship Club anymore.",
-            "Leo has another responsibility at the same time as the meeting.",
-            "Leo has already joined the weekend activity.",
-            "Mia refuses to help Leo with his project."
+            "Dangerous Effects of Internet on Physical Health",
+            "Disadvantages of Internet on Young People",
+            "Social Life, Online Friends, and Internet",
+            "Internet: Bad for Teen’s Education"
         ],
 
         answer: 1,
     },
 
-
-    // =====================================================
-    // QUESTION 3 — PREFERENCE TABLE
-    // Skill: Comparing information
-    // =====================================================
-
     {
-        id: "u1_f_test1_q3",
-        unit: "Friendship",
+        id: "u1_f_test1_q2",
+        unit: "The Internet",
         test: "Mini Deneme 1",
         difficulty: "hard",
 
-        image: "images/test1/q3.png",
+        image: "images/test1/q2.png",
 
         question:
-            "According to the table, which activity would be suitable for ALL the students who want to spend time together?",
+            "If young people want to have better grades, they should - - - -.",
 
         options: [
-            "A crowded music festival",
-            "A quiet movie night at home",
-            "A small picnic in the park",
-            "An indoor basketball tournament"
+            "have real friends",
+            "sit far away from the screen",
+            "study more for their lessons",
+            "play online games with their friends"
         ],
 
         answer: 2,
     },
 
-
-    // =====================================================
-    // QUESTION 4 — ACTIVITY POSTER
-    // Skill: Evaluating conditions
-    // =====================================================
-
     {
-        id: "u1_f_test1_q4",
-        unit: "Friendship",
+        id: "u1_f_test1_q2",
+        unit: "The Internet",
         test: "Mini Deneme 1",
         difficulty: "hard",
 
         image: "images/test1/q4.png",
 
         question:
-            "A group of friends wants to join an activity that is free, outdoors and suitable for a small group. Which activity meets ALL of their requirements?",
+            "Which of the following completes the conversation?",
 
         options: [
-            "Movie Club",
-            "Park Picnic",
-            "Bowling Night",
-            "School Concert"
+            "give personal information on the Internet",
+            "shop from the websites you trust",
+            "believe everything you read",
+            "meet your online friends"
         ],
 
-        answer: 1,
+        answer: 0,
     },
 
-
-    // =====================================================
-    // QUESTION 5 — E-MAIL
-    // Skill: Understanding purpose
-    // =====================================================
-
     {
-        id: "u1_f_test1_q5",
-        unit: "Friendship",
+        id: "u1_f_test1_q2",
+        unit: "The Internet",
         test: "Mini Deneme 1",
         difficulty: "hard",
 
-        passage:
-            "Hi Emma,\n\n" +
-            "I'm having a small birthday party at my house this Saturday. " +
-            "I'm inviting only a few close friends because I don't really like crowded parties. " +
-            "We're going to watch a movie, play some board games and have pizza together. " +
-            "I hope you can come!\n\n" +
-            "See you,\n" +
-            "Sophie",
+        image: "images/test1/q5.png",
 
         question:
-            "Why does Sophie mention that she is inviting only a few friends?",
+            "- - - - in 2019 than they did in 2018.",
 
         options: [
-            "She doesn't know many students at school.",
-            "She prefers spending time with a small group.",
-            "She wants to save money on food.",
-            "She doesn't want to celebrate her birthday."
+            "Fewer people logged in to their social media account",
+            "More people downloaded photos",
+            "People watched more videos",
+            "People wrote less e-mails"
         ],
 
-        answer: 1,
+        answer: 2,
     },
 
-
-    // =====================================================
-    // QUESTION 6 — WEEKEND SCHEDULE
-    // Skill: Matching information
-    // =====================================================
-
     {
-        id: "u1_f_test1_q6",
-        unit: "Friendship",
+        id: "u1_f_test1_q2",
+        unit: "The Internet",
         test: "Mini Deneme 1",
         difficulty: "hard",
 
         image: "images/test1/q6.png",
 
         question:
-            "Tom is free on Saturday afternoon. He wants to do an outdoor activity with his friends, but he doesn't want to spend any money. Which activity can he join?",
+            "According to the results above, which of the following is NOT correct?",
 
         options: [
-            "Watching a movie",
-            "Playing basketball in the park",
-            "Going bowling",
-            "Joining the school concert"
+            "In 2018, people shared fewer photos than in 2019",
+            "More people watched videos on the Net in 2018 than in 2019.",
+            "People downloaded more applications from the stores in 2019.",
+            "About four million people used search engines both in 2018 and 2019."
         ],
 
         answer: 1,
     },
 
-
-    // =====================================================
-    // QUESTION 7 — DIALOGUE
-    // Skill: Communication function
-    // =====================================================
-
     {
-        id: "u1_f_test1_q7",
-        unit: "Friendship",
+        id: "u1_f_test1_q2",
+        unit: "The Internet",
         test: "Mini Deneme 1",
         difficulty: "hard",
 
-        dialogue: [
-            "Sarah: Would you like to come to the cinema with us tonight?",
-            "Jack: Thanks, but I can't.",
-            "Sarah: Is everything okay?",
-            "Jack: Yes. My little brother isn't feeling well, so I need to stay at home with him.",
-            "Sarah: I understand. I hope he feels better soon.",
-            "Jack: Thanks. Have fun!"
-        ],
+        image: "images/test1/q7.png",
 
         question:
-            "What is the main reason for Jack's refusal?",
+            "Which of the following does NOT complete the conversation above?",
 
         options: [
-            "He doesn't like watching films.",
-            "He has to take care of a family member.",
-            "He has already watched the film.",
-            "He wants to spend the evening with his friends."
+            "Would you like to register?",
+            "My Internet is not working properly.",
+            "What is the web address of the course?",
+            "I am bad at face-to-face communication."
         ],
 
-        answer: 1,
+        answer: 3,
     },
 
-
-    // =====================================================
-    // QUESTION 8 — FRIENDSHIP CLUB NOTICE
-    // Skill: Choosing according to several conditions
-    // =====================================================
-
     {
-        id: "u1_f_test1_q8",
-        unit: "Friendship",
+        id: "u1_f_test1_q2",
+        unit: "The Internet",
         test: "Mini Deneme 1",
         difficulty: "hard",
 
         image: "images/test1/q8.png",
 
         question:
-            "A student wants to join an activity where they can meet new people, work in a group and spend time outdoors. Which activity is the best choice?",
+            "Which of the following is NOT related to Mike's search history?",
 
         options: [
-            "Reading Circle",
-            "Outdoor Team Challenge",
-            "Movie Afternoon",
-            "Board Game Club"
+            "The exact number of active Internet sites is unknown",
+            "New generation smartphones war takes new shape",
+            "92% of teens go online daily and 24% say they are always online",
+            "Many people practice a foreign language by using the Internet"
         ],
 
         answer: 1,
     },
 
-
-    // =====================================================
-    // QUESTION 9 — READING
-    // Skill: Inference
-    // =====================================================
-
     {
-        id: "u1_f_test1_q9",
-        unit: "Friendship",
+        id: "u1_f_test1_q2",
+        unit: "The Internet",
         test: "Mini Deneme 1",
         difficulty: "hard",
 
-        passage:
-            "When Maya and Olivia first met, they didn't have many common interests. " +
-            "Maya enjoyed reading and drawing, while Olivia loved outdoor activities and meeting new people. " +
-            "Their teacher asked them to prepare a project together. " +
-            "During the project, Maya helped Olivia organize their ideas, and Olivia encouraged Maya to present them in front of the class. " +
-            "They discovered that they both enjoyed taking photos. " +
-            "After the project, they started spending more time together. " +
-            "Although they still have different interests, they respect each other's choices and support each other.",
+        image: "images/test1/q9.png",
 
         question:
-            "Which of the following can be inferred from the text?",
+            "Which of the following does NOT have an answer in the text above?",
 
         options: [
-            "Maya and Olivia became friends because they had exactly the same hobbies.",
-            "Working together helped Maya and Olivia discover something they both enjoyed.",
-            "Olivia stopped meeting new people after becoming friends with Maya.",
-            "Maya refused to help Olivia during the project."
+            "What kind of devices can children use to play online games?",
+            "How much time do the addicted children spend online?",
+            "What are the reasons for online game addiction?",
+            "How do parents feel about their children's habits?"
         ],
 
-        answer: 1,
+        answer: 2,
     },
 
-
-    // =====================================================
-    // QUESTION 10 — EVENT NOTICE
-    // Skill: Detailed interpretation
-    // =====================================================
-
     {
-        id: "u1_f_test1_q10",
-        unit: "Friendship",
+        id: "u1_f_test1_q2",
+        unit: "The Internet",
         test: "Mini Deneme 1",
         difficulty: "hard",
 
         image: "images/test1/q10.png",
 
         question:
-            "Which of the following is NOT suitable for a student who wants to follow ALL the rules of the event?",
+            "Which of the following is CORRECT according to the information above?",
 
         options: [
-            "Joining the outdoor activity with a friend",
-            "Bringing food from home",
-            "Arriving before the event starts",
-            "Bringing more than the allowed number of friends"
+            "Only a few students search new things on the Internet.",
+            "Nearly 25% of the students post photos on the Internet.",
+            "Half of the students prefer watching something on the Internet.",
+            "20% of the students use the Internet for communication."
         ],
 
-        answer: 3,
+        answer: 1,
     }
 
 ];
 
-const questions = unit1FriendshipTest1;
+const questions = unit5TheInternetTest1;
 
 let timer;
 let timeLeft = 90;
@@ -625,13 +538,6 @@ function loadQuestion() {
             </div>
 
 
-            <div class="question-type">
-
-                ${q.skill || q.type || ""}
-
-            </div>
-
-
             ${extraContent}
 
 
@@ -672,15 +578,6 @@ function loadQuestion() {
                 }
 
             </div>
-
-
-            <div
-                class="explanation"
-                id="explanation"
-            >
-                ${q.explanation || ""}
-            </div>
-
 
             <button
                 id="nextBtn"
@@ -858,7 +755,7 @@ if (selected !== -1 && selected !== q.answer) {
 </button>
 
 <button
-    onclick="location.href='../unit1-questions.html'"
+    onclick="location.href='../unit5-questions.html'"
     class="restart-btn">
     ← Questions
 </button>

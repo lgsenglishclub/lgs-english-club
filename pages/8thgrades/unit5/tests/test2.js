@@ -96,309 +96,213 @@ async function addTestXP(percent) {
 
 }
 
-const unit1FriendshipTest2 = [
-
-    // =====================================================
-    // QUESTION 1
-    // Accepting / Refusing an invitation
-    // =====================================================
+const unit5TheInternetTest2 = [
 
     {
         id: "u1_f_test2_q1",
-        unit: "Friendship",
+        unit: "The Internet",
         test: "Mini Deneme 2",
-        difficulty: "medium",
+        difficulty: "hard",
 
-        dialogue: [
-            "Megan: Would you like to join us for the school picnic on Saturday?",
-            "Oliver: I'd love to, but I have to help my grandfather in the garden.",
-            "Megan: Oh, that's a pity. Maybe next time.",
-            "Oliver: Sure. I hope you have a great time."
-        ],
+        image: "images/test2/q1.png",
 
         question:
-            "Which of the following completes Oliver's response?",
+            "Which of the following is NOT correct according to the results of the survey?",
 
         options: [
-            "That sounds great. I can't wait.",
-            "I'd love to, but I have to help my grandfather.",
-            "Sure. What time shall we meet?",
-            "Yes, why not?"
+            "Sally and Maria use the Internet to get help for their lessons.",
+            "Tom and Jack spend more time on the Net than the others.",
+            "All of them share their opinions about their friends online.",
+            "Two people are Internet addicts according to the results."
         ],
 
         answer: 1,
     },
 
-
-    // =====================================================
-    // QUESTION 2
-    // Making an inquiry
-    // =====================================================
-
     {
         id: "u1_f_test2_q2",
-        unit: "Friendship",
+        unit: "The Internet",
         test: "Mini Deneme 2",
-        difficulty: "medium",
+        difficulty: "hard",
 
-        dialogue: [
-            "Jason: Hi, Emma. Are you free this afternoon?",
-            "Emma: Yes. Why do you ask?",
-            "Jason: I have two tickets for the new comedy show.",
-            "Emma: Really? I'd love to come!"
-        ],
+        image: "images/test2/q2.png",
 
         question:
-            "Which of the following completes Jason's first question?",
+            "Whose purpose of using the Internet does NOT match the examples in the text above?",
 
         options: [
-            "What do you usually do with your friends?",
-            "Would you like to watch a comedy show?",
-            "Are you free this afternoon?",
-            "Where is the comedy show?"
-        ],
-
-        answer: 2,
-    },
-
-
-    // =====================================================
-    // QUESTION 3
-    // Friendship characteristics
-    // =====================================================
-
-    {
-        id: "u1_f_test2_q3",
-        unit: "Friendship",
-        test: "Mini Deneme 2",
-        difficulty: "medium",
-
-        passage:
-            "I think an ideal friend should always tell the truth and keep my secrets. " +
-            "I also want my friend to support me when I have a problem.",
-
-        question:
-            "Which of the following is NOT related to the characteristics mentioned above?",
-
-        options: [
-            "Honest",
-            "Supportive",
-            "Reliable",
-            "Adventurous"
+            "Mary : I often look for different recipes on the Internet.",
+            "Tom : I use the Internet to send emails and chat with myfriends.",
+            "Sam : I use the Internet to watch movies and play games.",
+            "Sophie : I generally buy what I need on the Internet."
         ],
 
         answer: 3,
     },
 
-
-    // =====================================================
-    // QUESTION 4
-    // Invitation / activity
-    // =====================================================
-
     {
-        id: "u1_f_test2_q4",
-        unit: "Friendship",
+        id: "u1_f_test2_q2",
+        unit: "The Internet",
         test: "Mini Deneme 2",
-        difficulty: "medium",
+        difficulty: "hard",
 
-        dialogue: [
-            "Liam: I'm bored. I don't want to stay at home this afternoon.",
-            "Nora: Why don't we do something outside?",
-            "Liam: That's a good idea!"
-        ],
+        image: "images/test2/q3.png",
 
         question:
-            "Which of the following completes Nora's suggestion?",
+            "According to the information above, which two students are talking about the positive sides of the internet?",
 
         options: [
-            "How about going cycling in the park?",
-            "Would you like to stay at home?",
-            "Why don't you watch TV alone?",
-            "Do you want to read a book in your room?"
+            "Asya and Hakan",
+            "Hakan and GÜlce",
+            "Umut and Asya",
+            "Gülce and Umut"
         ],
 
-        answer: 0,
+        answer: 2,
     },
 
+    {
+        id: "u1_f_test2_q2",
+        unit: "The Internet",
+        test: "Mini Deneme 2",
+        difficulty: "hard",
 
-    // =====================================================
-    // QUESTION 5
-    // Invitation card
-    // =====================================================
+        image: "images/test2/q4.png",
+
+        question:
+            "According to the information above, which of the following is CORRECT?",
+
+        options: [
+            "Eight students use the Internet to learn something in a foreign language.",
+            "The least popular use of the Internet is playing educational games.",
+            "Most of the students use the Internet to buy something to eat.",
+            "Half of the students learn how to cook something using the Internet."
+        ],
+
+        answer: 1,
+    },
 
     {
-        id: "u1_f_test2_q5",
-        unit: "Friendship",
+        id: "u1_f_test2_q2",
+        unit: "The Internet",
         test: "Mini Deneme 2",
         difficulty: "hard",
 
         image: "images/test2/q5.png",
 
         question:
-            "According to the invitation card, which of the following is CORRECT?",
+            "According to the information above, which of the following is NOT one of the websites they visited? ",
 
         options: [
-            "The event will take place on a weekday evening.",
-            "Students have to pay for the food separately.",
-            "The event will be held at the school garden.",
-            "Students should contact the school principal for details."
+            "www.film-choices.com",
+            "www.extreme-sports.com",
+            "www. easy-cooking.com",
+            "www. news-around.com"
         ],
 
-        answer: 0,
+        answer: 1,
     },
 
-
-    // =====================================================
-    // QUESTION 6
-    // Dialogue — NOT CORRECT
-    // =====================================================
-
     {
-        id: "u1_f_test2_q6",
-        unit: "Friendship",
+        id: "u1_f_test2_q2",
+        unit: "The Internet",
         test: "Mini Deneme 2",
         difficulty: "hard",
 
-        dialogue: [
-            "Mia: We are organizing a surprise party for Lucy on Friday. Would you like to join us?",
-            "Ben: I'd love to. What time should I come?",
-            "Mia: At 6 p.m. We'll meet at my house first.",
-            "Sally: Sorry, I can't come because I have basketball training.",
-            "Mia: That's okay. We'll tell Lucy about your best wishes."
-        ],
+        image: "images/test2/q6.png",
 
         question:
-            "Which of the following is NOT correct according to the dialogue?",
+            "According to the statements above, which two people spend most of their time online?",
 
         options: [
-            "Ben accepts the invitation.",
-            "Sally has an excuse for refusing the invitation.",
-            "They will meet at Mia's house first.",
-            "Lucy knows about the surprise party."
+            "John and Jessica",
+            "Sally and Martin",
+            "Jessica and Tom",
+            "Martin and Tom"
+        ],
+
+        answer: 2,
+    },
+
+    {
+        id: "u1_f_test2_q2",
+        unit: "The Internet",
+        test: "Mini Deneme 2",
+        difficulty: "hard",
+
+        image: "images/test2/q7.png",
+
+        question:
+            "Looking at the information above, who can buy Dean’s computer?",
+
+        options: [
+            "Carl",
+            "Jack",
+            "Bobby",
+            "Sam"
         ],
 
         answer: 3,
     },
 
-
-    // =====================================================
-    // QUESTION 7
-    // Dialogue ordering
-    // =====================================================
-
     {
-    id: "u1_f_test2_q7",
-    unit: "Friendship",
-    test: "Mini Deneme 2",
-    difficulty: "hard",
-
-    dialogue: [
-        "Mia: Would you like to join us for a picnic on Sunday?",
-        "Jack: That sounds great. I'd love to come.",
-        "Mia: Sure. What time shall we meet?",
-        "Jack: At 11 a.m. We can meet in front of the school."
-    ],
-
-    question:
-        "Put the sentences into the correct order to make a meaningful dialogue.",
-
-    options: [
-        "II - IV - I - III",
-        "I - II - III - IV",
-        "III - I - IV - II",
-        "IV - II - I - III"
-    ],
-
-    answer: 1,
-    },
-
-
-    // =====================================================
-    // QUESTION 8
-    // Activity poster
-    // =====================================================
-
-    {
-        id: "u1_f_test2_q8",
-        unit: "Friendship",
+        id: "u1_f_test2_q2",
+        unit: "The Internet",
         test: "Mini Deneme 2",
         difficulty: "hard",
 
         image: "images/test2/q8.png",
 
         question:
-            "Which of the following does NOT have an answer in the poster?",
+            "Which of the following is FALSE according to the graphic?",
 
         options: [
-            "What activities can students do?",
-            "When is the event?",
-            "Who can students contact for more information?",
-            "How much does the activity cost?"
+            "None of my classmates uses the Net to pay the bills.",
+            "My classmates prefer playing online games most.",
+            "Watching videos is more amusing than practicing language for them.",
+            "All of my classmates would rather do online shopping."
         ],
 
         answer: 3,
     },
 
-
-    // =====================================================
-    // QUESTION 9
-    // Reading
-    // =====================================================
-
     {
-        id: "u1_f_test2_q9",
-        unit: "Friendship",
+        id: "u1_f_test2_q2",
+        unit: "The Internet",
         test: "Mini Deneme 2",
         difficulty: "hard",
 
-        passage:
-            "My best friend is Daniel. We met when we were in primary school. " +
-            "He is honest, helpful and funny. He always supports me when I have a problem, " +
-            "and he never tells my secrets to other people. We enjoy spending time together. " +
-            "At weekends, we usually ride our bikes or watch films at my house. " +
-            "Although we have different interests sometimes, we always respect each other's choices.",
+        image: "images/test2/q9.png",
 
         question:
-            "Which of the following is CORRECT according to the text?",
+            "Europeans mostly use the Internet for - - - -.",
 
         options: [
-            "Daniel and the writer met at secondary school.",
-            "Daniel never helps the writer with his problems.",
-            "They always have exactly the same interests.",
-            "They respect each other's preferences."
+            "watching movies",
+            "travel services",
+            "online shopping",
+            "downloading data"
         ],
 
-        answer: 3,
+        answer: 2,
     },
 
-
-    // =====================================================
-    // QUESTION 10
-    // Reading / inference
-    // =====================================================
-
     {
-        id: "u1_f_test2_q10",
-        unit: "Friendship",
+        id: "u1_f_test2_q2",
+        unit: "The Internet",
         test: "Mini Deneme 2",
         difficulty: "hard",
 
-        passage:
-            "Lucy invited four friends to her birthday party. " +
-            "Molly said, 'I'd love to come, but I have to visit my grandparents.' " +
-            "Jack said, 'Sure! I can be there.' " +
-            "Emma said, 'That sounds great, but I have a piano lesson at that time.' " +
-            "Tom replied, 'Thanks for inviting me. I can't come because my family is going on a trip.'",
+        image: "images/test2/q9.png",
 
         question:
-            "Who accepts Lucy's invitation?",
+            "Twenty five percent of Europeans use the Internet for - - - -.",
 
         options: [
-            "Molly",
-            "Jack",
-            "Emma",
-            "Tom"
+            "listening to music",
+            "travel services",
+            "shopping online",
+            "downloading data"
         ],
 
         answer: 1,
@@ -406,8 +310,7 @@ const unit1FriendshipTest2 = [
 
 ];
 
-
-const questions = unit1FriendshipTest2;
+const questions = unit5TheInternetTest2;
 
 let timer;
 let timeLeft = 90;
@@ -635,13 +538,6 @@ function loadQuestion() {
             </div>
 
 
-            <div class="question-type">
-
-                ${q.skill || q.type || ""}
-
-            </div>
-
-
             ${extraContent}
 
 
@@ -682,15 +578,6 @@ function loadQuestion() {
                 }
 
             </div>
-
-
-            <div
-                class="explanation"
-                id="explanation"
-            >
-                ${q.explanation || ""}
-            </div>
-
 
             <button
                 id="nextBtn"
@@ -868,7 +755,7 @@ if (selected !== -1 && selected !== q.answer) {
 </button>
 
 <button
-    onclick="location.href='../unit1-questions.html'"
+    onclick="location.href='../unit5-questions.html'"
     class="restart-btn">
     ← Questions
 </button>

@@ -96,308 +96,230 @@ async function addTestXP(percent) {
 
 }
 
-const unit1FriendshipTest1 = [
-
-    // =====================================================
-    // QUESTION 1 — INVITATION CARD
-    // Skill: Multiple-condition reasoning
-    // =====================================================
+const unit4OnThePhoneTest1 = [
 
     {
-        id: "u1_f_test1_q1",
-        unit: "Friendship",
+        id: "u4_otp_test1_q1",
+        unit: "OnThePhone",
         test: "Mini Deneme 1",
         difficulty: "hard",
 
         image: "images/test1/q1.png",
 
         question:
-            "Look at the invitation card. Which of the following students can attend the whole event?",
+            "Which of the following completes the conversation?",
 
         options: [
-            "A student who has to leave at 3 p.m.",
-            "A student who dislikes outdoor activities.",
-            "A student who can stay from 1 p.m. to 5 p.m. and enjoys team games.",
-            "A student who cannot come to the park."
+            "My sister and I will go shopping together",
+            "I’m sorry, I have to finish my homework",
+            "I’d love to but I have things to do",
+            "Of course, I will be there on time"
         ],
 
         answer: 2,
     },
 
 
-    // =====================================================
-    // QUESTION 2 — TEXT MESSAGES
-    // Skill: Inference
-    // =====================================================
-
     {
-        id: "u1_f_test1_q2",
-        unit: "Friendship",
+        id: "u4_otp_test1_q2",
+        unit: "OnThePhone",
         test: "Mini Deneme 1",
         difficulty: "hard",
 
-        dialogue: [
-            "Mia: Are you coming to the Friendship Club meeting after school?",
-            "Leo: I wanted to, but I have to finish a project with my partner.",
-            "Mia: Can't you finish it before the meeting?",
-            "Leo: We have already planned to meet at the library at four.",
-            "Mia: I see. Maybe you can join us next time.",
-            "Leo: Yes. Please tell me what you decide about the weekend activity."
-        ],
+        image: "images/test1/q2.png",
 
         question:
-            "Which of the following can we understand from the conversation?",
+            "Which of the following completes the conversation?",
 
         options: [
-            "Leo doesn't want to join the Friendship Club anymore.",
-            "Leo has another responsibility at the same time as the meeting.",
-            "Leo has already joined the weekend activity.",
-            "Mia refuses to help Leo with his project."
+            "I hope you will be more careful when you drive",
+            "I will send someone to take you and your car",
+            "I will see your car if you come to the garage",
+            "I will go to the meeting if you really want"
         ],
 
         answer: 1,
     },
 
 
-    // =====================================================
-    // QUESTION 3 — PREFERENCE TABLE
-    // Skill: Comparing information
-    // =====================================================
-
     {
-        id: "u1_f_test1_q3",
-        unit: "Friendship",
+        id: "u4_otp_test1_q3",
+        unit: "OnThePhone",
         test: "Mini Deneme 1",
         difficulty: "hard",
 
         image: "images/test1/q3.png",
 
         question:
-            "According to the table, which activity would be suitable for ALL the students who want to spend time together?",
+            "Which of the following completes the conversation?",
 
         options: [
-            "A crowded music festival",
-            "A quiet movie night at home",
-            "A small picnic in the park",
-            "An indoor basketball tournament"
+            "repeat that again",
+            "hold on a moment",
+            "tell me your name",
+            "spell your name"
         ],
 
-        answer: 2,
+        answer: 3,
     },
 
 
-    // =====================================================
-    // QUESTION 4 — ACTIVITY POSTER
-    // Skill: Evaluating conditions
-    // =====================================================
-
     {
-        id: "u1_f_test1_q4",
-        unit: "Friendship",
+        id: "u4_otp_test1_q4",
+        unit: "OnThePhone",
         test: "Mini Deneme 1",
         difficulty: "hard",
 
         image: "images/test1/q4.png",
 
         question:
-            "A group of friends wants to join an activity that is free, outdoors and suitable for a small group. Which activity meets ALL of their requirements?",
+            "Which of the following is Tom’s speech bubble?",
 
         options: [
-            "Movie Club",
-            "Park Picnic",
-            "Bowling Night",
-            "School Concert"
+            "Playing games on a bright screen causes eye diseases.",
+            "Having a smartphone gives us a chance to connect quickly with emergency services.",
+            "Buying a smartphone costs a lot of money.",
+            "Constantly checking social media accounts creates concentration problems."
         ],
 
         answer: 1,
     },
 
 
-    // =====================================================
-    // QUESTION 5 — E-MAIL
-    // Skill: Understanding purpose
-    // =====================================================
-
     {
-        id: "u1_f_test1_q5",
-        unit: "Friendship",
+        id: "u4_otp_test1_q5",
+        unit: "OnThePhone",
         test: "Mini Deneme 1",
         difficulty: "hard",
 
-        passage:
-            "Hi Emma,\n\n" +
-            "I'm having a small birthday party at my house this Saturday. " +
-            "I'm inviting only a few close friends because I don't really like crowded parties. " +
-            "We're going to watch a movie, play some board games and have pizza together. " +
-            "I hope you can come!\n\n" +
-            "See you,\n" +
-            "Sophie",
+        image: "images/test1/q5.png",
 
         question:
-            "Why does Sophie mention that she is inviting only a few friends?",
+            "Which of the following shows the correct order of the phone conversation?",
 
         options: [
-            "She doesn't know many students at school.",
-            "She prefers spending time with a small group.",
-            "She wants to save money on food.",
-            "She doesn't want to celebrate her birthday."
+            "1 – 4 – 5 – 2 – 3 – 6",
+            "1 – 2 – 3 – 6 – 4 – 5",
+            "4 – 3 – 6 – 2 – 1 – 5",
+            "6 – 5 – 3 – 4 – 1 – 2."
         ],
 
-        answer: 1,
+        answer: 0,
     },
 
 
-    // =====================================================
-    // QUESTION 6 — WEEKEND SCHEDULE
-    // Skill: Matching information
-    // =====================================================
-
     {
-        id: "u1_f_test1_q6",
-        unit: "Friendship",
+        id: "u4_otp_test1_q6",
+        unit: "OnThePhone",
         test: "Mini Deneme 1",
         difficulty: "hard",
 
         image: "images/test1/q6.png",
 
         question:
-            "Tom is free on Saturday afternoon. He wants to do an outdoor activity with his friends, but he doesn't want to spend any money. Which activity can he join?",
+            "Which one IS NOT suitable to complete this dialogue?",
 
         options: [
-            "Watching a movie",
-            "Playing basketball in the park",
-            "Going bowling",
-            "Joining the school concert"
+            "He is not available at the moment.",
+            "OK, I’ll get him. Wait, please.",
+            "He is out of the office now.",
+            "I’m sorry but he is busy now."
         ],
 
         answer: 1,
     },
 
 
-    // =====================================================
-    // QUESTION 7 — DIALOGUE
-    // Skill: Communication function
-    // =====================================================
-
     {
-        id: "u1_f_test1_q7",
-        unit: "Friendship",
+        id: "u4_otp_test1_q7",
+        unit: "OnThePhone",
         test: "Mini Deneme 1",
         difficulty: "hard",
 
-        dialogue: [
-            "Sarah: Would you like to come to the cinema with us tonight?",
-            "Jack: Thanks, but I can't.",
-            "Sarah: Is everything okay?",
-            "Jack: Yes. My little brother isn't feeling well, so I need to stay at home with him.",
-            "Sarah: I understand. I hope he feels better soon.",
-            "Jack: Thanks. Have fun!"
-        ],
+        image: "images/test1/q7.png",
 
         question:
-            "What is the main reason for Jack's refusal?",
+            "Which of the following is Susan’s message?",
 
         options: [
-            "He doesn't like watching films.",
-            "He has to take care of a family member.",
-            "He has already watched the film.",
-            "He wants to spend the evening with his friends."
+            "I think you’re not available now, I’ll call you in the evening.",
+            "I’m busy now, I’ll get back to you as soon as possible.",
+            "It’s a bad line. Could you get back to me later?",
+            "I’m not at home right now, I’ll talk to you soon."
         ],
 
-        answer: 1,
+        answer: 0,
     },
 
 
-    // =====================================================
-    // QUESTION 8 — FRIENDSHIP CLUB NOTICE
-    // Skill: Choosing according to several conditions
-    // =====================================================
-
     {
-        id: "u1_f_test1_q8",
-        unit: "Friendship",
+        id: "u4_otp_test1_q8",
+        unit: "OnThePhone",
         test: "Mini Deneme 1",
         difficulty: "hard",
 
         image: "images/test1/q8.png",
 
         question:
-            "A student wants to join an activity where they can meet new people, work in a group and spend time outdoors. Which activity is the best choice?",
+            "Which of the following does NOT have an answer in the conversation above?",
 
         options: [
-            "Reading Circle",
-            "Outdoor Team Challenge",
-            "Movie Afternoon",
-            "Board Game Club"
+            "What is the phone conversation about?",
+            "What is the destination of the flight?",
+            "What are the dates of the flights?",
+            "What is Alice’s reason for travelling?"
         ],
 
-        answer: 1,
+        answer: 3,
     },
 
 
-    // =====================================================
-    // QUESTION 9 — READING
-    // Skill: Inference
-    // =====================================================
-
     {
-        id: "u1_f_test1_q9",
-        unit: "Friendship",
+        id: "u4_otp_test1_q9",
+        unit: "OnThePhone",
         test: "Mini Deneme 1",
         difficulty: "hard",
 
-        passage:
-            "When Maya and Olivia first met, they didn't have many common interests. " +
-            "Maya enjoyed reading and drawing, while Olivia loved outdoor activities and meeting new people. " +
-            "Their teacher asked them to prepare a project together. " +
-            "During the project, Maya helped Olivia organize their ideas, and Olivia encouraged Maya to present them in front of the class. " +
-            "They discovered that they both enjoyed taking photos. " +
-            "After the project, they started spending more time together. " +
-            "Although they still have different interests, they respect each other's choices and support each other.",
+        image: "images/test1/q9.png",
 
         question:
-            "Which of the following can be inferred from the text?",
+            "Which information on the ticket is NOT correct according to the conversation above?",
 
         options: [
-            "Maya and Olivia became friends because they had exactly the same hobbies.",
-            "Working together helped Maya and Olivia discover something they both enjoyed.",
-            "Olivia stopped meeting new people after becoming friends with Maya.",
-            "Maya refused to help Olivia during the project."
+            "genre",
+            "time",
+            "date",
+            "place"
         ],
 
         answer: 1,
     },
 
 
-    // =====================================================
-    // QUESTION 10 — EVENT NOTICE
-    // Skill: Detailed interpretation
-    // =====================================================
-
     {
-        id: "u1_f_test1_q10",
-        unit: "Friendship",
+        id: "u4_otp_test1_q10",
+        unit: "OnThePhone",
         test: "Mini Deneme 1",
         difficulty: "hard",
 
         image: "images/test1/q10.png",
 
         question:
-            "Which of the following is NOT suitable for a student who wants to follow ALL the rules of the event?",
+            "Which of the following is CORRECT according to the conversation?",
 
         options: [
-            "Joining the outdoor activity with a friend",
-            "Bringing food from home",
-            "Arriving before the event starts",
-            "Bringing more than the allowed number of friends"
+            "John does not tell Nick the exact time.",
+            "John and Nick are not close friends.",
+            "The match will be at the weekend.",
+            "Nick refuses John’s invitation."
         ],
 
-        answer: 3,
+        answer: 0,
     }
 
 ];
 
-const questions = unit1FriendshipTest1;
+const questions = unit4OnThePhoneTest1;
 
 let timer;
 let timeLeft = 90;
@@ -625,13 +547,6 @@ function loadQuestion() {
             </div>
 
 
-            <div class="question-type">
-
-                ${q.skill || q.type || ""}
-
-            </div>
-
-
             ${extraContent}
 
 
@@ -672,15 +587,6 @@ function loadQuestion() {
                 }
 
             </div>
-
-
-            <div
-                class="explanation"
-                id="explanation"
-            >
-                ${q.explanation || ""}
-            </div>
-
 
             <button
                 id="nextBtn"
@@ -858,7 +764,7 @@ if (selected !== -1 && selected !== q.answer) {
 </button>
 
 <button
-    onclick="location.href='../unit1-questions.html'"
+    onclick="location.href='../unit4-questions.html'"
     class="restart-btn">
     ← Questions
 </button>

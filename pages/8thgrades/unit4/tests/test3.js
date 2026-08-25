@@ -96,302 +96,213 @@ async function addTestXP(percent) {
 
 }
 
-const unit1FriendshipTest3 = [
-
-    // =====================================================
-    // QUESTION 1
-    // Invitation - best option
-    // =====================================================
+const unit4OnThePhoneTest3 = [
 
     {
         id: "u1_f_test3_q1",
-        unit: "Friendship",
+        unit: "On the Phone",
         test: "Mini Deneme 3",
         difficulty: "medium",
 
-        dialogue: [
-            "Emma: I’m going to the new book fair with some friends on Saturday.",
-            "Jack: That sounds interesting.",
-            "Emma: - - - -?",
-            "Jack: Sure. I enjoy looking at new books."
-        ],
+        image: "images/test3/q1.png",
 
         question:
-            "Which of the following completes Emma's question?",
+            "Which of the following completes the dialogue?",
 
         options: [
-            "Would you like to join us",
-            "What do you usually read",
-            "Why don't you like books",
-            "Are you at home now"
-        ],
-
-        answer: 0,
-    },
-
-
-    // =====================================================
-    // QUESTION 2
-    // Simple inquiry
-    // =====================================================
-
-    {
-        id: "u1_f_test3_q2",
-        unit: "Friendship",
-        test: "Mini Deneme 3",
-        difficulty: "medium",
-
-        dialogue: [
-            "Mia: I have two tickets for the school concert tonight.",
-            "Leo: Really? - - - -?",
-            "Mia: It starts at 7 p.m. at the school hall."
-        ],
-
-        question:
-            "Which of the following completes Leo's question?",
-
-        options: [
-            "Who is your best friend",
-            "What time does it start",
-            "Why do you hate concerts",
-            "What do you usually do at weekends"
-        ],
-
-        answer: 1,
-    },
-
-
-    // =====================================================
-    // QUESTION 3
-    // Refusing + reason
-    // =====================================================
-
-    {
-        id: "u1_f_test3_q3",
-        unit: "Friendship",
-        test: "Mini Deneme 3",
-        difficulty: "medium",
-
-        dialogue: [
-            "Daniel: How about joining us for a bike ride tomorrow morning?",
-            "Sophie: I’d love to, but - - - -.",
-            "Daniel: No problem. Maybe next weekend."
-        ],
-
-        question:
-            "Which of the following completes Sophie's response?",
-
-        options: [
-            "I have to study for my exam",
-            "that sounds great",
-            "I’d be happy to come",
-            "what time shall we meet"
-        ],
-
-        answer: 0,
-    },
-
-
-    // =====================================================
-    // QUESTION 4
-    // Friendship characteristics
-    // =====================================================
-
-    {
-        id: "u1_f_test3_q4",
-        unit: "Friendship",
-        test: "Mini Deneme 3",
-        difficulty: "medium",
-
-        question:
-            "In my opinion, an ideal friend should be - - - - because I can tell my secrets to him/her without worrying.",
-
-        options: [
-            "honest",
-            "jealous",
-            "selfish",
-            "stubborn"
-        ],
-
-        answer: 0,
-    },
-
-
-    // =====================================================
-    // QUESTION 5
-    // Friendship event card
-    // =====================================================
-
-    {
-        id: "u1_f_test3_q5",
-        unit: "Friendship",
-        test: "Mini Deneme 3",
-        difficulty: "hard",
-
-        image: "images/test3/q5.png",
-
-        question:
-            "According to the invitation card, which of the following is CORRECT?",
-
-        options: [
-            "The event will take place on a weekday morning.",
-            "Students can learn more information by contacting Amy.",
-            "The activity will be held at the city sports centre.",
-            "Students have to bring food because there will be no snacks."
-        ],
-
-        answer: 1,
-    },
-
-
-    // =====================================================
-    // QUESTION 6
-    // Who refuses by giving an excuse?
-    // =====================================================
-
-    {
-        id: "u1_f_test3_q6",
-        unit: "Friendship",
-        test: "Mini Deneme 3",
-        difficulty: "hard",
-
-        dialogue: [
-            "Ryan: We are going to the amusement park on Sunday. Would you like to come?",
-            "Molly: Yes, definitely. I love amusement parks.",
-            "Chris: Thanks, but I have a swimming competition that day.",
-            "Lucy: Great idea! What time are we meeting?",
-            "Ben: I’d love to come. It sounds fun."
-        ],
-
-        question:
-            "Who refuses the invitation by giving an excuse?",
-
-        options: [
-            "Molly",
-            "Chris",
-            "Lucy",
-            "Ben"
-        ],
-
-        answer: 1,
-    },
-
-
-    // =====================================================
-    // QUESTION 7
-    // Table + conversation
-    // =====================================================
-
-    {
-        id: "u1_f_test3_q7",
-        unit: "Friendship",
-        test: "Mini Deneme 3",
-        difficulty: "hard",
-
-        image: "images/test3/q7.png",
-
-        question:
-            "According to the information in the table, which activity can both students enjoy together?",
-
-        options: [
-            "Going shopping",
-            "Playing basketball",
-            "Taking photos",
-            "Watching films"
+            "Hold on a moment, please.",
+            "Good luck!",
+            "Thank you for calling!",
+            "Just a minute, please!"
         ],
 
         answer: 2,
     },
 
-
-    // =====================================================
-    // QUESTION 8
-    // Dialogue - NOT CORRECT
-    // =====================================================
-
     {
-        id: "u1_f_test3_q8",
-        unit: "Friendship",
+        id: "u1_f_test3_q2",
+        unit: "On the Phone",
         test: "Mini Deneme 3",
-        difficulty: "hard",
+        difficulty: "medium",
 
-        dialogue: [
-            "Anna: I'm organizing a movie night at my house on Friday.",
-            "Tom: That sounds great. I'd love to join you.",
-            "Sarah: Sorry, I can't come because I have a doctor's appointment.",
-            "Anna: That's okay. What about you, Jack?",
-            "Jack: Sure. What time should I come?",
-            "Anna: At 6 p.m. We can order some pizza together."
-        ],
+        image: "images/test3/q2.png",
 
         question:
-            "Which of the following is NOT correct according to the dialogue?",
+            "Chose the best option to fiil in the the blank in the conversation.",
 
         options: [
-            "Tom accepts Anna's invitation.",
-            "Sarah gives a reason for refusing the invitation.",
-            "Jack asks for more information about the event.",
-            "Anna is going to organize the event at a cafe."
+            " I hope you feel better soon",
+            "I can’t put you through",
+            "Hang on a moment ",
+            "Let me try to connect you"
+        ],
+
+        answer: 0,
+    },
+
+    {
+        id: "u1_f_test3_q2",
+        unit: "On the Phone",
+        test: "Mini Deneme 3",
+        difficulty: "medium",
+
+        image: "images/test3/q2.png",
+
+        question:
+            "Which of the following is CORRECT according to the conversation above?",
+
+        options: [
+            "Sue’s phone was always engaged yesterday.",
+            "Sue invited Amy to the party yesterday.",
+            "All of Sue’s friends joined the party except from Amy.",
+            "Sue didn’t want to invite Amy to the party."
+        ],
+
+        answer: 2,
+    },
+
+    {
+        id: "u1_f_test3_q2",
+        unit: "On the Phone",
+        test: "Mini Deneme 3",
+        difficulty: "medium",
+
+        image: "images/test3/q4.png",
+
+        question:
+            "Why did Emily call James?",
+
+        options: [
+            "She wanted to hear how he is now.",
+            "She wanted to know where he is.",
+            "She wanted to ask him about his science project.",
+            "She wanted to know if he’s coming to her party."
         ],
 
         answer: 3,
     },
 
-
-    // =====================================================
-    // QUESTION 9
-    // Friendship characteristics + matching
-    // =====================================================
-
     {
-        id: "u1_f_test3_q9",
-        unit: "Friendship",
+        id: "u1_f_test3_q2",
+        unit: "On the Phone",
         test: "Mini Deneme 3",
-        difficulty: "hard",
+        difficulty: "medium",
 
-        image: "images/test3/q9.png",
+        image: "images/test3/q4.png",
 
         question:
-            "Which student has the characteristics that are mentioned in the text?",
+            "What did James say to Emily?",
 
         options: [
-            "A student who never tells the truth but always makes jokes.",
-            "A student who keeps secrets and supports friends when they need help.",
-            "A student who dislikes spending time with other people.",
-            "A student who gets angry when friends have different opinions."
+            "He said he would check it with his mom.",
+            "He said he was in school.",
+            "He said he was fine and he couldn’t talk at that moment.",
+            "He said he would definitely come."
+        ],
+
+        answer: 0,
+    },
+
+    {
+        id: "u1_f_test3_q2",
+        unit: "On the Phone",
+        test: "Mini Deneme 3",
+        difficulty: "medium",
+
+        image: "images/test3/q6.png",
+
+        question:
+            "Which of the following completes the dialogue?",
+
+        options: [
+            "Why don’t you join me to drink a coffee",
+            "Are you busy on Saturday afternoon",
+            "How much does a ticket cost",
+            "Could you repeat that again, please"
         ],
 
         answer: 1,
     },
 
-
-    // =====================================================
-    // QUESTION 10
-    // Reading
-    // =====================================================
-
     {
-        id: "u1_f_test3_q10",
-        unit: "Friendship",
+        id: "u1_f_test3_q2",
+        unit: "On the Phone",
         test: "Mini Deneme 3",
-        difficulty: "hard",
+        difficulty: "medium",
 
-        passage:
-            "Emma and Lily have been best friends for many years. " +
-            "They usually spend their free time together, but they don't always have the same interests. " +
-            "Emma loves outdoor activities, while Lily prefers watching films and reading books. " +
-            "However, they respect each other's choices. " +
-            "When Emma has a problem, Lily always listens to her and tries to help. " +
-            "Emma does the same for Lily.",
+        image: "images/test3/q7.png",
 
         question:
-            "Which of the following is NOT correct according to the text?",
+            "Choose the best option to fill in the blanks.",
 
         options: [
-            "Emma and Lily have been friends for a long time.",
-            "They have exactly the same hobbies.",
-            "Lily supports Emma when she has a problem.",
-            "They respect each other's preferences."
+            "I’m not available at the moment",
+            "I hope things get better soon",
+            "I’m sorry to hear that. I hope you’ll get well soon",
+            "Please, hold on. I’ll put you through"
+        ],
+
+        answer: 0,
+    },
+
+    {
+        id: "u1_f_test3_q2",
+        unit: "On the Phone",
+        test: "Mini Deneme 3",
+        difficulty: "medium",
+
+        image: "images/test3/q8.png",
+
+        question:
+            "Who is having a birthday?",
+
+        options: [
+            "James",
+            "Emily",
+            "Amy and Emma",
+            "Tom"
+        ],
+
+        answer: 3,
+    },
+
+    {
+        id: "u1_f_test3_q2",
+        unit: "On the Phone",
+        test: "Mini Deneme 3",
+        difficulty: "medium",
+
+        image: "images/test3/q8.png",
+
+        question:
+            "Who is going shopping?",
+
+        options: [
+            "Amy",
+            "Tom",
+            "Emily",
+            "James"
+        ],
+
+        answer: 0,
+    },
+
+    {
+        id: "u1_f_test3_q2",
+        unit: "On the Phone",
+        test: "Mini Deneme 3",
+        difficulty: "medium",
+
+        image: "images/test3/q8.png",
+
+        question:
+            "Emily will - - - -.",
+
+        options: [
+            "phone her parents",
+            "be late for dinner",
+            "have a birthday party",
+            "cancel the dinner"
         ],
 
         answer: 1,
@@ -400,7 +311,7 @@ const unit1FriendshipTest3 = [
 ];
 
 
-const questions = unit1FriendshipTest3;
+const questions = unit4OnThePhoneTest3;
 
 let timer;
 let timeLeft = 90;
@@ -628,13 +539,6 @@ function loadQuestion() {
             </div>
 
 
-            <div class="question-type">
-
-                ${q.skill || q.type || ""}
-
-            </div>
-
-
             ${extraContent}
 
 
@@ -675,15 +579,6 @@ function loadQuestion() {
                 }
 
             </div>
-
-
-            <div
-                class="explanation"
-                id="explanation"
-            >
-                ${q.explanation || ""}
-            </div>
-
 
             <button
                 id="nextBtn"
@@ -861,7 +756,7 @@ if (selected !== -1 && selected !== q.answer) {
 </button>
 
 <button
-    onclick="location.href='../unit1-questions.html'"
+    onclick="location.href='../unit4-questions.html'"
     class="restart-btn">
     ← Questions
 </button>

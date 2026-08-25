@@ -96,318 +96,230 @@ async function addTestXP(percent) {
 
 }
 
-const unit1FriendshipTest2 = [
-
-    // =====================================================
-    // QUESTION 1
-    // Accepting / Refusing an invitation
-    // =====================================================
+const unit4OnThePhoneTest2 = [
 
     {
-        id: "u1_f_test2_q1",
-        unit: "Friendship",
+        id: "u4_otp_test2_q11",
+        unit: "OnThePhone",
         test: "Mini Deneme 2",
-        difficulty: "medium",
+        difficulty: "hard",
 
-        dialogue: [
-            "Megan: Would you like to join us for the school picnic on Saturday?",
-            "Oliver: I'd love to, but I have to help my grandfather in the garden.",
-            "Megan: Oh, that's a pity. Maybe next time.",
-            "Oliver: Sure. I hope you have a great time."
-        ],
+        image: "images/test2/q11.png",
 
         question:
-            "Which of the following completes Oliver's response?",
+            "Whose message does NOT reflect his/her excuse correctly?",
 
         options: [
-            "That sounds great. I can't wait.",
-            "I'd love to, but I have to help my grandfather.",
-            "Sure. What time shall we meet?",
-            "Yes, why not?"
+            "Tim: I am waiting for you to come home because I cannot get in.",
+            "Richard: Hey, buddy. There is too much traffic on the road. Sorry, I will be a bit late.",
+            "Emily: I have a cold and feel bad. I have to see a doctor, so I can’t come to school today.",
+            "Helen: Hi, I have an appointment at the hospital. Can you pick Lisa up from school?"
         ],
 
-        answer: 1,
+        answer: 3,
     },
 
 
-    // =====================================================
-    // QUESTION 2
-    // Making an inquiry
-    // =====================================================
-
     {
-        id: "u1_f_test2_q2",
-        unit: "Friendship",
+        id: "u4_otp_test2_q12",
+        unit: "OnThePhone",
         test: "Mini Deneme 2",
-        difficulty: "medium",
+        difficulty: "hard",
 
-        dialogue: [
-            "Jason: Hi, Emma. Are you free this afternoon?",
-            "Emma: Yes. Why do you ask?",
-            "Jason: I have two tickets for the new comedy show.",
-            "Emma: Really? I'd love to come!"
-        ],
+        image: "images/test2/q12.png",
 
         question:
-            "Which of the following completes Jason's first question?",
+            "Keeping in mind the brochure, which of the following completes the conversation above?",
 
         options: [
-            "What do you usually do with your friends?",
-            "Would you like to watch a comedy show?",
-            "Are you free this afternoon?",
-            "Where is the comedy show?"
+            "We can attend it at the weekend if you like",
+            "There are only morning classes every day",
+            "It is in the evening on weekdays",
+            "You can join it at any time of day"
         ],
 
         answer: 2,
     },
 
 
-    // =====================================================
-    // QUESTION 3
-    // Friendship characteristics
-    // =====================================================
-
     {
-        id: "u1_f_test2_q3",
-        unit: "Friendship",
-        test: "Mini Deneme 2",
-        difficulty: "medium",
-
-        passage:
-            "I think an ideal friend should always tell the truth and keep my secrets. " +
-            "I also want my friend to support me when I have a problem.",
-
-        question:
-            "Which of the following is NOT related to the characteristics mentioned above?",
-
-        options: [
-            "Honest",
-            "Supportive",
-            "Reliable",
-            "Adventurous"
-        ],
-
-        answer: 3,
-    },
-
-
-    // =====================================================
-    // QUESTION 4
-    // Invitation / activity
-    // =====================================================
-
-    {
-        id: "u1_f_test2_q4",
-        unit: "Friendship",
-        test: "Mini Deneme 2",
-        difficulty: "medium",
-
-        dialogue: [
-            "Liam: I'm bored. I don't want to stay at home this afternoon.",
-            "Nora: Why don't we do something outside?",
-            "Liam: That's a good idea!"
-        ],
-
-        question:
-            "Which of the following completes Nora's suggestion?",
-
-        options: [
-            "How about going cycling in the park?",
-            "Would you like to stay at home?",
-            "Why don't you watch TV alone?",
-            "Do you want to read a book in your room?"
-        ],
-
-        answer: 0,
-    },
-
-
-    // =====================================================
-    // QUESTION 5
-    // Invitation card
-    // =====================================================
-
-    {
-        id: "u1_f_test2_q5",
-        unit: "Friendship",
+        id: "u4_otp_test2_q13",
+        unit: "OnThePhone",
         test: "Mini Deneme 2",
         difficulty: "hard",
 
-        image: "images/test2/q5.png",
+        image: "images/test2/q13.png",
 
         question:
-            "According to the invitation card, which of the following is CORRECT?",
+            "Which of the following is NOT correct according to the statements above?",
 
         options: [
-            "The event will take place on a weekday evening.",
-            "Students have to pay for the food separately.",
-            "The event will be held at the school garden.",
-            "Students should contact the school principal for details."
-        ],
-
-        answer: 0,
-    },
-
-
-    // =====================================================
-    // QUESTION 6
-    // Dialogue — NOT CORRECT
-    // =====================================================
-
-    {
-        id: "u1_f_test2_q6",
-        unit: "Friendship",
-        test: "Mini Deneme 2",
-        difficulty: "hard",
-
-        dialogue: [
-            "Mia: We are organizing a surprise party for Lucy on Friday. Would you like to join us?",
-            "Ben: I'd love to. What time should I come?",
-            "Mia: At 6 p.m. We'll meet at my house first.",
-            "Sally: Sorry, I can't come because I have basketball training.",
-            "Mia: That's okay. We'll tell Lucy about your best wishes."
-        ],
-
-        question:
-            "Which of the following is NOT correct according to the dialogue?",
-
-        options: [
-            "Ben accepts the invitation.",
-            "Sally has an excuse for refusing the invitation.",
-            "They will meet at Mia's house first.",
-            "Lucy knows about the surprise party."
-        ],
-
-        answer: 3,
-    },
-
-
-    // =====================================================
-    // QUESTION 7
-    // Dialogue ordering
-    // =====================================================
-
-    {
-    id: "u1_f_test2_q7",
-    unit: "Friendship",
-    test: "Mini Deneme 2",
-    difficulty: "hard",
-
-    dialogue: [
-        "Mia: Would you like to join us for a picnic on Sunday?",
-        "Jack: That sounds great. I'd love to come.",
-        "Mia: Sure. What time shall we meet?",
-        "Jack: At 11 a.m. We can meet in front of the school."
-    ],
-
-    question:
-        "Put the sentences into the correct order to make a meaningful dialogue.",
-
-    options: [
-        "II - IV - I - III",
-        "I - II - III - IV",
-        "III - I - IV - II",
-        "IV - II - I - III"
-    ],
-
-    answer: 1,
-    },
-
-
-    // =====================================================
-    // QUESTION 8
-    // Activity poster
-    // =====================================================
-
-    {
-        id: "u1_f_test2_q8",
-        unit: "Friendship",
-        test: "Mini Deneme 2",
-        difficulty: "hard",
-
-        image: "images/test2/q8.png",
-
-        question:
-            "Which of the following does NOT have an answer in the poster?",
-
-        options: [
-            "What activities can students do?",
-            "When is the event?",
-            "Who can students contact for more information?",
-            "How much does the activity cost?"
-        ],
-
-        answer: 3,
-    },
-
-
-    // =====================================================
-    // QUESTION 9
-    // Reading
-    // =====================================================
-
-    {
-        id: "u1_f_test2_q9",
-        unit: "Friendship",
-        test: "Mini Deneme 2",
-        difficulty: "hard",
-
-        passage:
-            "My best friend is Daniel. We met when we were in primary school. " +
-            "He is honest, helpful and funny. He always supports me when I have a problem, " +
-            "and he never tells my secrets to other people. We enjoy spending time together. " +
-            "At weekends, we usually ride our bikes or watch films at my house. " +
-            "Although we have different interests sometimes, we always respect each other's choices.",
-
-        question:
-            "Which of the following is CORRECT according to the text?",
-
-        options: [
-            "Daniel and the writer met at secondary school.",
-            "Daniel never helps the writer with his problems.",
-            "They always have exactly the same interests.",
-            "They respect each other's preferences."
-        ],
-
-        answer: 3,
-    },
-
-
-    // =====================================================
-    // QUESTION 10
-    // Reading / inference
-    // =====================================================
-
-    {
-        id: "u1_f_test2_q10",
-        unit: "Friendship",
-        test: "Mini Deneme 2",
-        difficulty: "hard",
-
-        passage:
-            "Lucy invited four friends to her birthday party. " +
-            "Molly said, 'I'd love to come, but I have to visit my grandparents.' " +
-            "Jack said, 'Sure! I can be there.' " +
-            "Emma said, 'That sounds great, but I have a piano lesson at that time.' " +
-            "Tom replied, 'Thanks for inviting me. I can't come because my family is going on a trip.'",
-
-        question:
-            "Who accepts Lucy's invitation?",
-
-        options: [
-            "Molly",
-            "Jack",
-            "Emma",
-            "Tom"
+            "Jack does his shopping online.",
+            "Julia improves her science knowledge.",
+            "Tim uses his smartphone for communication.",
+            "Maggy reads magazines and newspapers on the Net."
         ],
 
         answer: 1,
+    },
+
+
+    {
+        id: "u4_otp_test2_q14",
+        unit: "OnThePhone",
+        test: "Mini Deneme 2",
+        difficulty: "hard",
+
+        image: "images/test2/q14.png",
+
+        question:
+            "According to the information above, which of the following is NOT correct on the ticket?",
+
+        options: [
+            "Place",
+            "Date",
+            "Time",
+            "Name"
+        ],
+
+        answer: 1,
+    },
+
+
+    {
+        id: "u4_otp_test2_q15",
+        unit: "OnThePhone",
+        test: "Mini Deneme 2",
+        difficulty: "hard",
+
+        image: "images/test2/q15.png",
+
+        question:
+            "Which of the following reasons is NOT listed in the text above?",
+
+        options: [
+            "Making a complaint",
+            "Getting something",
+            "Returning a product",
+            "Booking a hotel room"
+        ],
+
+        answer: 3,
+    },
+
+
+    {
+        id: "u4_otp_test2_q16",
+        unit: "OnThePhone",
+        test: "Mini Deneme 2",
+        difficulty: "hard",
+
+        image: "images/test2/q16.png",
+
+        question:
+            "According to the information above, which of the following is NOT correct?",
+
+        options: [
+            "Jeffrey and Diana like using traditional ways to communicate.",
+            "Writing a message is the most preferred way to celebrate a special day.",
+            "Alice and Ralph prefer face-to-face communication.",
+            "Making a phone call is as popular as writing letters in this group."
+        ],
+
+        answer: 3,
+    },
+
+
+    {
+        id: "u4_otp_test2_q17",
+        unit: "OnThePhone",
+        test: "Mini Deneme 2",
+        difficulty: "hard",
+
+        image: "images/test2/q17.png",
+
+        question:
+            "According to the information above, which of the following cards shows Gloria’s notes?",
+
+        options: [
+            "Name: Sally Johnson | Date/Time: 4 pm / 9 March | Address: 75 Green Street, New York | Note: Have fun at your new company!",
+            "Name: Sally Johnson | Date/Time: 2 pm / 7 March | Address: 75 Green Street, New York | Note: Thank you for all the beautiful experiences!",
+            "Name: Sally Johnson | Date/Time: 2 pm / 7 March | Address: 75 Green Street, London | Note: Sorry for breaking your heart honey!",
+            "Name: Sally Johnson | Date/Time: 2 pm / 7 March | Address: 75 Green Street, London | Note: Best of luck to you in your new job!"
+        ],
+
+        answer: 3,
+    },
+
+
+    {
+        id: "u4_otp_test2_q18",
+        unit: "OnThePhone",
+        test: "Mini Deneme 2",
+        difficulty: "hard",
+
+        image: "images/test2/q18.png",
+
+        question:
+            "Which of the following is the message you will send in that situation?",
+
+        options: [
+            "Hi Daniel, I have an appointment with my doctor. Sorry, I can’t meet you.",
+            "Hi Daniel. Can we meet an hour later? I am so sorry for that. I could not finish my project, and I need a bit of extra time.",
+            "Hey Daniel, I cannot remember our meeting place for today. Can you send me the café’s name once again?",
+            "Hi Daniel, there were too many people, so I have left the café. Find me in front of the cinema."
+        ],
+
+        answer: 1,
+    },
+
+
+    {
+        id: "u4_otp_test2_q19",
+        unit: "OnThePhone",
+        test: "Mini Deneme 2",
+        difficulty: "hard",
+
+        image: "images/test2/q19.png",
+
+        question:
+            "How many of Martin’s answers are correct?",
+
+        options: [
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+
+        answer: 3,
+    },
+
+    {
+        id: "u4_otp_test2_q20",
+        unit: "OnThePhone",
+        test: "Mini Deneme 2",
+        difficulty: "hard",
+
+        image: "images/test2/q20.png",
+
+        question:
+            "Choose the best option to complete the blank in the conversation.",
+
+        options: [
+            "He is not available at the moment ",
+            "You can call him later madam",
+            "I’II put you through",
+            "Hang up the phone, please"
+        ],
+
+        answer: 2,
     }
 
 ];
 
 
-const questions = unit1FriendshipTest2;
+const questions = unit4OnThePhoneTest2;
 
 let timer;
 let timeLeft = 90;
@@ -634,14 +546,6 @@ function loadQuestion() {
 
             </div>
 
-
-            <div class="question-type">
-
-                ${q.skill || q.type || ""}
-
-            </div>
-
-
             ${extraContent}
 
 
@@ -682,15 +586,6 @@ function loadQuestion() {
                 }
 
             </div>
-
-
-            <div
-                class="explanation"
-                id="explanation"
-            >
-                ${q.explanation || ""}
-            </div>
-
 
             <button
                 id="nextBtn"
@@ -868,7 +763,7 @@ if (selected !== -1 && selected !== q.answer) {
 </button>
 
 <button
-    onclick="location.href='../unit1-questions.html'"
+    onclick="location.href='../unit4-questions.html'"
     class="restart-btn">
     ← Questions
 </button>

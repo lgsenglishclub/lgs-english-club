@@ -96,311 +96,221 @@ async function addTestXP(percent) {
 
 }
 
-const unit1FriendshipTest3 = [
-
-    // =====================================================
-    // QUESTION 1
-    // Invitation - best option
-    // =====================================================
+const unit5TheInternetTest3 = [
 
     {
         id: "u1_f_test3_q1",
-        unit: "Friendship",
+        unit: "The Internet",
         test: "Mini Deneme 3",
-        difficulty: "medium",
+        difficulty: "hard",
 
-        dialogue: [
-            "Emma: I’m going to the new book fair with some friends on Saturday.",
-            "Jack: That sounds interesting.",
-            "Emma: - - - -?",
-            "Jack: Sure. I enjoy looking at new books."
-        ],
+        image: "images/test3/q1.png",
 
         question:
-            "Which of the following completes Emma's question?",
+            "Which of the following is NOT correct according to the text?",
 
         options: [
-            "Would you like to join us",
-            "What do you usually read",
-            "Why don't you like books",
-            "Are you at home now"
+            "The person accepts the invitation.",
+            "The person is happy for the invitation.",
+            "The event will be tonight.",
+            "The sender of the message also wants to talk to the receiver face to face."
         ],
 
-        answer: 0,
+        answer: 2,
     },
-
-
-    // =====================================================
-    // QUESTION 2
-    // Simple inquiry
-    // =====================================================
 
     {
         id: "u1_f_test3_q2",
-        unit: "Friendship",
+        unit: "The Internet",
         test: "Mini Deneme 3",
-        difficulty: "medium",
+        difficulty: "hard",
 
-        dialogue: [
-            "Mia: I have two tickets for the school concert tonight.",
-            "Leo: Really? - - - -?",
-            "Mia: It starts at 7 p.m. at the school hall."
-        ],
+        image: "images/test3/q2.png",
 
         question:
-            "Which of the following completes Leo's question?",
+            "Find the sentences in the messages that shows Bill refuses the offer.",
 
         options: [
-            "Who is your best friend",
-            "What time does it start",
-            "Why do you hate concerts",
-            "What do you usually do at weekends"
+            "Nothing much.",
+            "I'm sorry, but I can't.",
+            "It doesn't work.",
+            "I think so."
         ],
 
         answer: 1,
     },
 
-
-    // =====================================================
-    // QUESTION 3
-    // Refusing + reason
-    // =====================================================
-
     {
-        id: "u1_f_test3_q3",
-        unit: "Friendship",
+        id: "u1_f_test3_q2",
+        unit: "The Internet",
         test: "Mini Deneme 3",
-        difficulty: "medium",
+        difficulty: "hard",
 
-        dialogue: [
-            "Daniel: How about joining us for a bike ride tomorrow morning?",
-            "Sophie: I’d love to, but - - - -.",
-            "Daniel: No problem. Maybe next weekend."
-        ],
+        image: "images/test3/q3.png",
 
         question:
-            "Which of the following completes Sophie's response?",
+            "Which question does NOT have an answer in the text?",
 
         options: [
-            "I have to study for my exam",
-            "that sounds great",
-            "I’d be happy to come",
-            "what time shall we meet"
+            "When does he go to the technology store?",
+            "Why does he go to the technology store?",
+            "What are the prices of the tools?",
+            "What does he do at the technology store?"
         ],
 
-        answer: 0,
+        answer: 2,
     },
 
-
-    // =====================================================
-    // QUESTION 4
-    // Friendship characteristics
-    // =====================================================
-
     {
-        id: "u1_f_test3_q4",
-        unit: "Friendship",
+        id: "u1_f_test3_q2",
+        unit: "The Internet",
         test: "Mini Deneme 3",
-        difficulty: "medium",
+        difficulty: "hard",
+
+        image: "images/test3/q4.png",
 
         question:
-            "In my opinion, an ideal friend should be - - - - because I can tell my secrets to him/her without worrying.",
+            "What can we say about the dialogue?",
 
         options: [
-            "honest",
-            "jealous",
-            "selfish",
-            "stubborn"
+            "Eddie has the Internet connection problem.",
+            "Sally couldn't understand Eddie first.",
+            "Sally is good at using computers.",
+            "Sally helps Eddie to solve his problem."
         ],
 
-        answer: 0,
+        answer: 1,
     },
 
-
-    // =====================================================
-    // QUESTION 5
-    // Friendship event card
-    // =====================================================
-
     {
-        id: "u1_f_test3_q5",
-        unit: "Friendship",
+        id: "u1_f_test3_q2",
+        unit: "The Internet",
         test: "Mini Deneme 3",
         difficulty: "hard",
 
         image: "images/test3/q5.png",
 
         question:
-            "According to the invitation card, which of the following is CORRECT?",
+            "Which one is TRUE according to the dialogue?",
 
         options: [
-            "The event will take place on a weekday morning.",
-            "Students can learn more information by contacting Amy.",
-            "The activity will be held at the city sports centre.",
-            "Students have to bring food because there will be no snacks."
+            "Gary hates using social networking sites.",
+            "Gary's computer doesn't work during the day.",
+            "Gary is an Internet addict.",
+            "Gary will have a healthy life."
         ],
 
-        answer: 1,
+        answer: 3,
     },
 
-
-    // =====================================================
-    // QUESTION 6
-    // Who refuses by giving an excuse?
-    // =====================================================
-
     {
-        id: "u1_f_test3_q6",
-        unit: "Friendship",
+        id: "u1_f_test3_q2",
+        unit: "The Internet",
         test: "Mini Deneme 3",
         difficulty: "hard",
 
-        dialogue: [
-            "Ryan: We are going to the amusement park on Sunday. Would you like to come?",
-            "Molly: Yes, definitely. I love amusement parks.",
-            "Chris: Thanks, but I have a swimming competition that day.",
-            "Lucy: Great idea! What time are we meeting?",
-            "Ben: I’d love to come. It sounds fun."
-        ],
+        image: "images/test3/q6.png",
 
         question:
-            "Who refuses the invitation by giving an excuse?",
+            "Put the sentences in the correct order.",
 
         options: [
-            "Molly",
-            "Chris",
-            "Lucy",
-            "Ben"
+            "I-III-V-IV-II",
+            "IV-I-V-III-II",
+            "IV-I-II-V-III",
+            "I-IV-V-III-II"
         ],
 
         answer: 1,
     },
 
-
-    // =====================================================
-    // QUESTION 7
-    // Table + conversation
-    // =====================================================
-
     {
-        id: "u1_f_test3_q7",
-        unit: "Friendship",
+        id: "u1_f_test3_q2",
+        unit: "The Internet",
         test: "Mini Deneme 3",
         difficulty: "hard",
 
         image: "images/test3/q7.png",
 
         question:
-            "According to the information in the table, which activity can both students enjoy together?",
+            "What can we say about the new app?",
 
         options: [
-            "Going shopping",
-            "Playing basketball",
-            "Taking photos",
-            "Watching films"
+            "It is about daily news and magazines.",
+            "You can download it only for your mobile phone.",
+            "You can download it for your mobile phone and tablet.",
+            "Less than 12.000 users have downloaded it."
         ],
 
         answer: 2,
     },
 
-
-    // =====================================================
-    // QUESTION 8
-    // Dialogue - NOT CORRECT
-    // =====================================================
-
     {
-        id: "u1_f_test3_q8",
-        unit: "Friendship",
+        id: "u1_f_test3_q2",
+        unit: "The Internet",
         test: "Mini Deneme 3",
         difficulty: "hard",
 
-        dialogue: [
-            "Anna: I'm organizing a movie night at my house on Friday.",
-            "Tom: That sounds great. I'd love to join you.",
-            "Sarah: Sorry, I can't come because I have a doctor's appointment.",
-            "Anna: That's okay. What about you, Jack?",
-            "Jack: Sure. What time should I come?",
-            "Anna: At 6 p.m. We can order some pizza together."
-        ],
+        image: "images/test3/q7.png",
 
         question:
-            "Which of the following is NOT correct according to the dialogue?",
+            "The News Company ----.",
 
         options: [
-            "Tom accepts Anna's invitation.",
-            "Sarah gives a reason for refusing the invitation.",
-            "Jack asks for more information about the event.",
-            "Anna is going to organize the event at a cafe."
+            "prepares only tablet programmes.",
+            "wants to learn user's ideas.",
+            "reads the news at home.",
+            "uploads the new app to the computer."
         ],
 
-        answer: 3,
+        answer: 1,
     },
 
-
-    // =====================================================
-    // QUESTION 9
-    // Friendship characteristics + matching
-    // =====================================================
-
     {
-        id: "u1_f_test3_q9",
-        unit: "Friendship",
+        id: "u1_f_test3_q2",
+        unit: "The Internet",
         test: "Mini Deneme 3",
         difficulty: "hard",
 
         image: "images/test3/q9.png",
 
         question:
-            "Which student has the characteristics that are mentioned in the text?",
+            "Martha is worried about Jenson because ----. ",
 
         options: [
-            "A student who never tells the truth but always makes jokes.",
-            "A student who keeps secrets and supports friends when they need help.",
-            "A student who dislikes spending time with other people.",
-            "A student who gets angry when friends have different opinions."
+            "he is connected to the internet all the time.",
+            "he prefers being offline after school.",
+            "his computer crashed last week.",
+            "he doesn't come home from school."
         ],
 
-        answer: 1,
+        answer: 0,
     },
 
-
-    // =====================================================
-    // QUESTION 10
-    // Reading
-    // =====================================================
-
     {
-        id: "u1_f_test3_q10",
-        unit: "Friendship",
+        id: "u1_f_test3_q2",
+        unit: "The Internet",
         test: "Mini Deneme 3",
         difficulty: "hard",
 
-        passage:
-            "Emma and Lily have been best friends for many years. " +
-            "They usually spend their free time together, but they don't always have the same interests. " +
-            "Emma loves outdoor activities, while Lily prefers watching films and reading books. " +
-            "However, they respect each other's choices. " +
-            "When Emma has a problem, Lily always listens to her and tries to help. " +
-            "Emma does the same for Lily.",
+        image: "images/test3/q9.png",
 
         question:
-            "Which of the following is NOT correct according to the text?",
+            "What does Jenson mostly use the internet for?",
 
         options: [
-            "Emma and Lily have been friends for a long time.",
-            "They have exactly the same hobbies.",
-            "Lily supports Emma when she has a problem.",
-            "They respect each other's preferences."
+            "Following match scores",
+            "Plaaqying online games",
+            "Chatting with his friends",
+            "Listening to music"
         ],
 
-        answer: 1,
+        answer: 2,
     }
 
 ];
 
-
-const questions = unit1FriendshipTest3;
+const questions = unit5TheInternetTest3;
 
 let timer;
 let timeLeft = 90;
@@ -628,13 +538,6 @@ function loadQuestion() {
             </div>
 
 
-            <div class="question-type">
-
-                ${q.skill || q.type || ""}
-
-            </div>
-
-
             ${extraContent}
 
 
@@ -675,15 +578,6 @@ function loadQuestion() {
                 }
 
             </div>
-
-
-            <div
-                class="explanation"
-                id="explanation"
-            >
-                ${q.explanation || ""}
-            </div>
-
 
             <button
                 id="nextBtn"
@@ -861,7 +755,7 @@ if (selected !== -1 && selected !== q.answer) {
 </button>
 
 <button
-    onclick="location.href='../unit1-questions.html'"
+    onclick="location.href='../unit5-questions.html'"
     class="restart-btn">
     ← Questions
 </button>

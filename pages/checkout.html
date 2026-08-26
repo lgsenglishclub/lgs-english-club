@@ -3,13 +3,1130 @@
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-<title>Checkout</title>
+    <title>Checkout | LGS English Club</title>
 
-<link rel="stylesheet" href="../css/style.css">
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <style>
+
+        /* ==================================================
+           CHECKOUT
+        ================================================== */
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        body {
+            margin: 0;
+            background:
+                radial-gradient(
+                    circle at 10% 10%,
+                    rgba(79, 124, 255, 0.10),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 90% 20%,
+                    rgba(124, 92, 255, 0.09),
+                    transparent 30%
+                ),
+                #f6f8fc;
+        }
+
+
+        /* ==================================================
+           HEADER
+        ================================================== */
+
+        .checkout-header {
+
+            height: 76px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            padding: 0 6%;
+
+            background: rgba(255,255,255,0.92);
+
+            border-bottom: 1px solid #e8ebf2;
+
+            backdrop-filter: blur(15px);
+
+            position: relative;
+
+            z-index: 10;
+        }
+
+
+        .checkout-logo {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 11px;
+
+            font-size: 19px;
+
+            font-weight: 800;
+
+            color: #172033;
+
+            text-decoration: none;
+        }
+
+
+        .checkout-logo-icon {
+
+            width: 38px;
+
+            height: 38px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 11px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #527cff,
+                    #7157e8
+                );
+
+            color: white;
+
+            font-size: 19px;
+
+            box-shadow:
+                0 7px 18px rgba(82,124,255,0.25);
+        }
+
+
+        .secure-header {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            color: #687188;
+
+            font-size: 13px;
+
+            font-weight: 600;
+        }
+
+
+        .secure-header-icon {
+
+            width: 30px;
+
+            height: 30px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: #edf8f1;
+
+            color: #25a35a;
+
+            font-size: 14px;
+        }
+
+
+
+        /* ==================================================
+           PAGE
+        ================================================== */
+
+        .checkout-page {
+
+            width: 100%;
+
+            max-width: 1180px;
+
+            margin: 0 auto;
+
+            padding: 55px 20px 80px;
+        }
+
+
+        .checkout-heading {
+
+            margin-bottom: 32px;
+        }
+
+
+        .checkout-heading h1 {
+
+            margin: 0;
+
+            font-size: 36px;
+
+            line-height: 1.15;
+
+            color: #172033;
+
+            letter-spacing: -1px;
+        }
+
+
+        .checkout-heading p {
+
+            margin: 10px 0 0;
+
+            color: #737d92;
+
+            font-size: 15px;
+        }
+
+
+
+        /* ==================================================
+           GRID
+        ================================================== */
+
+        .checkout-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                minmax(0, 1.45fr)
+                minmax(320px, 0.75fr);
+
+            gap: 28px;
+
+            align-items: start;
+        }
+
+
+
+        /* ==================================================
+           CARD
+        ================================================== */
+
+        .checkout-card {
+
+            background: rgba(255,255,255,0.96);
+
+            border: 1px solid #e8ebf2;
+
+            border-radius: 22px;
+
+            padding: 30px;
+
+            box-shadow:
+                0 15px 45px rgba(28,42,70,0.07);
+        }
+
+
+        .card-title {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            margin-bottom: 25px;
+        }
+
+
+        .card-number {
+
+            width: 32px;
+
+            height: 32px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 10px;
+
+            background: #edf2ff;
+
+            color: #4d70e8;
+
+            font-size: 14px;
+
+            font-weight: 800;
+        }
+
+
+        .card-title h2 {
+
+            margin: 0;
+
+            color: #1a2235;
+
+            font-size: 20px;
+        }
+
+
+
+        /* ==================================================
+           USER INFO
+        ================================================== */
+
+        .form-grid {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 17px;
+        }
+
+
+        .form-group {
+
+            margin-bottom: 18px;
+        }
+
+
+        .form-group.full {
+
+            grid-column: 1 / -1;
+        }
+
+
+        .form-group label {
+
+            display: block;
+
+            margin-bottom: 8px;
+
+            color: #414b61;
+
+            font-size: 13px;
+
+            font-weight: 700;
+        }
+
+
+        .form-group input {
+
+            width: 100%;
+
+            height: 49px;
+
+            padding: 0 15px;
+
+            border: 1px solid #dfe4ed;
+
+            border-radius: 12px;
+
+            background: #fbfcfe;
+
+            color: #20283a;
+
+            font-family: inherit;
+
+            font-size: 14px;
+
+            outline: none;
+
+            transition: 0.2s ease;
+        }
+
+
+        .form-group input::placeholder {
+
+            color: #a0a8b7;
+        }
+
+
+        .form-group input:focus {
+
+            background: #fff;
+
+            border-color: #6686f5;
+
+            box-shadow:
+                0 0 0 4px rgba(102,134,245,0.10);
+        }
+
+
+
+        /* ==================================================
+           PAYMENT PROVIDER
+        ================================================== */
+
+        .payment-box {
+
+            padding: 22px;
+
+            border: 1px solid #e1e6ef;
+
+            border-radius: 16px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #fafbfe,
+                    #f5f7fb
+                );
+        }
+
+
+        .payment-box-top {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 15px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .payment-method {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+        }
+
+
+        .payment-icon {
+
+            width: 45px;
+
+            height: 45px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 13px;
+
+            background: #eaf0ff;
+
+            font-size: 21px;
+        }
+
+
+        .payment-method strong {
+
+            display: block;
+
+            color: #20283a;
+
+            font-size: 14px;
+        }
+
+
+        .payment-method span {
+
+            display: block;
+
+            margin-top: 3px;
+
+            color: #8a93a4;
+
+            font-size: 12px;
+        }
+
+
+        .payment-status {
+
+            padding: 7px 10px;
+
+            border-radius: 8px;
+
+            background: #edf8f1;
+
+            color: #2b9b5c;
+
+            font-size: 11px;
+
+            font-weight: 800;
+
+            white-space: nowrap;
+        }
+
+
+        .payment-description {
+
+            margin: 0;
+
+            color: #778196;
+
+            font-size: 13px;
+
+            line-height: 1.6;
+        }
+
+
+
+        /* ==================================================
+           TERMS
+        ================================================== */
+
+        .terms {
+
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 10px;
+
+            margin-top: 25px;
+
+            color: #707a8d;
+
+            font-size: 12px;
+
+            line-height: 1.6;
+
+            cursor: pointer;
+        }
+
+
+        .terms input {
+
+            width: 16px;
+
+            height: 16px;
+
+            margin-top: 2px;
+
+            accent-color: #527cff;
+
+            cursor: pointer;
+        }
+
+
+        .terms a {
+
+            color: #4c6fe8;
+
+            font-weight: 700;
+
+            text-decoration: none;
+        }
+
+
+        .terms a:hover {
+
+            text-decoration: underline;
+        }
+
+
+
+        /* ==================================================
+           PAY BUTTON
+        ================================================== */
+
+        .payment-btn {
+
+            width: 100%;
+
+            min-height: 54px;
+
+            margin-top: 24px;
+
+            border: none;
+
+            border-radius: 13px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #527cff,
+                    #6959e8
+                );
+
+            color: white;
+
+            font-family: inherit;
+
+            font-size: 15px;
+
+            font-weight: 800;
+
+            cursor: pointer;
+
+            box-shadow:
+                0 10px 25px rgba(82,124,255,0.25);
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease,
+                opacity 0.2s ease;
+        }
+
+
+        .payment-btn:hover:not(:disabled) {
+
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 14px 30px rgba(82,124,255,0.30);
+        }
+
+
+        .payment-btn:disabled {
+
+            opacity: 0.45;
+
+            cursor: not-allowed;
+
+            box-shadow: none;
+        }
+
+
+        .button-content {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 9px;
+        }
+
+
+        .button-arrow {
+
+            font-size: 18px;
+
+            line-height: 1;
+        }
+
+
+
+        /* ==================================================
+           SECURITY NOTE
+        ================================================== */
+
+        .security-note {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 7px;
+
+            margin: 14px 0 0;
+
+            color: #8a93a4;
+
+            font-size: 11px;
+        }
+
+
+
+        /* ==================================================
+           ORDER SUMMARY
+        ================================================== */
+
+        .summary-card {
+
+            position: sticky;
+
+            top: 25px;
+
+            overflow: hidden;
+        }
+
+
+        .premium-top {
+
+            position: relative;
+
+            padding: 22px;
+
+            margin: -30px -30px 25px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #202c52,
+                    #3e4f91
+                );
+
+            color: white;
+        }
+
+
+        .premium-top::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 150px;
+
+            height: 150px;
+
+            right: -55px;
+
+            top: -65px;
+
+            border-radius: 50%;
+
+            background: rgba(255,255,255,0.08);
+        }
+
+
+        .premium-badge {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 6px;
+
+            padding: 6px 10px;
+
+            border-radius: 8px;
+
+            background: rgba(255,255,255,0.13);
+
+            color: #dce5ff;
+
+            font-size: 10px;
+
+            font-weight: 800;
+
+            letter-spacing: 0.5px;
+
+            text-transform: uppercase;
+        }
+
+
+        .premium-top h2 {
+
+            margin: 14px 0 4px;
+
+            font-size: 22px;
+
+            position: relative;
+
+            z-index: 1;
+        }
+
+
+        .premium-top p {
+
+            margin: 0;
+
+            color: #c7d1ed;
+
+            font-size: 12px;
+
+            position: relative;
+
+            z-index: 1;
+        }
+
+
+
+        /* ==================================================
+           PRICE
+        ================================================== */
+
+        .price-area {
+
+            padding-bottom: 22px;
+
+            border-bottom: 1px solid #edf0f5;
+        }
+
+
+        .price-label {
+
+            color: #8992a4;
+
+            font-size: 12px;
+
+            margin-bottom: 5px;
+        }
+
+
+        .price {
+
+            display: flex;
+
+            align-items: baseline;
+
+            gap: 7px;
+        }
+
+
+        .price strong {
+
+            color: #172033;
+
+            font-size: 34px;
+
+            letter-spacing: -1px;
+        }
+
+
+        .price span {
+
+            color: #8a93a4;
+
+            font-size: 12px;
+        }
+
+
+
+        /* ==================================================
+           PLAN
+        ================================================== */
+
+        .selected-plan {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            padding: 15px 0;
+
+            border-bottom: 1px solid #edf0f5;
+        }
+
+
+        .selected-plan-label {
+
+            color: #8a93a4;
+
+            font-size: 12px;
+        }
+
+
+        .selected-plan-value {
+
+            color: #263047;
+
+            font-size: 13px;
+
+            font-weight: 800;
+        }
+
+
+
+        /* ==================================================
+           BENEFITS
+        ================================================== */
+
+        .benefits {
+
+            padding: 20px 0 5px;
+        }
+
+
+        .benefits h3 {
+
+            margin: 0 0 13px;
+
+            color: #263047;
+
+            font-size: 13px;
+        }
+
+
+        .benefit {
+
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 9px;
+
+            margin-bottom: 11px;
+
+            color: #6f788b;
+
+            font-size: 12px;
+
+            line-height: 1.4;
+        }
+
+
+        .benefit-check {
+
+            flex-shrink: 0;
+
+            width: 19px;
+
+            height: 19px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: #edf8f1;
+
+            color: #25a35a;
+
+            font-size: 10px;
+
+            font-weight: 900;
+        }
+
+
+
+        /* ==================================================
+           TRUST
+        ================================================== */
+
+        .trust-box {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            margin-top: 18px;
+
+            padding: 13px;
+
+            border-radius: 12px;
+
+            background: #f7f9fc;
+
+            border: 1px solid #edf0f5;
+        }
+
+
+        .trust-icon {
+
+            font-size: 20px;
+        }
+
+
+        .trust-text strong {
+
+            display: block;
+
+            color: #354057;
+
+            font-size: 11px;
+        }
+
+
+        .trust-text span {
+
+            display: block;
+
+            margin-top: 2px;
+
+            color: #8b94a6;
+
+            font-size: 10px;
+        }
+
+
+
+        /* ==================================================
+           FOOTER
+        ================================================== */
+
+        .checkout-footer {
+
+            text-align: center;
+
+            padding: 0 20px 40px;
+
+            color: #9aa2b1;
+
+            font-size: 11px;
+        }
+
+
+        .checkout-footer a {
+
+            color: #717b8f;
+
+            text-decoration: none;
+
+            margin: 0 7px;
+        }
+
+
+        .checkout-footer a:hover {
+
+            text-decoration: underline;
+        }
+
+
+
+        /* ==================================================
+           RESPONSIVE
+        ================================================== */
+
+        @media (max-width: 850px) {
+
+            .checkout-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .summary-card {
+
+                position: static;
+
+                order: -1;
+
+            }
+
+
+            .checkout-heading h1 {
+
+                font-size: 30px;
+
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .checkout-header {
+
+                height: 68px;
+
+                padding: 0 18px;
+
+            }
+
+
+            .checkout-logo {
+
+                font-size: 15px;
+
+            }
+
+
+            .checkout-logo-icon {
+
+                width: 34px;
+
+                height: 34px;
+
+            }
+
+
+            .secure-header span {
+
+                display: none;
+
+            }
+
+
+            .checkout-page {
+
+                padding: 30px 14px 50px;
+
+            }
+
+
+            .checkout-heading {
+
+                margin-bottom: 22px;
+
+            }
+
+
+            .checkout-heading h1 {
+
+                font-size: 26px;
+
+            }
+
+
+            .checkout-card {
+
+                padding: 22px;
+
+                border-radius: 18px;
+
+            }
+
+
+            .premium-top {
+
+                margin: -22px -22px 22px;
+
+            }
+
+
+            .form-grid {
+
+                grid-template-columns: 1fr;
+
+                gap: 0;
+
+            }
+
+
+            .form-group.full {
+
+                grid-column: auto;
+
+            }
+
+
+            .price strong {
+
+                font-size: 30px;
+
+            }
+
+        }
+
+    </style>
 
 </head>
 
@@ -17,180 +1134,458 @@
 <body>
 
 
-<header>
+<!-- ==================================================
+     HEADER
+================================================== -->
 
-<div class="logo">
-💳 CHECKOUT
-</div>
+<header class="checkout-header">
 
-<nav>
 
-<a href="../index.html">
-Home
-</a>
+    <a
+        href="../index.html"
+        class="checkout-logo"
+    >
 
-</nav>
+        <span>
+            LGS English Club
+        </span>
+
+    </a>
+
+
+    <div class="secure-header">
+
+        <span class="secure-header-icon">
+            🔒
+        </span>
+
+        <span>
+            Güvenli Ödeme
+        </span>
+
+    </div>
+
 
 </header>
 
 
 
-<section class="payment-page">
+<!-- ==================================================
+     MAIN
+================================================== -->
 
+<main class="checkout-page">
 
-<div class="payment-card">
 
+    <div class="checkout-heading">
 
-<h1>
-Complete Your Purchase
-</h1>
+        <h1>
+            Güvenli Ödemeyi Tamamla
+        </h1>
 
+        <p>
+            Üyelik dataylarına göz at ve ödemeye devam et.
+        </p>
 
-<h2 id="selectedPlan">
-</h2>
+    </div>
 
 
-<div class="checkout-info">
 
+    <div class="checkout-grid">
 
-<p>
-👤 User:
-<span id="userEmail"></span>
-</p>
 
+        <!-- ==================================================
+             LEFT
+        ================================================== -->
 
-<p>
- Plan:
-<span id="planName"></span>
-</p>
+        <div class="checkout-card">
 
 
-</div>
+            <!-- CUSTOMER -->
 
+            <div class="card-title">
 
+                <span class="card-number">
+                    01
+                </span>
 
-<button class="payment-btn" id="payButton">
+                <h2>
+                    Kullanıcı Bilgileri
+                </h2>
 
-Pay Now
+            </div>
 
-</button>
 
+            <div class="form-grid">
 
 
-</div>
+                <div class="form-group">
 
+                    <label for="fullName">
+                        Adı Soyadı
+                    </label>
 
-</section>
+                    <input
+                        type="text"
+                        id="fullName"
+                        placeholder="Your full name"
+                        autocomplete="name"
+                    >
 
+                </div>
 
 
+                <div class="form-group">
 
-<script>
+                    <label for="email">
+                        E-mail
+                    </label>
 
-const plan =
-localStorage.getItem("selectedPlan");
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="your@email.com"
+                        autocomplete="email"
+                    >
 
+                </div>
 
-const email =
-localStorage.getItem("email");
 
+            </div>
 
 
-document.getElementById("selectedPlan").innerHTML =
-plan || "No plan selected";
 
+            <!-- PAYMENT -->
 
-document.getElementById("planName").innerHTML =
-plan || "-";
+            <div
+                class="card-title"
+                style="margin-top: 32px;"
+            >
 
+                <span class="card-number">
+                    02
+                </span>
 
-document.getElementById("userEmail").innerHTML =
-email || "Guest";
+                <h2>
+                    Ödeme Yöntemi
+                </h2>
 
+            </div>
 
-</script>
 
-<script type="module">
+            <div class="payment-box">
 
-import { auth, db } from "../firebase-config.js";
 
-import { doc, updateDoc } 
-from "https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js";
+                <div class="payment-box-top">
 
 
-document
-.getElementById("payButton")
-.addEventListener("click", async ()=>{
+                    <div class="payment-method">
 
+                        <div class="payment-icon">
+                            💳
+                        </div>
 
-    const user = auth.currentUser;
 
+                        <div>
 
-    if(!user){
+                            <strong>
+                                Güvenli Online Ödeme
+                            </strong>
 
-        alert("Please login first");
+                            <span>
+                                Kart Ödemesi
+                            </span>
 
-        window.location.href="login.html";
+                        </div>
 
-        return;
+                    </div>
 
-    }
 
+                    <div class="payment-status">
+                        GÜVENLİ
+                    </div>
 
-    const userRef = doc(db,"users",user.uid);
 
+                </div>
 
-    const today = new Date();
 
-const endDate = new Date();
+                <p class="payment-description">
 
+                    Your payment details will be entered
+                    securely through the authorized payment
+                    provider. Card information is not stored
+                    on LGS English Club servers.
 
-const selectedPlan = localStorage.getItem("selectedPlan");
+                </p>
 
 
-// Yıllık paket
-if(selectedPlan && selectedPlan.includes("Yearly")){
+            </div>
 
-    endDate.setFullYear(endDate.getFullYear() + 1);
 
-}
 
+            <!-- TERMS -->
 
-// Aylık paket
-else{
+            <label class="terms">
 
-    endDate.setMonth(endDate.getMonth() + 1);
 
-}
+                <input
+                    type="checkbox"
+                    id="termsCheck"
+                >
 
 
+                <span>
 
-await updateDoc(userRef,{
+                    <a href="terms.html">
+                        Terms of Service
+                    </a>
+                    ve
+                    <a href="refund.html">
+                        Refund Policy
+                    </a> sözleşmelerini okudum ve onaylıyorum.
 
-    membership:"premium",
+                </span>
 
-    premiumStart: today.toISOString(),
 
-    premiumEnd: endDate.toISOString()
+            </label>
 
-});
 
 
-    localStorage.setItem(
-        "membership",
-        "premium"
-    );
+            <!-- BUTTON -->
 
+            <button
+                class="payment-btn"
+                id="payButton"
+                disabled
+            >
 
-    alert("🎉 Premium activated!");
+                <span class="button-content">
 
+                    <span>
+                        Güvenli Ödemeye Devam Et
+                    </span>
 
-    window.location.href="../index.html";
+                    <span class="button-arrow">
+                        →
+                    </span>
 
+                </span>
 
-});
+            </button>
 
-</script>
+
+            <p class="security-note">
+
+                🔒 Ödeme bilgileriniz gizli tutulmaktadır.
+
+            </p>
+
+
+        </div>
+
+
+
+        <!-- ==================================================
+             RIGHT — ORDER SUMMARY
+        ================================================== -->
+
+        <aside class="checkout-card summary-card">
+
+
+            <div class="premium-top">
+
+
+                <span class="premium-badge">
+                    ✦ PREMIUM
+                </span>
+
+
+                <h2>
+                    Premium Üyelik
+                </h2>
+
+
+                <p>
+                    Sınırsız erişimin kilidini aç.
+                </p>
+
+
+            </div>
+
+
+
+            <div class="price-area">
+
+
+                <div class="price-label">
+                    Total
+                </div>
+
+
+                <div class="price">
+
+                    <strong id="planPrice">
+                        —
+                    </strong>
+
+                    <span id="pricePeriod">
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="selected-plan">
+
+
+                <span class="selected-plan-label">
+                    Seçili Plan
+                </span>
+
+
+                <span
+                    class="selected-plan-value"
+                    id="planName"
+                >
+                    —
+                </span>
+
+
+            </div>
+
+
+
+            <div class="selected-plan">
+
+
+                <span class="selected-plan-label">
+                    Hesap
+                </span>
+
+
+                <span
+                    class="selected-plan-value"
+                    id="userEmail"
+                >
+                    —
+                </span>
+
+
+            </div>
+
+
+
+            <div class="benefits">
+
+
+                <div class="benefit">
+
+                    <span class="benefit-check">
+                        ✓
+                    </span>
+
+                    <span>
+                       Premium İçeriklere Tam Erişim
+                    </span>
+
+                </div>
+
+
+                <div class="benefit">
+
+                    <span class="benefit-check">
+                        ✓
+                    </span>
+
+                    <span>
+                        Genişletilmiş LGS Öğrenim Kaynakları
+                    </span>
+
+                </div>
+
+
+                <div class="benefit">
+
+                    <span class="benefit-check">
+                        ✓
+                    </span>
+
+                    <span>
+                        Sınırsız Testler ve Öğrenme Materyalleri
+                    </span>
+
+                </div>
+
+
+                <div class="benefit">
+
+                    <span class="benefit-check">
+                        ✓
+                    </span>
+
+                    <span>
+                        Yapay Zeka Öğretmeni Lexi
+                    </span>
+
+                </div>
+
+
+                <div class="benefit">
+
+                    <span class="benefit-check">
+                        ✓
+                    </span>
+
+                    <span>
+                        Reklamsız Öğrenme Deneyimi
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="trust-box">
+
+
+                <div class="trust-icon">
+                    🔐
+                </div>
+
+
+                <div class="trust-text">
+
+                    <strong>
+                        Güvenlik Kontrolü
+                    </strong>
+
+                    <span>
+                        Ödeme detaylarınız korunmaktadır.
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+        </aside>
+
+
+    </div>
+
+</main>
+
+
+
+<!-- ==================================================
+     FOOTER
+================================================== -->
 
 <footer class="legal-footer">
 
@@ -254,7 +1649,252 @@ await updateDoc(userRef,{
 
 </footer>
 
+
+
+<!-- ==================================================
+     JAVASCRIPT
+================================================== -->
+
+<script type="module">
+
+
+import {
+    auth
+} from "../firebase-config.js";
+
+
+import {
+    onAuthStateChanged
+} from "https://www.gstatic.com/firebasejs/12.17.1/firebase-auth.js";
+
+
+
+/* ==================================================
+   ELEMENTS
+================================================== */
+
+const planName =
+    document.getElementById("planName");
+
+
+const userEmail =
+    document.getElementById("userEmail");
+
+
+const planPrice =
+    document.getElementById("planPrice");
+
+
+const pricePeriod =
+    document.getElementById("pricePeriod");
+
+
+const emailInput =
+    document.getElementById("email");
+
+
+const fullNameInput =
+    document.getElementById("fullName");
+
+
+const termsCheck =
+    document.getElementById("termsCheck");
+
+
+const payButton =
+    document.getElementById("payButton");
+
+
+
+/* ==================================================
+   SELECTED PLAN
+================================================== */
+
+const selectedPlan =
+    localStorage.getItem("selectedPlan");
+
+let actualPrice = null;
+let actualPeriod = "";
+
+
+/* ==================================================
+   PLAN & PRICE
+================================================== */
+
+if (selectedPlan) {
+
+    const normalizedPlan =
+        selectedPlan.toLowerCase();
+
+
+    if (
+        normalizedPlan.includes("year")
+    ) {
+
+        actualPrice = 599;
+
+        actualPeriod = "/ year";
+
+    }
+
+    else if (
+        normalizedPlan.includes("month")
+    ) {
+
+        actualPrice = 69;
+
+        actualPeriod = "/ month";
+
+    }
+
+}
+
+
+planName.textContent =
+    selectedPlan || "No plan selected";
+
+
+if (actualPrice !== null) {
+
+    planPrice.textContent =
+        `₺${actualPrice}`;
+
+    pricePeriod.textContent =
+        actualPeriod;
+
+}
+
+else {
+
+    planPrice.textContent =
+        "—";
+
+    pricePeriod.textContent =
+        "";
+
+}
+
+
+
+/* ==================================================
+   AUTH
+================================================== */
+
+onAuthStateChanged(
+    auth,
+    (user) => {
+
+
+        if (!user) {
+
+            userEmail.textContent =
+                "Guest";
+
+            return;
+
+        }
+
+
+        userEmail.textContent =
+            user.email || "—";
+
+
+        emailInput.value =
+            user.email || "";
+
+        
+        updateButton();
+
+    }
+);
+
+
+
+/* ==================================================
+   BUTTON STATE
+================================================== */
+
+function updateButton() {
+
+
+    const valid =
+
+        fullNameInput.value.trim() !== "" &&
+
+        emailInput.value.trim() !== "" &&
+
+        termsCheck.checked &&
+
+        !!selectedPlan;
+
+
+    payButton.disabled =
+        !valid;
+
+}
+
+
+fullNameInput.addEventListener(
+    "input",
+    updateButton
+);
+
+
+emailInput.addEventListener(
+    "input",
+    updateButton
+);
+
+
+termsCheck.addEventListener(
+    "change",
+    updateButton
+);
+
+
+
+/* ==================================================
+   PAYMENT
+================================================== */
+
+payButton.addEventListener(
+    "click",
+    async () => {
+
+
+        if (!selectedPlan) {
+
+            alert(
+                "No payment plan was selected."
+            );
+
+            return;
+
+        }
+
+
+        /*
+            IMPORTANT:
+
+            Burada doğrudan Firebase'e
+            membership = premium yazmıyoruz.
+
+            Gerçek ödeme sağlayıcısı bağlantısı
+            güvenli sunucu tarafı ödeme akışına
+            bağlandıktan sonra başlatılmalıdır.
+        */
+
+
+        alert(
+            "Secure payment setup is not connected yet."
+        );
+
+    }
+);
+
+
 </script>
+
 
 </body>
 

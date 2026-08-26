@@ -14675,7 +14675,15 @@ Premium Kart
     display:flex;
     gap:20px;
     justify-content:center;
-    margin:30px 0;
+    margin:10px 0;
+
+}
+
+
+.plan-options h3{
+
+    margin:0px;
+    font-size:35px;
 
 }
 
@@ -14684,7 +14692,7 @@ Premium Kart
 
     border:2px solid #ddd;
 
-    padding:25px;
+    padding:10px;
 
     border-radius:15px;
 
@@ -14692,7 +14700,7 @@ Premium Kart
 
     transition:.3s;
 
-    width:250px;
+    width:280px;
 
 }
 

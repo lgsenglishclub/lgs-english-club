@@ -20322,3 +20322,656 @@ a {
 .question {
     white-space: pre-line;
 }
+
+/* ==================================================
+   UNIT 6 NOTES
+   MODERN NOTE DESIGN
+================================================== */
+
+.notes-section {
+
+    width: min(1050px, calc(100% - 40px));
+
+    margin: 55px auto;
+
+}
+
+
+/* ==================================================
+   SECTION HEADING
+================================================== */
+
+.note-heading {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 28px;
+
+}
+
+
+.note-number {
+
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 15px;
+
+    background: #eef2ff;
+
+    color: #4f46e5;
+
+    font-size: 1.05rem;
+
+    font-weight: 800;
+
+}
+
+
+.note-label {
+
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #6366f1;
+
+    font-size: .72rem;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.note-heading h1 {
+
+    margin: 0;
+
+    color: #172033;
+
+    font-size: clamp(1.55rem, 3vw, 2.1rem);
+
+    font-weight: 800;
+
+}
+
+
+.note-heading p {
+
+    margin: 5px 0 0;
+
+    color: #7b8496;
+
+    font-size: .95rem;
+
+}
+
+
+/* ==================================================
+   MAIN NOTE
+================================================== */
+
+.experience-note {
+
+    position: relative;
+
+    padding: 34px;
+
+    background: #ffffff;
+
+    border: 1px solid #e8ebf2;
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 15px 45px rgba(30, 41, 59, .07);
+
+}
+
+
+/* ==================================================
+   INTRO
+================================================== */
+
+.note-intro {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 16px;
+
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid #edf0f5;
+
+}
+
+
+.intro-icon {
+
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 13px;
+
+    background: #fff7ed;
+
+    font-size: 1.35rem;
+
+}
+
+
+.note-intro h3 {
+
+    margin: 0 0 6px;
+
+    color: #202938;
+
+    font-size: 1.15rem;
+
+}
+
+
+.note-intro p {
+
+    margin: 0;
+
+    color: #687386;
+
+    line-height: 1.65;
+
+}
+
+
+/* ==================================================
+   FORMULA
+================================================== */
+
+.formula-box {
+
+    margin: 25px 0;
+
+    padding: 20px 24px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    background: #f7f8ff;
+
+    border: 1px solid #e2e5ff;
+
+    border-radius: 16px;
+
+}
+
+
+.formula-label {
+
+    color: #6366f1;
+
+    font-size: .72rem;
+
+    font-weight: 800;
+
+    letter-spacing: 1.3px;
+
+}
+
+
+.formula-box strong {
+
+    color: #4338ca;
+
+    font-size: 1.05rem;
+
+    font-family: monospace;
+
+}
+
+
+/* ==================================================
+   EXAMPLES
+================================================== */
+
+.examples {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 14px;
+
+}
+
+
+.example {
+
+    padding: 18px;
+
+    background: #fafbfc;
+
+    border-radius: 15px;
+
+    border: 1px solid #edf0f4;
+
+}
+
+
+.example-en {
+
+    color: #263142;
+
+    font-size: .96rem;
+
+    line-height: 1.6;
+
+}
+
+
+.example-en strong {
+
+    color: #4f46e5;
+
+}
+
+
+.example-tr {
+
+    margin-top: 9px;
+
+    padding-top: 9px;
+
+    border-top: 1px dashed #d9dee8;
+
+    color: #7b8494;
+
+    font-size: .84rem;
+
+    line-height: 1.5;
+
+}
+
+
+/* ==================================================
+   ANSWERS
+================================================== */
+
+.answer-row {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 14px;
+
+    margin-top: 18px;
+
+}
+
+
+.answer {
+
+    display: grid;
+
+    grid-template-columns: auto 1fr;
+
+    column-gap: 12px;
+
+    align-items: center;
+
+    padding: 17px 20px;
+
+    border-radius: 15px;
+
+}
+
+
+.answer span {
+
+    grid-row: span 2;
+
+    font-size: .68rem;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+}
+
+
+.answer strong {
+
+    font-size: .95rem;
+
+}
+
+
+.answer small {
+
+    color: #737d8d;
+
+}
+
+
+.answer.positive {
+
+    background: #f0fdf4;
+
+    border: 1px solid #d7f3df;
+
+}
+
+
+.answer.positive span {
+
+    color: #16a34a;
+
+}
+
+
+.answer.positive strong {
+
+    color: #166534;
+
+}
+
+
+.answer.negative {
+
+    background: #fff7f7;
+
+    border: 1px solid #f7dddd;
+
+}
+
+
+.answer.negative span {
+
+    color: #dc2626;
+
+}
+
+
+.answer.negative strong {
+
+    color: #991b1b;
+
+}
+
+
+/* ==================================================
+   NEVER
+================================================== */
+
+.never-box {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-top: 18px;
+
+    padding: 18px 20px;
+
+    background: #f8fafc;
+
+    border-left: 4px solid #6366f1;
+
+    border-radius: 12px;
+
+}
+
+
+.never-word {
+
+    color: #6366f1;
+
+    font-size: .72rem;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+}
+
+
+.never-box strong {
+
+    color: #293548;
+
+    font-size: .95rem;
+
+}
+
+
+.never-box p {
+
+    margin: 4px 0 0;
+
+    color: #7b8494;
+
+    font-size: .84rem;
+
+}
+
+
+/* ==================================================
+   LGS WARNING
+================================================== */
+
+.lgs-warning {
+
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 24px;
+
+    padding: 20px;
+
+    background: #fffbeb;
+
+    border: 1px solid #fde68a;
+
+    border-radius: 16px;
+
+}
+
+
+.warning-icon {
+
+    font-size: 1.25rem;
+
+}
+
+
+.lgs-warning strong {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #92400e;
+
+}
+
+
+.lgs-warning p {
+
+    margin: 0;
+
+    color: #785b20;
+
+    font-size: .88rem;
+
+    line-height: 1.65;
+
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 768px) {
+
+    .notes-section {
+
+        width: calc(100% - 24px);
+
+        margin: 35px auto;
+
+    }
+
+
+    .experience-note {
+
+        padding: 22px 18px;
+
+        border-radius: 20px;
+
+    }
+
+
+    .note-heading {
+
+        gap: 13px;
+
+        margin-bottom: 20px;
+
+    }
+
+
+    .note-number {
+
+        width: 44px;
+        height: 44px;
+
+        border-radius: 12px;
+
+        font-size: .9rem;
+
+    }
+
+
+    .note-heading h1 {
+
+        font-size: 1.45rem;
+
+    }
+
+
+    .examples {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .formula-box {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 8px;
+
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .notes-section {
+
+        width: calc(100% - 18px);
+
+    }
+
+
+    .experience-note {
+
+        padding: 18px 14px;
+
+    }
+
+
+    .note-heading h1 {
+
+        font-size: 1.3rem;
+
+    }
+
+
+    .note-intro {
+
+        gap: 11px;
+
+    }
+
+
+    .intro-icon {
+
+        width: 40px;
+        height: 40px;
+
+        font-size: 1.1rem;
+
+    }
+
+
+    .answer-row {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .never-box {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 7px;
+
+    }
+
+
+    .lgs-warning {
+
+        padding: 16px;
+
+    }
+
+}

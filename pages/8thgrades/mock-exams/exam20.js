@@ -140,13 +140,13 @@ const questions = [
 {
 image:"images/exam20/1.png",
 
-question:"Read the conversation. Which sentence best completes the dialogue?",
+question:"Read the conversation. What does Emma think is important in a good friendship?",
 
 options:[
-"I don't think being honest is important when you want to make new friends.",
-"I agree. A good friend should be someone you can trust even when things are difficult.",
-"That's why I prefer having lots of friends who don't know much about me.",
-"I disagree because friends should always have the same interests."
+"Spending every minute together",
+"Being honest, supportive and trustworthy",
+"Having many friends with different interests",
+"Always agreeing with your friends"
 ],
 
 answer:1
@@ -170,7 +170,7 @@ answer:2
 {
 image:"images/exam20/3.png",
 
-question:"A cooking club wants to prepare a meal for a student who cannot eat dairy products. Which option should the club choose?",
+question:"A cooking club wants to prepare a meal for a student who cannot eat dairy products. According to the menu, which meal should they choose?",
 
 options:[
 "Cheese pizza with tomato sauce",
@@ -185,13 +185,13 @@ answer:1
 {
 image:"images/exam20/4.png",
 
-question:"Read the phone messages. What should Jack do FIRST?",
+question:"The students are working on a science project. According to the messages, what should the group do FIRST?",
 
 options:[
-"Send the completed project to the teacher.",
-"Ask his group members for the missing information.",
-"Change the date of the presentation.",
-"Cancel the meeting with his group."
+"Submit the project immediately.",
+"Find the missing parts of the project and meet to complete them.",
+"Change the deadline of the project.",
+"Cancel the group meeting."
 ],
 
 answer:1
@@ -200,11 +200,11 @@ answer:1
 {
 image:"images/exam20/5.png",
 
-question:"The graph shows the results of a survey conducted among 120 students about their preferred online activities. Which statement is NOT supported by the data?",
+question:"The graph shows the online activities preferred by 120 students. Which statement is NOT supported by the graph?",
 
 options:[
 "Watching videos is more popular than reading online articles.",
-"More students use the Internet for communication than for shopping.",
+"Communication is more popular than online shopping.",
 "Playing online games is the second most popular activity.",
 "Reading online articles is more popular than communicating with friends."
 ],
@@ -215,76 +215,76 @@ answer:3
 {
 image:"images/exam20/6.png",
 
-question:"A student wants to take part in ONE of the activities below. He is 14, has no previous experience, can stay only until 4 p.m. and has his own helmet. Which activity can he join?",
+question:"Look at the teenagers' profiles. Who has an active lifestyle after school?",
 
 options:[
-"09:00–17:00 Advanced Mountain Biking – experienced participants only",
-"10:00–15:00 Beginner Cycling Tour – suitable for ages 12+",
-"13:00–18:00 Rock Climbing – previous experience required",
-"08:00–16:30 Forest Survival – participants must be 16+"
-],
-
-answer:1
-},
-
-{
-image:"images/exam20/7.png",
-
-question:"A tourist wants to spend a day discovering a city. She has three priorities: visiting a historical place, eating traditional food and buying a handmade souvenir. She does NOT want to use public transport. Which plan is the MOST suitable?",
-
-options:[
-"Old Castle → Traditional Restaurant → Local Craft Market",
-"City Mall → Fast-Food Restaurant → Art Gallery",
-"Beach → International Restaurant → Shopping Centre",
-"Amusement Park → Hotel Restaurant → Cinema"
+"Jack",
+"Lucy",
+"Tom",
+"Sarah"
 ],
 
 answer:0
 },
 
 {
-image:"images/exam20/8.png",
+image:"images/exam20/7.png",
 
-question:"The family wants to finish all the chores before their guests arrive. Each person can do only the tasks shown in the table. Which task should be changed to another family member to make the plan possible?",
+question:"The students are planning a surprise party for Tom. Which activity would be the BEST choice according to his interests?",
 
 options:[
-"Cooking dinner",
-"Cleaning the living room",
-"Watering the plants",
-"Setting the table"
+"Spending a quiet evening alone at home",
+"Going shopping in a crowded shopping mall",
+"Having an outdoor picnic with close friends and listening to music",
+"Playing computer games at home by himself"
 ],
 
 answer:2
 },
 
 {
-image:"images/exam20/9.png",
+image:"images/exam20/8.png",
 
-question:"Read the text. What was the main advantage of the new idea developed by the students?",
+question:"Look at the teenagers' daily habits. Which one is NOT a healthy habit?",
 
 options:[
-"It allowed them to complete the experiment using less water.",
-"It made their experiment more difficult but more expensive.",
-"It helped them avoid collecting any data during the experiment.",
-"It allowed them to replace the experiment with a computer game."
+"Having breakfast before going to school",
+"Sleeping at the same time every night",
+"Spending time outdoors after finishing homework",
+"Skipping meals because of spending too much time online"
 ],
 
-answer:0
+answer:3
+},
+
+{
+image:"images/exam20/9.png",
+
+question:"Read the text. Which of the following is TRUE according to Lucas and Ethan's friendship?",
+
+options:[
+"They have exactly the same interests.",
+"They always agree with each other.",
+"They respect each other's opinions although they have different interests.",
+"They spend every weekend doing the same activities."
+],
+
+answer:2
 },
 
 {
 image:"images/exam20/10.png",
 
-question:"Read the text. Which conclusion can be drawn from the campers' experience?",
+question:"Read the text about Zeynep. Which of the following is NOT mentioned in the text?",
 
 options:[
-"Planning is unnecessary when people work as a group.",
-"Unexpected difficulties can be overcome by making sensible changes.",
-"People should avoid asking others for help during difficult activities.",
-"Following the original plan is always better than changing it."
+"She practices the piano during the week.",
+"She meets her friends at weekends.",
+"She spends most of her free time on social media.",
+"She sometimes watches movies with her family."
 ],
 
-answer:1
+answer:2
 }
 
 ];

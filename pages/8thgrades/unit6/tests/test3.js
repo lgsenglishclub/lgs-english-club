@@ -628,13 +628,6 @@ function loadQuestion() {
             </div>
 
 
-            <div class="question-type">
-
-                ${q.skill || q.type || ""}
-
-            </div>
-
-
             ${extraContent}
 
 
@@ -675,15 +668,6 @@ function loadQuestion() {
                 }
 
             </div>
-
-
-            <div
-                class="explanation"
-                id="explanation"
-            >
-                ${q.explanation || ""}
-            </div>
-
 
             <button
                 id="nextBtn"
@@ -861,7 +845,7 @@ if (selected !== -1 && selected !== q.answer) {
 </button>
 
 <button
-    onclick="location.href='../unit1-questions.html'"
+    onclick="location.href='../unit6-questions.html'"
     class="restart-btn">
     ← Questions
 </button>
@@ -912,7 +896,7 @@ async function saveTestResult(){
     email: sessionStorage.getItem("email"),
 
 
-        testName: "Friendship Test 3",
+        testName: "Adventures Test 3",
         correct: score,
         wrong: wrong,
         net: (score - wrong/3).toFixed(2),

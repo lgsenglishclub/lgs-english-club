@@ -120,7 +120,6 @@ await setPersistence(auth, browserSessionPersistence);
 
         const userSnap = await getDoc(userRef);
 
-
 if (!userSnap.exists()) {
 
     document.getElementById("loginResult").innerHTML =
@@ -146,8 +145,11 @@ const studyDayRef =
         `${user.uid}_${studyToday}`
     );
 
+
 const studyDaySnap =
     await getDoc(studyDayRef);
+
+    
 
 if (!studyDaySnap.exists()) {
 
@@ -623,4 +625,3 @@ if(premiumDate){
     }
 
 });
-

@@ -363,7 +363,7 @@ Güncel bilgi gerektirmeyen eğitim sorularında gereksiz yere arama yapma.
             // ========================================
 
             previousMessages =
-                previousMessages.slice(-20);
+                previousMessages.slice(-8);
 
 
             // ========================================
@@ -584,8 +584,97 @@ Güncel bilgi gerektirmeyen eğitim sorularında gereksiz yere arama yapma.
             );
 
 
-            const response =
-    await ai.models.generateContent({
+            // ========================================
+// 🔎 SMART GOOGLE SEARCH
+// ========================================
+
+const searchKeywords = [
+
+    "today",
+    "now",
+    "latest",
+    "current",
+    "recent",
+    "weather",
+    "news",
+    "price",
+    "exchange rate",
+    "score",
+    "match",
+    "event",
+
+    "bugün",
+    "şu an",
+    "şimdi",
+    "güncel",
+    "son dakika",
+    "haber",
+    "hava durumu",
+    "fiyat",
+    "döviz",
+    "kur",
+    "maç",
+    "skor",
+    "etkinlik"
+
+];
+
+const lowerMessage =
+    currentMessage.toLowerCase();
+
+const needsSearch =
+    searchKeywords.some(keyword =>
+        lowerMessage.includes(keyword)
+    );
+
+console.log(
+    "🔎 Search gerekli mi:",
+    needsSearch
+);
+
+
+// ========================================
+// GEMINI CONFIG
+// ========================================
+
+const geminiConfig = {
+
+    systemInstruction:
+        systemPrompt,
+
+    maxOutputTokens:
+        400
+
+};
+
+
+// ========================================
+// SEARCH SADECE GEREKİYORSA
+// ========================================
+
+if (needsSearch) {
+
+    geminiConfig.tools = [
+
+        {
+            googleSearch: {}
+        }
+
+    ];
+
+}
+
+
+// ========================================
+// 🚀 GEMINI STREAMING REQUEST
+// ========================================
+
+console.time(
+    "LEXI GEMINI STREAM"
+);
+
+const stream =
+    await ai.models.generateContentStream({
 
         model:
             "gemini-3.6-flash",
@@ -593,76 +682,64 @@ Güncel bilgi gerektirmeyen eğitim sorularında gereksiz yere arama yapma.
         contents:
             contents,
 
-        config: {
-
-            systemInstruction:
-                systemPrompt,
-
-            tools: [
-                {
-                    googleSearch: {}
-                }
-            ],
-
-            maxOutputTokens:
-                700
-
-        }
+        config:
+            geminiConfig
 
     });
 
 
-            console.timeEnd(
-                "LEXI GEMINI GENERATION"
-            );
+// ========================================
+// STREAM RESPONSE
+// ========================================
 
+res.status(200);
 
-            // ========================================
-            // GET RESPONSE
-            // ========================================
+res.setHeader(
+    "Content-Type",
+    "text/plain; charset=utf-8"
+);
 
-            const reply =
-                response?.text?.trim();
+res.setHeader(
+    "Cache-Control",
+    "no-cache"
+);
 
+res.setHeader(
+    "Connection",
+    "keep-alive"
+);
 
-            console.log(
-                "LEXI RESPONSE:",
-                reply
-            );
+let fullReply = "";
 
+for await (
+    const chunk of stream
+) {
 
-            // ========================================
-            // EMPTY RESPONSE
-            // ========================================
+    const text =
+        chunk?.text || "";
 
-            if (!reply) {
+    if (!text) {
+        continue;
+    }
 
-                console.error(
-                    "Gemini returned an empty response."
-                );
+    fullReply += text;
 
-                return res.status(500).json({
+    res.write(text);
 
-                    error:
-                        "Lexi could not generate a response."
+}
 
-                });
+console.timeEnd(
+    "LEXI GEMINI STREAM"
+);
 
-            }
+console.log(
+    "LEXI RESPONSE:",
+    fullReply
+);
 
+res.end();
 
-            // ========================================
-            // SUCCESS
-            // ========================================
-
-            return res.status(200).json({
-
-                reply:
-                    reply
-
-            });
-
-        }
+}
 
 
         // ========================================

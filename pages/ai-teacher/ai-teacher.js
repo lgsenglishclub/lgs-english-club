@@ -1670,30 +1670,86 @@ console.time("Lexi API");
             
 console.timeEnd("Lexi API");
 
-        // ===============================
-        // READ RESPONSE SAFELY
-        // ===============================
+// ===============================
+// READ STREAMING RESPONSE
+// ===============================
+if (!response.ok) {
 
-        let data = null;
+    console.error(
+        "Lexi API Error:",
+        response.status
+    );
 
+    let errorMessage =
+        "Lexi is temporarily unavailable.";
 
-        try {
+    try {
 
-            data =
-                await response.json();
+        const errorData =
+            await response.json();
 
+        if (errorData?.error) {
+            errorMessage =
+                errorData.error;
         }
 
-        catch (jsonError) {
+    } catch (error) {
 
-            console.error(
-                "Lexi invalid JSON response:",
-                jsonError
-            );
+        console.error(
+            "Error response could not be parsed:",
+            error
+        );
 
-            data = null;
+    }
 
-        }
+    if (thinkingRow) {
+        thinkingRow.remove();
+    }
+
+    addTeacherMessage(
+        "Sorry! 😔 " + errorMessage
+    );
+
+    return;
+}
+
+const reader = response.body.getReader();
+const decoder = new TextDecoder("utf-8");
+
+let fullReply = "";
+
+const thinkingBubble =
+    thinkingRow.querySelector(".chat-bubble");
+
+if (thinkingBubble) {
+    thinkingBubble.innerHTML = "";
+}
+
+while (true) {
+
+    const { value, done } =
+        await reader.read();
+
+    if (done) {
+        break;
+    }
+
+    const chunk =
+        decoder.decode(value, {
+            stream: true
+        });
+
+    fullReply += chunk;
+
+    if (thinkingBubble) {
+
+        thinkingBubble.innerHTML =
+            formatLexiMessage(fullReply);
+
+    }
+
+    scrollToBottom();
+}
 
 
         // ===============================
@@ -1739,36 +1795,38 @@ if (!response.ok) {
         // SUCCESS
         // ===============================
 
-        if (data && data.reply) {
+       if (fullReply.trim()) {
+
+    // Thinking mesajını kaldır
+    if (thinkingRow) {
+        thinkingRow.remove();
+    }
+
+    // Lexi'nin cevabını normal mesaj olarak ekle
+    addTeacherMessage(
+        fullReply
+    );
+
+    // Sesli oku
+    speakLexi(
+        fullReply
+    );
+
+} else {
+
+    console.error(
+        "Lexi returned an empty response."
+    );
+
+    if (thinkingRow) {
+        thinkingRow.remove();
+    }
 
     addTeacherMessage(
-        data.reply
+        "Sorry! 😔 Lexi couldn't generate a response."
     );
-
-
-    // ===============================
-    // LEXI VOICE RESPONSE
-    // ===============================
-
-    speakLexi(
-        data.reply
-    );
-
-}
-
-        else {
-
-            console.error(
-                "Lexi returned no reply:",
-                data
-            );
-
-
-            addTeacherMessage(
-                "Sorry! 😔 Lexi couldn't generate a response."
-            );
-
-        }
+    
+    }
 
     }
 

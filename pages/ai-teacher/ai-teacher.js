@@ -1537,22 +1537,38 @@ async function sendMessage(text) {
             getCurrentConversation();
 
 
-        const previousMessages =
-    conversation
-        ? conversation.messages
-            .slice(-8)
-            .filter(message => {
+        const previousMessages = conversation
+    ? conversation.messages
+        .filter(message => {
+            if (!message) return false;
 
-                return !(
-                    message.sender ===
-                    "teacher" &&
-                    isWelcomeMessage(
-                        message.text
-                    )
-                );
+            if (typeof message.text !== "string") return false;
 
-            })
-        : [];
+            if (!message.text.trim()) return false;
+
+            if (message.sender !== "user" && message.sender !== "teacher") {
+                return false;
+            }
+
+            // Lexi'nin otomatik hoş geldin mesajlarını geçmişe gönderme
+            if (
+                message.sender === "teacher" &&
+                isWelcomeMessage(message.text)
+            ) {
+                return false;
+            }
+
+            return true;
+        })
+        .slice(-10)
+        .map(message => ({
+            sender:
+                message.sender === "teacher"
+                    ? "model"
+                    : "user",
+            text: message.text.trim()
+        }))
+    : [];
 
 
         // ===============================
@@ -2008,6 +2024,10 @@ function startListening() {
     }
 
 
+    // ========================================
+    // STOP LEXI SPEECH
+    // ========================================
+
     if (isLexiSpeaking) {
 
         window.speechSynthesis.cancel();
@@ -2016,6 +2036,10 @@ function startListening() {
 
     }
 
+
+    // ========================================
+    // ALREADY LISTENING
+    // ========================================
 
     if (isListening) {
 
@@ -2038,13 +2062,31 @@ function startListening() {
     // LANGUAGE
     // ========================================
 
-    voiceRecognition.lang = voiceLanguage;
+    voiceRecognition.lang =
+        voiceLanguage;
 
-voiceRecognition.continuous = true;
 
-voiceRecognition.interimResults = true;
+    // ========================================
+    // IMPORTANT SETTINGS
+    // ========================================
 
-voiceRecognition.maxAlternatives = 1;
+    voiceRecognition.continuous =
+        true;
+
+    voiceRecognition.interimResults =
+        true;
+
+    voiceRecognition.maxAlternatives =
+        1;
+
+
+    // ========================================
+    // FULL TRANSCRIPT
+    // ========================================
+
+    let finalTranscript = "";
+
+    let interimTranscript = "";
 
 
     // ========================================
@@ -2054,7 +2096,7 @@ voiceRecognition.maxAlternatives = 1;
     voiceRecognition.onresult =
         event => {
 
-            let transcript = "";
+            interimTranscript = "";
 
 
             for (
@@ -2063,30 +2105,56 @@ voiceRecognition.maxAlternatives = 1;
                 i++
             ) {
 
-                transcript +=
+                const transcript =
                     event.results[i][0]
                         .transcript;
+
+
+                if (
+                    event.results[i].isFinal
+                ) {
+
+                    finalTranscript +=
+                        transcript + " ";
+
+                }
+
+                else {
+
+                    interimTranscript +=
+                        transcript;
+
+                }
 
             }
 
 
-            transcript =
-                transcript.trim();
+            const currentTranscript =
+                (
+                    finalTranscript +
+                    interimTranscript
+                )
+                    .replace(/\s+/g, " ")
+                    .trim();
 
 
             console.log(
-                "Lexi voice transcript:",
-                transcript
+                "Lexi live transcript:",
+                currentTranscript
             );
 
 
             if (chatInput) {
 
                 chatInput.value =
-                    transcript;
+                    currentTranscript;
 
             }
 
+
+            // ========================================
+            // CHECK FINAL RESULT
+            // ========================================
 
             const lastResult =
                 event.results[
@@ -2099,24 +2167,60 @@ voiceRecognition.maxAlternatives = 1;
                 lastResult.isFinal
             ) {
 
+                const message =
+                    finalTranscript
+                        .replace(/\s+/g, " ")
+                        .trim();
+
+
                 console.log(
                     "Lexi final transcript:",
-                    transcript
+                    message
                 );
 
 
-                isListening = false;
+                if (!message) {
 
-                setVoiceStatus("idle");
+                    return;
+
+                }
 
 
-                if (transcript) {
+                // ========================================
+                // STOP RECOGNITION
+                // ========================================
 
-                    sendMessage(
-                        transcript
+                isListening =
+                    false;
+
+
+                setVoiceStatus(
+                    "idle"
+                );
+
+
+                try {
+
+                    voiceRecognition.stop();
+
+                }
+
+                catch (error) {
+
+                    console.log(
+                        "Recognition already stopped."
                     );
 
                 }
+
+
+                // ========================================
+                // SEND ONLY ONCE
+                // ========================================
+
+                sendMessage(
+                    message
+                );
 
             }
 
@@ -2134,7 +2238,10 @@ voiceRecognition.maxAlternatives = 1;
                 "Lexi microphone started."
             );
 
-            isListening = true;
+
+            isListening =
+                true;
+
 
             setVoiceStatus(
                 "listening"
@@ -2154,7 +2261,10 @@ voiceRecognition.maxAlternatives = 1;
                 "Lexi microphone ended."
             );
 
-            isListening = false;
+
+            isListening =
+                false;
+
 
             setVoiceStatus(
                 "idle"
@@ -2176,7 +2286,9 @@ voiceRecognition.maxAlternatives = 1;
             );
 
 
-            isListening = false;
+            isListening =
+                false;
+
 
             setVoiceStatus(
                 "idle"
@@ -2250,7 +2362,10 @@ voiceRecognition.maxAlternatives = 1;
             error
         );
 
-        isListening = false;
+
+        isListening =
+            false;
+
 
         setVoiceStatus(
             "idle"

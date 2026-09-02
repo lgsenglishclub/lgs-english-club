@@ -43,15 +43,8 @@ const geminiApiKey =
 //
 // ========================================
 
-const paytrMerchantId =
-    defineSecret("PAYTR_MERCHANT_ID");
-
-const paytrMerchantKey =
-    defineSecret("PAYTR_MERCHANT_KEY");
-
-const paytrMerchantSalt =
-    defineSecret("PAYTR_MERCHANT_SALT");
-
+// PayTR secrets şimdilik tanımlanmıyor.
+// PayTR hesabı hazır olduğunda tekrar eklenecek.
 
 // ========================================
 // PLAN PRICES
@@ -160,6 +153,10 @@ exports.lexiChat = onRequest(
             }
 
 
+            const currentMessage =
+                message.trim();
+
+
             // ========================================
             // GEMINI CLIENT
             // ========================================
@@ -176,53 +173,77 @@ exports.lexiChat = onRequest(
 
             const systemPrompt = `
 
-You are Lexi, an AI English teacher for Turkish 8th-grade students.
+You are Lexi, a natural and intelligent AI English teacher for Turkish 8th-grade students.
 
-Speak naturally and conversationally.
+LANGUAGE:
+- Speak Turkish by default.
+- If the student clearly speaks English, respond in English.
+- If the student mixes Turkish and English, follow the student's natural language.
 
-Use Turkish by default unless the student clearly chooses English.
+CONVERSATION:
+- Always respond ONLY to the student's latest message.
+- Carefully use previous messages only to understand context.
+- Never answer an older message again.
+- Never repeat an answer that has already been given.
+- Never pretend that the student asked something they did not ask.
+- Never restart the conversation unnecessarily.
+- Do not greet the student unless the student is greeting you or the conversation is genuinely starting.
+- Do not say "Ben de iyiyim, teşekkürler" unless the student actually asks how you are.
+- Do not automatically turn casual conversation into an English lesson.
+- Do not force grammar explanations, vocabulary exercises, quizzes, or LGS questions.
+- Do not ask a question at the end of every response.
 
-Always respond to the student's actual message and intention.
+NATURALNESS:
+- Talk like a friendly, intelligent human teacher.
+- Avoid robotic, repetitive or scripted responses.
+- Keep casual conversation natural.
+- Match the student's tone.
+- If the student says something simple, give a natural response rather than an unnecessary long explanation.
+- Do not repeat information the student already knows.
+- Do not start every answer with the student's name.
+- Do not start every answer with "Tabii", "Elbette", "Kesinlikle" or similar filler phrases.
 
-Do not force English lessons, grammar explanations, quizzes, or LGS questions unless the student asks for them or they are clearly relevant.
+ENGLISH TEACHING:
+- When the student asks for English help, explain clearly at an appropriate 8th-grade level.
+- When useful, give short examples.
+- For LGS-style questions, focus on meaning, context, reading and reasoning rather than memorization.
+- If the student makes an English mistake during a conversation, correct it only when useful or when the student asks for correction.
 
-Do not greet the student at the beginning of every response.
+MOST IMPORTANT RULE:
+The student's CURRENT message is the message you must answer.
+Previous conversation is context, NOT a list of unanswered questions.
 
-Only greet the student when:
-- the conversation is starting, or
-- the student explicitly greets you.
+GÜNCEL BİLGİLER:
 
-Do not repeatedly say "Merhaba", "Selam", "Hello" or "Hi".
+Kullanıcı güncel, anlık veya değişebilen bir bilgi sorarsa Google Search aracını kullan.
 
-Keep responses natural and appropriately short.
+Özellikle:
+- hava durumu
+- güncel haberler
+- spor sonuçları
+- güncel fiyatlar
+- döviz kurları
+- bugün / şu an / son dakika bilgileri
+- güncel etkinlikler
+- yakın zamanda gerçekleşen olaylar
 
-Do not sound like a textbook, chatbot, customer-service agent, or scripted teacher.
+gibi konularda tahmin yapma. Önce Google Search ile güncel bilgiyi kontrol et.
 
-Do not ask a question at the end of every response.
-
-Only ask a follow-up question when it is genuinely useful.
-
-When the student wants English help, act like a patient and intelligent English teacher.
-
-When the student is simply chatting, chat naturally.
+Güncel bilgi gerektirmeyen eğitim sorularında gereksiz yere arama yapma.
 
 `;
 
 
             // ========================================
-            // BUILD CONVERSATION
+            // BUILD CLEAN HISTORY
             // ========================================
 
-            const contents = [];
+            let history = [];
 
-
-            // ========================================
-            // READ HISTORY
-            // ========================================
 
             if (Array.isArray(conversation)) {
 
-                const history =
+                history =
                     conversation
                         .filter(item => {
 
@@ -231,8 +252,7 @@ When the student is simply chatting, chat naturally.
                             }
 
                             if (
-                                typeof item.text !==
-                                "string"
+                                typeof item.text !== "string"
                             ) {
                                 return false;
                             }
@@ -253,62 +273,157 @@ When the student is simply chatting, chat naturally.
                             return true;
 
                         })
-                        .slice(-20);
+                        .map(item => ({
+
+                            sender:
+                                item.sender,
+
+                            text:
+                                item.text.trim()
+
+                        }));
+
+            }
+
+
+            // ========================================
+            // REMOVE DUPLICATE CONSECUTIVE MESSAGES
+            // ========================================
+
+            const cleanedHistory = [];
+
+            for (const item of history) {
+
+                const previous =
+                    cleanedHistory[
+                        cleanedHistory.length - 1
+                    ];
+
+                if (
+                    previous &&
+                    previous.sender === item.sender &&
+                    previous.text === item.text
+                ) {
+
+                    continue;
+
+                }
+
+                cleanedHistory.push(item);
+
+            }
+
+
+            // ========================================
+            // IMPORTANT:
+            // CURRENT MESSAGE MUST NOT EXIST
+            // TWICE IN HISTORY
+            // ========================================
+
+            let previousMessages =
+                cleanedHistory;
+
+
+            /*
+             * If the frontend already placed the current
+             * user message into conversation, remove that
+             * final occurrence.
+             *
+             * We only remove the LAST user occurrence
+             * when it is exactly the current message.
+             */
+
+            if (
+                previousMessages.length > 0
+            ) {
+
+                const lastMessage =
+                    previousMessages[
+                        previousMessages.length - 1
+                    ];
+
+                if (
+                    lastMessage.sender === "user" &&
+                    lastMessage.text === currentMessage
+                ) {
+
+                    previousMessages =
+                        previousMessages.slice(
+                            0,
+                            -1
+                        );
+
+                }
+
+            }
+
+
+            // ========================================
+            // KEEP RECENT CONTEXT
+            // ========================================
+
+            previousMessages =
+                previousMessages.slice(-20);
+
+
+            // ========================================
+            // BUILD GEMINI CONTENTS
+            // ========================================
+
+            const contents = [];
+
+
+            for (
+                const item of previousMessages
+            ) {
+
+                const role =
+                    item.sender === "user"
+                        ? "user"
+                        : "model";
+
+
+                const text =
+                    item.text;
+
+
+                const last =
+                    contents[
+                        contents.length - 1
+                    ];
 
 
                 // ========================================
-                // CONVERT HISTORY
+                // MERGE SAME ROLES
                 // ========================================
 
-                history.forEach(item => {
+                if (
+                    last &&
+                    last.role === role
+                ) {
 
-                    const role =
-                        item.sender === "user"
-                            ? "user"
-                            : "model";
+                    last.parts[0].text +=
+                        "\n" + text;
 
+                    continue;
 
-                    const text =
-                        item.text.trim();
-
-
-                    const last =
-                        contents[
-                            contents.length - 1
-                        ];
+                }
 
 
-                    // ========================================
-                    // MERGE SAME ROLES
-                    // ========================================
+                contents.push({
 
-                    if (
-                        last &&
-                        last.role === role
-                    ) {
+                    role:
 
-                        last.parts[0].text +=
-                            "\n" + text;
+                        role,
 
-                        return;
-                    }
+                    parts: [
 
+                        {
+                            text:
+                                text
+                        }
 
-                    // ========================================
-                    // ADD CONTENT
-                    // ========================================
-
-                    contents.push({
-
-                        role: role,
-
-                        parts: [
-                            {
-                                text: text
-                            }
-                        ]
-
-                    });
+                    ]
 
                 });
 
@@ -330,12 +445,8 @@ When the student is simply chatting, chat naturally.
 
 
             // ========================================
-            // CURRENT USER MESSAGE
+            // ADD CURRENT USER MESSAGE
             // ========================================
-
-            const currentMessage =
-                message.trim();
-
 
             const lastContent =
                 contents[
@@ -343,20 +454,15 @@ When the student is simply chatting, chat naturally.
                 ];
 
 
-            // ========================================
-            // ADD CURRENT MESSAGE
-            // ========================================
-
             if (
                 !lastContent ||
-                lastContent.role !== "user" ||
-                lastContent.parts?.[0]?.text !==
-                    currentMessage
+                lastContent.role !== "user"
             ) {
 
                 contents.push({
 
-                    role: "user",
+                    role:
+                        "user",
 
                     parts: [
 
@@ -368,6 +474,46 @@ When the student is simply chatting, chat naturally.
                     ]
 
                 });
+
+            }
+
+            else {
+
+                /*
+                 * The last content can only be a user
+                 * message if the previous conversation
+                 * ended with a user message.
+                 *
+                 * We must NOT accidentally append the
+                 * same message twice.
+                 */
+
+                const lastText =
+                    lastContent.parts?.[0]?.text
+                    ?.trim() || "";
+
+
+                if (
+                    lastText !== currentMessage
+                ) {
+
+                    contents.push({
+
+                        role:
+                            "user",
+
+                        parts: [
+
+                            {
+                                text:
+                                    currentMessage
+                            }
+
+                        ]
+
+                    });
+
+                }
 
             }
 
@@ -403,13 +549,25 @@ When the student is simply chatting, chat naturally.
             );
 
             console.log(
-                "Messages:",
+                "History messages:",
+                previousMessages.length
+            );
+
+            console.log(
+                "Gemini messages:",
                 contents.length
             );
 
             console.log(
-                "Last message:",
+                "Current message:",
                 currentMessage
+            );
+
+            console.log(
+                "Last Gemini role:",
+                contents[
+                    contents.length - 1
+                ]?.role
             );
 
             console.log(
@@ -427,25 +585,31 @@ When the student is simply chatting, chat naturally.
 
 
             const response =
-                await ai.models.generateContent({
+    await ai.models.generateContent({
 
-                    model:
-                        "gemini-3.6-flash",
+        model:
+            "gemini-3.6-flash",
 
-                    contents:
-                        contents,
+        contents:
+            contents,
 
-                    config: {
+        config: {
 
-                        systemInstruction:
-                            systemPrompt,
+            systemInstruction:
+                systemPrompt,
 
-                        maxOutputTokens:
-                            500
+            tools: [
+                {
+                    googleSearch: {}
+                }
+            ],
 
-                    }
+            maxOutputTokens:
+                700
 
-                });
+        }
+
+    });
 
 
             console.timeEnd(
@@ -454,7 +618,7 @@ When the student is simply chatting, chat naturally.
 
 
             // ========================================
-            // GET GEMINI RESPONSE
+            // GET RESPONSE
             // ========================================
 
             const reply =
@@ -498,8 +662,8 @@ When the student is simply chatting, chat naturally.
 
             });
 
-
         }
+
 
         // ========================================
         // ERROR
@@ -549,7 +713,6 @@ When the student is simply chatting, chat naturally.
 
 );
 
-
 // ==================================================
 // PAYMENT — CREATE ORDER
 // ==================================================
@@ -562,17 +725,10 @@ When the student is simply chatting, chat naturally.
 //
 // ==================================================
 
-exports.createPaymentOrder = onRequest(
+exports.createPaymentOrder = onRequest({
 
-    {
-        secrets: [
-            paytrMerchantId,
-            paytrMerchantKey,
-            paytrMerchantSalt
-        ],
-
-        cors: true
-    },
+    cors: true
+},
 
     async (req, res) => {
 
@@ -799,17 +955,10 @@ exports.createPaymentOrder = onRequest(
 //
 // ==================================================
 
-exports.paymentCallback = onRequest(
+exports.paymentCallback = onRequest({
 
-    {
-        secrets: [
-            paytrMerchantId,
-            paytrMerchantKey,
-            paytrMerchantSalt
-        ],
-
-        cors: false
-    },
+    cors: false
+},
 
     async (req, res) => {
 
